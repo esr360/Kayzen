@@ -1,0 +1,52 @@
+
+/* Sandbox
+// for testing purposes
+================================================================ */
+
+// set the theme's colors
+@if $theme == "sandbox" {
+	// $brand-1 : #9D55B9 !global;
+}
+
+// import the default options
+@import "skeleton/color-palettes";
+@import "skeleton/config";
+
+// set custom options
+@if $theme == "sandbox" {
+
+	$header-side                    : left;
+	$header-bar                     : false;
+	$header-bg-color                : $grey-5;
+
+	$logo-color                     : $white;
+	$logo-size                      : $font-size-6;
+	$logo-padding                   : 2rem 1rem;
+
+	$nav-text-align                 : left;
+	
+	$nav-a-color                    : $white;
+	$nav-a-bg-color                 : rgba($black, 0.1);
+	$nav-a-border-bottom            : 1px solid rgba($black, 0.15);
+	$nav-a-hover-bg-color           : $brand-1;
+	$nav-a-active-bg-color          : $nav-a-bg-color;
+	$nav-a-padding                  : 1rem 0.75rem;
+
+	$nav-li-border-left             : 6px solid rgba($black, 0.4);
+	$nav-li-hover-border-color      : darken($brand-1, 10%);
+	$nav-li-active-border-color     : $brand-1;
+
+	$dropdown-a-color               : rgba($nav-a-has-child-color, 0.75);
+	$dropdown-a-bg-color            : transparent;
+	$dropdown-a-border-left         : $nav-a-border-width solid darken($dropdown-a-bg-color, 5%);
+	$dropdown-a-border-bottom       : $nav-a-border-bottom;
+	$dropdown-a-hover-bg-color      : $nav-a-active-bg-color;
+	$dropdown-a-hover-color         : $nav-a-color;
+	$dropdown-a-hover-border-color  : $nav-a-border-bottom;
+	$dropdown-a-active-bg-color     : $dropdown-a-hover-bg-color;
+	$dropdown-a-active-color        : $dropdown-a-hover-color;
+
+	$billboard-min-height           : 715px;
+	$billboard-bg-color             : $brand-1;
+
+}

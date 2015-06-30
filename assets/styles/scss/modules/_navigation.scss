@@ -1,0 +1,193 @@
+
+/* Main Navigation
+================================================================ */
+
+.app-nav {
+
+//-----------------------------------------------------------------
+// Core Layout
+//-----------------------------------------------------------------
+
+    // all items
+    li {    
+        a {
+            display: block;
+            padding: $nav-a-padding;
+            color: $nav-a-color;
+            &:hover {
+                text-decoration: none;
+            }
+            // icon
+            .fa {
+                margin-right: 0.5em;
+            }
+        }       
+        // for child menus 
+        &:hover {
+            > ul {
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+    }
+
+    // first level nav only
+    > ul {
+
+        @extend ul.reset;
+        display: none; // hide by default for mobiles
+        vertical-align: middle;
+
+        > li {
+
+            @import "dropdown-nav"; // load the dropdown nav
+
+            transition: $base-transition;
+
+            // add gap between items
+            margin-left: $nav-a-spacing;
+            &:first-child {
+                margin-left: 0;
+            }
+
+            // li borders
+            border-color: $nav-li-border-color;
+            border-left: $nav-li-border-left;
+            border-right: $nav-li-border-right;
+            border-top: $nav-li-border-top;
+            border-bottom: $nav-li-border-bottom;
+
+            > a {
+                background: $nav-a-bg-color;
+                border-color: $nav-a-border-color;
+                border-left: $nav-a-border-left;
+                border-right: $nav-a-border-right;
+                border-top: $nav-a-border-top;
+                border-bottom: $nav-a-border-bottom;
+                border-radius: $nav-a-radius;
+                // add icon if item has dropdown menu
+                &:not(:only-child) {
+                    &:after {
+                        content: $nav-dropdown-icon;
+                        font-family: FontAwesome;
+                        margin-left: 0.5em;
+                    }
+                }
+            }
+
+            &:hover {
+                border-color: $nav-li-hover-border-color;
+                > a {
+                    color: $nav-a-hover-color;
+                    border-color: $nav-a-hover-border-color;
+                    background: $nav-a-hover-bg-color;
+                    // if item has dropdown menu
+                    &:not(:only-child) {
+                        color: $nav-a-has-child-color;
+                        background: $nav-a-has-child-bg;
+                        border-color: $nav-a-has-child-border;
+                        border-bottom-color: transparent;
+                    }
+                }
+            }
+
+            &.active {
+                border-color: $nav-li-active-border-color;
+                > a {
+                    color: $nav-a-active-color;
+                    background: $nav-a-active-bg-color;
+                    border-color: $nav-a-active-border-color;
+                }
+                &:hover {
+                    border-color: $nav-li-hover-border-color;
+                    > a {
+                        background: $nav-a-hover-bg-color;
+                    }
+                }
+            }
+
+        } // end > li
+
+    } // end > ul
+
+    &.no-icons {
+        .fa {
+            display: none;
+        }
+    }
+
+    @if $nav-no-icons == true {
+        @extend .no-icons;
+    }
+
+//-----------------------------------------------------------------
+// Side Navigation
+//-----------------------------------------------------------------
+
+    [class*="header-side"] & {
+
+        ul {
+            display: block;
+            visibility: visible;
+            opacity: 1;
+            position: relative;
+            left: 0;
+        }
+
+        li {
+            display: block;
+            margin-left: 0;            
+            a {
+                position: relative;
+                &, &:last-child {
+                    border-bottom: $dropdown-a-border-bottom;
+                }
+                &:not(:only-child) {
+                    &:after {
+                        content: $nav-dropdown-icon;
+                        right: 1.5em;
+                        @include vertical-center(absolute);
+                    }
+                }
+            }
+            // dropdown nav
+            ul {
+                // 2nd level and below
+                ul {
+                    font-size: $font-size-2;
+                    li {
+                        a {
+                            &:before {
+                                font-family: FontAwesome;
+                                content: $dropdown-low-level-icon;
+                                margin-right: 0.5em;
+                            }
+                        }
+                    }
+                    // 3rd level and below
+                    ul {
+                        padding-left: 1rem;
+                    }
+                }
+            }
+        }
+
+    } // end [class*="header-side"] &
+
+//-----------------------------------------------------------------
+// Larger Resolutions
+//-----------------------------------------------------------------
+
+    @media (min-width: breakpoint(break-3)) {
+        text-align: $nav-text-align;
+        > ul {
+            display: inline-block;
+            white-space: nowrap;
+            > li {
+                display: inline-block;
+                position: relative;
+            }
+        }
+    }
+
+} // end .app-nav

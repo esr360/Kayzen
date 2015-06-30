@@ -1,0 +1,75 @@
+/******************************************************************
+
+Site Name: Kayzen Wordpress Theme
+Author: TBD
+
+******************************************************************/
+
+/******************************************************************
+Themes
+******************************************************************/
+
+// choose your theme
+$theme : "kayzen";
+
+@import "themes/kayzen";
+@import "themes/sandbox";
+
+/******************************************************************
+Skeleton
+******************************************************************/
+
+@import "skeleton/normalize";
+@import "skeleton/color-palettes";
+@import "skeleton/config";
+@import "skeleton/utilities";
+@import "skeleton/base";
+@import "skeleton/grid";
+@import "skeleton/helpers";
+@import "skeleton/print";
+@import "skeleton/typography";
+
+/******************************************************************
+Elements
+******************************************************************/
+
+@import "elements/accordions";
+@import "elements/alert-bars";
+@import "elements/buttons";
+@import "elements/blockquotes";
+@import "elements/carousels";
+@import "elements/fonts";
+@import "elements/forms";
+@import "elements/headings";
+@import "elements/icons";
+@import "elements/images";
+@import "elements/lists";
+@import "elements/modals";
+@import "elements/progress-bars";
+@import "elements/tables";
+@import "elements/tabs";
+@import "elements/tooltips";
+@import "elements/wells";
+@import "elements/widgets";
+
+/******************************************************************
+Modules
+******************************************************************/
+
+@import "modules/breadcrumb";
+@import "modules/flyout-navigation";
+@import "modules/footer";
+@import "modules/google-map";
+@import "modules/header";
+@import "modules/logo";
+@import "modules/navigation";
+@import "modules/promo-banner";
+@import "modules/scroll-wheel";
+@import "modules/scroll-top";
+
+/******************************************************************
+Sections
+******************************************************************/
+
+@import "sections/sections";
+@import "sections/billboard";

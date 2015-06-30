@@ -1,0 +1,39 @@
+
+/* Scroll Wheel
+================================================================ */
+
+.scroll-wheel {
+
+	position: absolute;
+	font-size: $font-size-6;
+	color: $white;
+	border: 0.075em solid;
+	border-radius: 1em;
+	width: 1.5em;
+	height: 2.4em;
+	bottom: 2rem;
+	@include horizontal-center;
+	&:before {
+		content: "";
+		height: 0.25em;
+		width: 0.25em;
+		border-radius: 50%;
+		background: $white;
+		position: absolute;
+		top: 0.5em;
+		// animation: scroll-down 1.2s infinite;
+		transform: translateZ(0);
+		@include horizontal-center;
+	}
+
+
+	@keyframes scroll-down{
+		0%{
+			top: 0.5em;
+		}
+		100%{
+			top: 1.2em;
+		}
+	}
+
+} // end .scroll-wheel

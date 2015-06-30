@@ -1,0 +1,135 @@
+
+/* Widgets
+================================================================ */
+
+//-----------------------------------------------------------------
+// Widget
+//-----------------------------------------------------------------
+
+@include component(widget) {
+
+// Core Styles
+//-----------------------------------------------------------------
+
+	@include core {
+
+		padding: 2.5em 1em;
+		transition: $base-transition;
+
+		&:hover {
+			.w-icon {
+				color: $brand-1;
+			}
+		}
+
+		@include nested-component(hgroup) {
+			margin-bottom: 0;
+		}
+
+		@include root(w-icon) {
+			color: $grey-3;
+			margin-bottom: $base-margin;
+			&.w-inline {
+				margin-bottom: 0;
+				margin-right: 0.5rem;
+			}
+		}
+
+		@include root(w-header) {
+			+ .w-icon {
+				margin-left: 0.5rem;
+				margin-right: 0;
+			}
+		}
+
+		@include root(w-inline) {
+			display: inline-block;
+			vertical-align: middle;
+		}
+
+	} // core
+
+// Modifiers
+//-----------------------------------------------------------------
+
+	@include modifier(panel) {
+		padding: 4%;
+		border-top: 1px solid $grey-2;	
+		border-left: 1px solid $grey-2;
+		&:first-child {
+			border-left: none;
+		}
+	}
+
+	@include modifier(block) {
+		background: $white;
+		transition: $base-transition;	
+		&:hover {
+			background: $brand-1;			
+			&, .w-icon {
+				color: $white;
+			}
+			@include nested-component(heading) {
+				color: $white;
+			}
+		}
+	}
+
+	@include modifier(border) {
+		border-top: 8px solid $brand-1;
+		&:hover {
+			border-color: transparent;
+		}
+	}
+
+	@include modifier(stacked) {
+		padding: 0;
+		margin-bottom: $base-margin;
+		@include vertical-rhythm(bottom);
+		p {
+			margin-top: ($base-margin / 2);
+		}
+	}
+
+	@include modifier(scale) {
+		z-index: 1;
+		transform: translateZ(0);
+		&:hover {
+			transform: scale(1.1) translateZ(0);
+			z-index: 5;
+		}
+	}
+
+	@include modifier(spectrum-quarter) {
+		color: $white;
+		&:nth-child(1) {
+			background: darken($brand-1, 6%);
+		}
+		&:nth-child(2) {
+			background: darken($brand-1, 2%);
+		}
+		&:nth-child(3) {
+			background: lighten($brand-1, 2%);
+		}
+		&:nth-child(4) {
+			background: lighten($brand-1, 6%);
+		}
+		@include nested-component(icon) {
+			color: $white;
+		}
+	}
+
+} // component(widget)
+
+//-----------------------------------------------------------------
+// Widget Group
+//-----------------------------------------------------------------
+
+@include component(widgets) {
+
+	@include modifier(large) {
+		margin-bottom: ($base-margin * 2);
+		@include vertical-rhythm(bottom);
+	}
+
+} // component(widgets)

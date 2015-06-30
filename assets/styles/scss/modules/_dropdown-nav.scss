@@ -1,0 +1,78 @@
+
+/* Dropdown Navigation
+   Used in: "modules/_navigation.scss"
+================================================================ */
+
+ul {
+
+	@extend ul.reset;
+	min-width: $dropdown-width;
+	text-align: $dropdown-text-align;
+	transition: $base-transition;
+	position: absolute;
+	z-index: 5;
+	opacity: 0;
+	visibility: hidden;
+
+	li {
+
+		position: relative;
+
+		a {
+			background: $dropdown-a-bg-color;
+			color: $dropdown-a-color;
+			border-bottom: $dropdown-a-border-bottom;
+			&:before, 
+			&:after {
+				font-family: FontAwesome;		
+			}
+			&:not(:only-child) {
+				&:after {
+					content: $dropdown-dropdown-icon;
+					right: 0.75em;
+					@include vertical-center(absolute);
+				}
+			}
+		}
+
+		// remove bottom border on last item
+		&:last-child {
+			a {
+				border-bottom: none;
+			}
+		}
+
+		&:hover {
+			> a {
+				color: $dropdown-a-hover-color;
+				background: $dropdown-a-hover-bg-color;
+				border-color: $dropdown-a-hover-border-color;
+			}
+		}
+
+		&.active {
+			> a {
+				color: $dropdown-a-active-color;
+				background: $dropdown-a-active-bg-color;
+				border-color: $dropdown-a-active-border-color;
+			}
+		}
+
+		ul {
+			left: 100%;
+			top: 0;
+			li {
+				a {
+					border-left: $dropdown-a-border-left;
+				}
+			}
+		}
+
+	} // end li
+
+} // end ul
+
+// first level only
+> ul {
+	padding-top: $dropdown-top-position;
+}

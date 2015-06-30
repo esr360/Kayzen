@@ -1,0 +1,204 @@
+
+/* Utilities
+================================================================ */
+
+//-----------------------------------------------------------------
+// Modular CSS Mixins 
+//-----------------------------------------------------------------
+
+// Component
+
+@mixin component($component: $component) {
+	$component: $component !global;
+	[class*="#{$component}-"] {
+		@content;
+	}
+}
+
+// Nested Component
+
+@mixin nested-component($component: $component) { 
+	.#{$component},
+	[class*="#{$component}-"] {
+		@content;
+	}
+}
+
+// Core/Default Styles
+
+@mixin core {
+	@at-root &, .#{$component} {
+		@content;
+	}
+}
+
+// Modifiers 
+
+@mixin modifier($modifier, $tag: null) {
+	@if $tag != null {
+		#{$tag},
+		&[class*="-#{$modifier}"] {
+			@content;
+		}
+	} @else {
+		&[class*="-#{$modifier}"] {
+			@content;
+		}
+	}
+}
+
+// Extend Modifiers
+
+@mixin extend($modifiers...) {
+	@each $modifier in $modifiers {
+		@extend [class*="#{$component}-"][class*="-#{$modifier}"];
+	}
+}
+
+// Sub Component
+// Load nested sub-components outside of the parent component
+
+@mixin root($component) {
+	@at-root .#{$component} {
+		@content;
+	}
+}
+
+//-----------------------------------------------------------------
+// Responsive Media Queries
+//-----------------------------------------------------------------
+
+
+
+//-----------------------------------------------------------------
+// Vertical Rhythm
+//-----------------------------------------------------------------
+
+// Remove top spacing 
+
+%top-rhythm {
+	&:first-child {
+		margin-top: 0;
+	}   
+}
+
+// Remove bottom spacing 
+
+%bottom-rhythm {
+	&:last-child {
+		margin-bottom: 0;
+	}  
+}
+
+@mixin vertical-rhythm($position: null) {  
+	@if $position == top { 
+		@extend %top-rhythm;
+	} @else if $position == bottom {
+		@extend %bottom-rhythm;
+	} @else {
+		@extend %top-rhythm;
+		@extend %bottom-rhythm;
+	}
+}
+
+//-----------------------------------------------------------------
+// Vertical Centering
+//-----------------------------------------------------------------
+
+@mixin vertical-center($position) {
+	position: $position;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+//-----------------------------------------------------------------
+// Horizontal Centering
+//-----------------------------------------------------------------
+
+%horizontal-center {
+	left: 0;
+	right: 0;
+	margin: auto;  
+	text-align: center;
+}
+
+@mixin horizontal-center {
+	@extend %horizontal-center;
+}
+
+//-----------------------------------------------------------------
+// Font Sizes
+//-----------------------------------------------------------------
+
+@mixin font-sizes {
+	@each $size, $value in $font-sizes {
+		@include modifier($size) {
+			font-size: $value;
+		}
+	}
+}
+
+//-----------------------------------------------------------------
+// Fill-Parent Element 
+//-----------------------------------------------------------------
+
+%fill-parent {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+}
+
+@mixin fill-parent {
+	@extend %fill-parent;
+}
+
+//-----------------------------------------------------------------
+// Overlay
+//-----------------------------------------------------------------
+
+@mixin bg-overlay($background) {
+	position: relative;
+	&:before {
+		content: "";
+		z-index: 0;
+		background: $background;
+		@include fill-parent;
+	}
+}
+
+//-----------------------------------------------------------------
+// Keyframes
+//-----------------------------------------------------------------
+
+@keyframes spin { 
+	0% {
+		transform: rotate(0deg); 
+	}
+	100% { 
+		transform: rotate(360deg); 
+	} 
+}
+
+//-----------------------------------------------------------------
+// Iframe
+//-----------------------------------------------------------------
+
+.auto-resizable-iframe {
+	max-width: breakpoint(break-2);
+	margin: 0px auto;
+	> div { 
+		position: relative;
+		padding-bottom: 58%;
+		height: 0px;           
+	}
+	iframe {
+		position: absolute;
+		border: 0px;
+		top: 0px;
+		left: 0px;
+		width: 100%;
+		height: 100%;
+	}
+}

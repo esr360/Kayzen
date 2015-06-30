@@ -1,0 +1,69 @@
+
+/* Alert Bars
+================================================================ */
+
+@include component(alert-bar) {
+
+// Core Styles
+//-----------------------------------------------------------------
+
+	@include core {
+
+		padding: 0.85em;
+		border: 1px solid;
+		font-size: 0.9em;
+		border-radius: 0.25em;
+		font-weight: lighter;
+		position: relative;
+		border: 1px solid rgba(0,0,0,0.15);
+
+		&:hover {
+			text-decoration: none;
+		}
+
+		a {
+			color: inherit;
+			border-bottom: 1px dotted;
+			&:hover {
+				text-decoration: none;
+			}
+		}
+
+	} // core
+
+// Modifiers
+//-----------------------------------------------------------------
+
+	@include modifier(help) {		
+		background: desaturate(
+			lighten($alert-help, 20%)
+		, 20%) !important;
+		color: darken(
+			desaturate($alert-help, 25%)
+		, 25%);
+	}
+
+	@include modifier(info) {		
+		background: lighten($alert-info, 20%) !important;
+		color: darken(
+			desaturate($alert-info, 15%)
+		, 15%);
+	}
+
+	@include modifier(error) {		
+		background: desaturate(
+			lighten($alert-error, 20%)
+		, 20%) !important;
+		color: darken(
+			desaturate($alert-error, 10%)
+		, 10%);
+	}
+	
+	@include modifier(success) {		
+		background: lighten($alert-success, 20%) !important;
+		color: darken(
+			desaturate($alert-success, 15%)
+		, 15%);
+	}
+
+} // component(alert-bars)

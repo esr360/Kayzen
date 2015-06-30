@@ -1,0 +1,26 @@
+
+/* Logo
+================================================================ */
+
+.logo {	
+
+	color: $logo-color;
+	font-size: $logo-size;
+	text-align: $logo-text-align;
+	padding: $logo-padding;
+	// for plain text logos
+	a {
+		color: $logo-color;
+		display: inline-block;
+		&:hover {
+			text-decoration: none;
+		}
+	}
+	// for image logos
+	img {
+		height: 38px;
+		display: inline-block;
+		vertical-align: middle;
+	}
+
+} // end .logo

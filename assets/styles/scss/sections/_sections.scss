@@ -1,0 +1,109 @@
+
+/* Sections
+================================================================ */
+
+//-----------------------------------------------------------------
+// Section
+//-----------------------------------------------------------------
+
+@include component(section) {
+
+// Core Styles
+//-----------------------------------------------------------------
+
+	@include core {
+
+		background-size: cover;	
+		background-position: center;	
+
+		@include nested-component(hgroup) {
+			color: $heading-color;
+		}
+
+		// Carousel Tools
+
+		.slide-arrow-prev,
+		.slide-arrow-next {
+			@include vertical-center(absolute);
+		}
+
+		.slide-arrow-prev {
+			left: -7.5rem;
+		}
+
+		.slide-arrow-next {
+			right: -7.5rem;
+		}
+
+	} // core
+
+// Modifiers
+//-----------------------------------------------------------------
+
+	@include modifier(primary) {
+		padding: 6em 0;
+	}
+
+	@include modifier(secondary) {
+		background: $brand-2;
+		padding: 8em 0;
+		> .container {
+			position: relative;
+		}
+		&, a:not([class*="button-"]) {
+			color: $white;
+		}
+		@include nested-component(hgroup) {
+			color: $white;
+		}
+	}
+
+	@include modifier(overlay) {
+		@include bg-overlay(rgba($brand-1, 0.4));
+		@include modifier(alt) {
+			@include bg-overlay(rgba($grey-5, 0.6));			
+		}
+		.section-wrapper {
+			position: relative;
+		}
+	}
+
+	@include modifier(dot-map) {
+		position: relative;
+		padding-bottom: 14em;
+		&:before {
+			content: "";
+			background-image: url("#{$asset-path}/images/dot-map.png");
+			background-position: center top;
+			background-repeat: no-repeat;
+			opacity: 0.1;
+			position: absolute;
+			bottom: 0;
+			height: 9em;
+			width: $base-width;
+			max-width: $max-width;
+			@include horizontal-center();
+		}
+	}
+
+	@include modifier(banner) {
+		padding: 5em 0;
+	}
+
+} // component(section)
+
+//-----------------------------------------------------------------
+// Section Block
+//-----------------------------------------------------------------
+
+@include component(s-block) {
+
+	@include core {
+		position: relative;
+		transition: $base-transition;
+		padding: 7%;
+		background-color: $white;	
+		background-size: cover;
+	}
+
+} // component(s-block)

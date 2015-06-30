@@ -1,0 +1,96 @@
+
+/* Header
+================================================================ */
+
+@include component(app-header) {
+
+// Core Styles
+//-----------------------------------------------------------------
+
+	@include core {
+
+		background-color: $header-bg-color;		
+
+		// Conditionals
+
+		@if $header-bar == true {
+			@include extend(bar);
+		}
+
+		@if $header-absolute == true {
+			@include extend(absolute);
+		}
+
+		@if $header-side != null {
+			@if $header-side == left {
+				@include extend(side, left);
+			} @else if $header-side == right {
+				@include extend(side, right);
+			} @else {
+				@include extend(side);
+			}
+		}
+
+		@if $header-dark == true {
+			@include extend(dark);
+		}
+
+		// Child Styles
+
+		@include root(header-wrapper) {
+			height: $header-height;
+		}
+
+	} // core
+
+// Modifiers
+//-----------------------------------------------------------------
+
+	@include modifier(bar) {	
+		.header-wrapper	{	
+			display: table;
+			width: 100%;
+		}
+		.logo, 
+		.app-nav {
+			display: table-cell;
+			vertical-align: middle;
+		}
+	}
+
+	@include modifier(absolute) {
+		position: absolute;
+		top: $header-top-position;
+		z-index: 5;
+		width: 100%;
+	}
+
+	@include modifier(side) {
+		position: fixed;
+		z-index: 5;
+		height: 100%;
+		top: 0;	
+		overflow: auto;
+		width: $header-side-width;	
+		@include modifier(left) {
+			left: 0;
+			+ #main {
+				margin-left:  $header-side-width;
+			}
+		}
+		@include modifier(right) {
+			right: 0;
+			+ #main {
+				margin-right:  $header-side-width;
+			}
+		}
+		@include nested-component(container) {
+			max-width: $header-side-container-width;
+		}
+	}
+
+	@include modifier(dark) {
+		background-color: $header-dark-color;
+	}
+
+} // component(app-header)

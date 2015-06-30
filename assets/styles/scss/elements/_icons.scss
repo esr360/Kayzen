@@ -1,0 +1,173 @@
+
+/* Icons
+================================================================ */
+		
+//-----------------------------------------------------------------
+// Font Awesome
+//-----------------------------------------------------------------
+
+// CDN version
+//@import url("//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css");
+
+// Self hosted version
+@import "../../icons/font-awesome/css/font-awesome.min.css";
+
+.fa {
+	cursor: default;
+}
+
+a.fa, 
+a .fa,
+[class*="button"] .fa, 
+button .fa {
+	cursor: pointer;
+}
+
+//-----------------------------------------------------------------
+// Icon
+//-----------------------------------------------------------------
+
+@include component(icon) {
+
+// Core Styles
+//-----------------------------------------------------------------
+
+	@include core {
+
+		background: $grey-4;
+		color: $white;
+		transition: $base-transition;
+		position: relative;
+		display: inline-block;
+		vertical-align: middle;
+		text-align: center;
+		transition: 0.4s;
+		height: 2em;
+		width: 2em;
+		border: 1px solid;
+		border-color: transparent;
+		&:hover {
+			background: darken($grey-4, 10%);
+			color: $white;
+			text-decoration: none;
+		}
+
+		.fa {
+			font-size: 0.9em;
+			@include vertical-center(absolute);
+			@include horizontal-center;
+		}
+
+	} // core
+
+// Sizes
+//-----------------------------------------------------------------
+
+    @include font-sizes;
+
+// Patterns
+//-----------------------------------------------------------------
+
+	@include modifier(plain) {
+		background: none;
+		height: 1em;
+		width: 1em;
+		&:hover {
+			background: none;
+			border-color: transparent;
+		}
+	}
+
+	@include modifier(border) {
+		background: none;
+		color: $grey-3;
+		border-color: $grey-3;
+		&:hover {
+			color: $white;
+			background: $brand-1;
+			border-color: $brand-1;
+		}
+	}
+
+	@include modifier(round) {
+		border-radius: 0.4em;
+	}
+
+	@include modifier(circle) {
+		border-radius: 50%;
+	}
+
+// Colors
+//-----------------------------------------------------------------
+ 
+ 	// Brand Colors 
+
+	@each $brand, $color in $colors-brand {
+		@include modifier($brand) {
+			background: $color;
+			&:hover {
+				background: darken($color, 10%);
+			}
+			@include modifier(border) {
+				background: transparent;
+				border-color: $color;
+				color: $color;
+				&:hover {
+					background: $color;
+					color: $white;
+				}
+			}
+		}
+	}
+
+ 	// Greyscale Colors 
+
+	@each $greyscale, $color in $colors-greyscale {
+		@include modifier($greyscale) {
+			background: $color;
+			&:hover {
+				background: darken($color, 10%);
+			}
+			@include modifier(border) {
+				background: transparent;
+				border-color: $color;
+				color: $color;
+				&:hover {
+					background: $color;
+					@if (lightness($color) > 80) {
+						color: $grey-4;
+					} @else {
+						color: $white;
+					}
+				}
+			}
+		}
+	}
+
+// Styles
+//-----------------------------------------------------------------
+
+//	@include modifier(primary) {
+//		@include extend(round, size-4, brand-1);
+//	}	
+
+} // component(icon)
+
+//-----------------------------------------------------------------
+// Icon Group
+//-----------------------------------------------------------------
+
+@include component(igroup) {
+
+	@include core {
+
+		@include nested-component(icon) {
+			margin-left: 1rem;
+			&:first-child {
+				margin-left: 0;
+			}
+		}
+
+	} // core
+
+} // component(igroup)

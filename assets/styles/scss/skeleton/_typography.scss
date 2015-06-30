@@ -1,0 +1,20 @@
+
+/* Typography
+================================================================ */
+
+a {
+    color: $brand-1;
+    transition: 0.4s;
+    text-decoration: none;
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+p, ul, ol {
+    font-weight: lighter;
+}
+
+.lede {
+    font-size: $font-size-4;
+}
