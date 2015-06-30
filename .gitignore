@@ -14,12 +14,10 @@ $RECYCLE.BIN/
 *.msm
 *.msp
 
-# Prepros
+#C ustom Options
 *.cfg
-
-#TODO list
-
 tod.txt
+.settings
 
 # =========================
 # Operating System Files
