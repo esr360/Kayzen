@@ -5,25 +5,6 @@ Site Name: Kayzen Wordpress Theme
 Author: TBD
 
 ******************************************************************/
-/******************************************************************
-Themes
-******************************************************************/
-/* Kayzen
-================================================================ */
-/* Color Palettes
-================================================================ */
-/* Default Configuration
-================================================================ */
-/* Sandbox
-// for testing purposes
-================================================================ */
-/* Color Palettes
-================================================================ */
-/* Default Configuration
-================================================================ */
-/******************************************************************
-Skeleton
-******************************************************************/
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
 /**
  * 1. Set default font family to sans-serif.
@@ -38,7 +19,7 @@ html {
   /* 1 */
   -ms-text-size-adjust: 100%;
   /* 2 */
-  -webkit-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%
   /* 2 */
 }
 
@@ -83,7 +64,7 @@ progress,
 video {
   display: inline-block;
   /* 1 */
-  vertical-align: baseline;
+  vertical-align: baseline
   /* 2 */
 }
 
@@ -261,7 +242,7 @@ textarea {
   /* 1 */
   font: inherit;
   /* 2 */
-  margin: 0;
+  margin: 0
   /* 3 */
 }
 
@@ -296,7 +277,7 @@ input[type="reset"],
 input[type="submit"] {
   -webkit-appearance: button;
   /* 2 */
-  cursor: pointer;
+  cursor: pointer
   /* 3 */
 }
 
@@ -336,7 +317,7 @@ input[type="checkbox"],
 input[type="radio"] {
   box-sizing: border-box;
   /* 1 */
-  padding: 0;
+  padding: 0
   /* 2 */
 }
 
@@ -388,7 +369,7 @@ fieldset {
 legend {
   border: 0;
   /* 1 */
-  padding: 0;
+  padding: 0
   /* 2 */
 }
 
@@ -422,12 +403,6 @@ th {
   padding: 0;
 }
 
-/* Color Palettes
-================================================================ */
-/* Default Configuration
-================================================================ */
-/* Utilities
-================================================================ */
 h1:first-child, h2:first-child, h3:first-child, h4:first-child, h5:first-child, h6:first-child,
 p:first-child, ul:first-child, ol:first-child,
 fieldset:first-child, legend:first-child, figure:first-child, table:first-child,
@@ -500,8 +475,6 @@ pre:last-child, hr:last-child, [class*="accordion-"]:last-child, .accordion:last
   height: 100%;
 }
 
-/* Base
-================================================================ */
 html, body {
   padding: 0;
   margin: 0;
@@ -553,8 +526,7 @@ body {
   background: rgba(0, 0, 0, 0.4);
   -webkit-transform: translateZ(0);
           transform: translateZ(0);
-  -webkit-transition: 0.4s;
-          transition: 0.4s;
+  transition: 0.4s;
   z-index: 10;
   visibility: hidden;
   opacity: 0;
@@ -985,8 +957,6 @@ http://github.com/esr360/Kayzen-GS/
   }
 }
 
-/* Helper Classes
-================================================================ */
 .hidden {
   display: none !important;
 }
@@ -1135,8 +1105,6 @@ hr.line {
   }
 }
 
-/* Print Styles
-================================================================ */
 @media print {
   * {
     background: transparent !important;
@@ -1202,12 +1170,9 @@ hr.line {
     display: none;
   }
 }
-/* Typography
-================================================================ */
 a {
   color: #9D55B9;
-  -webkit-transition: 0.4s;
-          transition: 0.4s;
+  transition: 0.4s;
   text-decoration: none;
 }
 a:hover {
@@ -1222,11 +1187,6 @@ p, ul, ol {
   font-size: 1.25em;
 }
 
-/******************************************************************
-Elements
-******************************************************************/
-/* Accordions
-================================================================ */
 [class*="accordion-"], .accordion {
   margin-bottom: 2rem;
   border-bottom: 1px solid rgba(0, 0, 0, 0.15);
@@ -1243,8 +1203,7 @@ Elements
   cursor: pointer;
   font-weight: normal;
   line-height: 1;
-  -webkit-transition: 0.4s;
-          transition: 0.4s;
+  transition: 0.4s;
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
 }
@@ -1254,8 +1213,7 @@ Elements
   opacity: 0.4;
   float: right;
   color: #bfc1c3;
-  -webkit-transition: 0.4s;
-          transition: 0.4s;
+  transition: 0.4s;
 }
 [class*="accordion-"] > * > *:last-child, .accordion > * > *:last-child {
   display: none;
@@ -1289,8 +1247,6 @@ Elements
           transform: rotate(90deg) translateZ(0);
 }
 
-/* Alert Bars
-================================================================ */
 [class*="alert-bar-"], .alert-bar {
   padding: 0.85em;
   border: 1px solid;
@@ -1327,8 +1283,6 @@ Elements
   color: #768f5d;
 }
 
-/* Buttons
-================================================================ */
 [class*="button-"], .button {
   background: #6f777b;
   color: #ffffff;
@@ -1337,8 +1291,7 @@ Elements
   padding: 0 1.2em;
   line-height: 2.4em;
   font-weight: 400;
-  -webkit-transition: 0.4s;
-          transition: 0.4s;
+  transition: 0.4s;
   border: 1px solid;
   border-color: transparent;
   cursor: pointer;
@@ -1391,8 +1344,7 @@ Elements
 [class*="button-"][class*="-disabled"] {
   opacity: 0.6;
   cursor: not-allowed;
-  -webkit-transition-delay: 999s;
-          transition-delay: 999s;
+  transition-delay: 999s;
 }
 [class*="button-"][class*="-round"] {
   border-radius: 0.4em;
@@ -1565,37 +1517,33 @@ button::-moz-focus-inner {
   margin-bottom: 1px;
 }
 
-/* Blockquotes
-================================================================ */
-blockquote {
+[class*="blockquote-"], .blockquote {
   margin: 0;
   border: 0;
   position: relative;
   font-family: "Raleway", sans-serif;
   font-style: italic;
 }
-blockquote p {
+[class*="blockquote-"] p, .blockquote p {
   margin: 0;
   padding: 0 3rem;
 }
-blockquote p:before {
+[class*="blockquote-"] p:before, .blockquote p:before {
   position: absolute;
   font-family: FontAwesome;
   font-size: 1.75rem;
   color: rgba(0, 0, 0, 0.3);
 }
-blockquote p:before {
+[class*="blockquote-"] p:before, .blockquote p:before {
   content: "\f10d";
   top: -0.25rem;
   left: 0;
 }
-blockquote cite {
+[class*="blockquote-"] cite, .blockquote cite {
   font-weight: bold;
   font-style: normal;
 }
 
-/* Carousels
-================================================================ */
 [class*="carousel-"], .carousel {
   position: relative;
 }
@@ -1766,8 +1714,7 @@ blockquote cite {
   min-height: 1px;
   display: none;
   position: relative;
-  -webkit-transition: 0.4s;
-          transition: 0.4s;
+  transition: 0.4s;
 }
 [dir="rtl"] .slick-slide {
   float: right;
@@ -1793,8 +1740,6 @@ blockquote cite {
   border: 1px solid transparent;
 }
 
-/* Fonts
-================================================================ */
 .font-1 {
   font-family: "Lato", sans-serif;
 }
@@ -1803,8 +1748,6 @@ blockquote cite {
   font-family: "Raleway", sans-serif;
 }
 
-/* Forms
-================================================================ */
 input,
 textarea,
 select {
@@ -1845,8 +1788,7 @@ fieldset {
 .form input,
 .form textarea,
 .form select {
-  -webkit-transition: 0.4s;
-          transition: 0.4s;
+  transition: 0.4s;
   outline: 0;
   display: block;
 }
@@ -1855,8 +1797,7 @@ fieldset {
 .form select::-webkit-input-placeholder {
   font-weight: lighter;
   opacity: 1;
-  -webkit-transition: 0.4s;
-          transition: 0.4s;
+  transition: 0.4s;
 }
 .form input::-moz-placeholder,
 .form textarea::-moz-placeholder,
@@ -1877,8 +1818,7 @@ fieldset {
 .form select::placeholder {
   font-weight: lighter;
   opacity: 1;
-  -webkit-transition: 0.4s;
-          transition: 0.4s;
+  transition: 0.4s;
 }
 .form input:focus,
 .form textarea:focus,
@@ -1889,8 +1829,7 @@ fieldset {
 .form textarea:focus::-webkit-input-placeholder,
 .form select:focus::-webkit-input-placeholder {
   opacity: 0.5;
-  -webkit-transition: 0s;
-          transition: 0s;
+  transition: 0s;
 }
 .form input:focus::-moz-placeholder,
 .form textarea:focus::-moz-placeholder,
@@ -1908,8 +1847,7 @@ fieldset {
 .form textarea:focus::placeholder,
 .form select:focus::placeholder {
   opacity: 0.5;
-  -webkit-transition: 0s;
-          transition: 0s;
+  transition: 0s;
 }
 .form input:focus:valid,
 .form textarea:focus:valid,
@@ -1955,13 +1893,10 @@ fieldset {
   height: 2.6em;
 }
 
-/* Headings
-================================================================ */
 [class*="heading-"], .heading {
   line-height: 1;
   font-size: 1em;
-  -webkit-transition: 0.4s;
-          transition: 0.4s;
+  transition: 0.4s;
 }
 [class*="heading-"][class*="-size-1"] {
   font-size: 0.67em;
@@ -2044,12 +1979,10 @@ fieldset {
 }
 [class*="heading-"][class*="-strikethrough"] span:before {
   left: -90px;
-  left: -webkit-calc(-75px - 1rem);
   left: calc(-75px - 1rem);
 }
 [class*="heading-"][class*="-strikethrough"] span:after {
   right: -90px;
-  right: -webkit-calc(-75px - 1rem);
   right: calc(-75px - 1rem);
 }
 [class*="heading-"][class*="-strikethrough"][class*="-brand-1"] span:before, [class*="heading-"][class*="-strikethrough"][class*="-brand-1"] span:after {
@@ -2062,7 +1995,6 @@ fieldset {
   letter-spacing: 0.35em;
 }
 [class*="heading-"][class*="-spaced"][class*="-strikethrough"] span:after {
-  right: -webkit-calc(-75px - 1rem + 0.35em);
   right: calc(-75px - 1rem + 0.35em);
 }
 [class*="heading-"][class*="-dotted"] {
@@ -2156,8 +2088,6 @@ fieldset {
   right: -2em;
 }
 
-/* Icons
-================================================================ */
 .fa {
   cursor: default;
 }
@@ -2172,14 +2102,12 @@ button .fa {
 [class*="icon-"], .icon {
   background: #6f777b;
   color: #ffffff;
-  -webkit-transition: 0.4s;
-          transition: 0.4s;
+  transition: 0.4s;
   position: relative;
   display: inline-block;
   vertical-align: middle;
   text-align: center;
-  -webkit-transition: 0.4s;
-          transition: 0.4s;
+  transition: 0.4s;
   height: 2em;
   width: 2em;
   border: 1px solid;
@@ -2382,8 +2310,6 @@ button .fa {
   margin-left: 0;
 }
 
-/* Images
-================================================================ */
 img {
   max-width: 100%;
   height: auto;
@@ -2428,8 +2354,7 @@ img {
   width: 100%;
   top: 0;
   left: 0;
-  -webkit-transition: 0.4s;
-          transition: 0.4s;
+  transition: 0.4s;
 }
 [class*="bg-img-"][class*="-scale-rotate"]:hover, [class*="s-block-"]:hover [class*="bg-img-"][class*="-scale-rotate"] {
   -webkit-transform: scale(1.3) rotate(7.5deg);
@@ -2449,8 +2374,7 @@ img {
   position: absolute;
   background-size: 100%;
   background-position: center 0%;
-  -webkit-transition: 3s;
-          transition: 3s;
+  transition: 3s;
   height: 58.25%;
   width: 92.2%;
   top: 3.95%;
@@ -2459,8 +2383,7 @@ img {
 }
 [class*="desktop-graphic-"][class*="-scroll"]:hover div {
   background-position: center 100%;
-  -webkit-transition: 20s;
-          transition: 20s;
+  transition: 20s;
 }
 
 .mobile-graphics {
@@ -2471,8 +2394,7 @@ img {
   background-image: url("../../images/mobile-base-blue.png");
   background-size: 100% 100%;
   padding: 30% 8%;
-  -webkit-transition: 0.4s;
-          transition: 0.4s;
+  transition: 0.4s;
 }
 [class*="mobile-graphic-"][class*="-position"], [class*="mobile-graphic-"][class*="-left"], [class*="mobile-graphic-"][class*="-right"] {
   position: absolute;
@@ -2520,8 +2442,6 @@ img {
   background-image: url("../../images/mobile-base-yellow.png");
 }
 
-/* Lists
-================================================================ */
 ul.reset, .arrow-list, .breadcrumb ul, .footer-nav ul, .app-nav > ul, .app-nav > ul > li ul,
 ol.reset {
   margin: 0;
@@ -2545,8 +2465,6 @@ ol.clear {
   color: #9D55B9;
 }
 
-/* Modals
-================================================================ */
 .modal-overlay {
   position: fixed;
   z-index: 100;
@@ -2575,8 +2493,7 @@ ol.clear {
   right: 1rem;
   font-size: 1.25rem;
   line-height: 1;
-  -webkit-transition: 0.4s;
-          transition: 0.4s;
+  transition: 0.4s;
 }
 .modal-close:hover {
   color: #9D55B9;
@@ -2586,8 +2503,6 @@ ol.clear {
   cursor: pointer;
 }
 
-/* Progress Bars
-================================================================ */
 progress::-webkit-progress-bar, .progress-bar {
   background: rgba(0, 0, 0, 0.15);
   border-radius: 0.4rem;
@@ -2630,8 +2545,6 @@ progress.progress-alt::-moz-progress-bar {
   height: 100%;
 }
 
-/* Tables
-================================================================ */
 [class*="table-"], .table {
   width: 100%;
 }
@@ -2657,8 +2570,6 @@ progress.progress-alt::-moz-progress-bar {
   table-layout: fixed;
 }
 
-/* Tabs
-================================================================ */
 .tabs .nav,
 [class*="tabs-"] .nav {
   display: block;
@@ -2675,8 +2586,7 @@ progress.progress-alt::-moz-progress-bar {
   border-bottom: 0;
   border-right: none;
   font-size: 1rem;
-  -webkit-transition: 0.5s;
-          transition: 0.5s;
+  transition: 0.5s;
 }
 .tabs .nav li.active,
 [class*="tabs-"] .nav li.active {
@@ -2715,9 +2625,6 @@ progress.progress-alt::-moz-progress-bar {
   display: table-cell;
 }
 
-/* Tooltips
-// https://github.com/jaz303/tipsy
-================================================================ */
 .tipsy {
   position: absolute;
   margin-top: -0.5rem;
@@ -2837,8 +2744,6 @@ progress.progress-alt::-moz-progress-bar {
   border-bottom-color: transparent;
 }
 
-/* Wells
-================================================================ */
 .well {
   background-color: white;
   border: 1px solid rgba(0, 0, 0, 0.15);
@@ -2847,12 +2752,9 @@ progress.progress-alt::-moz-progress-bar {
   position: relative;
 }
 
-/* Widgets
-================================================================ */
 [class*="widget-"], .widget {
   padding: 2.5em 1em;
-  -webkit-transition: 0.4s;
-          transition: 0.4s;
+  transition: 0.4s;
 }
 [class*="widget-"]:hover .w-icon, .widget:hover .w-icon {
   color: #9D55B9;
@@ -2888,8 +2790,7 @@ progress.progress-alt::-moz-progress-bar {
 }
 [class*="widget-"][class*="-block"] {
   background: #ffffff;
-  -webkit-transition: 0.4s;
-          transition: 0.4s;
+  transition: 0.4s;
 }
 [class*="widget-"][class*="-block"]:hover {
   background: #9D55B9;
@@ -2948,11 +2849,6 @@ progress.progress-alt::-moz-progress-bar {
   margin-bottom: 4rem;
 }
 
-/******************************************************************
-Modules
-******************************************************************/
-/* Breadcrumb
-================================================================ */
 .breadcrumb {
   font-size: 0.9em;
   margin: 2rem 0;
@@ -2969,8 +2865,6 @@ Modules
   margin-left: 0.4em;
 }
 
-/* Flyout Nav
-================================================================ */
 .flyout-trigger {
   position: absolute;
   top: 1rem;
@@ -2981,8 +2875,7 @@ Modules
   cursor: pointer;
 }
 .flyout-trigger .fa {
-  -webkit-transition: 0.4s;
-          transition: 0.4s;
+  transition: 0.4s;
   -webkit-transform-origin: 50% 0;
       -ms-transform-origin: 50% 0;
           transform-origin: 50% 0;
@@ -3014,8 +2907,7 @@ Modules
   font-weight: bold;
   overflow: auto;
   background: #232627;
-  -webkit-transition: 0.4s;
-          transition: 0.4s;
+  transition: 0.4s;
   -webkit-transform: translate3d(0, 0, 0);
           transform: translate3d(0, 0, 0);
   box-shadow: inset -10px 0 6px -9px rgba(0, 0, 0, 0.7);
@@ -3054,8 +2946,6 @@ Modules
   left: 0;
 }
 
-/* Footer
-================================================================ */
 .app-footer {
   text-align: center;
   margin-bottom: 2rem;
@@ -3085,8 +2975,6 @@ Modules
     text-align: right;
   }
 }
-/* Map
-================================================================ */
 .google-map {
   background: rgba(0, 0, 0, 0.2);
   width: 100%;
@@ -3094,8 +2982,6 @@ Modules
   display: block;
 }
 
-/* Header
-================================================================ */
 [class*="app-header-"], .app-header {
   background-color: transparent;
 }
@@ -3147,8 +3033,6 @@ Modules
   background-color: #232627;
 }
 
-/* Logo
-================================================================ */
 .logo {
   color: #ffffff;
   font-size: 1.5em;
@@ -3168,8 +3052,6 @@ Modules
   vertical-align: middle;
 }
 
-/* Main Navigation
-================================================================ */
 .app-nav li a {
   display: block;
   padding: 0.5em 0.75em;
@@ -3190,11 +3072,7 @@ Modules
   vertical-align: middle;
 }
 .app-nav > ul > li {
-  /* Dropdown Navigation
-     Used in: "modules/_navigation.scss"
-  ================================================================ */
-  -webkit-transition: 0.4s;
-          transition: 0.4s;
+  transition: 0.4s;
   margin-left: 0.5em;
   border-color: transparent;
   border-left: 0px solid transparent;
@@ -3205,8 +3083,7 @@ Modules
 .app-nav > ul > li ul {
   min-width: 175px;
   text-align: left;
-  -webkit-transition: 0.4s;
-          transition: 0.4s;
+  transition: 0.4s;
   position: absolute;
   z-index: 5;
   opacity: 0;
@@ -3354,10 +3231,6 @@ Modules
   }
 }
 
-/* Promo Banner
-================================================================ */
-/* Scroll Wheel
-================================================================ */
 .scroll-wheel {
   position: absolute;
   font-size: 2em;
@@ -3395,8 +3268,6 @@ Modules
     top: 1.2em;
   }
 }
-/* Scroll to Top
-================================================================ */
 .scroll-top {
   display: none;
   opacity: 0;
@@ -3421,11 +3292,6 @@ Modules
   }
 }
 
-/******************************************************************
-Sections
-******************************************************************/
-/* Sections
-================================================================ */
 [class*="section-"], .section {
   background-size: cover;
   background-position: center;
@@ -3508,15 +3374,12 @@ Sections
 
 [class*="s-block-"], .s-block {
   position: relative;
-  -webkit-transition: 0.4s;
-          transition: 0.4s;
+  transition: 0.4s;
   padding: 7%;
   background-color: #ffffff;
   background-size: cover;
 }
 
-/* Billboard
-================================================================ */
 [class*="billboard-"], .billboard {
   min-height: 500px;
   background-color: #232627;
@@ -3548,7 +3411,6 @@ Sections
 }
 [class*="billboard-"][class*="-full-screen"], [class*="billboard-"], .billboard {
   height: 90%;
-  height: -webkit-calc(100% - 100px);
   height: calc(100% - 100px);
 }
 

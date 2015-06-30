@@ -1,6 +1,6 @@
-
-/* Default Configuration
-================================================================ */
+//=================================================================
+// Default Configuration
+//=================================================================
 
 // These are the default variables for the Kayzen framework. Each
 // theme has its own scss file where the custom options are set.
@@ -74,27 +74,21 @@ $font-2                         : 'Raleway', sans-serif !default;
 
 $base-font-size                 : 1em !default;
 
-$font-size-1                    : 0.67em !default;
-$font-size-2                    : 0.83em !default;
-$font-size-3                    : 1.17em !default;
-$font-size-4                    : 1.25em !default;
-$font-size-5                    : 1.5em !default;
-$font-size-6                    : 2em !default;
-$font-size-7                    : 2.4em !default;
-$font-size-8                    : 3em !default;
-$font-size-9                    : 3.4em !default;
-
 $font-sizes: (
-	size-1                      : $font-size-1,
-	size-2                      : $font-size-2,
-	size-3                      : $font-size-3,
-	size-4                      : $font-size-4,
-	size-5                      : $font-size-5,
-	size-6                      : $font-size-6,
-	size-7                      : $font-size-7,
-	size-8                      : $font-size-8,
-	size-9                      : $font-size-9
-);
+	size-1                      : 0.67em,
+	size-2                      : 0.83em,
+	size-3                      : 1.17em,
+	size-4                      : 1.25em,
+	size-5                      : 1.5em,
+	size-6                      : 2em,
+	size-7                      : 2.4em,
+	size-8                      : 3em,
+	size-9                      : 3.4em
+) !default;
+
+@function font-size($size) {
+    @return map-get($font-sizes, $size);
+}
 
 //-----------------------------------------------------------------
 // Theming
@@ -138,7 +132,7 @@ $header-side-width              : 350px !default;
 $logo-text-align                : left !default;
 
 $logo-color                     : $brand-1 !default;
-$logo-size                      : $font-size-5 !default;
+$logo-size                      : font-size(size-5) !default;
 
 $logo-padding                   : 0 !default;
 

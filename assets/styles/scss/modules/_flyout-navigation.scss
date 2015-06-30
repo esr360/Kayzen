@@ -1,6 +1,6 @@
-
-/* Flyout Nav
-================================================================ */
+//=================================================================
+// Flyout Navigation
+//=================================================================
 
 .flyout-trigger {
 	position: absolute;
@@ -35,7 +35,7 @@
     height: 100%;
     top: 0;
     z-index: 9999;
-    font-size: $font-size-3;
+    font-size: font-size(size-3);
     font-weight: bold;
     overflow: auto;
     background: $grey-5;

@@ -1,6 +1,6 @@
-
-/* Headings
-================================================================ */
+//=================================================================
+// Headings
+//=================================================================
 
 //-----------------------------------------------------------------
 // Heading
@@ -206,14 +206,14 @@
 
 	display: inline-block;
 	position: relative;
-	font-size: $font-size-5;
+	font-size: font-size(size-5);
 
 	.fa {
 		position: relative;
 		width: 0.85em;
 		height: 0.85em;
 		line-height: 0.85em;
-		font-size: $font-size-4;
+		font-size: font-size(size-4);
 		color: $grey-5;
 		border: 1px solid $brand-1;
 		border-radius: 50%;

@@ -1,6 +1,6 @@
-
-/* Carousels
-================================================================ */
+//=================================================================
+// Carousels
+//=================================================================
 
 //-----------------------------------------------------------------
 // Carousel
@@ -40,7 +40,7 @@
             position: absolute;
             top: 30%;
             font-family: FontAwesome;
-            font-size: $font-size-7;
+            font-size: font-size(size-7);
             color: $grey-2;
             //animation: spin 1s linear infinite;
             @include horizontal-center;
