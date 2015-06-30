@@ -2477,12 +2477,12 @@ progress.progress-alt::-moz-progress-bar {
 [class*="tab-"] > *:not(.tab-nav).active, .tab > *:not(.tab-nav).active {
   display: block;
 }
-[class*="tab-"][class*="-full"] .nav {
+[class*="tab-"][class*="-full"] .tab-nav {
   display: table;
   width: 100%;
   position: relative;
 }
-[class*="tab-"][class*="-full"] .nav li {
+[class*="tab-"][class*="-full"] .tab-nav li {
   display: table-cell;
 }
 
