@@ -34,7 +34,7 @@
     // first level nav only
     > ul {
 
-        @extend ul.reset;
+        @extend %list-reset;
         display: none; // hide by default for mobiles
         vertical-align: middle;
 

@@ -2,28 +2,44 @@
 // Lists
 //=================================================================
 
-ul.reset, 
-ol.reset {
-	margin: 0;
-	padding: 0;
-	list-style: none;
-}
+@include component(list) {
+	
+// Core Styles
+//-----------------------------------------------------------------
 
-ul.clear, 
-ol.clear {
-	padding-left: 1em;
-}
+	@include core {
+		
+	} // core
+	
+// Modifiers
+//-----------------------------------------------------------------
 
-.arrow-list {
-	@extend ul.reset;
-	li {
-		line-height: 1.8;
-		margin-bottom: 0 !important;
-		&:before {
-			content: "\f138";
-			font-family: FontAwesome;
-			margin-right: 0.5em;
-			color: $brand-1;
+	%list-reset {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+
+    @include modifier(reset) {
+		@extend %list-reset;
+	}
+	
+    @include modifier(clear) {
+		padding-left: 1em;
+	}
+	
+    @include modifier(arrow) {
+		padding-left: 1em;
+		li {
+			line-height: 1.8;
+			margin-bottom: 0 !important;
+			&:before {
+				content: "\f138";
+				font-family: FontAwesome;
+				margin-right: 0.5em;
+				color: $brand-1;
+			}
 		}
 	}
-}
+	
+} // component(list)

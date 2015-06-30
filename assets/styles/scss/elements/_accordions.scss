@@ -4,6 +4,9 @@
 
 @include component(accordion) {
 
+// Core Styles
+//-----------------------------------------------------------------
+
 	@include core {
 
 		margin-bottom: $base-margin;

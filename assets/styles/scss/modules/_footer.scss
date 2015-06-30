@@ -13,7 +13,7 @@
 
 .footer-nav {
 	ul {
-	    @extend ul.reset;
+	    @extend %list-reset;
 	}
     li {
 	    display: inline-block;
