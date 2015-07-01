@@ -54,7 +54,7 @@
 
 	// Full width tab buttons
 	@include modifier(full) {
-		.nav {
+		.tab-nav {
 			display: table;
 			width: 100%;
 			position: relative;
