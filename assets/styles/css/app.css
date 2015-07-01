@@ -19,7 +19,7 @@ html {
   /* 1 */
   -ms-text-size-adjust: 100%;
   /* 2 */
-  -webkit-text-size-adjust: 100%
+  -webkit-text-size-adjust: 100%;
   /* 2 */
 }
 
@@ -64,7 +64,7 @@ progress,
 video {
   display: inline-block;
   /* 1 */
-  vertical-align: baseline
+  vertical-align: baseline;
   /* 2 */
 }
 
@@ -242,7 +242,7 @@ textarea {
   /* 1 */
   font: inherit;
   /* 2 */
-  margin: 0
+  margin: 0;
   /* 3 */
 }
 
@@ -277,7 +277,7 @@ input[type="reset"],
 input[type="submit"] {
   -webkit-appearance: button;
   /* 2 */
-  cursor: pointer
+  cursor: pointer;
   /* 3 */
 }
 
@@ -317,7 +317,7 @@ input[type="checkbox"],
 input[type="radio"] {
   box-sizing: border-box;
   /* 1 */
-  padding: 0
+  padding: 0;
   /* 2 */
 }
 
@@ -369,7 +369,7 @@ fieldset {
 legend {
   border: 0;
   /* 1 */
-  padding: 0
+  padding: 0;
   /* 2 */
 }
 
@@ -526,7 +526,8 @@ body {
   background: rgba(0, 0, 0, 0.4);
   -webkit-transform: translateZ(0);
           transform: translateZ(0);
-  transition: 0.4s;
+  -webkit-transition: 0.4s;
+          transition: 0.4s;
   z-index: 10;
   visibility: hidden;
   opacity: 0;
@@ -1172,7 +1173,8 @@ hr.line {
 }
 a {
   color: #9D55B9;
-  transition: 0.4s;
+  -webkit-transition: 0.4s;
+          transition: 0.4s;
   text-decoration: none;
 }
 a:hover {
@@ -1203,7 +1205,8 @@ p, ul, ol {
   cursor: pointer;
   font-weight: normal;
   line-height: 1;
-  transition: 0.4s;
+  -webkit-transition: 0.4s;
+          transition: 0.4s;
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
 }
@@ -1213,7 +1216,8 @@ p, ul, ol {
   opacity: 0.4;
   float: right;
   color: #bfc1c3;
-  transition: 0.4s;
+  -webkit-transition: 0.4s;
+          transition: 0.4s;
 }
 [class*="accordion-"] > * > *:last-child, .accordion > * > *:last-child {
   display: none;
@@ -1291,7 +1295,8 @@ p, ul, ol {
   padding: 0 1.2em;
   line-height: 2.4em;
   font-weight: 400;
-  transition: 0.4s;
+  -webkit-transition: 0.4s;
+          transition: 0.4s;
   border: 1px solid;
   border-color: transparent;
   cursor: pointer;
@@ -1344,7 +1349,8 @@ p, ul, ol {
 [class*="button-"][class*="-disabled"] {
   opacity: 0.6;
   cursor: not-allowed;
-  transition-delay: 999s;
+  -webkit-transition-delay: 999s;
+          transition-delay: 999s;
 }
 [class*="button-"][class*="-round"] {
   border-radius: 0.4em;
@@ -1714,7 +1720,8 @@ button::-moz-focus-inner {
   min-height: 1px;
   display: none;
   position: relative;
-  transition: 0.4s;
+  -webkit-transition: 0.4s;
+          transition: 0.4s;
 }
 [dir="rtl"] .slick-slide {
   float: right;
@@ -1751,7 +1758,8 @@ button::-moz-focus-inner {
 [class*="heading-"], .heading {
   line-height: 1;
   font-size: 1em;
-  transition: 0.4s;
+  -webkit-transition: 0.4s;
+          transition: 0.4s;
 }
 [class*="heading-"][class*="-size-1"] {
   font-size: 0.67em;
@@ -1834,10 +1842,12 @@ button::-moz-focus-inner {
 }
 [class*="heading-"][class*="-strikethrough"] span:before {
   left: -90px;
+  left: -webkit-calc(-75px - 1rem);
   left: calc(-75px - 1rem);
 }
 [class*="heading-"][class*="-strikethrough"] span:after {
   right: -90px;
+  right: -webkit-calc(-75px - 1rem);
   right: calc(-75px - 1rem);
 }
 [class*="heading-"][class*="-strikethrough"][class*="-brand-1"] span:before, [class*="heading-"][class*="-strikethrough"][class*="-brand-1"] span:after {
@@ -1850,6 +1860,7 @@ button::-moz-focus-inner {
   letter-spacing: 0.35em;
 }
 [class*="heading-"][class*="-spaced"][class*="-strikethrough"] span:after {
+  right: -webkit-calc(-75px - 1rem + 0.35em);
   right: calc(-75px - 1rem + 0.35em);
 }
 [class*="heading-"][class*="-dotted"] {
@@ -1957,12 +1968,14 @@ button .fa {
 [class*="icon-"], .icon {
   background: #6f777b;
   color: #ffffff;
-  transition: 0.4s;
+  -webkit-transition: 0.4s;
+          transition: 0.4s;
   position: relative;
   display: inline-block;
   vertical-align: middle;
   text-align: center;
-  transition: 0.4s;
+  -webkit-transition: 0.4s;
+          transition: 0.4s;
   height: 2em;
   width: 2em;
   border: 1px solid;
@@ -2209,7 +2222,8 @@ img {
   width: 100%;
   top: 0;
   left: 0;
-  transition: 0.4s;
+  -webkit-transition: 0.4s;
+          transition: 0.4s;
 }
 [class*="bg-img-"][class*="-scale-rotate"]:hover, [class*="s-block-"]:hover [class*="bg-img-"][class*="-scale-rotate"] {
   -webkit-transform: scale(1.3) rotate(7.5deg);
@@ -2229,7 +2243,8 @@ img {
   position: absolute;
   background-size: 100%;
   background-position: center 0%;
-  transition: 3s;
+  -webkit-transition: 3s;
+          transition: 3s;
   height: 58.25%;
   width: 92.2%;
   top: 3.95%;
@@ -2238,7 +2253,8 @@ img {
 }
 [class*="desktop-graphic-"][class*="-scroll"]:hover div {
   background-position: center 100%;
-  transition: 20s;
+  -webkit-transition: 20s;
+          transition: 20s;
 }
 
 .mobile-graphics {
@@ -2249,7 +2265,8 @@ img {
   background-image: url("../../images/mobile-base-blue.png");
   background-size: 100% 100%;
   padding: 30% 8%;
-  transition: 0.4s;
+  -webkit-transition: 0.4s;
+          transition: 0.4s;
 }
 [class*="mobile-graphic-"][class*="-position"], [class*="mobile-graphic-"][class*="-left"], [class*="mobile-graphic-"][class*="-right"] {
   position: absolute;
@@ -2345,7 +2362,8 @@ img {
   right: 1rem;
   font-size: 1.25rem;
   line-height: 1;
-  transition: 0.4s;
+  -webkit-transition: 0.4s;
+          transition: 0.4s;
 }
 .modal-close:hover {
   color: #9D55B9;
@@ -2435,7 +2453,8 @@ progress.progress-alt::-moz-progress-bar {
   border-bottom: 0;
   border-right: none;
   font-size: 1rem;
-  transition: 0.5s;
+  -webkit-transition: 0.5s;
+          transition: 0.5s;
 }
 .tab-nav li.active {
   background: white;
@@ -2596,7 +2615,8 @@ progress.progress-alt::-moz-progress-bar {
 
 [class*="widget-"], .widget {
   padding: 2.5em 1em;
-  transition: 0.4s;
+  -webkit-transition: 0.4s;
+          transition: 0.4s;
 }
 [class*="widget-"]:hover .w-icon, .widget:hover .w-icon {
   color: #9D55B9;
@@ -2632,7 +2652,8 @@ progress.progress-alt::-moz-progress-bar {
 }
 [class*="widget-"][class*="-block"] {
   background: #ffffff;
-  transition: 0.4s;
+  -webkit-transition: 0.4s;
+          transition: 0.4s;
 }
 [class*="widget-"][class*="-block"]:hover {
   background: #9D55B9;
@@ -2717,7 +2738,8 @@ progress.progress-alt::-moz-progress-bar {
   cursor: pointer;
 }
 .flyout-trigger .fa {
-  transition: 0.4s;
+  -webkit-transition: 0.4s;
+          transition: 0.4s;
   -webkit-transform-origin: 50% 0;
       -ms-transform-origin: 50% 0;
           transform-origin: 50% 0;
@@ -2749,7 +2771,8 @@ progress.progress-alt::-moz-progress-bar {
   font-weight: bold;
   overflow: auto;
   background: #232627;
-  transition: 0.4s;
+  -webkit-transition: 0.4s;
+          transition: 0.4s;
   -webkit-transform: translate3d(0, 0, 0);
           transform: translate3d(0, 0, 0);
   box-shadow: inset -10px 0 6px -9px rgba(0, 0, 0, 0.7);
@@ -2914,7 +2937,8 @@ progress.progress-alt::-moz-progress-bar {
   vertical-align: middle;
 }
 .app-nav > ul > li {
-  transition: 0.4s;
+  -webkit-transition: 0.4s;
+          transition: 0.4s;
   margin-left: 0.5em;
   border-color: transparent;
   border-left: 0px solid transparent;
@@ -2925,7 +2949,8 @@ progress.progress-alt::-moz-progress-bar {
 .app-nav > ul > li ul {
   min-width: 175px;
   text-align: left;
-  transition: 0.4s;
+  -webkit-transition: 0.4s;
+          transition: 0.4s;
   position: absolute;
   z-index: 5;
   opacity: 0;
@@ -3216,7 +3241,8 @@ progress.progress-alt::-moz-progress-bar {
 
 [class*="s-block-"], .s-block {
   position: relative;
-  transition: 0.4s;
+  -webkit-transition: 0.4s;
+          transition: 0.4s;
   padding: 7%;
   background-color: #ffffff;
   background-size: cover;
@@ -3253,6 +3279,7 @@ progress.progress-alt::-moz-progress-bar {
 }
 [class*="billboard-"][class*="-full-screen"], [class*="billboard-"], .billboard {
   height: 90%;
+  height: -webkit-calc(100% - 100px);
   height: calc(100% - 100px);
 }
 
