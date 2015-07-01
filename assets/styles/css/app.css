@@ -457,6 +457,12 @@ pre:last-child, hr:last-child, [class*="accordion-"]:last-child, .accordion:last
             transform: rotate(360deg);
   }
 }
+[class*="list-"][class*="-reset"], .breadcrumb ul, .footer-nav ul, .app-nav > ul, .app-nav > ul > li ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
 .auto-resizable-iframe {
   max-width: 720px;
   margin: 0px auto;
@@ -2314,11 +2320,6 @@ img {
   background-image: url("../../images/mobile-base-yellow.png");
 }
 
-[class*="list-"] [class*="list-"][class*="-reset"], [class*="list-"] .breadcrumb ul, .breadcrumb [class*="list-"] ul, [class*="list-"] .footer-nav ul, .footer-nav [class*="list-"] ul, [class*="list-"] .app-nav > ul, [class*="list-"] .app-nav > ul > li ul, .app-nav > ul > li [class*="list-"] ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
 [class*="list-"][class*="-clear"] {
   padding-left: 1em;
 }
@@ -2506,6 +2507,7 @@ progress.progress-alt::-moz-progress-bar {
   padding: 1em;
   background: rgba(0, 0, 0, 0.75);
   border-radius: 0.4em;
+  color: #ffffff;
   font-size: 1rem;
   text-transform: none;
   font-weight: normal;

@@ -5,7 +5,7 @@
 
 ul {
 
-	@extend %list-reset;;
+	@extend %list-reset;
 	min-width: $dropdown-width;
 	text-align: $dropdown-text-align;
 	transition: $base-transition;
