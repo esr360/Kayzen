@@ -8,7 +8,7 @@
 		
 		// Child Styles
 		
-		@include root(modal-content) {
+		@at-root .modal-content {
 		    display: none;
 		    position: relative;
 		    background: $white;
@@ -19,7 +19,7 @@
 		    max-width: 90%;
 		}
 		
-		@include root(modal-overlay) {
+		@at-root .modal-overlay {
 		    position: fixed;
 		    z-index:100;
 		    top: 0px;
@@ -30,7 +30,7 @@
 		    display: none;
 		}
 
-		@include root(modal-close) {
+		@at-root .modal-close {
 		    position: absolute;
 		    top: 1rem;
 		    right: 1rem;

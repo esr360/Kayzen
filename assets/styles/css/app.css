@@ -2499,7 +2499,6 @@ progress.progress-alt::-moz-progress-bar {
       -ms-transform: translateY(-50%);
           transform: translateY(-50%);
 }
-
 .tooltip-content {
   display: inline-block;
   width: auto;

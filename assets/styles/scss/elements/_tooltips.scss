@@ -1,42 +1,50 @@
 //=================================================================
 // Tooltips
 //=================================================================
-
+		
 [data-tooltip] {
 	position: relative;
 	cursor: pointer;
 }
+		
+@include component(tooltip) {
+	
+	@include core {
+		
+		@at-root .tooltip-wrapper {
+			position: absolute;	
+			top: -100%;
+			transform: translateY(-50%);
+			@include horizontal-center;	
+		}
+		
+		@at-root .tooltip-content {
+			display: inline-block;
+			width: auto;
+			max-width: 50%;
+			// Appearance
+			padding: 1em;
+			background: rgba($black, 0.75);
+			border-radius: $base-radius;
+			color: $white;
+			// font reset
+			font-size: 1rem;
+			text-transform: none;
+			font-weight: normal;
+			&:after {
+				content:'';
+				position: absolute;
+				top: 100%;
+				left: 50%;
+				margin-left: -0.5rem;
+				width: 0;
+				height: 0;
+				border-top: solid 0.5rem rgba($black, 0.75);
+				border-left: solid 0.5rem transparent;
+				border-right: solid 0.5rem transparent;
+			}
+		}
 
-.tooltip-wrapper {
-	position: absolute;	
-	top: -100%;
-	transform: translateY(-50%);
-	@include horizontal-center;	
-}
+	} // core
 
-.tooltip-content {
-	display: inline-block;
-	width: auto;
-	max-width: 50%;
-	// Appearance
-	padding: 1em;
-	background: rgba($black, 0.75);
-	border-radius: $base-radius;
-	color: $white;
-	// font reset
-	font-size: 1rem;
-	text-transform: none;
-	font-weight: normal;
-	&:after {
-		content:'';
-		position: absolute;
-		top: 100%;
-		left: 50%;
-		margin-left: -0.5rem;
-		width: 0;
-		height: 0;
-		border-top: solid 0.5rem rgba($black, 0.75);
-		border-left: solid 0.5rem transparent;
-		border-right: solid 0.5rem transparent;
-	}
-}
+} // component(tooltip)

@@ -55,20 +55,9 @@
 	}
 }
 
-// Sub Component
-// Load nested sub-components outside of the parent component
-
-@mixin root($component) {
-	@at-root .#{$component} {
-		@content;
-	}
-}
-
 //-----------------------------------------------------------------
 // Responsive Media Queries
 //-----------------------------------------------------------------
-
-
 
 //-----------------------------------------------------------------
 // Vertical Rhythm
