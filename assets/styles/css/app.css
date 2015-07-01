@@ -421,7 +421,7 @@ pre:last-child, hr:last-child, [class*="accordion-"]:last-child, .accordion:last
   margin-bottom: 0;
 }
 
-[class*="carousel-"][class*="-scale"]:before, [class*="icon-"] .fa, .icon .fa, [class*="mobile-graphic-"][class*="-position"], [class*="mobile-graphic-"][class*="-left"], [class*="mobile-graphic-"][class*="-right"], .scroll-wheel, .scroll-wheel:before, [class*="section-"][class*="-dot-map"]:before, .bb-wrapper {
+[class*="carousel-"][class*="-scale"]:before, [class*="icon-"] .fa, .icon .fa, [class*="mobile-graphic-"][class*="-position"], [class*="mobile-graphic-"][class*="-left"], [class*="mobile-graphic-"][class*="-right"], .tooltip-wrapper, .scroll-wheel, .scroll-wheel:before, [class*="section-"][class*="-dot-map"]:before, .bb-wrapper {
   left: 0;
   right: 0;
   margin: auto;
@@ -2486,123 +2486,41 @@ progress.progress-alt::-moz-progress-bar {
   display: table-cell;
 }
 
-.tipsy {
-  position: absolute;
-  margin-top: -0.5rem;
-  padding: 5px;
-  z-index: 999;
+[data-tooltip] {
+  position: relative;
+  cursor: pointer;
 }
 
-.tipsy-inner {
-  background-color: rgba(0, 0, 0, 0.85);
-  color: #FFF;
-  max-width: 250px;
-  padding: 0 1em;
-  line-height: 2.4em;
-  text-align: center;
+.tooltip-wrapper {
+  position: absolute;
+  top: -100%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.tooltip-content {
+  display: inline-block;
+  width: auto;
+  max-width: 50%;
+  padding: 1em;
+  background: rgba(0, 0, 0, 0.75);
   border-radius: 0.4em;
+  font-size: 1rem;
+  text-transform: none;
+  font-weight: normal;
 }
-
-/* Rounded corners */
-.tipsy-arrow {
+.tooltip-content:after {
+  content: '';
   position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -0.5rem;
   width: 0;
   height: 0;
-  line-height: 0;
-  border: 5px dashed rgba(0, 0, 0, 0.85);
-}
-
-/* Rules to colour arrows */
-.tipsy-arrow-n {
-  border-bottom-color: rgba(0, 0, 0, 0.85);
-}
-
-.tipsy-arrow-s {
-  border-top-color: rgba(0, 0, 0, 0.85);
-}
-
-.tipsy-arrow-e {
-  border-left-color: rgba(0, 0, 0, 0.85);
-}
-
-.tipsy-arrow-w {
-  border-right-color: rgba(0, 0, 0, 0.85);
-}
-
-.tipsy-n .tipsy-arrow {
-  top: 0px;
-  left: 50%;
-  margin-left: -5px;
-  border-bottom-style: solid;
-  border-top: none;
-  border-left-color: transparent;
-  border-right-color: transparent;
-}
-
-.tipsy-nw .tipsy-arrow {
-  top: 0;
-  left: 10px;
-  border-bottom-style: solid;
-  border-top: none;
-  border-left-color: transparent;
-  border-right-color: transparent;
-}
-
-.tipsy-ne .tipsy-arrow {
-  top: 0;
-  right: 10px;
-  border-bottom-style: solid;
-  border-top: none;
-  border-left-color: transparent;
-  border-right-color: transparent;
-}
-
-.tipsy-s .tipsy-arrow {
-  bottom: 0;
-  left: 50%;
-  margin-left: -5px;
-  border-top-style: solid;
-  border-bottom: none;
-  border-left-color: transparent;
-  border-right-color: transparent;
-}
-
-.tipsy-sw .tipsy-arrow {
-  bottom: 0;
-  left: 10px;
-  border-top-style: solid;
-  border-bottom: none;
-  border-left-color: transparent;
-  border-right-color: transparent;
-}
-
-.tipsy-se .tipsy-arrow {
-  bottom: 0;
-  right: 10px;
-  border-top-style: solid;
-  border-bottom: none;
-  border-left-color: transparent;
-  border-right-color: transparent;
-}
-
-.tipsy-e .tipsy-arrow {
-  right: 0;
-  top: 50%;
-  margin-top: -5px;
-  border-left-style: solid;
-  border-right: none;
-  border-top-color: transparent;
-  border-bottom-color: transparent;
-}
-
-.tipsy-w .tipsy-arrow {
-  left: 0;
-  top: 50%;
-  margin-top: -5px;
-  border-right-style: solid;
-  border-left: none;
-  border-top-color: transparent;
-  border-bottom-color: transparent;
+  border-top: solid 0.5rem rgba(0, 0, 0, 0.75);
+  border-left: solid 0.5rem transparent;
+  border-right: solid 0.5rem transparent;
 }
 
 .well {

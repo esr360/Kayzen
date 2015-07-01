@@ -17,6 +17,6 @@ function accordion() {
 
 	});
   
-}
+} // accordion
 
 $(accordion);
