@@ -17,19 +17,10 @@
 
 // Nested Component
 
-@mixin nested-component($component: $component, $root: false) { 
-	@if $root {			
-		@at-root {
-			.#{$component},
-			[class*="#{$component}-"] {
-				@content;
-			}
-		}
-	} @else {	
-		.#{$component},
-		[class*="#{$component}-"] {
-			@content;
-		}
+@mixin nested-component($component: $component) { 
+	.#{$component},
+	[class*="#{$component}-"] {
+		@content;
 	}
 }
 
@@ -187,6 +178,51 @@
 	margin: 0;
 	padding: 0;
 	list-style: none;
+}
+
+//-----------------------------------------------------------------
+// CSS Triangle
+//-----------------------------------------------------------------
+
+@mixin triangle(
+	$position: bottom, 
+	$color: rgba($black, 0.75),
+	$size: 0.5rem
+) {
+	&:after {
+		content:'';
+		position: absolute;
+		width: 0;
+		height: 0;
+		margin-left: -$size;
+		@if $position == bottom {
+			top: 100%;
+			left: 50%;
+			border-left: solid $size transparent;
+			border-right: solid $size transparent;
+			border-top: solid $size $color;
+		} @else if $position == top {
+			bottom: 100%;
+			left: 50%;
+			border-left: solid $size transparent;
+			border-right: solid $size transparent;
+			border-bottom: solid $size $color;
+		} @else if $position == right {
+			top: 50%;
+			right: -$size;
+			transform: translateY(-50%);
+			border-top: solid $size transparent;
+			border-bottom: solid $size transparent;
+			border-left: solid $size $color;
+		} @else if $position == left {
+			top: 50%;
+			right: 100%;
+			transform: translateY(-50%);
+			border-top: solid $size transparent;
+			border-bottom: solid $size transparent;
+			border-right: solid $size $color;
+		}
+	}
 }
 
 //-----------------------------------------------------------------

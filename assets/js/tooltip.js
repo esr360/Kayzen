@@ -31,5 +31,5 @@ var $tooltip = $("[data-tooltip]");
 }( jQuery ));
 
 $tooltip.tooltip({
-	position: "top"
+	position: "left"
 });
