@@ -2,20 +2,34 @@
 /* Tooltips
 ================================================================ */
 
-function tooltip() {
+var $tooltip = $("[data-tooltip]");
+
+(function ( $ ) {
+	
+	$.fn.extend({
 		
-	$("[data-tooltip]").on({
-		mouseenter: function () {
-			var $content = $(this).attr("data-tooltip");
-			$(this).append(
-				$('<div class="tooltip-wrapper"><div class="tooltip-content">'+ $content +'</div></div>')
-			);
-		},
-		mouseleave: function () {
-			$(this).find(".tooltip-content").remove();
-		}
+		tooltip: function(options) {
+			
+			var defaults = {  
+				position: "top"
+			};  
+			
+			var options = $.extend(defaults, options);	
+			
+			return this.each(function() { 
+				var $content = $(this).attr("data-tooltip");			
+				var $position = options.position;
+				$(this).append(
+					$("<div class='tooltip-wrapper-"+ $position +"'><div class='tooltip-content'>"+ $content +"</div></div>")
+				);	
+			});
+			
+		} // tooltip
+		
 	});
 
-}
+}( jQuery ));
 
-$(tooltip);
+$tooltip.tooltip({
+	position: "top"
+});

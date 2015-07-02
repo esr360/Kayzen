@@ -2,23 +2,53 @@
 // Tooltips
 //=================================================================
 		
-[data-tooltip] {
-	position: relative;
-	cursor: pointer;
+%bottom-triangle{
+	&:after {
+		content:'';
+		position: absolute;
+		top: 100%;
+		left: 50%;
+		margin-left: -0.5rem;
+		width: 0;
+		height: 0;
+		border-top: solid 0.5rem rgba($black, 0.75);
+		border-left: solid 0.5rem transparent;
+		border-right: solid 0.5rem transparent;
+	}
 }
 		
 @include component(tooltip) {
 	
 	@include core {
 		
-		@at-root .tooltip-wrapper {
+		@at-root [data-tooltip] {
+			position: relative;
+			cursor: pointer;		
+			&:hover {
+				@include nested-component(tooltip-wrapper) {
+					opacity: 1;
+					visibility: visible;
+				}
+			}
+		}
+
+		@include nested-component(tooltip-wrapper, true) {
 			position: absolute;	
-			top: -100%;
-			transform: translateY(-50%);
+			transition: $base-transition;
+			opacity: 0;
+			visibility: hidden;
 			@include horizontal-center;	
+			@include modifier(top) {
+				top: -100%;
+				transform: translateY(-50%);			
+			}
+			@include modifier(bottom) {
+				bottom: -100%;
+				transform: translateY(50%);				
+			}
 		}
 		
-		@at-root .tooltip-content {
+		@include nested-component(tooltip-content, true) {
 			display: inline-block;
 			width: auto;
 			max-width: 50%;
@@ -31,17 +61,8 @@
 			font-size: 1rem;
 			text-transform: none;
 			font-weight: normal;
-			&:after {
-				content:'';
-				position: absolute;
-				top: 100%;
-				left: 50%;
-				margin-left: -0.5rem;
-				width: 0;
-				height: 0;
-				border-top: solid 0.5rem rgba($black, 0.75);
-				border-left: solid 0.5rem transparent;
-				border-right: solid 0.5rem transparent;
+			.tooltip-wrapper-top & {
+				@extend %bottom-triangle;				
 			}
 		}
 
