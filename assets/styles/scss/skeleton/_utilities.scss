@@ -17,10 +17,19 @@
 
 // Nested Component
 
-@mixin nested-component($component: $component) { 
-	.#{$component},
-	[class*="#{$component}-"] {
-		@content;
+@mixin nested-component($component: $component, $root: false) { 
+	@if $root {			
+		@at-root {
+			.#{$component},
+			[class*="#{$component}-"] {
+				@content;
+			}
+		}
+	} @else {	
+		.#{$component},
+		[class*="#{$component}-"] {
+			@content;
+		}
 	}
 }
 
@@ -55,20 +64,9 @@
 	}
 }
 
-// Sub Component
-// Load nested sub-components outside of the parent component
-
-@mixin root($component) {
-	@at-root .#{$component} {
-		@content;
-	}
-}
-
 //-----------------------------------------------------------------
 // Responsive Media Queries
 //-----------------------------------------------------------------
-
-
 
 //-----------------------------------------------------------------
 // Vertical Rhythm
@@ -179,6 +177,16 @@
 	100% { 
 		transform: rotate(360deg); 
 	} 
+}
+
+//-----------------------------------------------------------------
+// Reset List Styles
+//-----------------------------------------------------------------
+
+%list-reset {
+	margin: 0;
+	padding: 0;
+	list-style: none;
 }
 
 //-----------------------------------------------------------------
