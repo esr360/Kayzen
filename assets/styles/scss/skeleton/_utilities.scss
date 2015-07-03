@@ -224,6 +224,51 @@
 		}
 	}
 }
+				
+//-----------------------------------------------------------------
+// Custom Tooltip Color
+//-----------------------------------------------------------------
+
+@mixin tooltip-color(
+	$namespace: dark, 
+	$text: $white,
+	$color: rgba($black, 0.8)
+) {
+	@include modifier(#{$namespace}) {
+		.tooltip-content {
+			color: $text;
+			background: $color;
+		}
+		@include modifier(top) {
+			.tooltip-content {
+				&:after {
+					border-bottom-color: $color;
+				}
+			}
+		}
+		@include modifier(bottom) {
+			.tooltip-content {
+				&:after {
+					border-top-color: $color;
+				}
+			}
+		}
+		@include modifier(left) {
+			.tooltip-content {
+				&:after {
+					border-left-color: $color;
+				}
+			}
+		}
+		@include modifier(right) {
+			.tooltip-content {
+				&:after {
+					border-right-color: $color;
+				}
+			}
+		}
+	}
+}
 
 //-----------------------------------------------------------------
 // Iframe

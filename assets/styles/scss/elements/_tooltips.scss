@@ -1,7 +1,7 @@
 //=================================================================
 // Tooltips
 //=================================================================
-		
+
 @include component(tooltip) {
 	
 	@include core {
@@ -13,68 +13,75 @@
 				cursor: pointer;		
 				&:hover {
 					@include nested-component(tooltip-wrapper) {
-						opacity: 1;
-						visibility: visible;
+						.tooltip-content {
+							opacity: 1;
+							visibility: visible
+						}
 					}
 				}
 			}
 
 			@include nested-component(tooltip-wrapper) {
-				position: absolute;	
-				line-height: 0;
-				transition: $base-transition;
-				opacity: 0;
-				visibility: hidden;
-				@include horizontal-center;	
+				height: 0;
+				// Positions
 				@include modifier(top) {
-					top: -100%;
-					transform: translateY(-50%);			
+					.tooltip-content {
+						top: -1rem;
+						transform: translateX(-50%) translateY(-100%);
+						@include triangle(bottom);
+					}			
 				}
 				@include modifier(bottom) {
-					bottom: -100%;
-					transform: translateY(50%);				
+					.tooltip-content {
+						bottom: -1rem;
+						transform: translateX(-50%) translateY(100%);
+						@include triangle(top);
+					}					
 				}
 				@include modifier(left) {
-					left: -100%;
-					top: 50%;
-					transform: translateY(-50%);				
+					.tooltip-content {
+						left: -1rem;
+						top: 50%;
+						transform: translateX(-100%) translateY(-50%);
+						@include triangle(right);
+					}					
 				}
-				@include modifier(right) {
-					right: -100%;
-					top: 50%;
-					transform: translateY(-50%);				
+				@include modifier(right) {	
+					.tooltip-content {
+						right: -1rem;
+						top: 50%;
+						transform: translateX(100%) translateY(-50%);
+						@include triangle(left);
+					}				
 				}
+				// Colors
+				@include tooltip-color(
+					$namespace: light,
+					$text: $base-text-color,
+					$color: rgba($white, 0.8)
+				);
 			}
 			
-			@include nested-component(tooltip-content) {
-				position: relative;
+			.tooltip-content {
+				position: absolute;
 				display: inline-block;
-				width: auto;
 				max-width: 50%;
+				transition: $base-transition;
+				// Hidden by default
+				opacity: 0;
+				visibility: hidden;
 				// Appearance
 				padding: 1em;
-				background: rgba($black, 0.75);
 				border-radius: $base-radius;
 				color: $white;
-				// font reset
+				background-color: rgba($black, 0.75);
+				// Font reset
 				font-size: 1rem;
 				text-transform: none;
 				font-weight: normal;
-				.tooltip-wrapper-top & {
-					@include triangle(bottom)				
-				}
-				.tooltip-wrapper-bottom & {
-					@include triangle(top)				
-				}
-				.tooltip-wrapper-left & {
-					@include triangle(right)				
-				}
-				.tooltip-wrapper-right & {
-					@include triangle(left)				
-				}
 			}
 			
-		}
+		} // root
 
 	} // core
 

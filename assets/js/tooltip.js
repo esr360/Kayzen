@@ -11,17 +11,22 @@ var $tooltip = $("[data-tooltip]");
 		tooltip: function(options) {
 			
 			var defaults = {  
-				position: "top"
+				position : "top",
+				color    : "dark"
 			};  
 			
 			var options = $.extend(defaults, options);	
 			
-			return this.each(function() { 
+			return this.each(function() {
+				
 				var $content = $(this).attr("data-tooltip");			
-				var $position = options.position;
+				var $position = options.position;		
+				var $color = options.color;
+				
 				$(this).append(
-					$("<div class='tooltip-wrapper-"+ $position +"'><div class='tooltip-content'>"+ $content +"</div></div>")
-				);	
+					$("<div class='tooltip-wrapper-" + $position + "-" + $color + "'><div class='tooltip-content'>"+ $content +"</div></div>")
+				);
+				
 			});
 			
 		} // tooltip
@@ -31,5 +36,6 @@ var $tooltip = $("[data-tooltip]");
 }( jQuery ));
 
 $tooltip.tooltip({
-	position: "left"
+	position : "left",
+	color    : "light"
 });
