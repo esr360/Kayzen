@@ -2,8 +2,6 @@
 /* Tooltips
 ================================================================ */
 
-var $tooltip = $("[data-tooltip]");
-
 (function ( $ ) {
 	
 	$.fn.extend({
@@ -34,8 +32,3 @@ var $tooltip = $("[data-tooltip]");
 	});
 
 }( jQuery ));
-
-$tooltip.tooltip({
-	position : "left",
-	color    : "light"
-});

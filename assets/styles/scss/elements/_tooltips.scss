@@ -2,86 +2,90 @@
 // Tooltips
 //=================================================================
 
-@include component(tooltip) {
-	
-	@include core {
+// Config
+//-----------------------------------------------------------------
+
+// ("color name", "background color", "text color")
+$tooltip-colors: (
+	(light, rgba($white, 0.8), $base-text-color),
+);
+
+$tooltip-positions: (
+	top, 
+	bottom, 
+	left, 
+	right
+);
 		
-		@at-root {
+// Component
+//-----------------------------------------------------------------
+
+@include component(tooltip, data) {
+	
+	@include core(data) {
 			
-			[data-tooltip] {
-				position: relative;
-				cursor: pointer;		
-				&:hover {
-					@include nested-component(tooltip-wrapper) {
-						.tooltip-content {
-							opacity: 1;
-							visibility: visible
-						}
+		position: relative;
+		cursor: pointer;	
+		
+		@include nested-component(tooltip-content, true, static) {
+			position: absolute;
+			display: inline-block;
+			max-width: 500px;
+			white-space: pre;
+			transition: $base-transition;
+			// Appearance
+			padding: 1em;
+			border-radius: $base-radius;
+			color: $white;
+			background-color: rgba($black, 0.75);
+			// Font reset
+			font-size: 1rem;
+			text-transform: none;
+			font-weight: normal;
+			// Hidden by default
+			opacity: 0;
+			visibility: hidden;
+			// Show when parent component is hovered
+            #{$parent}:hover & {
+				opacity: 1;
+				visibility: visible;
+            }
+			// Positions
+			@each $tooltip-position in $tooltip-positions {
+				[class*="tooltip-wrapper-"][class*="-#{$tooltip-position}"] & {
+					#{$tooltip-position}: -1rem;
+					@include triangle(#{$tooltip-position});
+					@if $tooltip-position == top {
+						transform: translateX(-50%) translateY(-100%);
+					} @else if $tooltip-position == bottom {
+						transform: translateX(-50%) translateY(100%);
+					} @else if $tooltip-position == left {
+						top: 50%;
+						transform: translateX(-100%) translateY(-50%);
+					} @else if $tooltip-position == right {
+						top: 50%;
+						transform: translateX(100%) translateY(-50%);
+					}
+				}	
+			}
+			// Colors
+			@each $tooltip-color in $tooltip-colors {
+				$namespace: nth($tooltip-color, 1);
+				$color: nth($tooltip-color, 2);
+				$text: nth($tooltip-color, 3);
+				[class*="tooltip-wrapper-"][class*="-#{$namespace}"] & {
+					color: $text;
+					background: $color;
+					@each $position in $tooltip-positions {
+						@at-root .tooltip-wrapper-#{$position}-#{$namespace} .tooltip-content {
+							&:after {
+								border-#{$position}-color: $color !important;
+							}
+						}			
 					}
 				}
 			}
-
-			@include nested-component(tooltip-wrapper) {
-				height: 0;
-				// Positions
-				@include modifier(top) {
-					.tooltip-content {
-						top: -1rem;
-						transform: translateX(-50%) translateY(-100%);
-						@include triangle(bottom);
-					}			
-				}
-				@include modifier(bottom) {
-					.tooltip-content {
-						bottom: -1rem;
-						transform: translateX(-50%) translateY(100%);
-						@include triangle(top);
-					}					
-				}
-				@include modifier(left) {
-					.tooltip-content {
-						left: -1rem;
-						top: 50%;
-						transform: translateX(-100%) translateY(-50%);
-						@include triangle(right);
-					}					
-				}
-				@include modifier(right) {	
-					.tooltip-content {
-						right: -1rem;
-						top: 50%;
-						transform: translateX(100%) translateY(-50%);
-						@include triangle(left);
-					}				
-				}
-				// Colors
-				@include tooltip-color(
-					$namespace: light,
-					$text: $base-text-color,
-					$color: rgba($white, 0.8)
-				);
-			}
-			
-			.tooltip-content {
-				position: absolute;
-				display: inline-block;
-				max-width: 50%;
-				transition: $base-transition;
-				// Hidden by default
-				opacity: 0;
-				visibility: hidden;
-				// Appearance
-				padding: 1em;
-				border-radius: $base-radius;
-				color: $white;
-				background-color: rgba($black, 0.75);
-				// Font reset
-				font-size: 1rem;
-				text-transform: none;
-				font-weight: normal;
-			}
-			
-		} // root
+		}
 
 	} // core
 

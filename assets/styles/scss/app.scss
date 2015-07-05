@@ -19,14 +19,18 @@ $theme : "kayzen";
 // Skeleton
 //-----------------------------------------------------------------
 
+// Configuration
 @import "skeleton/normalize";
 @import "skeleton/color-palettes";
 @import "skeleton/config";
 @import "skeleton/utilities";
+
+// Styles
 @import "skeleton/base";
 @import "skeleton/grid";
 @import "skeleton/helpers";
 @import "skeleton/print";
+@import "skeleton/tools";
 @import "skeleton/typography";
 
 //-----------------------------------------------------------------

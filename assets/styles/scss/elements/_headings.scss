@@ -25,21 +25,21 @@
 // Patterns
 //-----------------------------------------------------------------
 
-	@include modifier(heavy, b) {
+	@include modifier(heavy) {
 		font-weight: bolder;
 		font-weight: 900;
 	}
 
-	@include modifier(brand-1, i) {
+	@include modifier(brand-1) {
 		font-style: normal;
 		color: $brand-1;
 	}
 
-	@include modifier(uppercase, strong) {
+	@include modifier(uppercase) {
 		text-transform: uppercase;
 	}
 
-	@include modifier(light, em) {
+	@include modifier(light) {
 		font-weight: lighter;
 		font-weight: 100;
 		font-style: normal;
