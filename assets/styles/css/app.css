@@ -2472,19 +2472,26 @@ progress.progress-alt::-moz-progress-bar {
   position: relative;
   cursor: pointer;
 }
+.inline-tooltip {
+  display: inline-block;
+}
+[class*="tooltip-wrapper"] {
+  text-align: center;
+}
 .tooltip-content {
+  max-width: 500px;
+  padding: 1em;
+  background: rgba(0, 0, 0, 0.75);
+  border-radius: 0.25em;
   position: absolute;
   display: inline-block;
-  max-width: 500px;
-  white-space: pre;
-  transition: 0.4s;
-  padding: 1em;
-  border-radius: 0.4em;
-  color: #ffffff;
-  background-color: rgba(0, 0, 0, 0.75);
-  font-size: 1rem;
+  font-size: 1em;
+  color: white;
   text-transform: none;
   font-weight: normal;
+  transition: 0.4s;
+  z-index: 9999;
+  white-space: pre-wrap;
   opacity: 0;
   visibility: hidden;
 }
@@ -2492,101 +2499,123 @@ progress.progress-alt::-moz-progress-bar {
   opacity: 1;
   visibility: visible;
 }
-[class*="tooltip-wrapper-"][class*="-top"] .tooltip-content {
-  top: -1rem;
+[data-tooltip]:active .tooltip-content {
+  opacity: 1;
+  visibility: visible;
+}
+.tooltip-content:after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 0;
+}
+.inline-tooltip .tooltip-content {
+  white-space: nowrap;
+}
+[class*="tooltip-wrapper"][class*="-top"] .tooltip-content {
+  top: -1em;
   -webkit-transform: translateX(-50%) translateY(-100%);
       -ms-transform: translateX(-50%) translateY(-100%);
           transform: translateX(-50%) translateY(-100%);
 }
-[class*="tooltip-wrapper-"][class*="-top"] .tooltip-content:after {
-  content: '';
-  position: absolute;
-  width: 0;
-  height: 0;
-  margin-left: -0.5rem;
+[class*="tooltip-wrapper"][class*="-top"] .tooltip-content:after {
+  margin-left: -0.5em;
   top: 100%;
   left: 50%;
-  border-left: solid 0.5rem transparent;
-  border-right: solid 0.5rem transparent;
-  border-top: solid 0.5rem rgba(0, 0, 0, 0.75);
+  border-left: solid 0.5em transparent;
+  border-right: solid 0.5em transparent;
+  border-top: solid 0.5em rgba(0, 0, 0, 0.75);
 }
-[class*="tooltip-wrapper-"][class*="-bottom"] .tooltip-content {
-  bottom: -1rem;
+[class*="tooltip-wrapper"][class*="-bottom"] .tooltip-content {
+  bottom: -1em;
   -webkit-transform: translateX(-50%) translateY(100%);
       -ms-transform: translateX(-50%) translateY(100%);
           transform: translateX(-50%) translateY(100%);
 }
-[class*="tooltip-wrapper-"][class*="-bottom"] .tooltip-content:after {
-  content: '';
-  position: absolute;
-  width: 0;
-  height: 0;
-  margin-left: -0.5rem;
+[class*="tooltip-wrapper"][class*="-bottom"] .tooltip-content:after {
+  margin-left: -0.5em;
   bottom: 100%;
   left: 50%;
-  border-left: solid 0.5rem transparent;
-  border-right: solid 0.5rem transparent;
-  border-bottom: solid 0.5rem rgba(0, 0, 0, 0.75);
+  border-left: solid 0.5em transparent;
+  border-right: solid 0.5em transparent;
+  border-bottom: solid 0.5em rgba(0, 0, 0, 0.75);
 }
-[class*="tooltip-wrapper-"][class*="-left"] .tooltip-content {
-  left: -1rem;
+[class*="tooltip-wrapper"][class*="-left"] .tooltip-content {
+  left: -1em;
   top: 50%;
   -webkit-transform: translateX(-100%) translateY(-50%);
       -ms-transform: translateX(-100%) translateY(-50%);
           transform: translateX(-100%) translateY(-50%);
 }
-[class*="tooltip-wrapper-"][class*="-left"] .tooltip-content:after {
-  content: '';
-  position: absolute;
-  width: 0;
-  height: 0;
-  margin-left: -0.5rem;
+[class*="tooltip-wrapper"][class*="-left"] .tooltip-content:after {
+  margin-left: -0.5em;
   top: 50%;
-  right: -0.5rem;
+  right: -0.5em;
   -webkit-transform: translateY(-50%);
       -ms-transform: translateY(-50%);
           transform: translateY(-50%);
-  border-top: solid 0.5rem transparent;
-  border-bottom: solid 0.5rem transparent;
-  border-left: solid 0.5rem rgba(0, 0, 0, 0.75);
+  border-top: solid 0.5em transparent;
+  border-bottom: solid 0.5em transparent;
+  border-left: solid 0.5em rgba(0, 0, 0, 0.75);
 }
-[class*="tooltip-wrapper-"][class*="-right"] .tooltip-content {
-  right: -1rem;
+[class*="tooltip-wrapper"][class*="-right"] .tooltip-content {
+  right: -1em;
   top: 50%;
   -webkit-transform: translateX(100%) translateY(-50%);
       -ms-transform: translateX(100%) translateY(-50%);
           transform: translateX(100%) translateY(-50%);
 }
-[class*="tooltip-wrapper-"][class*="-right"] .tooltip-content:after {
-  content: '';
-  position: absolute;
-  width: 0;
-  height: 0;
-  margin-left: -0.5rem;
+[class*="tooltip-wrapper"][class*="-right"] .tooltip-content:after {
+  margin-left: -0.5em;
   top: 50%;
   right: 100%;
   -webkit-transform: translateY(-50%);
       -ms-transform: translateY(-50%);
           transform: translateY(-50%);
-  border-top: solid 0.5rem transparent;
-  border-bottom: solid 0.5rem transparent;
-  border-right: solid 0.5rem rgba(0, 0, 0, 0.75);
+  border-top: solid 0.5em transparent;
+  border-bottom: solid 0.5em transparent;
+  border-right: solid 0.5em rgba(0, 0, 0, 0.75);
 }
-[class*="tooltip-wrapper-"][class*="-light"] .tooltip-content {
-  color: #6f777b;
-  background: rgba(255, 255, 255, 0.8);
+[class*="tooltip-wrapper"][class*="-light"] .tooltip-content {
+  background: rgba(255, 255, 255, 0.8) !important;
+  arrow-color: rgba(255, 255, 255, 0.8) !important;
+  color: #444 !important;
 }
-.tooltip-wrapper-top-light .tooltip-content:after {
-  border-top-color: rgba(255, 255, 255, 0.8) !important;
+[class*="-top"][class*="-light"] .tooltip-content:after {
+  margin-left: -0.5em;
 }
-.tooltip-wrapper-bottom-light .tooltip-content:after {
-  border-bottom-color: rgba(255, 255, 255, 0.8) !important;
+[class*="-top"][class*="-light"] .tooltip-content:after:after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 0;
 }
-.tooltip-wrapper-left-light .tooltip-content:after {
-  border-left-color: rgba(255, 255, 255, 0.8) !important;
+[class*="-bottom"][class*="-light"] .tooltip-content:after {
+  margin-left: -0.5em;
 }
-.tooltip-wrapper-right-light .tooltip-content:after {
-  border-right-color: rgba(255, 255, 255, 0.8) !important;
+[class*="-bottom"][class*="-light"] .tooltip-content:after:after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 0;
+}
+[class*="-left"][class*="-light"] .tooltip-content:after {
+  margin-left: -0.5em;
+}
+[class*="-left"][class*="-light"] .tooltip-content:after:after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 0;
+}
+[class*="-right"][class*="-light"] .tooltip-content:after {
+  margin-left: -0.5em;
+}
+[class*="-right"][class*="-light"] .tooltip-content:after:after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 0;
 }
 
 .well {

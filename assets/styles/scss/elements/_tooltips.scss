@@ -1,21 +1,58 @@
 //=================================================================
-// Tooltips
+// K-Tooltips
+// https://github.com/esr360/K-Tooltips
 //=================================================================
 
-// Config
+// Default/Configurable Settings
 //-----------------------------------------------------------------
 
-// ("color name", "background color", "text color")
-$tooltip-colors: (
-	(light, rgba($white, 0.8), $base-text-color),
+$tooltip-options: (
+	// Size & Appearance
+	max-width      : 500px,
+	padding        : 1em,
+	distance       : -1em,
+	background     : rgba(black, 0.75),
+	border-radius  : 0.25em,
+	arrow-size     : 0.5em,
+	arrow-color    : rgba(black, 0.75),
+	// Typography
+	font-size      : 1em,
+	color          : white,
+	text-transform : none,
+	font-weight    : normal,
+	// Other
+	transition     : 0.4s,
+	z-index        : 9999
 );
 
-$tooltip-positions: (
-	top, 
-	bottom, 
-	left, 
-	right
+// Custom Styles
+//-----------------------------------------------------------------
+
+$tooltip-styles: (
+	light: (
+		background     : rgba(white, 0.8),
+		color          : #444,
+		arrow-color    : rgba(white, 0.8)
+	),
 );
+
+// Positions
+//-----------------------------------------------------------------
+
+$tooltip-positions: (
+	top, bottom, left, right
+);
+		
+// Utilities
+//-----------------------------------------------------------------
+
+@function tooltip($tooltip-option) {
+    @return map-get($tooltip-options, $tooltip-option);
+}
+
+@function tooltip-custom($custom-key) {
+	@return map-get(map-get($tooltip-styles, $custom-style), $custom-key);
+}
 		
 // Component
 //-----------------------------------------------------------------
@@ -27,34 +64,64 @@ $tooltip-positions: (
 		position: relative;
 		cursor: pointer;	
 		
+		@at-root .inline-tooltip {
+			display: inline-block;
+		}
+		
+		@at-root [class*="tooltip-wrapper"] {
+			text-align: center;
+		}
+	
 		@include nested-component(tooltip-content, true, static) {
+				
+			// Size & Appearance
+			max-width: tooltip(max-width);
+			padding: tooltip(padding);
+			background: tooltip(background);
+			border-radius: tooltip(border-radius);
 			position: absolute;
 			display: inline-block;
-			max-width: 500px;
-			white-space: pre;
-			transition: $base-transition;
-			// Appearance
-			padding: 1em;
-			border-radius: $base-radius;
-			color: $white;
-			background-color: rgba($black, 0.75);
-			// Font reset
-			font-size: 1rem;
-			text-transform: none;
-			font-weight: normal;
-			// Hidden by default
+			
+			// Typography
+			font-size: tooltip(font-size);
+			color: tooltip(color);
+			text-transform: tooltip(text-transform);
+			font-weight: tooltip(font-weight);
+			
+			// Other
+			transition: tooltip(transition);
+			z-index: tooltip(z-index);
+			white-space: pre-wrap;
+			
+			// Hide by default
 			opacity: 0;
 			visibility: hidden;
+			
 			// Show when parent component is hovered
-            #{$parent}:hover & {
+			[data-tooltip]:hover & {
 				opacity: 1;
 				visibility: visible;
-            }
+			}
+			
+			// Show when parent component is touched
+			[data-tooltip]:active & {
+				opacity: 1;
+				visibility: visible;
+			}
+			
+			// Direction Arrow
+			@include triangle-core;
+			
+			// Inline-Tooltip styles
+			.inline-tooltip & {
+				white-space: nowrap;
+			}
+				
 			// Positions
 			@each $tooltip-position in $tooltip-positions {
-				[class*="tooltip-wrapper-"][class*="-#{$tooltip-position}"] & {
-					#{$tooltip-position}: -1rem;
-					@include triangle(#{$tooltip-position});
+				[class*="tooltip-wrapper"][class*="-#{$tooltip-position}"] & {
+					#{$tooltip-position}: tooltip(distance);
+					@include triangle($core: false, $position: #{$tooltip-position});
 					@if $tooltip-position == top {
 						transform: translateX(-50%) translateY(-100%);
 					} @else if $tooltip-position == bottom {
@@ -68,24 +135,36 @@ $tooltip-positions: (
 					}
 				}	
 			}
-			// Colors
-			@each $tooltip-color in $tooltip-colors {
-				$namespace: nth($tooltip-color, 1);
-				$color: nth($tooltip-color, 2);
-				$text: nth($tooltip-color, 3);
-				[class*="tooltip-wrapper-"][class*="-#{$namespace}"] & {
-					color: $text;
-					background: $color;
-					@each $position in $tooltip-positions {
-						@at-root .tooltip-wrapper-#{$position}-#{$namespace} .tooltip-content {
-							&:after {
-								border-#{$position}-color: $color !important;
-							}
-						}			
+				
+			// Custom Styles
+			@each $tooltip-style in $tooltip-styles {
+				
+			 	$custom-style: nth($tooltip-style, 1) !global;
+				 
+				[class*="tooltip-wrapper"][class*="-#{$custom-style}"] & {
+			
+					$tooltip-options: map-remove($tooltip-options, "distance", "arrow-size");
+					
+					@each $tooltip-position in $tooltip-positions {
+						@at-root [class*="-#{$tooltip-position}"][class*="-#{$custom-style}"] .tooltip-content {
+							#{$tooltip-position}: tooltip-custom(distance);
+							@include triangle(#{$tooltip-position}, #{tooltip-custom(arrow-color)});
+						}	
 					}
+					
+					@each $tooltip-option in $tooltip-options {
+						$custom-key: nth($tooltip-option, 1);
+						$custom-value: tooltip-custom($custom-key);
+						@if map-has-key(map-get($tooltip-styles, $custom-style), $custom-key) {
+							#{$custom-key}: #{$custom-value} !important;
+						}
+					}
+					
 				}
-			}
-		}
+					
+			} // @tooltip-styles
+			
+		} // nested-component(tooltip-content)
 
 	} // core
 

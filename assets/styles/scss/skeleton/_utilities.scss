@@ -232,17 +232,27 @@
 // CSS Triangle
 //-----------------------------------------------------------------
 
-@mixin triangle(
-	$position: top, 
-	$color: rgba($black, 0.75),
-	$size: 0.5rem
-) {
+@mixin triangle-core {
 	&:after {
 		content:'';
 		position: absolute;
 		width: 0;
 		height: 0;
+	}
+}
+
+@mixin triangle(
+	$core: true,
+	$position: $tooltip-position, 
+	$color: tooltip(arrow-color),
+	$size: tooltip(arrow-size)
+) {
+	
+	&:after {
 		margin-left: -$size;
+		@if $core {
+			@include triangle-core;
+		}
 		@if $position == top {
 			top: 100%;
 			left: 50%;
