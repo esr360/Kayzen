@@ -51,6 +51,10 @@ $palettes-default: (
 // Utilities
 //-----------------------------------------------------------------
 
+@if global-variable-exists(palettes-custom) {
+	$palettes-default: map-merge($palettes-default, $palettes-custom);
+}
+
 @function palettes-default($key) {
     @return map-get($palettes-default, $key);
 }

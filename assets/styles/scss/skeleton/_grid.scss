@@ -43,6 +43,53 @@ $row-namespace                  : "row" !default;
 // Set column namespace
 $col-namespace                  : "span" !default;
 
+//-----------------------------------------------------------------
+// Skeleton
+//-----------------------------------------------------------------
+
+// Breakpoints
+//-----------------------------------------------------------------
+
+$breakpoints: (
+	break-0                     : 0px,
+	break-1                     : 460px,
+	break-2                     : 720px,
+	break-3                     : 940px,
+	break-4                     : 1200px,
+	break-5                     : 1400px
+) !default;
+
+@function breakpoint($breakpoint) {
+    @return map-get($breakpoints, $breakpoint);
+}
+
+// Fractions
+//-----------------------------------------------------------------
+
+$fractions: (
+	full                        : (1, 1),
+	half                        : (1, 2),
+	third                       : (1, 3),
+	quarter                     : (1, 4),
+	sixth                       : (1, 6)
+) !default;
+
+@function fraction($fraction) {
+    @return map-get($fractions, $fraction);
+}
+
+// Structyre & Layout
+//-----------------------------------------------------------------
+
+$base-width                     : breakpoint(break-4) !default;
+$max-width                      : 90% !default;
+$small-width                    : breakpoint(break-3) !default;
+$full-width                     : 100% !default;
+
+$columns                        : 12 !default;
+$gutter                         : 3% !default;
+$col-collapse                   : breakpoint(break-3) !default;
+
 //=================================================================
 // Kayzen GS Framework
 //=================================================================

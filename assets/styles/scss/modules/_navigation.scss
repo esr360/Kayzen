@@ -8,6 +8,44 @@
 
 $navigation-default: (
 	
+	text-align             : right,
+	margin-top             : 0,
+	dropdown-icon          : "\f107",
+	no-icons               : false,
+	
+	no-icon                : false,
+	a-color                : color(brand, primary),
+	
+	a-border-color         : transparent,
+	a-border-left          : 1px solid transparent,
+	a-border-rigt          : 1px solid transparent,
+	a-border-top           : 1px solid transparent,
+	a-border-bottom        : 1px solid transparent,
+	
+	a-hover-color          : color(greyscale, white),
+	a-hover-bg-color       : color(brand, primary),
+	a-hover-border-color   : transparent,
+	
+	a-active-color         : color(greyscale, white),
+	a-active-bg-color      : color(brand, primary),
+	a-active-border-color  : transparent,
+	
+	a-has-child-color      : color(greyscale, white),
+	a-has-child-bg         : color(brand, primary),
+	a-has-child-border     : color(brand, primary),
+	
+	a-radius               : 0,
+	a-spacing              : 0.5em,
+	a-padding              : 0.5em 0.75em,
+		
+	li-border-color        : transparent,
+	li-border-left         : 0px solid transparent,
+	li-border-right        : 0px solid transparent,
+	li-border-top          : 0px solid transparent,
+	li-border-bottom       : 0px solid transparent,
+	li-hover-border-color  : transparent,
+	li-active-border-color : transparent
+	
 );
 
 //-----------------------------------------------------------------
@@ -22,46 +60,6 @@ $navigation-default: (
     @return map-get($navigation-default, $key);
 }
 
-$nav-text-align                 : right !default;
-$nav-margin-top                 : 0 !default;
-$nav-dropdown-icon              : "\f107" !default;
-$nav-no-icons                   : false !default;
-
-$nav-a-color                    : color(brand, primary) !default;
-$nav-a-bg-color                 : transparent !default;
-
-$nav-a-border-width             : 1px !default;
-$nav-a-border-color             : transparent !default;
-$nav-a-border-left              : $nav-a-border-width solid $nav-a-border-color !default;
-$nav-a-border-right             : $nav-a-border-left !default;
-$nav-a-border-top               : $nav-a-border-right !default;
-$nav-a-border-bottom            : $nav-a-border-top !default;
-
-$nav-a-hover-color              : color(greyscale, white) !default;
-$nav-a-hover-bg-color           : color(brand, primary) !default;
-$nav-a-hover-border-color       : $nav-a-border-color !default;
-
-$nav-a-active-color             : $nav-a-hover-color !default;
-$nav-a-active-bg-color          : $nav-a-hover-bg-color !default;
-$nav-a-active-border-color      : $nav-a-hover-border-color !default;
-
-$nav-a-has-child-color          : $nav-a-hover-color !default;
-$nav-a-has-child-bg             : $nav-a-hover-bg-color !default;
-$nav-a-has-child-border         : $nav-a-has-child-bg !default;
-
-$nav-a-radius                   : 0 !default;
-$nav-a-spacing                  : 0.5em !default;
-$nav-a-padding                  : 0.5em 0.75em !default;
-
-$nav-li-border-width            : 0px !default;
-$nav-li-border-color            : transparent !default;
-$nav-li-border-left             : $nav-li-border-width solid $nav-li-border-color !default;
-$nav-li-border-right            : $nav-li-border-left !default;
-$nav-li-border-top              : $nav-li-border-right !default;
-$nav-li-border-bottom           : $nav-li-border-top !default;
-$nav-li-hover-border-color      : $nav-li-border-color !default;
-$nav-li-active-border-color     : $nav-li-hover-border-color !default;
-
 //-----------------------------------------------------------------
 // Component
 //-----------------------------------------------------------------
@@ -75,8 +73,8 @@ $nav-li-active-border-color     : $nav-li-hover-border-color !default;
     li {    
         a {
             display: block;
-            padding: $nav-a-padding;
-            color: $nav-a-color;
+            padding: navigation(a-padding);
+            color: navigation(a-color);
             &:hover {
                 text-decoration: none;
             }
@@ -108,30 +106,30 @@ $nav-li-active-border-color     : $nav-li-hover-border-color !default;
             transition: $base-transition;
 
             // add gap between items
-            margin-left: $nav-a-spacing;
+            margin-left: navigation(a-spacing);
             &:first-child {
                 margin-left: 0;
             }
 
             // li borders
-            border-color: $nav-li-border-color;
-            border-left: $nav-li-border-left;
-            border-right: $nav-li-border-right;
-            border-top: $nav-li-border-top;
-            border-bottom: $nav-li-border-bottom;
+            border-color: navigation(li-border-color);
+            border-left: navigation(li-border-left);
+            border-right: navigation(li-border-right);
+            border-top: navigation(li-border-top);
+            border-bottom: navigation(li-border-bottom);
 
             > a {
-                background: $nav-a-bg-color;
-                border-color: $nav-a-border-color;
-                border-left: $nav-a-border-left;
-                border-right: $nav-a-border-right;
-                border-top: $nav-a-border-top;
-                border-bottom: $nav-a-border-bottom;
-                border-radius: $nav-a-radius;
+                background: navigation(a-bg-color);
+                border-color: navigation(a-border-color);
+                border-left: navigation(a-border-left);
+                border-right: navigation(a-border-right);
+                border-top: navigation(a-border-top);
+                border-bottom: navigation(a-border-bottom);
+                border-radius: navigation(a-radius);
                 // add icon if item has dropdown menu
                 &:not(:only-child) {
                     &:after {
-                        content: $nav-dropdown-icon;
+                        content: navigation(dropdown-icon);
                         font-family: FontAwesome;
                         margin-left: 0.5em;
                     }
@@ -139,32 +137,32 @@ $nav-li-active-border-color     : $nav-li-hover-border-color !default;
             }
 
             &:hover {
-                border-color: $nav-li-hover-border-color;
+                border-color: navigation(li-hover-border-color);
                 > a {
-                    color: $nav-a-hover-color;
-                    border-color: $nav-a-hover-border-color;
-                    background: $nav-a-hover-bg-color;
+                    color: navigation(a-hover-color);
+                    border-color: navigation(a-hover-border-color);
+                    background: navigation(a-hover-bg-color);
                     // if item has dropdown menu
                     &:not(:only-child) {
-                        color: $nav-a-has-child-color;
-                        background: $nav-a-has-child-bg;
-                        border-color: $nav-a-has-child-border;
+                        color: navigation(a-has-child-color);
+                        background: navigation(a-has-child-bg);
+                        border-color: navigation(a-has-child-border);
                         border-bottom-color: transparent;
                     }
                 }
             }
 
             &.active {
-                border-color: $nav-li-active-border-color;
+                border-color: navigation(li-active-border-color);
                 > a {
-                    color: $nav-a-active-color;
-                    background: $nav-a-active-bg-color;
-                    border-color: $nav-a-active-border-color;
+                    color: navigation(a-active-color);
+                    background: navigation(a-active-bg-color);
+                    border-color: navigation(a-active-border-color);
                 }
                 &:hover {
-                    border-color: $nav-li-hover-border-color;
+                    border-color: navigation(li-hover-border-color);
                     > a {
-                        background: $nav-a-hover-bg-color;
+                        background: navigation(a-hover-bg-color);
                     }
                 }
             }
@@ -179,7 +177,7 @@ $nav-li-active-border-color     : $nav-li-hover-border-color !default;
         }
     }
 
-    @if $nav-no-icons == true {
+    @if navigation(no-icons) == true {
         @extend .no-icons;
     }
 
@@ -203,11 +201,11 @@ $nav-li-active-border-color     : $nav-li-hover-border-color !default;
             a {
                 position: relative;
                 &, &:last-child {
-                    border-bottom: $nav-a-border-width;
+                    border-bottom: navigation(a-border-bottom);
                 }
                 &:not(:only-child) {
                     &:after {
-                        content: $nav-dropdown-icon;
+                        content: navigation(dropdown-icon);
                         right: 1.5em;
                         @include vertical-center(absolute);
                     }
@@ -242,7 +240,7 @@ $nav-li-active-border-color     : $nav-li-hover-border-color !default;
 //-----------------------------------------------------------------
 
     @media (min-width: breakpoint(break-3)) {
-        text-align: $nav-text-align;
+        text-align: navigation(text-align);
         > ul {
             display: inline-block;
             white-space: nowrap;

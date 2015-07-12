@@ -2,49 +2,63 @@
 // Kayzen
 //=================================================================
 
-// import the default options
+//-----------------------------------------------------------------
+// Colors
+//-----------------------------------------------------------------
+
+$palettes-custom: (
+	brand: (
+		primary: #9B58B5
+	)
+) !global;
+
 @import "skeleton/color-palettes";
-@import "skeleton/config";
 
-// set custom options
-@if $theme == "kayzen" {
+//-----------------------------------------------------------------
+// Header
+//-----------------------------------------------------------------
 
-	$header-custom: (
-		absolute     : true,
-		bar          : true,
-		bg-color     : transparent,
-		top-position : 30px
-	) !global;
-	
-	$billboard-custom: (
-		full-screen: true,
-		overlay    : true,
-		bg-image   : "#{$asset-path}/images/billboard-1.jpg"
-	) !global;
+$header-custom: (
+	absolute     : true,
+	bar          : true,
+	bg-color     : transparent,
+	top-position : 30px
+) !global;
 
-	$logo-color                     : color(greyscale, white);
+$logo-color : color(greyscale, white);
 
-	$nav-no-icons                   : true;
+//-----------------------------------------------------------------
+// Navigation 
+//-----------------------------------------------------------------
 
-	$nav-a-color                    : color(greyscale, white);
-	$nav-a-border-color             : transparent;
+$navigation-custom: (
+	no-icons                   : true,
+	a-color                    : color(greyscale, white),
+	a-border-color             : transparent,
+	a-hover-bg-color           : transparent,
+	a-hover-border-color       : navigation(a-color),
+	a-active-bg-color          : navigation(a-hover-bg-color),
+	a-active-border-color      : navigation(a-hover-border-color),
+	a-has-child-color          : color(brand, primary),
+	a-has-child-bg             : navigation(a-hover-border-color),
+	a-has-child-border         : navigation(a-has-child-bg),
+) !global;
 
-	$nav-a-hover-bg-color           : transparent;
-	$nav-a-hover-border-color       : $nav-a-color;
+$dropdown-custom: (
+	a-color               : navigation(a-has-child-color),
+	a-bg-color            : navigation(a-color),
+	a-border-left         : 1px solid darken(color(brand, primary), 5%),
+	a-border-bottom       : 1px solid darken(color(brand, primary), 5%),
+	a-hover-border-color  : darken(color(brand, primary), 10%),
+	li-border-left        : 6px solid color(brand, primary),
+) !global;
 
-	$nav-a-active-bg-color          : $nav-a-hover-bg-color;
-	$nav-a-active-border-color      : $nav-a-hover-border-color;
+//-----------------------------------------------------------------
+// Billboard
+//-----------------------------------------------------------------
 
-	$nav-a-has-child-color          : color(brand, primary);
-	$nav-a-has-child-bg             : $nav-a-hover-border-color;
-	$nav-a-has-child-border         : $nav-a-has-child-bg;
-
-	$dropdown-a-color               : $nav-a-has-child-color;
-	$dropdown-a-bg-color            : $nav-a-has-child-bg;
-	$dropdown-a-border-left         : 1px solid darken($dropdown-a-bg-color, 5%);
-	$dropdown-a-border-bottom       : $dropdown-a-border-left;
-	$dropdown-a-hover-border-color  : darken($dropdown-a-color, 10%);
-
-	$dropdown-li-border-left        : 6px solid color(brand, primary);
-
-}
+$billboard-custom: (
+	full-screen: true,
+	overlay    : true,
+	bg-image   : "#{$asset-path}/images/billboard-1.jpg"
+) !global;

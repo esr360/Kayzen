@@ -3,14 +3,8 @@
 // For testing purposes
 //=================================================================
 
-// set the theme's colors
-@if $theme == "sandbox" {
-	// $brand-1 : #9D55B9 !global;
-}
-
 // import the default options
 @import "skeleton/color-palettes";
-@import "skeleton/config";
 
 // set custom options
 @if $theme == "sandbox" {

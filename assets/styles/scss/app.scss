@@ -9,11 +9,11 @@ Author: TBD
 // Themes
 //-----------------------------------------------------------------
 
-// choose your theme
-$theme : "kayzen";
+// Asset Path
+$asset-path : "../..";
 
 @import "themes/kayzen";
-@import "themes/sandbox";
+//@import "themes/sandbox";
 
 //-----------------------------------------------------------------
 // Skeleton
@@ -22,12 +22,11 @@ $theme : "kayzen";
 // Configuration
 @import "skeleton/normalize";
 @import "skeleton/color-palettes";
-@import "skeleton/config";
 @import "skeleton/utilities";
 
 // Styles
-@import "skeleton/base";
 @import "skeleton/grid";
+@import "skeleton/base";
 @import "skeleton/helpers";
 @import "skeleton/print";
 @import "skeleton/tools";

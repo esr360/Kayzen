@@ -1,5 +1,5 @@
 //=================================================================
-// Navigation
+// Dropdown Navigation
 // Used in: "modules/_navigation.scss"
 //=================================================================
 
@@ -7,25 +7,41 @@
 // Config
 //-----------------------------------------------------------------
 
-$dropdown-text-align            : left !default;
-$dropdown-width                 : 175px !default;
-$dropdown-top-position          : 0 !default;
-$dropdown-dropdown-icon         : "\f105" !default;
-$dropdown-low-level-icon        : $dropdown-dropdown-icon !default;
+$dropdown-default: (
+	
+	text-align            : left,
+	width                 : 175px,
+	top-position          : 0,
+	dropdown-icon         : "\f105",
+	low-level-icon        : "\f105",
+	
+	a-color               : navigation(a-has-child-color),
+	a-bg-color            : navigation(a-has-child-bg),
+	
+	a-border-left         : navigation(a-border-width) solid darken(color(greyscale, white), 5%),
+	a-border-bottom       : navigation(a-border-width) solid darken(color(greyscale, white), 5%),
+	
+	a-hover-color         : navigation(a-has-child-color),
+	a-hover-bg-color      : navigation(a-has-child-bg),
+	a-hover-border-color  : darken(color(greyscale, white), 5%),
+	
+	a-active-color        : navigation(a-has-child-color),
+	a-active-bg-color     : navigation(a-has-child-bg),
+	a-active-border-color : darken(color(greyscale, white), 5%)
+	
+);
 
-$dropdown-a-color               : $nav-a-has-child-color !default;
-$dropdown-a-bg-color            : $nav-a-has-child-bg !default;
+//-----------------------------------------------------------------
+// Utilities
+//-----------------------------------------------------------------
 
-$dropdown-a-border-left         : $nav-a-border-width solid darken($dropdown-a-bg-color, 5%) !default;
-$dropdown-a-border-bottom       : $dropdown-a-border-left !default;
+@if global-variable-exists(dropdown-custom) {
+	$dropdown-default: map-merge($dropdown-default, $dropdown-custom);
+}
 
-$dropdown-a-hover-color         : $dropdown-a-color !default;
-$dropdown-a-hover-bg-color      : $dropdown-a-bg-color !default;
-$dropdown-a-hover-border-color  : $dropdown-a-border-bottom !default;
-
-$dropdown-a-active-color        : $dropdown-a-hover-color !default;
-$dropdown-a-active-bg-color     : $dropdown-a-hover-bg-color !default;
-$dropdown-a-active-border-color : $dropdown-a-hover-border-color !default;
+@function dropdown($key) {
+    @return map-get($dropdown-default, $key);
+}
 
 //-----------------------------------------------------------------
 // Styles
@@ -34,8 +50,8 @@ $dropdown-a-active-border-color : $dropdown-a-hover-border-color !default;
 ul {
 
 	@extend %list-reset;
-	min-width: $dropdown-width;
-	text-align: $dropdown-text-align;
+	min-width: dropdown(width);
+	text-align: dropdown(text-align);
 	transition: $base-transition;
 	position: absolute;
 	z-index: 5;
@@ -47,16 +63,16 @@ ul {
 		position: relative;
 
 		a {
-			background: $dropdown-a-bg-color;
-			color: $dropdown-a-color;
-			border-bottom: $dropdown-a-border-bottom;
+			background: dropdown(a-bg-color);
+			color: dropdown(a-color);
+			border-bottom: dropdown(a-border-bottom);
 			&:before, 
 			&:after {
 				font-family: FontAwesome;		
 			}
 			&:not(:only-child) {
 				&:after {
-					content: $dropdown-dropdown-icon;
+					content: dropdown(dropdown-icon);
 					right: 0.75em;
 					@include vertical-center(absolute);
 				}
@@ -72,17 +88,17 @@ ul {
 
 		&:hover {
 			> a {
-				color: $dropdown-a-hover-color;
-				background: $dropdown-a-hover-bg-color;
-				border-color: $dropdown-a-hover-border-color;
+				color: dropdown(a-hover-color);
+				background: dropdown(a-hover-bg-color);
+				border-color: dropdown(a-hover-border-color);
 			}
 		}
 
 		&.active {
 			> a {
-				color: $dropdown-a-active-color;
-				background: $dropdown-a-active-bg-color;
-				border-color: $dropdown-a-active-border-color;
+				color: dropdown(a-active-color);
+				background: dropdown(a-active-bg-color);
+				border-color: dropdown(a-active-border-color);
 			}
 		}
 
@@ -91,7 +107,7 @@ ul {
 			top: 0;
 			li {
 				a {
-					border-left: $dropdown-a-border-left;
+					border-left: dropdown(a-border-left);
 				}
 			}
 		}
@@ -102,5 +118,5 @@ ul {
 
 // first level only
 > ul {
-	padding-top: $dropdown-top-position;
+	padding-top: dropdown(top-position);
 }
