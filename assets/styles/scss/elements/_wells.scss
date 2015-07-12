@@ -3,8 +3,8 @@
 //=================================================================
 
 .well {
-    background-color: lighten($grey-1, 5%);
-    border: 1px solid rgba($black, 0.15);
+    background-color: lighten(color(greyscale, grey-1), 5%);
+    border: 1px solid rgba(color(greyscale, black), 0.15);
     border-radius: 0.6em;
     padding: 1rem;
     position: relative;

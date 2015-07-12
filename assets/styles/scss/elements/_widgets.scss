@@ -18,7 +18,7 @@
 
 		&:hover {
 			.w-icon {
-				color: $brand-1;
+				color: color(brand, primary);
 			}
 		}
 
@@ -27,7 +27,7 @@
 		}
 
 		@at-root .w-icon {
-			color: $grey-3;
+			color: color(greyscale, grey-3);
 			margin-bottom: $base-margin;
 			&.w-inline {
 				margin-bottom: 0;
@@ -54,29 +54,29 @@
 
 	@include modifier(panel) {
 		padding: 4%;
-		border-top: 1px solid $grey-2;	
-		border-left: 1px solid $grey-2;
+		border-top: 1px solid color(greyscale, grey-2);	
+		border-left: 1px solid color(greyscale, grey-2);
 		&:first-child {
 			border-left: none;
 		}
 	}
 
 	@include modifier(block) {
-		background: $white;
+		background: color(greyscale, white);
 		transition: $base-transition;	
 		&:hover {
-			background: $brand-1;			
+			background: color(brand, primary);			
 			&, .w-icon {
-				color: $white;
+				color: color(greyscale, white);
 			}
 			@include nested-component(heading) {
-				color: $white;
+				color: color(greyscale, white);
 			}
 		}
 	}
 
 	@include modifier(border) {
-		border-top: 8px solid $brand-1;
+		border-top: 8px solid color(brand, primary);
 		&:hover {
 			border-color: transparent;
 		}
@@ -101,21 +101,21 @@
 	}
 
 	@include modifier(spectrum-quarter) {
-		color: $white;
+		color: color(greyscale, white);
 		&:nth-child(1) {
-			background: darken($brand-1, 6%);
+			background: darken(color(brand, primary), 6%);
 		}
 		&:nth-child(2) {
-			background: darken($brand-1, 2%);
+			background: darken(color(brand, primary), 2%);
 		}
 		&:nth-child(3) {
-			background: lighten($brand-1, 2%);
+			background: lighten(color(brand, primary), 2%);
 		}
 		&:nth-child(4) {
-			background: lighten($brand-1, 6%);
+			background: lighten(color(brand, primary), 6%);
 		}
 		@include nested-component(icon) {
-			color: $white;
+			color: color(greyscale, white);
 		}
 	}
 

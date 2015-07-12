@@ -13,8 +13,8 @@
 
 	@include core {
 
-		background: $grey-4;
-		color: $white;
+		background: color(greyscale, grey-4);
+		color: color(greyscale, white);
 		display: inline-block;
 		vertical-align: middle;
 		padding: 0 1.2em;
@@ -27,8 +27,8 @@
 		text-decoration: none;
 
 		&:hover {
-			background: darken($grey-4, 10%);
-			color: $white;
+			background: darken(color(greyscale, grey-4), 10%);
+			color: color(greyscale, white);
 			text-decoration: none;
 		}
 
@@ -49,10 +49,10 @@
 
 	@include modifier(border) {
 		background: none;
-		color: $grey-3;
-		border-color: $grey-3;
+		color: color(greyscale, grey-3);
+		border-color: color(greyscale, grey-3);
 		&:hover {
-			color: $white;
+			color: color(greyscale, white);
 		}
 	}
 
@@ -75,7 +75,7 @@
 
 	// Brand Colors
 
-	@each $brand, $color in $colors-brand {
+	@each $brand, $color in palettes-default(brand) {
 		@include modifier($brand) {
 			background: $color;
 			&:hover {
@@ -87,7 +87,7 @@
 				color: $color;
 				&:hover {
 					background: $color;
-					color: $white;
+					color: color(greyscale, white);
 				}
 			}
 		}
@@ -95,11 +95,11 @@
 
 	// Greyscale Colors
 
-	@each $greyscale, $color in $colors-greyscale {
+	@each $greyscale, $color in palettes-default(greyscale) {
 		@include modifier($greyscale) {
 			background: $color;
 			@if (lightness($color) > 50) {
-				color: $brand-1;
+				color: color(brand, primary);
 			}
 			&:hover {
 				background: darken($color, 10%);
@@ -111,9 +111,9 @@
 				&:hover {
 					background: $color;
 					@if (lightness($color) > 80) {
-						color: $brand-1;
+						color: color(brand, primary);
 					} @else {
-						color: $white;
+						color: color(greyscale, white);
 					}
 				}
 			}

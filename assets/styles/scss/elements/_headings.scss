@@ -13,7 +13,7 @@
 
 	@include core {
 		line-height: 1;
-		font-size: $base-font-size;
+		font-size: typography(sizes, base);
 		transition: $base-transition;
 	}
 
@@ -32,7 +32,7 @@
 
 	@include modifier(brand-1) {
 		font-style: normal;
-		color: $brand-1;
+		color: color(brand, primary);
 	}
 
 	@include modifier(uppercase) {
@@ -49,11 +49,11 @@
 		margin-left: 0.3em;
 		margin-right: 0.3em;
 		> b {
-			background: $brand-1;
+			background: color(brand, primary);
 			color: white;
 			font-weight: lighter;
 			padding-bottom: 1px;
-			box-shadow: 0.3em 0 0 $brand-1, -0.3em 0 0 $brand-1;
+			box-shadow: 0.3em 0 0 color(brand, primary), -0.3em 0 0 color(brand, primary);
 			text-shadow: none;            
 		}      
 		@-moz-document url-prefix() {
@@ -75,7 +75,7 @@
 				content: "";
 				position: absolute;
 				width: 75px;
-				border-bottom: 1px solid $white;
+				border-bottom: 1px solid color(greyscale, white);
 				opacity: 0.75;
 				top: 50%;
 				transform: translateY(-50%) translateZ(0);
@@ -93,7 +93,7 @@
 			span {
 				&:before,
 				&:after {
-					border-bottom-color: $brand-1;
+					border-bottom-color: color(brand, primary);
 				}            
 			}            
 		}
@@ -154,7 +154,7 @@
 		}
 
 		.lede {
-			color: $grey-4;
+			color: color(greyscale, grey-4);
 		}
 
 	}
@@ -168,7 +168,7 @@
 		&:after {
 			content: "• • •";
 			position: absolute;
-			color: rgba($black, 0.4);
+			color: rgba(color(greyscale, black), 0.4);
 			font-size: 24px;
 			font-weight: 600;
 			bottom: -2.25em;
@@ -214,8 +214,8 @@
 		height: 0.85em;
 		line-height: 0.85em;
 		font-size: font-size(size-4);
-		color: $grey-5;
-		border: 1px solid $brand-1;
+		color: color(greyscale, grey-5);
+		border: 1px solid color(brand, primary);
 		border-radius: 50%;
 		&:before {
 			position: absolute;
@@ -228,7 +228,7 @@
 	&:after {
 		content: "";
 		width: 2em;
-		border-bottom: 1px solid $brand-1;
+		border-bottom: 1px solid color(brand, primary);
 		@include vertical-center(absolute);
 	}
 

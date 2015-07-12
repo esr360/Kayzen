@@ -2,10 +2,73 @@
 // Main Navigation
 //=================================================================
 
-.app-nav {
+//-----------------------------------------------------------------
+// Config
+//-----------------------------------------------------------------
+
+$navigation-default: (
+	
+);
 
 //-----------------------------------------------------------------
-// Core Layout
+// Utilities
+//-----------------------------------------------------------------
+
+@if global-variable-exists(navigation-custom) {
+	$navigation-default: map-merge($navigation-default, $navigation-custom);
+}
+
+@function navigation($key) {
+    @return map-get($navigation-default, $key);
+}
+
+$nav-text-align                 : right !default;
+$nav-margin-top                 : 0 !default;
+$nav-dropdown-icon              : "\f107" !default;
+$nav-no-icons                   : false !default;
+
+$nav-a-color                    : color(brand, primary) !default;
+$nav-a-bg-color                 : transparent !default;
+
+$nav-a-border-width             : 1px !default;
+$nav-a-border-color             : transparent !default;
+$nav-a-border-left              : $nav-a-border-width solid $nav-a-border-color !default;
+$nav-a-border-right             : $nav-a-border-left !default;
+$nav-a-border-top               : $nav-a-border-right !default;
+$nav-a-border-bottom            : $nav-a-border-top !default;
+
+$nav-a-hover-color              : color(greyscale, white) !default;
+$nav-a-hover-bg-color           : color(brand, primary) !default;
+$nav-a-hover-border-color       : $nav-a-border-color !default;
+
+$nav-a-active-color             : $nav-a-hover-color !default;
+$nav-a-active-bg-color          : $nav-a-hover-bg-color !default;
+$nav-a-active-border-color      : $nav-a-hover-border-color !default;
+
+$nav-a-has-child-color          : $nav-a-hover-color !default;
+$nav-a-has-child-bg             : $nav-a-hover-bg-color !default;
+$nav-a-has-child-border         : $nav-a-has-child-bg !default;
+
+$nav-a-radius                   : 0 !default;
+$nav-a-spacing                  : 0.5em !default;
+$nav-a-padding                  : 0.5em 0.75em !default;
+
+$nav-li-border-width            : 0px !default;
+$nav-li-border-color            : transparent !default;
+$nav-li-border-left             : $nav-li-border-width solid $nav-li-border-color !default;
+$nav-li-border-right            : $nav-li-border-left !default;
+$nav-li-border-top              : $nav-li-border-right !default;
+$nav-li-border-bottom           : $nav-li-border-top !default;
+$nav-li-hover-border-color      : $nav-li-border-color !default;
+$nav-li-active-border-color     : $nav-li-hover-border-color !default;
+
+//-----------------------------------------------------------------
+// Component
+//-----------------------------------------------------------------
+
+.app-nav {
+
+// Core Styles
 //-----------------------------------------------------------------
 
     // all items
@@ -140,7 +203,7 @@
             a {
                 position: relative;
                 &, &:last-child {
-                    border-bottom: $dropdown-a-border-bottom;
+                    border-bottom: $nav-a-border-width;
                 }
                 &:not(:only-child) {
                     &:after {
@@ -159,7 +222,7 @@
                         a {
                             &:before {
                                 font-family: FontAwesome;
-                                content: $dropdown-low-level-icon;
+                                content: "\f105";
                                 margin-right: 0.5em;
                             }
                         }

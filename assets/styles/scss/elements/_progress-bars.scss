@@ -10,7 +10,7 @@ $progress-radius : 0.4rem;
 $progress-height : 1rem;
 
 %progress-bar {
-	background: rgba($black,0.15);
+	background: rgba(color(greyscale, black),0.15);
 	border-radius: $progress-radius;	
 }
 
@@ -23,7 +23,7 @@ progress {
 	width: 100%;
 	height: $progress-height;
 	display: block;
-	color: $brand-1;
+	color: color(brand, primary);
 	border-radius: $progress-radius;
 	border: none;
 	-webkit-appearance: none;
@@ -33,22 +33,22 @@ progress {
 	}
 
 	&::-webkit-progress-value {
-		background: $brand-1;
+		background: color(brand, primary);
 		border-radius: $progress-radius;
 	}
 	
 	&::-moz-progress-bar {	
-		background: $brand-1;
+		background: color(brand, primary);
 		border-radius: $progress-radius;	
 	}
 
 	&.progress-alt {
-		color: $brand-2;
+		color: color(brand, secondary);
 		&::-webkit-progress-value {
-			background: $brand-2;		
+			background: color(brand, secondary);		
 		}		
 		&::-moz-progress-bar {
-			background: $brand-2;		
+			background: color(brand, secondary);		
 		}
 
 	}
@@ -65,7 +65,7 @@ progress {
 	height: $progress-height;
 	overflow: hidden;
 	.progress {
-		background: $brand-1;
+		background: color(brand, primary);
 		height: 100%;
 	}
 }

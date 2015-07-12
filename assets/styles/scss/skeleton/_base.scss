@@ -18,10 +18,10 @@ html {
 
 body {
     line-height: $base-line-height;
-    font-family: $font-1;
-    color: $base-text-color;
+    font-family: typography(typefaces, primary);
+    color: typography(base-text-color);
 	background-color: $background-color;
-    font-size: $base-font-size;
+    font-size: typography(sizes, base);
 }
 
 //-----------------------------------------------------------------
@@ -95,7 +95,7 @@ pre, hr {
 }
 
 ::selection {
-	background-color: $brand-1;
-	color: $white;
+	background-color: color(brand, primary);
+	color: color(greyscale, white);
 	text-shadow: none;
 }

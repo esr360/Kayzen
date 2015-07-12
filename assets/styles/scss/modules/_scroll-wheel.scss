@@ -6,7 +6,7 @@
 
 	position: absolute;
 	font-size: font-size(size-6);
-	color: $white;
+	color: color(greyscale, white);
 	border: 0.075em solid;
 	border-radius: 1em;
 	width: 1.5em;
@@ -18,7 +18,7 @@
 		height: 0.25em;
 		width: 0.25em;
 		border-radius: 50%;
-		background: $white;
+		background: color(greyscale, white);
 		position: absolute;
 		top: 0.5em;
 		// animation: scroll-down 1.2s infinite;

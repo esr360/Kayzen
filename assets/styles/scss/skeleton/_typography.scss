@@ -2,8 +2,51 @@
 // Typography
 //=================================================================
 
+//-----------------------------------------------------------------
+// Config
+//-----------------------------------------------------------------
+
+$typography-config: (
+	typefaces: (
+		primary         : 'Lato',
+		secondary       : 'Raleway'
+	),
+	colors: (
+		base-text-color : color(greyscale, grey-4),
+		heading-color   : color(greyscale, grey-5)
+	),
+	sizes: (
+		base            : 1em,
+		size-1          : 0.67em,
+		size-2          : 0.83em,
+		size-3          : 1.17em,
+		size-4          : 1.25em,
+		size-5          : 1.5em,
+		size-6          : 2em,
+		size-7          : 2.4em,
+		size-8          : 3em,
+		size-9          : 3.4em
+	)
+);
+
+//-----------------------------------------------------------------
+// Utilities
+//-----------------------------------------------------------------
+
+@function typography-config($key) {
+    @return map-get($typography-config, $key);
+}
+
+@function typography($group, $key) {
+	@return map-get(typography-config($group), $key);
+}
+
+//-----------------------------------------------------------------
+// Styles
+//-----------------------------------------------------------------
+
 a {
-    color: $brand-1;
+    color: color(brand, primary);
     transition: 0.4s;
     text-decoration: none;
     &:hover {

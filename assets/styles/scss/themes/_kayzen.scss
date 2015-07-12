@@ -2,12 +2,6 @@
 // Kayzen
 //=================================================================
 
-// set the theme's colors
-@if $theme == "kayzen" {
-	$brand-1 : #9D55B9 !global;
-	$brand-2 : mix($brand-1, #000, 70%) !global;
-}
-
 // import the default options
 @import "skeleton/color-palettes";
 @import "skeleton/config";
@@ -15,16 +9,24 @@
 // set custom options
 @if $theme == "kayzen" {
 
-	$header-absolute                : true;
-	$header-bar                     : true;
-	$header-bg-color                : transparent;
-	$header-top-position            : 30px;
+	$header-custom: (
+		absolute     : true,
+		bar          : true,
+		bg-color     : transparent,
+		top-position : 30px
+	) !global;
+	
+	$billboard-custom: (
+		full-screen: true,
+		overlay    : true,
+		bg-image   : "#{$asset-path}/images/billboard-1.jpg"
+	) !global;
 
-	$logo-color                     : $white;
+	$logo-color                     : color(greyscale, white);
 
 	$nav-no-icons                   : true;
 
-	$nav-a-color                    : $white;
+	$nav-a-color                    : color(greyscale, white);
 	$nav-a-border-color             : transparent;
 
 	$nav-a-hover-bg-color           : transparent;
@@ -33,20 +35,16 @@
 	$nav-a-active-bg-color          : $nav-a-hover-bg-color;
 	$nav-a-active-border-color      : $nav-a-hover-border-color;
 
-	$nav-a-has-child-color          : $brand-1;
+	$nav-a-has-child-color          : color(brand, primary);
 	$nav-a-has-child-bg             : $nav-a-hover-border-color;
 	$nav-a-has-child-border         : $nav-a-has-child-bg;
 
 	$dropdown-a-color               : $nav-a-has-child-color;
 	$dropdown-a-bg-color            : $nav-a-has-child-bg;
-	$dropdown-a-border-left         : $nav-a-border-width solid darken($dropdown-a-bg-color, 5%);
+	$dropdown-a-border-left         : 1px solid darken($dropdown-a-bg-color, 5%);
 	$dropdown-a-border-bottom       : $dropdown-a-border-left;
 	$dropdown-a-hover-border-color  : darken($dropdown-a-color, 10%);
 
-	$dropdown-li-border-left        : 6px solid $brand-1;
-
-	$billboard-bg-image             : "#{$asset-path}/images/billboard-1.jpg";
-	$billboard-full-screen          : true;
-	$billboard-overlay              : true;	
+	$dropdown-li-border-left        : 6px solid color(brand, primary);
 
 }

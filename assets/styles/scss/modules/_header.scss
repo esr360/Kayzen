@@ -2,6 +2,39 @@
 // Header
 //=================================================================
 
+//-----------------------------------------------------------------
+// Config
+//-----------------------------------------------------------------
+
+$header-default: (
+	absolute             : false,
+	side                 : null,
+	side-container-width : 100%,
+	bar                  : false,
+	dark                 : false,
+	top-position         : 0,
+	bg-color             : $background-color,
+	dark-color           : color(greyscale, grey-5),
+	height               : 100px,
+	side-width           : 350px
+);
+
+//-----------------------------------------------------------------
+// Utilities
+//-----------------------------------------------------------------
+
+@if global-variable-exists(header-custom) {
+	$header-default: map-merge($header-default, $header-custom);
+}
+
+@function header($key) {
+    @return map-get($header-default, $key);
+}
+
+//-----------------------------------------------------------------
+// Component
+//-----------------------------------------------------------------
+
 @include component(app-header) {
 
 // Core Styles
@@ -9,19 +42,19 @@
 
 	@include core {
 
-		background-color: $header-bg-color;		
+		background-color: header(bg-color);		
 
 		// Conditionals
 
-		@if $header-bar == true {
+		@if header(bar) == true {
 			@include extend(bar);
 		}
 
-		@if $header-absolute == true {
+		@if header(absolute) == true {
 			@include extend(absolute);
 		}
 
-		@if $header-side != null {
+		@if header(side) != null {
 			@if $header-side == left {
 				@include extend(side, left);
 			} @else if $header-side == right {
@@ -31,14 +64,14 @@
 			}
 		}
 
-		@if $header-dark == true {
+		@if header(dark) == true {
 			@include extend(dark);
 		}
 
 		// Child Styles
 
 		@at-root .header-wrapper {
-			height: $header-height;
+			height: header(height);
 		}
 
 	} // core
@@ -60,7 +93,7 @@
 
 	@include modifier(absolute) {
 		position: absolute;
-		top: $header-top-position;
+		top: header(top-position);
 		z-index: 5;
 		width: 100%;
 	}
@@ -71,26 +104,26 @@
 		height: 100%;
 		top: 0;	
 		overflow: auto;
-		width: $header-side-width;	
+		width: header(side-width);	
 		@include modifier(left) {
 			left: 0;
 			+ #main {
-				margin-left:  $header-side-width;
+				margin-left: header(side-width);
 			}
 		}
 		@include modifier(right) {
 			right: 0;
 			+ #main {
-				margin-right:  $header-side-width;
+				margin-right: header(side-width);
 			}
 		}
 		@include nested-component(container) {
-			max-width: $header-side-container-width;
+			max-width: header(side-container-width);
 		}
 	}
 
 	@include modifier(dark) {
-		background-color: $header-dark-color;
+		background-color: header(dark-color);
 	}
 
 } // component(app-header)

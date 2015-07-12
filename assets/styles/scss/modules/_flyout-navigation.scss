@@ -38,7 +38,7 @@
     font-size: font-size(size-3);
     font-weight: bold;
     overflow: auto;
-    background: $grey-5;
+    background: color(greyscale, grey-5);
     transition: 0.4s;
     transform: translate3d(0,0,0);
     box-shadow: inset -10px 0 6px -9px rgba(0, 0, 0, 0.7);
@@ -50,18 +50,18 @@
 		li {
 			&:hover {
 				> a {
-					border-left-color: $brand-1;
+					border-left-color: color(brand, primary);
 				}
 			}
 		}
 		a {
 		    display: block;
 		    padding: 1em 1.6em;
-		    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-		    border-top: 1px solid rgba(255, 255, 255, 0.05);
-		    border-left: 5px solid rgba(0,0,0,0.3);
+		    border-bottom: 1px solid rgba(color(greyscale, black), 0.1);
+		    border-top: 1px solid rgba(color(greyscale, white), 0.05);
+		    border-left: 5px solid rgba(color(greyscale, black),0.3);
 		    text-decoration: none;
-			color: $grey-3;
+			color: color(greyscale, grey-3);
 		}   
 		ul {
 			ul {
@@ -75,13 +75,13 @@
 		> li {
 			> a {
 				color: white;
-				border-left-color: $brand-1;
+				border-left-color: color(brand, primary);
 				background: rgba(0,0,0,0.15);
 			}
 			&:hover {
 				> a {
-					background: $brand-1;
-					color: white;
+					background: color(brand, primary);
+					color: color(greyscale, white);
 				}
 			}
 		}

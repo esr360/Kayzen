@@ -11,7 +11,7 @@
 		@at-root .modal-content {
 		    display: none;
 		    position: relative;
-		    background: $white;
+		    background: color(greyscale, white);
 		    padding: 1rem;
 		    border-radius: 0.4em;
 		    box-shadow: 1px 1px 4px 0px rgba(0,0,0,0.2);
@@ -26,7 +26,7 @@
 		    left: 0px;
 		    height:100%;
 		    width:100%;
-		    background: rgba($black, 0.4);
+		    background: rgba(color(greyscale, black), 0.4);
 		    display: none;
 		}
 
@@ -38,7 +38,7 @@
 		    line-height: 1;
 		    transition: 0.4s;
 		    &:hover {
-		        color: $brand-1;
+		        color: color(brand, primary);
 		    }
 		    &, .fa {
 		        cursor: pointer;

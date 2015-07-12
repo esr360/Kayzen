@@ -168,7 +168,7 @@
 //-----------------------------------------------------------------
 
 @mixin font-sizes {
-	@each $size, $value in $font-sizes {
+	@each $size, $value in typography-config(sizes) {
 		@include modifier($size) {
 			font-size: $value;
 		}

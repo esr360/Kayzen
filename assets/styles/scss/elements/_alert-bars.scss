@@ -36,33 +36,33 @@
 
 	@include modifier(help) {		
 		background: desaturate(
-			lighten($alert-help, 20%)
+			lighten(color(alert, help), 20%)
 		, 20%) !important;
 		color: darken(
-			desaturate($alert-help, 25%)
+			desaturate(color(alert, help), 25%)
 		, 25%);
 	}
 
 	@include modifier(info) {		
-		background: lighten($alert-info, 20%) !important;
+		background: lighten(color(alert, info), 20%) !important;
 		color: darken(
-			desaturate($alert-info, 15%)
+			desaturate(color(alert, info), 15%)
 		, 15%);
 	}
 
 	@include modifier(error) {		
 		background: desaturate(
-			lighten($alert-error, 20%)
+			lighten(color(alert, error), 20%)
 		, 20%) !important;
 		color: darken(
-			desaturate($alert-error, 10%)
+			desaturate(color(alert, error), 10%)
 		, 10%);
 	}
 	
 	@include modifier(success) {		
-		background: lighten($alert-success, 20%) !important;
+		background: lighten(color(alert, success), 20%) !important;
 		color: darken(
-			desaturate($alert-success, 15%)
+			desaturate(color(alert, success), 15%)
 		, 15%);
 	}
 

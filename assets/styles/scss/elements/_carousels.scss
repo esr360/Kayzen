@@ -41,7 +41,7 @@
             top: 30%;
             font-family: FontAwesome;
             font-size: font-size(size-7);
-            color: $grey-2;
+            color: color(greyscale, grey-2);
             //animation: spin 1s linear infinite;
             @include horizontal-center;
         }
@@ -111,7 +111,7 @@
         position: absolute;
         z-index: 3;
         transform: translateY(-50%) translateX(-50%);
-        background: $brand-1;
+        background: color(brand, primary);
         padding: 0.5em;
         [class*="arrow-"] {
             position: relative;
@@ -129,7 +129,7 @@
                 width: 9999px;
                 left: -4999px;
                 height: 10px;
-                background-color: $brand-1;
+                background-color: color(brand, primary);
                 @include vertical-center(absolute);
             }   
         }

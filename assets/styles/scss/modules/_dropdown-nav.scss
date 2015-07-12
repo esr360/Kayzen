@@ -3,6 +3,34 @@
 // Used in: "modules/_navigation.scss"
 //=================================================================
 
+//-----------------------------------------------------------------
+// Config
+//-----------------------------------------------------------------
+
+$dropdown-text-align            : left !default;
+$dropdown-width                 : 175px !default;
+$dropdown-top-position          : 0 !default;
+$dropdown-dropdown-icon         : "\f105" !default;
+$dropdown-low-level-icon        : $dropdown-dropdown-icon !default;
+
+$dropdown-a-color               : $nav-a-has-child-color !default;
+$dropdown-a-bg-color            : $nav-a-has-child-bg !default;
+
+$dropdown-a-border-left         : $nav-a-border-width solid darken($dropdown-a-bg-color, 5%) !default;
+$dropdown-a-border-bottom       : $dropdown-a-border-left !default;
+
+$dropdown-a-hover-color         : $dropdown-a-color !default;
+$dropdown-a-hover-bg-color      : $dropdown-a-bg-color !default;
+$dropdown-a-hover-border-color  : $dropdown-a-border-bottom !default;
+
+$dropdown-a-active-color        : $dropdown-a-hover-color !default;
+$dropdown-a-active-bg-color     : $dropdown-a-hover-bg-color !default;
+$dropdown-a-active-border-color : $dropdown-a-hover-border-color !default;
+
+//-----------------------------------------------------------------
+// Styles
+//-----------------------------------------------------------------
+
 ul {
 
 	@extend %list-reset;

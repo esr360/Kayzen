@@ -2,6 +2,39 @@
 // Billboard
 //=================================================================
 
+//-----------------------------------------------------------------
+// Config
+//-----------------------------------------------------------------
+
+$billboard-default: (
+	full-screen     : false,
+	overlay         : false,
+	text-align      : center,
+	min-height      : 500px,
+	bg-image        : "",
+	bg-color        : color(greyscale, grey-5),
+	overlay-color   : color(brand, primary),
+	overlay-opacity : 2.4em,
+	color           : color(greyscale, white),
+	wrapper-width   : breakpoint(break-2)
+);
+
+//-----------------------------------------------------------------
+// Utilities
+//-----------------------------------------------------------------
+
+@if global-variable-exists(billboard-custom) {
+	$billboard-default: map-merge($billboard-default, $billboard-custom);
+}
+
+@function billboard($key) {
+    @return map-get($billboard-default, $key);
+}
+
+//-----------------------------------------------------------------
+// Component
+//-----------------------------------------------------------------
+
 @include component(billboard) {
 
 // Core Styles
@@ -9,35 +42,35 @@
 
 	@include core {
 
-		min-height: $billboard-min-height;
-		background-color: $billboard-bg-color;
+		min-height: billboard(min-height);
+		background-color: billboard(bg-color);
 		position: relative;
 
 		// Conditionals
 
 		// only apply a bg image if there is one to apply
-		@if $billboard-bg-image != "" {
-			background-image: url($billboard-bg-image);
+		@if billboard(bg-image) != "" {
+			background-image: url(billboard(bg-image));
 			background-size: cover;
 		}
-
-		@if $billboard-full-screen == true {
+		
+		@if billboard(full-screen) == true {
 			@include extend(full-screen);
 		}
 
-		@if $billboard-overlay == true {
+		@if billboard(overlay) == true {
 			@include extend(overlay);
 		}
 		
 		// Child Styles
 
 		@at-root .bb-wrapper {
-			color: $billboard-color;
-			text-align: $billboard-text-align;
+			color: billboard(color);
+			text-align: billboard(text-align);
 			@include horizontal-center();
 			@include vertical-center(absolute);
 			@media (min-width: breakpoint(break-3)) {
-				width: $billboard-wrapper-width;
+				width: billboard(wrapper-width);
 			}
 		}
 
@@ -47,12 +80,12 @@
 //-----------------------------------------------------------------
 
 	@include modifier(overlay) {
-		@include bg-overlay(rgba($billboard-overlay-color, $billboard-overlay-opacity));
+		@include bg-overlay(rgba(billboard(overlay-color), billboard(overlay-opacity)));
 	}
 
 	@include modifier(full-screen) {
 		height: 90%;
-		height: calc(100% - #{$header-height});
+		height: calc(100% - #{header(height)});
 	}
 
 } // component(billboard)
