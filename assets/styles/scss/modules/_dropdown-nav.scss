@@ -18,12 +18,12 @@ $dropdown-default: (
 	a-color               : navigation(a-has-child-color),
 	a-bg-color            : navigation(a-has-child-bg),
 	
-	a-border-left         : navigation(a-border-width) solid darken(color(greyscale, white), 5%),
-	a-border-bottom       : navigation(a-border-width) solid darken(color(greyscale, white), 5%),
+	a-border-left         : 1px solid darken(color(brand, primary), 5%),
+	a-border-bottom       : 1px solid darken(color(brand, primary), 5%),
 	
 	a-hover-color         : navigation(a-has-child-color),
-	a-hover-bg-color      : navigation(a-has-child-bg),
-	a-hover-border-color  : darken(color(greyscale, white), 5%),
+	a-hover-bg-color      : darken(color(brand, primary), 15%),
+	a-hover-border-color  : darken(color(brand, primary), 15%),
 	
 	a-active-color        : navigation(a-has-child-color),
 	a-active-bg-color     : navigation(a-has-child-bg),

@@ -1,8 +1,8 @@
 @charset "UTF-8";
 /******************************************************************
 
-Site Name: Kayzen Wordpress Theme
-Author: TBD
+Site Name: Kayzen
+Author: @ESR360
 
 ******************************************************************/
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
@@ -457,7 +457,7 @@ pre:last-child, hr:last-child, [class*="accordion-"]:last-child, .accordion:last
             transform: rotate(360deg);
   }
 }
-[class*="list-"][class*="-reset"], .breadcrumb ul, .footer-nav ul, .app-nav > ul, .app-nav > ul > li ul {
+[class*="list-"][class*="-reset"], .breadcrumb ul, .footer-nav ul, .navigation > ul, .navigation > ul > li ul {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -861,6 +861,41 @@ http://github.com/esr360/Kayzen-GS/
   }
 }
 
+.auto-resizable-iframe {
+  max-width: 720px;
+  margin: 0px auto;
+}
+.auto-resizable-iframe > div {
+  position: relative;
+  padding-bottom: 58%;
+  height: 0px;
+}
+.auto-resizable-iframe iframe {
+  position: absolute;
+  border: 0px;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+}
+
+a {
+  color: #9B58B5;
+  transition: 0.4s;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+p, ul, ol {
+  font-weight: lighter;
+}
+
+.lede {
+  font-size: font-size(size-4);
+}
+
 html, body {
   padding: 0;
   margin: 0;
@@ -873,16 +908,16 @@ html {
 
 body {
   line-height: 1.4;
-  font-family: typography(typefaces, primary);
-  color: typography(base-text-color);
+  font-family: "Lato";
   background-color: #f8f8f8;
-  font-size: typography(sizes, base);
+  font-size: 1em;
 }
 
 [class*="container-"], .container {
   width: 1200px;
   max-width: 90%;
   margin: 0 auto;
+  position: relative;
 }
 [class*="container-"][class*="-small"] {
   width: 940px;
@@ -1158,41 +1193,6 @@ hr.line {
     display: none;
   }
 }
-.auto-resizable-iframe {
-  max-width: 720px;
-  margin: 0px auto;
-}
-.auto-resizable-iframe > div {
-  position: relative;
-  padding-bottom: 58%;
-  height: 0px;
-}
-.auto-resizable-iframe iframe {
-  position: absolute;
-  border: 0px;
-  top: 0px;
-  left: 0px;
-  width: 100%;
-  height: 100%;
-}
-
-a {
-  color: #9B58B5;
-  transition: 0.4s;
-  text-decoration: none;
-}
-a:hover {
-  text-decoration: underline;
-}
-
-p, ul, ol {
-  font-weight: lighter;
-}
-
-.lede {
-  font-size: font-size(size-4);
-}
-
 [class*="accordion-"], .accordion {
   margin-bottom: 2rem;
   border-bottom: 1px solid rgba(0, 0, 0, 0.15);
@@ -2864,30 +2864,30 @@ https://github.com/esr360/K-Tooltips
   display: block;
 }
 
-[class*="app-header-"], .app-header {
+[class*="header-"], .header {
   background-color: transparent;
 }
 .header-wrapper {
   height: 100px;
 }
-[class*="app-header-"][class*="-bar"] .header-wrapper, [class*="app-header-"] .header-wrapper, .app-header .header-wrapper {
+[class*="header-"][class*="-bar"] .header-wrapper, [class*="header-"] .header-wrapper, .header .header-wrapper {
   display: table;
   width: 100%;
 }
-[class*="app-header-"][class*="-bar"] .logo, [class*="app-header-"] .logo, .app-header .logo,
-[class*="app-header-"][class*="-bar"] .app-nav,
-[class*="app-header-"] .app-nav,
-.app-header .app-nav {
+[class*="header-"][class*="-bar"] .logo, [class*="header-"] .logo, .header .logo,
+[class*="header-"][class*="-bar"] .navigation,
+[class*="header-"] .navigation,
+.header .navigation {
   display: table-cell;
   vertical-align: middle;
 }
-[class*="app-header-"][class*="-absolute"], [class*="app-header-"], .app-header {
+[class*="header-"][class*="-absolute"], [class*="header-"], .header {
   position: absolute;
   top: 30px;
   z-index: 5;
   width: 100%;
 }
-[class*="app-header-"][class*="-side"] {
+[class*="header-"][class*="-side"] {
   position: fixed;
   z-index: 5;
   height: 100%;
@@ -2895,23 +2895,23 @@ https://github.com/esr360/K-Tooltips
   overflow: auto;
   width: 350px;
 }
-[class*="app-header-"][class*="-side"][class*="-left"] {
+[class*="header-"][class*="-side"][class*="-left"] {
   left: 0;
 }
-[class*="app-header-"][class*="-side"][class*="-left"] + #main {
+[class*="header-"][class*="-side"][class*="-left"] + #main {
   margin-left: 350px;
 }
-[class*="app-header-"][class*="-side"][class*="-right"] {
+[class*="header-"][class*="-side"][class*="-right"] {
   right: 0;
 }
-[class*="app-header-"][class*="-side"][class*="-right"] + #main {
+[class*="header-"][class*="-side"][class*="-right"] + #main {
   margin-right: 350px;
 }
-[class*="app-header-"][class*="-side"] .container,
-[class*="app-header-"][class*="-side"] [class*="container-"] {
+[class*="header-"][class*="-side"] .container,
+[class*="header-"][class*="-side"] [class*="container-"] {
   max-width: 100%;
 }
-[class*="app-header-"][class*="-dark"] {
+[class*="header-"][class*="-dark"] {
   background-color: #232627;
 }
 
@@ -2934,26 +2934,26 @@ https://github.com/esr360/K-Tooltips
   vertical-align: middle;
 }
 
-.app-nav li a {
+.navigation li a {
   display: block;
   padding: 0.5em 0.75em;
   color: #ffffff;
 }
-.app-nav li a:hover {
+.navigation li a:hover {
   text-decoration: none;
 }
-.app-nav li a .fa {
+.navigation li a .fa {
   margin-right: 0.5em;
 }
-.app-nav li:hover > ul {
+.navigation li:hover > ul {
   opacity: 1;
   visibility: visible;
 }
-.app-nav > ul {
+.navigation > ul {
   display: none;
   vertical-align: middle;
 }
-.app-nav > ul > li {
+.navigation > ul > li {
   transition: 0.4s;
   margin-left: 0.5em;
   border-color: transparent;
@@ -2962,7 +2962,7 @@ https://github.com/esr360/K-Tooltips
   border-top: 0px solid transparent;
   border-bottom: 0px solid transparent;
 }
-.app-nav > ul > li ul {
+.navigation > ul > li ul {
   min-width: 175px;
   text-align: left;
   transition: 0.4s;
@@ -2971,18 +2971,18 @@ https://github.com/esr360/K-Tooltips
   opacity: 0;
   visibility: hidden;
 }
-.app-nav > ul > li ul li {
+.navigation > ul > li ul li {
   position: relative;
 }
-.app-nav > ul > li ul li a {
-  background: navigation(a-color);
-  color: navigation(a-has-child-color);
-  border-bottom: 1px solid #8e4ba9;
+.navigation > ul > li ul li a {
+  background: #ffffff;
+  color: #9B58B5;
+  border-bottom: 1px solid #f2f2f2;
 }
-.app-nav > ul > li ul li a:before, .app-nav > ul > li ul li a:after {
+.navigation > ul > li ul li a:before, .navigation > ul > li ul li a:after {
   font-family: FontAwesome;
 }
-.app-nav > ul > li ul li a:not(:only-child):after {
+.navigation > ul > li ul li a:not(:only-child):after {
   content: "";
   right: 0.75em;
   position: absolute;
@@ -2991,93 +2991,94 @@ https://github.com/esr360/K-Tooltips
       -ms-transform: translateY(-50%);
           transform: translateY(-50%);
 }
-.app-nav > ul > li ul li:last-child a {
+.navigation > ul > li ul li:last-child a {
   border-bottom: none;
 }
-.app-nav > ul > li ul li:hover > a {
-  color: #9B58B5;
-  background: navigation(a-hover-border-color);
+.navigation > ul > li ul li:hover > a {
+  color: #ffffff;
+  background: #9B58B5;
   border-color: #804397;
 }
-.app-nav > ul > li ul li.active > a {
+.navigation > ul > li ul li.active > a {
   color: #9B58B5;
-  background: navigation(a-hover-border-color);
+  background: #ffffff;
   border-color: #f2f2f2;
 }
-.app-nav > ul > li ul li ul {
+.navigation > ul > li ul li ul {
   left: 100%;
   top: 0;
 }
-.app-nav > ul > li ul li ul li a {
-  border-left: 1px solid #8e4ba9;
+.navigation > ul > li ul li ul li a {
+  border-left: 1px solid #f2f2f2;
 }
-.app-nav > ul > li > ul {
+.navigation > ul > li > ul {
   padding-top: 0;
 }
-.app-nav > ul > li:first-child {
+.navigation > ul > li:first-child {
   margin-left: 0;
 }
-.app-nav > ul > li > a {
+.navigation > ul > li > a {
   border-color: transparent;
   border-left: 1px solid transparent;
+  border-right: 1px solid transparent;
   border-top: 1px solid transparent;
   border-bottom: 1px solid transparent;
   border-radius: 0;
 }
-.app-nav > ul > li > a:not(:only-child):after {
+.navigation > ul > li > a:not(:only-child):after {
   content: "";
   font-family: FontAwesome;
   margin-left: 0.5em;
 }
-.app-nav > ul > li:hover {
+.navigation > ul > li:hover {
   border-color: transparent;
 }
-.app-nav > ul > li:hover > a {
+.navigation > ul > li:hover > a {
   color: #ffffff;
-  border-color: navigation(a-color);
+  border-color: #ffffff;
   background: transparent;
 }
-.app-nav > ul > li:hover > a:not(:only-child) {
+.navigation > ul > li:hover > a:not(:only-child) {
   color: #9B58B5;
-  background: navigation(a-hover-border-color);
-  border-color: navigation(a-has-child-bg);
+  background: #ffffff;
+  border-color: #ffffff;
   border-bottom-color: transparent;
 }
-.app-nav > ul > li.active {
+.navigation > ul > li.active {
   border-color: transparent;
 }
-.app-nav > ul > li.active > a {
+.navigation > ul > li.active > a {
   color: #ffffff;
-  background: navigation(a-hover-bg-color);
-  border-color: navigation(a-hover-border-color);
+  background: transparent;
+  border-color: #ffffff;
 }
-.app-nav > ul > li.active:hover {
+.navigation > ul > li.active:hover {
   border-color: transparent;
 }
-.app-nav > ul > li.active:hover > a {
+.navigation > ul > li.active:hover > a {
   background: transparent;
 }
-.app-nav.no-icons .fa, .app-nav .fa {
+.navigation.no-icons .fa, .navigation .fa {
   display: none;
 }
-[class*="header-side"] .app-nav ul {
+[class*="header-side"] .navigation ul {
   display: block;
   visibility: visible;
   opacity: 1;
   position: relative;
   left: 0;
 }
-[class*="header-side"] .app-nav li {
+[class*="header-side"] .navigation li {
   display: block;
   margin-left: 0;
 }
-[class*="header-side"] .app-nav li a {
+[class*="header-side"] .navigation li a {
   position: relative;
 }
-[class*="header-side"] .app-nav li a, [class*="header-side"] .app-nav li a:last-child {
+[class*="header-side"] .navigation li a, [class*="header-side"] .navigation li a:last-child {
   border-bottom: 1px solid transparent;
 }
-[class*="header-side"] .app-nav li a:not(:only-child):after {
+[class*="header-side"] .navigation li a:not(:only-child):after {
   content: "";
   right: 1.5em;
   position: absolute;
@@ -3086,26 +3087,26 @@ https://github.com/esr360/K-Tooltips
       -ms-transform: translateY(-50%);
           transform: translateY(-50%);
 }
-[class*="header-side"] .app-nav li ul ul {
+[class*="header-side"] .navigation li ul ul {
   font-size: font-size(size-2);
 }
-[class*="header-side"] .app-nav li ul ul li a:before {
+[class*="header-side"] .navigation li ul ul li a:before {
   font-family: FontAwesome;
   content: "\f105";
   margin-right: 0.5em;
 }
-[class*="header-side"] .app-nav li ul ul ul {
+[class*="header-side"] .navigation li ul ul ul {
   padding-left: 1rem;
 }
 @media (min-width: 940px) {
-  .app-nav {
+  .navigation {
     text-align: right;
   }
-  .app-nav > ul {
+  .navigation > ul {
     display: inline-block;
     white-space: nowrap;
   }
-  .app-nav > ul > li {
+  .navigation > ul > li {
     display: inline-block;
     position: relative;
   }
@@ -3200,6 +3201,7 @@ https://github.com/esr360/K-Tooltips
   padding: 6em 0;
 }
 [class*="section-"][class*="-secondary"] {
+  background: #9B58B5;
   padding: 8em 0;
 }
 [class*="section-"][class*="-secondary"] > .container {
@@ -3286,14 +3288,14 @@ https://github.com/esr360/K-Tooltips
 [class*="billboard-"][class*="-overlay"]:before, [class*="billboard-"]:before, .billboard:before {
   content: "";
   z-index: 0;
-  background: #9b58b5;
+  background: rgba(155, 88, 181, 0.6);
 }
 [class*="billboard-"][class*="-full-screen"], [class*="billboard-"], .billboard {
   height: 90%;
   height: calc(100% - 100px);
 }
 
-[class*="app-header-"][class*="-absolute"] + #main [class*="billboard-"][class*="-full-screen"], [class*="app-header-"] + #main [class*="billboard-"][class*="-full-screen"], .app-header + #main [class*="billboard-"][class*="-full-screen"], [class*="app-header-"][class*="-absolute"] + #main [class*="billboard-"], [class*="app-header-"] + #main [class*="billboard-"], .app-header + #main [class*="billboard-"], [class*="app-header-"][class*="-absolute"] + #main .billboard, [class*="app-header-"] + #main .billboard, .app-header + #main .billboard {
+[class*="header-"][class*="-absolute"] + #main [class*="billboard-"][class*="-full-screen"], [class*="header-"] + #main [class*="billboard-"][class*="-full-screen"], .header + #main [class*="billboard-"][class*="-full-screen"], [class*="header-"][class*="-absolute"] + #main [class*="billboard-"], [class*="header-"] + #main [class*="billboard-"], .header + #main [class*="billboard-"], [class*="header-"][class*="-absolute"] + #main .billboard, [class*="header-"] + #main .billboard, .header + #main .billboard {
   height: 100%;
   height: 100vh;
 }

@@ -35,7 +35,7 @@ $header-default: (
 // Component
 //-----------------------------------------------------------------
 
-@include component(app-header) {
+@include component(header) {
 
 // Core Styles
 //-----------------------------------------------------------------
@@ -85,7 +85,7 @@ $header-default: (
 			width: 100%;
 		}
 		.logo, 
-		.app-nav {
+		.navigation {
 			display: table-cell;
 			vertical-align: middle;
 		}

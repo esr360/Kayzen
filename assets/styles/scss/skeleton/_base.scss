@@ -31,7 +31,7 @@ html {
 body {
     line-height: $base-line-height;
     font-family: typography(typefaces, primary);
-    color: typography(base-text-color);
+    color: typography(colors, base);
 	background-color: $background-color;
     font-size: typography(sizes, base);
 }
@@ -46,6 +46,7 @@ body {
         width: $base-width;
         max-width: $max-width;
         margin: 0 auto;
+		position: relative;
     }
 
     @include modifier(small) {

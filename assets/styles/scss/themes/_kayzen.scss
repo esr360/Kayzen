@@ -8,7 +8,7 @@
 
 $palettes-custom: (
 	brand: (
-		primary: #9B58B5
+		primary           : #9B58B5
 	)
 ) !global;
 
@@ -19,36 +19,38 @@ $palettes-custom: (
 //-----------------------------------------------------------------
 
 $header-custom: (
-	absolute     : true,
-	bar          : true,
-	bg-color     : transparent,
-	top-position : 30px
+	absolute              : true,
+	bar                   : true,
+	bg-color              : transparent,
+	top-position          : 30px
 ) !global;
 
-$logo-color : color(greyscale, white);
+$logo-color               : color(greyscale, white);
 
 //-----------------------------------------------------------------
 // Navigation 
 //-----------------------------------------------------------------
 
 $navigation-custom: (
-	no-icons                   : true,
-	a-color                    : color(greyscale, white),
-	a-border-color             : transparent,
-	a-hover-bg-color           : transparent,
-	a-hover-border-color       : navigation(a-color),
-	a-active-bg-color          : navigation(a-hover-bg-color),
-	a-active-border-color      : navigation(a-hover-border-color),
-	a-has-child-color          : color(brand, primary),
-	a-has-child-bg             : navigation(a-hover-border-color),
-	a-has-child-border         : navigation(a-has-child-bg),
+	no-icons              : true,
+	a-color               : color(greyscale, white),
+	a-border-color        : transparent,
+	a-hover-bg-color      : transparent,
+	a-hover-border-color  : color(greyscale, white),
+	a-active-bg-color     : transparent,
+	a-active-border-color : color(greyscale, white),
+	a-has-child-color     : color(brand, primary),
+	a-has-child-bg        : color(greyscale, white),
+	a-has-child-border    : color(greyscale, white),
 ) !global;
 
 $dropdown-custom: (
-	a-color               : navigation(a-has-child-color),
-	a-bg-color            : navigation(a-color),
-	a-border-left         : 1px solid darken(color(brand, primary), 5%),
-	a-border-bottom       : 1px solid darken(color(brand, primary), 5%),
+	a-color               : color(brand, primary),
+	a-hover-color         : color(greyscale, white),
+	a-hover-bg-color      : color(brand, primary),
+	a-bg-color            : color(greyscale, white),
+	a-border-left         : 1px solid darken(color(greyscale, white), 5%),
+	a-border-bottom       : 1px solid darken(color(greyscale, white), 5%),
 	a-hover-border-color  : darken(color(brand, primary), 10%),
 	li-border-left        : 6px solid color(brand, primary),
 ) !global;
@@ -58,7 +60,7 @@ $dropdown-custom: (
 //-----------------------------------------------------------------
 
 $billboard-custom: (
-	full-screen: true,
-	overlay    : true,
-	bg-image   : "#{$asset-path}/images/billboard-1.jpg"
+	full-screen           : true,
+	overlay               : true,
+	bg-image              : "#{$asset-path}/images/billboard-1.jpg"
 ) !global;

@@ -14,7 +14,7 @@ $billboard-default: (
 	bg-image        : "",
 	bg-color        : color(greyscale, grey-5),
 	overlay-color   : color(brand, primary),
-	overlay-opacity : 2.4em,
+	overlay-opacity : 0.6,
 	color           : color(greyscale, white),
 	wrapper-width   : breakpoint(break-2)
 );
@@ -90,7 +90,7 @@ $billboard-default: (
 
 } // component(billboard)
 
-@include component(app-header) {
+@include component(header) {
 	@include modifier(absolute) {
 		& + #main {
 			@include component(billboard) {

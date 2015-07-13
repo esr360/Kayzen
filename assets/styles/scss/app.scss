@@ -1,7 +1,7 @@
 /******************************************************************
 
-Site Name: Kayzen Wordpress Theme
-Author: TBD
+Site Name: Kayzen
+Author: @ESR360
 
 ******************************************************************/
 
@@ -19,18 +19,15 @@ $asset-path : "../..";
 // Skeleton
 //-----------------------------------------------------------------
 
-// Configuration
 @import "skeleton/normalize";
-@import "skeleton/color-palettes";
 @import "skeleton/utilities";
-
-// Styles
 @import "skeleton/grid";
+@import "skeleton/color-palettes";
+@import "skeleton/tools";
+@import "skeleton/typography";
 @import "skeleton/base";
 @import "skeleton/helpers";
 @import "skeleton/print";
-@import "skeleton/tools";
-@import "skeleton/typography";
 
 //-----------------------------------------------------------------
 // Elements

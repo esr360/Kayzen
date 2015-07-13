@@ -45,7 +45,7 @@
 	}
 
 	@include modifier(secondary) {
-		background: color(brand, secondary);
+		background: color(brand, primary);
 		padding: 8em 0;
 		> .container {
 			position: relative;
