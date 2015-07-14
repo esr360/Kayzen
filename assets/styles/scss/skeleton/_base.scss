@@ -2,113 +2,122 @@
 // Base
 //=================================================================
 
+@mixin base($config: ()) {
+
 //-----------------------------------------------------------------
-// Theming
+// Config
 //-----------------------------------------------------------------
 
-$background-color               : color(greyscale, grey-1) !default;
-
-$base-margin                    : 2rem !default;
-$base-line-height               : 1.4 !default;
-$base-radius                    : 0.4em !default;
-$oval-radius                    : 1.5em !default;
-$base-transition                : 0.4s !default;
+	$config: map-merge((
+		background-color : color(greyscale, grey-1),
+		base-margin      : 2rem,
+		base-line-height : 1.4,
+		base-radius      : 0.4em,
+		oval-radius      : 1.5em,
+		base-transition  : 0.4s
+	), $config);
 
 //-----------------------------------------------------------------
 // General
 //-----------------------------------------------------------------
-
-html, body {
-	padding: 0;
-	margin: 0;
-    height: 100%;
-}
-
-html {
-    overflow-x: hidden;
-}
-
-body {
-    line-height: $base-line-height;
-    font-family: typography(typefaces, primary);
-    color: typography(colors, base);
-	background-color: $background-color;
-    font-size: typography(sizes, base);
-}
+	
+	html, body {
+		padding: 0;
+		margin: 0;
+	    height: 100%;
+	}
+	
+	html {
+	    overflow-x: hidden;
+	}
+	
+	body {
+	    line-height: map-get($config, base-line-height);
+	    font-family: typography(typefaces, primary);
+	    color: typography(colors, base);
+		background-color: map-get($config, background-color);
+	    font-size: typography(sizes, base);
+	}
 
 //-----------------------------------------------------------------
 // Structure
 //-----------------------------------------------------------------
+	
+	@include component(container) {
+	
+	    @include core {
+	        width: $base-width;
+	        max-width: $max-width;
+	        margin: 0 auto;
+			position: relative;
+	    }
+	
+	    @include modifier(small) {
+	        width: $small-width;
+	    }
+	
+	    @include modifier(full) {
+	        width: $small-width;
+	        width: $full-width;
+	        max-width: $full-width
+	    }
+	
+	} // component(container)
 
-@include component(container) {
-
-    @include core {
-        width: $base-width;
-        max-width: $max-width;
-        margin: 0 auto;
-		position: relative;
-    }
-
-    @include modifier(small) {
-        width: $small-width;
-    }
-
-    @include modifier(full) {
-        width: $small-width;
-        width: $full-width;
-        max-width: $full-width
-    }
-
-} // component(container)
-
-.wrapper {
-    padding: 0 $gutter;
-}
-
-#main,
-#site-content {
-    height: 100%;
-}
-
-.site-overlay {
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    cursor: pointer;
-    background: rgba(0,0,0,0.4);
-    transform: translateZ(0);
-    transition: 0.4s;
-    z-index: 10;
-    visibility: hidden;
-    opacity: 0;
-    &.visible {
-        visibility: visible;
-        opacity: 1;
-    }
-}
+	.wrapper {
+	    padding: 0 $gutter;
+	}
+	
+	#main,
+	#site-content {
+	    height: 100%;
+	}
+	
+	.site-overlay {
+	    position: fixed;
+	    top: 0;
+	    right: 0;
+	    bottom: 0;
+	    left: 0;
+	    cursor: pointer;
+	    background: rgba(0,0,0,0.4);
+	    transform: translateZ(0);
+	    transition: 0.4s;
+	    z-index: 10;
+	    visibility: hidden;
+	    opacity: 0;
+	    &.visible {
+	        visibility: visible;
+	        opacity: 1;
+	    }
+	}
 
 //-----------------------------------------------------------------
 // Layout
 //-----------------------------------------------------------------
+	
+	* {
+	    &, &:before, &:after {
+	        box-sizing: border-box;
+	    }
+	}
+	
+	h1, h2, h3, h4, h5, h6, 
+	p, ul, ol, 
+	fieldset, legend, figure, table, 
+	pre, hr {
+	    margin: map-get($config, base-margin) 0;
+	    @include vertical-rhythm;
+	}
+	
+	::selection {
+		background-color: color(brand, primary);
+		color: color(greyscale, white);
+		text-shadow: none;
+	}
 
-* {
-    &, &:before, &:after {
-        box-sizing: border-box;
-    }
-}
+} // base
 
-h1, h2, h3, h4, h5, h6, 
-p, ul, ol, 
-fieldset, legend, figure, table, 
-pre, hr {
-    margin: $base-margin 0;
-    @include vertical-rhythm;
-}
-
-::selection {
-	background-color: color(brand, primary);
-	color: color(greyscale, white);
-	text-shadow: none;
-}
+@include base(
+	if(variable-exists(base-custom), $base-custom, ())
+);

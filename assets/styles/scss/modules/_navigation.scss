@@ -1,199 +1,206 @@
 //=================================================================
-// Main Navigation
+// Navigation
 //=================================================================
-	
+
+@mixin navigation($config: ()) {
+
 //-----------------------------------------------------------------
 // Config
 //-----------------------------------------------------------------
 
-$navigation-default: (
-	text-align             : right,
-	margin-top             : 0,
-	no-icons               : false,
-	dropdown-icon          : "\f107",
-	item-gutter            : 0.5em,
-	item-padding           : 0.5em 0.75em,
-	link-color             : color(brand, primary),
-	style                  : default
-);
-
-//-----------------------------------------------------------------
-// Utilities
-//-----------------------------------------------------------------
-
-@if global-variable-exists(navigation-custom) {
-	$navigation-default: map-merge($navigation-default, $navigation-custom);
-}
-
-@function navigation($key) {
-    @return map-get($navigation-default, $key);
-}
+	$config: map-merge((
+		text-align             : right,
+		item-gutter            : 0.5em,
+		item-padding           : 0.5em 0.75em,
+		link-color             : typography(colors, base),
+		link-hover-color       : color(brand, primary),
+		no-icons               : false,
+		dropdown-icon          : "\f107",
+		style                  : default
+	), $config);
 
 //-----------------------------------------------------------------
 // Component
 //-----------------------------------------------------------------
 
-.navigation {
+	@include component(navigation) {
 
 // Core Styles
 //-----------------------------------------------------------------
+	
+		@include core {
+			
+			// cache selector as global variable
+			$navigation: & !global;
+			
+		    // all levels
+		    li {    
+		        a {
+		            display: block;
+		            padding: map-get($config, item-padding);
+		            color: map-get($config, link-color);
+		            &:hover {
+		                text-decoration: none;
+		            }
+		            // icon
+		            .fa {
+		                margin-right: 0.5em;
+		            }
+		        }       
+		        // for child menus 
+		        &:hover {
+		            > ul {
+		                opacity: 1;
+		                visibility: visible;
+		            }
+		        }
+		    }
+		
+		    // parent level only
+		    > ul {
+		
+		        @extend %list-reset;
+		        display: none; // hide by default for mobiles
+		        vertical-align: middle;
+		
+		        > li {
+		
+		            transition: $base-transition;
+		
+		            // add gap between items
+		            margin-left: map-get($config, item-gutter);
+		            &:first-child {
+		                margin-left: 0;
+		            }
+		
+		            > a {
+		                // add icon if item has child menu
+		                &:not(:only-child) {
+		                    &:after {
+		                        content: map-get($config, dropdown-icon);
+		                        font-family: FontAwesome;
+		                        margin-left: 0.5em;
+		                    }
+		                }
+		            }
+		
+		            &:hover {
+		                > a {
+		                    color: map-get($config, item-hover-color);
+		                    // if item has child menu
+		                    // &:not(:only-child) {}
+		                }
+		            }
+		
+		            &.active {
+		                > a {
+		                    color: map-get($config, link-active-color);
+		                }
+		                &:hover {
+							// if item is active and hovered
+		                    // > a {}
+		                }
+		            }
+		
+		        } // > li
+		
+		    } // > ul
+			
+			// Conditionals
 
-    // all items
-    li {    
-        a {
-            display: block;
-            padding: navigation(a-padding);
-            color: navigation(a-color);
-            &:hover {
-                text-decoration: none;
-            }
-            // icon
-            .fa {
-                margin-right: 0.5em;
-            }
-        }       
-        // for child menus 
-        &:hover {
-            > ul {
-                opacity: 1;
-                visibility: visible;
-            }
-        }
-    }
+		    @if map-get($config, no-icons) {
+		        @include extend(no-icons);
+		    }
+			
+		    @if map-get($config, style-1) {
+		        @include extend(style-1);
+		    }
+		
+			// In Side-Header
+	
+		    [class*="header-side"] & {
+		
+		        ul {
+		            display: block;
+		            visibility: visible;
+		            opacity: 1;
+		            position: relative;
+		            left: 0;
+		        }
+		
+		        li {
+		            display: block;
+		            margin-left: 0;            
+		            a {
+		                position: relative;
+		                &, &:last-child {
+		                    border-bottom: navigation(a-border-bottom);
+		                }
+		                &:not(:only-child) {
+		                    &:after {
+		                        content: navigation(dropdown-icon);
+		                        right: 1.5em;
+		                        @include vertical-center(absolute);
+		                    }
+		                }
+		            }
+		            // dropdown nav
+		            ul {
+		                // 2nd level and below
+		                ul {
+		                    font-size: font-size(size-2);
+		                    li {
+		                        a {
+		                            &:before {
+		                                font-family: FontAwesome;
+		                                content: "\f105";
+		                                margin-right: 0.5em;
+		                            }
+		                        }
+		                    }
+		                    // 3rd level and below
+		                    ul {
+		                        padding-left: 1rem;
+		                    }
+		                }
+		            }
+		        }
+		
+		    } // in side-header
 
-    // first level nav only
-    > ul {
+			// Larger Resolutions
+			
+		    @media (min-width: breakpoint(break-3)) {
+		        text-align: map-get($config, text-align);
+		        > ul {
+		            display: inline-block;
+		            white-space: nowrap;
+		            > li {
+		                display: inline-block;
+		                position: relative;
+		            }
+		        }
+		    }
+		
+		} // Core
 
-        @extend %list-reset;
-        display: none; // hide by default for mobiles
-        vertical-align: middle;
-
-        > li {
-
-            @import "dropdown-nav"; // load the dropdown nav
-
-            transition: $base-transition;
-
-            // add gap between items
-            margin-left: navigation(li-spacing);
-            &:first-child {
-                margin-left: 0;
-            }
-
-            > a {
-                // add icon if item has child menu
-                &:not(:only-child) {
-                    &:after {
-                        content: navigation(dropdown-icon);
-                        font-family: FontAwesome;
-                        margin-left: 0.5em;
-                    }
-                }
-            }
-
-            &:hover {
-                > a {
-                    color: navigation(a-hover-color);
-                    background: navigation(a-hover-bg-color);
-                    // if item has child menu
-                    // &:not(:only-child) {}
-                }
-            }
-
-            &.active {
-                > a {
-                    color: navigation(a-active-color);
-                    background: navigation(a-active-bg-color);
-                }
-                &:hover {
-                    > a {
-                        background: navigation(a-hover-bg-color);
-                    }
-                }
-            }
-
-        } // end > li
-
-    } // end > ul
-
-    &.no-icons {
-        .fa {
-            display: none;
-        }
-    }
-
-    @if navigation(no-icons) == true {
-        @extend .no-icons;
-    }
-
+// Modifiers
 //-----------------------------------------------------------------
-// Side Navigation
-//-----------------------------------------------------------------
+	
+		@include modifier(no-icons) {
+			.fa {
+				display: none;
+			}
+		}
+		
+		@include modifier(style-1) {
+			
+		}
+	
+	} // component
 
-    [class*="header-side"] & {
+} // header
 
-        ul {
-            display: block;
-            visibility: visible;
-            opacity: 1;
-            position: relative;
-            left: 0;
-        }
-
-        li {
-            display: block;
-            margin-left: 0;            
-            a {
-                position: relative;
-                &, &:last-child {
-                    border-bottom: navigation(a-border-bottom);
-                }
-                &:not(:only-child) {
-                    &:after {
-                        content: navigation(dropdown-icon);
-                        right: 1.5em;
-                        @include vertical-center(absolute);
-                    }
-                }
-            }
-            // dropdown nav
-            ul {
-                // 2nd level and below
-                ul {
-                    font-size: font-size(size-2);
-                    li {
-                        a {
-                            &:before {
-                                font-family: FontAwesome;
-                                content: "\f105";
-                                margin-right: 0.5em;
-                            }
-                        }
-                    }
-                    // 3rd level and below
-                    ul {
-                        padding-left: 1rem;
-                    }
-                }
-            }
-        }
-
-    } // end [class*="header-side"] &
-
-//-----------------------------------------------------------------
-// Larger Resolutions
-//-----------------------------------------------------------------
-
-    @media (min-width: breakpoint(break-3)) {
-        text-align: navigation(text-align);
-        > ul {
-            display: inline-block;
-            white-space: nowrap;
-            > li {
-                display: inline-block;
-                position: relative;
-            }
-        }
-    }
-
-} // end .app-nav
+@include navigation(
+	if(variable-exists(navigation-custom), $navigation-custom, ())
+);

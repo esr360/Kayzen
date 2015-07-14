@@ -23,7 +23,6 @@
 
 // Nested Component
 // Nest components for appropriate cascading
-
 @mixin nested-component($component: $component, $root: false, $type: flex) {
 	@if $type == static {
 		@if $root {

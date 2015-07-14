@@ -54,7 +54,7 @@
 } // palettes
 
 @include palettes(
-	if(variable-exists(palettes), $palettes, ())
+	if(variable-exists(palettes-custom), $palettes-custom, ())
 );
 
 //-----------------------------------------------------------------

@@ -36,11 +36,11 @@
 	
 			// Conditionals
 	
-			@if map-get($config, bar) == true {
+			@if map-get($config, bar) {
 				@include extend(bar);
 			}
 	
-			@if map-get($config, absolute) == true {
+			@if map-get($config, absolute) {
 				@include extend(absolute);
 			}
 	
@@ -54,7 +54,7 @@
 				}
 			}
 	
-			@if map-get($config, dark) == true {
+			@if map-get($config, dark) {
 				@include extend(dark);
 			}
 	
@@ -121,5 +121,5 @@
 } // header
 
 @include header(
-	if(variable-exists(header), $header, ())
+	if(variable-exists(header-custom), $header-custom, ())
 );
