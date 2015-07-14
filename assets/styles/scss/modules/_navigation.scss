@@ -1,51 +1,20 @@
 //=================================================================
 // Main Navigation
 //=================================================================
-
+	
 //-----------------------------------------------------------------
 // Config
 //-----------------------------------------------------------------
 
 $navigation-default: (
-	
 	text-align             : right,
 	margin-top             : 0,
-	dropdown-icon          : "\f107",
 	no-icons               : false,
-	
-	no-icon                : false,
-	a-color                : color(brand, primary),
-	
-	a-border-color         : transparent,
-	a-border-left          : 1px solid transparent,
-	a-border-right         : 1px solid transparent,
-	a-border-top           : 1px solid transparent,
-	a-border-bottom        : 1px solid transparent,
-	
-	a-hover-color          : color(greyscale, white),
-	a-hover-bg-color       : color(brand, primary),
-	a-hover-border-color   : transparent,
-	
-	a-active-color         : color(greyscale, white),
-	a-active-bg-color      : color(brand, primary),
-	a-active-border-color  : transparent,
-	
-	a-has-child-color      : color(greyscale, white),
-	a-has-child-bg         : color(brand, primary),
-	a-has-child-border     : color(brand, primary),
-	
-	a-radius               : 0,
-	a-spacing              : 0.5em,
-	a-padding              : 0.5em 0.75em,
-		
-	li-border-color        : transparent,
-	li-border-left         : 0px solid transparent,
-	li-border-right        : 0px solid transparent,
-	li-border-top          : 0px solid transparent,
-	li-border-bottom       : 0px solid transparent,
-	li-hover-border-color  : transparent,
-	li-active-border-color : transparent
-	
+	dropdown-icon          : "\f107",
+	item-gutter            : 0.5em,
+	item-padding           : 0.5em 0.75em,
+	link-color             : color(brand, primary),
+	style                  : default
 );
 
 //-----------------------------------------------------------------
@@ -106,27 +75,13 @@ $navigation-default: (
             transition: $base-transition;
 
             // add gap between items
-            margin-left: navigation(a-spacing);
+            margin-left: navigation(li-spacing);
             &:first-child {
                 margin-left: 0;
             }
 
-            // li borders
-            border-color: navigation(li-border-color);
-            border-left: navigation(li-border-left);
-            border-right: navigation(li-border-right);
-            border-top: navigation(li-border-top);
-            border-bottom: navigation(li-border-bottom);
-
             > a {
-                background: navigation(a-bg-color);
-                border-color: navigation(a-border-color);
-                border-left: navigation(a-border-left);
-                border-right: navigation(a-border-right);
-                border-top: navigation(a-border-top);
-                border-bottom: navigation(a-border-bottom);
-                border-radius: navigation(a-radius);
-                // add icon if item has dropdown menu
+                // add icon if item has child menu
                 &:not(:only-child) {
                     &:after {
                         content: navigation(dropdown-icon);
@@ -137,30 +92,20 @@ $navigation-default: (
             }
 
             &:hover {
-                border-color: navigation(li-hover-border-color);
                 > a {
                     color: navigation(a-hover-color);
-                    border-color: navigation(a-hover-border-color);
                     background: navigation(a-hover-bg-color);
-                    // if item has dropdown menu
-                    &:not(:only-child) {
-                        color: navigation(a-has-child-color);
-                        background: navigation(a-has-child-bg);
-                        border-color: navigation(a-has-child-border);
-                        border-bottom-color: transparent;
-                    }
+                    // if item has child menu
+                    // &:not(:only-child) {}
                 }
             }
 
             &.active {
-                border-color: navigation(li-active-border-color);
                 > a {
                     color: navigation(a-active-color);
                     background: navigation(a-active-bg-color);
-                    border-color: navigation(a-active-border-color);
                 }
                 &:hover {
-                    border-color: navigation(li-hover-border-color);
                     > a {
                         background: navigation(a-hover-bg-color);
                     }

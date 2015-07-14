@@ -2936,7 +2936,6 @@ https://github.com/esr360/K-Tooltips
 
 .navigation li a {
   display: block;
-  padding: 0.5em 0.75em;
   color: #ffffff;
 }
 .navigation li a:hover {
@@ -2955,12 +2954,6 @@ https://github.com/esr360/K-Tooltips
 }
 .navigation > ul > li {
   transition: 0.4s;
-  margin-left: 0.5em;
-  border-color: transparent;
-  border-left: 0px solid transparent;
-  border-right: 0px solid transparent;
-  border-top: 0px solid transparent;
-  border-bottom: 0px solid transparent;
 }
 .navigation > ul > li ul {
   min-width: 175px;
@@ -3017,43 +3010,16 @@ https://github.com/esr360/K-Tooltips
 .navigation > ul > li:first-child {
   margin-left: 0;
 }
-.navigation > ul > li > a {
-  border-color: transparent;
-  border-left: 1px solid transparent;
-  border-right: 1px solid transparent;
-  border-top: 1px solid transparent;
-  border-bottom: 1px solid transparent;
-  border-radius: 0;
-}
 .navigation > ul > li > a:not(:only-child):after {
   content: "";
   font-family: FontAwesome;
   margin-left: 0.5em;
 }
-.navigation > ul > li:hover {
-  border-color: transparent;
-}
 .navigation > ul > li:hover > a {
-  color: #ffffff;
-  border-color: #ffffff;
   background: transparent;
-}
-.navigation > ul > li:hover > a:not(:only-child) {
-  color: #9B58B5;
-  background: #ffffff;
-  border-color: #ffffff;
-  border-bottom-color: transparent;
-}
-.navigation > ul > li.active {
-  border-color: transparent;
 }
 .navigation > ul > li.active > a {
-  color: #ffffff;
   background: transparent;
-  border-color: #ffffff;
-}
-.navigation > ul > li.active:hover {
-  border-color: transparent;
 }
 .navigation > ul > li.active:hover > a {
   background: transparent;
@@ -3074,9 +3040,6 @@ https://github.com/esr360/K-Tooltips
 }
 [class*="header-side"] .navigation li a {
   position: relative;
-}
-[class*="header-side"] .navigation li a, [class*="header-side"] .navigation li a:last-child {
-  border-bottom: 1px solid transparent;
 }
 [class*="header-side"] .navigation li a:not(:only-child):after {
   content: "";
@@ -3292,7 +3255,7 @@ https://github.com/esr360/K-Tooltips
 }
 [class*="billboard-"][class*="-full-screen"], [class*="billboard-"], .billboard {
   height: 90%;
-  height: calc(100% - 100px);
+  height: calc(100% - header(height));
 }
 
 [class*="header-"][class*="-absolute"] + #main [class*="billboard-"][class*="-full-screen"], [class*="header-"] + #main [class*="billboard-"][class*="-full-screen"], .header + #main [class*="billboard-"][class*="-full-screen"], [class*="header-"][class*="-absolute"] + #main [class*="billboard-"], [class*="header-"] + #main [class*="billboard-"], .header + #main [class*="billboard-"], [class*="header-"][class*="-absolute"] + #main .billboard, [class*="header-"] + #main .billboard, .header + #main .billboard {
