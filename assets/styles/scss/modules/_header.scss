@@ -15,7 +15,7 @@
 		bar                  : false,
 		dark                 : false,
 		top-position         : 0,
-		bg-color             : $background-color,
+		bg-color             : base(background-color),
 		dark-color           : color(greyscale, grey-5),
 		height               : 100px,
 		side-width           : 350px

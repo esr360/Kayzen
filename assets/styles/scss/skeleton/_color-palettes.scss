@@ -2,9 +2,11 @@
 // Color Palettes
 //=================================================================
 
-@mixin palettes($config: ()) {
+@import "skeleton/sassy-maps";
+
+@mixin palettes($palettes: ()) {
 	
-	$config: map-merge((
+	$palettes: map-merge-deep((
 		greyscale: (
 			white       : #ffffff,
 			grey-1      : #f8f8f8,
@@ -47,14 +49,12 @@
 			reddit      : #0D7CCD,
 			google-plus : #dd4b39		
 		)
-	), $config);
-	
-	$palettes-config: $config !global;
+	), $palettes) !global;
 
 } // palettes
 
 @include palettes(
-	if(variable-exists(palettes-custom), $palettes-custom, ())
+	if(variable-exists(palettes), $palettes, ())
 );
 
 //-----------------------------------------------------------------
@@ -62,7 +62,7 @@
 //-----------------------------------------------------------------
 
 @function palettes-default($key) {
-    @return map-get($palettes-config, $key);
+    @return map-get($palettes, $key);
 }
 
 @function color($group, $key) {

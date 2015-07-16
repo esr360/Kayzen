@@ -65,7 +65,7 @@
 		
 		        > li {
 		
-		            transition: $base-transition;
+		            transition: base(transition);
 		
 		            // add gap between items
 		            margin-left: map-get($config, item-gutter);

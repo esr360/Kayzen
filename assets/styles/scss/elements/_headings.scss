@@ -14,7 +14,7 @@
 	@include core {
 		line-height: 1;
 		font-size: typography(sizes, base);
-		transition: $base-transition;
+		transition: base(transition);
 	}
 
 // Sizes
@@ -141,7 +141,7 @@
 
 	@include core {
 
-		margin-bottom: $base-margin;
+		margin-bottom: base(margin);
 		font-size: 1rem;
 		position: relative;
 		background-size: cover;
@@ -187,12 +187,12 @@
 	}
 
 	@include modifier(large) {
-		margin-bottom: ($base-margin * 2);
+		margin-bottom: (base(margin) * 2);
 		@include vertical-rhythm(bottom);
 	}
 
 	@include modifier(xlarge) {
-		margin-bottom: ($base-margin * 3);
+		margin-bottom: (base(margin) * 3);
 		@include vertical-rhythm(bottom);
 	}
 

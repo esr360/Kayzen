@@ -14,7 +14,7 @@
 	@include core {
 
 		padding: 2.5em 1em;
-		transition: $base-transition;
+		transition: base(transition);
 
 		&:hover {
 			.w-icon {
@@ -28,7 +28,7 @@
 
 		@at-root .w-icon {
 			color: color(greyscale, grey-3);
-			margin-bottom: $base-margin;
+			margin-bottom: base(margin);
 			&.w-inline {
 				margin-bottom: 0;
 				margin-right: 0.5rem;
@@ -63,7 +63,7 @@
 
 	@include modifier(block) {
 		background: color(greyscale, white);
-		transition: $base-transition;	
+		transition: base(transition);	
 		&:hover {
 			background: color(brand, primary);			
 			&, .w-icon {
@@ -84,10 +84,10 @@
 
 	@include modifier(stacked) {
 		padding: 0;
-		margin-bottom: $base-margin;
+		margin-bottom: base(margin);
 		@include vertical-rhythm(bottom);
 		p {
-			margin-top: ($base-margin / 2);
+			margin-top: (base(margin) / 2);
 		}
 	}
 
@@ -128,7 +128,7 @@
 @include component(widgets) {
 
 	@include modifier(large) {
-		margin-bottom: ($base-margin * 2);
+		margin-bottom: (base(margin) * 2);
 		@include vertical-rhythm(bottom);
 	}
 

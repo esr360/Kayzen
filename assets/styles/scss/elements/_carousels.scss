@@ -19,7 +19,7 @@
 //-----------------------------------------------------------------
 
     @include modifier(scale) {
-        margin-top: $base-margin;
+        margin-top: base(margin);
         @include modifier(1) {
             .slick-center {
                 transform: scale(1.1);
@@ -195,7 +195,7 @@
     min-height: 1px;
     display: none;  
     position: relative;
-    transition: $base-transition;
+    transition: base(transition);
     [dir="rtl"] & {
         float: right;
     }

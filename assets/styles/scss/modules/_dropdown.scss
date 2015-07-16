@@ -34,7 +34,7 @@
 				@extend %list-reset;
 				min-width: map-get($config, width);
 				text-align: map-get($config, text-align);
-				transition: $base-transition;
+				transition: base(transition);
 				position: absolute;
 				z-index: 5;
 				opacity: 0;

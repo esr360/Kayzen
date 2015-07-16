@@ -9,12 +9,15 @@
 //-----------------------------------------------------------------
 
 	$config: map-merge((
-		background-color : color(greyscale, grey-1),
-		base-margin      : 2rem,
-		base-line-height : 1.4,
-		base-radius      : 0.4em,
+		background       : color(greyscale, grey-1),
+		font-family      : typography(typefaces, primary),
+		text-color       : typography(colors, base),
+		font-size        : typography(sizes, base),
+		margin           : 2rem,
+		line-height      : 1.4,
+		radius           : 0.4em,
 		oval-radius      : 1.5em,
-		base-transition  : 0.4s
+		transition       : 0.4s
 	), $config);
 
 //-----------------------------------------------------------------
@@ -32,11 +35,11 @@
 	}
 	
 	body {
-	    line-height: map-get($config, base-line-height);
-	    font-family: typography(typefaces, primary);
-	    color: typography(colors, base);
-		background-color: map-get($config, background-color);
-	    font-size: typography(sizes, base);
+		background: map-get($config, background-color);
+	    font-family: map-get($config, font-family);
+	    color: map-get($config, text-color);
+	    font-size: map-get($config, font-size);
+	    line-height: map-get($config, line-height);
 	}
 
 //-----------------------------------------------------------------
@@ -82,7 +85,7 @@
 	    cursor: pointer;
 	    background: rgba(0,0,0,0.4);
 	    transform: translateZ(0);
-	    transition: 0.4s;
+	    transition: map-get($config, transition);
 	    z-index: 10;
 	    visibility: hidden;
 	    opacity: 0;
@@ -106,7 +109,7 @@
 	p, ul, ol, 
 	fieldset, legend, figure, table, 
 	pre, hr {
-	    margin: map-get($config, base-margin) 0;
+	    margin: map-get($config, margin) 0;
 	    @include vertical-rhythm;
 	}
 	
@@ -115,9 +118,19 @@
 		color: color(greyscale, white);
 		text-shadow: none;
 	}
+	
+	$base-config: $config !global;
 
 } // base
 
 @include base(
 	if(variable-exists(base-custom), $base-custom, ())
 );
+
+//-----------------------------------------------------------------
+// Utilities
+//-----------------------------------------------------------------
+
+@function base($key) {
+    @return map-get($base-config, $key);
+}

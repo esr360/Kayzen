@@ -20,6 +20,7 @@ $asset-path : "../..";
 //-----------------------------------------------------------------
 
 @import "skeleton/normalize";
+@import "skeleton/sassy-maps";
 @import "skeleton/utilities";
 @import "skeleton/grid";
 @import "skeleton/color-palettes";

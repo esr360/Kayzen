@@ -100,7 +100,7 @@
 
 	@include core {
 		position: relative;
-		transition: $base-transition;
+		transition: base(transition);
 		padding: 7%;
 		background-color: color(greyscale, white);	
 		background-size: cover;
