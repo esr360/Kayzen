@@ -2994,22 +2994,6 @@ progress.progress-alt::-moz-progress-bar {
   margin-left: 0.4em;
 }
 
-.breadcrumb {
-  font-size: 0.9em;
-  margin: 2rem 0;
-}
-.breadcrumb li {
-  display: inline;
-}
-.breadcrumb li:not(:last-child) {
-  margin-right: 0.2em;
-}
-.breadcrumb li:not(:last-child):after {
-  content: "\f105";
-  font-family: FontAwesome;
-  margin-left: 0.4em;
-}
-
 .flyout-trigger {
   position: absolute;
   top: 1rem;
