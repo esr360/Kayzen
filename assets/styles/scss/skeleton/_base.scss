@@ -2,13 +2,13 @@
 // Base
 //=================================================================
 
-@mixin base($config: ()) {
+@mixin base($base: ()) {
 
 //-----------------------------------------------------------------
 // Config
 //-----------------------------------------------------------------
 
-	$config: map-merge((
+	$base: map-merge((
 		background       : color(greyscale, grey-1),
 		font-family      : typography(typefaces, primary),
 		text-color       : typography(colors, base),
@@ -18,7 +18,7 @@
 		radius           : 0.4em,
 		oval-radius      : 1.5em,
 		transition       : 0.4s
-	), $config);
+	), $base);
 
 //-----------------------------------------------------------------
 // General
@@ -35,11 +35,11 @@
 	}
 	
 	body {
-		background: map-get($config, background-color);
-	    font-family: map-get($config, font-family);
-	    color: map-get($config, text-color);
-	    font-size: map-get($config, font-size);
-	    line-height: map-get($config, line-height);
+		background: map-get($base, background-color);
+	    font-family: map-get($base, font-family);
+	    color: map-get($base, text-color);
+	    font-size: map-get($base, font-size);
+	    line-height: map-get($base, line-height);
 	}
 
 //-----------------------------------------------------------------
@@ -49,26 +49,26 @@
 	@include component(container) {
 	
 	    @include core {
-	        width: $base-width;
-	        max-width: $max-width;
+	        width: grid-option(base-width);
+	        max-width: grid-option(max-width);
 	        margin: 0 auto;
 			position: relative;
 	    }
 	
 	    @include modifier(small) {
-	        width: $small-width;
+	        width: grid-option(smallx-width);
 	    }
 	
 	    @include modifier(full) {
-	        width: $small-width;
-	        width: $full-width;
-	        max-width: $full-width
+	        width: grid-option(small-width);
+	        width: grid-option(full-width);
+	        max-width: grid-option(full-width)
 	    }
 	
 	} // component(container)
 
 	.wrapper {
-	    padding: 0 $gutter;
+	    padding: 0 grid-option(gutter);
 	}
 	
 	#main,
@@ -85,7 +85,7 @@
 	    cursor: pointer;
 	    background: rgba(0,0,0,0.4);
 	    transform: translateZ(0);
-	    transition: map-get($config, transition);
+	    transition: map-get($base, transition);
 	    z-index: 10;
 	    visibility: hidden;
 	    opacity: 0;
@@ -109,7 +109,7 @@
 	p, ul, ol, 
 	fieldset, legend, figure, table, 
 	pre, hr {
-	    margin: map-get($config, margin) 0;
+	    margin: map-get($base, margin) 0;
 	    @include vertical-rhythm;
 	}
 	
@@ -119,12 +119,12 @@
 		text-shadow: none;
 	}
 	
-	$base-config: $config !global;
+	$base-config: $base !global;
 
 } // base
 
 @include base(
-	if(variable-exists(base-custom), $base-custom, ())
+	if(variable-exists(base), $base, ())
 );
 
 //-----------------------------------------------------------------

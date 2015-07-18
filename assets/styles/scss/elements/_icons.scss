@@ -55,7 +55,7 @@ button .fa {
 		.fa {
 			font-size: 0.9em;
 			@include vertical-center(absolute);
-			@include horizontal-center;
+			@extend %horizontal-center;
 		}
 
 	} // core

@@ -43,7 +43,7 @@
             font-size: font-size(size-7);
             color: color(greyscale, grey-2);
             //animation: spin 1s linear infinite;
-            @include horizontal-center;
+            @extend %horizontal-center;
         }
         .slick-list {
             overflow: visible;

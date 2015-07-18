@@ -2,8 +2,6 @@
 // Color Palettes
 //=================================================================
 
-@import "skeleton/sassy-maps";
-
 @mixin palettes($palettes: ()) {
 	
 	$palettes: map-merge-deep((

@@ -13,116 +13,72 @@ http://github.com/esr360/Kayzen-GS/
 // Options
 //-----------------------------------------------------------------
 
-@mixin grid($config: ()) {
+@mixin grid($grid: ()) {
 	
-	$config: map-merge((
+	$grid: map-merge-deep((
 		options: (
-			old-ie : true,
-			responsive : true,
-			mobile-first : false,
+			base-width      : 1200px,
+			max-width       : 90%,
+			small-width     : 940px,
+			full-width      : 100%,
+			columns         : 12,
+			gutter          : 3%,
+			col-collapse    : 940px,
+			row-namespace   : "row",
+			col-namespace   : "span"	
+		),
+		settings: (
+			old-ie          : true,
+			responsive      : false,
+			mobile-first    : false,
 			column-stacking : true,
-			width-override : true,
-			flow-columns : true,
-			magic-columns : true,
-			block-columns : true,
-			row-namespace : "row",
-			col-namespace : "col"	
+			width-override  : true,
+			flow-columns    : true,
+			magic-columns   : true,
+			block-columns   : true
 		),
 		breakpoints: (
-			break-0 : 0px,
-			break-1 : 460px,
-			break-2 : 720px,
-			break-3 : 940px,
-			break-4 : 1200px,
-			break-5 : 1400px
+			break-0         : 0px,
+			break-1         : 460px,
+			break-2         : 720px,
+			break-3         : 940px,
+			break-4         : 1200px,
+			break-5         : 1400px
 		),
 		fractions: (
-			full : (1, 1),
-			half : (1, 2),
-			third : (1, 3),
-			quarter : (1, 4),
-			sixth : (1, 6)
+			full            : (1, 1),
+			half            : (1, 2),
+			third           : (1, 3),
+			quarter         : (1, 4),
+			sixth           : (1, 6)
 		)
-	), $config);
+	), $grid) !global;
 	
+} // grid
+
+@include grid(
+	if(variable-exists(grid), $grid, ())
+);
+
+//-----------------------------------------------------------------
+// Utilities
+//-----------------------------------------------------------------
+
+@function grid-option($option) {
+    @return map-get(map-get($grid, options), $option);
 }
 
-// Support Internet Explorer 6 & 7? (regular columns only)
-$old-ie                         : true !default;
-
-// Enable Responsiveness?
-$responsive                     : true !default;
-
-// Enable mobile-first mode?
-$mobile-first                   : false !default;
-
-// Enable custom column stacking?
-$column-stacking                : true !default;
-
-// Enable custom width overrides?
-$width-override                 : true !default;
-
-// Generate Flow Columns?
-$flow-columns                   : true !default;
-
-// Generate Magic Columns?
-$magic-columns                  : true !default;
-
-// Generate Block Columns?
-$block-columns                  : true !default;
-
-// Set row namespace
-$row-namespace                  : "row" !default;
-
-// Set column namespace
-$col-namespace                  : "span" !default;
-
-//-----------------------------------------------------------------
-// Skeleton
-//-----------------------------------------------------------------
-
-// Breakpoints
-//-----------------------------------------------------------------
-
-$breakpoints: (
-	break-0                     : 0px,
-	break-1                     : 460px,
-	break-2                     : 720px,
-	break-3                     : 940px,
-	break-4                     : 1200px,
-	break-5                     : 1400px
-) !default;
+@function grid-setting($setting) {
+    @return map-get(map-get($grid, settings), $setting);
+}
 
 @function breakpoint($breakpoint) {
-    @return map-get($breakpoints, $breakpoint);
+    @return map-get(map-get($grid, breakpoints), $breakpoint);
 }
-
-// Fractions
-//-----------------------------------------------------------------
-
-$fractions: (
-	full                        : (1, 1),
-	half                        : (1, 2),
-	third                       : (1, 3),
-	quarter                     : (1, 4),
-	sixth                       : (1, 6)
-) !default;
 
 @function fraction($fraction) {
-    @return map-get($fractions, $fraction);
+    @return map-get(map-get($grid, fractions), $fraction);
 }
-
-// Structyre & Layout
-//-----------------------------------------------------------------
-
-$base-width                     : breakpoint(break-4) !default;
-$max-width                      : 90% !default;
-$small-width                    : breakpoint(break-3) !default;
-$full-width                     : 100% !default;
-
-$columns                        : 12 !default;
-$gutter                         : 3% !default;
-$col-collapse                   : breakpoint(break-3) !default;
 
 //=================================================================
 // Kayzen GS Framework
@@ -130,15 +86,19 @@ $col-collapse                   : breakpoint(break-3) !default;
 
 // Set min/max width for breakpoints
 $scale: null;
-@if $mobile-first {	
+@if grid-option(mobile-first) {	
 	$scale: min; 
 } @else {	
 	$scale: max; 
 }
 
-// Reset $mobile-first to false if $responsive is disabled
-@if $responsive == false {
-	$mobile-first: false;
+// Reset "mobile-first" to false if "responsive" is disabled
+@if grid-setting(responsive) == false {
+	$grid: map-merge-deep((
+		settings: (
+			mobile-first: false
+		)
+	), $grid);
 }
 
 // Column Row
@@ -157,7 +117,7 @@ $scale: null;
 		}
 	}
 	// IE < 8 collapse white-space
-	@if $old-ie {
+	@if grid-setting(old-ie) {
 		*letter-spacing: normal;
 		*word-spacing: -0.43em;
 	}	
@@ -179,8 +139,8 @@ $scale: null;
 }
 
 %flow-row {
-	margin-left: -$gutter;
-	width: 100% + $gutter;
+	margin-left: -grid-option(gutter);
+	width: 100% + grid-option(gutter);
 }
 
 // Single Column
@@ -190,14 +150,14 @@ $scale: null;
 	display: inline-block;
 	vertical-align: top;
 	// IE < 8: fake inline-block
-	@if $old-ie {
+	@if grid-setting(old-ie) {
 		*display: inline;
 		zoom: 1; 
 	}
 }
 
 @mixin gutter {
-	margin-left: $gutter;
+	margin-left: grid-option(gutter);
 	&:first-child {
 		margin-left: 0;
 	}
@@ -205,46 +165,53 @@ $scale: null;
 
 // Column width mixin
 @mixin column-width($span, $columns) {
-	width: ( (100/$columns) * $span) - ( ( ((100 / ((100/$columns) * $span)) - 1) * $gutter ) / ( $columns / $span ) );
+	width: ( (100/$columns) * $span) - ( ( ((100 / ((100/$columns) * $span)) - 1) * grid-option(gutter) ) / ( $columns / $span ) );
 }
 
 // Flow Column width mixin
 @mixin flow-column-width($span, $columns) {
-	width: ((100/$columns) * $span) - $gutter;
+	width: ((100/$columns) * $span) - grid-option(gutter);
 }
 
 // Magic Column width mixin
 @mixin magic-column-width($columns: $columns) {
-	width: (100/$columns) - ( ( ( (100 / (100/$columns) ) - 1) * $gutter ) / $columns );
+	width: (100/$columns) - ( ( ( (100 / (100/$columns) ) - 1) * grid-option(gutter) ) / $columns );
 }
 
 // Magic Column
 //-----------------------------------------------------------------
 
-@mixin magic-column($namespace: $col-namespace, $stack: $col-collapse, $semantic: true) {
+@mixin magic-column($config: ()) {
+	
+	$config: map-merge((
+		namespace : grid-option(col-namespace), 
+		stack     : grid-option(col-collapse), 
+		semantic  : true
+	), $config);
+	
 	&:first-child {
-		@for $i from 1 through $columns {
+		@for $i from 1 through grid-option(columns) {
 			&:nth-last-child(#{$i}) {
-				&, ~ [class*="#{$namespace}"] {
-					@if $mobile-first {	
-						@if $semantic {
+				&, ~ [class*="#{map-get($config, namespace)}"] {
+					@if grid-setting(mobile-first) {	
+						@if map-get($config, semantic) {
 							margin-left: 0;	
 							width: 100%;
 						}	
-						@media (min-width: $stack) {
+						@media (min-width: map-get($config, stack)) {
 							@include magic-column-width($i);
-							@if $semantic {
+							@if map-get($config, semantic) {
 								@include gutter;
 							}
 						}
 					} @else {
 						@include magic-column-width($i);
-						@if $semantic {
+						@if map-get($config, semantic) {
 							@include gutter;
 						}
-						@media (max-width: $stack) {
+						@media (max-width: map-get($config, stack)) {
 							width: 100%;
-							@if $semantic {
+							@if map-get($config, semantic) {
 								margin-left: 0;
 							}
 						}
@@ -262,182 +229,178 @@ $scale: null;
 // Individual Column
 //-----------------------------------------------------------------
 
-[class*="#{$col-namespace}"] {
-	@extend %column;
-	@if $mobile-first {
-		width: 100%;
-	} @else {		
-		@include gutter;
+@include component(#{grid-option(col-namespace)}) {
+	
+	@include core {
+		@extend %column;
+		@if grid-setting(mobile-first) {
+			width: 100%;
+		} @else {		
+			@include gutter;
+		}
 	}
-}
 
 // Default Column Width
 //-----------------------------------------------------------------
-
-@if $mobile-first == false {
-	@for $i from 1 through $columns {
-		.#{$col-namespace}-#{$i} {	
-			@include column-width($i, $columns);
-		}
-	}	
-}
 	
-// Column Row
-//-----------------------------------------------------------------
-
-.#{$row-namespace} {
+	@if grid-setting(mobile-first) == false {
+		@for $i from 1 through grid-option(columns) {
+			@include modifier(#{$i}) {	
+				@include column-width($i, grid-option(columns));
+			}
+		}	
+	}
 	
-	@extend %row;
+} // column
 
 // Column Stacking
 //-----------------------------------------------------------------
-
-	@mixin stack-columns {
-		@if $mobile-first {
-			@for $i from 1 through $columns {
-				.#{$col-namespace}-#{$i} {	
-					@include column-width($i, $columns);
-				}
-			}
-			> [class*="#{$col-namespace}"]:not([class*="break"]) {
-				@include gutter;
-			}
-		} @else {
-			> [class*="#{$col-namespace}"]:not([class*="break"]) {
-				width: 100%;
-				margin-left: 0;
-				display: block;
-			}
-		}		
-	}
-
-	// Default Stacking
-	@if $responsive {
-		@media (#{$scale}-width: $col-collapse) {
-			&:not([class*="break"]):not([class*="flow"]) {
-				@include stack-columns;
+	
+@mixin stack-columns {
+	@if grid-setting(mobile-first) {
+		@for $i from 1 through grid-option(columns) {
+			.#{grid-option(col-namespace)}-#{$i} {	
+				@include column-width($i, grid-option(columns));
 			}
 		}
-	}
+		> [class*="#{grid-option(col-namespace)}"]:not([class*="break"]) {
+			@include gutter;
+		}
+	} @else {
+		> [class*="#{grid-option(col-namespace)}"]:not([class*="break"]) {
+			width: 100%;
+			margin-left: 0;
+			display: block;
+		}
+	}		
+}
 
-	// Custom Stacking
-	@if $responsive {
-		@if $column-stacking {
-			@each $bp, $width in $breakpoints {
-				@media (#{$scale}-width: $width) {
-					&.#{$bp} {
-						@include stack-columns;
-						@if $mobile-first {
-							&.block-row {
-								> [class*="#{$col-namespace}"] {
-									display: table-cell;
+// Column Row
+//-----------------------------------------------------------------
+
+@include component(#{grid-option(row-namespace)}) {
+	
+	@include core {
+	
+		@extend %row;
+	
+		// Default Stacking
+		@if grid-setting(responsive) {
+			@media (#{$scale}-width: grid-setting(responsive)) {
+				&:not([class*="break"]):not([class*="flow"]) {
+					@include stack-columns;
+				}
+			}
+		}
+	
+		// Custom Stacking
+		@if grid-setting(responsive) {
+			@if grid-setting(column-stacking) {
+				@each $bp, $width in map-get($grid, breakpoints) {
+					@media (#{$scale}-width: $width) {
+						&.#{$bp} {
+							@include stack-columns;
+							@if grid-setting(mobile-first) {
+								&.block-row {
+									> [class*="#{grid-option(col-namespace)}"] {
+										display: table-cell;
+									}
 								}
 							}
 						}
 					}
-				}
-			} 	
-		} 
-	}
-
-} // row
+				} 	
+			} 
+		}
+	
+	} // core
 
 // Flow Columns
 //-----------------------------------------------------------------
-
-@if $flow-columns {
-	.flow-row {
-		@extend %flow-row;
-		@for $i from 1 through $columns {
-			.#{$col-namespace}-#{$i} {		
-				@if $mobile-first {
-					width: (100% - $gutter);
-					@media (min-width: $col-collapse) {
-						@include flow-column-width($i, $columns);
+	
+	@if grid-setting(flow-columns) {
+		@include modifier(flow) {
+			@extend %flow-row;
+			@for $i from 1 through grid-option(columns) {
+				.#{grid-option(col-namespace)}-#{$i} {		
+					@if grid-setting(mobile-first) {
+						width: (100% - grid-option(gutter));
+						@media (min-width: grid-option(col-collapse)) {
+							@include flow-column-width($i, grid-option(columns));
+						}
+					} @else {
+						@include flow-column-width($i, grid-option(columns));
 					}
-				} @else {
-					@include flow-column-width($i, $columns);
 				}
 			}
-		}
-		> [class*="#{$col-namespace}"] {
-			margin-left: $gutter;
-			&:not([class*="break"]) {
-				@if $responsive {
-					@if $mobile-first == false {
-						@media (max-width: $col-collapse) {
-							width: (100% - $gutter);
+			> [class*="#{grid-option(col-namespace)}"] {
+				margin-left: grid-option(gutter);
+				&:not([class*="break"]) {
+					@if grid-setting(responsive) {
+						@if grid-setting(mobile-first) == false {
+							@media (max-width: grid-option(col-collapse)) {
+								width: (100% - grid-option(gutter));
+							}
 						}
 					}
 				}
 			}
 		}
 	}
-}
 
 // Magic Columns
 //-----------------------------------------------------------------
 
-@if $magic-columns {
-	.magic-row {
-		> [class*="#{$col-namespace}"]:not([class*="break"]) {	
-			@include magic-column($semantic: false);
-		}
-	}	
-}
+	@if grid-setting(magic-columns) {
+		@include modifier(magic) {
+			> [class*="#{grid-option(col-namespace)}"]:not([class*="break"]) {	
+				@include magic-column((
+					semantic: false
+				));
+			}
+		}	
+	}
 
 // Block Columns
 //-----------------------------------------------------------------
 
-@if $block-columns {
-	.block-row {
-		> [class*="#{$col-namespace}"]:not([class*="break"]) {			
-			@if $mobile-first {
-				@media (min-width: $col-collapse) {
+	@if grid-setting(block-columns) {
+		@include modifier(block) {
+			> [class*="#{grid-option(col-namespace)}"]:not([class*="break"]) {			
+				@if grid-setting(mobile-first) {
+					@media (min-width: grid-option(col-collapse)) {
+						display: table-cell;
+					}
+				} @else {
 					display: table-cell;
 				}
-			} @else {
-				display: table-cell;
+			}
+			&:after {
+				display: none;
 			}
 		}
-		&:after {
-			display: none;
-		}
 	}
-}
+
+} // row
 
 // Column Width Overrides
 // For Flow Columns only
 //-----------------------------------------------------------------
 
-// Reverse map function
-// http://git.io/vLfuz
-@function reverse-map ($map) {	
-    $keys: map-keys($map);
-    $map-reversed: ();    
-    @for $i from length($keys) through 1 {
-        $map-reversed: map-merge(
-            $map-reversed, (nth($keys, $i): map-get($map, nth($keys, $i)))
-        );
-    }
-    $result: $map-reversed; 
-    @return $result;
-}
-
 // Reverse $breakpoints map
 // This is to allow the generated CSS to override when scaling
-@if $responsive {
-	@if $width-override {
+@if grid-setting(responsive) {
+	@if grid-setting(width-override) {
 		$reverse-breakpoints: null;
-		@if $mobile-first {
-			$reverse-breakpoints: $breakpoints;
+		@if grid-setting(mobile-first) {
+			$reverse-breakpoints: map-get($grid, breakpoints);
 		} @else {
-			$reverse-breakpoints: reverse-map($breakpoints);	
+			$reverse-breakpoints: reverse-map(map-get($grid, breakpoints));	
 		}	
-		.#{$row-namespace} {
+		@include component(#{grid-option(row-namespace)}, true) {
 			@each $bp, $width in $reverse-breakpoints {
 				@media (#{$scale}-width: $width) {
-					@each $name, $fraction in $fractions {				
+					@each $name, $fraction in map-get($grid, fractions) {				
 						.#{$bp}-#{$name} {
 							@include flow-column-width(nth($fraction, 1), nth($fraction, 2));
 						}
@@ -455,34 +418,43 @@ $scale: null;
 // Custom Column
 //-----------------------------------------------------------------
 
-@mixin column (
-	$width: full, 
-	$span: null,
-	$columns: null,
-	$type: null, 
-	$namespace: $col-namespace, 
-	$stack: $col-collapse, 
-	$mobile-first: $mobile-first,
-	$respond-to: null
-) {
+@function column($key) {
+	@return map-get($config, $key);
+}
+
+@mixin column($config: ()) {
+	
+	$config: map-merge((
+		width        : full, 
+		type         : null, 
+		namespace    : grid-option(col-namespace), 
+		stack        : grid-option(col-collapse), 
+		mobile-first : grid-setting(mobile-first),
+		respond-to   : null
+	), $config) !global;
+	
 	@extend %column;
-	@if type-of($width) == string {
-		$span: nth(fraction($width), 1);
-		$columns: nth(fraction($width), 2);
-	} @else if type-of($width) == number {
-		$span: $width;
+	$span: null;
+	$columns: null;
+	
+	@if type-of(column(width)) == string {
+		$span: nth(fraction(column(width)), 1);
+		$columns: nth(fraction(column(width)), 2);
+	} @else if type-of(column(width)) == number {
+		$span: column(width);
 		$columns: 100;
-	} @else if type-of($width) == list {
-		$span: nth($width, 1);
-		$columns: nth($width, 2);			
+	} @else if type-of(column(width)) == list {
+		$span: nth(column(width), 1);
+		$columns: nth(column(width), 2);			
 	}
-	@if $type == magic {
+	
+	@if column(type) == magic {
 		@include magic-column($namespace, $stack);
-	} @else if $type == flow {	
+	} @else if column(type) == flow {	
 		@include flow-column-width($span, $columns);
-		margin-left: $gutter;
+		margin-left: grid-option(gutter);
 	} @else {
-		@if $mobile-first {
+		@if column(mobile-first) {
 			width: 100%;
 			@media (min-width: $stack) {
 				@include column-width($span, $columns);
@@ -494,17 +466,18 @@ $scale: null;
 		} @else {		
 			@include gutter;
 			@include column-width($span, $columns);
-			@if $type == block {
+			@if column(type) == block {
 				display: table-cell;		
 			} 
-			@media (max-width: $stack) {
+			@media (max-width: column(stack)) {
 				display: block;
 				margin-left: 0;
 				width: 100%;
 			}
 		}
 	}
-	@if $respond-to {	
+	
+	@if column(respond-to) {	
 		@each $width, $breakpoint in $respond-to {
 			$columns: null;	$span: null; $respond-scale: null;
 			@if $mobile-first { 
@@ -535,7 +508,8 @@ $scale: null;
 			}	
 		}
 	}
-}
+	
+} // column
 
 // Custom Row
 //-----------------------------------------------------------------

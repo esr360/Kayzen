@@ -30,7 +30,6 @@
 			color: color(greyscale, grey-3);
 			margin-bottom: base(margin);
 			&.w-inline {
-				margin-bottom: 0;
 				margin-right: 0.5rem;
 			}
 		}
@@ -45,6 +44,7 @@
 		@at-root .w-inline {
 			display: inline-block;
 			vertical-align: middle;
+			margin-bottom: 0;
 		}
 
 	} // core

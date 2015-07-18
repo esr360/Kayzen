@@ -134,7 +134,7 @@ img {
 	@include modifier(position) {
 		position: absolute;
 		top: 0;
-		@include horizontal-center;
+		@extend %horizontal-center;;
 	}
 
 	@include modifier(left) {

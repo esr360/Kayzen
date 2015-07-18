@@ -8,12 +8,20 @@
 
 // Component
 // Define the main component
-@mixin component($component: $component, $type: class) {
+@mixin component($component: $component, $core: false, $type: class) {
 	$component: $component !global;
 	@if $type == class {
-		[class*="#{$component}-"] {
-			@content;
-		}	
+		@if $core {
+			.#{$component},
+			[class*="#{$component}-"] {
+				@content;
+			}	
+		}
+		@else {
+			[class*="#{$component}-"] {
+				@content;
+			}
+		}
 	} @else if $type == data {
 		[data-#{$component}] {
 			@content;
@@ -23,7 +31,7 @@
 
 // Nested Component
 // Nest components for appropriate cascading
-@mixin nested-component($component: $component, $root: false, $type: flex) {
+@mixin nested-component($component: $component, $root: false, $type: chain) {
 	@if $type == static {
 		@if $root {
 			@at-root .#{$component} {
@@ -95,43 +103,108 @@
 	}
 }
 
-// Change Context
-// Allow cascading whilst retaining modular nesting
-@mixin context($old-context, $new-context) {
-    @at-root #{selector-replace(&, $old-context, $new-context)} {
-        @content;
+//-----------------------------------------------------------------
+// Advanced Functions
+//-----------------------------------------------------------------
+
+// Reverse Map Function
+// http://git.io/vLfuz
+//-----------------------------------------------------------------
+
+@function reverse-map ($map) {	
+    $keys: map-keys($map);
+    $map-reversed: ();    
+    @for $i from length($keys) through 1 {
+        $map-reversed: map-merge(
+            $map-reversed, (nth($keys, $i): map-get($map, nth($keys, $i)))
+        );
     }
+    $result: $map-reversed; 
+    @return $result;
 }
 
+// Map-Set Function
+// http://git.io/vmBKD
 //-----------------------------------------------------------------
-// Vertical Rhythm
-//-----------------------------------------------------------------
 
-// Remove top spacing 
-
-%top-rhythm {
-	&:first-child {
-		margin-top: 0;
-	}   
-}
-
-// Remove bottom spacing 
-
-%bottom-rhythm {
-	&:last-child {
-		margin-bottom: 0;
-	}  
-}
-
-@mixin vertical-rhythm($position: null) {  
-	@if $position == top { 
-		@extend %top-rhythm;
-	} @else if $position == bottom {
-		@extend %bottom-rhythm;
-	} @else {
-		@extend %top-rhythm;
-		@extend %bottom-rhythm;
+@function get-keys($keys, $counter) {
+	$return: ();
+	@for $i from 1 to $counter {
+		$return: append($return, nth($keys, $i));
 	}
+	@return $return;
+}
+
+@function map-set($map, $key, $value) {
+	@return map-merge($map, ($key: $value));
+}
+
+@function map-set-deep($map, $keys, $value) {
+	
+	$private-sassy-maps-suppress-warnings: true !global;
+	$length: length($keys);
+	$get-keys: ();
+	$map-level: ();
+
+	@if $length > 1 {
+		$get-keys: get-keys($keys, $length);
+		$map-level: map-get-deep($map, $get-keys);
+	}
+  	$merge: (nth($keys, $length): $value);
+	@if $map-level {
+		$merge: map-merge($map-level, $merge);
+	}
+	@for $i from ($length * -1 + 1) through -1 {
+		$j: abs($i);
+		$key: nth($keys, $j);
+		// @debug $get-keys;
+		@if $j > 1 {
+			$get-keys: get-keys($keys, $j);
+			$map-level: map-get-deep($map, $get-keys);
+			@if $map-level {
+				$merge: map-merge($map-level, ($key: $merge));
+			}
+			@else {
+				$merge: ($key: $merge);
+			}
+		}
+		@else {
+			$merge: ($key: $merge);
+		}
+	}
+	$map: map-merge($map, $merge);
+	$private-sassy-maps-suppress-warnings: false !global;
+	@return $map;
+  
+}
+
+// Map Deep Merge
+// http://git.io/vmBVH
+//-----------------------------------------------------------------
+
+@function map-merge-deep($map-old, $map-new, $overwrite: true) {
+	// Iterate through each value of the new map
+	@each $key, $new-value in $map-new {
+		// Check if that value already exists on the old map
+		@if map-has-key($map-old, $key) {
+			// There is an existing key
+			$old-value: map-get($map-old, $key);
+			@if type-of($new-value) == map and type-of($old-value) == map {
+				// If both are maps, recurse regardless of $overwrite
+				$merged-value: map-merge-deep($old-value, $new-value);
+				$map-old: map-set($map-old, $key, $merged-value);
+			} @else {
+				// Otherwise check $overwrite
+				@if $overwrite{
+					$map-old: map-set($map-old, $key, $new-value);
+				}
+			}
+		} @else {
+			// There is no existing key so add
+			$map-old: map-set($map-old, $key, $new-value);
+		}
+	}
+	@return $map-old;
 }
 
 //-----------------------------------------------------------------
@@ -142,21 +215,6 @@
 	position: $position;
 	top: 50%;
 	transform: translateY(-50%);
-}
-
-//-----------------------------------------------------------------
-// Horizontal Centering
-//-----------------------------------------------------------------
-
-%horizontal-center {
-	left: 0;
-	right: 0;
-	margin: auto;  
-	text-align: center;
-}
-
-@mixin horizontal-center {
-	@extend %horizontal-center;
 }
 
 //-----------------------------------------------------------------
@@ -172,22 +230,6 @@
 }
 
 //-----------------------------------------------------------------
-// Fill-Parent Element 
-//-----------------------------------------------------------------
-
-%fill-parent {
-	position: absolute;
-	height: 100%;
-	width: 100%;
-	top: 0;
-	left: 0;
-}
-
-@mixin fill-parent {
-	@extend %fill-parent;
-}
-
-//-----------------------------------------------------------------
 // Overlay
 //-----------------------------------------------------------------
 
@@ -197,7 +239,7 @@
 		content: "";
 		z-index: 0;
 		background: $background;
-		@include fill-parent;
+		@extend %fill-parent;
 	}
 }
 
@@ -215,16 +257,6 @@
 }
 
 //-----------------------------------------------------------------
-// Reset List Styles
-//-----------------------------------------------------------------
-
-%list-reset {
-	margin: 0;
-	padding: 0;
-	list-style: none;
-}
-
-//-----------------------------------------------------------------
 // CSS Triangle
 //-----------------------------------------------------------------
 
@@ -237,44 +269,48 @@
 	}
 }
 
-@mixin triangle(
-	$core: true,
-	$position: $tooltip-position, 
-	$color: tooltip(arrow-color),
-	$size: tooltip(arrow-size)
-) {
+@mixin triangle($config: ()) {
+	
+	$tooltip-position: null;
+	
+	$config: map-merge((
+		core     : true, 
+		position : $tooltip-position, 
+		color    : tooltip(arrow-color),
+		size     : tooltip(arrow-size)
+	), $config);
 	
 	&:after {
-		margin-left: -$size;
-		@if $core {
+		margin-left: -#{map-get($config, size)};
+		@if map-get($config, core) {
 			@include triangle-core;
 		}
-		@if $position == top {
+		@if map-get($config, position) == top {
 			top: 100%;
 			left: 50%;
-			border-left: solid $size transparent;
-			border-right: solid $size transparent;
-			border-top: solid $size $color;
-		} @else if $position == bottom {
+			border-left: solid map-get($config, size) transparent;
+			border-right: solid map-get($config, size) transparent;
+			border-top: solid map-get($config, size) map-get($config, color);
+		} @else if map-get($config, position) == bottom {
 			bottom: 100%;
 			left: 50%;
-			border-left: solid $size transparent;
-			border-right: solid $size transparent;
-			border-bottom: solid $size $color;
-		} @else if $position == left {
+			border-left: solid map-get($config, size) transparent;
+			border-right: solid map-get($config, size) transparent;
+			border-bottom: solid map-get($config, size) map-get($config, color);
+		} @else if map-get($config, position) == left {
 			top: 50%;
-			right: -$size;
+			right: -#{map-get($config, size)};
 			transform: translateY(-50%);
-			border-top: solid $size transparent;
-			border-bottom: solid $size transparent;
-			border-left: solid $size $color;
-		} @else if $position == right {
+			border-top: solid map-get($config, size) transparent;
+			border-bottom: solid map-get($config, size) transparent;
+			border-left: solid map-get($config, size) map-get($config, color);
+		} @else if map-get($config, position) == right {
 			top: 50%;
 			right: 100%;
 			transform: translateY(-50%);
-			border-top: solid $size transparent;
-			border-bottom: solid $size transparent;
-			border-right: solid $size $color;
+			border-top: solid map-get($config, size) transparent;
+			border-bottom: solid map-get($config, size) transparent;
+			border-right: solid map-get($config, size) map-get($config, color);
 		}
 	}
 }

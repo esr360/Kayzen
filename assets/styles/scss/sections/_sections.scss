@@ -80,9 +80,9 @@
 			position: absolute;
 			bottom: 0;
 			height: 9em;
-			width: $base-width;
-			max-width: $max-width;
-			@include horizontal-center();
+			width: grid-option(base-width);
+			max-width: grid-option(max-width);
+			@extend %horizontal-center;
 		}
 	}
 

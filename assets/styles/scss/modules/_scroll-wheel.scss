@@ -12,7 +12,7 @@
 	width: 1.5em;
 	height: 2.4em;
 	bottom: 2rem;
-	@include horizontal-center;
+	@extend %horizontal-center;
 	&:before {
 		content: "";
 		height: 0.25em;
@@ -23,7 +23,7 @@
 		top: 0.5em;
 		// animation: scroll-down 1.2s infinite;
 		transform: translateZ(0);
-		@include horizontal-center;
+		@extend %horizontal-center;
 	}
 
 

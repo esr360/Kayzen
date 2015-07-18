@@ -124,7 +124,10 @@ $tooltip-positions: (
 			@each $tooltip-position in $tooltip-positions {
 				[class*="tooltip-wrapper"][class*="-#{$tooltip-position}"] & {
 					#{$tooltip-position}: tooltip(distance);
-					@include triangle($core: false, $position: #{$tooltip-position});
+					@include triangle((
+						core: false, 
+						position: #{$tooltip-position}
+					));
 					@if $tooltip-position == top {
 						transform: translateX(-50%) translateY(-100%);
 					} @else if $tooltip-position == bottom {
@@ -151,7 +154,10 @@ $tooltip-positions: (
 					@each $tooltip-position in $tooltip-positions {
 						@at-root [class*="-#{$tooltip-position}"][class*="-#{$custom-style}"] .tooltip-content {
 							#{$tooltip-position}: tooltip-custom(distance);
-							@include triangle(#{$tooltip-position}, #{tooltip-custom(arrow-color)});
+							@include triangle((
+								position: #{$tooltip-position}, 
+								color :#{tooltip-custom(arrow-color)}
+							));
 						}	
 					}
 					

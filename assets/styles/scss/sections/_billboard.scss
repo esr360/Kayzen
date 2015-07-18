@@ -67,7 +67,7 @@ $billboard-default: (
 		@at-root .bb-wrapper {
 			color: billboard(color);
 			text-align: billboard(text-align);
-			@include horizontal-center();
+			@extend %horizontal-center;
 			@include vertical-center(absolute);
 			@media (min-width: breakpoint(break-3)) {
 				width: billboard(wrapper-width);

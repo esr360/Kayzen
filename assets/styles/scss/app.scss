@@ -5,13 +5,17 @@ Author: @ESR360
 
 ******************************************************************/
 
+// Asset Path
+$asset-path : "../..";
+
+// Utilities
+@import "skeleton/utilities";
+
 //-----------------------------------------------------------------
 // Themes
 //-----------------------------------------------------------------
 
-// Asset Path
-$asset-path : "../..";
-
+//Themes
 @import "themes/kayzen";
 //@import "themes/sandbox";
 
@@ -20,8 +24,6 @@ $asset-path : "../..";
 //-----------------------------------------------------------------
 
 @import "skeleton/normalize";
-@import "skeleton/sassy-maps";
-@import "skeleton/utilities";
 @import "skeleton/grid";
 @import "skeleton/color-palettes";
 @import "skeleton/tools";
