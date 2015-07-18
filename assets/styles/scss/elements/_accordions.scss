@@ -98,8 +98,3 @@
 	} // component(accordion)
 	
 } // accordion
-
-// print the styles
-@include accordions(
-	if(variable-exists(accordions), $accordions, ())
-);

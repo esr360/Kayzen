@@ -2,55 +2,85 @@
 // Kayzen
 //=================================================================
 
-//-----------------------------------------------------------------
-// Colors
-//-----------------------------------------------------------------
-
-$palettes: (
-	brand: (
-		primary           : #9B58B5
-	)
-);
-
-@import "skeleton/color-palettes";
+@if $theme == Kayzen {
 
 //-----------------------------------------------------------------
-// Header
+// Skeleton
 //-----------------------------------------------------------------
 
-$header: (
-	absolute              : true,
-	bar                   : true,
-	bg-color              : transparent,
-	top-position          : 30px
-);
+	@include palettes((
+		brand: (
+			primary           : #9B58B5
+		)
+	));
+	
+	@include grid;
+	@include base;
+	@include helpers;
+	@include tools;
+	@include typography;
 
 //-----------------------------------------------------------------
-// Navigation 
+// Elements
 //-----------------------------------------------------------------
 
-$navigation: (
-	no-icons              : true,
-	link-color            : color(greyscale, white),
-);
-
-$dropdown: (
-	a-color               : color(brand, primary),
-	a-hover-color         : color(greyscale, white),
-	a-hover-bg-color      : color(brand, primary),
-	a-bg-color            : color(greyscale, white),
-	a-border-left         : 1px solid darken(color(greyscale, white), 5%),
-	a-border-bottom       : 1px solid darken(color(greyscale, white), 5%),
-	a-hover-border-color  : darken(color(brand, primary), 10%),
-	li-border-left        : 6px solid color(brand, primary),
-);
+	@include accordions;
+	@include alert-bars;
+	@include blockquotes;
+	@include buttons;
+	@include carousels;
+	@include fonts;
+	@include forms;
+	@include headings;
+	@include icons;
+	@include images;
+	@include lists;
+	@include modals;
+	@include progress-bars;
+	@include tables;
+	@include tooltips;
+	@include wells;
+	@include widgets;
 
 //-----------------------------------------------------------------
-// Billboard
+// Modules
 //-----------------------------------------------------------------
 
-$billboard: (
-	full-screen           : true,
-	overlay               : true,
-	bg-image              : "#{$asset-path}/images/billboard-1.jpg"
-);
+	@include breadcrumb;
+	@include breadcrumb;
+	@include flyout-navigation;
+	@include footer;
+	@include google-map;
+	
+	@include header((
+		absolute              : true,
+		bar                   : true,
+		bg-color              : transparent,
+		top-position          : 30px
+	));
+	
+	@include logo;
+	
+	@include navigation((
+		no-icons              : true,
+		link-color            : color(greyscale, white),
+	));
+	
+	@include dropdown;
+	@include promo-banner;
+	@include scroll-top;
+	@include scroll-wheel;
+
+//-----------------------------------------------------------------
+// Sections
+//-----------------------------------------------------------------
+
+	@include sections;
+	
+	@include billboard((
+		full-screen           : true,
+		overlay               : true,
+		bg-image              : "#{$asset-path}/images/billboard-1.jpg"
+	));
+
+} // Kayzen

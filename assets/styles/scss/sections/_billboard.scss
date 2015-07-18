@@ -97,11 +97,6 @@
 	
 } // billboard
 
-// print the styles
-@include billboard(
-	if(variable-exists(billboard), $billboard, ())
-);
-
 //-----------------------------------------------------------------
 // Utilities
 //-----------------------------------------------------------------

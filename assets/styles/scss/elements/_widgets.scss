@@ -146,8 +146,3 @@
 	} // component(widgets)
 	
 } // widgets
-
-// print the styles
-@include widgets(
-	if(variable-exists(widgets), $widgets, ())
-);

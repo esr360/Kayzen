@@ -150,12 +150,6 @@
 	
 } // carousels
 
-// print the styles
-@include carousels(
-	if(variable-exists(carousels), $carousels, ())
-);
-
-
 //-----------------------------------------------------------------
 // Slick Carousel Styles
 //-----------------------------------------------------------------

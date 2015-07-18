@@ -22,8 +22,3 @@
 	}
 		
 } // wells
-
-// print the styles
-@include wells(
-	if(variable-exists(wells), $wells, ())
-);

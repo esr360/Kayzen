@@ -254,8 +254,3 @@
 	} // .title-icon
 	
 } // headings
-
-// print the styles
-@include headings(
-	if(variable-exists(headings), $headings, ())
-);

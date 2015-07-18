@@ -8,24 +8,12 @@ Author: @ESR360
 // Asset Path
 $asset-path : "../..";
 
-// Utilities
-@import "skeleton/utilities";
-
-//-----------------------------------------------------------------
-// Themes
-//-----------------------------------------------------------------
-
-$theme: Kayzen;
-
-//@import "themes/default";
-@import "themes/kayzen";
-//@import "themes/sandbox";
-
 //-----------------------------------------------------------------
 // Skeleton
 //-----------------------------------------------------------------
 
 @import "skeleton/normalize";
+@import "skeleton/utilities";
 @import "skeleton/grid";
 @import "skeleton/color-palettes";
 @import "skeleton/tools";
@@ -84,4 +72,8 @@ $theme: Kayzen;
 // Themes
 //-----------------------------------------------------------------
 
+$theme: Kayzen;
+
 @import "themes/default";
+@import "themes/kayzen";
+//@import "themes/sandbox";

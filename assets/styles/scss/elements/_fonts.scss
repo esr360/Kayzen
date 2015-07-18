@@ -40,8 +40,3 @@
 	}
 	
 } // fonts
-
-// print the styles
-@include fonts(
-	if(variable-exists(fonts), $fonts, ())
-);

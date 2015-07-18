@@ -78,8 +78,3 @@
 	} // component(tab)
 	
 } // tabs
-
-// print the styles
-@include tabs(
-	if(variable-exists(tabs), $tabs, ())
-);

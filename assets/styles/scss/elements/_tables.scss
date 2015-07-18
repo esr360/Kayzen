@@ -61,8 +61,3 @@
 	} // component(table)
 	
 } // tables
-
-// print the styles
-@include tables(
-	if(variable-exists(tables), $tables, ())
-);

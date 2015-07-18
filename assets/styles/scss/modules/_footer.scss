@@ -12,51 +12,46 @@
 	), $config);
 	
 	$footer: $config !global;
-	
-} // footer
-
-// print the styles
-@include footer(
-	if(variable-exists(footer), $footer, ())
-);
 
 //-----------------------------------------------------------------
 // Core Layout
 //-----------------------------------------------------------------
 
-.app-footer {
-	text-align: center;	
-	margin-bottom: base(margin);
-}
-
-.footer-nav {
-	ul {
-	    @extend %list-reset;
+	.app-footer {
+		text-align: center;	
+		margin-bottom: base(margin);
 	}
-    li {
-	    display: inline-block;
-	    &:not(:last-child) {
-			margin-right: 1em;
+	
+	.footer-nav {
+		ul {
+		    @extend %list-reset;
+		}
+	    li {
+		    display: inline-block;
+		    &:not(:last-child) {
+				margin-right: 1em;
+		    }
 	    }
-    }
-}
+	}
 
 //-----------------------------------------------------------------
 // Larger Resolutions
 //-----------------------------------------------------------------
 
-@media (min-width: breakpoint(break-2)) {
-	.footer-wrapper {			
-		display: table;
-		width: 100%;
-		text-align: left;
+	@media (min-width: breakpoint(break-2)) {
+		.footer-wrapper {			
+			display: table;
+			width: 100%;
+			text-align: left;
+		}
+		.copyright, 
+		.footer-nav {
+			display: table-cell;
+			vertical-align: middle;
+		}
+		.footer-nav {
+			text-align: right;
+		}
 	}
-	.copyright, 
-	.footer-nav {
-		display: table-cell;
-		vertical-align: middle;
-	}
-	.footer-nav {
-		text-align: right;
-	}
-}
+	
+} // footer

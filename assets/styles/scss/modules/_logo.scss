@@ -52,8 +52,3 @@
 	} // end .logo
 	
 } // logo
-
-// print the styles
-@include logo(
-	if(variable-exists(logo), $logo, ())
-);

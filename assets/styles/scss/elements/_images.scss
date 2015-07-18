@@ -187,8 +187,3 @@
 	} // component(mobile-graphic)
 	
 } // images
-
-// print the styles
-@include images(
-	if(variable-exists(images), $images, ())
-);

@@ -105,8 +105,3 @@
 	} // .flyout-nav-container
 	
 } // flyout-navigation
-
-// print the styles
-@include flyout-navigation(
-	if(variable-exists(flyout-navigation), $flyout-navigation, ())
-);

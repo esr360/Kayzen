@@ -52,8 +52,3 @@
 	} // component(blockquote)
 	
 } // blockquotes
-
-// print the styles
-@include blockquotes(
-	if(variable-exists(blockquotes), $blockquotes, ())
-);

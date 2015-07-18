@@ -10,51 +10,52 @@ http://github.com/esr360/Kayzen-GS/
 	
 -----------------------------------------------------------------*/
 
-@mixin grid($config: ()) {
-	
 //-----------------------------------------------------------------
 // Config
 //-----------------------------------------------------------------
 
-	$config: map-merge-deep((
-		options: (
-			base-width      : 1200px,
-			max-width       : 90%,
-			small-width     : 940px,
-			full-width      : 100%,
-			columns         : 12,
-			gutter          : 3%,
-			col-collapse    : 940px,
-			row-namespace   : "row",
-			col-namespace   : "span"	
-		),
-		settings: (
-			old-ie          : true,
-			responsive      : true,
-			mobile-first    : false,
-			column-stacking : true,
-			width-override  : true,
-			flow-columns    : true,
-			magic-columns   : true,
-			block-columns   : true
-		),
-		breakpoints: (
-			break-0         : 0px,
-			break-1         : 460px,
-			break-2         : 720px,
-			break-3         : 940px,
-			break-4         : 1200px,
-			break-5         : 1400px
-		),
-		fractions: (
-			full            : (1, 1),
-			half            : (1, 2),
-			third           : (1, 3),
-			quarter         : (1, 4),
-			sixth           : (1, 6)
-		)
-	), $config);
-	
+$grid: (
+	options: (
+		base-width      : 1200px,
+		max-width       : 90%,
+		small-width     : 940px,
+		full-width      : 100%,
+		columns         : 12,
+		gutter          : 3%,
+		col-collapse    : 940px,
+		row-namespace   : "row",
+		col-namespace   : "span"	
+	),
+	settings: (
+		old-ie          : true,
+		responsive      : true,
+		mobile-first    : false,
+		column-stacking : true,
+		width-override  : true,
+		flow-columns    : true,
+		magic-columns   : true,
+		block-columns   : true
+	),
+	breakpoints: (
+		break-0         : 0px,
+		break-1         : 460px,
+		break-2         : 720px,
+		break-3         : 940px,
+		break-4         : 1200px,
+		break-5         : 1400px
+	),
+	fractions: (
+		full            : (1, 1),
+		half            : (1, 2),
+		third           : (1, 3),
+		quarter         : (1, 4),
+		sixth           : (1, 6)
+	)
+);
+
+@mixin grid($config: ()) {
+
+	$config: map-merge-deep($grid, $config);	
 	$grid: $config !global;
 
 	// Set min/max width for breakpoints
@@ -395,11 +396,6 @@ http://github.com/esr360/Kayzen-GS/
 @function fraction($fraction) {
     @return map-get(map-get($grid, fractions), $fraction);
 }
-
-// print the styles
-@include grid(
-	if(variable-exists(grid), $grid, ())
-);
 
 //=================================================================
 // Semantic Grid System Framework

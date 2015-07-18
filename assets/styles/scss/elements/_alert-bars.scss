@@ -80,8 +80,3 @@
 	} // component(alert-bars)
 	
 } // alert-bars
-
-// print the styles
-@include alert-bars(
-	if(variable-exists(alert-bars), $alert-bars, ())
-);

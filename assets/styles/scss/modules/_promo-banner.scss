@@ -20,8 +20,3 @@
 	} // end .promo-banner
 		
 } // promo-banner
-
-// print the styles
-@include promo-banner(
-	if(variable-exists(promo-banner), $promo-banner, ())
-);

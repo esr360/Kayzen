@@ -157,7 +157,3 @@
 	} // responsive visibility
 	
 } // helpers
-
-@include helpers(
-	if(variable-exists(helpers), $helpers, ())
-);

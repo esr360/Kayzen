@@ -21,8 +21,3 @@
 	}
 	
 } // google-map
-
-// print the styles
-@include google-map(
-	if(variable-exists(google-map), $google-map, ())
-);

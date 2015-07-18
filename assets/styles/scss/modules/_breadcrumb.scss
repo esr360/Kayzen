@@ -35,8 +35,3 @@
 	} // end .breadcrumb
 	
 } // breadcrumb
-
-// print the styles
-@include breadcrumb(
-	if(variable-exists(breadcrumb), $breadcrumb, ())
-);

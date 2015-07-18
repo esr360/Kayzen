@@ -193,8 +193,3 @@
 	}
 	
 } // buttons
-
-// print the styles
-@include buttons(
-	if(variable-exists(buttons), $buttons, ())
-);

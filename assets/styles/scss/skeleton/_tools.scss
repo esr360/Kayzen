@@ -130,8 +130,3 @@
 		@extend %bottom-rhythm;
 	}
 }
-
-// print the styles
-@include tools(
-	if(variable-exists(tools), $tools, ())
-);

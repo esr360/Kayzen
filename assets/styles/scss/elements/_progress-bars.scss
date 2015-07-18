@@ -82,8 +82,3 @@
 	}
 	
 } // progress-bars
-
-// print the styles
-@include progress-bars(
-	if(variable-exists(progress-bars), $progress-bars, ())
-);

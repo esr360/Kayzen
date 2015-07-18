@@ -161,11 +161,6 @@
 	} // component(igroup)
 	
 } // icons
-	
-// print the styles
-@include icons(
-	if(variable-exists(icons), $icons, ())
-);
 
 //-----------------------------------------------------------------
 // Font Awesome

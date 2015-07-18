@@ -120,8 +120,3 @@
 	} // component(s-block)
 	
 } // sections
-
-// print the styles
-@include sections(
-	if(variable-exists(sections), $sections, ())
-);

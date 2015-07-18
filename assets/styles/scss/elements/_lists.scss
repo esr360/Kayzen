@@ -50,8 +50,3 @@
 	} // component(list)
 	
 } // lists
-
-// print the styles
-@include lists(
-	if(variable-exists(lists), $lists, ())
-);

@@ -50,8 +50,3 @@
 	} // end .scroll-wheel
 	
 } // scroll-wheel
-
-// print the styles
-@include scroll-wheel(
-	if(variable-exists(scroll-wheel), $scroll-wheel, ())
-);

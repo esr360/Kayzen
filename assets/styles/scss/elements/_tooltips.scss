@@ -182,11 +182,6 @@ https://github.com/esr360/K-Tooltips
 	} // component(tooltip)
 	
 } // tooltips
-
-// print the styles
-@include tooltips(
-	if(variable-exists(tooltips), $tooltips, ())
-);
  
 // Utilities
 //-----------------------------------------------------------------

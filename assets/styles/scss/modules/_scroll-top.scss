@@ -38,8 +38,3 @@
 	} // end .scroll-top
 	
 } // scroll-top
-
-// print the styles
-@include scroll-top(
-	if(variable-exists(scroll-top), $scroll-top, ())
-);
