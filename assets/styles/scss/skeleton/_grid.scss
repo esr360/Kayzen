@@ -160,7 +160,7 @@ $grid: (
 		
 			// Default Stacking
 			@if grid-setting(responsive) {
-				@media (#{$scale}-width: grid-setting(responsive)) {
+				@media (#{$scale}-width: grid-option(col-collapse)) {
 					&:not([class*="break"]):not([class*="flow"]) {
 						@include stack-columns;
 					}
