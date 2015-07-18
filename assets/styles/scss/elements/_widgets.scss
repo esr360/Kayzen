@@ -2,134 +2,152 @@
 // Widgets
 //=================================================================
 
+@mixin widgets($config: ()) {
+
+//-----------------------------------------------------------------
+// Config
+//-----------------------------------------------------------------
+
+	$config: map-merge-deep((
+	), $config);
+	
+	$widgets: $config !global;
+
 //-----------------------------------------------------------------
 // Widget
 //-----------------------------------------------------------------
 
-@include component(widget) {
+	@include component(widget) {
 
 // Core Styles
 //-----------------------------------------------------------------
 
-	@include core {
-
-		padding: 2.5em 1em;
-		transition: base(transition);
-
-		&:hover {
-			.w-icon {
-				color: color(brand, primary);
+		@include core {
+	
+			padding: 2.5em 1em;
+			transition: base(transition);
+	
+			&:hover {
+				.w-icon {
+					color: color(brand, primary);
+				}
 			}
-		}
-
-		@include nested-component(hgroup) {
-			margin-bottom: 0;
-		}
-
-		@at-root .w-icon {
-			color: color(greyscale, grey-3);
-			margin-bottom: base(margin);
-			&.w-inline {
-				margin-right: 0.5rem;
+	
+			@include nested-component(hgroup) {
+				margin-bottom: 0;
 			}
-		}
-
-		@at-root .w-header {
-			+ .w-icon {
-				margin-left: 0.5rem;
-				margin-right: 0;
+	
+			@at-root .w-icon {
+				color: color(greyscale, grey-3);
+				margin-bottom: base(margin);
+				&.w-inline {
+					margin-right: 0.5rem;
+				}
 			}
-		}
-
-		@at-root .w-inline {
-			display: inline-block;
-			vertical-align: middle;
-			margin-bottom: 0;
-		}
-
-	} // core
+	
+			@at-root .w-header {
+				+ .w-icon {
+					margin-left: 0.5rem;
+					margin-right: 0;
+				}
+			}
+	
+			@at-root .w-inline {
+				display: inline-block;
+				vertical-align: middle;
+				margin-bottom: 0;
+			}
+	
+		} // core
 
 // Modifiers
 //-----------------------------------------------------------------
-
-	@include modifier(panel) {
-		padding: 4%;
-		border-top: 1px solid color(greyscale, grey-2);	
-		border-left: 1px solid color(greyscale, grey-2);
-		&:first-child {
-			border-left: none;
-		}
-	}
-
-	@include modifier(block) {
-		background: color(greyscale, white);
-		transition: base(transition);	
-		&:hover {
-			background: color(brand, primary);			
-			&, .w-icon {
-				color: color(greyscale, white);
-			}
-			@include nested-component(heading) {
-				color: color(greyscale, white);
+	
+		@include modifier(panel) {
+			padding: 4%;
+			border-top: 1px solid color(greyscale, grey-2);	
+			border-left: 1px solid color(greyscale, grey-2);
+			&:first-child {
+				border-left: none;
 			}
 		}
-	}
-
-	@include modifier(border) {
-		border-top: 8px solid color(brand, primary);
-		&:hover {
-			border-color: transparent;
+	
+		@include modifier(block) {
+			background: color(greyscale, white);
+			transition: base(transition);	
+			&:hover {
+				background: color(brand, primary);			
+				&, .w-icon {
+					color: color(greyscale, white);
+				}
+				@include nested-component(heading) {
+					color: color(greyscale, white);
+				}
+			}
 		}
-	}
-
-	@include modifier(stacked) {
-		padding: 0;
-		margin-bottom: base(margin);
-		@include vertical-rhythm(bottom);
-		p {
-			margin-top: (base(margin) / 2);
+	
+		@include modifier(border) {
+			border-top: 8px solid color(brand, primary);
+			&:hover {
+				border-color: transparent;
+			}
 		}
-	}
-
-	@include modifier(scale) {
-		z-index: 1;
-		transform: translateZ(0);
-		&:hover {
-			transform: scale(1.1) translateZ(0);
-			z-index: 5;
+	
+		@include modifier(stacked) {
+			padding: 0;
+			margin-bottom: base(margin);
+			@include vertical-rhythm(bottom);
+			p {
+				margin-top: (base(margin) / 2);
+			}
 		}
-	}
-
-	@include modifier(spectrum-quarter) {
-		color: color(greyscale, white);
-		&:nth-child(1) {
-			background: darken(color(brand, primary), 6%);
+	
+		@include modifier(scale) {
+			z-index: 1;
+			transform: translateZ(0);
+			&:hover {
+				transform: scale(1.1) translateZ(0);
+				z-index: 5;
+			}
 		}
-		&:nth-child(2) {
-			background: darken(color(brand, primary), 2%);
-		}
-		&:nth-child(3) {
-			background: lighten(color(brand, primary), 2%);
-		}
-		&:nth-child(4) {
-			background: lighten(color(brand, primary), 6%);
-		}
-		@include nested-component(icon) {
+	
+		@include modifier(spectrum-quarter) {
 			color: color(greyscale, white);
+			&:nth-child(1) {
+				background: darken(color(brand, primary), 6%);
+			}
+			&:nth-child(2) {
+				background: darken(color(brand, primary), 2%);
+			}
+			&:nth-child(3) {
+				background: lighten(color(brand, primary), 2%);
+			}
+			&:nth-child(4) {
+				background: lighten(color(brand, primary), 6%);
+			}
+			@include nested-component(icon) {
+				color: color(greyscale, white);
+			}
 		}
-	}
-
-} // component(widget)
+	
+	} // component(widget)
 
 //-----------------------------------------------------------------
 // Widget Group
 //-----------------------------------------------------------------
 
-@include component(widgets) {
+	@include component(widgets) {
+	
+		@include modifier(large) {
+			margin-bottom: (base(margin) * 2);
+			@include vertical-rhythm(bottom);
+		}
+	
+	} // component(widgets)
+	
+} // widgets
 
-	@include modifier(large) {
-		margin-bottom: (base(margin) * 2);
-		@include vertical-rhythm(bottom);
-	}
-
-} // component(widgets)
+// print the styles
+@include widgets(
+	if(variable-exists(widgets), $widgets, ())
+);

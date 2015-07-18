@@ -2,26 +2,44 @@
 // Scroll to Top
 //=================================================================
 
-.scroll-top {
+@mixin scroll-top($config: ()) {
 
-	display: none;
-	opacity: 0;
-	visibility: hidden;
-	position: fixed;
-	bottom: 2rem;
-	right: 2rem;
-	transform: translateZ(0);
-	&.active {
-		opacity: 1;
-		visibility: visible;
-	}
-	&:hover {
-		text-decoration: none;
-		opacity: 1;
-	}
+//-----------------------------------------------------------------
+// Config
+//-----------------------------------------------------------------
 
-	@media (min-width: breakpoint(break-5)) {
-		display: block;
-	}
+	$config: map-merge-deep((
+	), $config);
+	
+	$scroll-top: $config !global;
 
-} // end .scroll-top
+	.scroll-top {
+	
+		display: none;
+		opacity: 0;
+		visibility: hidden;
+		position: fixed;
+		bottom: 2rem;
+		right: 2rem;
+		transform: translateZ(0);
+		&.active {
+			opacity: 1;
+			visibility: visible;
+		}
+		&:hover {
+			text-decoration: none;
+			opacity: 1;
+		}
+	
+		@media (min-width: breakpoint(break-5)) {
+			display: block;
+		}
+	
+	} // end .scroll-top
+	
+} // scroll-top
+
+// print the styles
+@include scroll-top(
+	if(variable-exists(scroll-top), $scroll-top, ())
+);

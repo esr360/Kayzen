@@ -2,13 +2,13 @@
 // Base
 //=================================================================
 
-@mixin base($base: ()) {
+@mixin base($config: ()) {
 
 //-----------------------------------------------------------------
 // Config
 //-----------------------------------------------------------------
 
-	$base: map-merge((
+	$config: map-merge((
 		background       : color(greyscale, grey-1),
 		font-family      : typography(typefaces, primary),
 		text-color       : typography(colors, base),
@@ -18,7 +18,9 @@
 		radius           : 0.4em,
 		oval-radius      : 1.5em,
 		transition       : 0.4s
-	), $base);
+	), $config);
+	
+	$base: $config !global;
 
 //-----------------------------------------------------------------
 // General
@@ -118,11 +120,10 @@
 		color: color(greyscale, white);
 		text-shadow: none;
 	}
-	
-	$base-config: $base !global;
 
 } // base
 
+// print the styles
 @include base(
 	if(variable-exists(base), $base, ())
 );
@@ -132,5 +133,5 @@
 //-----------------------------------------------------------------
 
 @function base($key) {
-    @return map-get($base-config, $key);
+    @return map-get($base, $key);
 }

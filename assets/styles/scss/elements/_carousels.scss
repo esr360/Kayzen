@@ -2,140 +2,159 @@
 // Carousels
 //=================================================================
 
+@mixin carousels($config: ()) {
+
+//-----------------------------------------------------------------
+// Config
+//-----------------------------------------------------------------
+
+	$config: map-merge-deep((
+	), $config);
+	
+	$carousels: $config !global;
+	
 //-----------------------------------------------------------------
 // Carousel
 //-----------------------------------------------------------------
 
-@include component(carousel) {
+	@include component(carousel) {
 
 // Core Styles
 //-----------------------------------------------------------------
 
-    @include core {
-        position: relative;
-    }
+	    @include core {
+	        position: relative;
+	    }
 
 // Modifiers
 //-----------------------------------------------------------------
 
-    @include modifier(scale) {
-        margin-top: base(margin);
-        @include modifier(1) {
-            .slick-center {
-                transform: scale(1.1);
-            }            
-        }
-        @include modifier(2) {
-            .slick-center {
-                transform: scale(1.25);
-            }            
-        }
-        @include modifier(3) {
-            .slick-center {
-                transform: scale(1.4);
-            }            
-        }
-        &:before {
-            content: "\f021";
-            position: absolute;
-            top: 30%;
-            font-family: FontAwesome;
-            font-size: font-size(size-7);
-            color: color(greyscale, grey-2);
-            //animation: spin 1s linear infinite;
-            @extend %horizontal-center;
-        }
-        .slick-list {
-            overflow: visible;
-        }
-        .slick-slide {
-            z-index: 0;
-            &:hover {
-                cursor: pointer;
-            }
-        }
-        .slick-center {
-            z-index: 2;
-        } 
-    }
-
-    @include modifier(fade-out) {
-        .slick-slide {
-            &[aria-hidden="true"] {
-                opacity: 0;
-                transform: scale(0.75);
-                visibility: hidden;
-            }
-        }
-    }
-    
-    @include modifier(greyscale) {
-        .slick-slide {
-            filter: grayscale(1);
-            opacity: 0.4;
-            &.slick-center,
-            &:hover {
-                filter: grayscale(0);
-                opacity: 1;
-            }
-        }
-    }
-
-} // component(carousel)
+	    @include modifier(scale) {
+	        margin-top: base(margin);
+	        @include modifier(1) {
+	            .slick-center {
+	                transform: scale(1.1);
+	            }            
+	        }
+	        @include modifier(2) {
+	            .slick-center {
+	                transform: scale(1.25);
+	            }            
+	        }
+	        @include modifier(3) {
+	            .slick-center {
+	                transform: scale(1.4);
+	            }            
+	        }
+	        &:before {
+	            content: "\f021";
+	            position: absolute;
+	            top: 30%;
+	            font-family: FontAwesome;
+	            font-size: font-size(size-7);
+	            color: color(greyscale, grey-2);
+	            //animation: spin 1s linear infinite;
+	            @extend %horizontal-center;
+	        }
+	        .slick-list {
+	            overflow: visible;
+	        }
+	        .slick-slide {
+	            z-index: 0;
+	            &:hover {
+	                cursor: pointer;
+	            }
+	        }
+	        .slick-center {
+	            z-index: 2;
+	        } 
+	    }
+	
+	    @include modifier(fade-out) {
+	        .slick-slide {
+	            &[aria-hidden="true"] {
+	                opacity: 0;
+	                transform: scale(0.75);
+	                visibility: hidden;
+	            }
+	        }
+	    }
+	    
+	    @include modifier(greyscale) {
+	        .slick-slide {
+	            filter: grayscale(1);
+	            opacity: 0.4;
+	            &.slick-center,
+	            &:hover {
+	                filter: grayscale(0);
+	                opacity: 1;
+	            }
+	        }
+	    }
+	
+	} // component(carousel)
 
 //-----------------------------------------------------------------
 // Carousel Tools
 //-----------------------------------------------------------------
+	
+	.slide-nav {
+	
+	    .slide-prev,
+	    .slide-next {
+	        z-index: 5;
+	        @include vertical-center(absolute);
+	        &:focus {
+	            outline: none;
+	        }
+	    }
+	
+	    .slide-prev {
+	        left: 2rem;
+	    }
+	
+	    .slide-next {
+	        right: 2rem;
+	    }
+	
+	    &.twin-nav {
+	        display: inline-block;
+	        position: absolute;
+	        z-index: 3;
+	        transform: translateY(-50%) translateX(-50%);
+	        background: color(brand, primary);
+	        padding: 0.5em;
+	        [class*="slide-"] {
+	            position: relative;
+	            left: auto;
+	            right: auto;
+	            transform: none;
+	            margin-left: 0.25em;
+	            &:first-child {
+	                margin-left: 0;
+	            }
+	        }
+	        &.strikethrough {
+	            &:before {
+	                content: "";
+	                width: 9999px;
+	                left: -4999px;
+	                height: 10px;
+	                background-color: color(brand, primary);
+	                @include vertical-center(absolute);
+	            }   
+	        }
+	    }
+	
+	}
+	
+} // carousels
 
-.slide-nav {
+// print the styles
+@include carousels(
+	if(variable-exists(carousels), $carousels, ())
+);
 
-    .slide-prev,
-    .slide-next {
-        z-index: 5;
-        @include vertical-center(absolute);
-        &:focus {
-            outline: none;
-        }
-    }
-
-    .slide-prev {
-        left: 2rem;
-    }
-
-    .slide-next {
-        right: 2rem;
-    }
-
-    &.twin-nav {
-        display: inline-block;
-        position: absolute;
-        z-index: 3;
-        transform: translateY(-50%) translateX(-50%);
-        background: color(brand, primary);
-        padding: 0.5em;
-        [class*="slide-"] {
-            position: relative;
-            left: auto;
-            right: auto;
-            transform: none;
-            margin-left: 0.25em;
-            &:first-child {
-                margin-left: 0;
-            }
-        }
-        &.strikethrough {
-            &:before {
-                content: "";
-                width: 9999px;
-                left: -4999px;
-                height: 10px;
-                background-color: color(brand, primary);
-                @include vertical-center(absolute);
-            }   
-        }
-    }
-
-}
 
 //-----------------------------------------------------------------
 // Slick Carousel Styles

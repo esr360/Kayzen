@@ -2,108 +2,126 @@
 // Sections
 //=================================================================
 
+@mixin sections($config: ()) {
+
+//-----------------------------------------------------------------
+// Config
+//-----------------------------------------------------------------
+
+	$config: map-merge-deep((
+	), $config);
+	
+	$sections: $config !global;
+
 //-----------------------------------------------------------------
 // Section
 //-----------------------------------------------------------------
 
-@include component(section) {
+	@include component(section) {
 
 // Core Styles
 //-----------------------------------------------------------------
 
-	@include core {
-
-		background-size: cover;	
-		background-position: center;	
-
-		@include nested-component(hgroup) {
-			color: typography(colors, heading);
-		}
-
-		// Carousel Tools
-
-		.slide-prev,
-		.slide-next {
-			@include vertical-center(absolute);
-		}
-
-		.slide-prev {
-			left: -7.5rem;
-		}
-
-		.slide-next {
-			right: -7.5rem;
-		}
-
-	} // core
+		@include core {
+	
+			background-size: cover;	
+			background-position: center;	
+	
+			@include nested-component(hgroup) {
+				color: typography(colors, heading);
+			}
+	
+			// Carousel Tools
+	
+			.slide-prev,
+			.slide-next {
+				@include vertical-center(absolute);
+			}
+	
+			.slide-prev {
+				left: -7.5rem;
+			}
+	
+			.slide-next {
+				right: -7.5rem;
+			}
+	
+		} // core
 
 // Modifiers
 //-----------------------------------------------------------------
 
-	@include modifier(primary) {
-		padding: 6em 0;
-	}
-
-	@include modifier(secondary) {
-		background: color(brand, primary);
-		padding: 8em 0;
-		> .container {
+		@include modifier(primary) {
+			padding: 6em 0;
+		}
+	
+		@include modifier(secondary) {
+			background: color(brand, primary);
+			padding: 8em 0;
+			> .container {
+				position: relative;
+			}
+			&, a:not([class*="button-"]) {
+				color: color(greyscale, white);
+			}
+			@include nested-component(hgroup) {
+				color: color(greyscale, white);
+			}
+		}
+	
+		@include modifier(overlay) {
+			@include bg-overlay(rgba(color(brand, primary), 0.4));
+			@include modifier(alt) {
+				@include bg-overlay(rgba(color(greyscale, grey-5), 0.6));			
+			}
+			.section-wrapper {
+				position: relative;
+			}
+		}
+	
+		@include modifier(dot-map) {
 			position: relative;
+			padding-bottom: 14em;
+			&:before {
+				content: "";
+				background-image: url("#{$asset-path}/images/dot-map.png");
+				background-position: center top;
+				background-repeat: no-repeat;
+				opacity: 0.1;
+				position: absolute;
+				bottom: 0;
+				height: 9em;
+				width: grid-option(base-width);
+				max-width: grid-option(max-width);
+				@extend %horizontal-center;
+			}
 		}
-		&, a:not([class*="button-"]) {
-			color: color(greyscale, white);
+	
+		@include modifier(banner) {
+			padding: 5em 0;
 		}
-		@include nested-component(hgroup) {
-			color: color(greyscale, white);
-		}
-	}
-
-	@include modifier(overlay) {
-		@include bg-overlay(rgba(color(brand, primary), 0.4));
-		@include modifier(alt) {
-			@include bg-overlay(rgba(color(greyscale, grey-5), 0.6));			
-		}
-		.section-wrapper {
-			position: relative;
-		}
-	}
-
-	@include modifier(dot-map) {
-		position: relative;
-		padding-bottom: 14em;
-		&:before {
-			content: "";
-			background-image: url("#{$asset-path}/images/dot-map.png");
-			background-position: center top;
-			background-repeat: no-repeat;
-			opacity: 0.1;
-			position: absolute;
-			bottom: 0;
-			height: 9em;
-			width: grid-option(base-width);
-			max-width: grid-option(max-width);
-			@extend %horizontal-center;
-		}
-	}
-
-	@include modifier(banner) {
-		padding: 5em 0;
-	}
-
-} // component(section)
+	
+	} // component(section)
 
 //-----------------------------------------------------------------
 // Section Block
 //-----------------------------------------------------------------
 
-@include component(s-block) {
+	@include component(s-block) {
+	
+		@include core {
+			position: relative;
+			transition: base(transition);
+			padding: 7%;
+			background-color: color(greyscale, white);	
+			background-size: cover;
+		}
+	
+	} // component(s-block)
+	
+} // sections
 
-	@include core {
-		position: relative;
-		transition: base(transition);
-		padding: 7%;
-		background-color: color(greyscale, white);	
-		background-size: cover;
-	}
-
-} // component(s-block)
+// print the styles
+@include sections(
+	if(variable-exists(sections), $sections, ())
+);

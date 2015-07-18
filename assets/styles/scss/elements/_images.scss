@@ -2,175 +2,193 @@
 // Images
 //=================================================================
 
+@mixin images($config: ()) {
+
+//-----------------------------------------------------------------
+// Config
+//-----------------------------------------------------------------
+
+	$config: map-merge-deep((
+	), $config);
+	
+	$images: $config !global;
+
 //-----------------------------------------------------------------
 // Responsive Images
 //-----------------------------------------------------------------
 
-img {
-	max-width: 100%;
-	height: auto;
-} 
+	img {
+		max-width: 100%;
+		height: auto;
+	} 
 
 //-----------------------------------------------------------------
 // Thumbnails
 //-----------------------------------------------------------------
 
-.thumbnail {
-	border: 5px solid white;
-	box-shadow: 0px 0px 1px rgba(0,0,0,0.2);
-	display: block;
-}
+	.thumbnail {
+		border: 5px solid white;
+		box-shadow: 0px 0px 1px rgba(0,0,0,0.2);
+		display: block;
+	}
 
 //-----------------------------------------------------------------
 // Shaped Images
 //-----------------------------------------------------------------
 
-.square, 
-.circle {	
-	position: relative;
-	height: 0;
-	padding-top: 100%;
-	overflow: hidden;
-	img {
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		transform: translateX(-50%) translateY(-50%);
-		display: block;
-		height: 100%;
-		width: auto;
-		max-width: none;
+	.square, 
+	.circle {	
+		position: relative;
+		height: 0;
+		padding-top: 100%;
+		overflow: hidden;
+		img {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translateX(-50%) translateY(-50%);
+			display: block;
+			height: 100%;
+			width: auto;
+			max-width: none;
+		}
 	}
-}
-
-.circle {
-	border-radius: 50%;
-}
+	
+	.circle {
+		border-radius: 50%;
+	}
 
 //-----------------------------------------------------------------
 // Background Image
 //-----------------------------------------------------------------
-
-@include component(bg-img) {
-
-	@include core {
-		background-image: url("#{$asset-path}/images/stock-1-bg.jpg");
-		background-size: cover;
-		position: absolute;
-		height: 100%;
-		width: 100%;
-		top: 0;
-		left: 0;
-		transition: 0.4s;
-	}
-
-	@include modifier(scale-rotate) {
-		&:hover,
-		[class*="s-block-"]:hover & {
-			transform: scale(1.3) rotate(7.5deg);
+	
+	@include component(bg-img) {
+	
+		@include core {
+			background-image: url("#{$asset-path}/images/stock-1-bg.jpg");
+			background-size: cover;
+			position: absolute;
+			height: 100%;
+			width: 100%;
+			top: 0;
+			left: 0;
+			transition: 0.4s;
 		}
-	}
-
-} // component
+	
+		@include modifier(scale-rotate) {
+			&:hover,
+			[class*="s-block-"]:hover & {
+				transform: scale(1.3) rotate(7.5deg);
+			}
+		}
+	
+	} // component
 
 //-----------------------------------------------------------------
 // Desktop Graphic
 //-----------------------------------------------------------------
-
-@include component(desktop-graphic) {
-
-	@include core {
-
-		position: relative;
-		cursor: pointer;
-
-		img {
+	
+	@include component(desktop-graphic) {
+	
+		@include core {
+	
 			position: relative;
-			z-index: 1;		
-		}
-
-		div {
-			position: absolute;
-			background-size: 100%;
-			background-position: center 0%;
-			transition: 3s;
-			height: 58.25%;
-			width: 92.2%;
-			top: 3.95%;
-			left: 3.9%;
-			z-index: 0;		
-		}
-
-	} // core
-
-	@include modifier(scroll) {
-		&:hover {
+			cursor: pointer;
+	
+			img {
+				position: relative;
+				z-index: 1;		
+			}
+	
 			div {
-				background-position: center 100%;	
-				transition: 20s;		
+				position: absolute;
+				background-size: 100%;
+				background-position: center 0%;
+				transition: 3s;
+				height: 58.25%;
+				width: 92.2%;
+				top: 3.95%;
+				left: 3.9%;
+				z-index: 0;		
+			}
+	
+		} // core
+	
+		@include modifier(scroll) {
+			&:hover {
+				div {
+					background-position: center 100%;	
+					transition: 20s;		
+				}
 			}
 		}
-	}
-
-} // component(desktop-graphic)
+	
+	} // component(desktop-graphic)
 
 //-----------------------------------------------------------------
 // Mobile Graphic
 //-----------------------------------------------------------------
-
-.mobile-graphics {
-	position: relative;
-}
-
-@include component(mobile-graphic) {
-
-	@include core {
-		background-image: url("#{$asset-path}/images/mobile-base-blue.png");
-		background-size: 100% 100%;
-		padding: 30% 8%;
-		transition: base(transition);
-	}
-
-	@include modifier(position) {
-		position: absolute;
-		top: 0;
-		@extend %horizontal-center;;
-	}
-
-	@include modifier(left) {
-		transform: translateX(-45%) translateZ(0) scale(0.85);
-		@include extend(position);
-		&:hover {
-			left: -25%;
-		}
-	}
-
-	@include modifier(right) {
-		transform: translateX(45%) translateZ(0) scale(0.85);
-		@include extend(position);
-		&:hover {
-			right: -25%;
-		}
-	}
-
-	@include modifier(center) {
+	
+	.mobile-graphics {
 		position: relative;
-		transform: translateZ(0);
-		&:hover {
-			transform: scale(1.05) translateZ(0);
-		}
 	}
-
-	// Phone Colors
-
-	$phone-colors: (
-		blue, green, purple, red, white, yellow
-	);
-
-	@each $color in $phone-colors {
-		@include modifier(#{$color}) {
-			background-image: url("#{$asset-path}/images/mobile-base-#{$color}.png");
+	
+	@include component(mobile-graphic) {
+	
+		@include core {
+			background-image: url("#{$asset-path}/images/mobile-base-blue.png");
+			background-size: 100% 100%;
+			padding: 30% 8%;
+			transition: base(transition);
 		}
-	}
+	
+		@include modifier(position) {
+			position: absolute;
+			top: 0;
+			@extend %horizontal-center;;
+		}
+	
+		@include modifier(left) {
+			transform: translateX(-45%) translateZ(0) scale(0.85);
+			@include extend(position);
+			&:hover {
+				left: -25%;
+			}
+		}
+	
+		@include modifier(right) {
+			transform: translateX(45%) translateZ(0) scale(0.85);
+			@include extend(position);
+			&:hover {
+				right: -25%;
+			}
+		}
+	
+		@include modifier(center) {
+			position: relative;
+			transform: translateZ(0);
+			&:hover {
+				transform: scale(1.05) translateZ(0);
+			}
+		}
+	
+		// Phone Colors
+	
+		$phone-colors: (
+			blue, green, purple, red, white, yellow
+		);
+	
+		@each $color in $phone-colors {
+			@include modifier(#{$color}) {
+				background-image: url("#{$asset-path}/images/mobile-base-#{$color}.png");
+			}
+		}
+	
+	} // component(mobile-graphic)
+	
+} // images
 
-} // component(mobile-graphic)
+// print the styles
+@include images(
+	if(variable-exists(images), $images, ())
+);

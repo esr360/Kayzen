@@ -2,103 +2,110 @@
 // Billboard
 //=================================================================
 
+@mixin billboard($config: ()) {
+
 //-----------------------------------------------------------------
 // Config
 //-----------------------------------------------------------------
 
-$billboard-default: (
-	full-screen     : false,
-	overlay         : false,
-	text-align      : center,
-	min-height      : 500px,
-	bg-image        : "",
-	bg-color        : color(greyscale, grey-5),
-	overlay-color   : color(brand, primary),
-	overlay-opacity : 0.6,
-	color           : color(greyscale, white),
-	wrapper-width   : breakpoint(break-2)
+	$config: map-merge-deep((
+		full-screen     : false,
+		overlay         : false,
+		text-align      : center,
+		min-height      : 500px,
+		bg-image        : "",
+		bg-color        : color(greyscale, grey-5),
+		overlay-color   : color(brand, primary),
+		overlay-opacity : 0.6,
+		color           : color(greyscale, white),
+		wrapper-width   : breakpoint(break-2)
+	), $config);
+	
+	$billboard: $config !global;
+
+//-----------------------------------------------------------------
+// Component
+//-----------------------------------------------------------------
+
+	@include component(billboard) {
+
+// Core Styles
+//-----------------------------------------------------------------
+
+		@include core {
+	
+			min-height: map-get($billboard, min-height);
+			background-color: map-get($billboard, bg-color);
+			position: relative;
+	
+			// Conditionals
+	
+			// only apply a bg image if there is one to apply
+			@if map-get($billboard, bg-image) != "" {
+				background-image: url(map-get($billboard, bg-image));
+				background-size: cover;
+			}
+			
+			@if map-get($billboard, full-screen) == true {
+				@include extend(full-screen);
+			}
+	
+			@if map-get($billboard, overlay) == true {
+				@include extend(overlay);
+			}
+			
+			// Child Styles
+	
+			@at-root .bb-wrapper {
+				color: map-get($billboard, color);
+				text-align: map-get($billboard, text-align);
+				@extend %horizontal-center;
+				@include vertical-center(absolute);
+				@media (min-width: breakpoint(break-3)) {
+					width: map-get($billboard, wrapper-width);
+				}
+			}
+	
+		} // core
+
+// Modifiers
+//-----------------------------------------------------------------
+
+		@include modifier(overlay) {
+			@include bg-overlay(rgba(map-get($billboard, overlay-color), map-get($billboard, overlay-opacity)));
+		}
+	
+		@include modifier(full-screen) {
+			height: 90%;
+			height: calc(100% - #{header(height)});
+		}
+	
+	} // component(billboard)
+
+	@include component(header) {
+		@include modifier(absolute) {
+			& + #main {
+				@include component(billboard) {
+					@include modifier(full-screen) {
+						height: 100%;
+						height: 100vh;
+					}
+				}
+			}
+		}
+	}
+	
+} // billboard
+
+// print the styles
+@include billboard(
+	if(variable-exists(billboard), $billboard, ())
 );
 
 //-----------------------------------------------------------------
 // Utilities
 //-----------------------------------------------------------------
 
-@if global-variable-exists(billboard) {
-	$billboard-default: map-merge($billboard-default, $billboard);
-}
-
 @function billboard($key) {
     @return map-get($billboard-default, $key);
-}
-
-//-----------------------------------------------------------------
-// Component
-//-----------------------------------------------------------------
-
-@include component(billboard) {
-
-// Core Styles
-//-----------------------------------------------------------------
-
-	@include core {
-
-		min-height: billboard(min-height);
-		background-color: billboard(bg-color);
-		position: relative;
-
-		// Conditionals
-
-		// only apply a bg image if there is one to apply
-		@if billboard(bg-image) != "" {
-			background-image: url(billboard(bg-image));
-			background-size: cover;
-		}
-		
-		@if billboard(full-screen) == true {
-			@include extend(full-screen);
-		}
-
-		@if billboard(overlay) == true {
-			@include extend(overlay);
-		}
-		
-		// Child Styles
-
-		@at-root .bb-wrapper {
-			color: billboard(color);
-			text-align: billboard(text-align);
-			@extend %horizontal-center;
-			@include vertical-center(absolute);
-			@media (min-width: breakpoint(break-3)) {
-				width: billboard(wrapper-width);
-			}
-		}
-
-	} // core
-
-// Modifiers
-//-----------------------------------------------------------------
-
-	@include modifier(overlay) {
-		@include bg-overlay(rgba(billboard(overlay-color), billboard(overlay-opacity)));
-	}
-
-	@include modifier(full-screen) {
-		height: 90%;
-		height: calc(100% - #{header(height)});
-	}
-
-} // component(billboard)
-
-@include component(header) {
-	@include modifier(absolute) {
-		& + #main {
-			@include component(billboard) {
-				@include modifier(full-screen) {
-					height: 100%;
-					height: 100vh;
-				}
-			}
-		}
-	}
 }

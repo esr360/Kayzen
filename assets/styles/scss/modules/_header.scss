@@ -32,36 +32,36 @@
 	
 		@include core {
 	
-			background-color: map-get($config, bg-color);		
+			background-color: map-get($header, bg-color);		
 	
 			// Conditionals
 	
-			@if map-get($config, bar) {
+			@if map-get($header, bar) {
 				@include extend(bar);
 			}
 	
-			@if map-get($config, absolute) {
+			@if map-get($header, absolute) {
 				@include extend(absolute);
 			}
 	
-			@if map-get($config, side) != null {
-				@if map-get($config, side) == left {
+			@if map-get($header, side) != null {
+				@if map-get($header, side) == left {
 					@include extend(side, left);
-				} @else if map-get($config, side) == right {
+				} @else if map-get($header, side) == right {
 					@include extend(side, right);
 				} @else {
 					@include extend(side);
 				}
 			}
 	
-			@if map-get($config, dark) {
+			@if map-get($header, dark) {
 				@include extend(dark);
 			}
 	
 			// Child Styles
 	
 			@at-root .header-wrapper {
-				height: map-get($config, height);
+				height: map-get($header, height);
 			}
 	
 		} // core
@@ -83,7 +83,7 @@
 	
 		@include modifier(absolute) {
 			position: absolute;
-			top: map-get($config, top-position);
+			top: map-get($header, top-position);
 			z-index: 5;
 			width: 100%;
 		}
@@ -94,26 +94,26 @@
 			height: 100%;
 			top: 0;	
 			overflow: auto;
-			width: map-get($config, side-width);	
+			width: map-get($header, side-width);	
 			@include modifier(left) {
 				left: 0;
 				+ #main {
-					margin-left: map-get($config, side-width);
+					margin-left: map-get($header, side-width);
 				}
 			}
 			@include modifier(right) {
 				right: 0;
 				+ #main {
-					margin-right: map-get($config, side-width);
+					margin-right: map-get($header, side-width);
 				}
 			}
 			@include nested-component(container) {
-				max-width: map-get($config, side-container-width);
+				max-width: map-get($header, side-container-width);
 			}
 		}
 	
 		@include modifier(dark) {
-			background-color: map-get($config, dark-color);
+			background-color: map-get($header, dark-color);
 		}
 	
 	} // component

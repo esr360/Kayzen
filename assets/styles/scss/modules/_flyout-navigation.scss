@@ -2,93 +2,111 @@
 // Flyout Navigation
 //=================================================================
 
-.flyout-trigger {
-	position: absolute;
-	top: 1rem;
-	right: 1rem;
-	z-index: 11;
-	&, .fa {
-		cursor: pointer;
-	}
-	.fa {
-		transition: 0.4s;
-		transform-origin: 50% 0;
-	}
-	.nav-close {
-		transform: scale(0) translateY(-50%);
-	}
-	&.active {
-		.nav-open {
-			transform: scale(0) translateY(-50%);
+@mixin flyout-navigation($config: ()) {
+
+//-----------------------------------------------------------------
+// Config
+//-----------------------------------------------------------------
+
+	$config: map-merge-deep((
+	), $config);
+	
+	$flyout-navigation: $config !global;
+	
+	.flyout-trigger {
+		position: absolute;
+		top: 1rem;
+		right: 1rem;
+		z-index: 11;
+		&, .fa {
+			cursor: pointer;
+		}
+		.fa {
+			transition: 0.4s;
+			transform-origin: 50% 0;
 		}
 		.nav-close {
-			transform: scale(1) translateY(-50%);
+			transform: scale(0) translateY(-50%);
 		}
-	}
-}
-
-.flyout-container {
-
-    position: fixed;
-    width: 250px;
-    left: -250px;
-    height: 100%;
-    top: 0;
-    z-index: 9999;
-    font-size: font-size(size-3);
-    font-weight: bold;
-    overflow: auto;
-    background: color(greyscale, grey-5);
-    transition: 0.4s;
-    transform: translate3d(0,0,0);
-    box-shadow: inset -10px 0 6px -9px rgba(0, 0, 0, 0.7);
-
-	ul {
-		padding: 0;
-		margin: 0;
-		list-style: none;
-		li {
-			&:hover {
-				> a {
-					border-left-color: color(brand, primary);
-				}
+		&.active {
+			.nav-open {
+				transform: scale(0) translateY(-50%);
+			}
+			.nav-close {
+				transform: scale(1) translateY(-50%);
 			}
 		}
-		a {
-		    display: block;
-		    padding: 1em 1.6em;
-		    border-bottom: 1px solid rgba(color(greyscale, black), 0.1);
-		    border-top: 1px solid rgba(color(greyscale, white), 0.05);
-		    border-left: 5px solid rgba(color(greyscale, black),0.3);
-		    text-decoration: none;
-			color: color(greyscale, grey-3);
-		}   
+	}
+	
+	.flyout-container {
+	
+	    position: fixed;
+	    width: 250px;
+	    left: -250px;
+	    height: 100%;
+	    top: 0;
+	    z-index: 9999;
+	    font-size: font-size(size-3);
+	    font-weight: bold;
+	    overflow: auto;
+	    background: color(greyscale, grey-5);
+	    transition: 0.4s;
+	    transform: translate3d(0,0,0);
+	    box-shadow: inset -10px 0 6px -9px rgba(0, 0, 0, 0.7);
+	
 		ul {
+			padding: 0;
+			margin: 0;
+			list-style: none;
+			li {
+				&:hover {
+					> a {
+						border-left-color: color(brand, primary);
+					}
+				}
+			}
+			a {
+			    display: block;
+			    padding: 1em 1.6em;
+			    border-bottom: 1px solid rgba(color(greyscale, black), 0.1);
+			    border-top: 1px solid rgba(color(greyscale, white), 0.05);
+			    border-left: 5px solid rgba(color(greyscale, black),0.3);
+			    text-decoration: none;
+				color: color(greyscale, grey-3);
+			}   
 			ul {
-				padding-left: 1.5em;
-				font-weight: lighter;
-			}
-		}
-	}
-
-	> ul {		
-		> li {
-			> a {
-				color: white;
-				border-left-color: color(brand, primary);
-				background: rgba(0,0,0,0.15);
-			}
-			&:hover {
-				> a {
-					background: color(brand, primary);
-					color: color(greyscale, white);
+				ul {
+					padding-left: 1.5em;
+					font-weight: lighter;
 				}
 			}
 		}
-	}
+	
+		> ul {		
+			> li {
+				> a {
+					color: white;
+					border-left-color: color(brand, primary);
+					background: rgba(0,0,0,0.15);
+				}
+				&:hover {
+					> a {
+						background: color(brand, primary);
+						color: color(greyscale, white);
+					}
+				}
+			}
+		}
+	
+	    .flyout-active & {
+	    	left: 0;
+	    }
+	
+	} // .flyout-nav-container
+	
+} // flyout-navigation
 
-    .flyout-active & {
-    	left: 0;
-    }
-
-} // end .flyout-nav-container
+// print the styles
+@include flyout-navigation(
+	if(variable-exists(flyout-navigation), $flyout-navigation, ())
+);

@@ -2,9 +2,27 @@
 // Google Map
 //=================================================================
 
-.google-map {
-	background: rgba(0,0,0,0.2);
-    width: 100%;
-    height: 375px;
-	display: block;
-}
+@mixin google-map($config: ()) {
+
+//-----------------------------------------------------------------
+// Config
+//-----------------------------------------------------------------
+
+	$config: map-merge-deep((
+	), $config);
+	
+	$google-map: $config !global;
+
+	.google-map {
+		background: rgba(0,0,0,0.2);
+	    width: 100%;
+	    height: 375px;
+		display: block;
+	}
+	
+} // google-map
+
+// print the styles
+@include google-map(
+	if(variable-exists(google-map), $google-map, ())
+);

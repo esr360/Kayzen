@@ -2,9 +2,13 @@
 // Color Palettes
 //=================================================================
 
-@mixin palettes($palettes: ()) {
+@mixin palettes($config: ()) {
 	
-	$palettes: map-merge-deep((
+//-----------------------------------------------------------------
+// Config
+//-----------------------------------------------------------------
+
+	$config: map-merge-deep((
 		greyscale: (
 			white       : #ffffff,
 			grey-1      : #f8f8f8,
@@ -47,10 +51,13 @@
 			reddit      : #0D7CCD,
 			google-plus : #dd4b39		
 		)
-	), $palettes) !global;
+	), $config);
+	
+	$palettes: $config !global;
 
 } // palettes
 
+// print the styles
 @include palettes(
 	if(variable-exists(palettes), $palettes, ())
 );

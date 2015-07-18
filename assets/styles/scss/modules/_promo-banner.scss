@@ -2,8 +2,26 @@
 // Promo Banner
 //=================================================================
 
-.promo-banner {
+@mixin promo-banner($config: ()) {
 
+//-----------------------------------------------------------------
+// Config
+//-----------------------------------------------------------------
 
+	$config: map-merge-deep((
+	), $config);
+	
+	$promo-banner: $config !global;
 
-} // end .promo-banner
+	.promo-banner {
+	
+	
+	
+	} // end .promo-banner
+		
+} // promo-banner
+
+// print the styles
+@include promo-banner(
+	if(variable-exists(promo-banner), $promo-banner, ())
+);

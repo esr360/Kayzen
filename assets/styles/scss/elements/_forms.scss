@@ -2,13 +2,31 @@
 // Forms
 //=================================================================
 
-@include component(form) {
+@mixin forms($config: ()) {
+
+//-----------------------------------------------------------------
+// Config
+//-----------------------------------------------------------------
+
+	$config: map-merge-deep((
+	), $config);
+	
+	$forms: $config !global;
+
+	@include component(form) {
 	
 // Core Styles
 //-----------------------------------------------------------------
 
-	@include core {
+		@include core {
+			
+		} // core
 		
-	} // core
+	} // component(form)
 	
-} // component(form)
+} // forms
+
+// print the styles
+@include forms(
+	if(variable-exists(forms), $forms, ())
+);

@@ -1,39 +1,57 @@
 //=================================================================
 // Lists
 //=================================================================
+
+@mixin lists($config: ()) {
+
+//-----------------------------------------------------------------
+// Config
+//-----------------------------------------------------------------
+
+	$config: map-merge-deep((
+	), $config);
 	
-@include component(list) {
+	$lists: $config !global;
+	
+	@include component(list) {
 	
 // Core Styles
 //-----------------------------------------------------------------
 
-	@include core {
-		
-	} // core
+		@include core {
+			
+		} // core
 	
 // Modifiers
 //-----------------------------------------------------------------
 
-    @include modifier(reset) {
-		@extend %list-reset;
-	}
-	
-    @include modifier(clear) {
-		padding-left: 1em;
-	}
-	
-    @include modifier(arrow) {
-		@include extend(reset);
-		li {
-			line-height: 1.8;
-			margin-bottom: 0 !important;
-			&:before {
-				content: "\f138";
-				font-family: FontAwesome;
-				margin-right: 0.5em;
-				color: color(brand, primary);
+	    @include modifier(reset) {
+			@extend %list-reset;
+		}
+		
+	    @include modifier(clear) {
+			padding-left: 1em;
+		}
+		
+	    @include modifier(arrow) {
+			@include extend(reset);
+			li {
+				line-height: 1.8;
+				margin-bottom: 0 !important;
+				&:before {
+					content: "\f138";
+					font-family: FontAwesome;
+					margin-right: 0.5em;
+					color: color(brand, primary);
+				}
 			}
 		}
-	}
+		
+	} // component(list)
 	
-} // component(list)
+} // lists
+
+// print the styles
+@include lists(
+	if(variable-exists(lists), $lists, ())
+);

@@ -15,6 +15,9 @@ $asset-path : "../..";
 // Themes
 //-----------------------------------------------------------------
 
+$theme: Kayzen;
+
+//@import "themes/default";
 @import "themes/kayzen";
 //@import "themes/sandbox";
 
@@ -76,3 +79,9 @@ $asset-path : "../..";
 
 @import "sections/sections";
 @import "sections/billboard";
+
+//-----------------------------------------------------------------
+// Themes
+//-----------------------------------------------------------------
+
+@import "themes/default";

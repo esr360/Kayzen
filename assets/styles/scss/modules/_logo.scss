@@ -2,40 +2,58 @@
 // Logo
 //=================================================================
 
+@mixin logo($config: ()) {
+
 //-----------------------------------------------------------------
 // Config
 //-----------------------------------------------------------------
 
-$logo-text-align                : left !default;
+	$config: map-merge-deep((
+	), $config);
+	
+	$logo: $config !global;
 
-$logo-color                     : color(brand, primary) !default;
-$logo-size                      : font-size(size-5) !default;
-
-$logo-padding                   : 0 !default;
+//-----------------------------------------------------------------
+// Config
+//-----------------------------------------------------------------
+	
+	$logo-text-align                : left !default;
+	
+	$logo-color                     : color(brand, primary) !default;
+	$logo-size                      : font-size(size-5) !default;
+	
+	$logo-padding                   : 0 !default;
 
 //-----------------------------------------------------------------
 // Component
 //-----------------------------------------------------------------
 
-.logo {	
-
-	color: $logo-color;
-	font-size: $logo-size;
-	text-align: $logo-text-align;
-	padding: $logo-padding;
-	// for plain text logos
-	a {
+	.logo {	
+	
 		color: $logo-color;
-		display: inline-block;
-		&:hover {
-			text-decoration: none;
+		font-size: $logo-size;
+		text-align: $logo-text-align;
+		padding: $logo-padding;
+		// for plain text logos
+		a {
+			color: $logo-color;
+			display: inline-block;
+			&:hover {
+				text-decoration: none;
+			}
 		}
-	}
-	// for image logos
-	img {
-		height: 38px;
-		display: inline-block;
-		vertical-align: middle;
-	}
+		// for image logos
+		img {
+			height: 38px;
+			display: inline-block;
+			vertical-align: middle;
+		}
+	
+	} // end .logo
+	
+} // logo
 
-} // end .logo
+// print the styles
+@include logo(
+	if(variable-exists(logo), $logo, ())
+);

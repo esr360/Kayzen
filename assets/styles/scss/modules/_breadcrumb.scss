@@ -2,23 +2,41 @@
 // Breadcrumb
 //=================================================================
 
-.breadcrumb {	
+@mixin breadcrumb($config: ()) {
 
-	font-size: 0.9em;
-	margin: base(margin) 0;
-	ul {
-		@extend %list-reset;
-	}
-	li {
-		display: inline;
-		&:not(:last-child) {
-			margin-right: 0.2em;
-			&:after {
-				content: "\f105";
-				font-family: FontAwesome;
-				margin-left: 0.4em;
+//-----------------------------------------------------------------
+// Config
+//-----------------------------------------------------------------
+
+	$config: map-merge-deep((
+	), $config);
+	
+	$breadcrumb: $config !global;
+
+	.breadcrumb {	
+	
+		font-size: 0.9em;
+		margin: base(margin) 0;
+		ul {
+			@extend %list-reset;
+		}
+		li {
+			display: inline;
+			&:not(:last-child) {
+				margin-right: 0.2em;
+				&:after {
+					content: "\f105";
+					font-family: FontAwesome;
+					margin-left: 0.4em;
+				}
 			}
 		}
-	}
+	
+	} // end .breadcrumb
+	
+} // breadcrumb
 
-} // end .breadcrumb
+// print the styles
+@include breadcrumb(
+	if(variable-exists(breadcrumb), $breadcrumb, ())
+);

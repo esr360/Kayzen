@@ -31,7 +31,7 @@
 		)
 	), $config);
 	
-	$typography-config: $config !global;
+	$typography: $config !global;
 
 //-----------------------------------------------------------------
 // Styles
@@ -65,7 +65,7 @@
 //-----------------------------------------------------------------
 
 @function typography-config($key) {
-    @return map-get($typography-config, $key);
+    @return map-get($typography, $key);
 }
 
 @function typography($group, $key) {

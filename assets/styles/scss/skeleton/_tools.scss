@@ -2,34 +2,123 @@
 // Tools
 //=================================================================
 
+@mixin tools($config: ()) {
+
+//-----------------------------------------------------------------
+// Config
+//-----------------------------------------------------------------
+
+	$config: map-merge-deep((
+		horizontal-center : true,
+		vertical-rhythm   : true,
+		reset-list-styles : true,
+		fill-parent       : true,
+		iframe            : true
+	), $config);
+	
+	$tools: $config !global;
+
 //-----------------------------------------------------------------
 // Horizontal Centering
 //-----------------------------------------------------------------
-
-%horizontal-center {
-	left: 0;
-	right: 0;
-	margin: auto;  
-	text-align: center;
-}
+	
+	@if map-get($tools, horizontal-center) {
+		
+		%horizontal-center {
+			left: 0;
+			right: 0;
+			margin: auto;  
+			text-align: center;
+		}
+		
+	} // horizontal-center
 
 //-----------------------------------------------------------------
 // Vertical Rhythm
 //-----------------------------------------------------------------
 
-// Remove top spacing 
-%top-rhythm {
-	&:first-child {
-		margin-top: 0;
-	}   
-}
+	@if map-get($tools, vertical-rhythm) {
+		
+		// Remove top spacing 
+		%top-rhythm {
+			&:first-child {
+				margin-top: 0;
+			}   
+		}
+		
+		// Remove bottom spacing 
+		%bottom-rhythm {
+			&:last-child {
+				margin-bottom: 0;
+			}  
+		}
+	
+	} // vertical-rhythm
 
-// Remove bottom spacing 
-%bottom-rhythm {
-	&:last-child {
-		margin-bottom: 0;
-	}  
-}
+//-----------------------------------------------------------------
+// Reset List Styles
+//-----------------------------------------------------------------
+
+	@if map-get($tools, reset-list-styles) {
+		
+		%list-reset {
+			margin: 0;
+			padding: 0;
+			list-style: none;
+		}
+	
+	} // reset-list-styles
+
+//-----------------------------------------------------------------
+// Fill-Parent Element 
+//-----------------------------------------------------------------
+	
+	@if map-get($tools, fill-parent) {
+		
+		%fill-parent {
+			position: absolute;
+			height: 100%;
+			width: 100%;
+			top: 0;
+			left: 0;
+		}
+	
+	} // fill-parent
+
+//-----------------------------------------------------------------
+// Iframe
+//-----------------------------------------------------------------
+	
+	@if map-get($tools, iframe) {
+		
+		.auto-resizable-iframe {
+			max-width: breakpoint(break-2);
+			margin: 0px auto;
+			> div { 
+				position: relative;
+				padding-bottom: 58%;
+				height: 0px;           
+			}
+			iframe {
+				position: absolute;
+				border: 0px;
+				top: 0px;
+				left: 0px;
+				width: 100%;
+				height: 100%;
+			}
+		}
+	
+	} // iframe
+
+} // tools
+
+//-----------------------------------------------------------------
+// Utilities
+//-----------------------------------------------------------------
+
+// Vertical Rhythm
+//-----------------------------------------------------------------
 
 @mixin vertical-rhythm($position: null) {  
 	@if $position == top { 
@@ -42,46 +131,7 @@
 	}
 }
 
-//-----------------------------------------------------------------
-// Reset List Styles
-//-----------------------------------------------------------------
-
-%list-reset {
-	margin: 0;
-	padding: 0;
-	list-style: none;
-}
-
-//-----------------------------------------------------------------
-// Fill-Parent Element 
-//-----------------------------------------------------------------
-
-%fill-parent {
-	position: absolute;
-	height: 100%;
-	width: 100%;
-	top: 0;
-	left: 0;
-}
-
-//-----------------------------------------------------------------
-// Iframe
-//-----------------------------------------------------------------
-
-.auto-resizable-iframe {
-	max-width: breakpoint(break-2);
-	margin: 0px auto;
-	> div { 
-		position: relative;
-		padding-bottom: 58%;
-		height: 0px;           
-	}
-	iframe {
-		position: absolute;
-		border: 0px;
-		top: 0px;
-		left: 0px;
-		width: 100%;
-		height: 100%;
-	}
-}
+// print the styles
+@include tools(
+	if(variable-exists(tools), $tools, ())
+);

@@ -2,70 +2,88 @@
 // Progress Bars
 //=================================================================
 
+@mixin progress-bars($config: ()) {
+
+//-----------------------------------------------------------------
+// Config
+//-----------------------------------------------------------------
+
+	$config: map-merge-deep((
+	), $config);
+	
+	$progress-bars: $config !global;
+
 //-----------------------------------------------------------------
 // Configuration
 //-----------------------------------------------------------------
 
-$progress-radius : 0.4rem;
-$progress-height : 1rem;
-
-%progress-bar {
-	background: rgba(color(greyscale, black),0.15);
-	border-radius: $progress-radius;	
-}
+	$progress-radius : 0.4rem;
+	$progress-height : 1rem;
+	
+	%progress-bar {
+		background: rgba(color(greyscale, black),0.15);
+		border-radius: $progress-radius;	
+	}
 
 //-----------------------------------------------------------------
 // HTML5 Progress
 //-----------------------------------------------------------------
-
-progress {
-
-	width: 100%;
-	height: $progress-height;
-	display: block;
-	color: color(brand, primary);
-	border-radius: $progress-radius;
-	border: none;
-	-webkit-appearance: none;
-
-	&::-webkit-progress-bar {
-		@extend %progress-bar;
-	}
-
-	&::-webkit-progress-value {
-		background: color(brand, primary);
-		border-radius: $progress-radius;
-	}
 	
-	&::-moz-progress-bar {	
-		background: color(brand, primary);
-		border-radius: $progress-radius;	
-	}
-
-	&.progress-alt {
-		color: color(brand, secondary);
-		&::-webkit-progress-value {
-			background: color(brand, secondary);		
-		}		
-		&::-moz-progress-bar {
-			background: color(brand, secondary);		
+	progress {
+	
+		width: 100%;
+		height: $progress-height;
+		display: block;
+		color: color(brand, primary);
+		border-radius: $progress-radius;
+		border: none;
+		-webkit-appearance: none;
+	
+		&::-webkit-progress-bar {
+			@extend %progress-bar;
 		}
-
-	}
-
-} // end progress
+	
+		&::-webkit-progress-value {
+			background: color(brand, primary);
+			border-radius: $progress-radius;
+		}
+		
+		&::-moz-progress-bar {	
+			background: color(brand, primary);
+			border-radius: $progress-radius;	
+		}
+	
+		&.progress-alt {
+			color: color(brand, secondary);
+			&::-webkit-progress-value {
+				background: color(brand, secondary);		
+			}		
+			&::-moz-progress-bar {
+				background: color(brand, secondary);		
+			}
+	
+		}
+	
+	} // end progress
 
 //-----------------------------------------------------------------
 // Fallback
 //-----------------------------------------------------------------
 
-.progress-bar {
-	@extend %progress-bar;
-	width: 100%;
-	height: $progress-height;
-	overflow: hidden;
-	.progress {
-		background: color(brand, primary);
-		height: 100%;
+	.progress-bar {
+		@extend %progress-bar;
+		width: 100%;
+		height: $progress-height;
+		overflow: hidden;
+		.progress {
+			background: color(brand, primary);
+			height: 100%;
+		}
 	}
-}
+	
+} // progress-bars
+
+// print the styles
+@include progress-bars(
+	if(variable-exists(progress-bars), $progress-bars, ())
+);

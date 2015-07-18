@@ -31,7 +31,7 @@
 		@include core {
 			
 			// cache selector as global variable
-			$navigation: & !global;
+			$navigation-selector: & !global;
 			
 		    // all levels
 		    li {    

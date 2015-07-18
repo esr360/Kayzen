@@ -2,181 +2,199 @@
 // Buttons
 //=================================================================
 
+@mixin buttons($config: ()) {
+
+//-----------------------------------------------------------------
+// Config
+//-----------------------------------------------------------------
+
+	$config: map-merge-deep((
+	), $config);
+	
+	$buttons: $config !global;
+
 //-----------------------------------------------------------------
 // Button
 //-----------------------------------------------------------------
 
-@include component(button) {
+	@include component(button) {
 
 // Core Styles
 //-----------------------------------------------------------------
-
-	@include core {
-
-		background: color(greyscale, grey-4);
-		color: color(greyscale, white);
-		display: inline-block;
-		vertical-align: middle;
-		padding: 0 1.2em;
-		line-height: 2.4em;
-		font-weight: 400;
-		transition: 0.4s;
-	    border: 1px solid;
-	    border-color: transparent;
-		cursor: pointer;
-		text-decoration: none;
-
-		&:hover {
-			background: darken(color(greyscale, grey-4), 10%);
+	
+		@include core {
+	
+			background: color(greyscale, grey-4);
 			color: color(greyscale, white);
+			display: inline-block;
+			vertical-align: middle;
+			padding: 0 1.2em;
+			line-height: 2.4em;
+			font-weight: 400;
+			transition: 0.4s;
+		    border: 1px solid;
+		    border-color: transparent;
+			cursor: pointer;
 			text-decoration: none;
-		}
-
-	} // core
+	
+			&:hover {
+				background: darken(color(greyscale, grey-4), 10%);
+				color: color(greyscale, white);
+				text-decoration: none;
+			}
+	
+		} // core
 
 // Sizes
 //-----------------------------------------------------------------
 
-    @include font-sizes;
+    	@include font-sizes;
 
 // Patterns
 //-----------------------------------------------------------------
 
-	@include modifier(block) {
-		width: 100%;
-		text-align: center;
-	} 
-
-	@include modifier(border) {
-		background: none;
-		color: color(greyscale, grey-3);
-		border-color: color(greyscale, grey-3);
-		&:hover {
-			color: color(greyscale, white);
+		@include modifier(block) {
+			width: 100%;
+			text-align: center;
+		} 
+	
+		@include modifier(border) {
+			background: none;
+			color: color(greyscale, grey-3);
+			border-color: color(greyscale, grey-3);
+			&:hover {
+				color: color(greyscale, white);
+			}
 		}
-	}
-
-	@include modifier(disabled) {
-		opacity: 0.6;
-		cursor: not-allowed;
-		transition-delay: 999s;
-	}
-
-	@include modifier(round) {
-		border-radius: 0.4em;
-	}
-
-	@include modifier(oval) {
-		border-radius: 1.5em;
-	}
+	
+		@include modifier(disabled) {
+			opacity: 0.6;
+			cursor: not-allowed;
+			transition-delay: 999s;
+		}
+	
+		@include modifier(round) {
+			border-radius: 0.4em;
+		}
+	
+		@include modifier(oval) {
+			border-radius: 1.5em;
+		}
 
 // Colors
 //-----------------------------------------------------------------
-
-	// Brand Colors
-
-	@each $brand, $color in palette(brand) {
-		@include modifier($brand) {
-			background: $color;
-			&:hover {
-				background: darken($color, 10%);
-			}
-			@include modifier(border) {
-				background: transparent;
-				border-color: $color;
-				color: $color;
+	
+		// Brand Colors
+	
+		@each $brand, $color in palette(brand) {
+			@include modifier($brand) {
+				background: $color;
 				&:hover {
-					background: $color;
-					color: color(greyscale, white);
+					background: darken($color, 10%);
 				}
-			}
-		}
-	}
-
-	// Greyscale Colors
-
-	@each $greyscale, $color in palette(greyscale) {
-		@include modifier($greyscale) {
-			background: $color;
-			@if (lightness($color) > 50) {
-				color: color(brand, primary);
-			}
-			&:hover {
-				background: darken($color, 10%);
-			}
-			@include modifier(border) {
-				background: transparent;
-				border-color: $color;
-				color: $color;
-				&:hover {
-					background: $color;
-					@if (lightness($color) > 80) {
-						color: color(brand, primary);
-					} @else {
+				@include modifier(border) {
+					background: transparent;
+					border-color: $color;
+					color: $color;
+					&:hover {
+						background: $color;
 						color: color(greyscale, white);
 					}
 				}
 			}
 		}
-	}
+	
+		// Greyscale Colors
+	
+		@each $greyscale, $color in palette(greyscale) {
+			@include modifier($greyscale) {
+				background: $color;
+				@if (lightness($color) > 50) {
+					color: color(brand, primary);
+				}
+				&:hover {
+					background: darken($color, 10%);
+				}
+				@include modifier(border) {
+					background: transparent;
+					border-color: $color;
+					color: $color;
+					&:hover {
+						background: $color;
+						@if (lightness($color) > 80) {
+							color: color(brand, primary);
+						} @else {
+							color: color(greyscale, white);
+						}
+					}
+				}
+			}
+		}
 
 // Styles
 //-----------------------------------------------------------------
 
-//	@include modifier(primary) {
-//		@include extend(round, size-4, brand-1);
-//	}	
+//		@include modifier(primary) {
+//			@include extend(round, size-4, brand-1);
+//		}	
 
-} // component(button)
+	} // component(button)
 
 //-----------------------------------------------------------------
 // Button Group
 //-----------------------------------------------------------------
 
-@include component(bgroup) {
-
-	@include core {
-
-		@include nested-component(button) {
-			margin-left: 0.5em;
-			&:first-child {
-				margin-left: 0;
-			}
-		}
-
-		> a, .text-sep {
-			margin-left: 0.5em;
-			&:first-child {
-				margin-left: 0;
-			}
-		}
-
-		@media (max-width: breakpoint(break-1)) {
+	@include component(bgroup) {
+	
+		@include core {
+	
 			@include nested-component(button) {
-				margin-left: 0;
-				display: block;
-				width: 100%;
-				margin-bottom: 1rem;
-				text-align: center;
-				&:last-child {
-					margin-bottom: 0;
+				margin-left: 0.5em;
+				&:first-child {
+					margin-left: 0;
 				}
-			}		
-		}
-
-	} // core
-
-} // component(bgroup)
+			}
+	
+			> a, .text-sep {
+				margin-left: 0.5em;
+				&:first-child {
+					margin-left: 0;
+				}
+			}
+	
+			@media (max-width: breakpoint(break-1)) {
+				@include nested-component(button) {
+					margin-left: 0;
+					display: block;
+					width: 100%;
+					margin-bottom: 1rem;
+					text-align: center;
+					&:last-child {
+						margin-bottom: 0;
+					}
+				}		
+			}
+	
+		} // core
+	
+	} // component(bgroup)
 
 //-----------------------------------------------------------------
 // Browser Hacks
 //-----------------------------------------------------------------
+	
+	// Makes input, button and .button elements equal height in Firefox
+	input::-moz-focus-inner,
+	button::-moz-focus-inner { 
+	    border: 0;
+	    padding: 0;
+		margin-top: 1px; 
+		margin-bottom: 1px;
+	}
+	
+} // buttons
 
-// Makes input, button and .button elements equal height in Firefox
-input::-moz-focus-inner,
-button::-moz-focus-inner { 
-    border: 0;
-    padding: 0;
-	margin-top: 1px; 
-	margin-bottom: 1px;
-}
+// print the styles
+@include buttons(
+	if(variable-exists(buttons), $buttons, ())
+);

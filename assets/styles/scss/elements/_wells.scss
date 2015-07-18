@@ -2,10 +2,28 @@
 // Wells
 //=================================================================
 
-.well {
-    background-color: lighten(color(greyscale, grey-1), 5%);
-    border: 1px solid rgba(color(greyscale, black), 0.15);
-    border-radius: 0.6em;
-    padding: 1rem;
-    position: relative;
-}
+@mixin wells($config: ()) {
+
+//-----------------------------------------------------------------
+// Config
+//-----------------------------------------------------------------
+
+	$config: map-merge-deep((
+	), $config);
+	
+	$wells: $config !global;
+
+	.well {
+	    background-color: lighten(color(greyscale, grey-1), 5%);
+	    border: 1px solid rgba(color(greyscale, black), 0.15);
+	    border-radius: 0.6em;
+	    padding: 1rem;
+	    position: relative;
+	}
+		
+} // wells
+
+// print the styles
+@include wells(
+	if(variable-exists(wells), $wells, ())
+);

@@ -2,38 +2,56 @@
 // Scroll Wheel
 //=================================================================
 
-.scroll-wheel {
+@mixin scroll-wheel($config: ()) {
 
-	position: absolute;
-	font-size: font-size(size-6);
-	color: color(greyscale, white);
-	border: 0.075em solid;
-	border-radius: 1em;
-	width: 1.5em;
-	height: 2.4em;
-	bottom: 2rem;
-	@extend %horizontal-center;
-	&:before {
-		content: "";
-		height: 0.25em;
-		width: 0.25em;
-		border-radius: 50%;
-		background: color(greyscale, white);
+//-----------------------------------------------------------------
+// Config
+//-----------------------------------------------------------------
+
+	$config: map-merge-deep((
+	), $config);
+	
+	$scroll-wheel: $config !global;
+	
+	.scroll-wheel {
+	
 		position: absolute;
-		top: 0.5em;
-		// animation: scroll-down 1.2s infinite;
-		transform: translateZ(0);
+		font-size: font-size(size-6);
+		color: color(greyscale, white);
+		border: 0.075em solid;
+		border-radius: 1em;
+		width: 1.5em;
+		height: 2.4em;
+		bottom: 2rem;
 		@extend %horizontal-center;
-	}
-
-
-	@keyframes scroll-down{
-		0%{
+		&:before {
+			content: "";
+			height: 0.25em;
+			width: 0.25em;
+			border-radius: 50%;
+			background: color(greyscale, white);
+			position: absolute;
 			top: 0.5em;
+			// animation: scroll-down 1.2s infinite;
+			transform: translateZ(0);
+			@extend %horizontal-center;
 		}
-		100%{
-			top: 1.2em;
+	
+	
+		@keyframes scroll-down{
+			0%{
+				top: 0.5em;
+			}
+			100%{
+				top: 1.2em;
+			}
 		}
-	}
+	
+	} // end .scroll-wheel
+	
+} // scroll-wheel
 
-} // end .scroll-wheel
+// print the styles
+@include scroll-wheel(
+	if(variable-exists(scroll-wheel), $scroll-wheel, ())
+);
