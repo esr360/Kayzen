@@ -10,7 +10,7 @@ $palettes: (
 	brand: (
 		primary           : #9B58B5
 	)
-) !global;
+);
 
 @import "skeleton/color-palettes";
 
@@ -18,23 +18,23 @@ $palettes: (
 // Header
 //-----------------------------------------------------------------
 
-$header-custom: (
+$header: (
 	absolute              : true,
 	bar                   : true,
 	bg-color              : transparent,
 	top-position          : 30px
-) !global;
+);
 
 //-----------------------------------------------------------------
 // Navigation 
 //-----------------------------------------------------------------
 
-$navigation-custom: (
+$navigation: (
 	no-icons              : true,
 	link-color            : color(greyscale, white),
-) !global;
+);
 
-$dropdown-custom: (
+$dropdown: (
 	a-color               : color(brand, primary),
 	a-hover-color         : color(greyscale, white),
 	a-hover-bg-color      : color(brand, primary),
@@ -43,14 +43,14 @@ $dropdown-custom: (
 	a-border-bottom       : 1px solid darken(color(greyscale, white), 5%),
 	a-hover-border-color  : darken(color(brand, primary), 10%),
 	li-border-left        : 6px solid color(brand, primary),
-) !global;
+);
 
 //-----------------------------------------------------------------
 // Billboard
 //-----------------------------------------------------------------
 
-$billboard-custom: (
+$billboard: (
 	full-screen           : true,
 	overlay               : true,
 	bg-image              : "#{$asset-path}/images/billboard-1.jpg"
-) !global;
+);

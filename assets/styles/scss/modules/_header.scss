@@ -121,5 +121,5 @@
 } // header
 
 @include header(
-	if(variable-exists(header-custom), $header-custom, ())
+	if(variable-exists(header), $header, ())
 );

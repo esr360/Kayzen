@@ -89,8 +89,8 @@
 
 .slide-nav {
 
-    .arrow-prev,
-    .arrow-next {
+    .slide-prev,
+    .slide-next {
         z-index: 5;
         @include vertical-center(absolute);
         &:focus {
@@ -98,11 +98,11 @@
         }
     }
 
-    .arrow-prev {
+    .slide-prev {
         left: 2rem;
     }
 
-    .arrow-next {
+    .slide-next {
         right: 2rem;
     }
 
@@ -113,7 +113,7 @@
         transform: translateY(-50%) translateX(-50%);
         background: color(brand, primary);
         padding: 0.5em;
-        [class*="arrow-"] {
+        [class*="slide-"] {
             position: relative;
             left: auto;
             right: auto;

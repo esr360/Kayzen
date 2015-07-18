@@ -75,7 +75,7 @@
 
 	// Brand Colors
 
-	@each $brand, $color in palettes-default(brand) {
+	@each $brand, $color in palette(brand) {
 		@include modifier($brand) {
 			background: $color;
 			&:hover {
@@ -95,7 +95,7 @@
 
 	// Greyscale Colors
 
-	@each $greyscale, $color in palettes-default(greyscale) {
+	@each $greyscale, $color in palette(greyscale) {
 		@include modifier($greyscale) {
 			background: $color;
 			@if (lightness($color) > 50) {

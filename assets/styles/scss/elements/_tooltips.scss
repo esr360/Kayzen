@@ -125,8 +125,10 @@ $tooltip-positions: (
 				[class*="tooltip-wrapper"][class*="-#{$tooltip-position}"] & {
 					#{$tooltip-position}: tooltip(distance);
 					@include triangle((
-						core: false, 
-						position: #{$tooltip-position}
+						core     : false, 
+						position : #{$tooltip-position}, 
+						color    : tooltip(arrow-color),
+						size     : tooltip(arrow-size)
 					));
 					@if $tooltip-position == top {
 						transform: translateX(-50%) translateY(-100%);

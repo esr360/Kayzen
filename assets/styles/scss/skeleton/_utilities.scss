@@ -31,7 +31,7 @@
 
 // Nested Component
 // Nest components for appropriate cascading
-@mixin nested-component($component: $component, $root: false, $type: chain) {
+@mixin nested-component($component: $component, $root: false, $type: flex) {
 	@if $type == static {
 		@if $root {
 			@at-root .#{$component} {
@@ -68,8 +68,8 @@
 }
 
 // Core/Default Styles
-// Define styles inside a component but generate them outside
-// the component
+// Define the core styles for a component to be applied on the
+// naked component with no modifiers
 @mixin core($type: class) {	
 	$parent: nth(&, 1) !global;	
 	@if $type == class {
@@ -87,7 +87,9 @@
 // Add a modifier to an existing component
 @mixin modifier($modifier, $root: false) {
 	@if $root {
-		
+		@at-root &[class*="-#{$modifier}"] {
+			@content
+		}
 	} @else {
 		&[class*="-#{$modifier}"] {
 			@content;
@@ -271,13 +273,11 @@
 
 @mixin triangle($config: ()) {
 	
-	$tooltip-position: null;
-	
 	$config: map-merge((
 		core     : true, 
-		position : $tooltip-position, 
-		color    : tooltip(arrow-color),
-		size     : tooltip(arrow-size)
+		position : top, 
+		color    : rgba(black, 0.8),
+		size     : 0.5em
 	), $config);
 	
 	&:after {
@@ -313,4 +313,5 @@
 			border-right: solid map-get($config, size) map-get($config, color);
 		}
 	}
-}
+	
+} // triangle

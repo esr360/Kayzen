@@ -659,18 +659,22 @@ http://github.com/esr360/Kayzen-GS/
 h1:first-child, h2:first-child, h3:first-child, h4:first-child, h5:first-child, h6:first-child,
 p:first-child, ul:first-child, ol:first-child,
 fieldset:first-child, legend:first-child, figure:first-child, table:first-child,
-pre:first-child, hr:first-child, [class*="hgroup-"] [class*="heading-"]:first-child, .hgroup [class*="heading-"]:first-child {
+pre:first-child, hr:first-child, [class*="hgroup-"] .heading:first-child,
+[class*="hgroup-"] [class*="heading-"]:first-child, .hgroup .heading:first-child,
+.hgroup [class*="heading-"]:first-child {
   margin-top: 0;
 }
 
 h1:last-child, h2:last-child, h3:last-child, h4:last-child, h5:last-child, h6:last-child,
 p:last-child, ul:last-child, ol:last-child,
 fieldset:last-child, legend:last-child, figure:last-child, table:last-child,
-pre:last-child, hr:last-child, [class*="accordion-"]:last-child, .accordion:last-child, [class*="hgroup-"]:last-child, .hgroup:last-child, [class*="hgroup-"] [class*="heading-"]:last-child, .hgroup [class*="heading-"]:last-child, [class*="widget-"][class*="-stacked"]:last-child, [class*="widgets-"][class*="-large"]:last-child {
+pre:last-child, hr:last-child, [class*="accordion-"]:last-child, .accordion:last-child, [class*="hgroup-"]:last-child, .hgroup:last-child, [class*="hgroup-"] .heading:last-child,
+[class*="hgroup-"] [class*="heading-"]:last-child, .hgroup .heading:last-child,
+.hgroup [class*="heading-"]:last-child, [class*="widget-"][class*="-stacked"]:last-child, [class*="widgets-"][class*="-large"]:last-child {
   margin-bottom: 0;
 }
 
-[class*="list-"][class*="-reset"], .breadcrumb ul, .footer-nav ul, [class*="navigation-"] > ul, .navigation > ul, [class*="navigation-"] ul ul, .navigation ul ul {
+[class*="list-"][class*="-reset"], [class*="list-"][class*="-arrow"], .breadcrumb ul, .footer-nav ul, [class*="navigation-"] > ul, .navigation > ul, [class*="navigation-"] ul ul, .navigation ul ul {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -730,6 +734,7 @@ html {
 }
 
 body {
+  background: #f8f8f8;
   font-family: "Lato";
   color: #6f777b;
   font-size: 1em;
@@ -741,6 +746,9 @@ body {
   max-width: 90%;
   margin: 0 auto;
   position: relative;
+}
+[class*="container-"][class*="-small"] {
+  width: 940px;
 }
 [class*="container-"][class*="-full"] {
   width: 940px;
@@ -1006,9 +1014,6 @@ hr.line {
   }
 
   .sidebar,
-  .page-navigation,
-  .wp-prev-next,
-  .respond-form,
   nav {
     display: none;
   }
@@ -1336,10 +1341,14 @@ hr.line {
   color: #ffffff;
 }
 
-[class*="bgroup-"] [class*="button-"], .bgroup [class*="button-"] {
+[class*="bgroup-"] .button,
+[class*="bgroup-"] [class*="button-"], .bgroup .button,
+.bgroup [class*="button-"] {
   margin-left: 0.5em;
 }
-[class*="bgroup-"] [class*="button-"]:first-child, .bgroup [class*="button-"]:first-child {
+[class*="bgroup-"] .button:first-child,
+[class*="bgroup-"] [class*="button-"]:first-child, .bgroup .button:first-child,
+.bgroup [class*="button-"]:first-child {
   margin-left: 0;
 }
 [class*="bgroup-"] > a, [class*="bgroup-"] .text-sep, .bgroup > a, .bgroup .text-sep {
@@ -1349,14 +1358,18 @@ hr.line {
   margin-left: 0;
 }
 @media (max-width: 460px) {
-  [class*="bgroup-"] [class*="button-"], .bgroup [class*="button-"] {
+  [class*="bgroup-"] .button,
+  [class*="bgroup-"] [class*="button-"], .bgroup .button,
+  .bgroup [class*="button-"] {
     margin-left: 0;
     display: block;
     width: 100%;
     margin-bottom: 1rem;
     text-align: center;
   }
-  [class*="bgroup-"] [class*="button-"]:last-child, .bgroup [class*="button-"]:last-child {
+  [class*="bgroup-"] .button:last-child,
+  [class*="bgroup-"] [class*="button-"]:last-child, .bgroup .button:last-child,
+  .bgroup [class*="button-"]:last-child {
     margin-bottom: 0;
   }
 }
@@ -1455,8 +1468,8 @@ button::-moz-focus-inner {
   opacity: 1;
 }
 
-.slide-nav .arrow-prev,
-.slide-nav .arrow-next {
+.slide-nav .slide-prev,
+.slide-nav .slide-next {
   z-index: 5;
   position: absolute;
   top: 50%;
@@ -1464,14 +1477,14 @@ button::-moz-focus-inner {
       -ms-transform: translateY(-50%);
           transform: translateY(-50%);
 }
-.slide-nav .arrow-prev:focus,
-.slide-nav .arrow-next:focus {
+.slide-nav .slide-prev:focus,
+.slide-nav .slide-next:focus {
   outline: none;
 }
-.slide-nav .arrow-prev {
+.slide-nav .slide-prev {
   left: 2rem;
 }
-.slide-nav .arrow-next {
+.slide-nav .slide-next {
   right: 2rem;
 }
 .slide-nav.twin-nav {
@@ -1484,7 +1497,7 @@ button::-moz-focus-inner {
   background: #9B58B5;
   padding: 0.5em;
 }
-.slide-nav.twin-nav [class*="arrow-"] {
+.slide-nav.twin-nav [class*="slide-"] {
   position: relative;
   left: auto;
   right: auto;
@@ -1493,7 +1506,7 @@ button::-moz-focus-inner {
           transform: none;
   margin-left: 0.25em;
 }
-.slide-nav.twin-nav [class*="arrow-"]:first-child {
+.slide-nav.twin-nav [class*="slide-"]:first-child {
   margin-left: 0;
 }
 .slide-nav.twin-nav.strikethrough:before {
@@ -1721,7 +1734,9 @@ button::-moz-focus-inner {
   position: relative;
   background-size: cover;
 }
-[class*="hgroup-"] [class*="heading-"], .hgroup [class*="heading-"] {
+[class*="hgroup-"] .heading,
+[class*="hgroup-"] [class*="heading-"], .hgroup .heading,
+.hgroup [class*="heading-"] {
   margin: 0.5em 0;
   line-height: 0.8;
 }
@@ -2040,10 +2055,14 @@ button .fa {
   color: #ffffff;
 }
 
-[class*="igroup-"] [class*="icon-"], .igroup [class*="icon-"] {
+[class*="igroup-"] .icon,
+[class*="igroup-"] [class*="icon-"], .igroup .icon,
+.igroup [class*="icon-"] {
   margin-left: 1rem;
 }
-[class*="igroup-"] [class*="icon-"]:first-child, .igroup [class*="icon-"]:first-child {
+[class*="igroup-"] .icon:first-child,
+[class*="igroup-"] [class*="icon-"]:first-child, .igroup .icon:first-child,
+.igroup [class*="icon-"]:first-child {
   margin-left: 0;
 }
 
@@ -2180,9 +2199,6 @@ img {
 }
 
 [class*="list-"][class*="-clear"] {
-  padding-left: 1em;
-}
-[class*="list-"][class*="-arrow"] {
   padding-left: 1em;
 }
 [class*="list-"][class*="-arrow"] li {
@@ -2543,7 +2559,9 @@ https://github.com/esr360/K-Tooltips
 [class*="widget-"]:hover .w-icon, .widget:hover .w-icon {
   color: #9B58B5;
 }
-[class*="widget-"] [class*="hgroup-"], .widget [class*="hgroup-"] {
+[class*="widget-"] .hgroup,
+[class*="widget-"] [class*="hgroup-"], .widget .hgroup,
+.widget [class*="hgroup-"] {
   margin-bottom: 0;
 }
 .w-icon {
@@ -2580,6 +2598,7 @@ https://github.com/esr360/K-Tooltips
 [class*="widget-"][class*="-block"]:hover, [class*="widget-"][class*="-block"]:hover .w-icon {
   color: #ffffff;
 }
+[class*="widget-"][class*="-block"]:hover .heading,
 [class*="widget-"][class*="-block"]:hover [class*="heading-"] {
   color: #ffffff;
 }
@@ -2621,6 +2640,7 @@ https://github.com/esr360/K-Tooltips
 [class*="widget-"][class*="-spectrum-quarter"]:nth-child(4) {
   background: #a86dbe;
 }
+[class*="widget-"][class*="-spectrum-quarter"] .icon,
 [class*="widget-"][class*="-spectrum-quarter"] [class*="icon-"] {
   color: #ffffff;
 }
@@ -2805,6 +2825,7 @@ https://github.com/esr360/K-Tooltips
 [class*="header-"][class*="-side"][class*="-right"] + #main {
   margin-right: 350px;
 }
+[class*="header-"][class*="-side"] .container,
 [class*="header-"][class*="-side"] [class*="container-"] {
   max-width: 100%;
 }
@@ -3022,19 +3043,24 @@ https://github.com/esr360/K-Tooltips
   background-size: cover;
   background-position: center;
 }
-[class*="section-"] .slide-arrow-prev,
-[class*="section-"] .slide-arrow-next, .section .slide-arrow-prev,
-.section .slide-arrow-next {
+[class*="section-"] .hgroup,
+[class*="section-"] [class*="hgroup-"], .section .hgroup,
+.section [class*="hgroup-"] {
+  color: #232627;
+}
+[class*="section-"] .slide-prev,
+[class*="section-"] .slide-next, .section .slide-prev,
+.section .slide-next {
   position: absolute;
   top: 50%;
   -webkit-transform: translateY(-50%);
       -ms-transform: translateY(-50%);
           transform: translateY(-50%);
 }
-[class*="section-"] .slide-arrow-prev, .section .slide-arrow-prev {
+[class*="section-"] .slide-prev, .section .slide-prev {
   left: -7.5rem;
 }
-[class*="section-"] .slide-arrow-next, .section .slide-arrow-next {
+[class*="section-"] .slide-next, .section .slide-next {
   right: -7.5rem;
 }
 [class*="section-"][class*="-primary"] {
@@ -3050,6 +3076,7 @@ https://github.com/esr360/K-Tooltips
 [class*="section-"][class*="-secondary"], [class*="section-"][class*="-secondary"] a:not([class*="button-"]) {
   color: #ffffff;
 }
+[class*="section-"][class*="-secondary"] .hgroup,
 [class*="section-"][class*="-secondary"] [class*="hgroup-"] {
   color: #ffffff;
 }

@@ -17,21 +17,21 @@
 		background-position: center;	
 
 		@include nested-component(hgroup) {
-			color: typography(colors, heading-color);
+			color: typography(colors, heading);
 		}
 
 		// Carousel Tools
 
-		.slide-arrow-prev,
-		.slide-arrow-next {
+		.slide-prev,
+		.slide-next {
 			@include vertical-center(absolute);
 		}
 
-		.slide-arrow-prev {
+		.slide-prev {
 			left: -7.5rem;
 		}
 
-		.slide-arrow-next {
+		.slide-next {
 			right: -7.5rem;
 		}
 

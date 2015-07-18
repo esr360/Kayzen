@@ -35,7 +35,7 @@
 	}
 	
 	body {
-		background: map-get($base, background-color);
+		background: map-get($base, background);
 	    font-family: map-get($base, font-family);
 	    color: map-get($base, text-color);
 	    font-size: map-get($base, font-size);
@@ -56,7 +56,7 @@
 	    }
 	
 	    @include modifier(small) {
-	        width: grid-option(smallx-width);
+	        width: grid-option(small-width);
 	    }
 	
 	    @include modifier(full) {

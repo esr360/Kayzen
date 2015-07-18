@@ -202,5 +202,5 @@
 } // header
 
 @include navigation(
-	if(variable-exists(navigation-custom), $navigation-custom, ())
+	if(variable-exists(navigation), $navigation, ())
 );

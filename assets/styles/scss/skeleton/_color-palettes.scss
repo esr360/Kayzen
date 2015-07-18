@@ -59,10 +59,10 @@
 // Utilities
 //-----------------------------------------------------------------
 
-@function palettes-default($key) {
+@function palette($key) {
     @return map-get($palettes, $key);
 }
 
 @function color($group, $key) {
-	@return map-get(palettes-default($group), $key);
+	@return map-get(palette($group), $key);
 }

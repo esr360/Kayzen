@@ -23,8 +23,8 @@ $billboard-default: (
 // Utilities
 //-----------------------------------------------------------------
 
-@if global-variable-exists(billboard-custom) {
-	$billboard-default: map-merge($billboard-default, $billboard-custom);
+@if global-variable-exists(billboard) {
+	$billboard-default: map-merge($billboard-default, $billboard);
 }
 
 @function billboard($key) {

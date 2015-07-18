@@ -23,7 +23,7 @@
 	}
 	
     @include modifier(arrow) {
-		padding-left: 1em;
+		@include extend(reset);
 		li {
 			line-height: 1.8;
 			margin-bottom: 0 !important;
