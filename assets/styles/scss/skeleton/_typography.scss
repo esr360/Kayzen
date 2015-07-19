@@ -61,10 +61,6 @@ $typography: (
 	
 } // @mixin typography
 
-@include typography(
-	if(variable-exists(typography), $typography, ())
-);
-
 //-----------------------------------------------------------------
 // Utilities
 //-----------------------------------------------------------------

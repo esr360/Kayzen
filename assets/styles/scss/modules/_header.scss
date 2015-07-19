@@ -122,7 +122,3 @@ $header: (
 	} // component(header)
 
 } // @mixin header
-
-@include header(
-	if(variable-exists(header), $header, ())
-);

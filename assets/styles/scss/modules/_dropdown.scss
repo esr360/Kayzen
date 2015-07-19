@@ -110,7 +110,3 @@ $dropdown: (
 	} // ul (parent)
 	
 } // @mixin dropdown
-
-@include dropdown(
-	if(variable-exists(dropdown), $dropdown, ())
-);

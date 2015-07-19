@@ -29,7 +29,7 @@
 }
 
 // Nested Component
-// Nest components for appropriate cascading
+// Nest components for appropriate specificity
 @mixin nested-component($component: $component, $type: flex, $root: true) {
 	 @if $type == flex {
 		@if $root {
@@ -67,7 +67,7 @@
 }
 
 // Nested Modifiers 
-// Nest a modifier within another modifier
+// Nest a modifier for appropriate specificity
 @mixin nested-modifier($modifier) {
 	&[class*="-#{$modifier}"] {
 		@content;

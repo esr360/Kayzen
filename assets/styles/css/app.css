@@ -432,23 +432,6 @@ Made by @esr360
 http://github.com/esr360/Kayzen-GS/
 	
 -----------------------------------------------------------------*/
-a {
-  color: #1795C5;
-  transition: 0.4s;
-  text-decoration: none;
-}
-a:hover {
-  text-decoration: underline;
-}
-
-p, ul, ol {
-  font-weight: lighter;
-}
-
-.lede {
-  font-size: font-size(size-4);
-}
-
 @media print {
   * {
     background: transparent !important;
@@ -612,107 +595,6 @@ Made by @esr360
 https://github.com/esr360/K-Tooltips
 	
 -----------------------------------------------------------------*/
-.header-wrapper {
-  height: 100px;
-}
-[class*="header-"][class*="-bar"] .header-wrapper, .header .header-wrapper,
-[class*="header-"] .header-wrapper {
-  display: table;
-  width: 100%;
-}
-[class*="header-"][class*="-bar"] .logo, .header .logo,
-[class*="header-"] .logo,
-[class*="header-"][class*="-bar"] .navigation,
-.header .navigation,
-[class*="header-"] .navigation {
-  display: table-cell;
-  vertical-align: middle;
-}
-[class*="header-"][class*="-absolute"], .header,
-[class*="header-"] {
-  position: absolute;
-  top: 0;
-  z-index: 5;
-  width: 100%;
-}
-[class*="header-"][class*="-side"] {
-  position: fixed;
-  z-index: 5;
-  height: 100%;
-  top: 0;
-  overflow: auto;
-  width: 350px;
-}
-[class*="header-"][class*="-left"] {
-  left: 0;
-}
-[class*="header-"][class*="-left"] + #main {
-  margin-left: 350px;
-}
-[class*="header-"][class*="-right"] {
-  right: 0;
-}
-[class*="header-"][class*="-right"] + #main {
-  margin-right: 350px;
-}
-[class*="header-"][class*="-side"] .container, [class*="header-"][class*="-side"] [class*="container-"] {
-  max-width: 100%;
-}
-[class*="header-"][class*="-dark"] {
-  background-color: #232627;
-}
-
-.navigation ul ul,
-[class*="navigation-"] ul ul {
-  min-width: 175px;
-  text-align: left;
-  transition: 0.4s;
-  position: absolute;
-  z-index: 5;
-  opacity: 0;
-  visibility: hidden;
-}
-.navigation ul ul li,
-[class*="navigation-"] ul ul li {
-  position: relative;
-}
-.navigation ul ul li a,
-[class*="navigation-"] ul ul li a {
-  color: navigation(a-has-child-color);
-}
-.navigation ul ul li a:before, .navigation ul ul li a:after,
-[class*="navigation-"] ul ul li a:before,
-[class*="navigation-"] ul ul li a:after {
-  font-family: FontAwesome;
-}
-.navigation ul ul li a:not(:only-child):after,
-[class*="navigation-"] ul ul li a:not(:only-child):after {
-  content: "";
-  right: 0.75em;
-  position: absolute;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-      -ms-transform: translateY(-50%);
-          transform: translateY(-50%);
-}
-.navigation ul ul li:last-child a,
-[class*="navigation-"] ul ul li:last-child a {
-  border-bottom: none;
-}
-.navigation ul ul li:hover > a,
-[class*="navigation-"] ul ul li:hover > a {
-  color: navigation(a-has-child-color);
-}
-.navigation ul ul li ul,
-[class*="navigation-"] ul ul li ul {
-  left: 100%;
-  top: 0;
-}
-.navigation ul > ul,
-[class*="navigation-"] ul > ul {
-  padding-top: 0;
-}
-
 .span,
 [class*="span-"] {
   display: inline-block;
@@ -1257,9 +1139,9 @@ pre:last-child, hr:last-child, .accordion:last-child,
   margin-bottom: 0;
 }
 
-.navigation ul ul,
-[class*="navigation-"] ul ul, [class*="list-"][class*="-reset"], [class*="list-"][class*="-arrow"], .breadcrumb ul, .footer-nav ul, .navigation > ul,
-[class*="navigation-"] > ul {
+[class*="list-"][class*="-reset"], [class*="list-"][class*="-arrow"], .breadcrumb ul, .footer-nav ul, .navigation > ul,
+[class*="navigation-"] > ul, .navigation ul ul,
+[class*="navigation-"] ul ul {
   margin: 0;
   padding: 0;
   list-style: none;
