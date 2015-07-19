@@ -2,18 +2,29 @@
 // Flyout Navigation
 //=================================================================
 
-@mixin flyout-navigation($config: ()) {
-
 //-----------------------------------------------------------------
 // Config
 //-----------------------------------------------------------------
 
-	$config: map-merge-deep((
-	), $config);
+$flyout-navigation: (
 	
+);
+
+//-----------------------------------------------------------------
+// Mixin
+//-----------------------------------------------------------------
+
+@mixin flyout-navigation($config: ()) {
+
+	$config: map-merge-deep($flyout-navigation, $config);
 	$flyout-navigation: $config !global;
 	
+	//-------------------------------------------------------------
+	// Component
+	//-------------------------------------------------------------
+	
 	.flyout-trigger {
+		
 		position: absolute;
 		top: 1rem;
 		right: 1rem;
@@ -36,7 +47,8 @@
 				transform: scale(1) translateY(-50%);
 			}
 		}
-	}
+		
+	} // .flyout-trigger
 	
 	.flyout-container {
 	
@@ -102,6 +114,6 @@
 	    	left: 0;
 	    }
 	
-	} // .flyout-nav-container
+	} // .flyout-container
 	
 } // flyout-navigation

@@ -2,21 +2,25 @@
 // Promo Banner
 //=================================================================
 
-@mixin promo-banner($config: ()) {
-
 //-----------------------------------------------------------------
 // Config
 //-----------------------------------------------------------------
 
-	$config: map-merge-deep((
-	), $config);
+$promo-banner: (
 	
+);
+
+//-----------------------------------------------------------------
+// Mixin
+//-----------------------------------------------------------------
+
+@mixin promo-banner($config: ()) {
+
+	$config: map-merge-deep($promo-banner, $config);
 	$promo-banner: $config !global;
 
 	.promo-banner {
 	
-	
-	
-	} // end .promo-banner
+	} // .promo-banner
 		
 } // promo-banner

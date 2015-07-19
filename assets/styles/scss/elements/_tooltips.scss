@@ -1,3 +1,7 @@
+//=================================================================
+// Tooltips
+//=================================================================
+
 /*-----------------------------------------------------------------
 
 K-Tooltips
@@ -6,41 +10,41 @@ https://github.com/esr360/K-Tooltips
 	
 -----------------------------------------------------------------*/
 
-@mixin tooltips($config: ()) {
-
 //-----------------------------------------------------------------
 // Config
 //-----------------------------------------------------------------
 
-	$config: map-merge-deep((
-	), $config);
-	
+$tooltips: (
+	// Size & Appearance
+	max-width      : 500px,
+	padding        : 1em,
+	distance       : -1em,
+	background     : rgba(black, 0.75),
+	border-radius  : 0.25em,
+	arrow-size     : 0.5em,
+	arrow-color    : rgba(black, 0.75),
+	// Typography
+	font-size      : 1em,
+	color          : white,
+	text-transform : none,
+	font-weight    : normal,
+	// Other
+	transition     : 0.4s,
+	z-index        : 9999
+);
+
+//-----------------------------------------------------------------
+// Mixin
+//-----------------------------------------------------------------
+
+@mixin tooltips($config: ()) {
+
+	$config: map-merge-deep($tooltips, $config);
 	$tooltips: $config !global;
 
-// Default/Configurable Settings
-//-----------------------------------------------------------------
-
-	$tooltip-options: (
-		// Size & Appearance
-		max-width      : 500px,
-		padding        : 1em,
-		distance       : -1em,
-		background     : rgba(black, 0.75),
-		border-radius  : 0.25em,
-		arrow-size     : 0.5em,
-		arrow-color    : rgba(black, 0.75),
-		// Typography
-		font-size      : 1em,
-		color          : white,
-		text-transform : none,
-		font-weight    : normal,
-		// Other
-		transition     : 0.4s,
-		z-index        : 9999
-	) !global;
-
-// Custom Styles
-//-----------------------------------------------------------------
+	//-------------------------------------------------------------
+	// Custom Styles
+	//-------------------------------------------------------------
 	
 	$tooltip-styles: (
 		light: (
@@ -50,21 +54,29 @@ https://github.com/esr360/K-Tooltips
 		),
 	) !global;
 
-// Positions
-//-----------------------------------------------------------------
+	//-------------------------------------------------------------
+	// Positions
+	//-------------------------------------------------------------
 
 	$tooltip-positions: (
 		top, bottom, left, right
 	);
-		
-// Component
-//-----------------------------------------------------------------
+	
+	//-------------------------------------------------------------
+	// Component
+	//-------------------------------------------------------------
 
 	@include component(tooltip, data) {
 				
+	// Core Styles
+	//-------------------------------------------------------------
+	
 		position: relative;
 		cursor: pointer;	
 		
+	// Child Components
+	//-------------------------------------------------------------
+	
 		@at-root .inline-tooltip {
 			display: inline-block;
 		}
@@ -73,7 +85,7 @@ https://github.com/esr360/K-Tooltips
 			text-align: center;
 		}
 	
-		@include nested-component(tooltip-content, true, static) {
+		@at-root .tooltip-content {
 				
 			// Size & Appearance
 			max-width: tooltip(max-width);
@@ -173,7 +185,7 @@ https://github.com/esr360/K-Tooltips
 					
 			} // @tooltip-styles
 			
-		} // nested-component(tooltip-content)
+		} // .tooltip-content
 	
 	} // component(tooltip)
 	
@@ -183,7 +195,7 @@ https://github.com/esr360/K-Tooltips
 //-----------------------------------------------------------------
 
 @function tooltip($tooltip-option) {
-    @return map-get($tooltip-options, $tooltip-option);
+    @return map-get($tooltips, $tooltip-option);
 }
 
 @function tooltip-custom($custom-key) {

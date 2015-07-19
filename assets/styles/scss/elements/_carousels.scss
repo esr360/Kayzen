@@ -2,30 +2,36 @@
 // Carousels
 //=================================================================
 
-@mixin carousels($config: ()) {
-
 //-----------------------------------------------------------------
 // Config
 //-----------------------------------------------------------------
 
-	$config: map-merge-deep((
-	), $config);
+$carousels: (
 	
+);
+
+//-----------------------------------------------------------------
+// Mixin
+//-----------------------------------------------------------------
+
+@mixin carousels($config: ()) {
+
+	$config: map-merge-deep($carousels, $config);
 	$carousels: $config !global;
 	
-//-----------------------------------------------------------------
-// Carousel
-//-----------------------------------------------------------------
+	//-------------------------------------------------------------
+	// Component
+	//-------------------------------------------------------------
 
 	@include component(carousel) {
 
-// Core Styles
-//-----------------------------------------------------------------
+	// Core Styles
+	//-------------------------------------------------------------
 
 		position: relative;
 
-// Modifiers
-//-----------------------------------------------------------------
+	// Modifiers
+	//-------------------------------------------------------------
 
 	    @include modifier(scale) {
 	        margin-top: base(margin);
@@ -89,62 +95,61 @@
 	            }
 	        }
 	    }
+
+	// Carousel Tools
+	//-------------------------------------------------------------
+	
+		@at-root .slide-nav {
+		
+		    .slide-prev,
+		    .slide-next {
+		        z-index: 5;
+		        @include vertical-center(absolute);
+		        &:focus {
+		            outline: none;
+		        }
+		    }
+		
+		    .slide-prev {
+		        left: 2rem;
+		    }
+		
+		    .slide-next {
+		        right: 2rem;
+		    }
+		
+		    &.twin-nav {
+		        display: inline-block;
+		        position: absolute;
+		        z-index: 3;
+		        transform: translateY(-50%) translateX(-50%);
+		        background: color(brand, primary);
+		        padding: 0.5em;
+		        [class*="slide-"] {
+		            position: relative;
+		            left: auto;
+		            right: auto;
+		            transform: none;
+		            margin-left: 0.25em;
+		            &:first-child {
+		                margin-left: 0;
+		            }
+		        }
+		        &.strikethrough {
+		            &:before {
+		                content: "";
+		                width: 9999px;
+		                left: -4999px;
+		                height: 10px;
+		                background-color: color(brand, primary);
+		                @include vertical-center(absolute);
+		            }   
+		        }
+		    }
+		
+		} // .slide-nav
 	
 	} // component(carousel)
-
-//-----------------------------------------------------------------
-// Carousel Tools
-//-----------------------------------------------------------------
-	
-	.slide-nav {
-	
-	    .slide-prev,
-	    .slide-next {
-	        z-index: 5;
-	        @include vertical-center(absolute);
-	        &:focus {
-	            outline: none;
-	        }
-	    }
-	
-	    .slide-prev {
-	        left: 2rem;
-	    }
-	
-	    .slide-next {
-	        right: 2rem;
-	    }
-	
-	    &.twin-nav {
-	        display: inline-block;
-	        position: absolute;
-	        z-index: 3;
-	        transform: translateY(-50%) translateX(-50%);
-	        background: color(brand, primary);
-	        padding: 0.5em;
-	        [class*="slide-"] {
-	            position: relative;
-	            left: auto;
-	            right: auto;
-	            transform: none;
-	            margin-left: 0.25em;
-	            &:first-child {
-	                margin-left: 0;
-	            }
-	        }
-	        &.strikethrough {
-	            &:before {
-	                content: "";
-	                width: 9999px;
-	                left: -4999px;
-	                height: 10px;
-	                background-color: color(brand, primary);
-	                @include vertical-center(absolute);
-	            }   
-	        }
-	    }
-	
-	}
 	
 } // carousels
 

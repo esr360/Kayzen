@@ -2,15 +2,21 @@
 // Scroll Wheel
 //=================================================================
 
-@mixin scroll-wheel($config: ()) {
-
 //-----------------------------------------------------------------
 // Config
 //-----------------------------------------------------------------
 
-	$config: map-merge-deep((
-	), $config);
+$scroll-wheel: (
 	
+);
+
+//-----------------------------------------------------------------
+// Mixin
+//-----------------------------------------------------------------
+
+@mixin scroll-wheel($config: ()) {
+
+	$config: map-merge-deep($scroll-wheel, $config);
 	$scroll-wheel: $config !global;
 	
 	.scroll-wheel {
@@ -37,7 +43,6 @@
 			@extend %horizontal-center;
 		}
 	
-	
 		@keyframes scroll-down{
 			0%{
 				top: 0.5em;
@@ -47,6 +52,6 @@
 			}
 		}
 	
-	} // end .scroll-wheel
+	} // .scroll-wheel
 	
-} // scroll-wheel
+} // @mixin scroll-wheel

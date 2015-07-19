@@ -2,34 +2,38 @@
 // Navigation
 //=================================================================
 
-@mixin navigation($config: ()) {
-
 //-----------------------------------------------------------------
 // Config
 //-----------------------------------------------------------------
 
-	$config: map-merge((
-		text-align             : right,
-		item-gutter            : 0.5em,
-		item-padding           : 0.5em 0.75em,
-		link-color             : typography(colors, base),
-		link-hover-color       : color(brand, primary),
-		no-icons               : false,
-		dropdown-icon          : "\f107",
-		style                  : default
-	), $config);
+$navigation: (
+	text-align             : right,
+	item-gutter            : 0.5em,
+	item-padding           : 0.5em 0.75em,
+	link-color             : typography(colors, base),
+	link-hover-color       : color(brand, primary),
+	no-icons               : false,
+	dropdown-icon          : "\f107",
+	style                  : default
+);
 
 //-----------------------------------------------------------------
-// Component
+// Mixin
 //-----------------------------------------------------------------
+
+@mixin navigation($config: ()) {
+
+	$config: map-merge-deep($navigation, $config);
+	$navigation: $config !global;
+
+	//-------------------------------------------------------------
+	// Component
+	//-------------------------------------------------------------
 
 	@include component(navigation) {
 
-// Core Styles
-//-----------------------------------------------------------------
-			
-		// cache selector as global variable
-		$navigation-selector: & !global;
+	// Core Styles
+	//-------------------------------------------------------------
 		
 	    // all levels
 	    li {    
@@ -180,8 +184,8 @@
 	        }
 	    }
 
-// Modifiers
-//-----------------------------------------------------------------
+	// Modifiers
+	//-------------------------------------------------------------
 	
 		@include modifier(no-icons) {
 			.fa {
@@ -193,10 +197,6 @@
 			
 		}
 	
-	} // component
+	} // component(navigation)
 
-} // header
-
-@include navigation(
-	if(variable-exists(navigation), $navigation, ())
-);
+} // @mixin navigation

@@ -2,15 +2,21 @@
 // Scroll to Top
 //=================================================================
 
-@mixin scroll-top($config: ()) {
-
 //-----------------------------------------------------------------
 // Config
 //-----------------------------------------------------------------
 
-	$config: map-merge-deep((
-	), $config);
+$scroll-top: (
 	
+);
+
+//-----------------------------------------------------------------
+// Mixin
+//-----------------------------------------------------------------
+
+@mixin scroll-top($config: ()) {
+
+	$config: map-merge-deep($scroll-top, $config);
 	$scroll-top: $config !global;
 
 	.scroll-top {
@@ -35,6 +41,6 @@
 			display: block;
 		}
 	
-	} // end .scroll-top
+	} // .scroll-top
 	
-} // scroll-top
+} // @mixin scroll-top

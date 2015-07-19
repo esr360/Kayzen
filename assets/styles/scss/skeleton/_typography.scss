@@ -35,7 +35,7 @@ $typography: (
 
 @mixin typography($config: ()) {
 
-	$config: map-merge($typography, $config);
+	$config: map-merge-deep($typography, $config);
 	$typography: $config !global;
 
 	//-------------------------------------------------------------

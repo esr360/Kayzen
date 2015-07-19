@@ -2,35 +2,40 @@
 // Header
 //=================================================================
 
-@mixin header($config: ()) {
-
 //-----------------------------------------------------------------
 // Config
 //-----------------------------------------------------------------
 
-	$config: map-merge((
-		absolute             : false,
-		side                 : null,
-		side-container-width : 100%,
-		bar                  : false,
-		dark                 : false,
-		top-position         : 0,
-		bg-color             : base(background-color),
-		dark-color           : color(greyscale, grey-5),
-		height               : 100px,
-		side-width           : 350px
-	), $config);
-	
+$header: (
+	absolute             : false,
+	side                 : null,
+	side-container-width : 100%,
+	bar                  : false,
+	dark                 : false,
+	top-position         : 0,
+	bg-color             : base(background-color),
+	dark-color           : color(greyscale, grey-5),
+	height               : 100px,
+	side-width           : 350px
+);
+
+//-----------------------------------------------------------------
+// Mixin
+//-----------------------------------------------------------------
+
+@mixin header($config: ()) {
+
+	$config: map-merge-deep($header, $config);
 	$header: $config !global;
 	
-//-----------------------------------------------------------------
-// Component
-//-----------------------------------------------------------------
+	//-------------------------------------------------------------
+	// Component
+	//-------------------------------------------------------------
 
 	@include component(header) {
 
-// Core Styles
-//-----------------------------------------------------------------
+	// Core Styles
+	//-------------------------------------------------------------
 	
 		background-color: map-get($header, bg-color);		
 
@@ -64,8 +69,8 @@
 			height: map-get($header, height);
 		}
 
-// Modifiers
-//-----------------------------------------------------------------
+	// Modifiers
+	//-------------------------------------------------------------
 	
 		@include modifier(bar) {	
 			.header-wrapper	{	
@@ -114,9 +119,9 @@
 			background-color: map-get($header, dark-color);
 		}
 	
-	} // component
+	} // component(header)
 
-} // header
+} // @mixin header
 
 @include header(
 	if(variable-exists(header), $header, ())
