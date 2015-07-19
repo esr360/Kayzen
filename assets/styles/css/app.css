@@ -1,8 +1,9 @@
 @charset "UTF-8";
 /******************************************************************
 
-Site Name: Kayzen
-Author: @ESR360
+Kayzen UIX
+Made by @esr360
+http://github.com/esr360/Kayzen-UIX/
 
 ******************************************************************/
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
@@ -785,33 +786,6 @@ https://github.com/esr360/K-Tooltips
   padding-top: 0;
 }
 
-[class*="row-"], .row {
-  letter-spacing: -1em;
-  display: table !important;
-  width: 100%;
-  *letter-spacing: normal;
-  *word-spacing: -0.43em;
-}
-.opera-only :-o-prefocus, [class*="row-"], .row {
-  word-spacing: -0.43em;
-}
-* {
-  letter-spacing: normal;
-  word-spacing: normal;
-  text-rendering: auto;
-}
-[class*="row-"]:after, .row:after {
-  content: "";
-  display: inline-block;
-  vertical-align: middle;
-  height: 100%;
-}
-
-[class*="row-"][class*="-flow"] {
-  margin-left: -grid-option(gutter);
-  width: 103%;
-}
-
 [class*="span-"], .span {
   display: inline-block;
   vertical-align: top;
@@ -860,6 +834,33 @@ https://github.com/esr360/K-Tooltips
 }
 [class*="span-"][class*="-12"] {
   width: 100%;
+}
+
+[class*="row-"], .row {
+  letter-spacing: -1em;
+  display: table !important;
+  width: 100%;
+  *letter-spacing: normal;
+  *word-spacing: -0.43em;
+}
+.opera-only :-o-prefocus, [class*="row-"], .row {
+  word-spacing: -0.43em;
+}
+* {
+  letter-spacing: normal;
+  word-spacing: normal;
+  text-rendering: auto;
+}
+[class*="row-"]:after, .row:after {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  height: 100%;
+}
+
+[class*="row-"][class*="-flow"] {
+  margin-left: -grid-option(gutter);
+  width: 103%;
 }
 
 @media (max-width: 940px) {

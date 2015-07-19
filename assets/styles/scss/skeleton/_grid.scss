@@ -53,6 +53,10 @@ $grid: (
 	)
 );
 
+//-----------------------------------------------------------------
+// Mixin
+//-----------------------------------------------------------------
+
 @mixin grid($config: ()) {
 
 	$config: map-merge-deep($grid, $config);	
@@ -74,9 +78,43 @@ $grid: (
 			)
 		), $grid);
 	}
+	
+	//-------------------------------------------------------------
+	// Single Column
+	//-------------------------------------------------------------
+	
+	%column {
+		display: inline-block;
+		vertical-align: top;
+		// IE < 8: fake inline-block
+		@if grid-setting(old-ie) {
+			*display: inline;
+			zoom: 1; 
+		}
+	}
+	
+	@include component(#{grid-option(col-namespace)}) {
+		@include core {
+			@extend %column;
+			@if grid-setting(mobile-first) {
+				width: 100%;
+			} @else {		
+				@include gutter;
+			}
+		}
+		// Default Column Width
+		@if grid-setting(mobile-first) == false {
+			@for $i from 1 through grid-option(columns) {
+				@include modifier(#{$i}) {	
+					@include column-width($i, grid-option(columns));
+				}
+			}	
+		}
+	} // column
 
-// Column Row
-//-----------------------------------------------------------------
+	//-------------------------------------------------------------
+	// Column Row
+	//-------------------------------------------------------------
 	
 	%row {
 		// Firefox/IE collapse white-space
@@ -117,41 +155,6 @@ $grid: (
 		width: 100% + grid-option(gutter);
 	}
 
-// Single Column
-//-----------------------------------------------------------------
-	
-	%column {
-		display: inline-block;
-		vertical-align: top;
-		// IE < 8: fake inline-block
-		@if grid-setting(old-ie) {
-			*display: inline;
-			zoom: 1; 
-		}
-	}
-	
-	@include component(#{grid-option(col-namespace)}) {
-		@include core {
-			@extend %column;
-			@if grid-setting(mobile-first) {
-				width: 100%;
-			} @else {		
-				@include gutter;
-			}
-		}
-		// Default Column Width
-		@if grid-setting(mobile-first) == false {
-			@for $i from 1 through grid-option(columns) {
-				@include modifier(#{$i}) {	
-					@include column-width($i, grid-option(columns));
-				}
-			}	
-		}
-	} // column
-
-// Column Row
-//-----------------------------------------------------------------
-
 	@include component(#{grid-option(row-namespace)}) {
 		
 		@include core {
@@ -189,9 +192,7 @@ $grid: (
 		
 		} // core
 
-// Flow Columns
-//-----------------------------------------------------------------
-		
+		//Flow Columns
 		@if grid-setting(flow-columns) {
 			@include modifier(flow) {
 				@extend %flow-row;
@@ -222,9 +223,7 @@ $grid: (
 			}
 		}
 
-// Magic Columns
-//-----------------------------------------------------------------
-
+		// Magic Columns
 		@if grid-setting(magic-columns) {
 			@include modifier(magic) {
 				> [class*="#{grid-option(col-namespace)}"]:not([class*="break"]) {	
@@ -235,9 +234,7 @@ $grid: (
 			}	
 		}
 
-// Block Columns
-//-----------------------------------------------------------------
-
+		// Block Columns
 		@if grid-setting(block-columns) {
 			@include modifier(block) {
 				> [class*="#{grid-option(col-namespace)}"]:not([class*="break"]) {			
@@ -257,9 +254,10 @@ $grid: (
 	
 	} // row
 
-// Column Width Overrides
-// For Flow Columns only
-//-----------------------------------------------------------------
+	//-------------------------------------------------------------
+	// Column Width Overrides
+	// For Flow Columns only
+	//-------------------------------------------------------------
 
 	// Reverse $breakpoints map
 	// This is to allow the generated CSS to override when scaling
