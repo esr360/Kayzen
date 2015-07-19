@@ -8,7 +8,11 @@
 
 // Component
 // Define the main component
-@mixin component($component: $component, $type: flex, $selector: class) {
+@mixin component(
+	$component: $component, 
+	$type: if(variable-exists(config) and map-has-key($config, selector-type), map-get($config, selector-type), flex), 
+	$selector: class
+) {
 	$component: $component !global;
 	@if $selector == class {
 		@if $type == flex {
@@ -18,6 +22,10 @@
 			}	
 		} @else if $type == chain {
 			[class*="#{$component}-"] {
+				@content;
+			}
+		} @else if $type == static {
+			.#{$component} {
 				@content;
 			}
 		}
@@ -79,6 +87,22 @@
 @mixin extend($modifiers...) {
 	@each $modifier in $modifiers {
 		@extend [class*="#{$component}-"][class*="-#{$modifier}"];
+	}
+}
+
+// Component Setting
+// Add a configurable setting to a component
+@mixin setting($setting) {
+	@at-root %#{$component}-#{$setting} {	
+		@content;
+	}
+	@if map-get($config, extend-settings) {
+		@include modifier($setting) {	
+			@extend %#{$component}-#{$setting};
+		}
+	}
+	@if map-get($config, $setting) {
+		@extend %#{$component}-#{$setting};
 	}
 }
 

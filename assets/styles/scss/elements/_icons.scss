@@ -6,7 +6,7 @@
 // Config
 //-----------------------------------------------------------------
 
-$accordions: (
+$icons: (
 	
 );
 
@@ -16,8 +16,7 @@ $accordions: (
 
 @mixin icons($config: ()) {
 
-	$config: map-merge-deep($accordions, $config);
-	$accordion: $config !global;
+	$icons: map-merge-deep($icons, $config) !global;
 
 	//-------------------------------------------------------------
 	// Component

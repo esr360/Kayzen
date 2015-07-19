@@ -16,8 +16,7 @@ $images: (
 
 @mixin images($config: ()) {
 
-	$config: map-merge-deep($images, $config);
-	$images: $config !global;
+	$images: map-merge-deep($images, $config) !global;
 
 	//-------------------------------------------------------------
 	// Responsive Images

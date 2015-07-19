@@ -3,7 +3,7 @@
 //=================================================================
 	
 //-----------------------------------------------------------------
-// Config
+// Config - Global Scope
 //-----------------------------------------------------------------
 
 $helpers: (
@@ -20,8 +20,7 @@ $helpers: (
 
 @mixin helpers($config: ()) {
 
-	$config: map-merge-deep($helpers, $config);
-	$helpers: $config !global;
+	$helpers: map-merge-deep($helpers, $config) !global;
 
 	//-------------------------------------------------------------
 	// Visibility

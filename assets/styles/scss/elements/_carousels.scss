@@ -16,8 +16,7 @@ $carousels: (
 
 @mixin carousels($config: ()) {
 
-	$config: map-merge-deep($carousels, $config);
-	$carousels: $config !global;
+	$carousels: map-merge-deep($carousels, $config) !global;
 	
 	//-------------------------------------------------------------
 	// Component

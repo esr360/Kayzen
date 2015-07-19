@@ -16,8 +16,7 @@ $forms: (
 
 @mixin forms($config: ()) {
 
-	$config: map-merge-deep($forms, $config);
-	$forms: $config !global;
+	$forms: map-merge-deep($forms, $config) !global;
 
 	//-------------------------------------------------------------
 	// Component

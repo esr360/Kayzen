@@ -16,8 +16,7 @@ $fonts: (
 
 @mixin fonts($config: ()) {
 
-	$config: map-merge-deep($fonts, $config);
-	$fonts: $config !global;
+	$fonts: map-merge-deep($fonts, $config) !global;
 
 	// Declare actual typefaces in skeleton/_config.scss
 

@@ -11,7 +11,7 @@ http://github.com/esr360/Kayzen-GS/
 -----------------------------------------------------------------*/
 
 //-----------------------------------------------------------------
-// Config
+// Config - Global Scope
 //-----------------------------------------------------------------
 
 $grid: (
@@ -59,8 +59,7 @@ $grid: (
 
 @mixin grid($config: ()) {
 
-	$config: map-merge-deep($grid, $config);	
-	$grid: $config !global;
+	$grid: map-merge-deep($grid, $config) !global;
 
 	// Set min/max width for breakpoints
 	$scale: null;

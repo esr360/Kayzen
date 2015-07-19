@@ -16,8 +16,7 @@ $lists: (
 
 @mixin lists($config: ()) {
 
-	$config: map-merge-deep($lists, $config);
-	$lists: $config !global;
+	$lists: map-merge-deep($lists, $config) !global;
 	
 	//-------------------------------------------------------------
 	// Component

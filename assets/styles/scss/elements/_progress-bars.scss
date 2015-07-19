@@ -19,8 +19,7 @@ $progress-height : 1rem;
 
 @mixin progress-bars($config: ()) {
 
-	$config: map-merge-deep($progress-bars, $config);
-	$progress-bars: $config !global;
+	$progress-bars: map-merge-deep($progress-bars, $config) !global;
 	
 	// Core Styles
 	//-------------------------------------------------------------

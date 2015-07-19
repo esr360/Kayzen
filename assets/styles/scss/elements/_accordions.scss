@@ -16,8 +16,7 @@ $accordions: (
 
 @mixin accordions($config: ()) {
 
-	$config: map-merge-deep($accordions, $config);
-	$accordions: $config !global;
+	$accordions: map-merge-deep($accordions, $config) !global;
 	
 	//-------------------------------------------------------------
 	// Component

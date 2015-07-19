@@ -3,20 +3,24 @@
 //=================================================================
 
 //-----------------------------------------------------------------
-// Config
+// Config - Global Scope
 //-----------------------------------------------------------------
 
 $header: (
+	// Extend each "setting" as a modifier?
+	extend-settings      : false,
+	// Settings
 	absolute             : false,
-	side                 : null,
-	side-container-width : 100%,
 	bar                  : false,
 	dark                 : false,
+	side                 : null,
+	// Options
+	side-width           : 350px,
+	side-container-width : 100%,
 	top-position         : 0,
 	bg-color             : base(background-color),
 	dark-color           : color(greyscale, grey-5),
-	height               : 100px,
-	side-width           : 350px
+	height               : 100px
 );
 
 //-----------------------------------------------------------------
@@ -25,8 +29,8 @@ $header: (
 
 @mixin header($config: ()) {
 
-	$config: map-merge-deep($header, $config);
-	$header: $config !global;
+	$header: map-merge-deep($header, $config) !global;
+	$config: $header !global;
 	
 	//-------------------------------------------------------------
 	// Component
@@ -37,43 +41,16 @@ $header: (
 	// Core Styles
 	//-------------------------------------------------------------
 	
-		background-color: map-get($header, bg-color);		
+		background-color: map-get($header, bg-color);	
 
-		// Conditionals
-
-		@if map-get($header, bar) {
-			@include extend(bar);
-		}
-
-		@if map-get($header, absolute) {
-			@include extend(absolute);
-		}
-
-		@if map-get($header, side) != null {
-			@if map-get($header, side) == left {
-				@include extend(side, left);
-			} @else if map-get($header, side) == right {
-				@include extend(side, right);
-			} @else {
-				@include extend(side);
-			}
-		}
-
-		@if map-get($header, dark) {
-			@include extend(dark);
-		}
-
-		// Child Styles
-
-		@at-root .header-wrapper {
-			height: map-get($header, height);
-		}
-
-	// Modifiers
+	// Settings
 	//-------------------------------------------------------------
 	
-		@include modifier(bar) {	
-			.header-wrapper	{	
+		// Header Bar
+		//---------------------------------------------------------
+		
+		@include setting(bar) {
+			@at-root .wrap-header	{	
 				display: table;
 				width: 100%;
 			}
@@ -83,42 +60,70 @@ $header: (
 				vertical-align: middle;
 			}
 		}
+		
+		// Absolute Position Header
+		//---------------------------------------------------------
 	
-		@include modifier(absolute) {
+		@include setting(absolute) {
 			position: absolute;
 			top: map-get($header, top-position);
 			z-index: 5;
 			width: 100%;
 		}
+
+		// Side Header
+		//---------------------------------------------------------
 	
-		@include modifier(side) {
-			position: fixed;
-			z-index: 5;
-			height: 100%;
-			top: 0;	
-			overflow: auto;
-			width: map-get($header, side-width);	
-			@include modifier(left) {
-				left: 0;
-				+ #main {
-					margin-left: map-get($header, side-width);
+		@if map-get($header, extend-settings) {
+			@include modifier(side) {
+				position: fixed;
+				z-index: 5;
+				height: 100%;
+				top: 0;	
+				overflow: auto;
+				width: map-get($header, side-width);	
+				@include modifier(left) {
+					left: 0;
+					+ #main {
+						margin-left: map-get($header, side-width);
+					}
 				}
-			}
-			@include modifier(right) {
-				right: 0;
-				+ #main {
-					margin-right: map-get($header, side-width);
+				@include modifier(right) {
+					right: 0;
+					+ #main {
+						margin-right: map-get($header, side-width);
+					}
 				}
-			}
-			@include nested-component(container) {
-				max-width: map-get($header, side-container-width);
+				@include nested-component(container) {
+					max-width: map-get($header, side-container-width);
+				}
 			}
 		}
+		
+		@if map-get($header, side) != null {
+			@if map-get($header, side) == left {
+				@include extend(side, left);
+			} @else if map-get($header, side) == right {
+				@include extend(side, right);
+			} @else {
+				@include extend(side);
+			}
+		}
+		
+		// Dark Header
+		//---------------------------------------------------------
 	
-		@include modifier(dark) {
+		@include setting(dark) {
 			background-color: map-get($header, dark-color);
 		}
-	
+		
+	// Child Components
+	//-------------------------------------------------------------
+
+		@at-root .wrap-header {
+			height: map-get($header, height);
+		}
+		
 	} // component(header)
 
 } // @mixin header

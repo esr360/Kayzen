@@ -16,8 +16,7 @@ $buttons: (
 
 @mixin buttons($config: ()) {
 
-	$config: map-merge-deep($buttons, $config);
-	$buttons: $config !global;
+	$buttons: map-merge-deep($buttons, $config) !global;
 
 	//-------------------------------------------------------------
 	// Component

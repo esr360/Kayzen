@@ -2,59 +2,97 @@
 // Billboard
 //=================================================================
 
+//-----------------------------------------------------------------
+// Mixin
+//-----------------------------------------------------------------
+
 @mixin billboard($config: ()) {
 
-//-----------------------------------------------------------------
-// Config
-//-----------------------------------------------------------------
+	//-------------------------------------------------------------
+	// Config - Local Scope
+	//-------------------------------------------------------------
 
-	$config: map-merge-deep((
+	$billboard: map-merge-deep((
+		// Extend each "setting" as a modifier?
+		extend-settings : false,
+		// Settings
 		full-screen     : false,
 		overlay         : false,
-		text-align      : center,
-		min-height      : 500px,
-		bg-image        : "",
+		// Options
 		bg-color        : color(greyscale, grey-5),
+		bg-image        : "",
 		overlay-color   : color(brand, primary),
 		overlay-opacity : 0.6,
 		color           : color(greyscale, white),
+		text-align      : center,
+		min-height      : 500px,
 		wrapper-width   : breakpoint(break-2)
-	), $config);
-	
-	$billboard: $config !global;
+	), $config) !global;
 
-//-----------------------------------------------------------------
-// Component
-//-----------------------------------------------------------------
+	$config: $billboard !global;
+	
+	//-------------------------------------------------------------
+	// Component
+	//-------------------------------------------------------------
 
 	@include component(billboard) {
 
-// Core Styles
-//-----------------------------------------------------------------
+	// Core Styles
+	//-------------------------------------------------------------
 
 		min-height: map-get($billboard, min-height);
 		background-color: map-get($billboard, bg-color);
 		position: relative;
-
-		// Conditionals
-
+		
 		// only apply a bg image if there is one to apply
 		@if map-get($billboard, bg-image) != "" {
 			background-image: url(map-get($billboard, bg-image));
 			background-size: cover;
 		}
+
+	// Settings
+	//-------------------------------------------------------------
 		
-		@if map-get($billboard, full-screen) == true {
-			@include extend(full-screen);
+		// Full Screen
+		//---------------------------------------------------------
+		
+		@include setting(full-screen) {
+			height: 90%;
+			height: calc(100% - #{map-get($header, height)});
+			@if map-get($header, absolute) and map-get($billboard, full-screen) {
+				height: 100%;
+				height: 100vh;
+			}
+		}
+		
+		@if map-get($billboard, extend-settings) {
+			@at-root {
+				@include component(header) {
+					@include modifier(absolute) {
+						& + #main {
+							@include component(billboard) {
+								@include modifier(full-screen) {
+									height: 100%;
+									height: 100vh;
+								}
+							}
+						}
+					}
+				}
+			}
 		}
 
-		@if map-get($billboard, overlay) == true {
-			@include extend(overlay);
+		// Overlay
+		//---------------------------------------------------------
+		
+		@include setting(overlay) {
+			@include bg-overlay(rgba(map-get($billboard, overlay-color), map-get($billboard, overlay-opacity)));
 		}
 		
-		// Child Styles
+	// Child Components
+	//-------------------------------------------------------------
 
-		@at-root .bb-wrapper {
+		@at-root .wrap-billboard {
 			color: map-get($billboard, color);
 			text-align: map-get($billboard, text-align);
 			@extend %horizontal-center;
@@ -63,33 +101,8 @@
 				width: map-get($billboard, wrapper-width);
 			}
 		}
-
-// Modifiers
-//-----------------------------------------------------------------
-
-		@include modifier(overlay) {
-			@include bg-overlay(rgba(map-get($billboard, overlay-color), map-get($billboard, overlay-opacity)));
-		}
-	
-		@include modifier(full-screen) {
-			height: 90%;
-			height: calc(100% - #{header(height)});
-		}
 	
 	} // component(billboard)
-
-	@include component(header) {
-		@include modifier(absolute) {
-			& + #main {
-				@include component(billboard) {
-					@include modifier(full-screen) {
-						height: 100%;
-						height: 100vh;
-					}
-				}
-			}
-		}
-	}
 	
 } // billboard
 

@@ -16,8 +16,7 @@ $blockquotes: (
 
 @mixin blockquotes($config: ()) {
 
-	$config: map-merge-deep($blockquotes, $config);
-	$blockquotes: $config !global;
+	$blockquotes: map-merge-deep($blockquotes, $config) !global;
 
 	//-------------------------------------------------------------
 	// Component

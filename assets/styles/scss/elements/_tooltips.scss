@@ -39,8 +39,7 @@ $tooltips: (
 
 @mixin tooltips($config: ()) {
 
-	$config: map-merge-deep($tooltips, $config);
-	$tooltips: $config !global;
+	$tooltips: map-merge-deep($tooltips, $config) !global;
 
 	//-------------------------------------------------------------
 	// Custom Styles

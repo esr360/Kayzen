@@ -3,7 +3,7 @@
 //=================================================================
 
 //-----------------------------------------------------------------
-// Config
+// Config - Global Scope
 //-----------------------------------------------------------------
 
 $typography: (
@@ -35,8 +35,7 @@ $typography: (
 
 @mixin typography($config: ()) {
 
-	$config: map-merge-deep($typography, $config);
-	$typography: $config !global;
+	$typography: map-merge-deep($typography, $config) !global;
 
 	//-------------------------------------------------------------
 	// Styles

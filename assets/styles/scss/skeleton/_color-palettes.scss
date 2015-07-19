@@ -3,7 +3,7 @@
 //=================================================================
 
 //-----------------------------------------------------------------
-// Config
+// Config - Global Scope
 //-----------------------------------------------------------------
 
 $palettes: (
@@ -57,8 +57,7 @@ $palettes: (
 
 @mixin palettes($config: ()) {
 
-	$config: map-merge-deep($palettes, $config);
-	$palettes: $config !global;
+	$palettes: map-merge-deep($palettes, $config) !global;
 
 } // @mixin palettes
 

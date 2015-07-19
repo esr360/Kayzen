@@ -16,8 +16,7 @@ $tables: (
 
 @mixin tables($config: ()) {
 
-	$config: map-merge-deep($tables, $config);
-	$tables: $config !global;
+	$tables: map-merge-deep($tables, $config) !global;
 
 	//-------------------------------------------------------------
 	// Component
