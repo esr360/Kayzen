@@ -22,28 +22,24 @@
 // Core Styles
 //-----------------------------------------------------------------
 	
-		@include core {
-	
-			background: color(greyscale, grey-4);
+		background: color(greyscale, grey-4);
+		color: color(greyscale, white);
+		display: inline-block;
+		vertical-align: middle;
+		padding: 0 1.2em;
+		line-height: 2.4em;
+		font-weight: 400;
+		transition: 0.4s;
+	    border: 1px solid;
+	    border-color: transparent;
+		cursor: pointer;
+		text-decoration: none;
+
+		&:hover {
+			background: darken(color(greyscale, grey-4), 10%);
 			color: color(greyscale, white);
-			display: inline-block;
-			vertical-align: middle;
-			padding: 0 1.2em;
-			line-height: 2.4em;
-			font-weight: 400;
-			transition: 0.4s;
-		    border: 1px solid;
-		    border-color: transparent;
-			cursor: pointer;
 			text-decoration: none;
-	
-			&:hover {
-				background: darken(color(greyscale, grey-4), 10%);
-				color: color(greyscale, white);
-				text-decoration: none;
-			}
-	
-		} // core
+		}
 
 // Sizes
 //-----------------------------------------------------------------
@@ -92,7 +88,7 @@
 				&:hover {
 					background: darken($color, 10%);
 				}
-				@include modifier(border) {
+				@include nested-modifier(border) {
 					background: transparent;
 					border-color: $color;
 					color: $color;
@@ -115,7 +111,7 @@
 				&:hover {
 					background: darken($color, 10%);
 				}
-				@include modifier(border) {
+				@include nested-modifier(border) {
 					background: transparent;
 					border-color: $color;
 					color: $color;
@@ -146,36 +142,32 @@
 
 	@include component(bgroup) {
 	
-		@include core {
-	
+		@include nested-component(button) {
+			margin-left: 0.5em;
+			&:first-child {
+				margin-left: 0;
+			}
+		}
+
+		> a, .text-sep {
+			margin-left: 0.5em;
+			&:first-child {
+				margin-left: 0;
+			}
+		}
+
+		@media (max-width: breakpoint(break-1)) {
 			@include nested-component(button) {
-				margin-left: 0.5em;
-				&:first-child {
-					margin-left: 0;
+				margin-left: 0;
+				display: block;
+				width: 100%;
+				margin-bottom: 1rem;
+				text-align: center;
+				&:last-child {
+					margin-bottom: 0;
 				}
-			}
-	
-			> a, .text-sep {
-				margin-left: 0.5em;
-				&:first-child {
-					margin-left: 0;
-				}
-			}
-	
-			@media (max-width: breakpoint(break-1)) {
-				@include nested-component(button) {
-					margin-left: 0;
-					display: block;
-					width: 100%;
-					margin-bottom: 1rem;
-					text-align: center;
-					&:last-child {
-						margin-bottom: 0;
-					}
-				}		
-			}
-	
-		} // core
+			}		
+		}
 	
 	} // component(bgroup)
 

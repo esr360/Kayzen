@@ -21,32 +21,28 @@
 
 // Core Styles
 //-----------------------------------------------------------------
+	
+		background-size: cover;	
+		background-position: center;	
 
-		@include core {
-	
-			background-size: cover;	
-			background-position: center;	
-	
-			@include nested-component(hgroup) {
-				color: typography(colors, heading);
-			}
-	
-			// Carousel Tools
-	
-			.slide-prev,
-			.slide-next {
-				@include vertical-center(absolute);
-			}
-	
-			.slide-prev {
-				left: -7.5rem;
-			}
-	
-			.slide-next {
-				right: -7.5rem;
-			}
-	
-		} // core
+		@include nested-component(hgroup) {
+			color: typography(colors, heading);
+		}
+
+		// Carousel Tools
+
+		.slide-prev,
+		.slide-next {
+			@include vertical-center(absolute);
+		}
+
+		.slide-prev {
+			left: -7.5rem;
+		}
+
+		.slide-next {
+			right: -7.5rem;
+		}
 
 // Modifiers
 //-----------------------------------------------------------------
@@ -109,13 +105,11 @@
 
 	@include component(s-block) {
 	
-		@include core {
-			position: relative;
-			transition: base(transition);
-			padding: 7%;
-			background-color: color(greyscale, white);	
-			background-size: cover;
-		}
+		position: relative;
+		transition: base(transition);
+		padding: 7%;
+		background-color: color(greyscale, white);	
+		background-size: cover;
 	
 	} // component(s-block)
 	

@@ -14,49 +14,45 @@
 	$modals: $config !global;
 	
 	@include component(modal) {
+			
+		// Child Styles
 		
-		@include core {
-			
-			// Child Styles
-			
-			@at-root .modal-content {
-			    display: none;
-			    position: relative;
-			    background: color(greyscale, white);
-			    padding: 1rem;
-			    border-radius: 0.4em;
-			    box-shadow: 1px 1px 4px 0px rgba(0,0,0,0.2);
-			    width: 500px;
-			    max-width: 90%;
-			}
-			
-			@at-root .modal-overlay {
-			    position: fixed;
-			    z-index:100;
-			    top: 0px;
-			    left: 0px;
-			    height:100%;
-			    width:100%;
-			    background: rgba(color(greyscale, black), 0.4);
-			    display: none;
-			}
-	
-			@at-root .modal-close {
-			    position: absolute;
-			    top: 1rem;
-			    right: 1rem;
-			    font-size: 1.25rem;
-			    line-height: 1;
-			    transition: 0.4s;
-			    &:hover {
-			        color: color(brand, primary);
-			    }
-			    &, .fa {
-			        cursor: pointer;
-			    }
-			}
-			
-		} // core
+		@at-root .modal-content {
+		    display: none;
+		    position: relative;
+		    background: color(greyscale, white);
+		    padding: 1rem;
+		    border-radius: 0.4em;
+		    box-shadow: 1px 1px 4px 0px rgba(0,0,0,0.2);
+		    width: 500px;
+		    max-width: 90%;
+		}
+		
+		@at-root .modal-overlay {
+		    position: fixed;
+		    z-index:100;
+		    top: 0px;
+		    left: 0px;
+		    height:100%;
+		    width:100%;
+		    background: rgba(color(greyscale, black), 0.4);
+		    display: none;
+		}
+
+		@at-root .modal-close {
+		    position: absolute;
+		    top: 1rem;
+		    right: 1rem;
+		    font-size: 1.25rem;
+		    line-height: 1;
+		    transition: 0.4s;
+		    &:hover {
+		        color: color(brand, primary);
+		    }
+		    &, .fa {
+		        cursor: pointer;
+		    }
+		}
 	
 	} // component(modal)
 	

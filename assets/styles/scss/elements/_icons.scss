@@ -21,34 +21,30 @@
 
 // Core Styles
 //-----------------------------------------------------------------
-
-		@include core {
 	
-			background: color(greyscale, grey-4);
+		background: color(greyscale, grey-4);
+		color: color(greyscale, white);
+		transition: base(transition);
+		position: relative;
+		display: inline-block;
+		vertical-align: middle;
+		text-align: center;
+		transition: 0.4s;
+		height: 2em;
+		width: 2em;
+		border: 1px solid;
+		border-color: transparent;
+		&:hover {
+			background: darken(color(greyscale, grey-4), 10%);
 			color: color(greyscale, white);
-			transition: base(transition);
-			position: relative;
-			display: inline-block;
-			vertical-align: middle;
-			text-align: center;
-			transition: 0.4s;
-			height: 2em;
-			width: 2em;
-			border: 1px solid;
-			border-color: transparent;
-			&:hover {
-				background: darken(color(greyscale, grey-4), 10%);
-				color: color(greyscale, white);
-				text-decoration: none;
-			}
-	
-			.fa {
-				font-size: 0.9em;
-				@include vertical-center(absolute);
-				@extend %horizontal-center;
-			}
-	
-		} // core
+			text-decoration: none;
+		}
+
+		.fa {
+			font-size: 0.9em;
+			@include vertical-center(absolute);
+			@extend %horizontal-center;
+		}
 
 // Sizes
 //-----------------------------------------------------------------
@@ -97,7 +93,7 @@
 				&:hover {
 					background: darken($color, 10%);
 				}
-				@include modifier(border) {
+				@include nested-modifier(border) {
 					background: transparent;
 					border-color: $color;
 					color: $color;
@@ -116,7 +112,7 @@
 				&:hover {
 					background: darken($color, 10%);
 				}
-				@include modifier(border) {
+				@include nested-modifier(border) {
 					background: transparent;
 					border-color: $color;
 					color: $color;
@@ -147,16 +143,12 @@
 	
 	@include component(igroup) {
 	
-		@include core {
-	
-			@include nested-component(icon) {
-				margin-left: 1rem;
-				&:first-child {
-					margin-left: 0;
-				}
+		@include nested-component(icon) {
+			margin-left: 1rem;
+			&:first-child {
+				margin-left: 0;
 			}
-	
-		} // core
+		}
 	
 	} // component(igroup)
 	

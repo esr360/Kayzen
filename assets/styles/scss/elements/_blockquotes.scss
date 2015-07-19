@@ -17,37 +17,33 @@
 
 // Core Styles
 //-----------------------------------------------------------------
-
-		@include core {
 			
-			margin: 0;
-			border: 0;;
-			position: relative;
-			font-family: typography(typefaces, secondary);
-			font-style: italic;
-			
-			p {
-				margin: 0;
-				padding: 0 3rem;
-				&:before {
-					position: absolute;
-					font-family: FontAwesome;
-					font-size: 1.75rem;
-					color: rgba(0,0,0,0.3);
-				}
-				&:before {
-					content: "\f10d";
-					top: -0.25rem;
-					left: 0;
-				}
-			}
-			
-			cite {
-				font-weight: bold;
-				font-style: normal;
-			}
+		margin: 0;
+		border: 0;;
+		position: relative;
+		font-family: typography(typefaces, secondary);
+		font-style: italic;
 		
-		} // core
+		p {
+			margin: 0;
+			padding: 0 3rem;
+			&:before {
+				position: absolute;
+				font-family: FontAwesome;
+				font-size: 1.75rem;
+				color: rgba(0,0,0,0.3);
+			}
+			&:before {
+				content: "\f10d";
+				top: -0.25rem;
+				left: 0;
+			}
+		}
+		
+		cite {
+			font-weight: bold;
+			font-style: normal;
+		}
 	
 	} // component(blockquote)
 	

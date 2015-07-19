@@ -22,11 +22,9 @@
 // Core Styles
 //-----------------------------------------------------------------
 
-		@include core {
-			line-height: 1;
-			font-size: typography(sizes, base);
-			transition: base(transition);
-		}
+		line-height: 1;
+		font-size: typography(sizes, base);
+		transition: base(transition);
 
 // Sizes
 //-----------------------------------------------------------------
@@ -149,25 +147,21 @@
 
 // Core Layout
 //-----------------------------------------------------------------
+	
+		margin-bottom: base(margin);
+		font-size: 1rem;
+		position: relative;
+		background-size: cover;
+		@include vertical-rhythm(bottom);
 
-		@include core {
-	
-			margin-bottom: base(margin);
-			font-size: 1rem;
-			position: relative;
-			background-size: cover;
-			@include vertical-rhythm(bottom);
-	
-			@include nested-component(heading) {
-				margin: 0.5em 0;
-				line-height: 0.8;
-				@include vertical-rhythm;
-			}
-	
-			.lede {
-				color: color(greyscale, grey-4);
-			}
-	
+		@include nested-component(heading) {
+			margin: 0.5em 0;
+			line-height: 0.8;
+			@include vertical-rhythm;
+		}
+
+		.lede {
+			color: color(greyscale, grey-4);
 		}
 
 // Modifiers

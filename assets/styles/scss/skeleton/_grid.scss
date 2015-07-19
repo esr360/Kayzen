@@ -94,13 +94,11 @@ $grid: (
 	}
 	
 	@include component(#{grid-option(col-namespace)}) {
-		@include core {
-			@extend %column;
-			@if grid-setting(mobile-first) {
-				width: 100%;
-			} @else {		
-				@include gutter;
-			}
+		@extend %column;
+		@if grid-setting(mobile-first) {
+			width: 100%;
+		} @else {		
+			@include gutter;
 		}
 		// Default Column Width
 		@if grid-setting(mobile-first) == false {
@@ -157,40 +155,36 @@ $grid: (
 
 	@include component(#{grid-option(row-namespace)}) {
 		
-		@include core {
-		
-			@extend %row;
-		
-			// Default Stacking
-			@if grid-setting(responsive) {
-				@media (#{$scale}-width: grid-option(col-collapse)) {
-					&:not([class*="break"]):not([class*="flow"]) {
-						@include stack-columns;
-					}
+		@extend %row;
+	
+		// Default Stacking
+		@if grid-setting(responsive) {
+			@media (#{$scale}-width: grid-option(col-collapse)) {
+				&:not([class*="break"]):not([class*="flow"]) {
+					@include stack-columns;
 				}
 			}
-		
-			// Custom Stacking
-			@if grid-setting(responsive) {
-				@if grid-setting(column-stacking) {
-					@each $bp, $width in map-get($grid, breakpoints) {
-						@media (#{$scale}-width: $width) {
-							&.#{$bp} {
-								@include stack-columns;
-								@if grid-setting(mobile-first) {
-									&.block-row {
-										> [class*="#{grid-option(col-namespace)}"] {
-											display: table-cell;
-										}
+		}
+	
+		// Custom Stacking
+		@if grid-setting(responsive) {
+			@if grid-setting(column-stacking) {
+				@each $bp, $width in map-get($grid, breakpoints) {
+					@media (#{$scale}-width: $width) {
+						&.#{$bp} {
+							@include stack-columns;
+							@if grid-setting(mobile-first) {
+								&.block-row {
+									> [class*="#{grid-option(col-namespace)}"] {
+										display: table-cell;
 									}
 								}
 							}
 						}
-					} 	
-				} 
-			}
-		
-		} // core
+					}
+				} 	
+			} 
+		}
 
 		//Flow Columns
 		@if grid-setting(flow-columns) {

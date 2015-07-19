@@ -64,16 +64,14 @@
 	
 	@include component(bg-img) {
 	
-		@include core {
-			background-image: url("#{$asset-path}/images/stock-1-bg.jpg");
-			background-size: cover;
-			position: absolute;
-			height: 100%;
-			width: 100%;
-			top: 0;
-			left: 0;
-			transition: 0.4s;
-		}
+		background-image: url("#{$asset-path}/images/stock-1-bg.jpg");
+		background-size: cover;
+		position: absolute;
+		height: 100%;
+		width: 100%;
+		top: 0;
+		left: 0;
+		transition: 0.4s;
 	
 		@include modifier(scale-rotate) {
 			&:hover,
@@ -89,30 +87,26 @@
 //-----------------------------------------------------------------
 	
 	@include component(desktop-graphic) {
-	
-		@include core {
-	
+
+		position: relative;
+		cursor: pointer;
+
+		img {
 			position: relative;
-			cursor: pointer;
-	
-			img {
-				position: relative;
-				z-index: 1;		
-			}
-	
-			div {
-				position: absolute;
-				background-size: 100%;
-				background-position: center 0%;
-				transition: 3s;
-				height: 58.25%;
-				width: 92.2%;
-				top: 3.95%;
-				left: 3.9%;
-				z-index: 0;		
-			}
-	
-		} // core
+			z-index: 1;		
+		}
+
+		div {
+			position: absolute;
+			background-size: 100%;
+			background-position: center 0%;
+			transition: 3s;
+			height: 58.25%;
+			width: 92.2%;
+			top: 3.95%;
+			left: 3.9%;
+			z-index: 0;		
+		}
 	
 		@include modifier(scroll) {
 			&:hover {
@@ -135,12 +129,10 @@
 	
 	@include component(mobile-graphic) {
 	
-		@include core {
-			background-image: url("#{$asset-path}/images/mobile-base-blue.png");
-			background-size: 100% 100%;
-			padding: 30% 8%;
-			transition: base(transition);
-		}
+		background-image: url("#{$asset-path}/images/mobile-base-blue.png");
+		background-size: 100% 100%;
+		padding: 30% 8%;
+		transition: base(transition);
 	
 		@include modifier(position) {
 			position: absolute;

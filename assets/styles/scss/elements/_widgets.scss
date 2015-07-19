@@ -21,44 +21,40 @@
 
 // Core Styles
 //-----------------------------------------------------------------
+	
+		padding: 2.5em 1em;
+		transition: base(transition);
 
-		@include core {
-	
-			padding: 2.5em 1em;
-			transition: base(transition);
-	
-			&:hover {
-				.w-icon {
-					color: color(brand, primary);
-				}
+		&:hover {
+			.w-icon {
+				color: color(brand, primary);
 			}
-	
-			@include nested-component(hgroup) {
-				margin-bottom: 0;
+		}
+
+		@include nested-component(hgroup) {
+			margin-bottom: 0;
+		}
+
+		@at-root .w-icon {
+			color: color(greyscale, grey-3);
+			margin-bottom: base(margin);
+			&.w-inline {
+				margin-right: 0.5rem;
 			}
-	
-			@at-root .w-icon {
-				color: color(greyscale, grey-3);
-				margin-bottom: base(margin);
-				&.w-inline {
-					margin-right: 0.5rem;
-				}
+		}
+
+		@at-root .w-header {
+			+ .w-icon {
+				margin-left: 0.5rem;
+				margin-right: 0;
 			}
-	
-			@at-root .w-header {
-				+ .w-icon {
-					margin-left: 0.5rem;
-					margin-right: 0;
-				}
-			}
-	
-			@at-root .w-inline {
-				display: inline-block;
-				vertical-align: middle;
-				margin-bottom: 0;
-			}
-	
-		} // core
+		}
+
+		@at-root .w-inline {
+			display: inline-block;
+			vertical-align: middle;
+			margin-bottom: 0;
+		}
 
 // Modifiers
 //-----------------------------------------------------------------

@@ -8,8 +8,9 @@
 
 // Component
 // Define the main component
-@mixin component($component: $component, $core: false, $type: class) {
+@mixin component($component: $component, $core: true, $type: class) {
 	$component: $component !global;
+	$parent: $component !global;
 	@if $type == class {
 		@if $core {
 			.#{$component},
@@ -31,7 +32,7 @@
 
 // Nested Component
 // Nest components for appropriate cascading
-@mixin nested-component($component: $component, $root: false, $type: flex) {
+@mixin nested-component($component: $component, $root: true, $type: flex) {
 	@if $type == static {
 		@if $root {
 			@at-root .#{$component} {
@@ -54,9 +55,12 @@
 		}
 	} @else if $type == flex {
 		@if $root {
-			@at-root .#{$component},
-			[class*="#{$component}-"] {
-				@content;
+			@at-root {
+				& .#{$component},
+				& [class*="#{$component}-"] {
+					@content;
+					content: "dopy";
+				}
 			}
 		} @else { 
 			.#{$component},
@@ -67,33 +71,19 @@
 	}
 }
 
-// Core/Default Styles
-// Define the core styles for a component to be applied on the
-// naked component with no modifiers
-@mixin core($type: class) {	
-	$parent: nth(&, 1) !global;	
-	@if $type == class {
-		@at-root &, .#{$component} {
-			@content;
-		}
-	} @else if $type == data {
-		@at-root & {
-			@content;
-		}
+// Modifiers 
+// Add a modifier to an existing component
+@mixin modifier($modifier) {
+	@at-root [class*="#{$component}-"][class*="-#{$modifier}"] {
+		@content
 	}
 }
 
-// Modifiers 
-// Add a modifier to an existing component
-@mixin modifier($modifier, $root: false) {
-	@if $root {
-		@at-root &[class*="-#{$modifier}"] {
-			@content
-		}
-	} @else {
-		&[class*="-#{$modifier}"] {
-			@content;
-		}
+// Nested Modifiers 
+// Nest a modifier within another modifier
+@mixin nested-modifier($modifier) {
+	&[class*="-#{$modifier}"] {
+		@content;
 	}
 }
 

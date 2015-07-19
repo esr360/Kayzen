@@ -17,39 +17,35 @@
 
 // Core Styles
 //-----------------------------------------------------------------
+	
+		width: 100%;
+	
+		thead, 
+		tfoot {
+			td {			
+				line-height: 2.4;
+			}
+		}
 
-		@include core {
-	
-			width: 100%;
-		
-			thead, 
-			tfoot {
-				td {			
-					line-height: 2.4;
+		tbody {
+			td {
+				line-height: 2;
+				padding-left: 0.75rem;
+				border-bottom: 1px solid rgba(0,0,0,0.1);
+				border-left: 1px solid rgba(0,0,0,0.1);
+				&:first-child {
+					border-left: none;
+					padding-left: 0;
 				}
 			}
-	
-			tbody {
-				td {
-					line-height: 2;
-					padding-left: 0.75rem;
-					border-bottom: 1px solid rgba(0,0,0,0.1);
-					border-left: 1px solid rgba(0,0,0,0.1);
-					&:first-child {
-						border-left: none;
-						padding-left: 0;
-					}
-				}
-				tr {
-					&:last-child {
-						td {
-							border-bottom: none;
-						}
+			tr {
+				&:last-child {
+					td {
+						border-bottom: none;
 					}
 				}
 			}
-	
-		} // core
+		}
 
 // Modifiers
 //-----------------------------------------------------------------

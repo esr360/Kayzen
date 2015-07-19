@@ -32,41 +32,37 @@
 // Core Styles
 //-----------------------------------------------------------------
 
-		@include core {
-	
-			min-height: map-get($billboard, min-height);
-			background-color: map-get($billboard, bg-color);
-			position: relative;
-	
-			// Conditionals
-	
-			// only apply a bg image if there is one to apply
-			@if map-get($billboard, bg-image) != "" {
-				background-image: url(map-get($billboard, bg-image));
-				background-size: cover;
+		min-height: map-get($billboard, min-height);
+		background-color: map-get($billboard, bg-color);
+		position: relative;
+
+		// Conditionals
+
+		// only apply a bg image if there is one to apply
+		@if map-get($billboard, bg-image) != "" {
+			background-image: url(map-get($billboard, bg-image));
+			background-size: cover;
+		}
+		
+		@if map-get($billboard, full-screen) == true {
+			@include extend(full-screen);
+		}
+
+		@if map-get($billboard, overlay) == true {
+			@include extend(overlay);
+		}
+		
+		// Child Styles
+
+		@at-root .bb-wrapper {
+			color: map-get($billboard, color);
+			text-align: map-get($billboard, text-align);
+			@extend %horizontal-center;
+			@include vertical-center(absolute);
+			@media (min-width: breakpoint(break-3)) {
+				width: map-get($billboard, wrapper-width);
 			}
-			
-			@if map-get($billboard, full-screen) == true {
-				@include extend(full-screen);
-			}
-	
-			@if map-get($billboard, overlay) == true {
-				@include extend(overlay);
-			}
-			
-			// Child Styles
-	
-			@at-root .bb-wrapper {
-				color: map-get($billboard, color);
-				text-align: map-get($billboard, text-align);
-				@extend %horizontal-center;
-				@include vertical-center(absolute);
-				@media (min-width: breakpoint(break-3)) {
-					width: map-get($billboard, wrapper-width);
-				}
-			}
-	
-		} // core
+		}
 
 // Modifiers
 //-----------------------------------------------------------------

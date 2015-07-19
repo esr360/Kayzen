@@ -32,41 +32,37 @@
 // Core Styles
 //-----------------------------------------------------------------
 	
-		@include core {
-	
-			background-color: map-get($header, bg-color);		
-	
-			// Conditionals
-	
-			@if map-get($header, bar) {
-				@include extend(bar);
+		background-color: map-get($header, bg-color);		
+
+		// Conditionals
+
+		@if map-get($header, bar) {
+			@include extend(bar);
+		}
+
+		@if map-get($header, absolute) {
+			@include extend(absolute);
+		}
+
+		@if map-get($header, side) != null {
+			@if map-get($header, side) == left {
+				@include extend(side, left);
+			} @else if map-get($header, side) == right {
+				@include extend(side, right);
+			} @else {
+				@include extend(side);
 			}
-	
-			@if map-get($header, absolute) {
-				@include extend(absolute);
-			}
-	
-			@if map-get($header, side) != null {
-				@if map-get($header, side) == left {
-					@include extend(side, left);
-				} @else if map-get($header, side) == right {
-					@include extend(side, right);
-				} @else {
-					@include extend(side);
-				}
-			}
-	
-			@if map-get($header, dark) {
-				@include extend(dark);
-			}
-	
-			// Child Styles
-	
-			@at-root .header-wrapper {
-				height: map-get($header, height);
-			}
-	
-		} // core
+		}
+
+		@if map-get($header, dark) {
+			@include extend(dark);
+		}
+
+		// Child Styles
+
+		@at-root .header-wrapper {
+			height: map-get($header, height);
+		}
 
 // Modifiers
 //-----------------------------------------------------------------
