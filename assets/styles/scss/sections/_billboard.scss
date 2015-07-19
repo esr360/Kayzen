@@ -105,11 +105,3 @@
 	} // component(billboard)
 	
 } // billboard
-
-//-----------------------------------------------------------------
-// Utilities
-//-----------------------------------------------------------------
-
-@function billboard($key) {
-    @return map-get($billboard-default, $key);
-}
