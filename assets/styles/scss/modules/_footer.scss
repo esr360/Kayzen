@@ -18,9 +18,6 @@ $footer: (
 
 	$config: map-merge-deep($footer, $config);
 	$footer: $config !global;
-
-	// Core Styles
-	//-------------------------------------------------------------
 	
 	.app-footer {
 		text-align: center;	
@@ -58,4 +55,4 @@ $footer: (
 		}
 	}
 	
-} // footer
+} // @mixin footer

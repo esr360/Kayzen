@@ -19,14 +19,7 @@ $breadcrumb: (
 	$config: map-merge-deep($breadcrumb, $config);
 	$breadcrumb: $config !global;
 
-	//-------------------------------------------------------------
-	// Component
-	//-------------------------------------------------------------
-	
 	.breadcrumb {	
-	
-	// Core Styles
-	//-------------------------------------------------------------
 	
 		font-size: 0.9em;
 		margin: base(margin) 0;
@@ -49,4 +42,4 @@ $breadcrumb: (
 	
 	} // .breadcrumb
 	
-} // breadcrumb
+} // @mixin breadcrumb

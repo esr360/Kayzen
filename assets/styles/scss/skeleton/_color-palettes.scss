@@ -60,7 +60,7 @@ $palettes: (
 	$config: map-merge-deep($palettes, $config);
 	$palettes: $config !global;
 
-} // palettes
+} // @mixin palettes
 
 //-----------------------------------------------------------------
 // Utilities

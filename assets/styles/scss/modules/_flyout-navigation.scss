@@ -19,10 +19,6 @@ $flyout-navigation: (
 	$config: map-merge-deep($flyout-navigation, $config);
 	$flyout-navigation: $config !global;
 	
-	//-------------------------------------------------------------
-	// Component
-	//-------------------------------------------------------------
-	
 	.flyout-trigger {
 		
 		position: absolute;
@@ -116,4 +112,4 @@ $flyout-navigation: (
 	
 	} // .flyout-container
 	
-} // flyout-navigation
+} // @mixin flyout-navigation

@@ -59,7 +59,7 @@ $typography: (
 	    font-size: font-size(size-4);
 	}
 	
-} // typography
+} // @mixin typography
 
 @include typography(
 	if(variable-exists(typography), $typography, ())
