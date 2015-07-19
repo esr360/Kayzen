@@ -171,7 +171,6 @@ $navigation: (
 	    } // in side-header
 
 		// Larger Resolutions
-		
 	    @media (min-width: breakpoint(break-3)) {
 	        text-align: map-get($config, text-align);
 	        > ul {
