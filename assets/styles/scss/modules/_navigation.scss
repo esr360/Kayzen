@@ -3,28 +3,25 @@
 //=================================================================
 
 //-----------------------------------------------------------------
-// Config
-//-----------------------------------------------------------------
-
-$navigation: (
-	text-align             : right,
-	item-gutter            : 0.5em,
-	item-padding           : 0.5em 0.75em,
-	link-color             : typography(colors, base),
-	link-hover-color       : color(brand, primary),
-	no-icons               : false,
-	dropdown-icon          : "\f107",
-	style                  : default
-);
-
-//-----------------------------------------------------------------
 // Mixin
 //-----------------------------------------------------------------
 
 @mixin navigation($config: ()) {
 
-	$config: map-merge-deep($navigation, $config);
-	$navigation: $config !global;
+	//-------------------------------------------------------------
+	// Config - Local Scope
+	//-------------------------------------------------------------
+
+	$navigation: map-merge-deep((
+		text-align             : right,
+		item-gutter            : 0.5em,
+		item-padding           : 0.5em 0.75em,
+		link-color             : typography(colors, base),
+		link-hover-color       : color(brand, primary),
+		no-icons               : false,
+		dropdown-icon          : "\f107",
+		style                  : default
+	), $config) !global;
 
 	//-------------------------------------------------------------
 	// Component
@@ -39,8 +36,8 @@ $navigation: (
 	    li {    
 	        a {
 	            display: block;
-	            padding: map-get($config, item-padding);
-	            color: map-get($config, link-color);
+	            padding: map-get($navigation, item-padding);
+	            color: map-get($navigation, link-color);
 	            &:hover {
 	                text-decoration: none;
 	            }
@@ -70,7 +67,7 @@ $navigation: (
 	            transition: base(transition);
 	
 	            // add gap between items
-	            margin-left: map-get($config, item-gutter);
+	            margin-left: map-get($navigation, item-gutter);
 	            &:first-child {
 	                margin-left: 0;
 	            }
@@ -79,7 +76,7 @@ $navigation: (
 	                // add icon if item has child menu
 	                &:not(:only-child) {
 	                    &:after {
-	                        content: map-get($config, dropdown-icon);
+	                        content: map-get($navigation, dropdown-icon);
 	                        font-family: FontAwesome;
 	                        margin-left: 0.5em;
 	                    }
@@ -88,7 +85,7 @@ $navigation: (
 	
 	            &:hover {
 	                > a {
-	                    color: map-get($config, item-hover-color);
+	                    color: map-get($navigation, item-hover-color);
 	                    // if item has child menu
 	                    // &:not(:only-child) {}
 	                }
@@ -96,7 +93,7 @@ $navigation: (
 	
 	            &.active {
 	                > a {
-	                    color: map-get($config, link-active-color);
+	                    color: map-get($navigation, link-active-color);
 	                }
 	                &:hover {
 						// if item is active and hovered
@@ -110,11 +107,11 @@ $navigation: (
 		
 		// Conditionals
 
-	    @if map-get($config, no-icons) {
+	    @if map-get($navigation, no-icons) {
 	        @include extend(no-icons);
 	    }
 		
-	    @if map-get($config, style-1) {
+	    @if map-get($navigation, style-1) {
 	        @include extend(style-1);
 	    }
 	
@@ -172,7 +169,7 @@ $navigation: (
 
 		// Larger Resolutions
 	    @media (min-width: breakpoint(break-3)) {
-	        text-align: map-get($config, text-align);
+	        text-align: map-get($navigation, text-align);
 	        > ul {
 	            display: inline-block;
 	            white-space: nowrap;

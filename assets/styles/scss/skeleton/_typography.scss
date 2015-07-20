@@ -71,3 +71,7 @@ $typography: (
 @function typography($group, $key) {
 	@return map-get(typography-config($group), $key);
 }
+
+@function font-size($size) {
+	@return map-get(typography-config(sizes), $size)
+}

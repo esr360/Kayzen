@@ -3,28 +3,26 @@
 //=================================================================
 
 //-----------------------------------------------------------------
-// Config - Global Scope
-//-----------------------------------------------------------------
-
-$base: (
-	background       : color(greyscale, grey-1),
-	font-family      : typography(typefaces, primary),
-	text-color       : typography(colors, base),
-	font-size        : typography(sizes, base),
-	margin           : 2rem,
-	line-height      : 1.4,
-	radius           : 0.4em,
-	oval-radius      : 1.5em,
-	transition       : 0.4s
-);
-
-//-----------------------------------------------------------------
 // Mixin
 //-----------------------------------------------------------------
 
 @mixin base($config: ()) {
 
-	$base: map-merge-deep($base, $config) !global;
+	//-------------------------------------------------------------
+	// Config - Local Scope
+	//-------------------------------------------------------------
+
+	$base: map-merge-deep((
+		background       : color(greyscale, grey-1),
+		font-family      : typography(typefaces, primary),
+		text-color       : typography(colors, base),
+		font-size        : typography(sizes, base),
+		margin           : 2rem,
+		line-height      : 1.4,
+		radius           : 0.4em,
+		oval-radius      : 1.5em,
+		transition       : 0.4s
+	), $config) !global;
 
 	//-------------------------------------------------------------
 	// General
@@ -66,7 +64,7 @@ $base: (
 	    @include modifier(full) {
 	        width: grid-option(small-width);
 	        width: grid-option(full-width);
-	        max-width: grid-option(full-width)
+	        max-width: grid-option(full-width);
 	    }
 	
 	} // component(container)

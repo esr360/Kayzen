@@ -210,7 +210,7 @@ $carousels: (
     min-height: 1px;
     display: none;  
     position: relative;
-    transition: base(transition);
+    transition: 0.4s;
     [dir="rtl"] & {
         float: right;
     }

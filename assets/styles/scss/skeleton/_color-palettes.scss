@@ -70,5 +70,5 @@ $palettes: (
 }
 
 @function color($group, $key) {
-	@return map-get(palette($group), $key);
+	@return map-get(map-get($palettes, $group), $key);
 }

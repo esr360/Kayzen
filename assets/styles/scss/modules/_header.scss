@@ -3,40 +3,39 @@
 //=================================================================
 
 //-----------------------------------------------------------------
-// Config - Global Scope
-//-----------------------------------------------------------------
-
-$header: (
-	// Extend each "setting" as a modifier?
-	extend-settings      : false,
-	// Settings
-	absolute             : false,
-	bar                  : false,
-	dark                 : false,
-	side                 : null,
-	// Options
-	side-width           : 350px,
-	side-container-width : 100%,
-	top-position         : 0,
-	bg-color             : base(background-color),
-	dark-color           : color(greyscale, grey-5),
-	height               : 100px
-);
-
-//-----------------------------------------------------------------
 // Mixin
 //-----------------------------------------------------------------
 
 @mixin header($config: ()) {
+	
+	//-------------------------------------------------------------
+	// Config - Local Scope
+	//-------------------------------------------------------------
 
-	$header: map-merge-deep($header, $config) !global;
+	$header: map-merge-deep((
+		// Extend each "setting" as a modifier?
+		extend-settings      : false,
+		// Settings
+		absolute             : false,
+		bar                  : false,
+		dark                 : false,
+		side                 : null,
+		// Options
+		side-width           : 350px,
+		side-container-width : 100%,
+		top-position         : 0,
+		bg-color             : base(background-color),
+		dark-color           : color(greyscale, grey-5),
+		height               : 100px
+	), $config) !global;
+	
 	$config: $header !global;
 	
 	//-------------------------------------------------------------
 	// Component
 	//-------------------------------------------------------------
 
-	@include component(header) {
+	@include component(header, map-get($header, selector-type)) {
 
 	// Core Styles
 	//-------------------------------------------------------------

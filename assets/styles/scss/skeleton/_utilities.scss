@@ -8,9 +8,13 @@
 
 // Component
 // Define the main component
+
+// Set the default selector type (flex, chain, static)
+$type: flex;
+
 @mixin component(
-	$component: $component, 
-	$type: if(variable-exists(config) and map-has-key($config, selector-type), map-get($config, selector-type), flex), 
+	$component, 
+	$type: $type,
 	$selector: class
 ) {
 	$component: $component !global;
@@ -38,28 +42,28 @@
 
 // Nested Component
 // Nest components for appropriate specificity
-@mixin nested-component($component: $component, $type: flex, $root: true) {
-	 @if $type == flex {
+@mixin nested-component($nested-component, $type: flex, $root: true) {
+	@if $type == flex {
 		@if $root {
 			@at-root {
-				& .#{$component},
-				& [class*="#{$component}-"] {
+				& .#{$nested-component},
+				& [class*="#{$nested-component}-"] {
 					@content;
 				}
 			}
 		} @else { 
-			.#{$component},
-			[class*="#{$component}-"] {
+			.#{$nested-component},
+			[class*="#{$nested-component}-"] {
 				@content;
 			}
 		}
 	} @else if $type == chain {
 		@if $root {
-			@at-root [class*="#{$component}-"] {
+			@at-root [class*="#{$nested-component}-"] {
 				@content;
 			}
 		} @else { 
-			[class*="#{$component}-"] {
+			[class*="#{$nested-component}-"] {
 				@content;
 			}
 		}
@@ -183,9 +187,14 @@
 
 // Map Deep Merge
 // http://git.io/vmBVH
+// Customized for use with Kayzen UIX
 //-----------------------------------------------------------------
 
-@function map-merge-deep($map-old, $map-new, $overwrite: true) {
+@function map-merge-deep($map-old, $map-new, $overwrite: true, $nested: false) {
+	// Custom code to set the default "selector-type" for a component
+	@if not $nested {
+		$map-old: map-merge($map-old, (selector-type: flex));
+	}
 	// Iterate through each value of the new map
 	@each $key, $new-value in $map-new {
 		// Check if that value already exists on the old map
@@ -194,8 +203,8 @@
 			$old-value: map-get($map-old, $key);
 			@if type-of($new-value) == map and type-of($old-value) == map {
 				// If both are maps, recurse regardless of $overwrite
-				$merged-value: map-merge-deep($old-value, $new-value);
-				$map-old: map-set($map-old, $key, $merged-value);
+				$merged-value: map-merge-deep($old-value, $new-value, $nested: true);
+				$map-old: map-set($map-old, $key, $merged-value);	
 			} @else {
 				// Otherwise check $overwrite
 				@if $overwrite{
@@ -203,7 +212,7 @@
 				}
 			}
 		} @else {
-			// There is no existing key so add
+			// There is no existing key to add
 			$map-old: map-set($map-old, $key, $new-value);
 		}
 	}

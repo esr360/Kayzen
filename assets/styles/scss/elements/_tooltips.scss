@@ -11,35 +11,33 @@ https://github.com/esr360/K-Tooltips
 -----------------------------------------------------------------*/
 
 //-----------------------------------------------------------------
-// Config
-//-----------------------------------------------------------------
-
-$tooltips: (
-	// Size & Appearance
-	max-width      : 500px,
-	padding        : 1em,
-	distance       : -1em,
-	background     : rgba(black, 0.75),
-	border-radius  : 0.25em,
-	arrow-size     : 0.5em,
-	arrow-color    : rgba(black, 0.75),
-	// Typography
-	font-size      : 1em,
-	color          : white,
-	text-transform : none,
-	font-weight    : normal,
-	// Other
-	transition     : 0.4s,
-	z-index        : 9999
-);
-
-//-----------------------------------------------------------------
 // Mixin
 //-----------------------------------------------------------------
 
 @mixin tooltips($config: ()) {
 
-	$tooltips: map-merge-deep($tooltips, $config) !global;
+	//-------------------------------------------------------------
+	// Config - Local Scope
+	//-------------------------------------------------------------
+	
+	$tooltips: map-merge-deep((
+		// Size & Appearance
+		max-width      : 500px,
+		padding        : 1em,
+		distance       : -1em,
+		background     : rgba(black, 0.75),
+		border-radius  : 0.25em,
+		arrow-size     : 0.5em,
+		arrow-color    : rgba(black, 0.75),
+		// Typography
+		font-size      : 1em,
+		color          : white,
+		text-transform : none,
+		font-weight    : normal,
+		// Other
+		transition     : 0.4s,
+		z-index        : 9999
+	), $config) !global;
 
 	//-------------------------------------------------------------
 	// Custom Styles
@@ -160,7 +158,7 @@ $tooltips: (
 				 
 				[class*="tooltip-wrapper"][class*="-#{$custom-style}"] & {
 			
-					$tooltip-options: map-remove($tooltip-options, "distance", "arrow-size");
+					$tooltips: map-remove($tooltips, "distance", "arrow-size");
 					
 					@each $tooltip-position in $tooltip-positions {
 						@at-root [class*="-#{$tooltip-position}"][class*="-#{$custom-style}"] .tooltip-content {
@@ -172,7 +170,7 @@ $tooltips: (
 						}	
 					}
 					
-					@each $tooltip-option in $tooltip-options {
+					@each $tooltip-option in $tooltips {
 						$custom-key: nth($tooltip-option, 1);
 						$custom-value: tooltip-custom($custom-key);
 						@if map-has-key(map-get($tooltip-styles, $custom-style), $custom-key) {

@@ -3,28 +3,25 @@
 //=================================================================
 
 //-----------------------------------------------------------------
-// Config
-//-----------------------------------------------------------------
-
-$dropdown: (
-	text-align            : left,
-	width                 : 175px,
-	top-position          : 0,
-	dropdown-icon         : "\f105",
-	low-level-icon        : "\f105",
-	link-color            : navigation(a-has-child-color),
-	link-hover-color      : navigation(a-has-child-color),
-	link-active-color     : navigation(a-has-child-color)
-);
-
-//-----------------------------------------------------------------
 // Mixin
 //-----------------------------------------------------------------
 
 @mixin dropdown($config: ()) {
 
-	$config: map-merge-deep($dropdown, $config);
-	$dropdown: $config !global;
+	//-------------------------------------------------------------
+	// Config - Local Scope
+	//-------------------------------------------------------------
+
+	$dropdown: map-merge-deep((
+		text-align            : left,
+		width                 : 175px,
+		top-position          : 0,
+		dropdown-icon         : "\f105",
+		low-level-icon        : "\f105",
+		link-color            : navigation(a-has-child-color),
+		link-hover-color      : navigation(a-has-child-color),
+		link-active-color     : navigation(a-has-child-color)
+	), $config) !global;
 	
 	//-------------------------------------------------------------
 	// Component
@@ -39,8 +36,8 @@ $dropdown: (
 			ul {
 			
 				@extend %list-reset;
-				min-width: map-get($config, width);
-				text-align: map-get($config, text-align);
+				min-width: map-get($dropdown, width);
+				text-align: map-get($dropdown, text-align);
 				transition: base(transition);
 				position: absolute;
 				z-index: 5;
@@ -52,15 +49,15 @@ $dropdown: (
 					position: relative;
 			
 					a {
-						background: map-get($config, item-bg-color);
-						color: map-get($config, link-color);
+						background: map-get($dropdown, item-bg-color);
+						color: map-get($dropdown, link-color);
 						&:before, 
 						&:after {
 							font-family: FontAwesome;		
 						}
 						&:not(:only-child) {
 							&:after {
-								content: map-get($config, dropdown-icon);
+								content: map-get($dropdown, dropdown-icon);
 								right: 0.75em;
 								@include vertical-center(absolute);
 							}
@@ -76,15 +73,15 @@ $dropdown: (
 			
 					&:hover {
 						> a {
-							color: map-get($config, link-hover-color);
-							background: map-get($config, item-hover-bg-color);
+							color: map-get($dropdown, link-hover-color);
+							background: map-get($dropdown, item-hover-bg-color);
 						}
 					}
 			
 					&.active {
 						> a {
-							color: map-get($config, item-active-color);
-							background: map-get($config, item-active-bg-color);
+							color: map-get($dropdown, item-active-color);
+							background: map-get($dropdown, item-active-bg-color);
 						}
 					}
 			
@@ -102,7 +99,7 @@ $dropdown: (
 			
 			// first level only
 			> ul {
-				padding-top: map-get($config, top-position);
+				padding-top: map-get($dropdown, top-position);
 			}
 		
 		} // ul (dropdown)

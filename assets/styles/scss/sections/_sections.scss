@@ -21,19 +21,17 @@ $sections: (
 	//-------------------------------------------------------------
 	// Component
 	//-------------------------------------------------------------
-
-	@include component(section) {
+	
+	@include component(section, map-get($sections, selector-type)) {
 
 	// Core Styles
 	//-------------------------------------------------------------
 	
 		background-size: cover;	
-		background-position: center;	
-
+		background-position: center;
 		@include nested-component(hgroup) {
 			color: typography(colors, heading);
 		}
-
 		// Carousel Tools
 
 		.slide-prev,
