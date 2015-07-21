@@ -14,11 +14,11 @@
 		)
 	));
 	
+	@include typography;
 	@include grid;
 	@include base;
 	@include helpers;
 	@include tools;
-	@include typography;
 
 //-----------------------------------------------------------------
 // Elements
@@ -56,7 +56,7 @@
 		absolute               : true,
 		bar                    : true,
 		bg-color               : transparent,
-		top-position           : 60px
+		top-position           : 50px
 	));
 	
 	@include logo;
@@ -82,7 +82,7 @@
 		full-screen            : true,
 		overlay                : true,
 		bg-image               : "#{$asset-path}/images/billboard-1.jpg",
-		wrapper-width          : 800px
+		wrapper-width          : breakpoint(break-3)
 	));
 
 } // Kayzen

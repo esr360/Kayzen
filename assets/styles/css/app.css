@@ -595,6 +595,23 @@ Made by @esr360
 https://github.com/esr360/K-Tooltips
 	
 -----------------------------------------------------------------*/
+a {
+  color: #9B58B5;
+  transition: 0.4s;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+p, ul, ol {
+  font-weight: lighter;
+}
+
+.lede {
+  font-size: 1.25em;
+}
+
 .span,
 [class*="span-"] {
   display: inline-block;
@@ -1122,7 +1139,8 @@ hr.line {
 h1:first-child, h2:first-child, h3:first-child, h4:first-child, h5:first-child, h6:first-child,
 p:first-child, ul:first-child, ol:first-child,
 fieldset:first-child, legend:first-child, figure:first-child, table:first-child,
-pre:first-child, hr:first-child, .hgroup .heading:first-child, .hgroup [class*="heading-"]:first-child,
+pre:first-child, hr:first-child, .hgroup .heading:first-child,
+.hgroup [class*="heading-"]:first-child,
 [class*="hgroup-"] .heading:first-child,
 [class*="hgroup-"] [class*="heading-"]:first-child {
   margin-top: 0;
@@ -1133,7 +1151,8 @@ p:last-child, ul:last-child, ol:last-child,
 fieldset:last-child, legend:last-child, figure:last-child, table:last-child,
 pre:last-child, hr:last-child, .accordion:last-child,
 [class*="accordion-"]:last-child, .hgroup:last-child,
-[class*="hgroup-"]:last-child, .hgroup .heading:last-child, .hgroup [class*="heading-"]:last-child,
+[class*="hgroup-"]:last-child, .hgroup .heading:last-child,
+.hgroup [class*="heading-"]:last-child,
 [class*="hgroup-"] .heading:last-child,
 [class*="hgroup-"] [class*="heading-"]:last-child, [class*="widget-"][class*="-stacked"]:last-child, [class*="widgets-"][class*="-large"]:last-child {
   margin-bottom: 0;
@@ -1171,23 +1190,6 @@ pre:last-child, hr:last-child, .accordion:last-child,
   left: 0px;
   width: 100%;
   height: 100%;
-}
-
-a {
-  color: #9B58B5;
-  transition: 0.4s;
-  text-decoration: none;
-}
-a:hover {
-  text-decoration: underline;
-}
-
-p, ul, ol {
-  font-weight: lighter;
-}
-
-.lede {
-  font-size: 1.25em;
 }
 
 .accordion,
@@ -1563,12 +1565,14 @@ p, ul, ol {
   color: #ffffff;
 }
 
-.bgroup .button, .bgroup [class*="button-"],
+.bgroup .button,
+.bgroup [class*="button-"],
 [class*="bgroup-"] .button,
 [class*="bgroup-"] [class*="button-"] {
   margin-left: 0.5em;
 }
-.bgroup .button:first-child, .bgroup [class*="button-"]:first-child,
+.bgroup .button:first-child,
+.bgroup [class*="button-"]:first-child,
 [class*="bgroup-"] .button:first-child,
 [class*="bgroup-"] [class*="button-"]:first-child {
   margin-left: 0;
@@ -1584,7 +1588,8 @@ p, ul, ol {
   margin-left: 0;
 }
 @media (max-width: 460px) {
-  .bgroup .button, .bgroup [class*="button-"],
+  .bgroup .button,
+  .bgroup [class*="button-"],
   [class*="bgroup-"] .button,
   [class*="bgroup-"] [class*="button-"] {
     margin-left: 0;
@@ -1593,7 +1598,8 @@ p, ul, ol {
     margin-bottom: 1rem;
     text-align: center;
   }
-  .bgroup .button:last-child, .bgroup [class*="button-"]:last-child,
+  .bgroup .button:last-child,
+  .bgroup [class*="button-"]:last-child,
   [class*="bgroup-"] .button:last-child,
   [class*="bgroup-"] [class*="button-"]:last-child {
     margin-bottom: 0;
@@ -1852,7 +1858,8 @@ button::-moz-focus-inner {
   position: relative;
   background-size: cover;
 }
-.hgroup .heading, .hgroup [class*="heading-"],
+.hgroup .heading,
+.hgroup [class*="heading-"],
 [class*="hgroup-"] .heading,
 [class*="hgroup-"] [class*="heading-"] {
   margin: 0.5em 0;
@@ -2166,12 +2173,14 @@ button::-moz-focus-inner {
   color: #ffffff;
 }
 
-.igroup .icon, .igroup [class*="icon-"],
+.igroup .icon,
+.igroup [class*="icon-"],
 [class*="igroup-"] .icon,
 [class*="igroup-"] [class*="icon-"] {
   margin-left: 1rem;
 }
-.igroup .icon:first-child, .igroup [class*="icon-"]:first-child,
+.igroup .icon:first-child,
+.igroup [class*="icon-"]:first-child,
 [class*="igroup-"] .icon:first-child,
 [class*="igroup-"] [class*="icon-"]:first-child {
   margin-left: 0;
@@ -2453,7 +2462,8 @@ progress.progress-alt::-moz-progress-bar {
 [class*="widget-"]:hover .w-icon {
   color: #9B58B5;
 }
-.widget .hgroup, .widget [class*="hgroup-"],
+.widget .hgroup,
+.widget [class*="hgroup-"],
 [class*="widget-"] .hgroup,
 [class*="widget-"] [class*="hgroup-"] {
   margin-bottom: 0;
@@ -2492,8 +2502,10 @@ progress.progress-alt::-moz-progress-bar {
 [class*="widget-"][class*="-block"]:hover, [class*="widget-"][class*="-block"]:hover .w-icon {
   color: #ffffff;
 }
-[class*="widget-"][class*="-block"]:hover .heading, [class*="widget-"][class*="-block"]:hover [class*="heading-"] {
+[class*="widget-"][class*="-block"]:hover .heading,
+[class*="widget-"][class*="-block"]:hover [class*="heading-"] {
   color: #ffffff;
+  content: "dopy";
 }
 [class*="widget-"][class*="-border"] {
   border-top: 8px solid #9B58B5;
@@ -2533,7 +2545,8 @@ progress.progress-alt::-moz-progress-bar {
 [class*="widget-"][class*="-spectrum-quarter"]:nth-child(4) {
   background: #a86dbe;
 }
-[class*="widget-"][class*="-spectrum-quarter"] .icon, [class*="widget-"][class*="-spectrum-quarter"] [class*="icon-"] {
+[class*="widget-"][class*="-spectrum-quarter"] .icon,
+[class*="widget-"][class*="-spectrum-quarter"] [class*="icon-"] {
   color: #ffffff;
 }
 
@@ -2688,7 +2701,7 @@ progress.progress-alt::-moz-progress-bar {
 }
 .header {
   position: absolute;
-  top: 60px;
+  top: 50px;
   z-index: 5;
   width: 100%;
 }
@@ -2697,13 +2710,13 @@ progress.progress-alt::-moz-progress-bar {
 }
 
 .logo {
-  color: #1795C5;
+  color: white;
   font-size: 1.5em;
   text-align: left;
   padding: 0;
 }
 .logo a {
-  color: #1795C5;
+  color: white;
   display: inline-block;
 }
 .logo a:hover {
@@ -2898,7 +2911,7 @@ progress.progress-alt::-moz-progress-bar {
 
 .scroll-wheel {
   position: absolute;
-  font-size: 2em;
+  font-size: 1.5em;
   color: #ffffff;
   border: 0.075em solid;
   border-radius: 1em;
@@ -2938,7 +2951,8 @@ progress.progress-alt::-moz-progress-bar {
   background-size: cover;
   background-position: center;
 }
-.section .hgroup, .section [class*="hgroup-"],
+.section .hgroup,
+.section [class*="hgroup-"],
 [class*="section-"] .hgroup,
 [class*="section-"] [class*="hgroup-"] {
   color: #232627;
@@ -2974,7 +2988,8 @@ progress.progress-alt::-moz-progress-bar {
 [class*="section-"][class*="-secondary"], [class*="section-"][class*="-secondary"] a:not([class*="button-"]) {
   color: #ffffff;
 }
-[class*="section-"][class*="-secondary"] .hgroup, [class*="section-"][class*="-secondary"] [class*="hgroup-"] {
+[class*="section-"][class*="-secondary"] .hgroup,
+[class*="section-"][class*="-secondary"] [class*="hgroup-"] {
   color: #ffffff;
 }
 [class*="section-"][class*="-overlay"] {
@@ -3057,6 +3072,6 @@ progress.progress-alt::-moz-progress-bar {
 }
 @media (min-width: 940px) {
   .wrap-billboard {
-    width: 800px;
+    width: 940px;
   }
 }

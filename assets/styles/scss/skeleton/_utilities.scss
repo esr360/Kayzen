@@ -8,6 +8,15 @@
 
 // Component
 // Define the main component
+//-----------------------------------------------------------------
+
+// 	Usage
+// 
+// 	@include component(header) {
+//		...
+// 	}
+//
+// 	<div class="header">...</div>
 
 // Set the default selector type (flex, chain, static)
 $type: flex;
@@ -42,12 +51,28 @@ $type: flex;
 
 // Nested Component
 // Nest components for appropriate specificity
-@mixin nested-component($nested-component, $type: flex, $root: true) {
+//-----------------------------------------------------------------
+
+// 	Usage
+// 
+// 	@include component(header) {
+//		@include nested-component(container) {
+//			...
+//		}
+// 	}
+//
+// 	<div class="header">
+// 		<div class="container">
+//			...
+//		</div>
+// 	</div>
+
+@mixin nested-component($nested-component, $type: flex, $root: false) {
 	@if $type == flex {
 		@if $root {
 			@at-root {
-				& .#{$nested-component},
-				& [class*="#{$nested-component}-"] {
+				.#{$nested-component},
+				[class*="#{$nested-component}-"] {
 					@content;
 				}
 			}
@@ -72,6 +97,18 @@ $type: flex;
 
 // Modifiers 
 // Add a modifier to an existing component
+//-----------------------------------------------------------------
+
+//	Usage
+//
+//	@include component(header) {
+//		@include modifier(side) {
+//			...
+//		}
+//	}
+//
+//	<div class="header-side">...</div>
+
 @mixin modifier($modifier) {
 	@at-root [class*="#{$component}-"][class*="-#{$modifier}"] {
 		@content
@@ -80,6 +117,20 @@ $type: flex;
 
 // Nested Modifiers 
 // Nest a modifier for appropriate specificity
+//-----------------------------------------------------------------
+
+//	Usage
+//
+//	@include component(button) {
+//		@include modifier(white) {
+//			@include nested-modifier(border) {
+//				...
+//			}
+//		}
+//	}
+//
+//	<div class="button-white-border">...</div>
+
 @mixin nested-modifier($modifier) {
 	&[class*="-#{$modifier}"] {
 		@content;
@@ -88,6 +139,24 @@ $type: flex;
 
 // Extend Modifiers
 // Extend one or more modifiers of a component
+//-----------------------------------------------------------------
+
+//	Usage
+
+//	@include component(button) {
+//
+//		@include modifier(round)   {...}
+//		@include modifier(large)  {...}
+//		@include modifier(success) {...}
+//
+//		@include modifier(primary) {
+//			@include extend(round, large, success);
+//		}	
+//
+//	}
+//
+//	<div class="button-primary">...</div>
+
 @mixin extend($modifiers...) {
 	@each $modifier in $modifiers {
 		@extend [class*="#{$component}-"][class*="-#{$modifier}"];
@@ -96,6 +165,30 @@ $type: flex;
 
 // Component Setting
 // Add a configurable setting to a component
+//-----------------------------------------------------------------
+
+//	Usage
+//
+//	@mixin billboard($config: ()) {
+//
+//		$billboard: map-merge-deep((
+//			full-screen : false
+//		), $config) !global;
+//
+//		@include component(billboard) {
+//			@include setting(full-screen) {
+//				...
+//			}
+//		}
+//
+//	}
+//
+//	@include billboard: ((
+//		full-screen : true
+//	));
+//
+//	<div class="billboard">...</div>
+
 @mixin setting($setting) {
 	@at-root %#{$component}-#{$setting} {	
 		@content;

@@ -83,6 +83,7 @@ $widgets: (
 				}
 				@include nested-component(heading) {
 					color: color(greyscale, white);
+					content: "dopy"
 				}
 			}
 		}

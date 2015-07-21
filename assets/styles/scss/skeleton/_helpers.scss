@@ -1,26 +1,20 @@
 //=================================================================
 // Helper Classes
 //=================================================================
-	
-//-----------------------------------------------------------------
-// Config - Global Scope
-//-----------------------------------------------------------------
-
-$helpers: (
-	visibility            : true,
-	clearfix              : true,
-	aligning              : true,
-	horizontal-rules      : true,
-	responsive-visibility : true
-);
-
-//-----------------------------------------------------------------
-// Mixin
-//-----------------------------------------------------------------
 
 @mixin helpers($config: ()) {
 
-	$helpers: map-merge-deep($helpers, $config) !global;
+	//-------------------------------------------------------------
+	// Config
+	//-------------------------------------------------------------
+	
+	$helpers: map-merge-deep((
+		visibility            : true,
+		clearfix              : true,
+		aligning              : true,
+		horizontal-rules      : true,
+		responsive-visibility : true
+	), $config) !global;
 
 	//-------------------------------------------------------------
 	// Visibility

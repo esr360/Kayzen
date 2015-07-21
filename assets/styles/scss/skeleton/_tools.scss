@@ -2,25 +2,19 @@
 // Tools
 //=================================================================
 
-//-----------------------------------------------------------------
-// Config - Global Scope
-//-----------------------------------------------------------------
-
-$tools: (
-	horizontal-center : true,
-	vertical-rhythm   : true,
-	reset-list-styles : true,
-	fill-parent       : true,
-	iframe            : true
-);
-
-//-----------------------------------------------------------------
-// Mixin
-//-----------------------------------------------------------------
-
 @mixin tools($config: ()) {
+	
+	//-------------------------------------------------------------
+	// Config
+	//-------------------------------------------------------------
 
-	$tools: map-merge-deep($tools, $config) !global;
+	$tools: map-merge-deep((		
+		horizontal-center : true,
+		vertical-rhythm   : true,
+		reset-list-styles : true,
+		fill-parent       : true,
+		iframe            : true
+	), $config) !global;
 
 	//-------------------------------------------------------------
 	// Horizontal Centering
