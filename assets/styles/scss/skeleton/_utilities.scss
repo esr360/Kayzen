@@ -67,7 +67,7 @@ $type: flex;
 //		</div>
 // 	</div>
 
-@mixin nested-component($nested-component, $type: flex, $root: false) {
+@mixin nested-component($nested-component, $type: $type, $root: false) {
 	@if $type == flex {
 		@if $root {
 			@at-root {
@@ -89,6 +89,16 @@ $type: flex;
 			}
 		} @else { 
 			[class*="#{$nested-component}-"] {
+				@content;
+			}
+		}
+	} @else if $type == static {
+		@if $root {
+			@at-root .#{$nested-component} {
+				@content;
+			}
+		} @else { 
+			.#{$nested-component} {
 				@content;
 			}
 		}
