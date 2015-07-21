@@ -16,7 +16,7 @@ http://github.com/esr360/Kayzen-GS/
 	// Config
 	//-------------------------------------------------------------
 	
-	$grid: map-merge-deep((
+	$grid: config((
 		options: (
 			base-width      : 1200px,
 			max-width       : 90%,
@@ -65,7 +65,7 @@ http://github.com/esr360/Kayzen-GS/
 
 	// Reset "mobile-first" to false if "responsive" is disabled
 	@if grid-setting(responsive) == false {
-		$grid: map-merge-deep((
+		$grid: config((
 			settings: (
 				mobile-first: false
 			)

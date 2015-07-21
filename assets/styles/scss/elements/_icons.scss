@@ -16,7 +16,7 @@ $icons: (
 
 @mixin icons($config: ()) {
 
-	$icons: map-merge-deep($icons, $config) !global;
+	$icons: config($icons, $config) !global;
 
 	//-------------------------------------------------------------
 	// Component

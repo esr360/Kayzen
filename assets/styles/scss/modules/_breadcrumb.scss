@@ -16,7 +16,7 @@ $breadcrumb: (
 
 @mixin breadcrumb($config: ()) {
 
-	$config: map-merge-deep($breadcrumb, $config);
+	$config: config($breadcrumb, $config);
 	$breadcrumb: $config !global;
 
 	.breadcrumb {	

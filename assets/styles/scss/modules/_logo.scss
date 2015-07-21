@@ -21,7 +21,7 @@ $logo-padding    : 0 !default;
 
 @mixin logo($config: ()) {
 
-	$config: map-merge-deep($logo, $config);
+	$config: config($logo, $config);
 	$logo: $config !global;
 
 	.logo {	

@@ -16,7 +16,7 @@ $wells: (
 
 @mixin wells($config: ()) {
 
-	$wells: map-merge-deep($wells, $config) !global;
+	$wells: config($wells, $config) !global;
 
 	//-------------------------------------------------------------
 	// Component

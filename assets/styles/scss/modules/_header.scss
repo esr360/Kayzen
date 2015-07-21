@@ -8,9 +8,7 @@
 	// Config
 	//-------------------------------------------------------------
 
-	$header: map-merge-deep((
-		// Extend each "setting" as a modifier?
-		extend-settings      : false,
+	$header: config((
 		// Settings
 		absolute             : false,
 		bar                  : false,
@@ -22,7 +20,8 @@
 		top-position         : 0,
 		bg-color             : base(background-color),
 		dark-color           : color(greyscale, grey-5),
-		height               : 100px
+		height               : 100px,
+		z-index              : 5
 	), $config) !global;
 	
 	$config: $header !global;
@@ -62,7 +61,7 @@
 		@include setting(absolute) {
 			position: absolute;
 			top: map-get($header, top-position);
-			z-index: 5;
+			z-index: map-get($header, z-index);
 			width: 100%;
 		}
 
@@ -72,7 +71,7 @@
 		@if map-get($header, extend-settings) {
 			@include modifier(side) {
 				position: fixed;
-				z-index: 5;
+				z-index: map-get($header, z-index);
 				height: 100%;
 				top: 0;	
 				overflow: auto;

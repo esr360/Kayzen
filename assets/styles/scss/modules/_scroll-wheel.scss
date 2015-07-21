@@ -16,7 +16,7 @@ $scroll-wheel: (
 
 @mixin scroll-wheel($config: ()) {
 
-	$config: map-merge-deep($scroll-wheel, $config);
+	$config: config($scroll-wheel, $config);
 	$scroll-wheel: $config !global;
 	
 	.scroll-wheel {

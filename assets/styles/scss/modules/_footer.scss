@@ -16,7 +16,7 @@ $footer: (
 
 @mixin footer($config: ()) {
 
-	$config: map-merge-deep($footer, $config);
+	$config: config($footer, $config);
 	$footer: $config !global;
 	
 	.app-footer {

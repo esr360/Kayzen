@@ -16,7 +16,7 @@ $alert-bars: (
 
 @mixin alert-bars($config: ()) {
 
-	$alert-bars: map-merge-deep($alert-bars, $config) !global;
+	$alert-bars: config($alert-bars, $config) !global;
 
 	//-------------------------------------------------------------
 	// Component

@@ -16,7 +16,7 @@ $modals: (
 
 @mixin modals($config: ()) {
 
-	$modals: map-merge-deep($modals, $config) !global;
+	$modals: config($modals, $config) !global;
 	
 	//-------------------------------------------------------------
 	// Component

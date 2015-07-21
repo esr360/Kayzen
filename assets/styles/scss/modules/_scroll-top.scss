@@ -16,7 +16,7 @@ $scroll-top: (
 
 @mixin scroll-top($config: ()) {
 
-	$config: map-merge-deep($scroll-top, $config);
+	$config: config($scroll-top, $config);
 	$scroll-top: $config !global;
 
 	.scroll-top {

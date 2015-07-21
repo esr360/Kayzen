@@ -16,7 +16,7 @@ $headings: (
 
 @mixin headings($config: ()) {
 
-	$headings: map-merge-deep($headings, $config) !global;
+	$headings: config($headings, $config) !global;
 
 	//-------------------------------------------------------------
 	// Component

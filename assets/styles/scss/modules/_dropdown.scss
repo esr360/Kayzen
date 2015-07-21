@@ -12,7 +12,7 @@
 	// Config - Local Scope
 	//-------------------------------------------------------------
 
-	$dropdown: map-merge-deep((
+	$dropdown: config((
 		text-align            : left,
 		width                 : 175px,
 		top-position          : 0,

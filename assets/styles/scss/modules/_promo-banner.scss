@@ -16,7 +16,7 @@ $promo-banner: (
 
 @mixin promo-banner($config: ()) {
 
-	$config: map-merge-deep($promo-banner, $config);
+	$config: config($promo-banner, $config);
 	$promo-banner: $config !global;
 
 	.promo-banner {

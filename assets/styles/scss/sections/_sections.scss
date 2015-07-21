@@ -8,7 +8,7 @@
 	// Config
 	//-------------------------------------------------------------
 
-	$sections: map-merge-deep((
+	$sections: config((
 		
 	), $config) !global;
 

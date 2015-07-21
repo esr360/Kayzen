@@ -16,7 +16,7 @@ $tabs: (
 
 @mixin tabs($config: ()) {
 
-	$tabs: map-merge-deep($tabs, $config) !global;
+	$tabs: config($tabs, $config) !global;
 	
 	//-------------------------------------------------------------
 	// Component

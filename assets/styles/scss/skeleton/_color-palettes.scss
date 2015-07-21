@@ -8,7 +8,7 @@
 	// Config
 	//-------------------------------------------------------------
 
-	$palettes: map-merge-deep((		
+	$palettes: config((		
 		greyscale: (
 			white       : #ffffff,
 			grey-1      : #f8f8f8,

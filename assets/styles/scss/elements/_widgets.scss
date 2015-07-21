@@ -16,7 +16,7 @@ $widgets: (
 
 @mixin widgets($config: ()) {
 
-	$widgets: map-merge-deep($widgets, $config) !global;
+	$widgets: config($widgets, $config) !global;
 
 	//-------------------------------------------------------------
 	// Component

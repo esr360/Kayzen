@@ -8,9 +8,7 @@
 	// Config
 	//-------------------------------------------------------------
 
-	$billboard: map-merge-deep((
-		// Extend each "setting" as a modifier?
-		extend-settings : false,
+	$billboard: config((
 		// Settings
 		full-screen     : false,
 		overlay         : false,

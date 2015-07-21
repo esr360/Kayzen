@@ -171,7 +171,7 @@ $type: flex;
 //
 //	@mixin billboard($config: ()) {
 //
-//		$billboard: map-merge-deep((
+//		$billboard: config((
 //			full-screen : false
 //		), $config) !global;
 //
@@ -188,6 +188,9 @@ $type: flex;
 //	));
 //
 //	<div class="billboard">...</div>
+
+// Extend each setting as a modifier by default?
+$extend-settings: true;
 
 @mixin setting($setting) {
 	@at-root %#{$component}-#{$setting} {	
@@ -283,10 +286,13 @@ $type: flex;
 // Customized for use with Kayzen UIX
 //-----------------------------------------------------------------
 
-@function map-merge-deep($map-old, $map-new, $overwrite: true, $nested: false) {
-	// Custom code to set the default "selector-type" for a component
+@function config($map-old, $map-new, $overwrite: true, $nested: false) {
+	// Custom code to set default keys for a component
 	@if not $nested {
-		$map-old: map-merge($map-old, (selector-type: flex));
+		$map-old: map-merge((
+			selector-type   : $type,
+			extend-settings : $extend-settings
+		), $map-old);
 	}
 	// Iterate through each value of the new map
 	@each $key, $new-value in $map-new {
@@ -296,7 +302,7 @@ $type: flex;
 			$old-value: map-get($map-old, $key);
 			@if type-of($new-value) == map and type-of($old-value) == map {
 				// If both are maps, recurse regardless of $overwrite
-				$merged-value: map-merge-deep($old-value, $new-value, $nested: true);
+				$merged-value: config($old-value, $new-value, $nested: true);
 				$map-old: map-set($map-old, $key, $merged-value);	
 			} @else {
 				// Otherwise check $overwrite

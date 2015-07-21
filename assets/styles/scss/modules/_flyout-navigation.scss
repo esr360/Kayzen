@@ -16,7 +16,7 @@ $flyout-navigation: (
 
 @mixin flyout-navigation($config: ()) {
 
-	$config: map-merge-deep($flyout-navigation, $config);
+	$config: config($flyout-navigation, $config);
 	$flyout-navigation: $config !global;
 	
 	.flyout-trigger {

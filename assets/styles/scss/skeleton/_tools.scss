@@ -8,7 +8,7 @@
 	// Config
 	//-------------------------------------------------------------
 
-	$tools: map-merge-deep((		
+	$tools: config((		
 		horizontal-center : true,
 		vertical-rhythm   : true,
 		reset-list-styles : true,

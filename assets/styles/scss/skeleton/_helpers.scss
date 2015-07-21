@@ -8,7 +8,7 @@
 	// Config
 	//-------------------------------------------------------------
 	
-	$helpers: map-merge-deep((
+	$helpers: config((
 		visibility            : true,
 		clearfix              : true,
 		aligning              : true,

@@ -8,7 +8,7 @@
 	// Config
 	//-------------------------------------------------------------
 
-	$base: map-merge-deep((
+	$base: config((
 		background       : color(greyscale, grey-1),
 		font-family      : typography(typefaces, primary),
 		text-color       : typography(colors, base),
@@ -35,11 +35,11 @@
 	}
 	
 	body {
-		background: map-get($base, background);
-	    font-family: map-get($base, font-family);
-	    color: map-get($base, text-color);
-	    font-size: map-get($base, font-size);
-	    line-height: map-get($base, line-height);
+		background: base(background);
+	    font-family: base(font-family);
+	    color: base(text-color);
+	    font-size: base(font-size);
+	    line-height: base(line-height);
 	}
 
 	//-------------------------------------------------------------
@@ -83,7 +83,7 @@
 	    cursor: pointer;
 	    background: rgba(0,0,0,0.4);
 	    transform: translateZ(0);
-	    transition: map-get($base, transition);
+	    transition: base(transition);
 	    z-index: 10;
 	    visibility: hidden;
 	    opacity: 0;
@@ -107,7 +107,7 @@
 	p, ul, ol, 
 	fieldset, legend, figure, table, 
 	pre, hr {
-	    margin: map-get($base, margin) 0;
+	    margin: base(margin) 0;
 	    @include vertical-rhythm;
 	}
 	

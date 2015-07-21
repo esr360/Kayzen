@@ -16,7 +16,7 @@ $google-map: (
 
 @mixin google-map($config: ()) {
 
-	$config: map-merge-deep($google-map, $config);
+	$config: config($google-map, $config);
 	$google-map: $config !global;
 
 	.google-map {

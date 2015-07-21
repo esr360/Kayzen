@@ -20,7 +20,7 @@ https://github.com/esr360/K-Tooltips
 	// Config - Local Scope
 	//-------------------------------------------------------------
 	
-	$tooltips: map-merge-deep((
+	$tooltips: config((
 		// Size & Appearance
 		max-width      : 500px,
 		padding        : 1em,
