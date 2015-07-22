@@ -3008,7 +3008,7 @@ progress.progress-alt::-moz-progress-bar {
   z-index: 0;
   background: rgba(35, 38, 39, 0.6);
 }
-[class*="section-"][class*="-overlay"] .section-wrapper {
+[class*="section-"][class*="-overlay"] .wrap-section {
   position: relative;
 }
 [class*="section-"][class*="-dot-map"] {

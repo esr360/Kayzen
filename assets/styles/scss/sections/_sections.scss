@@ -68,7 +68,7 @@
 			@include modifier(alt) {
 				@include bg-overlay(rgba(color(greyscale, grey-5), 0.6));			
 			}
-			.section-wrapper {
+			.wrap-section {
 				position: relative;
 			}
 		}
