@@ -19,6 +19,8 @@
 		oval-radius      : 1.5em,
 		transition       : 0.4s
 	), $config) !global;
+	
+	$config: $base !global;
 
 	//-------------------------------------------------------------
 	// General

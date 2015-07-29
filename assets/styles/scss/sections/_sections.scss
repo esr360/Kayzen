@@ -10,7 +10,9 @@
 
 	$sections: config((
 		
-	), $config) !global;
+	), $config);
+	
+	$config: $sections !global;
 
 	//-------------------------------------------------------------
 	// Component

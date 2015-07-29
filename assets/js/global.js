@@ -111,37 +111,10 @@ window.sr = new scrollReveal();
 // Carousels
 //-----------------------------------------------------------------
 
-$('#showcase-thumbnails').slick({
-    slidesToShow: 5,
-    slidesToScroll: 1,
-    asNavFor: '#showcase-carousel',
-    centerMode: true,
-    focusOnSelect: true,
-    infinite: true,
-    centerPadding: '0px',
-    arrows: false
-});
+$('#showcase-thumbnails').owlCarousel();
 
-$('#showcase-carousel').slick({
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    arrows: true,
-    fade: true,
-    prevArrow: '#showcase .arrow-prev',
-    nextArrow: '#showcase .arrow-next',
-    asNavFor: '#showcase-thumbnails'
-});
+$('#showcase-carousel').owlCarousel();
 
-$('#shortcodes-carousel').slick({
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    infinite: true,
-    centerMode: true,
-    focusOnSelect: true,
-    centerPadding: '0px',
-    prevArrow: '#shortcodes .arrow-prev',
-    nextArrow: '#shortcodes .arrow-next',
-    arrows: true
-});  
+$('#shortcodes-carousel').owlCarousel();
 
 }); // end document.ready
