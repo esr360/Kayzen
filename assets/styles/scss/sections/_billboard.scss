@@ -29,7 +29,7 @@
 	// Component
 	//-------------------------------------------------------------
 
-	@include component(billboard, map-get($billboard, selector-type)) {
+	@include component(billboard) {
 
 	// Core Styles
 	//-------------------------------------------------------------

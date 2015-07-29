@@ -2,9 +2,13 @@
 // Utilities
 //=================================================================
 
-//-----------------------------------------------------------------
-// Modular CSS Mixins 
-//-----------------------------------------------------------------
+/*-----------------------------------------------------------------
+
+Modular
+Made by @esr360
+http://github.com/esr360/Modular/
+	
+-----------------------------------------------------------------*/
 
 // Component
 // Define the main component
@@ -21,32 +25,22 @@
 // Set the default selector type (flex, chain, static)
 $type: flex;
 
-@mixin component(
-	$component, 
-	$type: $type,
-	$selector: class
-) {
+@mixin component($component, $type: map-get($config, selector-type)) {
 	$component: $component !global;
-	@if $selector == class {
-		@if $type == flex {
-			.#{$component},
-			[class*="#{$component}-"] {
-				@content;
-			}	
-		} @else if $type == chain {
-			[class*="#{$component}-"] {
-				@content;
-			}
-		} @else if $type == static {
-			.#{$component} {
-				@content;
-			}
-		}
-	} @else if $selector == data {
-		[data-#{$component}] {
+	@if $type == flex {
+		.#{$component},
+		[class*="#{$component}-"] {
+			@content;
+		}	
+	} @else if $type == chain {
+		[class*="#{$component}-"] {
 			@content;
 		}
-	} 
+	} @else if $type == static {
+		.#{$component} {
+			@content;
+		}
+	}
 }
 
 // Nested Component
@@ -203,16 +197,32 @@ $type: flex;
 $extend-settings: true;
 
 @mixin setting($setting) {
+	$setting: $setting !global;
 	@at-root %#{$component}-#{$setting} {	
 		@content;
+	}
+	@if map-get($config, $setting) != false {
+		@extend %#{$component}-#{$setting};
 	}
 	@if map-get($config, extend-settings) {
 		@include modifier($setting) {	
 			@extend %#{$component}-#{$setting};
 		}
 	}
-	@if map-get($config, $setting) {
-		@extend %#{$component}-#{$setting};
+}
+
+// Option
+@mixin option($option) {
+	@at-root %#{$component}-#{$option} {	
+		@content;
+	}
+	@if map-get($config, $setting) == $option {
+		@extend %#{$component}-#{$option};
+	}
+	@if map-get($config, extend-settings) {
+		@include nested-modifier($option) {
+			@extend %#{$component}-#{$option};
+		}
 	}
 }
 
