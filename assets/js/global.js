@@ -111,9 +111,13 @@ window.sr = new scrollReveal();
 // Carousels
 //-----------------------------------------------------------------
 
-$('#showcase-thumbnails').owlCarousel();
+$('#showcase-thumbnails').owlCarousel({
+	items: 5
+});
 
-$('#showcase-carousel').owlCarousel();
+$('#showcase-carousel').owlCarousel({
+	items: 1
+});
 
 $('#shortcodes-carousel').owlCarousel();
 

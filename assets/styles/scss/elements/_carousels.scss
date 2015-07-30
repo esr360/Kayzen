@@ -160,6 +160,7 @@ $carousels: (
  *  Owl Carousel - Core
  */
 .owl-carousel {
+	
 	display: none;
 	width: 100%;
 	-webkit-tap-highlight-color: transparent;
@@ -258,6 +259,7 @@ $carousels: (
 	&.owl-rtl .owl-item {
 		float: right;
 	}
+	
 }
 
 /* No Js */
@@ -291,7 +293,6 @@ $carousels: (
 	0% {
 		opacity: 1;
 	}
-
 	100% {
 		opacity: 0;
 	}
@@ -300,7 +301,6 @@ $carousels: (
 	0% {
 		opacity: 1;
 	}
-
 	100% {
 		opacity: 0;
 	}
