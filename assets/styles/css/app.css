@@ -1692,17 +1692,20 @@ button::-moz-focus-inner {
 [class*="carousel-"][class*="-scale"] {
   margin-top: 2rem;
 }
-[class*="carousel-"][class*="-1"] .slick-center {
+[class*="carousel-"][class*="-1"] .center {
   -webkit-transform: scale(1.1);
       -ms-transform: scale(1.1);
           transform: scale(1.1);
 }
-[class*="carousel-"][class*="-2"] .slick-center {
+[class*="carousel-"][class*="-2"] .center {
   -webkit-transform: scale(1.25);
       -ms-transform: scale(1.25);
           transform: scale(1.25);
 }
-[class*="carousel-"][class*="-3"] .slick-center {
+[class*="carousel-"][class*="-2"] .owl-stage-outer {
+  padding-bottom: 3em;
+}
+[class*="carousel-"][class*="-3"] .center {
   -webkit-transform: scale(1.4);
       -ms-transform: scale(1.4);
           transform: scale(1.4);
@@ -1715,17 +1718,21 @@ button::-moz-focus-inner {
   font-size: 2.4em;
   color: #dee0e2;
 }
-[class*="carousel-"][class*="-scale"] .slick-list {
+[class*="carousel-"][class*="-scale"] .owl-stage-outer {
   overflow: visible;
 }
-[class*="carousel-"][class*="-scale"] .slick-slide {
+[class*="carousel-"][class*="-scale"] .owl-item {
   z-index: 0;
+  transition: 0.4s;
 }
-[class*="carousel-"][class*="-scale"] .slick-slide:hover {
+[class*="carousel-"][class*="-scale"] .owl-item:hover {
   cursor: pointer;
 }
-[class*="carousel-"][class*="-scale"] .slick-center {
+[class*="carousel-"][class*="-scale"] .center {
   z-index: 2;
+}
+[class*="carousel-"][class*="-stage-bg"] .owl-stage-outer {
+  background: #bfc1c3;
 }
 [class*="carousel-"][class*="-fade-out"] .slick-slide[aria-hidden="true"] {
   opacity: 0;
@@ -3007,14 +3014,6 @@ progress.progress-alt::-moz-progress-bar {
       -ms-transform: translateY(-50%);
           transform: translateY(-50%);
 }
-.section .slide-prev,
-[class*="section-"] .slide-prev {
-  left: -7.5rem;
-}
-.section .slide-next,
-[class*="section-"] .slide-next {
-  right: -7.5rem;
-}
 [class*="section-"][class*="-primary"] {
   padding: 6em 0;
 }
@@ -3053,7 +3052,7 @@ progress.progress-alt::-moz-progress-bar {
 }
 [class*="section-"][class*="-dot-map"] {
   position: relative;
-  padding-bottom: 14em;
+  padding-bottom: 12em;
 }
 [class*="section-"][class*="-dot-map"]:before {
   content: "";

@@ -35,17 +35,20 @@ $carousels: (
 	    @include modifier(scale) {
 	        margin-top: base(margin);
 	        @include modifier(1) {
-	            .slick-center {
+	            .center {
 	                transform: scale(1.1);
 	            }            
 	        }
 	        @include modifier(2) {
-	            .slick-center {
+	            .center {
 	                transform: scale(1.25);
-	            }            
+	            }      
+				.owl-stage-outer {
+					padding-bottom: 3em;
+				}      
 	        }
 	        @include modifier(3) {
-	            .slick-center {
+	            .center {
 	                transform: scale(1.4);
 	            }            
 	        }
@@ -59,19 +62,26 @@ $carousels: (
 	            //animation: spin 1s linear infinite;
 	            @extend %horizontal-center;
 	        }
-	        .slick-list {
-	            overflow: visible;
-	        }
-	        .slick-slide {
+			.owl-stage-outer {
+				overflow: visible;
+			}
+	        .owl-item {
 	            z-index: 0;
+				transition: base(transition);
 	            &:hover {
 	                cursor: pointer;
 	            }
 	        }
-	        .slick-center {
+	        .center {
 	            z-index: 2;
 	        } 
 	    }
+		
+		@include modifier(stage-bg) {
+			.owl-stage-outer {
+				background: color(greyscale, grey-3);
+			}
+		}
 	
 	    @include modifier(fade-out) {
 	        .slick-slide {
