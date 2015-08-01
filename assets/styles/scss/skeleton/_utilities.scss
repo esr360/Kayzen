@@ -303,7 +303,7 @@ $extend-settings: true;
 
 // Map Deep Merge
 // http://git.io/vmBVH
-// Customized for use with Kayzen UIX
+// Customized for use with Modular
 //-----------------------------------------------------------------
 
 @function config($map-old, $map-new, $overwrite: true, $nested: false) {
