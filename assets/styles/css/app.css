@@ -2533,7 +2533,6 @@ progress.progress-alt::-moz-progress-bar {
 
 .widget,
 [class*="widget-"] {
-  padding: 2.5em 1em;
   transition: 0.4s;
 }
 .widget:hover .w-icon,
@@ -2562,6 +2561,9 @@ progress.progress-alt::-moz-progress-bar {
   vertical-align: middle;
   margin-bottom: 0;
 }
+.w-inline + p {
+  margin-top: 1rem;
+}
 [class*="widget-"][class*="-panel"] {
   padding: 4%;
   border-top: 1px solid #dee0e2;
@@ -2573,6 +2575,7 @@ progress.progress-alt::-moz-progress-bar {
 [class*="widget-"][class*="-block"] {
   background: #ffffff;
   transition: 0.4s;
+  padding: 2.5em 1em;
 }
 [class*="widget-"][class*="-block"]:hover {
   background: #9B58B5;
@@ -2592,7 +2595,6 @@ progress.progress-alt::-moz-progress-bar {
   border-color: transparent;
 }
 [class*="widget-"][class*="-stacked"] {
-  padding: 0;
   margin-bottom: 2rem;
 }
 [class*="widget-"][class*="-stacked"] p {
@@ -2610,6 +2612,7 @@ progress.progress-alt::-moz-progress-bar {
 }
 [class*="widget-"][class*="-spectrum-quarter"] {
   color: #ffffff;
+  padding: 2.5em 1em;
 }
 [class*="widget-"][class*="-spectrum-quarter"]:nth-child(1) {
   background: #8b49a5;
@@ -2630,6 +2633,13 @@ progress.progress-alt::-moz-progress-bar {
 
 [class*="widgets-"][class*="-large"] {
   margin-bottom: 4rem;
+}
+[class*="widgets-"][class*="-grid"] {
+  margin-bottom: -2rem;
+}
+[class*="widgets-"][class*="-grid"] .widget,
+[class*="widgets-"][class*="-grid"] [class*="widget-"] {
+  margin-bottom: 2rem;
 }
 
 .breadcrumb {
