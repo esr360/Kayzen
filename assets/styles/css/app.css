@@ -1647,6 +1647,7 @@ pre:last-child, hr:last-child, .accordion:last-child,
 [class*="bgroup-"] .button:first-child,
 [class*="bgroup-"] [class*="button-"]:first-child {
   margin-left: 0;
+  content: "dopy";
 }
 .bgroup > a, .bgroup .text-sep,
 [class*="bgroup-"] > a,
@@ -1811,6 +1812,122 @@ button::-moz-focus-inner {
 
 .font-2 {
   font-family: "Raleway";
+}
+
+.form,
+[class*="form-"] {
+  font-weight: lighter;
+}
+.form label,
+[class*="form-"] label {
+  transition: 0.4s;
+}
+[class*="form-"][class*="-faux-placeholders"] label {
+  position: absolute;
+  top: 0.55em;
+  left: 0.65em;
+  -webkit-transform: scale(1);
+      -ms-transform: scale(1);
+          transform: scale(1);
+  cursor: text;
+}
+[class*="form-"][class*="-faux-placeholders"] .field-group,
+[class*="form-"][class*="-faux-placeholders"] [class*="field-group-"] {
+  margin-bottom: 2rem;
+}
+[class*="form-"][class*="-faux-placeholders"] .input::-webkit-input-placeholder,
+[class*="form-"][class*="-faux-placeholders"] [class*="input-"]::-webkit-input-placeholder {
+  opacity: 0;
+}
+[class*="form-"][class*="-faux-placeholders"] .input::-moz-placeholder,
+[class*="form-"][class*="-faux-placeholders"] [class*="input-"]::-moz-placeholder {
+  opacity: 0;
+}
+[class*="form-"][class*="-faux-placeholders"] .input:-ms-input-placeholder,
+[class*="form-"][class*="-faux-placeholders"] [class*="input-"]:-ms-input-placeholder {
+  opacity: 0;
+}
+[class*="form-"][class*="-faux-placeholders"] .input::placeholder,
+[class*="form-"][class*="-faux-placeholders"] [class*="input-"]::placeholder {
+  opacity: 0;
+}
+[class*="form-"][class*="-faux-placeholders"] .input:focus + label,
+[class*="form-"][class*="-faux-placeholders"] [class*="input-"]:focus + label {
+  top: -1.4em;
+  left: 0;
+  -webkit-transform: scale(0.85) translateX(-11%);
+      -ms-transform: scale(0.85) translateX(-11%);
+          transform: scale(0.85) translateX(-11%);
+  cursor: pointer;
+}
+[class*="form-"][class*="-faux-placeholders"] .input:focus::-webkit-input-placeholder,
+[class*="form-"][class*="-faux-placeholders"] [class*="input-"]:focus::-webkit-input-placeholder {
+  opacity: 0.5;
+  transition: 0s;
+}
+[class*="form-"][class*="-faux-placeholders"] .input:focus::-moz-placeholder,
+[class*="form-"][class*="-faux-placeholders"] [class*="input-"]:focus::-moz-placeholder {
+  opacity: 0.5;
+  transition: 0s;
+}
+[class*="form-"][class*="-faux-placeholders"] .input:focus:-ms-input-placeholder,
+[class*="form-"][class*="-faux-placeholders"] [class*="input-"]:focus:-ms-input-placeholder {
+  opacity: 0.5;
+  transition: 0s;
+}
+[class*="form-"][class*="-faux-placeholders"] .input:focus::placeholder,
+[class*="form-"][class*="-faux-placeholders"] [class*="input-"]:focus::placeholder {
+  opacity: 0.5;
+  transition: 0s;
+}
+[class*="form-"][class*="-html5"] .input:focus:invalid, [class*="form-"][class*="-html5"] .input:focus:invalid + label,
+[class*="form-"][class*="-html5"] [class*="input-"]:focus:invalid,
+[class*="form-"][class*="-html5"] [class*="input-"]:focus:invalid + label {
+  border-color: #D91E18;
+  color: #D91E18;
+}
+[class*="form-"][class*="-html5"] .input:focus:valid, [class*="form-"][class*="-html5"] .input:focus:valid + label,
+[class*="form-"][class*="-html5"] [class*="input-"]:focus:valid,
+[class*="form-"][class*="-html5"] [class*="input-"]:focus:valid + label {
+  border-color: #00B16A;
+  color: #00B16A;
+}
+.field-group,
+[class*="field-group-"] {
+  position: relative;
+  margin-bottom: 1rem;
+}
+.input,
+[class*="input-"] {
+  display: block;
+  width: 100%;
+  padding: 0.65em;
+  border: 1px solid #bfc1c3;
+  transition: 0.4s;
+}
+.input::-webkit-input-placeholder,
+[class*="input-"]::-webkit-input-placeholder {
+  color: #6f777b;
+  transition: 0.4s;
+}
+.input::-moz-placeholder,
+[class*="input-"]::-moz-placeholder {
+  color: #6f777b;
+  transition: 0.4s;
+}
+.input:-ms-input-placeholder,
+[class*="input-"]:-ms-input-placeholder {
+  color: #6f777b;
+  transition: 0.4s;
+}
+.input::placeholder,
+[class*="input-"]::placeholder {
+  color: #6f777b;
+  transition: 0.4s;
+}
+.input:focus,
+[class*="input-"]:focus {
+  outline: 0;
 }
 
 .heading,
@@ -2586,7 +2703,6 @@ progress.progress-alt::-moz-progress-bar {
 [class*="widget-"][class*="-block"]:hover .heading,
 [class*="widget-"][class*="-block"]:hover [class*="heading-"] {
   color: #ffffff;
-  content: "dopy";
 }
 [class*="widget-"][class*="-border"] {
   border-top: 8px solid #9B58B5;

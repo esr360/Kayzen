@@ -43,8 +43,41 @@ $type: flex;
 	}
 }
 
+// Overwrite
+// Overwrite a component in context of another
+//-----------------------------------------------------------------
+
+// 	Usage
+// 
+// 	@include component(header) {
+//		@include overwrite(logo) {
+//			...
+//		}
+// 	}
+//
+// 	<div class="header">
+//		<div class="logo">...</div>
+//	</div>
+
+@mixin overwrite($component, $type: $type) {
+	@if $type == flex {
+		.#{$component},
+		[class*="#{$component}-"] {
+			@content;
+		}	
+	} @else if $type == chain {
+		[class*="#{$component}-"] {
+			@content;
+		}
+	} @else if $type == static {
+		.#{$component} {
+			@content;
+		}
+	}
+}
+
 // Nested Component
-// Nest components for appropriate specificity
+// Create a new main component from within another
 //-----------------------------------------------------------------
 
 // 	Usage
@@ -61,40 +94,21 @@ $type: flex;
 //		</div>
 // 	</div>
 
-@mixin nested-component($nested-component, $type: $type, $root: false) {
+@mixin nested-component($component, $type: $type) {
 	@if $type == flex {
-		@if $root {
-			@at-root {
-				.#{$nested-component},
-				[class*="#{$nested-component}-"] {
-					@content;
-				}
-			}
-		} @else { 
-			.#{$nested-component},
-			[class*="#{$nested-component}-"] {
+		@at-root {
+			.#{$component},
+			[class*="#{$component}-"] {
 				@content;
 			}
 		}
 	} @else if $type == chain {
-		@if $root {
-			@at-root [class*="#{$nested-component}-"] {
-				@content;
-			}
-		} @else { 
-			[class*="#{$nested-component}-"] {
-				@content;
-			}
+		@at-root [class*="#{$component}-"] {
+			@content;
 		}
 	} @else if $type == static {
-		@if $root {
-			@at-root .#{$nested-component} {
-				@content;
-			}
-		} @else { 
-			.#{$nested-component} {
-				@content;
-			}
+		@at-root .#{$component} {
+			@content;
 		}
 	}
 }

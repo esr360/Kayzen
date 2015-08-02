@@ -148,7 +148,7 @@ $icons: (
 	
 	@include component(igroup) {
 	
-		@include nested-component(icon) {
+		@include overwrite(icon) {
 			margin-left: 1rem;
 			&:first-child {
 				margin-left: 0;

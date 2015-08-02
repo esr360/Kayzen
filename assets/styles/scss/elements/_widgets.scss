@@ -35,7 +35,7 @@ $widgets: (
 			}
 		}
 
-		@include nested-component(hgroup) {
+		@include overwrite(hgroup) {
 			margin-bottom: 0;
 		}
 
@@ -84,9 +84,8 @@ $widgets: (
 				&, .w-icon {
 					color: color(greyscale, white);
 				}
-				@include nested-component(heading) {
+				@include overwrite(heading) {
 					color: color(greyscale, white);
-					content: "dopy"
 				}
 			}
 		}
@@ -130,7 +129,7 @@ $widgets: (
 			&:nth-child(4) {
 				background: lighten(color(brand, primary), 6%);
 			}
-			@include nested-component(icon) {
+			@include overwrite(icon) {
 				color: color(greyscale, white);
 			}
 		}
@@ -150,7 +149,7 @@ $widgets: (
 		
 		@include modifier(grid) {
 			margin-bottom: -#{base(margin)};
-			@include nested-component(widget) {
+			@include overwrite(widget) {
 				margin-bottom: base(margin);
 			}
 		}

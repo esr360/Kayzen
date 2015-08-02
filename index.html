@@ -1118,36 +1118,37 @@
                         <h4 class="heading-uppercase-light-spaced-brand-1-size-4"><span>Get in Touch</span></h4>
                         <h2 class="heading-uppercase-heavy-size-7 font-2"><span>Contact Us</span></h2>
                         <div class="title-icon">
-                            <i class="fa fa-envelope-o"></i>
+                            <i class="fa fa-globe"></i>
                         </div>
 						<p class="lede">Thanks to the flexibility of Kayzen's options, there is no limit to the layouts you can achieve. Below is just a small sample of common styles and layouts that can easily be achieved with Kayzen.</p>
                     </div>
                 </header>
 				
 				<!-- Contact Form -->
-				<form class="h5-valid container-small">
-		            <fieldset>
-		                <div class="form-element">
-		                    <input type="text" class="input" required="">
-		                    <label>First Name</label>
+				<form class="form-faux-placeholders-html5 container-small">
+		            <div class="row-flow">
+		                <div class="field-group span-6">
+		                    <input type="text" class="input" id="firstName" placeholder="Ex: John" required="">
+		                    <label for="firstName">First Name</label>
 		                </div>
-		                <div class="form-element">
-		                    <input type="text" class="input">
-		                    <label>Last Name</label>
+		                <div class="field-group span-6">
+		                    <input type="text" class="input" id="lastName" placeholder="Ex: Doe">
+		                    <label for="lastName">Last Name</label>
 		                </div>
-		                <div class="form-element">
-		                    <input type="tel" class="input">
-		                    <label>Phone Number</label>
+		                <div class="field-group span-6">
+		                    <input type="tel" class="input" id="phoneNumber" placeholder="Ex: (123) 456-7890 ">
+		                    <label for="phoneNumber">Phone Number</label>
 		                </div>
-		                <div class="form-element">
-		                    <input type="email" class="input" required="">
-		                    <label>Email Address</label>
+		                <div class="field-group span-6">
+		                    <input type="email" class="input" id="emailAddress" placeholder="john@doe.com" required="">
+		                    <label for="emailAddress">Email Address</label>
 		                </div>
-		            </fieldset>
-		            <div class="form-element">
-		                <textarea class="input" placeholder="Enter your message" required=""></textarea>
 		            </div>
-		            <button type="submit" class="button-block-primary-size-4">Submit Message</button>
+		            <div class="field-group">
+		                <textarea class="input" placeholder="We aim to respond to all messages within 24 hours." id="yourMessage" rows="8" required=""></textarea>
+		                <label for="yourMessage">Your Message</label>
+		            </div>
+		            <button type="submit" class="button-block-primary-size-3">Submit Message</button>
 		        </form>
 				
 			</section><!-- Contact Us -->

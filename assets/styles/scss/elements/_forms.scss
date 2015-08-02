@@ -2,21 +2,17 @@
 // Forms
 //=================================================================
 
-//-----------------------------------------------------------------
-// Config
-//-----------------------------------------------------------------
-
-$forms: (
-	
-);
-
-//-----------------------------------------------------------------
-// Mixin
-//-----------------------------------------------------------------
-
 @mixin forms($config: ()) {
 
-	$forms: config($forms, $config) !global;
+	
+	//-------------------------------------------------------------
+	// Config
+	//-------------------------------------------------------------
+
+	$forms: config((
+	), $config);
+	
+	$config: $forms !global;
 
 	//-------------------------------------------------------------
 	// Component
@@ -26,6 +22,87 @@ $forms: (
 	
 	// Core Styles
 	//-------------------------------------------------------------
+	
+		font-weight: lighter;
+		
+		label {
+			transition: base(transition);
+		}
+		
+	// Modifiers
+	//-------------------------------------------------------------
+	
+		@include modifier(faux-placeholders) {
+			label {
+				position: absolute;
+				top: 0.55em;
+				left: 0.65em;
+				transform: scale(1);
+				cursor: text;
+			}
+			@include overwrite(field-group) {
+				margin-bottom: base(margin);
+			}
+			@include overwrite(input) {
+				&::placeholder {
+					opacity: 0;
+				}
+				&:focus {
+					+ label {
+						top: -1.4em;
+						left: 0;
+						transform: scale(0.85) translateX(-11%);
+						cursor: pointer;
+					}
+					&::placeholder {
+						opacity: 0.5;
+						transition: 0s;
+					}
+				}
+			}
+		}
+		
+		@include modifier(html5) {
+			@include overwrite(input) {
+				&:focus {
+					&:invalid {
+						&, + label {
+							border-color: color(validation, invalid);
+							color: color(validation, invalid);
+						}
+					}
+					&:valid {
+						&, + label {
+							border-color: color(validation, valid);
+							color: color(validation, valid);
+						}
+					}
+				}
+			}
+		}
+	
+	// Child Components
+	//-------------------------------------------------------------
+	
+		@include nested-component(field-group) {
+			position: relative;
+			margin-bottom: (base(margin) / 2);
+		}
+	
+		@include nested-component(input) {
+			display: block;
+			width: 100%;
+			padding: 0.65em;
+			border: 1px solid color(greyscale, grey-3);
+			transition: base(transition);
+			&::placeholder {
+				color: typography(colors, base);
+				transition: base(transition);
+			}
+			&:focus {
+				outline: 0;
+			}
+		}
 		
 	} // component(form)
 	

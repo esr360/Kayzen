@@ -159,7 +159,7 @@ $headings: (
 		background-size: cover;
 		@include vertical-rhythm(bottom);
 
-		@include nested-component(heading) {
+		@include overwrite(heading) {
 			margin: 0.5em 0;
 			line-height: 0.8;
 			@include vertical-rhythm;

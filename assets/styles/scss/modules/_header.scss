@@ -79,7 +79,7 @@
 			+ #main {
 				margin-#{map-get($header, side)}: map-get($header, side-width);
 			}
-			@include nested-component(container) {
+			@include overwrite(container) {
 				max-width: map-get($header, side-container-width);
 			}
 		}
@@ -94,7 +94,7 @@
 	// Child Components
 	//-------------------------------------------------------------
 
-		@at-root .wrap-header {
+		@include nested-component(wrap-header, static) {
 			height: map-get($header, height);
 		}
 		

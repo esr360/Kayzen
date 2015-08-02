@@ -25,7 +25,7 @@
 	
 		background-size: cover;	
 		background-position: center;
-		@include nested-component(hgroup) {
+		@include overwrite(hgroup) {
 			color: typography(colors, heading);
 		}
 		// Carousel Tools
@@ -52,7 +52,7 @@
 			&, a:not([class*="button-"]) {
 				color: color(greyscale, white);
 			}
-			@include nested-component(hgroup) {
+			@include overwrite(hgroup) {
 				color: color(greyscale, white);
 			}
 		}

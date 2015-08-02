@@ -145,10 +145,11 @@ $buttons: (
 
 	@include component(bgroup) {
 	
-		@include nested-component(button) {
+		@include overwrite(button) {
 			margin-left: 0.5em;
 			&:first-child {
 				margin-left: 0;
+				content: "dopy";
 			}
 		}
 
@@ -160,7 +161,7 @@ $buttons: (
 		}
 
 		@media (max-width: breakpoint(break-1)) {
-			@include nested-component(button) {
+			@include overwrite(button) {
 				margin-left: 0;
 				display: block;
 				width: 100%;
