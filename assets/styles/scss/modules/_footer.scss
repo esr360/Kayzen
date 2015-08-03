@@ -2,43 +2,50 @@
 // Footer
 //=================================================================
 
-//-----------------------------------------------------------------
-// Config
-//-----------------------------------------------------------------
-
-$footer: (
-	
-);
-
-//-----------------------------------------------------------------
-// Mixin
-//-----------------------------------------------------------------
-
 @mixin footer($config: ()) {
 
-	$config: config($footer, $config);
-	$footer: $config !global;
-	
-	.app-footer {
-		text-align: center;	
-		margin-bottom: base(margin);
-	}
-	
-	.footer-nav {
-		ul {
-		    @extend %list-reset;
-		}
-	    li {
-		    display: inline-block;
-		    &:not(:last-child) {
-				margin-right: 1em;
-		    }
-	    }
-	}
-
-	// Larger Resolutions
+	//-------------------------------------------------------------
+	// Config
 	//-------------------------------------------------------------
 
+	$footer: config((
+	), $config);
+
+	$config: $footer !global;
+	
+	//-------------------------------------------------------------
+	// Component
+	//-------------------------------------------------------------
+
+	@include component(footer) {
+
+	// Core Styles
+	//-------------------------------------------------------------
+	
+		text-align: center;	
+		margin-bottom: base(margin);
+		
+	// Child Components
+	//-------------------------------------------------------------
+	
+		@include nested-component(wrap-footer, static) {
+			
+		}
+	
+		@include nested-component(nav-footer, static) {
+			ul {
+			    @extend %list-reset;
+			}
+		    li {
+			    display: inline-block;
+			    &:not(:last-child) {
+					margin-right: 1em;
+			    }
+		    }
+		}
+	
+	} // component(footer)
+	
 	@media (min-width: breakpoint(break-2)) {
 		.footer-wrapper {			
 			display: table;

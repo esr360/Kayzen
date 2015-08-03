@@ -745,6 +745,7 @@ p, ul, ol {
   width: 100%;
   *letter-spacing: normal;
   *word-spacing: -0.43em;
+  table-layout: fixed;
 }
 .opera-only :-o-prefocus, .row,
 [class*="row-"] {
@@ -1231,7 +1232,7 @@ pre:last-child, hr:last-child, .accordion:last-child,
   margin-bottom: 0;
 }
 
-[class*="list-"][class*="-reset"], [class*="list-"][class*="-arrow"], .breadcrumb ul, .footer-nav ul, .navigation > ul, .navigation ul ul {
+[class*="list-"][class*="-reset"], [class*="list-"][class*="-arrow"], .breadcrumb ul, .nav-footer ul, .navigation > ul, .navigation ul ul {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -2855,15 +2856,15 @@ progress.progress-alt::-moz-progress-bar {
   left: 0;
 }
 
-.app-footer {
+.footer,
+[class*="footer-"] {
   text-align: center;
   margin-bottom: 2rem;
 }
-
-.footer-nav li {
+.nav-footer li {
   display: inline-block;
 }
-.footer-nav li:not(:last-child) {
+.nav-footer li:not(:last-child) {
   margin-right: 1em;
 }
 
