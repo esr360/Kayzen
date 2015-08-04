@@ -2,14 +2,10 @@
 // Dropdown
 //=================================================================
 
-//-----------------------------------------------------------------
-// Mixin
-//-----------------------------------------------------------------
-
 @mixin dropdown($config: ()) {
 
 	//-------------------------------------------------------------
-	// Config - Local Scope
+	// Config
 	//-------------------------------------------------------------
 
 	$dropdown: config((
@@ -21,7 +17,9 @@
 		link-color            : navigation(a-has-child-color),
 		link-hover-color      : navigation(a-has-child-color),
 		link-active-color     : navigation(a-has-child-color)
-	), $config) !global;
+	), $config);
+	
+	$config: $dropdown !global;
 	
 	//-------------------------------------------------------------
 	// Component
