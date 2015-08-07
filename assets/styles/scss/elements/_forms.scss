@@ -4,7 +4,6 @@
 
 @mixin forms($config: ()) {
 
-	
 	//-------------------------------------------------------------
 	// Config
 	//-------------------------------------------------------------
@@ -40,10 +39,10 @@
 				transform: scale(1);
 				cursor: text;
 			}
-			@include overwrite(field-group) {
+			@include overwrite-sub(group, static) {
 				margin-bottom: base(margin);
 			}
-			@include overwrite(input) {
+			@include overwrite-sub(input, static) {
 				&::placeholder {
 					opacity: 0;
 				}
@@ -63,7 +62,7 @@
 		}
 		
 		@include modifier(html5) {
-			@include overwrite(input) {
+			@include overwrite-sub(input, static) {
 				&:focus {
 					&:invalid {
 						&, + label {
@@ -81,15 +80,15 @@
 			}
 		}
 	
-	// Child Components
+	// Sub Components
 	//-------------------------------------------------------------
 	
-		@at-root .field-group {
+		@include sub-component(group, static) {
 			position: relative;
 			margin-bottom: (base(margin) / 2);
 		}
 	
-		@at-root .input {
+		@include sub-component(input, static) {
 			display: block;
 			width: 100%;
 			padding: 0.65em;

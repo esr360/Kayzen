@@ -2,27 +2,20 @@
 // Logo
 //=================================================================
 
-//-----------------------------------------------------------------
-// Config
-//-----------------------------------------------------------------
-
-$logo: (
-	
-);
-
-$logo-text-align : left !default;
-$logo-color      : white !default;
-$logo-size       : 1.5em !default;
-$logo-padding    : 0 !default;
-
 @mixin logo($config: ()) {
 	
 	//-------------------------------------------------------------
 	// Config
 	//-------------------------------------------------------------
 
-	$config: config($logo, $config);
-	$logo: $config !global;
+	$logo: config((
+		text-align : left,
+		color      : white,
+		size       : font-size(size-5),
+		padding    : 0
+	), $config);
+
+	$config: $logo !global;
 	
 	//-------------------------------------------------------------
 	// Component
@@ -30,13 +23,13 @@ $logo-padding    : 0 !default;
 
 	.logo {	
 	
-		color: $logo-color;
-		font-size: $logo-size;
-		text-align: $logo-text-align;
-		padding: $logo-padding;
+		color: map-get($logo, color);
+		font-size: map-get($logo, size);
+		text-align: map-get($logo, text-align);
+		padding: map-get($logo, padding);
 		// for plain text logos
 		a {
-			color: $logo-color;
+			color: map-get($logo, color);
 			display: inline-block;
 			&:hover {
 				text-decoration: none;

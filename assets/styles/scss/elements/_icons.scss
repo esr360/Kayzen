@@ -2,21 +2,7 @@
 // Icons
 //=================================================================
 
-//-----------------------------------------------------------------
-// Config
-//-----------------------------------------------------------------
-
-$icons: (
-	
-);
-
-//-----------------------------------------------------------------
-// Mixin
-//-----------------------------------------------------------------
-
 @mixin icons($config: ()) {
-
-	$icons: config($icons, $config) !global;
 
 	//-------------------------------------------------------------
 	// Component
@@ -140,22 +126,21 @@ $icons: (
 //			@include extend(round, size-4, brand-1);
 //		}	
 
-	} // component(icon)
-
-	//-------------------------------------------------------------
-	// Icon Group
+	// Sub-Components
 	//-------------------------------------------------------------
 	
-	@include component(igroup) {
-	
-		@include overwrite(icon) {
-			margin-left: 1rem;
-			&:first-child {
-				margin-left: 0;
+		@include sub-component(group) {
+			
+			@include overwrite(icon) {
+				margin-left: 1rem;
+				&:first-child {
+					margin-left: 0;
+				}
 			}
+			
 		}
-	
-	} // component(igroup)
+
+	} // component(icon)
 	
 } // @mixin icons
 

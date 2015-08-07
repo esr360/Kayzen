@@ -2,21 +2,7 @@
 // Buttons
 //=================================================================
 
-//-----------------------------------------------------------------
-// Config
-//-----------------------------------------------------------------
-
-$buttons: (
-	
-);
-
-//-----------------------------------------------------------------
-// Mixin
-//-----------------------------------------------------------------
-
 @mixin buttons($config: ()) {
-
-	$buttons: config($buttons, $config) !global;
 
 	//-------------------------------------------------------------
 	// Component
@@ -137,43 +123,41 @@ $buttons: (
 //			@include extend(round, size-4, brand-1);
 //		}	
 
-	} // component(button)
-
+	// Sub-Components
 	//-------------------------------------------------------------
-	// Button Group
-	//-------------------------------------------------------------
-
-	@include component(bgroup) {
 	
-		@include overwrite(button) {
-			margin-left: 0.5em;
-			&:first-child {
-				margin-left: 0;
-				content: "dopy";
-			}
-		}
+		@include sub-component(group) {
 
-		> a, .text-sep {
-			margin-left: 0.5em;
-			&:first-child {
-				margin-left: 0;
-			}
-		}
-
-		@media (max-width: breakpoint(break-1)) {
 			@include overwrite(button) {
-				margin-left: 0;
-				display: block;
-				width: 100%;
-				margin-bottom: 1rem;
-				text-align: center;
-				&:last-child {
-					margin-bottom: 0;
+				margin-left: 0.5em;
+				&:first-child {
+					margin-left: 0;
+					content: "dopy";
 				}
-			}		
-		}
+			}
 	
-	} // component(bgroup)
+			> a, .text-sep {
+				margin-left: 0.5em;
+				&:first-child {
+					margin-left: 0;
+				}
+			}
+	
+			@media (max-width: breakpoint(break-1)) {
+				@include overwrite(button) {
+					margin-left: 0;
+					display: block;
+					width: 100%;
+					margin-bottom: 1rem;
+					text-align: center;
+					&:last-child {
+						margin-bottom: 0;
+					}
+				}		
+			}
+		}
+
+	} // component(button)
 
 	//-------------------------------------------------------------
 	// Browser Hacks

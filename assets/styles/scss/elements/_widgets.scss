@@ -2,21 +2,7 @@
 // Widgets
 //=================================================================
 
-//-----------------------------------------------------------------
-// Config
-//-----------------------------------------------------------------
-
-$widgets: (
-	
-);
-
-//-----------------------------------------------------------------
-// Mixin
-//-----------------------------------------------------------------
-
 @mixin widgets($config: ()) {
-
-	$widgets: config($widgets, $config) !global;
 
 	//-------------------------------------------------------------
 	// Component
@@ -66,15 +52,6 @@ $widgets: (
 	// Modifiers
 	//-------------------------------------------------------------
 	
-		@include modifier(panel) {
-			padding: 4%;
-			border-top: 1px solid color(greyscale, grey-2);	
-			border-left: 1px solid color(greyscale, grey-2);
-			&:first-child {
-				border-left: none;
-			}
-		}
-	
 		@include modifier(block) {
 			background: color(greyscale, white);
 			transition: base(transition);	
@@ -87,6 +64,15 @@ $widgets: (
 				@include overwrite(heading) {
 					color: color(greyscale, white);
 				}
+			}
+		}
+	
+		@include modifier(panel) {
+			padding: 4%;
+			border-top: 1px solid color(greyscale, grey-2);	
+			border-left: 1px solid color(greyscale, grey-2);
+			&:first-child {
+				border-left: none;
 			}
 		}
 	

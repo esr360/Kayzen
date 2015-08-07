@@ -25,14 +25,18 @@
 		text-align: center;	
 		margin-bottom: base(margin);
 		
-	// Child Components
+	// Sub-Components
 	//-------------------------------------------------------------
 	
-		@include sub-component(wrapper) {
-			
+		@include sub-component(wrapper, static) {
+			@media (min-width: breakpoint(break-2)) {		
+				display: table;
+				width: 100%;
+				text-align: left;
+			}
 		}
 	
-		@include sub-component(nav) {
+		@include sub-component(nav, static) {
 			ul {
 			    @extend %list-reset;
 			}
@@ -42,23 +46,18 @@
 					margin-right: 1em;
 			    }
 		    }
+			@media (min-width: breakpoint(break-2)) {
+				text-align: right;
+			}
 		}
 	
 	} // component(footer)
 	
 	@media (min-width: breakpoint(break-2)) {
-		.footer-wrapper {			
-			display: table;
-			width: 100%;
-			text-align: left;
-		}
 		.copyright, 
-		.footer-nav {
+		.footer_nav {
 			display: table-cell;
 			vertical-align: middle;
-		}
-		.footer-nav {
-			text-align: right;
 		}
 	}
 	
