@@ -103,7 +103,7 @@ $headings: (
 					right: calc(-75px - 1rem);
 				}
 			}
-			@include modifier(brand-1) {
+			@include nested-modifier(brand-1) {
 				span {
 					&:before,
 					&:after {
@@ -118,7 +118,7 @@ $headings: (
 			&, span {            
 				letter-spacing: 0.35em;
 			}
-			@include modifier(strikethrough) {
+			@include nested-modifier(strikethrough) {
 				span {
 					&:after {
 						right: calc(-75px - 1rem + 0.35em);

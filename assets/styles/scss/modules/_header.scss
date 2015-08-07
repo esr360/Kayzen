@@ -91,10 +91,10 @@
 			background-color: map-get($header, dark-color);
 		}
 		
-	// Child Components
+	// Sub-Components
 	//-------------------------------------------------------------
 
-		@include nested-component(wrap-header, static) {
+		@include sub-component(wrapper, static) {
 			height: map-get($header, height);
 		}
 		

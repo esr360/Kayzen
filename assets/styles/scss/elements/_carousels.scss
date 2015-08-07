@@ -34,12 +34,12 @@ $carousels: (
 
 	    @include modifier(scale) {
 	        margin-top: base(margin);
-	        @include modifier(1) {
+	        @include nested-modifier(1) {
 	            .center {
 	                transform: scale(1.1);
 	            }            
 	        }
-	        @include modifier(2) {
+	        @include nested-modifier(2) {
 	            .center {
 	                transform: scale(1.25);
 	            }      
@@ -47,7 +47,7 @@ $carousels: (
 					padding-bottom: 3em;
 				}      
 	        }
-	        @include modifier(3) {
+	        @include nested-modifier(3) {
 	            .center {
 	                transform: scale(1.4);
 	            }            

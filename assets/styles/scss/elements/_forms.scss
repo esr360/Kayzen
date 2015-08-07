@@ -84,12 +84,12 @@
 	// Child Components
 	//-------------------------------------------------------------
 	
-		@include nested-component(field-group) {
+		@at-root .field-group {
 			position: relative;
 			margin-bottom: (base(margin) / 2);
 		}
 	
-		@include nested-component(input) {
+		@at-root .input {
 			display: block;
 			width: 100%;
 			padding: 0.65em;

@@ -59,7 +59,7 @@
 	
 		@include modifier(overlay) {
 			@include bg-overlay(rgba(color(brand, primary), 0.4));
-			@include modifier(alt) {
+			@include nested-modifier(alt) {
 				@include bg-overlay(rgba(color(greyscale, grey-5), 0.6));			
 			}
 			.wrap-section {

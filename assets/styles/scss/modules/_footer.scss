@@ -28,11 +28,11 @@
 	// Child Components
 	//-------------------------------------------------------------
 	
-		@include nested-component(wrap-footer, static) {
+		@include sub-component(wrapper) {
 			
 		}
 	
-		@include nested-component(nav-footer, static) {
+		@include sub-component(nav) {
 			ul {
 			    @extend %list-reset;
 			}
