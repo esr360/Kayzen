@@ -3066,7 +3066,7 @@ progress.progress-alt::-moz-progress-bar {
   }
 }
 @media (min-width: 720px) {
-  .footer_nav, .footer_copyright {
+  .footer_nav, copyright {
     display: table-cell;
     vertical-align: middle;
   }

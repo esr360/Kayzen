@@ -52,7 +52,7 @@
 		}
 		
 		@media (min-width: breakpoint(break-2)) {
-			@include sub-components((nav, copyright), static) {
+			@include sub-components("nav, copyright", static) {
 				display: table-cell;
 				vertical-align: middle;
 			}
