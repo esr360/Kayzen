@@ -260,7 +260,7 @@ http://github.com/esr360/Kayzen-GS/
 			} @else {
 				$reverse-breakpoints: reverse-map(map-get($grid, breakpoints));	
 			}	
-			@include component(#{grid-option(row-namespace)}, true) {
+			@include component(#{grid-option(row-namespace)}) {
 				@each $bp, $width in $reverse-breakpoints {
 					@media (#{$scale}-width: $width) {
 						@each $name, $fraction in map-get($grid, fractions) {				

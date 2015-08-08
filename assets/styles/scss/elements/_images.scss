@@ -5,6 +5,15 @@
 @mixin images($config: ()) {
 
 	//-------------------------------------------------------------
+	// Config
+	//-------------------------------------------------------------
+
+	$images: config((
+	), $config);
+	
+	$config: $images !global;
+
+	//-------------------------------------------------------------
 	// Responsive Images
 	//-------------------------------------------------------------
 
@@ -128,7 +137,7 @@
 		@include modifier(position) {
 			position: absolute;
 			top: 0;
-			@extend %horizontal-center;;
+			@extend %horizontal-center;
 		}
 	
 		@include modifier(left) {
