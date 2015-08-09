@@ -2,7 +2,7 @@
 // Color Palettes
 //=================================================================
 
-@mixin palettes($config: ()) {
+@mixin palettes($custom: ()) {
 
 	//-------------------------------------------------------------
 	// Config
@@ -51,7 +51,7 @@
 			reddit      : #0D7CCD,
 			google-plus : #dd4b39		
 		)
-	), $config) !global;
+	), $custom) !global;
 
 } // @mixin palettes
 

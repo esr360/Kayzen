@@ -2,16 +2,14 @@
 // Flyout Navigation
 //=================================================================
 
-@mixin flyout-navigation($config: ()) {
+@mixin flyout-navigation($custom: ()) {
 
 	//-------------------------------------------------------------
 	// Config
 	//-------------------------------------------------------------
 
 	$flyout-navigation: config((
-	), $config);
-	
-	$config: $flyout-navigation !global;
+	), $custom);
 	
 	//-------------------------------------------------------------
 	// Component

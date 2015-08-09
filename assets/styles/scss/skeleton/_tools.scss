@@ -2,7 +2,7 @@
 // Tools
 //=================================================================
 
-@mixin tools($config: ()) {
+@mixin tools($custom: ()) {
 	
 	//-------------------------------------------------------------
 	// Config
@@ -14,7 +14,7 @@
 		reset-list-styles : true,
 		fill-parent       : true,
 		iframe            : true
-	), $config) !global;
+	), $custom) !global;
 
 	//-------------------------------------------------------------
 	// Horizontal Centering

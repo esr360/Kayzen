@@ -2,16 +2,14 @@
 // Fonts
 //=================================================================
 
-@mixin fonts($config: ()) {
+@mixin fonts($custom: ()) {
 
 	//-------------------------------------------------------------
 	// Config
 	//-------------------------------------------------------------
 
 	$fonts: config((
-	), $config);
-	
-	$config: $fonts !global;
+	), $custom);
 
 	// Declare actual typefaces in skeleton/_config.scss
 

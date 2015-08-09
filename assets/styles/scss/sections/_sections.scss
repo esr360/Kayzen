@@ -2,17 +2,14 @@
 // Sections
 //=================================================================
 
-@mixin sections($config: ()) {
+@mixin sections($custom: ()) {
 
 	//-------------------------------------------------------------
 	// Config
 	//-------------------------------------------------------------
 
 	$sections: config((
-		
-	), $config);
-	
-	$config: $sections !global;
+	), $custom);
 
 	//-------------------------------------------------------------
 	// Component
@@ -25,7 +22,7 @@
 	
 		background-size: cover;	
 		background-position: center;
-		@include overwrite(hgroup) {
+		@include overwrite-sub(group, $parent: heading) {
 			color: typography(colors, heading);
 		}
 		// Carousel Tools
@@ -52,7 +49,7 @@
 			&, a:not([class*="button-"]) {
 				color: color(greyscale, white);
 			}
-			@include overwrite(hgroup) {
+			@include overwrite-sub(group, $parent: heading) {
 				color: color(greyscale, white);
 			}
 		}

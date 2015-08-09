@@ -2,7 +2,7 @@
 // Header
 //=================================================================
 
-@mixin header($config: ()) {
+@mixin header($custom: ()) {
 	
 	//-------------------------------------------------------------
 	// Config
@@ -22,9 +22,7 @@
 		dark-color           : color(greyscale, grey-5),
 		height               : 100px,
 		z-index              : 5
-	), $config) !global;
-	
-	$config: $header !global;
+	), $custom) !global;
 	
 	//-------------------------------------------------------------
 	// Component
@@ -48,8 +46,7 @@
 				display: table;
 				width: 100%;
 			}
-			.logo, 
-			.navigation {
+			@include overwrite((logo, navigation), static) {
 				display: table-cell;
 				vertical-align: middle;
 			}
@@ -57,7 +54,7 @@
 		
 		// Absolute Position Header
 		//---------------------------------------------------------
-	
+		
 		@include setting(absolute) {
 			position: absolute;
 			top: map-get($header, top-position);

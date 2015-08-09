@@ -10,7 +10,7 @@ https://github.com/esr360/K-Tooltips
 	
 -----------------------------------------------------------------*/
 
-@mixin tooltips($config: ()) {
+@mixin tooltips($custom: ()) {
 
 	//-------------------------------------------------------------
 	// Config
@@ -33,7 +33,7 @@ https://github.com/esr360/K-Tooltips
 		// Other
 		transition     : 0.4s,
 		z-index        : 9999
-	), $config) !global;
+	), $custom) !global;
 
 	//-------------------------------------------------------------
 	// Custom Styles

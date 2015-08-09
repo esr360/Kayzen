@@ -2,7 +2,7 @@
 // Navigation
 //=================================================================
 
-@mixin navigation($config: ()) {
+@mixin navigation($custom: ()) {
 
 	//-------------------------------------------------------------
 	// Config
@@ -17,9 +17,7 @@
 		no-icons               : false,
 		dropdown-icon          : "\f107",
 		style                  : default
-	), $config) !global;
-	
-	$config: $navigation !global;
+	), $custom) !global;
 
 	//-------------------------------------------------------------
 	// Component

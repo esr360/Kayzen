@@ -1305,14 +1305,14 @@ hr.line {
 h1:first-child, h2:first-child, h3:first-child, h4:first-child, h5:first-child, h6:first-child,
 p:first-child, ul:first-child, ol:first-child,
 fieldset:first-child, legend:first-child, figure:first-child, table:first-child,
-pre:first-child, hr:first-child, .hgroup .heading:first-child, .hgroup [class*="heading-"]:first-child, [class*="hgroup-"] .heading:first-child, [class*="hgroup-"] [class*="heading-"]:first-child {
+pre:first-child, hr:first-child, .heading_group .heading:first-child, .heading_group [class*="heading-"]:first-child, [class*="heading_group-"] .heading:first-child, [class*="heading_group-"] [class*="heading-"]:first-child {
   margin-top: 0;
 }
 
 h1:last-child, h2:last-child, h3:last-child, h4:last-child, h5:last-child, h6:last-child,
 p:last-child, ul:last-child, ol:last-child,
 fieldset:last-child, legend:last-child, figure:last-child, table:last-child,
-pre:last-child, hr:last-child, .accordion:last-child, [class*="accordion-"]:last-child, .hgroup:last-child, [class*="hgroup-"]:last-child, .hgroup .heading:last-child, .hgroup [class*="heading-"]:last-child, [class*="hgroup-"] .heading:last-child, [class*="hgroup-"] [class*="heading-"]:last-child, [class*="widget-"][class*="-stacked"]:last-child, [class*="widgets-"][class*="-large"]:last-child {
+pre:last-child, hr:last-child, .accordion:last-child, [class*="accordion-"]:last-child, .heading_group:last-child, [class*="heading_group-"]:last-child, .heading_group .heading:last-child, .heading_group [class*="heading-"]:last-child, [class*="heading_group-"] .heading:last-child, [class*="heading_group-"] [class*="heading-"]:last-child, [class*="widget-"][class*="-stacked"]:last-child, [class*="widget_group-"][class*="-large"]:last-child, [class*="widgets-"][class*="-large"]:last-child {
   margin-bottom: 0;
 }
 
@@ -2079,25 +2079,24 @@ button::-moz-focus-inner {
 [class*="heading-"][class*="-dotted"] a {
   color: inherit;
 }
-
-.hgroup, [class*="hgroup-"] {
+.heading_group, [class*="heading_group-"] {
   margin-bottom: 2rem;
   font-size: 1rem;
   position: relative;
   background-size: cover;
 }
-.hgroup .heading, .hgroup [class*="heading-"], [class*="hgroup-"] .heading, [class*="hgroup-"] [class*="heading-"] {
+.heading_group .heading, .heading_group [class*="heading-"], [class*="heading_group-"] .heading, [class*="heading_group-"] [class*="heading-"] {
   margin: 0.5em 0;
   line-height: 0.8;
 }
-.hgroup .lede, [class*="hgroup-"] .lede {
+.heading_group .lede, [class*="heading_group-"] .lede {
   color: #6f777b;
 }
-[class*="hgroup-"][class*="-dots"] {
+[class*="heading_group-"][class*="-dots"] {
   position: relative;
   margin-bottom: 3em;
 }
-[class*="hgroup-"][class*="-dots"]:after {
+[class*="heading_group-"][class*="-dots"]:after {
   content: "• • •";
   position: absolute;
   color: rgba(0, 0, 0, 0.4);
@@ -2108,26 +2107,25 @@ button::-moz-focus-inner {
   right: 0;
   margin: auto;
 }
-[class*="hgroup-"][class*="-block"] {
+[class*="heading_group-"][class*="-block"] {
   padding: 6em 0;
   margin-bottom: 0;
 }
-[class*="hgroup-"][class*="-block"].has-icon {
+[class*="heading_group-"][class*="-block"].has-icon {
   padding-bottom: 5em;
 }
-[class*="hgroup-"][class*="-large"] {
+[class*="heading_group-"][class*="-large"] {
   margin-bottom: 4rem;
 }
-[class*="hgroup-"][class*="-xlarge"] {
+[class*="heading_group-"][class*="-xlarge"] {
   margin-bottom: 6rem;
 }
-
-.title-icon {
+.heading_icon {
   display: inline-block;
   position: relative;
   font-size: 1.5em;
 }
-.title-icon .fa {
+.heading_icon .fa {
   position: relative;
   width: 0.85em;
   height: 0.85em;
@@ -2137,14 +2135,14 @@ button::-moz-focus-inner {
   border: 1px solid #9B58B5;
   border-radius: 50%;
 }
-.title-icon .fa:before {
+.heading_icon .fa:before {
   position: absolute;
   left: 50%;
   -webkit-transform: translateX(-50%);
       -ms-transform: translateX(-50%);
           transform: translateX(-50%);
 }
-.title-icon:before, .title-icon:after {
+.heading_icon:before, .heading_icon:after {
   content: "";
   width: 2em;
   border-bottom: 1px solid #9B58B5;
@@ -2154,10 +2152,10 @@ button::-moz-focus-inner {
       -ms-transform: translateY(-50%);
           transform: translateY(-50%);
 }
-.title-icon:before {
+.heading_icon:before {
   left: -2em;
 }
-.title-icon:after {
+.heading_icon:after {
   right: -2em;
 }
 
@@ -2844,30 +2842,8 @@ progress.progress-alt::-moz-progress-bar {
   -webkit-transition: 0.4s;
           transition: 0.4s;
 }
-.widget:hover .w-icon, [class*="widget-"]:hover .w-icon {
-  color: #9B58B5;
-}
-.widget .hgroup, .widget [class*="hgroup-"], [class*="widget-"] .hgroup, [class*="widget-"] [class*="hgroup-"] {
+.widget .heading_group, .widget [class*="heading_group-"], [class*="widget-"] .heading_group, [class*="widget-"] [class*="heading_group-"] {
   margin-bottom: 0;
-}
-.w-icon {
-  color: #bfc1c3;
-  margin-bottom: 2rem;
-}
-.w-icon.w-inline {
-  margin-right: 0.5rem;
-}
-.w-header + .w-icon {
-  margin-left: 0.5rem;
-  margin-right: 0;
-}
-.w-inline {
-  display: inline-block;
-  vertical-align: middle;
-  margin-bottom: 0;
-}
-.w-inline + p {
-  margin-top: 1rem;
 }
 [class*="widget-"][class*="-block"] {
   background: #ffffff;
@@ -2932,6 +2908,37 @@ progress.progress-alt::-moz-progress-bar {
 }
 [class*="widget-"][class*="-spectrum-quarter"] .icon, [class*="widget-"][class*="-spectrum-quarter"] [class*="icon-"] {
   color: #ffffff;
+}
+[class*="widget_"][class*="-inline"] {
+  display: inline-block;
+  vertical-align: middle;
+  margin-bottom: 0;
+}
+[class*="widget_"][class*="-inline"] + p {
+  margin-top: 1rem;
+}
+[class*="widget_group-"][class*="-large"] {
+  margin-bottom: 4rem;
+}
+[class*="widget_group-"][class*="-grid"] {
+  margin-bottom: -2rem;
+}
+[class*="widget_group-"][class*="-grid"] .widget, [class*="widget_group-"][class*="-grid"] [class*="widget-"] {
+  margin-bottom: 2rem;
+}
+.widget_header + .widget_icon, .widget_header + [class*="widget_icon-"], [class*="widget_header-"] + .widget_icon, [class*="widget_header-"] + [class*="widget_icon-"] {
+  margin-left: 0.5rem;
+  margin-right: 0;
+}
+.widget_icon, [class*="widget_icon-"] {
+  color: #bfc1c3;
+  margin-bottom: 2rem;
+}
+[class*="widget_icon-"][class*="-inline"] {
+  margin-right: 0.5rem;
+}
+.widget:hover .widget_icon, .widget:hover [class*="widget_icon-"], [class*="widget-"]:hover .widget_icon, [class*="widget-"]:hover [class*="widget_icon-"] {
+  color: #9B58B5;
 }
 
 [class*="widgets-"][class*="-large"] {
@@ -3045,7 +3052,12 @@ progress.progress-alt::-moz-progress-bar {
 
 .footer, [class*="footer-"] {
   text-align: center;
-  margin-bottom: 2rem;
+  padding: 4em 0;
+  background: #232627;
+  color: #ffffff;
+}
+.footer a, [class*="footer-"] a {
+  color: #ffffff;
 }
 @media (min-width: 720px) {
   .footer_wrapper {
@@ -3053,6 +3065,9 @@ progress.progress-alt::-moz-progress-bar {
     width: 100%;
     text-align: left;
   }
+}
+.footer_copyright h4, [class*="footer_copyright-"] h4 {
+  font-weight: lighter;
 }
 .footer_nav li {
   display: inline-block;
@@ -3066,7 +3081,7 @@ progress.progress-alt::-moz-progress-bar {
   }
 }
 @media (min-width: 720px) {
-  .footer_nav, copyright {
+  .footer_nav, .footer_copyright {
     display: table-cell;
     vertical-align: middle;
   }
@@ -3086,8 +3101,7 @@ progress.progress-alt::-moz-progress-bar {
   display: table;
   width: 100%;
 }
-.header .logo,
-.header .navigation {
+.header .logo, .header .navigation {
   display: table-cell;
   vertical-align: middle;
 }
@@ -3313,7 +3327,7 @@ progress.progress-alt::-moz-progress-bar {
   background-size: cover;
   background-position: center;
 }
-.section .hgroup, .section [class*="hgroup-"], [class*="section-"] .hgroup, [class*="section-"] [class*="hgroup-"] {
+.section .heading_group, .section [class*="heading_group-"], [class*="section-"] .heading_group, [class*="section-"] [class*="heading_group-"] {
   color: #232627;
 }
 .section .slide-prev,
@@ -3338,7 +3352,7 @@ progress.progress-alt::-moz-progress-bar {
 [class*="section-"][class*="-secondary"], [class*="section-"][class*="-secondary"] a:not([class*="button-"]) {
   color: #ffffff;
 }
-[class*="section-"][class*="-secondary"] .hgroup, [class*="section-"][class*="-secondary"] [class*="hgroup-"] {
+[class*="section-"][class*="-secondary"] .heading_group, [class*="section-"][class*="-secondary"] [class*="heading_group-"] {
   color: #ffffff;
 }
 [class*="section-"][class*="-overlay"] {

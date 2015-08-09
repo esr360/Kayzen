@@ -2,7 +2,7 @@
 // Helper Classes
 //=================================================================
 
-@mixin helpers($config: ()) {
+@mixin helpers($custom: ()) {
 
 	//-------------------------------------------------------------
 	// Config
@@ -14,7 +14,7 @@
 		aligning              : true,
 		horizontal-rules      : true,
 		responsive-visibility : true
-	), $config) !global;
+	), $custom) !global;
 
 	//-------------------------------------------------------------
 	// Visibility

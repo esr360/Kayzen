@@ -2,7 +2,7 @@
 // Billboard
 //=================================================================
 
-@mixin billboard($config: ()) {
+@mixin billboard($custom: ()) {
 
 	//-------------------------------------------------------------
 	// Config
@@ -21,9 +21,7 @@
 		text-align      : center,
 		min-height      : 500px,
 		wrapper-width   : breakpoint(break-2)
-	), $config) !global;
-
-	$config: $billboard !global;
+	), $custom) !global;
 	
 	//-------------------------------------------------------------
 	// Component

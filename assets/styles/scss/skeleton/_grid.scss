@@ -10,7 +10,7 @@ http://github.com/esr360/Kayzen-GS/
 	
 -----------------------------------------------------------------*/
 
-@mixin grid($config: ()) {
+@mixin grid($custom: ()) {
 
 	//-------------------------------------------------------------
 	// Config
@@ -53,9 +53,7 @@ http://github.com/esr360/Kayzen-GS/
 			quarter         : (1, 4),
 			sixth           : (1, 6)
 		)
-	), $config) !global;
-	
-	$config: $grid !global;
+	), $custom) !global;
 
 	// Set min/max width for breakpoints
 	$scale: null;

@@ -2,16 +2,14 @@
 // Widgets
 //=================================================================
 
-@mixin widgets($config: ()) {
+@mixin widgets($custom: ()) {
 
 	//-------------------------------------------------------------
 	// Config
 	//-------------------------------------------------------------
 
 	$widgets: config((
-	), $config);
-	
-	$config: $widgets !global;
+	), $custom);
 
 	//-------------------------------------------------------------
 	// Component
@@ -24,38 +22,8 @@
 	
 		transition: base(transition);
 
-		&:hover {
-			.w-icon {
-				color: color(brand, primary);
-			}
-		}
-
-		@include overwrite(hgroup) {
+		@include overwrite-sub(group, $parent: heading) {
 			margin-bottom: 0;
-		}
-
-		@at-root .w-icon {
-			color: color(greyscale, grey-3);
-			margin-bottom: base(margin);
-			&.w-inline {
-				margin-right: 0.5rem;
-			}
-		}
-
-		@at-root .w-header {
-			+ .w-icon {
-				margin-left: 0.5rem;
-				margin-right: 0;
-			}
-		}
-
-		@at-root .w-inline {
-			display: inline-block;
-			vertical-align: middle;
-			margin-bottom: 0;
-			+ p {
-				margin-top: (base(margin) / 2);
-			}
 		}
 
 	// Modifiers
@@ -126,6 +94,51 @@
 			}
 			@include overwrite(icon) {
 				color: color(greyscale, white);
+			}
+		}
+		
+	// Sub Components
+	//-------------------------------------------------------------
+	
+		@include sub-component {
+			@include modifier(inline) {
+				display: inline-block;
+				vertical-align: middle;
+				margin-bottom: 0;
+				+ p {
+					margin-top: (base(margin) / 2);
+				}
+			}
+		}
+		
+		@include sub-component(group) {
+			@include modifier(large) {
+				margin-bottom: (base(margin) * 2);
+				@include vertical-rhythm(bottom);
+			}
+			@include modifier(grid) {
+				margin-bottom: -#{base(margin)};
+				@include overwrite(widget) {
+					margin-bottom: base(margin);
+				}
+			}
+		}
+		
+		@include sub-component(header) {
+			@include overwrite-sub(icon, $special: adjacent-sibling) {
+				margin-left: 0.5rem;
+				margin-right: 0;
+			}
+		}
+		
+		@include sub-component(icon) {
+			color: color(greyscale, grey-3);
+			margin-bottom: base(margin);
+			@include modifier(inline) {
+				margin-right: 0.5rem;
+			}
+			@include context(parent-hovered) {
+				color: color(brand, primary);
 			}
 		}
 	

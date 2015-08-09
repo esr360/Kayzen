@@ -2,16 +2,14 @@
 // Headings
 //=================================================================
 
-@mixin headings($config: ()) {
+@mixin headings($custom: ()) {
 
 	//-------------------------------------------------------------
 	// Config
 	//-------------------------------------------------------------
 
 	$headings: config((
-	), $config);
-	
-	$config: $headings !global;
+	), $custom);
 	
 	//-------------------------------------------------------------
 	// Component
@@ -137,114 +135,117 @@
 //			@include extend(heavy, size-4, uppercase);
 //		}  
 
-	} // component(heading)
-
-	//-------------------------------------------------------------
-	// Heading Group
-	//-------------------------------------------------------------
-
-	@include component(hgroup) {
-
-	// Core Styles
+	// Sub Components
 	//-------------------------------------------------------------
 	
-		margin-bottom: base(margin);
-		font-size: 1rem;
-		position: relative;
-		background-size: cover;
-		@include vertical-rhythm(bottom);
-
-		@include overwrite(heading) {
-			margin: 0.5em 0;
-			line-height: 0.8;
-			@include vertical-rhythm;
-		}
-
-		.lede {
-			color: color(greyscale, grey-4);
-		}
-
-	// Modifiers
-	//-------------------------------------------------------------
+		//---------------------------------------------------------
+		// Heading Group
+		//---------------------------------------------------------
 	
-		@include modifier(dots) {
-			position: relative;
-			margin-bottom: 3em;
-			&:after {
-				content: "• • •";
-				position: absolute;
-				color: rgba(color(greyscale, black), 0.4);
-				font-size: 24px;
-				font-weight: 600;
-				bottom: -2.25em;
-				left: 0;
-				right: 0;
-				margin: auto;
-			}
-		}
-	
-		@include modifier(block) {
-			padding: 6em 0;
-			margin-bottom: 0;
-			&.has-icon {
-				padding-bottom: 5em;
-			}
-		}
-	
-		@include modifier(large) {
-			margin-bottom: (base(margin) * 2);
-			@include vertical-rhythm(bottom);
-		}
-	
-		@include modifier(xlarge) {
-			margin-bottom: (base(margin) * 3);
-			@include vertical-rhythm(bottom);
-		}
-	
-	} // component(hgroup)
-
-	//-------------------------------------------------------------
-	// Title Icon
-	//-------------------------------------------------------------
-	
-	.title-icon {
-	
-		display: inline-block;
-		position: relative;
-		font-size: font-size(size-5);
-	
-		.fa {
-			position: relative;
-			width: 0.85em;
-			height: 0.85em;
-			line-height: 0.85em;
-			font-size: font-size(size-4);
-			color: color(greyscale, grey-5);
-			border: 1px solid color(brand, primary);
-			border-radius: 50%;
-			&:before {
-				position: absolute;
-				left: 50%;
-				transform: translateX(-50%);
-			}
-		}
-	
-		&:before,
-		&:after {
-			content: "";
-			width: 2em;
-			border-bottom: 1px solid color(brand, primary);
-			@include vertical-center(absolute);
-		}
-	
-		&:before {
-		   left: -2em;
-		}
+		@include sub-component(group) {
 		
-		&:after {
-		   right: -2em;
-		}
+			// Core Styles
+			//-----------------------------------------------------
+		
+			margin-bottom: base(margin);
+			font-size: 1rem;
+			position: relative;
+			background-size: cover;
+			@include vertical-rhythm(bottom);
 	
-	} // .title-icon
+			@include overwrite(heading) {
+				margin: 0.5em 0;
+				line-height: 0.8;
+				@include vertical-rhythm;
+			}
+	
+			.lede {
+				color: color(greyscale, grey-4);
+			}
+	
+			// Modifiers
+			//-----------------------------------------------------
+		
+			@include modifier(dots) {
+				position: relative;
+				margin-bottom: 3em;
+				&:after {
+					content: "• • •";
+					position: absolute;
+					color: rgba(color(greyscale, black), 0.4);
+					font-size: 24px;
+					font-weight: 600;
+					bottom: -2.25em;
+					left: 0;
+					right: 0;
+					margin: auto;
+				}
+			}
+		
+			@include modifier(block) {
+				padding: 6em 0;
+				margin-bottom: 0;
+				&.has-icon {
+					padding-bottom: 5em;
+				}
+			}
+		
+			@include modifier(large) {
+				margin-bottom: (base(margin) * 2);
+				@include vertical-rhythm(bottom);
+			}
+		
+			@include modifier(xlarge) {
+				margin-bottom: (base(margin) * 3);
+				@include vertical-rhythm(bottom);
+			}
+		
+		} // sub-component(group)
+
+		//---------------------------------------------------------
+		// Heading Icon
+		//---------------------------------------------------------
+		
+		@include sub-component(icon, static) {
+		
+			display: inline-block;
+			position: relative;
+			font-size: font-size(size-5);
+		
+			.fa {
+				position: relative;
+				width: 0.85em;
+				height: 0.85em;
+				line-height: 0.85em;
+				font-size: font-size(size-4);
+				color: color(greyscale, grey-5);
+				border: 1px solid color(brand, primary);
+				border-radius: 50%;
+				&:before {
+					position: absolute;
+					left: 50%;
+					transform: translateX(-50%);
+				}
+			}
+		
+			&:before,
+			&:after {
+				content: "";
+				width: 2em;
+				border-bottom: 1px solid color(brand, primary);
+				@include vertical-center(absolute);
+			}
+		
+			&:before {
+			   left: -2em;
+			}
+			
+			&:after {
+			   right: -2em;
+			}
+		
+		} // sub-component(icon)
+
+	} // component(heading)
 	
 } // @mixin headings

@@ -2,16 +2,14 @@
 // Footer
 //=================================================================
 
-@mixin footer($config: ()) {
+@mixin footer($custom: ()) {
 
 	//-------------------------------------------------------------
 	// Config
 	//-------------------------------------------------------------
 
 	$footer: config((
-	), $config);
-
-	$config: $footer !global;
+	), $custom);
 	
 	//-------------------------------------------------------------
 	// Component
@@ -23,7 +21,13 @@
 	//-------------------------------------------------------------
 	
 		text-align: center;	
-		margin-bottom: base(margin);
+		padding: 4em 0;
+		background: color(greyscale, grey-5);
+		color: color(greyscale, white);
+		
+		a {
+			color: color(greyscale, white);
+		}
 		
 	// Sub-Components
 	//-------------------------------------------------------------
@@ -33,6 +37,12 @@
 				display: table;
 				width: 100%;
 				text-align: left;
+			}
+		}
+		
+		@include sub-component(copyright) {
+			h4 {
+				font-weight: lighter;
 			}
 		}
 	
@@ -52,7 +62,7 @@
 		}
 		
 		@media (min-width: breakpoint(break-2)) {
-			@include sub-components("nav, copyright", static) {
+			@include sub-components((nav, copyright), static) {
 				display: table-cell;
 				vertical-align: middle;
 			}
