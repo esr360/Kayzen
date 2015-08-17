@@ -9,20 +9,24 @@
 	//-------------------------------------------------------------
 
 	$dropdown: config((
+		name                  : dropdown,
 		text-align            : left,
 		width                 : 175px,
 		top-position          : 0,
 		dropdown-icon         : "\f105",
 		low-level-icon        : "\f105",
-		link-color            : navigation(a-has-child-color),
-		link-hover-color      : navigation(a-has-child-color),
-		link-active-color     : navigation(a-has-child-color)
-	), $custom);
+		link-color            : color(greyscale, grey-4),
+		link-bg-color         : color(greyscale, grey-1),
+		link-hover-color      : color(greyscale, white),
+		link-hover-bg-color   : color(brand, primary),
+		link-active-color     : navigation(a-has-child-color),
+		link-active-bg-color  : navigation(a-has-child-color)
+	), $custom) !global;
 	
 	//-------------------------------------------------------------
 	// Component
 	//-------------------------------------------------------------
-
+	
 	@include component(navigation) {
 
 		// parent list
@@ -45,8 +49,9 @@
 					position: relative;
 			
 					a {
-						background: map-get($dropdown, item-bg-color);
+						background: map-get($dropdown, link-bg-color);
 						color: map-get($dropdown, link-color);
+						border-top: 1px solid color(greyscale, grey-2); 
 						&:before, 
 						&:after {
 							font-family: FontAwesome;		
@@ -60,24 +65,37 @@
 						}
 					}
 			
+					// remove top border on first item
+					&:first-child {
+						> a {
+							border-top-color: transparent;
+						}
+					}
+					
 					// remove bottom border on last item
 					&:last-child {
-						a {
-							border-bottom: none;
+						> a {
+							//border-bottom-color: transparent;
 						}
 					}
 			
 					&:hover {
 						> a {
 							color: map-get($dropdown, link-hover-color);
-							background: map-get($dropdown, item-hover-bg-color);
+							background: map-get($dropdown, link-hover-bg-color);
+							border-color: color(brand, primary);
+						}
+						+ li {
+							a {
+								border-top-color: color(greyscale, grey-1);
+							}
 						}
 					}
 			
 					&.active {
 						> a {
-							color: map-get($dropdown, item-active-color);
-							background: map-get($dropdown, item-active-bg-color);
+							color: map-get($dropdown, link-active-color);
+							background: map-get($dropdown, link-active-bg-color);
 						}
 					}
 			
@@ -85,7 +103,9 @@
 						left: 100%;
 						top: 0;
 						li {
-							a {}
+							a {
+								border-left: 1px solid color(greyscale, grey-2);
+							}
 						}
 					}
 			

@@ -9,6 +9,7 @@
 	//-------------------------------------------------------------
 
 	$widgets: config((
+		name            : widget
 	), $custom);
 
 	//-------------------------------------------------------------
@@ -21,6 +22,10 @@
 	//-------------------------------------------------------------
 	
 		transition: base(transition);
+		
+		&:hover {
+			text-decoration: none;
+		}
 
 		@include overwrite-sub(group, $parent: heading) {
 			margin-bottom: 0;
@@ -34,11 +39,13 @@
 			transition: base(transition);	
 			padding: 2.5em 1em;
 			&:hover {
-				background: color(brand, primary);			
-				&, .w-icon {
+				background: color(brand, primary);	
+				border-color: color(brand, primary);	
+				color: color(greyscale, white);
+				@include overwrite(heading) {
 					color: color(greyscale, white);
 				}
-				@include overwrite(heading) {
+				@include overwrite-sub(icon) {
 					color: color(greyscale, white);
 				}
 			}
@@ -48,8 +55,8 @@
 			padding: 4%;
 			border-top: 1px solid color(greyscale, grey-2);	
 			border-left: 1px solid color(greyscale, grey-2);
-			&:first-child {
-				border-left: none;
+			@include nested-modifier(small) {
+				padding: 4% 2%;
 			}
 		}
 	
@@ -93,7 +100,12 @@
 				background: lighten(color(brand, primary), 6%);
 			}
 			@include overwrite(icon) {
-				color: color(greyscale, white);
+				color: rgba(color(greyscale, white), 0.5);
+			}
+			&:hover {
+				@include overwrite(icon) {
+					color: color(greyscale, white);
+				}
 			}
 		}
 		
@@ -124,13 +136,6 @@
 			}
 		}
 		
-		@include sub-component(header) {
-			@include overwrite-sub(icon, $special: adjacent-sibling) {
-				margin-left: 0.5rem;
-				margin-right: 0;
-			}
-		}
-		
 		@include sub-component(icon) {
 			color: color(greyscale, grey-3);
 			margin-bottom: base(margin);
@@ -141,27 +146,14 @@
 				color: color(brand, primary);
 			}
 		}
-	
-	} // component(widget)
-
-	//-------------------------------------------------------------
-	// Widget Groups
-	//-------------------------------------------------------------
-
-	@include component(widgets) {
-	
-		@include modifier(large) {
-			margin-bottom: (base(margin) * 2);
-			@include vertical-rhythm(bottom);
-		}
 		
-		@include modifier(grid) {
-			margin-bottom: -#{base(margin)};
-			@include overwrite(widget) {
-				margin-bottom: base(margin);
+		@include sub-component(header) {
+			@include overwrite-sub(icon, $special: adjacent-sibling) {
+				margin-left: 0.5rem;
+				margin-right: 0;
 			}
 		}
 	
-	} // component(widgets)
+	} // component(widget)
 	
 } // @mixin widgets

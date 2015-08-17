@@ -9,31 +9,44 @@
 	//-------------------------------------------------------------
 
 	$header: config((
-		// Settings
-		absolute             : false,
-		bar                  : false,
-		dark                 : false,
-		side                 : false,
+		name                 : header,
 		// Options
-		side-width           : 350px,
-		side-container-width : 100%,
-		top-position         : 0,
-		bg-color             : base(background-color),
-		dark-color           : color(greyscale, grey-5),
+		bg                   : base(background),
 		height               : 100px,
-		z-index              : 5
+		z-index              : 5,
+		// Settings
+		bar                  : false,
+		absolute             : (
+			default          : false,
+			top-position     : 0
+		),
+		dark                 : (
+			default          : false,
+			bg               : color(greyscale, grey-5)
+		),
+		side                 : (
+			default          : false,
+			width            : 350px,
+			container-width  : 100%
+		),
+		sticky               : (
+			default          : true,
+			bg               : color(greyscale, grey-5),
+			height           : 80px
+		)
 	), $custom) !global;
 	
 	//-------------------------------------------------------------
 	// Component
 	//-------------------------------------------------------------
 
-	@include component(header) {
+	@include component(app-header) {
 
 	// Core Styles
 	//-------------------------------------------------------------
 	
-		background-color: map-get($header, bg-color);	
+		background-color: option($header, bg);
+		transition: background base(transition);
 
 	// Settings
 	//-------------------------------------------------------------
@@ -46,7 +59,7 @@
 				display: table;
 				width: 100%;
 			}
-			@include overwrite((logo, navigation), static) {
+			@include overwrite((logo, navigation)) {
 				display: table-cell;
 				vertical-align: middle;
 			}
@@ -57,8 +70,8 @@
 		
 		@include setting(absolute) {
 			position: absolute;
-			top: map-get($header, top-position);
-			z-index: map-get($header, z-index);
+			top: option($header, absolute, top-position);
+			z-index: option($header, z-index);
 			width: 100%;
 		}
 
@@ -67,17 +80,17 @@
 	
 		@include setting(side) {
 			position: fixed;
-			z-index: map-get($header, z-index);
+			z-index: option($header, z-index);
 			height: 100%;
 			top: 0;	
 			overflow: auto;
-			width: map-get($header, side-width);	
-			#{map-get($header, side)}: 0;
+			width: option($header, side, width);	
+			#{option($header, side, default)}: 0;
 			+ #main {
-				margin-#{map-get($header, side)}: map-get($header, side-width);
+				margin-#{option($header, side, default)}: option($header, side, width);
 			}
 			@include overwrite(container) {
-				max-width: map-get($header, side-container-width);
+				max-width: option($header, side, container-width);
 			}
 		}
 		
@@ -85,16 +98,38 @@
 		//---------------------------------------------------------
 	
 		@include setting(dark) {
-			background-color: map-get($header, dark-color);
+			background-color: option($header, dark, bg);
+		}
+		
+		// Sticky Header
+		//---------------------------------------------------------
+		
+		@include setting(sticky) {
+			&.fixed {
+				position: fixed;
+				top: 0;
+				width: 100%;
+				z-index: 12;
+				background: option($header, sticky, bg);
+				@include overwrite-sub(wrapper) {
+					height: option($header, sticky, height);
+				}
+				@include modifier(absolute, "not") {
+					@include overwrite(billboard, $special: adjacent-sibling) {
+						margin-top: option($header, sticky, height);
+					}
+				}
+			}
 		}
 		
 	// Sub-Components
 	//-------------------------------------------------------------
 
 		@include sub-component(wrapper, static) {
-			height: map-get($header, height);
+			height: option($header, height);
+			transition: base(transition);
 		}
 		
-	} // component(header)
+	} // component(app-header)
 
 } // @mixin header

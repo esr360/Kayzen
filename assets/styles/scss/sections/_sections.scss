@@ -9,6 +9,7 @@
 	//-------------------------------------------------------------
 
 	$sections: config((
+		name            : section
 	), $custom);
 
 	//-------------------------------------------------------------
@@ -31,7 +32,6 @@
 		.slide-next {
 			@include vertical-center(absolute);
 		}
-
 
 	// Modifiers
 	//-------------------------------------------------------------
@@ -85,21 +85,18 @@
 		@include modifier(banner) {
 			padding: 5em 0;
 		}
+		
+	// Sub Components
+	//-------------------------------------------------------------
+	
+		@include sub-component(block) {
+			position: relative;
+			transition: base(transition);
+			padding: 7%;
+			background-color: color(greyscale, white);	
+			background-size: cover;
+		}
 	
 	} // component(section)
-
-	//-------------------------------------------------------------
-	// Section Block
-	//-------------------------------------------------------------
-
-	@include component(s-block) {
-	
-		position: relative;
-		transition: base(transition);
-		padding: 7%;
-		background-color: color(greyscale, white);	
-		background-size: cover;
-	
-	} // component(s-block)
 	
 } // @mixin sections

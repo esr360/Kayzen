@@ -9,6 +9,7 @@
 	//-------------------------------------------------------------
 
 	$footer: config((
+		name            : footer
 	), $custom);
 	
 	//-------------------------------------------------------------
@@ -21,7 +22,7 @@
 	//-------------------------------------------------------------
 	
 		text-align: center;	
-		padding: 4em 0;
+		padding: 2em 0;
 		background: color(greyscale, grey-5);
 		color: color(greyscale, white);
 		
@@ -33,7 +34,7 @@
 	//-------------------------------------------------------------
 	
 		@include sub-component(wrapper, static) {
-			@media (min-width: breakpoint(break-2)) {		
+			@include context((min-width: breakpoint(break-2))) {		
 				display: table;
 				width: 100%;
 				text-align: left;
@@ -56,13 +57,13 @@
 					margin-right: 1em;
 			    }
 		    }
-			@media (min-width: breakpoint(break-2)) {
+			@include context((min-width: breakpoint(break-2))) {
 				text-align: right;
 			}
 		}
 		
-		@media (min-width: breakpoint(break-2)) {
-			@include sub-components((nav, copyright), static) {
+		@include sub-components((nav, copyright), static) {
+			@include context((min-width: breakpoint(break-2))) {
 				display: table-cell;
 				vertical-align: middle;
 			}

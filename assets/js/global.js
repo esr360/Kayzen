@@ -22,9 +22,9 @@ $('a[href*=#]').click(function() {
     }
 });
 
-/******************************************************************
-Add Active Class
-******************************************************************/
+//-----------------------------------------------------------------
+// Add Active Class
+//-----------------------------------------------------------------
 
 if (window.matchMedia('(min-width: 940px)').matches) {
     tiles = $(".inactive");
@@ -38,6 +38,29 @@ if (window.matchMedia('(min-width: 940px)').matches) {
 } else {
     $('.inactive').removeClass('inactive');
 }
+
+//-----------------------------------------------------------------
+// Sticky Header
+//-----------------------------------------------------------------
+
+var stickyOffset = $('[class*="app-header-"][class*="-sticky"]').offset().top;
+
+$(window).on("load scroll",function(e){
+  var sticky = $('[class*="app-header-"][class*="-sticky"]'),
+      scroll = $(window).scrollTop();
+
+  if (scroll > stickyOffset) sticky.addClass('fixed');
+  else sticky.removeClass('fixed');
+});
+
+$("[class*='header-'][class*='-sticky'] [class*='navigation'] > ul > li > a:not(:only-child)").parent().hover(
+	function(){ 
+		$("#site-overlay").addClass('visible')
+	},
+	function(){ 
+		$("#site-overlay").removeClass('visible') 
+	}
+)
 
 //-----------------------------------------------------------------
 // Scroll to Top

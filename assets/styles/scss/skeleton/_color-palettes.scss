@@ -8,7 +8,8 @@
 	// Config
 	//-------------------------------------------------------------
 
-	$palettes: config((		
+	$palettes: config((	
+		name            : palettes,	
 		greyscale: (
 			white       : #ffffff,
 			grey-1      : #f8f8f8,
@@ -52,6 +53,8 @@
 			google-plus : #dd4b39		
 		)
 	), $custom) !global;
+	
+	$component: $palettes !global;
 
 } // @mixin palettes
 

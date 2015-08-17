@@ -9,6 +9,7 @@
 	//-------------------------------------------------------------
 
 	$billboard: config((
+		name            : billboard,
 		// Settings
 		full-screen     : false,
 		overlay         : false,
@@ -57,16 +58,14 @@
 			}
 		}
 		
-		@if map-get($billboard, extend-settings) {
-			@at-root {
-				@include component(header) {
-					@include modifier(absolute) {
-						& + #main {
-							@include component(billboard) {
-								@include modifier(full-screen) {
-									height: 100%;
-									height: 100vh;
-								}
+		@at-root {
+			@include component(app-header) {
+				@include modifier(absolute) {
+					& + #main {
+						@include component(billboard) {
+							@include modifier(full-screen) {
+								height: 100%;
+								height: 100vh;
 							}
 						}
 					}
@@ -78,18 +77,21 @@
 		//---------------------------------------------------------
 		
 		@include setting(overlay) {
-			@include bg-overlay(rgba(map-get($billboard, overlay-color), map-get($billboard, overlay-opacity)));
+			@include bg-overlay(rgba(
+				map-get($billboard, overlay-color), 
+				map-get($billboard, overlay-opacity)
+			));
 		}
 		
 	// Child Components
 	//-------------------------------------------------------------
 
-		@at-root .wrap-billboard {
+		@include sub-component(wrapper) {
 			color: map-get($billboard, color);
 			text-align: map-get($billboard, text-align);
 			@extend %horizontal-center;
 			@include vertical-center(absolute);
-			@media (min-width: breakpoint(break-3)) {
+			@include context((min-width: breakpoint(break-3))) {
 				width: map-get($billboard, wrapper-width);
 			}
 		}

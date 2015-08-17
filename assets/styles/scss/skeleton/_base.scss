@@ -9,6 +9,7 @@
 	//-------------------------------------------------------------
 
 	$base: config((
+		name             : base,
 		background       : color(greyscale, grey-1),
 		font-family      : typography(typefaces, primary),
 		text-color       : typography(colors, base),
@@ -58,7 +59,6 @@
 	    }
 	
 	    @include modifier(full) {
-	        width: grid-option(small-width);
 	        width: grid-option(full-width);
 	        max-width: grid-option(full-width);
 	    }
@@ -67,11 +67,6 @@
 
 	.wrapper {
 	    padding: 0 grid-option(gutter);
-	}
-	
-	#main,
-	#site-content {
-	    height: 100%;
 	}
 	
 	.site-overlay {

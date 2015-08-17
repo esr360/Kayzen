@@ -13,6 +13,7 @@ $asset-path : "../..";
 // Skeleton
 //-----------------------------------------------------------------
 
+@import "skeleton/SassyJSON/SassyJSON";
 @import "skeleton/normalize";
 @import "skeleton/modular";
 @import "skeleton/utilities";
@@ -79,3 +80,5 @@ $theme: Kayzen;
 @import "themes/default";
 @import "themes/kayzen";
 @import "themes/sandbox";
+
+@include json-encode($config-JSON);

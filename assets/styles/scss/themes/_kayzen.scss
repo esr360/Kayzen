@@ -3,8 +3,6 @@
 //=================================================================
 
 @if $theme == Kayzen {
-	
-	$extend-settings: false;
 
 //-----------------------------------------------------------------
 // Skeleton
@@ -54,18 +52,17 @@
 	@include google-map;
 	
 	@include header((
-		selector-type          : static,
-		absolute               : true,
-		bar                    : true,
-		bg-color               : transparent,
-		top-position           : 50px
+		bg                     : transparent,
+		absolute               : (
+			top-position       : 50px
+		)
 	));
 	
 	@include logo;
 	
 	@include navigation((
 		no-icons               : true,
-		link-color             : color(greyscale, white),
+		link-color             : color(greyscale, white)
 	));
 	
 	@include dropdown;
@@ -80,8 +77,6 @@
 	@include sections;
 	
 	@include billboard((
-		selector-type          : static,
-		full-screen            : true,
 		overlay                : true,
 		bg-image               : "#{$asset-path}/images/billboard-1.jpg",
 		wrapper-width          : breakpoint(break-3)

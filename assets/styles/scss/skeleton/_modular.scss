@@ -38,17 +38,17 @@ http://github.com/esr360/Modular/
 // Set the default selector type (flex, chain, static)
 $type: flex;
 
+$component: null;
 @mixin component($components, $type: map-get($config, selector-type)) {
 	$component: $components !global;
+	$component-selector: & !global;
 	$selectors: ();
 	@each $component in $components {
-		@if $type == flex {
+		@if $type == flex or $type == static {
 			$selectors: join($selectors, '.#{$component}');
+		}
+		@if $type == flex or $type == chain {
 			$selectors: join($selectors, '[class*="#{$component}-"]');
-		} @else if $type == chain {
-			$selectors: join($selectors, '[class*="#{$component}-"]');
-		} @else if $type == static {
-			$selectors: join($selectors, '.#{$component}');
 		}
 	}
 	$selectors: to-string($selectors, ", ");
@@ -83,13 +83,11 @@ $type: flex;
 	@if $sub-components != null {
 		$selectors: ();
 		@each $sub-component in $sub-components {
-			@if $type == flex {
+			@if $type == flex or $type == static {
 				$selectors: join($selectors, '.#{$component}_#{$sub-component}');
+			}
+			@if $type == flex or $type == chain {
 				$selectors: join($selectors, '[class*="#{$component}_#{$sub-component}-"]');
-			} @else if $type == chain {
-				$selectors: join($selectors, '[class*="#{$component}_#{$sub-component}-"]');
-			} @else if $type == static {
-				$selectors: join($selectors, '.#{$component}_#{$sub-component}');
 			}
 		}
 		$selectors: to-string($selectors, ", ");
@@ -124,16 +122,23 @@ $type: flex;
 //		<div class="logo">...</div>
 //	</div>
 
-@mixin overwrite($components, $type: $type) {
+@mixin overwrite($components, $type: $type, $special: null) {
 	$selectors: ();
 	@each $component in $components {
-		@if $type == flex {
-			$selectors: join($selectors, '.#{$component}');
-			$selectors: join($selectors, '[class*="#{$component}-"]');
-		} @else if $type == chain {
-			$selectors: join($selectors, '[class*="#{$component}-"]');
-		} @else if $type == static {
-			$selectors: join($selectors, '.#{$component}');
+		$selector: #{$component};
+		@if $type == flex or $type == static {
+			@if $special == adjacent-sibling {
+				$selectors: join($selectors, '+ .#{$selector}');
+			} @else {
+				$selectors: join($selectors, '.#{$selector}');
+			}
+		}
+		@if $type == flex or $type == chain {
+			@if $special == adjacent-sibling {
+				$selectors: join($selectors, '+ [class*="#{$selector}-"]');
+			} @else {
+				$selectors: join($selectors, '[class*="#{$selector}-"]');
+			}
 		}
 	}
 	$selectors: to-string($selectors, ", ");
@@ -171,25 +176,18 @@ $type: flex;
 	$selectors: ();
 	@each $sub-component in $sub-components {
 		$selector: #{$component}_#{$sub-component};
-		@if $type == flex {
-			@if $special == adjacent-sibling {
-				$selectors: join($selectors, '+ .#{$selector}');
-				$selectors: join($selectors, '+ [class*="#{$selector}-"]');
-			} @else {
-				$selectors: join($selectors, '.#{$selector}');
-				$selectors: join($selectors, '[class*="#{$selector}-"]');
-			}
-		} @else if $type == chain {
-			@if $special == adjacent-sibling {
-				$selectors: join($selectors, '+ [class*="#{$selector}-"]');
-			} @else {
-				$selectors: join($selectors, '[class*="#{$selector}-"]');
-			}
-		} @else if $type == static {
+		@if $type == flex or $type == static {
 			@if $special == adjacent-sibling {
 				$selectors: join($selectors, '+ .#{$selector}');
 			} @else {
 				$selectors: join($selectors, '.#{$selector}');
+			}
+		}
+		@if $type == flex or $type == chain {
+			@if $special == adjacent-sibling {
+				$selectors: join($selectors, '+ [class*="#{$selector}-"]');
+			} @else {
+				$selectors: join($selectors, '[class*="#{$selector}-"]');
 			}
 		}
 	}
@@ -220,7 +218,7 @@ $type: flex;
 //
 //	<div class="button-large">...</div>
 
-@mixin modifier($modifiers) {
+@mixin modifier($modifiers, $special: null) {
 	$selectors: &;
 	@if length(&) != 1 {
 		@if map-get($config, selector-type) == flex {
@@ -240,7 +238,11 @@ $type: flex;
 	@at-root #{$selectors} {
 		$modifier-selectors: ();
 		@each $modifier in $modifiers {
-			$modifier-selectors: join($modifier-selectors, '&[class*="-#{$modifier}"]')
+			@if $special == "not" {
+				$modifier-selectors: join($modifier-selectors, '&:not([class*="-#{$modifier}"])');
+			} @else {
+				$modifier-selectors: join($modifier-selectors, '&[class*="-#{$modifier}"]');
+			}
 		}
 		$modifier-selectors: to-string($modifier-selectors, ", ");
 		#{$modifier-selectors} {
@@ -274,11 +276,12 @@ $type: flex;
 
 @mixin nested-modifier($modifiers) {
 	$selectors: ();
+	//variable-exists(setting) and to-string(&) == '%#{$component}-#{$setting}';
 	@each $modifier in $modifiers {
 		$selectors: join($selectors, '&[class*="-#{$modifier}"]');
 	}
 	$selectors: to-string($selectors, ", ");
-	#{$selectors} {
+	@at-root #{$selectors} {
 		@content;
 	}
 }
@@ -299,7 +302,7 @@ $type: flex;
 //	@include component(button) {
 //
 //		@include modifier(round)   {...}
-//		@include modifier(large)  {...}
+//		@include modifier(large)   {...}
 //		@include modifier(success) {...}
 //
 //		@include modifier(primary) {
@@ -324,13 +327,11 @@ $type: flex;
 	$child-selectors: &;
 	$selectors: ();
 	@each $item in $context {
-		@if map-get($config, selector-type) == flex {
+		@if map-get($config, selector-type) == flex or map-get($config, selector-type) == static {
 			$selectors: join($selectors, '.#{$component}');
+		}
+		@if map-get($config, selector-type) == flex or map-get($config, selector-type) == chain {
 			$selectors: join($selectors, '[class*="#{$component}-"]');
-		} @else if map-get($config, selector-type) == chain {
-			$selectors: join($selectors, '[class*="#{$component}-"]');
-		} @else if map-get($config, selector-type) == static {
-			$selectors: join($selectors, '.#{$component}');
 		}
 	}
 	$selectors: to-string($selectors, ", ");
@@ -343,6 +344,18 @@ $type: flex;
 					}
 				}
 			}
+		}
+	}
+	@if type-of($context) == map {
+		$selectors: ();
+		@each $query in $context {
+			$media-feature: nth($query, 1);
+			$value: nth($query, 2);
+			$selectors: join($selectors, "(#{$media-feature}: #{$value})");
+		}
+		$selectors: to-string($selectors, " and ");
+		@media #{$selectors} {
+			@content;
 		}
 	}
 }
@@ -358,8 +371,6 @@ $type: flex;
 //		$billboard: config((
 //			full-screen : false
 //		), $config);
-//		
-//		$config: $billboard !global;
 //
 //		@include component(billboard) {
 //			@include setting(full-screen) {
@@ -378,16 +389,16 @@ $extend-settings: true;
 
 @mixin setting($setting) {
 	$setting: $setting !global;
-	@at-root %#{$component}-#{$setting} {	
+	$enabled: if(
+		(type-of(map-get($config, $setting)) == bool and map-get($config, $setting) != false) or
+		(type-of(map-get($config, $setting)) == map and map-get(map-get($config, $setting), default) != false),
+		true, false
+	);
+	@if $enabled {
+		@include extend($setting);
+	}
+	@include modifier($setting) {	
 		@content;
-	}
-	@if map-get($config, $setting) != false {
-		@extend %#{$component}-#{$setting};
-	}
-	@if map-get($config, extend-settings) {
-		@include nested-modifier($setting) {	
-			@extend %#{$component}-#{$setting};
-		}
 	}
 }
 
@@ -402,8 +413,6 @@ $extend-settings: true;
 //		$header: config((
 //			side : false
 //		), $config);
-//		
-//		$config: $header !global;
 //
 //		@include component(header) {
 //			@include setting(side) {
@@ -423,22 +432,45 @@ $extend-settings: true;
 //	));
 
 @mixin option($option) {
-	@at-root %#{$component}-#{$option} {	
+	@include nested-modifier($option) {	
 		@content;
 	}
 	@if map-get($config, $setting) == $option {
-		@extend %#{$component}-#{$option};
-	}
-	@if map-get($config, extend-settings) {
-		@include modifier($option) {
-			@extend %#{$component}-#{$option};
-		}
+		@include extend($option);
 	}
 }
 
 //-----------------------------------------------------------------
 // Advanced Functions
 //-----------------------------------------------------------------
+
+// Module configuration
+//-----------------------------------------------------------------
+
+$config-JSON: ();
+
+@function config($map-old, $map-new) {
+	
+	$map-old: map-merge((
+		selector-type   : $type,
+		extend-settings : $extend-settings,
+	), $map-old);
+	
+	$map-old: map-merge-deep($map-old, $map-new);
+	
+	// Store merged map in a variable
+	$config: $map-old !global;
+	
+	// Output options to JSON
+	$config-JSON: map-merge-deep(
+		(map-get($map-old, name): ($map-old)), 
+		$config-JSON
+	) !global;
+	
+	// Return merged map
+	@return $map-old;
+	
+} // config()
 
 // To String
 // http://hugogiraudel.com/2013/08/08/advanced-sass-list-functions/
@@ -453,7 +485,10 @@ $extend-settings: true;
 			$result: $result#{to-string($e, $glue, true)};
 		}  
 		@else {
-			$result: if($i != length($list) or $is-nested, $result#{$e}#{$glue}, $result#{$e});
+			$result: if(
+				$i != length($list) or $is-nested, 
+				$result#{$e}#{$glue}, $result#{$e}
+			);
 		}
 	}
 	@return $result;
@@ -513,17 +548,10 @@ $extend-settings: true;
 
 // Map Deep Merge
 // http://git.io/vmBVH
-// Customized for use with Modular
 //-----------------------------------------------------------------
 
-@function config($map-old, $map-new, $overwrite: true, $nested: false) {
-	// Custom code to set default keys for a component
-	@if not $nested {
-		$map-old: map-merge((
-			selector-type   : $type,
-			extend-settings : $extend-settings
-		), $map-old);
-	}
+@function map-merge-deep($map-old, $map-new, $overwrite: true) {
+
 	// Iterate through each value of the new map
 	@each $key, $new-value in $map-new {
 		// Check if that value already exists on the old map
@@ -532,7 +560,7 @@ $extend-settings: true;
 			$old-value: map-get($map-old, $key);
 			@if type-of($new-value) == map and type-of($old-value) == map {
 				// If both are maps, recurse regardless of $overwrite
-				$merged-value: config($old-value, $new-value, $nested: true);
+				$merged-value: map-merge-deep($old-value, $new-value);
 				$map-old: map-set($map-old, $key, $merged-value);	
 			} @else {
 				// Otherwise check $overwrite
@@ -545,8 +573,22 @@ $extend-settings: true;
 			$map-old: map-set($map-old, $key, $new-value);
 		}
 	}
-	// Store merged map in a variable
-	$config: $map-old !global;
-	// Return merged map
 	@return $map-old;
+	
+}
+
+// Map Deep Get
+// https://css-tricks.com/snippets/sass/deep-getset-maps/
+//-----------------------------------------------------------------
+
+@function option($map, $keys...) {
+    @each $key in $keys {
+        $map: map-get($map, $key);
+    }
+    @return $map;
+}
+
+// Alias for settings
+@function setting($map, $keys...) {
+    @return option($map, $keys...);
 }
