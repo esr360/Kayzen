@@ -15,7 +15,7 @@
   // Regular property value pair
   @if $flag == "pseudo" {
     // All browsers except IE8-
-    #config-JSON::before {
+    #stylesConfigJSON::before {
       // This element must be in the render tree to get it via getComputedStyle(document.body, ':before');
       content: json-encode($value);
       display: block;

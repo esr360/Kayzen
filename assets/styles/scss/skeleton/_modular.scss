@@ -39,9 +39,8 @@ http://github.com/esr360/Modular/
 $type: flex;
 
 $component: null;
-@mixin component($components, $type: map-get($config, selector-type)) {
+@mixin component($components: map-get($config, name), $type: map-get($config, selector-type)) {
 	$component: $components !global;
-	$component-selector: & !global;
 	$selectors: ();
 	@each $component in $components {
 		@if $type == flex or $type == static {

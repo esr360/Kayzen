@@ -1,62 +1,89 @@
-// Get Sass modules configuration
-var configJSON = document.getElementById("config-JSON");
+/*-----------------------------------------------------------------
+
+Modular - JS Extension
+Made by @esr360
+http://github.com/esr360/Modular/
+	
+-----------------------------------------------------------------*/
+
+//-----------------------------------------------------------------
+// Convert CSS config to JS
+//-----------------------------------------------------------------
+
+// Get styles' configuration
+var stylesConfigJSON = document.getElementById("stylesConfigJSON");
 
 // Remove quotes from computed JSON
-function removeQuotes(string) {
-    if (typeof string === 'string' || string instanceof String) {
-        string = string.replace(/^['"]+|\s+|\\|(;\s?})+|['"]$/g, '');
-    }
-    return string;
+function removeQuotes(json) {
+    json = json.replace(/^['"]+|\s+|\\|(;\s?})+|['"]$/g, '');
+    return json;
+}
+
+// Convert computed JSON to camelCase
+function camelCase(json) {
+	json = json.replace(/-([a-z])/g, function (g) { 
+		return g[1].toUpperCase(); 
+	});
+	return json;
 }
 
 // Convert the config to JS
-function getConfig() {
+function getStylesConfig(camelCase) {
     var style = null;
-    if ( window.getComputedStyle && window.getComputedStyle(configJSON, '::before') ) {
-        style = window.getComputedStyle(configJSON, '::before');
-        style = style.content;
-    } else {
-        window.getComputedStyle = function(el) {
-            this.el = el;
-            this.getPropertyValue = function(prop) {
-                var re = /(\-([a-z]){1})/g;
-                if (re.test(prop)) {
-                    prop = prop.replace(re, function () {
-                        return arguments[2].toUpperCase();
-                    });
-                }
-                return el.currentStyle[prop] ? el.currentStyle[prop] : null;
-            };
-            return this;
-        };
-        style = window.getComputedStyle(document.getElementsByTagName('head')[0]);
-        style = style.getPropertyValue('font-family');
-    }
-    return JSON.parse( removeQuotes(style) );
+    style = window.getComputedStyle(stylesConfigJSON, '::before');
+    style = style.content;
+	style = removeQuotes(style);
+	if(camelCase) {
+		style = camelCase(style);
+	}
+    return JSON.parse(style);
 }
 
-// Store configuartion data in variable
-var config = getConfig();
+// Store configuartion data in a variable
+var module = getStylesConfig(camelCase);
 
-// Loop through each object
+// Store the raw data in a variable (no camelCase)
+var moduleRaw = getStylesConfig();
 
-$.each(config, function(theme, module) {
-	$.each(module, function(setting, value) {
-		if (setting == "name") {
-			// Create globally scoped selector
-			window[value] = '.' + value + ', [class*="' + value + '-"]';
-		}
-	});
+// Create a global variable to select each main component in the DOM
+var componentIndex = 0;
+$.each(module, function(component) {
+	var componentRaw = moduleRaw[Object.keys(moduleRaw)[componentIndex]]['name'];
+	window[component] = '.' + componentRaw + ', [class*="' + componentRaw + '-"]';
+	componentIndex++;
 });
 
-function moduleConfig(sassModule, moduleSetting) {
-	$.each(config, function(theme, module) {
-		$.each(module, function(setting, value) {
-			if ((setting == "name") && (value == sassModule)) {
-				return value;
-			}
-  		});
-	});
+//-----------------------------------------------------------------
+// Functions
+//-----------------------------------------------------------------
+
+//	1. setting()
+//	2. breakpoint()
+
+//-----------------------------------------------------------------
+
+// 1. Setting
+//-----------------------------------------------------------------
+
+//	Usage
+//
+//	if(setting(navigation, 'sticky')) {
+//		...
+//	}
+
+function setting(component, setting) {
+	return $(component).is('[class*="-' + setting + '"]') == true || module.component[setting]['default'] == true;
 }
 
-console.log(moduleConfig("header", 'selector-type'));
+// 2. Breakpoint
+//-----------------------------------------------------------------
+
+//	Usage
+//
+//	if(breakpoint('min-width', 'break-3')) {
+//		...
+//	}
+
+function breakpoint(media, value) {
+	return window.matchMedia('(' + media + ':' + module['grid']['breakpoints'][value] + ')').matches;
+}

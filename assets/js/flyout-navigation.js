@@ -16,7 +16,7 @@ $(document).ready(function() {
 
     $(flyoutNav);
 
-}); // end document.ready
+}); // document.ready
 
 $(window).load(function(){
 

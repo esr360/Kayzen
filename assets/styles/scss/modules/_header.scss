@@ -9,7 +9,7 @@
 	//-------------------------------------------------------------
 
 	$header: config((
-		name                 : header,
+		name                 : app-header,
 		// Options
 		bg                   : base(background),
 		height               : 100px,
@@ -40,7 +40,7 @@
 	// Component
 	//-------------------------------------------------------------
 
-	@include component(app-header) {
+	@include component {
 
 	// Core Styles
 	//-------------------------------------------------------------
