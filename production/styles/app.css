@@ -1,18 +1,24 @@
 @charset "UTF-8";
 /******************************************************************
 
-Kayzen UIX
+Kayzen
 Made by @esr360
-http://github.com/esr360/Kayzen-UIX/
 
 ******************************************************************/
+/*-----------------------------------------------------------------
+
+Modular
+Made by @esr360
+http://github.com/esr360/Modular/
+	
+-----------------------------------------------------------------*/
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
 /**
  * 1. Set default font family to sans-serif.
  * 2. Prevent iOS text size adjust after orientation change, without disabling
  *    user zoom.
  */
-@import url(../../icons/font-awesome/css/font-awesome.min.css);
+@import url(../../../icons/font-awesome/css/font-awesome.min.css);
 @import url(http://fonts.googleapis.com/css?family=Lato:300,400,700,900);
 @import url(http://fonts.googleapis.com/css?family=Raleway:300,700,900);
 html {
@@ -404,13 +410,6 @@ th {
   padding: 0;
 }
 
-/*-----------------------------------------------------------------
-
-Modular
-Made by @esr360
-http://github.com/esr360/Modular/
-	
------------------------------------------------------------------*/
 @-webkit-keyframes spin {
   0% {
     -webkit-transform: rotate(0deg);
@@ -421,6 +420,7 @@ http://github.com/esr360/Modular/
             transform: rotate(360deg);
   }
 }
+
 @keyframes spin {
   0% {
     -webkit-transform: rotate(0deg);
