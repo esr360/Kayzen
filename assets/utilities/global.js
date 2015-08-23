@@ -40,82 +40,6 @@ if(breakpoint('min-width', 'break-3')) {
 }
 
 //-----------------------------------------------------------------
-// Sticky Header
-//-----------------------------------------------------------------
-
-if (setting(appHeader, 'sticky'))  {
-	
-	var stickyOffset = $(appHeader).offset().top,
-		navDropdown  = $(navigation).find("> ul > li > a:not(:only-child)").parent();
-	
-	function stickHeader() {
-		$(appHeader).addClass('fixed');
-		navDropdown.hover(
-			function(){ 
-				$("#site-overlay").addClass('visible');
-			},
-			function(){ 
-				$("#site-overlay").removeClass('visible');
-			}
-		)
-	}
-	
-	function unStickHeader() {
-		$(appHeader).removeClass('fixed');
-		navDropdown.unbind('mouseenter mouseleave');
-		$("#site-overlay").removeClass('visible');
-	}
-	
-	$(window).on("load scroll", function(e) {
-		var scroll = $(window).scrollTop();
-		if (scroll > stickyOffset) {
-			stickHeader();
-		} else {
-			unStickHeader();
-		}
-	});
-
-}
-
-//-----------------------------------------------------------------
-// Scroll to Top
-//-----------------------------------------------------------------
-
-$(window).bind("scroll", function() {
-    if ($(this).scrollTop() > 350) {
-        $(".scroll-top").addClass('active');
-    } else {
-        $(".scroll-top").stop().removeClass('active');
-    }
-});
-
-//-----------------------------------------------------------------
-// Modals
-//-----------------------------------------------------------------
-
-$("[rel*='modal']").leanModal({ 
-    closeButton: ".modal-close" 
-});
-
-//-----------------------------------------------------------------
-// Progress Bars
-//-----------------------------------------------------------------
-
-$(".progress").each(function() {
-    attrProgress = $(this).attr('data-progress');
-    $(this).css({ width : attrProgress }); 
-});
-
-//-----------------------------------------------------------------
-// Tooltips
-//-----------------------------------------------------------------
-
-$("[data-tooltip]").tooltip({
-	position : "left",
-	color    : "light"
-});
-
-//-----------------------------------------------------------------
 // Animated Numbers
 //-----------------------------------------------------------------
 
@@ -225,4 +149,4 @@ $("#shortcodes .slide-prev").click(function() {
     shortcodesCarousel.trigger('prev.owl.carousel');
 });
 
-}); // end document.ready
+}); // document.ready
