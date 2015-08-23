@@ -6,7 +6,7 @@ Made by @esr360
 ******************************************************************/
 
 // Asset Path
-$asset-path : "";
+$asset-path : "../../assets";
 
 // Output configuration data to JSON
 $to-JSON    : true;
@@ -76,9 +76,9 @@ $to-JSON    : true;
 
 $theme: Kayzen;
 
-@import "themes/default";
-@import "themes/kayzen";
-@import "themes/sandbox";
+@import "themes/default/default";
+@import "themes/Kayzen/kayzen";
+@import "themes/sandbox/sandbox";
 
 // Output all configuration data to JSON only if setting exists 
 // and setting is "true"

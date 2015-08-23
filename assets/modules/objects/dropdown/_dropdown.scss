@@ -27,7 +27,7 @@
 	// Component
 	//-------------------------------------------------------------
 	
-	@include component {
+	@include component(navigation) {
 
 		// parent list
 		ul {
