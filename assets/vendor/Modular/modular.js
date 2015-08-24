@@ -58,7 +58,6 @@ $.each(module, function(component) {
 //-----------------------------------------------------------------
 
 //	1. setting()
-//	2. breakpoint()
 
 //-----------------------------------------------------------------
 
@@ -73,17 +72,4 @@ $.each(module, function(component) {
 
 function setting(component, setting) {
 	return $(component).is('[class*="-' + setting + '"]') == true || module.component[setting]['default'] == true;
-}
-
-// 2. Breakpoint
-//-----------------------------------------------------------------
-
-//	Usage
-//
-//	if(breakpoint('min-width', 'break-3')) {
-//		...
-//	}
-
-function breakpoint(media, value) {
-	return window.matchMedia('(' + media + ':' + module['grid']['breakpoints'][value] + ')').matches;
 }

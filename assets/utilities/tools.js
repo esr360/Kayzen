@@ -1,6 +1,20 @@
+//=================================================================
+// Tools
+//=================================================================
 
-/* Tools
-================================================================ */
+//-----------------------------------------------------------------
+// Styles Configuration
+//-----------------------------------------------------------------
+
+// Get breakpoint value
+function breakpoint(media, value) {
+	return window.matchMedia('(' + media + ':' + module['grid']['breakpoints'][value] + ')').matches;
+}
+
+// Create a global variable for base transition duration
+window['baseTransition'] = module['base']['transition'].slice(0,-1) * 1000;
+
+//-----------------------------------------------------------------
 
 $(document).ready(function() {
 

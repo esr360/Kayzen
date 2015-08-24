@@ -9,20 +9,39 @@
 	//-------------------------------------------------------------
 
 	$accordions: config((
-		name            : accordion
+		name                : accordion,
+		// icon (open/close)
+		icon                : "\f138",
+		icon-color          : color(greyscale, grey-3),
+		icon-opacity        : 0.4,
+		icon-active-color   : color(greyscale, white),
+		// title (clickable part)
+		title-bg            : transparent,
+		title-color         : typograhy(colors, base),
+		title-border        : 1px solid rgba(black, 0.15),
+		title-padding       : 1em,
+		// title.active
+		title-active-bg     : color(brand, primary),
+		title-active-color  : color(greyscale, white),
+		title-active-border : color(brand, primary),
+		// content
+		content-bg          : color(greyscale, white),
+		content-color       : typograhy(colors, base),
+		content-border      : 1px solid rgba(black, 0.15),
+		content-padding     : 1.5em
 	), $custom);
 	
 	//-------------------------------------------------------------
 	// Component
 	//-------------------------------------------------------------
 	
-	@include component(accordion) {
+	@include component {
 
 	// Core Styles
 	//-------------------------------------------------------------
 	
 		margin-bottom: base(margin);
-		border-bottom: 1px solid rgba(0,0,0,0.15);
+		border-bottom: map-get($config, content-border);
 		@include vertical-rhythm(bottom);
 
 		> * { // each individual section
@@ -33,32 +52,32 @@
 				display: block;
 				padding: 1em;
 				margin: 0;
-				border: 1px solid rgba(0,0,0,0.15);
+				border: map-get($config, title-border);
 				border-bottom: none;
 				cursor: pointer;
 				font-weight: normal;	
 				line-height: 1;		
-				transition: 0.4s;
+				transition: base(transition);
 	  			backface-visibility: hidden;
-				&:after {
-					content: "\f138";
+				&:after { // open/close icon
+					content: map-get($config, icon);
 					font-family: FontAwesome;
-					opacity: 0.4;
+					opacity: map-get($config, icon-opacity);
 					float: right;
-					color: color(greyscale, grey-3);
-					transition: 0.4s;
+					color: map-get($config, icon-color);
+					transition: base(transition);
 				}
 			}	
 
 			> *:last-child { // content part
 				display: none;
-				border: 1px solid rgba(0,0,0,0.15);
+				border: map-get($config, content-border);
 				border-bottom: none;
-				padding: 1.5em;
+				padding: map-get($config, content-padding);
 				margin: 0;
 				margin-top: -1px;	
 				font-weight: lighter;
-				background: color(greyscale, white);
+				background: map-get($config, content-bg);
 				&.active {
 					display: block;
 				}				
@@ -67,22 +86,19 @@
 			&:hover, 
 			&.active {
 				> *:first-child { // clickable part
-					background: color(brand, primary);
-					color: color(greyscale, white);
-					&:after {
+					background: map-get($config, title-active-bg);
+					color: map-get($config, title-active-color);
+					&:after { // open/close icon
 						opacity: 1;
-						color: color(greyscale, white);
+						color: map-get($config, icon-active-color);
 					}
 				}
 			}
 
 			&.active {
 				> *:first-child { // clickable part
-					background: color(brand, primary);
-					border-color: color(brand, primary);
-					color: color(greyscale, white);
-					&:after {
-						color: color(greyscale, white);				
+					border-color: map-get($config, title-active-border);
+					&:after { // open/close icon		
 						transform: rotate(90deg) translateZ(0);
 					}
 				}

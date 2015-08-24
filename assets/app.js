@@ -17,8 +17,8 @@ Made by @esr360
 //-----------------------------------------------------------------
 
 //@prepros-append utilities/adaptive-columns.js
-//@prepros-append utilities/tools.js
 //@prepros-append vendor/Modular/modular.js
+//@prepros-append utilities/tools.js
 
 //-----------------------------------------------------------------
 // Elements
