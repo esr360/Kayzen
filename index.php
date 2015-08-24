@@ -15,16 +15,16 @@
     <meta name="MobileOptimized" content="320">
 
     <!-- Icons -->
-    <link rel="apple-touch-icon" href="assets/images/apple-icon-touch.png">
-    <link rel="icon" href="assets/images/favicon.png">
-    <!--[if IE]><link rel="shortcut icon" href="assets/images/favicon.ico"><![endif]-->
+    <link rel="apple-touch-icon" href="app/images/apple-icon-touch.png">
+    <link rel="icon" href="app/images/favicon.png">
+    <!--[if IE]><link rel="shortcut icon" href="app/images/favicon.ico"><![endif]-->
 
     <!-- Stylesheet -->
-    <link rel="stylesheet" href="production/styles/app.css">
+    <link rel="stylesheet" href="app/compiled/styles/app.css">
 	
     <!-- Modernizr -->
     <!--<script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>-->
-    <script src="assets/vendor/Modernizr/modernizr.min.js"></script>
+    <script src="app/vendor/Modernizr/modernizr.min.js"></script>
 	
 </head>
 
@@ -42,7 +42,7 @@
 
                     <!-- Logo -->
                     <div class="logo">
-                        <a href="/"><img src="assets/images/logo-white.png" alt="logo"/ ></a>
+                        <a href="/"><img src="app/images/logo-white.png" alt="logo"/ ></a>
                     </div>
 
                     <!-- Navigation -->
@@ -262,19 +262,19 @@
 				<!-- Showcase Thumbnails -->
                 <section class="carousel-scale-3-greyscale-stage-bg owl-carousel" id="showcase-thumbnails">
                     <div class="showcase-thumbnail">
-                        <img src="assets/images/stock-1-thumb.jpg">
+                        <img src="app/images/stock-1-thumb.jpg">
                     </div>
                     <div class="showcase-thumbnail">
-                        <img src="assets/images/stock-2-thumb.jpg">
+                        <img src="app/images/stock-2-thumb.jpg">
                     </div>
                     <div class="showcase-thumbnail">
-                        <img src="assets/images/stock-4-thumb.jpg">
+                        <img src="app/images/stock-4-thumb.jpg">
                     </div>
                     <div class="showcase-thumbnail">
-                        <img src="assets/images/stock-5-thumb.jpg">
+                        <img src="app/images/stock-5-thumb.jpg">
                     </div>
                     <div class="showcase-thumbnail">
-                        <img src="assets/images/stock-3-thumb.jpg">
+                        <img src="app/images/stock-3-thumb.jpg">
                     </div>
                 </section> 
 				
@@ -292,11 +292,11 @@
 					<!-- Showcase Slide 1 -->
                     <div class="row-block">
                         <div class="section_block span-6 text-center va-middle" style="background-color: #262626;">
-                            <div class="bg-img-scale-rotate" style="background-image: url('assets/images/stock-1-bg.jpg')"></div>
+                            <div class="bg-img-scale-rotate" style="background-image: url('app/images/stock-1-bg.jpg')"></div>
                             <div class="block-content span-9">
                                 <div class="desktop-graphic-scroll">
-                                    <img src="assets/images/demo-screen.png" alt=""/ >
-                                    <div style="background-image: url('assets/images/stock-1.jpg')"></div>
+                                    <img src="app/images/demo-screen.png" alt=""/ >
+                                    <div style="background-image: url('app/images/stock-1.jpg')"></div>
                                 </div>
                             </div>
                         </div>
@@ -324,11 +324,11 @@
 					<!-- Showcase Slide 2 -->
                     <div class="row-block">
                         <div class="section_block span-6 text-center va-middle" style="background-color: #262626;">
-                            <div class="bg-img-scale-rotate" style="background-image: url('assets/images/stock-2-bg.jpg')"></div>
+                            <div class="bg-img-scale-rotate" style="background-image: url('app/images/stock-2-bg.jpg')"></div>
                             <div class="block-content span-9">
                                 <div class="desktop-graphic-scroll">
-                                    <img src="assets/images/demo-screen.png" alt=""/ >
-                                    <div style="background-image: url('assets/images/stock-2.jpg')"></div>
+                                    <img src="app/images/demo-screen.png" alt=""/ >
+                                    <div style="background-image: url('app/images/stock-2.jpg')"></div>
                                 </div>
                             </div>
                         </div>
@@ -356,11 +356,11 @@
 					<!-- Showcase Slide 3 -->
                     <div class="row-block">
                         <div class="section_block span-6 text-center va-middle" style="background-color: #262626;">
-                            <div class="bg-img-scale-rotate" style="background-image: url('assets/images/stock-4-bg.jpg')"></div>
+                            <div class="bg-img-scale-rotate" style="background-image: url('app/images/stock-4-bg.jpg')"></div>
                             <div class="block-content span-9">
                                 <div class="desktop-graphic-scroll">
-                                    <img src="assets/images/demo-screen.png" alt=""/ >
-                                    <div style="background-image: url('assets/images/stock-4.jpg')"></div>
+                                    <img src="app/images/demo-screen.png" alt=""/ >
+                                    <div style="background-image: url('app/images/stock-4.jpg')"></div>
                                 </div>
                             </div>
                         </div>
@@ -388,11 +388,11 @@
 					<!-- Showcase Slide 4 -->
                     <div class="row-block">
                         <div class="section_block span-6 text-center va-middle" style="background-color: #262626;">
-                            <div class="bg-img-scale-rotate" style="background-image: url('assets/images/spotlight-1.png')"></div>
+                            <div class="bg-img-scale-rotate" style="background-image: url('app/images/spotlight-1.png')"></div>
                             <div class="block-content span-9">
                                 <div class="desktop-graphic-scroll">
-                                    <img src="assets/images/demo-screen.png" alt=""/ >
-                                    <div style="background-image: url('assets/images/stock-5.jpg')"></div>
+                                    <img src="app/images/demo-screen.png" alt=""/ >
+                                    <div style="background-image: url('app/images/stock-5.jpg')"></div>
                                 </div>
                             </div>
                         </div>
@@ -420,11 +420,11 @@
 					<!-- Showcase Slide 5 -->
                     <div class="row-block">
                         <div class="section_block span-6 text-center va-middle">
-                            <div class="bg-img-scale-rotate" style="background-image: url('assets/images/stock-3-bg.png')"></div>
+                            <div class="bg-img-scale-rotate" style="background-image: url('app/images/stock-3-bg.png')"></div>
                             <div class="block-content span-9">
                                 <div class="desktop-graphic-scroll">
-                                    <img src="assets/images/demo-screen.png" alt=""/ >
-                                    <div style="background-image: url('assets/images/stock-3.jpg')"></div>
+                                    <img src="app/images/demo-screen.png" alt=""/ >
+                                    <div style="background-image: url('app/images/stock-3.jpg')"></div>
                                 </div>
                             </div>
                         </div>
@@ -454,7 +454,7 @@
             </section><!-- Showcase -->
 
 			<!-- Promo Banner -->
-            <section class="section-secondary-overlay" style="background-image: url('assets/images/billboard-1.jpg')">
+            <section class="section-secondary-overlay" style="background-image: url('app/images/billboard-1.jpg')">
                 <div class="container">
                     <div class="row text-center">
                         <div class="span-8">
@@ -545,7 +545,7 @@
             </section><!-- Key Features -->
 
 			<!-- Info Banner -->
-            <section class="section-primary" style="background-image: url('assets/images/billboard-2.jpg')">
+            <section class="section-primary" style="background-image: url('app/images/billboard-2.jpg')">
                 <div class="container">
                     <div class="row">
                         <div class="span-6 info-video">
@@ -631,9 +631,9 @@
 						<!-- Responsive Graphics -->
                         <div class="span-6 va-middle text-center">
                             <div class="mobile-graphics span-6">
-                                <img class="mobile-graphic-white-left" src="assets/images/mobile-screen.png" alt=""/ >
-                                <img class="mobile-graphic-blue-right" src="assets/images/mobile-screen.png" alt=""/ >
-                                <img class="mobile-graphic-purple-center" src="assets/images/mobile-screen.png" alt=""/ >
+                                <img class="mobile-graphic-white-left" src="app/images/mobile-screen.png" alt=""/ >
+                                <img class="mobile-graphic-blue-right" src="app/images/mobile-screen.png" alt=""/ >
+                                <img class="mobile-graphic-purple-center" src="app/images/mobile-screen.png" alt=""/ >
                             </div>
                         </div>
 						
@@ -721,8 +721,8 @@
                         <div class="span-6 va-middle text-center">
                             <div class="span-10">
                                 <div class="desktop-graphic-scroll">
-                                    <img src="assets/images/demo-screen.png" alt=""/ >
-                                    <div style="background-image: url('assets/images/stock-1.jpg')"></div>
+                                    <img src="app/images/demo-screen.png" alt=""/ >
+                                    <div style="background-image: url('app/images/stock-1.jpg')"></div>
                                 </div>
                             </div>
                         </div>
@@ -757,7 +757,7 @@
             </section><!-- Options -->
 
 			<!-- Promo Banner -->
-            <section class="section-primary" style="background-image: url('assets/images/billboard-2.jpg')">
+            <section class="section-primary" style="background-image: url('app/images/billboard-2.jpg')">
                 <div class="container">
                     <div class="row text-center">
                         <div class="span-8">
@@ -795,48 +795,48 @@
 					<!-- Layouts Row 1 -->
                     <div class="widget_group-large row-magic">
                         <div class="span">
-                            <img src="assets/images/layouts/layout-header-top.png" alt=""/ >
+                            <img src="app/images/layouts/layout-header-top.png" alt=""/ >
                         </div>
                         <div class="span">
-                            <img src="assets/images/layouts/layout-header-alt-topbar.png" alt=""/ >
+                            <img src="app/images/layouts/layout-header-alt-topbar.png" alt=""/ >
                         </div>
                         <div class="span">
-                            <img src="assets/images/layouts/layout-right-sidebar.png" alt=""/ >
+                            <img src="app/images/layouts/layout-right-sidebar.png" alt=""/ >
                         </div>
                         <div class="span">
-                            <img src="assets/images/layouts/layout-left-header.png" alt=""/ >
+                            <img src="app/images/layouts/layout-left-header.png" alt=""/ >
                         </div>
                     </div>
 					
 					<!-- Layouts Row 2 -->
                     <div class="widget_group-large row-magic">
                         <div class="span">
-                            <img src="assets/images/layouts/layout-right-header-topbar.png" alt=""/ >
+                            <img src="app/images/layouts/layout-right-header-topbar.png" alt=""/ >
                         </div>
                         <div class="span">
-                            <img src="assets/images/layouts/layout-topbar.png" alt=""/ >
+                            <img src="app/images/layouts/layout-topbar.png" alt=""/ >
                         </div>
                         <div class="span">
-                            <img src="assets/images/layouts/layout-header-alt.png" alt=""/ >
+                            <img src="app/images/layouts/layout-header-alt.png" alt=""/ >
                         </div>
                         <div class="span">
-                            <img src="assets/images/layouts/layout-header-no-bar-topbar.png" alt=""/ >
+                            <img src="app/images/layouts/layout-header-no-bar-topbar.png" alt=""/ >
                         </div>
                     </div>
 					
 					<!-- Layouts Row 3 -->
                     <div class="widget_group-large row-magic">
                         <div class="span">
-                            <img src="assets/images/layouts/layout-left-sidebar.png" alt=""/ >
+                            <img src="app/images/layouts/layout-left-sidebar.png" alt=""/ >
                         </div>
                         <div class="span">
-                            <img src="assets/images/layouts/layout-right-header.png" alt=""/ >
+                            <img src="app/images/layouts/layout-right-header.png" alt=""/ >
                         </div>
                         <div class="span">
-                            <img src="assets/images/layouts/layout-menu-alt.png" alt=""/ >
+                            <img src="app/images/layouts/layout-menu-alt.png" alt=""/ >
                         </div>
                         <div class="span">
-                            <img src="assets/images/layouts/layout-left-header-topbar.png" alt=""/ >
+                            <img src="app/images/layouts/layout-left-header-topbar.png" alt=""/ >
                         </div>
                     </div>
 					
@@ -913,20 +913,20 @@
 					<!-- Shortcodes Graphics -->
                     <div class="carousel-scale-2 owl-carousel" id="shortcodes-carousel">
                         <div class="desktop-graphic-scroll">
-                            <img src="assets/images/demo-screen.png" alt=""/ >
-                            <div style="background-image: url('assets/images/stock-1.jpg')"></div>
+                            <img src="app/images/demo-screen.png" alt=""/ >
+                            <div style="background-image: url('app/images/stock-1.jpg')"></div>
                         </div>
                         <div class="desktop-graphic-scroll">
-                            <img src="assets/images/demo-screen.png" alt=""/ >
-                            <div style="background-image: url('assets/images/stock-2.jpg')"></div>
+                            <img src="app/images/demo-screen.png" alt=""/ >
+                            <div style="background-image: url('app/images/stock-2.jpg')"></div>
                         </div>
                         <div class="desktop-graphic-scroll">
-                            <img src="assets/images/demo-screen.png" alt=""/ >
-                            <div style="background-image: url('assets/images/stock-3.jpg')"></div>
+                            <img src="app/images/demo-screen.png" alt=""/ >
+                            <div style="background-image: url('app/images/stock-3.jpg')"></div>
                         </div>
                         <div class="desktop-graphic-scroll">
-                            <img src="assets/images/demo-screen.png" alt=""/ >
-                            <div style="background-image: url('assets/images/stock-4.jpg')"></div>
+                            <img src="app/images/demo-screen.png" alt=""/ >
+                            <div style="background-image: url('app/images/stock-4.jpg')"></div>
                         </div>
                     </div>
 					
@@ -941,7 +941,7 @@
 			</section><!-- Shortcodes -->
 
 			<!-- Promo Banner -->
-            <section class="section-secondary-overlay-alt" style="background-image: url('assets/images/billboard-1.jpg')">
+            <section class="section-secondary-overlay-alt" style="background-image: url('app/images/billboard-1.jpg')">
                 <div class="container">
                     <div class="row">
                         <div class="span-6 info-video">
@@ -1207,13 +1207,13 @@
 
     <!-- jQuery -->
     <!--<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>-->
-    <script src="assets/vendor/jQuery/jquery.min.js"></script>
+    <script src="app/vendor/jQuery/jquery.min.js"></script>
 
     <!-- Google Map -->
     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
 	
 	<!-- App -->
-	<script type="text/javascript" src="production/scripts/app.js"></script>
+	<script type="text/javascript" src="app/compiled/scripts/app.js"></script>
 
 </body>
 </html>

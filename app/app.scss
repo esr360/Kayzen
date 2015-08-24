@@ -6,7 +6,7 @@ Made by @esr360
 ******************************************************************/
 
 // Asset Path
-$asset-path : "../../assets";
+$asset-path : "../../";
 
 // Output configuration data to JSON
 $to-JSON    : true;
@@ -28,6 +28,7 @@ $to-JSON    : true;
 @import "utilities/base";
 @import "utilities/helpers";
 @import "utilities/print";
+@import "sections/sections";
 
 //-----------------------------------------------------------------
 // Elements
@@ -51,7 +52,6 @@ $to-JSON    : true;
 @import "modules/elements/tooltips/tooltips";
 @import "modules/elements/wells/wells";
 @import "modules/elements/widgets/widgets";
-@import "modules/elements/sections/sections";
 
 //-----------------------------------------------------------------
 // Objects
