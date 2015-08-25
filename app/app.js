@@ -13,12 +13,12 @@ Made by @esr360
 //@prepros-append plugins/scroll-reveal.js
 
 //-----------------------------------------------------------------
-// Utilities
+// Includes
 //-----------------------------------------------------------------
 
-//@prepros-append utilities/adaptive-columns.js
 //@prepros-append vendor/Modular/modular.js
-//@prepros-append utilities/tools.js
+//@prepros-append includes/adaptive-columns.js
+//@prepros-append includes/tools.js
 
 //-----------------------------------------------------------------
 // Elements

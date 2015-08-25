@@ -18,16 +18,16 @@ $to-JSON    : true;
 // Vendor Files
 @import "vendor/SassyJSON/SassyJSON";
 @import "vendor/Modular/modular";
+@import "vendor/Normalize/normalize";
 
 // Theme files
-@import "utilities/normalize";
-@import "utilities/tools";
-@import "utilities/grid";
-@import "utilities/color-palettes";
-@import "utilities/typography";
-@import "utilities/base";
-@import "utilities/helpers";
-@import "utilities/print";
+@import "includes/tools";
+@import "includes/grid";
+@import "includes/color-palettes";
+@import "includes/typography";
+@import "includes/base";
+@import "includes/helpers";
+@import "includes/print";
 @import "sections/sections";
 
 //-----------------------------------------------------------------
