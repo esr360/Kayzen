@@ -16,19 +16,19 @@
 	<!-- Showcase Thumbnails -->
 	<section class="carousel-scale-3-greyscale-stage-bg owl-carousel" id="showcase-thumbnails">
 		<div class="showcase-thumbnail">
-			<img src="app/images/stock-1-thumb.jpg">
+			<img src="<?php echo appDir ?>/images/stock-1-thumb.jpg">
 		</div>
 		<div class="showcase-thumbnail">
-			<img src="app/images/stock-2-thumb.jpg">
+			<img src="<?php echo appDir ?>/images/stock-2-thumb.jpg">
 		</div>
 		<div class="showcase-thumbnail">
-			<img src="app/images/stock-4-thumb.jpg">
+			<img src="<?php echo appDir ?>/images/stock-4-thumb.jpg">
 		</div>
 		<div class="showcase-thumbnail">
-			<img src="app/images/stock-5-thumb.jpg">
+			<img src="<?php echo appDir ?>/images/stock-5-thumb.jpg">
 		</div>
 		<div class="showcase-thumbnail">
-			<img src="app/images/stock-3-thumb.jpg">
+			<img src="<?php echo appDir ?>/images/stock-3-thumb.jpg">
 		</div>
 	</section> 
 	
@@ -46,11 +46,11 @@
 		<!-- Showcase Slide 1 -->
 		<div class="row-block">
 			<div class="section_block span-6 text-center va-middle" style="background-color: #262626;">
-				<div class="bg-img-scale-rotate" style="background-image: url('app/images/stock-1-bg.jpg')"></div>
+				<div class="bg-img-scale-rotate" style="background-image: url('<?php echo appDir ?>/images/stock-1-bg.jpg')"></div>
 				<div class="block-content span-9">
 					<div class="desktop-graphic-scroll">
-						<img src="app/images/demo-screen.png" alt=""/ >
-						<div style="background-image: url('app/images/stock-1.jpg')"></div>
+						<img src="<?php echo appDir ?>/images/demo-screen.png" alt=""/ >
+						<div style="background-image: url('<?php echo appDir ?>/images/stock-1.jpg')"></div>
 					</div>
 				</div>
 			</div>
@@ -78,11 +78,11 @@
 		<!-- Showcase Slide 2 -->
 		<div class="row-block">
 			<div class="section_block span-6 text-center va-middle" style="background-color: #262626;">
-				<div class="bg-img-scale-rotate" style="background-image: url('app/images/stock-2-bg.jpg')"></div>
+				<div class="bg-img-scale-rotate" style="background-image: url('<?php echo appDir ?>/images/stock-2-bg.jpg')"></div>
 				<div class="block-content span-9">
 					<div class="desktop-graphic-scroll">
-						<img src="app/images/demo-screen.png" alt=""/ >
-						<div style="background-image: url('app/images/stock-2.jpg')"></div>
+						<img src="<?php echo appDir ?>/images/demo-screen.png" alt=""/ >
+						<div style="background-image: url('<?php echo appDir ?>/images/stock-2.jpg')"></div>
 					</div>
 				</div>
 			</div>
@@ -110,11 +110,11 @@
 		<!-- Showcase Slide 3 -->
 		<div class="row-block">
 			<div class="section_block span-6 text-center va-middle" style="background-color: #262626;">
-				<div class="bg-img-scale-rotate" style="background-image: url('app/images/stock-4-bg.jpg')"></div>
+				<div class="bg-img-scale-rotate" style="background-image: url('<?php echo appDir ?>/images/stock-4-bg.jpg')"></div>
 				<div class="block-content span-9">
 					<div class="desktop-graphic-scroll">
-						<img src="app/images/demo-screen.png" alt=""/ >
-						<div style="background-image: url('app/images/stock-4.jpg')"></div>
+						<img src="<?php echo appDir ?>/images/demo-screen.png" alt=""/ >
+						<div style="background-image: url('<?php echo appDir ?>/images/stock-4.jpg')"></div>
 					</div>
 				</div>
 			</div>
@@ -142,11 +142,11 @@
 		<!-- Showcase Slide 4 -->
 		<div class="row-block">
 			<div class="section_block span-6 text-center va-middle" style="background-color: #262626;">
-				<div class="bg-img-scale-rotate" style="background-image: url('app/images/spotlight-1.png')"></div>
+				<div class="bg-img-scale-rotate" style="background-image: url('<?php echo appDir ?>/images/spotlight-1.png')"></div>
 				<div class="block-content span-9">
 					<div class="desktop-graphic-scroll">
-						<img src="app/images/demo-screen.png" alt=""/ >
-						<div style="background-image: url('app/images/stock-5.jpg')"></div>
+						<img src="<?php echo appDir ?>/images/demo-screen.png" alt=""/ >
+						<div style="background-image: url('<?php echo appDir ?>/images/stock-5.jpg')"></div>
 					</div>
 				</div>
 			</div>
@@ -174,11 +174,11 @@
 		<!-- Showcase Slide 5 -->
 		<div class="row-block">
 			<div class="section_block span-6 text-center va-middle">
-				<div class="bg-img-scale-rotate" style="background-image: url('app/images/stock-3-bg.png')"></div>
+				<div class="bg-img-scale-rotate" style="background-image: url('<?php echo appDir ?>/images/stock-3-bg.png')"></div>
 				<div class="block-content span-9">
 					<div class="desktop-graphic-scroll">
-						<img src="app/images/demo-screen.png" alt=""/ >
-						<div style="background-image: url('app/images/stock-3.jpg')"></div>
+						<img src="<?php echo appDir ?>/images/demo-screen.png" alt=""/ >
+						<div style="background-image: url('<?php echo appDir ?>/images/stock-3.jpg')"></div>
 					</div>
 				</div>
 			</div>

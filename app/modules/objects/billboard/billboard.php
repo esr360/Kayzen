@@ -1,5 +1,5 @@
 <!-- Billboard -->
-<?php if ($for == 'index') { ?>
+<?php if ($type == 'fullscreen') { ?>
 <section class="billboard-full-screen">
 	<div class="billboard_wrapper container">
 		<header class="heading_group">
@@ -22,7 +22,7 @@
 	<div class="billboard_wrapper container">
 		<header class="heading_group">
 			<h2 class="heading-uppercase-light-strikethrough-spaced-size-4"><span>Kayzen</span></h2>
-			<h3 class="heading-uppercase-heavy-size-8 font-2">UI Elements</h3>
+			<h3 class="heading-uppercase-heavy-size-8 font-2"><?php echo $title ?></h3>
 		</header>
 	</div>
 </section>

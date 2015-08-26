@@ -50,23 +50,23 @@
 		//---------------------------------------------------------
 		
 		@include setting(full-screen) {
-			height: 90%;
-			height: calc(100% - #{map-get($header, height)});
 			@if map-get($header, absolute) and map-get($billboard, full-screen) {
 				height: 100%;
 				height: 100vh;
+			} @else {
+				height: 90%;
+				height: calc(100% - #{map-get($header, height)});
+				height: calc(100vh - #{map-get($header, height)});
 			}
 		}
 		
 		@at-root {
-			@include component(app-header) {
+			@include overwrite(app-header) {
 				@include modifier(absolute) {
-					& + #main {
-						@include component(billboard) {
-							@include modifier(full-screen) {
-								height: 100%;
-								height: 100vh;
-							}
+					@include overwrite(billboard, $special: adjacent-sibling) {
+						@include modifier(full-screen) {
+							height: 100%;
+							height: 100vh;
 						}
 					}
 				}

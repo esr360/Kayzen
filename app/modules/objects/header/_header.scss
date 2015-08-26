@@ -86,8 +86,15 @@
 			overflow: auto;
 			width: option($header, side, width);	
 			#{option($header, side, default)}: 0;
-			+ #main {
-				margin-#{option($header, side, default)}: option($header, side, width);
+			@include option(left) {
+				+ #site-content {
+					margin-left: option($header, side, width);
+				}
+			}
+			@include option(right) {
+				+ #site-content {
+					margin-right: option($header, side, width);
+				}
 			}
 			@include overwrite(container) {
 				max-width: option($header, side, container-width);

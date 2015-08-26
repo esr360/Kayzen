@@ -1,24 +1,95 @@
-<?php 
-	include ('../app.php');
-	// start the ouput buffer
-	ob_start(); 
-	// page config
-	$title = 'UI Elements';
-?>
 
 <!DOCTYPE html>
 <html class="no-js">
 
-<?php include ('../includes/head.php'); ?>
+<head>
+	
+	<!-- Page Title -->
+    <title>Kayzen - Multi-Purpose HTML5 Theme</title>
+	
+	<!-- Meta Tags -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="description" content="Multi-Purpose HTML5 Theme.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
 
+    <!-- Icons -->
+    <link rel="apple-touch-icon" href="/app/images/apple-icon-touch.png">
+    <link rel="icon" href="/app/images/favicon.png">
+    <!--[if IE]><link rel="shortcut icon" href="/app/images/favicon.ico"><![endif]-->
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="/app/compiled/styles/app.css">
+	
+    <!-- Modernizr -->
+    <!--<script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>-->
+    <script src="/app/vendor/Modernizr/modernizr.min.js"></script>
+	
+	<!-- jQuery Helper -->
+	<script src="/app/includes/jquery-helper-begin.js"></script>
+	
+</head>
 <body>
 
     <!-- Site Canvas -->
     <div id="site-content">
 		
-		<?php include ('../modules/objects/header/header.php'); ?>
+		<!-- Header -->
+<header class="app-header-bar-dark-sticky" id="app-header">
+
+	<div class="container">
+		
+		<div class="app-header_wrapper">
+
+			<!-- Logo -->
+			<div class="logo">
+				<a href="/"><img src="/app/images/logo-white.png" alt="logo"/ ></a>
+			</div>
+
+			<!-- Navigation -->
+			<nav class="navigation-style-1" id="app-nav">
+				<ul>
+					<li class="active"><a href="#"><i class="fa fa-home"></i> Home</a></li>
+					<li>
+						<a href="#"><i class="fa fa-desktop"></i> Demos</a>
+						<ul>
+							<li><a href="#">Link 1</a></li>
+							<li>
+								<a href="#">Link 2</a>
+								<ul>
+									<li><a href="#">Lorem Ipsum</a></li>
+									<li><a href="#">Dolor Sit Amet</a></li>
+									<li><a href="#">Theme Forest</a></li>
+								</ul>
+							</li>
+							<li><a href="#">Link 3</a></li>
+						</ul>
+					</li>
+					<li><a href="#"><i class="fa fa-files-o"></i> Pages</a></li>
+					<li><a href="#"><i class="fa fa-star"></i> Features</a></li>
+					<li><a href="#"><i class="fa fa-list-ul"></i> Shortcodes</a></li>
+				</ul>
+			</nav>
+
+			<!-- Off Canvas Menu Trigger -->
+			<a class="nav-trigger max-bp3" href="#"></a>
+
+		</div><!-- Header Wrapper -->
+		
+	</div><!-- Container -->
 	
-		<?php include ('../modules/objects/billboard/billboard.php'); ?>
+</header><!-- Header -->	
+		<!-- Billboard -->
+<section class="billboard">
+	<div class="billboard_wrapper container">
+		<header class="heading_group">
+			<h2 class="heading-uppercase-light-strikethrough-spaced-size-4"><span>Kayzen</span></h2>
+			<h3 class="heading-uppercase-heavy-size-8 font-2">UI Elements</h3>
+		</header>
+	</div>
+</section>
 		
 		<section class="section">
 			
@@ -212,24 +283,62 @@
 		<!-- Google Map -->
 		<div class="google-map" id="map"></div>
 
-		<?php include ('../modules/objects/footer/footer.php'); ?>
-
+		<!-- Footer -->
+<footer class="footer">
+	<div class="container">
+		<div class="footer_wrapper">
+			<!-- Copyright Section -->
+			<div class="footer_copyright">
+				<h4>© Your Website 2014</h4>
+			</div>
+			<!-- Footer Navigation -->
+			<nav class="footer_nav">                
+				<ul>
+					<li><a href="#">Footer Link 1</a></li>
+					<li><a href="#">Footer Link 2</a></li>
+					<li><a href="#">Footer Link 3</a></li>
+				</ul>
+			</nav>
+		</div>
+	</div>
+</footer>
     </div><!-- Site Canvas -->
 
-    <?php include ('../includes/ui-enhancements.php'); ?>
+    <!-- UI Enhancements -->
 
-    <?php include ('../includes/scripts.php'); ?>
+<!-- Scroll to top icon-->
+<a class="icon-lrg-border scroll-top" href="#site-content">
+	<i class="fa fa-angle-up"></i>
+</a> 
 
+<!-- Flyout Nav Trigger -->
+<span class="icon-lrg flyout-trigger max-break-3" id="flyout-trigger">
+	<i class="fa fa-bars nav-open"></i>
+	<i class="fa fa-times nav-close"></i>
+</span>
+
+<!-- Flyout Nav -->
+<nav class="flyout-container" id="flyout"></nav>
+
+<!-- Site Overlay -->
+<div class="site-overlay" id="site-overlay"></div>
+
+<!-- Styles JSON Configuration -->
+<div id="stylesConfigJSON"></div>
+    <!-- SCRIPTS -->
+
+<!-- jQuery -->
+<!--<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>-->
+<script src="/app/vendor/jQuery/jquery.min.js"></script>
+
+<!-- jQuery Helper -->
+<script src="/app/includes/jquery-helper-end.js"></script>
+
+<!-- Google Map -->
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+
+<!-- App -->
+<script type="text/javascript" src="/app/compiled/scripts/app.js"></script>
 </body>
 </html>
 
-<?php
-$cachefile = "../../elements.html";
-$fp = fopen($cachefile, 'w'); 
-// save the contents of output buffer to the file
-fwrite($fp, ob_get_contents()); 
-// close the file
-fclose($fp); 
-// Send the output to the browser
-ob_end_flush(); 
-?>

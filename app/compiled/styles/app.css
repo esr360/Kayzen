@@ -3243,8 +3243,11 @@ progress.progress-alt::-moz-progress-bar {
   width: 350px;
   false: 0;
 }
-[class*="app-header-"][class*="-side"] + #main {
-  margin-false: 350px;
+[class*="app-header-"][class*="-side"][class*="-left"] + #site-content {
+  margin-left: 350px;
+}
+[class*="app-header-"][class*="-side"][class*="-right"] + #site-content {
+  margin-right: 350px;
 }
 [class*="app-header-"][class*="-side"] .container, [class*="app-header-"][class*="-side"] [class*="container-"] {
   max-width: 100%;
@@ -3593,8 +3596,10 @@ progress.progress-alt::-moz-progress-bar {
   height: 90%;
   height: -webkit-calc(100% - 100px);
   height: calc(100% - 100px);
+  height: -webkit-calc(100vh - 100px);
+  height: calc(100vh - 100px);
 }
-[class*="app-header-"][class*="-absolute"] + #main [class*="billboard-"][class*="-full-screen"] {
+[class*="app-header-"][class*="-absolute"] + [class*="billboard-"][class*="-full-screen"] {
   height: 100%;
   height: 100vh;
 }

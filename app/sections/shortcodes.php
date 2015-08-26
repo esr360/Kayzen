@@ -18,20 +18,20 @@
 		<!-- Shortcodes Graphics -->
 		<div class="carousel-scale-2 owl-carousel" id="shortcodes-carousel">
 			<div class="desktop-graphic-scroll">
-				<img src="app/images/demo-screen.png" alt=""/ >
-				<div style="background-image: url('app/images/stock-1.jpg')"></div>
+				<img src="<?php echo appDir ?>/images/demo-screen.png" alt=""/ >
+				<div style="background-image: url('<?php echo appDir ?>/images/stock-1.jpg')"></div>
 			</div>
 			<div class="desktop-graphic-scroll">
-				<img src="app/images/demo-screen.png" alt=""/ >
-				<div style="background-image: url('app/images/stock-2.jpg')"></div>
+				<img src="<?php echo appDir ?>/images/demo-screen.png" alt=""/ >
+				<div style="background-image: url('<?php echo appDir ?>/images/stock-2.jpg')"></div>
 			</div>
 			<div class="desktop-graphic-scroll">
-				<img src="app/images/demo-screen.png" alt=""/ >
-				<div style="background-image: url('app/images/stock-3.jpg')"></div>
+				<img src="<?php echo appDir ?>/images/demo-screen.png" alt=""/ >
+				<div style="background-image: url('<?php echo appDir ?>/images/stock-3.jpg')"></div>
 			</div>
 			<div class="desktop-graphic-scroll">
-				<img src="app/images/demo-screen.png" alt=""/ >
-				<div style="background-image: url('app/images/stock-4.jpg')"></div>
+				<img src="<?php echo appDir ?>/images/demo-screen.png" alt=""/ >
+				<div style="background-image: url('<?php echo appDir ?>/images/stock-4.jpg')"></div>
 			</div>
 		</div>
 		

@@ -53,9 +53,9 @@
 			<!-- Responsive Graphics -->
 			<div class="span-6 va-middle text-center">
 				<div class="mobile-graphics span-6">
-					<img class="mobile-graphic-white-left" src="app/images/mobile-screen.png" alt=""/ >
-					<img class="mobile-graphic-blue-right" src="app/images/mobile-screen.png" alt=""/ >
-					<img class="mobile-graphic-purple-center" src="app/images/mobile-screen.png" alt=""/ >
+					<img class="mobile-graphic-white-left" src="<?php echo appDir ?>/images/mobile-screen.png" alt=""/ >
+					<img class="mobile-graphic-blue-right" src="<?php echo appDir ?>/images/mobile-screen.png" alt=""/ >
+					<img class="mobile-graphic-purple-center" src="<?php echo appDir ?>/images/mobile-screen.png" alt=""/ >
 				</div>
 			</div>
 			

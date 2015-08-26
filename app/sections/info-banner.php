@@ -1,6 +1,6 @@
 <!-- Info Banner -->
 <?php if ($style == 'brand') { ?>
-<section class="section-secondary-overlay" style="background-image: url('app/images/billboard-1.jpg')">
+<section class="section-secondary-overlay" style="background-image: url('<?php echo appDir ?>/images/billboard-1.jpg')">
 	<div class="container">
 		<div class="row text-center">
 			<div class="span-8">
@@ -18,7 +18,7 @@
 	</div>
 </section>
 <?php } else if ($style == 'light') { ?>
-<section class="section-primary" style="background-image: url('app/images/billboard-2.jpg')">
+<section class="section-primary" style="background-image: url('<?php echo appDir ?>/images/billboard-2.jpg')">
 	<div class="container">
 		<div class="row text-center">
 			<div class="span-8">

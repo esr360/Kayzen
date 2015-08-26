@@ -6,7 +6,7 @@
 // Sticky Header
 //-----------------------------------------------------------------
 
-if (setting(appHeader, 'sticky'))  {
+if (setting('app-header', 'sticky'))  {
 	
 	var stickyOffset = $(appHeader).offset().top,
 		navDropdown  = $(navigation).find("> ul > li > a:not(:only-child)").parent();
@@ -38,4 +38,14 @@ if (setting(appHeader, 'sticky'))  {
 		}
 	});
 
+}
+
+//-----------------------------------------------------------------
+// Side Header
+//-----------------------------------------------------------------
+
+if (setting('app-header', 'side'))  {
+	
+	$(appHeader).prependTo('body');
+	
 }

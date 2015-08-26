@@ -1,6 +1,6 @@
 <!-- Promo Section -->
 <?php if ($style == 'light') { ?>
-<section class="section-primary" style="background-image: url('app/images/billboard-2.jpg')">
+<section class="section-primary" style="background-image: url('<?php echo appDir ?>/images/billboard-2.jpg')">
 	<div class="container">
 		<div class="row">
 			<div class="span-6 info-video">
@@ -31,7 +31,7 @@
 	</div>
 </section>
 <?php } else if ($style == 'dark') { ?>
-<section class="section-secondary-overlay-alt" style="background-image: url('app/images/billboard-1.jpg')">
+<section class="section-secondary-overlay-alt" style="background-image: url('<?php echo appDir ?>/images/billboard-1.jpg')">
 	<div class="container">
 		<div class="row">
 			<div class="span-6 info-video">

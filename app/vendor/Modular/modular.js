@@ -40,16 +40,16 @@ function getStylesConfig(camelCase) {
 }
 
 // Store configuartion data in a variable
-var module = getStylesConfig(camelCase);
+var module = getStylesConfig();
 
-// Store the raw data in a variable (no camelCase)
-var moduleRaw = getStylesConfig();
+// CamelCase the config
+var moduleCC = getStylesConfig(camelCase);
 
 // Create a global variable to select each main component in the DOM
 var componentIndex = 0;
 $.each(module, function(component) {
-	var componentRaw = moduleRaw[Object.keys(moduleRaw)[componentIndex]]['name'];
-	window[component] = '.' + componentRaw + ', [class*="' + componentRaw + '-"]';
+	var componentCC = moduleCC[Object.keys(moduleCC)[componentIndex]]['name'];
+	window[componentCC] = '.' + component + ', [class*="' + component + '-"]';
 	componentIndex++;
 });
 
@@ -71,5 +71,5 @@ $.each(module, function(component) {
 //	}
 
 function setting(component, setting) {
-	return $(component).is('[class*="-' + setting + '"]') == true || module.component[setting]['default'] == true;
+	return $(component).is('[class*="-' + setting + '"]') == true || module[component][setting]['default'] == true;
 }

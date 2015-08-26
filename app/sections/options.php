@@ -21,8 +21,8 @@
 			<div class="span-6 va-middle text-center">
 				<div class="span-10">
 					<div class="desktop-graphic-scroll">
-						<img src="app/images/demo-screen.png" alt=""/ >
-						<div style="background-image: url('app/images/stock-1.jpg')"></div>
+						<img src="<?php echo appDir ?>/images/demo-screen.png" alt=""/ >
+						<div style="background-image: url('<?php echo appDir ?>/images/stock-1.jpg')"></div>
 					</div>
 				</div>
 			</div>

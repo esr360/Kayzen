@@ -1,13 +1,17 @@
 <!-- Header -->
+<?php if ($for == 'index') { ?>
 <header class="app-header-bar-absolute-sticky" id="app-header">
-	
+<?php } else { ?>
+<header class="app-header-bar-dark-sticky" id="app-header">
+<?php } ?>
+
 	<div class="container">
 		
 		<div class="app-header_wrapper">
 
 			<!-- Logo -->
 			<div class="logo">
-				<a href="/"><img src="app/images/logo-white.png" alt="logo"/ ></a>
+				<a href="/"><img src="<?php echo appDir ?>/images/logo-white.png" alt="logo"/ ></a>
 			</div>
 
 			<!-- Navigation -->
