@@ -67,6 +67,12 @@
 	@return map-get(typography-config($group), $key);
 }
 
-@function font-size($size) {
-	@return map-get(typography-config(sizes), $size)
+@function font-size($size, $rem: false) {
+	$size: map-get(typography-config(sizes), $size);
+	@if not $rem {
+		@return $size;
+	} @else {
+		$size: $size / ($size * 0 + 1);
+		@return #{$size}rem;
+	}
 }

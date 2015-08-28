@@ -123,8 +123,9 @@
 	@if map-get($helpers, horizontal-rules) {
 		
 		hr.line {
-		    color: rgba(0,0,0,0.2);
-		    margin: base(margin) 0;
+			border-top: 1px solid rgba(0, 0, 0, 0.2);
+			border-bottom: 0;
+			margin: 2rem 0;
 		}
 		
 	} // horizontal-rules

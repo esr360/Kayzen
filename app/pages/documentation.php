@@ -3,7 +3,7 @@
 	// start the ouput buffer
 	ob_start(); 
 	// page config
-	$title = 'Template';
+	$title = 'Documentation';
 ?>
 
 <!DOCTYPE html>
@@ -20,7 +20,7 @@
 
 		<?php include ('../modules/objects/billboard/billboard.php'); ?>
 		
-		<section class="section">
+		<section class="section-primary">
 			
 		</section>
 
@@ -36,7 +36,7 @@
 </html>
 
 <?php
-$cachefile = "../../template.html";
+$cachefile = "../../documentation.html";
 $fp = fopen($cachefile, 'w'); 
 // save the contents of output buffer to the file
 fwrite($fp, ob_get_contents()); 

@@ -35,7 +35,6 @@ Made by @esr360
 // Objects
 //-----------------------------------------------------------------
 
-//@prepros-append modules/objects/google-map/google-map.js
 //@prepros-append modules/objects/header/header.js
 //@prepros-append modules/objects/navigation/flyout-navigation.js
 //@prepros-append modules/objects/scroll-top/scroll-top.js

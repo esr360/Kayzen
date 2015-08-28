@@ -10,9 +10,12 @@ function accordionInit() {
 
 		var $parent = $(this).parent();
 
+		if ($(this).parents().eq(1).is(':not([class*="-keep-open"])')) {
+			$parent.siblings().removeClass('active');
+			$parent.siblings().find('> *:first-child + *').slideUp(baseTransition);
+		}
+		
 		$parent.toggleClass('active');
-		$parent.siblings().removeClass('active');
-		$parent.siblings().find('> *:first-child + *').slideUp(baseTransition);
 		$(this).find('~ *').slideToggle(baseTransition);
 
 	});

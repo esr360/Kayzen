@@ -209,9 +209,6 @@
 			
 		</section>
 
-		<!-- Google Map -->
-		<div class="google-map" id="map"></div>
-
 		<?php include ('../modules/objects/footer/footer.php'); ?>
 
     </div><!-- Site Canvas -->

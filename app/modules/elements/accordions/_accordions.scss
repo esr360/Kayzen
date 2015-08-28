@@ -9,26 +9,30 @@
 	//-------------------------------------------------------------
 
 	$accordions: config((
-		name                : accordion,
+		name                  : accordion,
 		// icon (open/close)
-		icon                : "\f138",
-		icon-color          : color(greyscale, grey-3),
-		icon-opacity        : 0.4,
-		icon-active-color   : color(greyscale, white),
+		icon                  : "\f138", // FontAwesome value
+		icon-color            : rgba(color(greyscale, grey-3), 0.6),
+		icon-active-color     : color(greyscale, white),
+		// each section
+		section-margin        : 0,
 		// title (clickable part)
-		title-bg            : transparent,
-		title-color         : typograhy(colors, base),
-		title-border        : 1px solid rgba(black, 0.15),
-		title-padding       : 1em,
+		title-bg              : transparent,
+		title-color           : base(text-color),
+		title-border          : 1px solid rgba(black, 0.15),
+		title-radius          : 0,
+		title-padding         : 1em,
 		// title.active
-		title-active-bg     : color(brand, primary),
-		title-active-color  : color(greyscale, white),
-		title-active-border : color(brand, primary),
+		title-active-bg       : color(brand, primary),
+		title-active-color    : color(greyscale, white),
+		title-active-border   : transparent,
+		title-active-radius   : 0,
 		// content
-		content-bg          : color(greyscale, white),
-		content-color       : typograhy(colors, base),
-		content-border      : 1px solid rgba(black, 0.15),
-		content-padding     : 1.5em
+		content-bg            : color(greyscale, white),
+		content-color         : base(text-color),
+		content-border        : 1px solid rgba(black, 0.15),
+		content-radius        : 0,
+		content-padding       : 1.5em
 	), $custom);
 	
 	//-------------------------------------------------------------
@@ -41,43 +45,46 @@
 	//-------------------------------------------------------------
 	
 		margin-bottom: base(margin);
-		border-bottom: map-get($config, content-border);
 		@include vertical-rhythm(bottom);
 
 		> * { // each individual section
 
 			margin: 0;
+			&:not(:last-child) {
+				margin-bottom: option($config, section-margin);
+			}
 
 			> *:first-child { // clickable part
 				display: block;
 				padding: 1em;
 				margin: 0;
-				border: map-get($config, title-border);
-				border-bottom: none;
+				background: option($config, title-bg);
+				color: option($config, title-color);
+				border: option($config, title-border);
+				border-radius: option($config, title-radius);
 				cursor: pointer;
 				font-weight: normal;	
 				line-height: 1;		
 				transition: base(transition);
 	  			backface-visibility: hidden;
 				&:after { // open/close icon
-					content: map-get($config, icon);
+					content: option($config, icon);
 					font-family: FontAwesome;
-					opacity: map-get($config, icon-opacity);
 					float: right;
-					color: map-get($config, icon-color);
+					color: option($config, icon-color);
 					transition: base(transition);
 				}
 			}	
 
 			> *:last-child { // content part
 				display: none;
-				border: map-get($config, content-border);
-				border-bottom: none;
-				padding: map-get($config, content-padding);
+				border: option($config, content-border);
+				border-radius: option($config, content-radius);
+				padding: option($config, content-padding);
 				margin: 0;
 				margin-top: -1px;	
 				font-weight: lighter;
-				background: map-get($config, content-bg);
+				background: option($config, content-bg);
 				&.active {
 					display: block;
 				}				
@@ -86,20 +93,28 @@
 			&:hover, 
 			&.active {
 				> *:first-child { // clickable part
-					background: map-get($config, title-active-bg);
-					color: map-get($config, title-active-color);
+					background: option($config, title-active-bg);
+					color: option($config, title-active-color);
 					&:after { // open/close icon
-						opacity: 1;
-						color: map-get($config, icon-active-color);
+						color: option($config, icon-active-color);
 					}
 				}
 			}
 
 			&.active {
 				> *:first-child { // clickable part
-					border-color: map-get($config, title-active-border);
+					border-color: option($config, title-active-border);
+					border-radius: option($config, title-active-radius);
 					&:after { // open/close icon		
 						transform: rotate(90deg) translateZ(0);
+					}
+				}
+			}
+			
+			@if (option($config, section-margin) == 0) {
+				&:not(:last-child) {
+					> *:first-child, > *:last-child {
+						border-bottom: 0 !important;
 					}
 				}
 			}

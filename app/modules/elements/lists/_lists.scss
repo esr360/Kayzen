@@ -46,6 +46,35 @@
 			}
 		}
 		
+		@include modifier(tags) {
+			@include extend(reset);
+			li {
+				display: inline-block;
+				font-size: font-size(size-2);
+				background: color(greyscale, grey-3);
+				color: white;
+				border-radius: 0.3em;
+				padding: 0.1em 0.4em;
+				&.plain {
+					border: 1px solid rgba(0,0,0, 0.1);
+					background: white;
+					color: base(text-color);
+				}
+				&.scss, &.sass {
+					background: #009ED7;
+				}
+				&.js {
+					background: #90BB00;
+				}
+				&.html {
+					background: #D63A36;
+				}
+				&.php {
+					background: #9B58B5;
+				}
+			}		
+		}
+		
 	} // component(list)
 	
 } // @mixin lists

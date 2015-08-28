@@ -1,7 +1,7 @@
 //=================================================================
 // Header
 //=================================================================
-
+	
 @mixin header($custom: ()) {
 	
 	//-------------------------------------------------------------
@@ -32,7 +32,9 @@
 		sticky               : (
 			default          : true,
 			bg               : color(greyscale, grey-5),
-			height           : 80px
+			height           : 70px,
+			logo-height      : 28px,
+			text-size        : font-size(size-2) 
 		)
 	), $custom) !global;
 	
@@ -45,8 +47,7 @@
 	// Core Styles
 	//-------------------------------------------------------------
 	
-		background-color: option($header, bg);
-		transition: background base(transition);
+		background-color: option($config, bg);
 
 	// Settings
 	//-------------------------------------------------------------
@@ -70,8 +71,8 @@
 		
 		@include setting(absolute) {
 			position: absolute;
-			top: option($header, absolute, top-position);
-			z-index: option($header, z-index);
+			top: option($config, absolute, top-position);
+			z-index: option($config, z-index);
 			width: 100%;
 		}
 
@@ -80,24 +81,24 @@
 	
 		@include setting(side) {
 			position: fixed;
-			z-index: option($header, z-index);
+			z-index: option($config, z-index);
 			height: 100%;
 			top: 0;	
 			overflow: auto;
-			width: option($header, side, width);	
-			#{option($header, side, default)}: 0;
+			width: option($config, side, width);	
+			#{option($config, side, default)}: 0;
 			@include option(left) {
 				+ #site-content {
-					margin-left: option($header, side, width);
+					margin-left: option($config, side, width);
 				}
 			}
 			@include option(right) {
 				+ #site-content {
-					margin-right: option($header, side, width);
+					margin-right: option($config, side, width);
 				}
 			}
 			@include overwrite(container) {
-				max-width: option($header, side, container-width);
+				max-width: option($config, side, container-width);
 			}
 		}
 		
@@ -105,7 +106,7 @@
 		//---------------------------------------------------------
 	
 		@include setting(dark) {
-			background-color: option($header, dark, bg);
+			background-color: option($config, dark, bg);
 		}
 		
 		// Sticky Header
@@ -117,13 +118,19 @@
 				top: 0;
 				width: 100%;
 				z-index: 12;
-				background: option($header, sticky, bg);
+				background: option($config, sticky, bg);
+				font-size: option($config, sticky, text-size);
 				@include overwrite-sub(wrapper) {
-					height: option($header, sticky, height);
+					height: option($config, sticky, height);
+				}
+				@include overwrite(logo) {
+					img {
+						height: option($config, sticky, logo-height);
+					}
 				}
 				@include modifier(absolute, "not") {
 					@include overwrite(billboard, $special: adjacent-sibling) {
-						margin-top: option($header, sticky, height);
+						margin-top: option($config, sticky, height);
 					}
 				}
 			}
@@ -133,8 +140,8 @@
 	//-------------------------------------------------------------
 
 		@include sub-component(wrapper, static) {
-			height: option($header, height);
-			transition: base(transition);
+			height: option($config, height);
+			transition: height base(transition);
 		}
 		
 	} // component(app-header)

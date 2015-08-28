@@ -20,7 +20,7 @@
 		overlay-opacity : 0.6,
 		color           : color(greyscale, white),
 		text-align      : center,
-		min-height      : 500px,
+		min-height      : 450px,
 		wrapper-width   : breakpoint(break-2)
 	), $custom) !global;
 	
@@ -33,13 +33,13 @@
 	// Core Styles
 	//-------------------------------------------------------------
 
-		min-height: map-get($billboard, min-height);
-		background-color: map-get($billboard, bg-color);
+		min-height: option($config, min-height);
+		background-color: option($config, bg-color);
 		position: relative;
 		
 		// only apply a bg image if there is one to apply
-		@if map-get($billboard, bg-image) != "" {
-			background-image: url(map-get($billboard, bg-image));
+		@if option($config, bg-image) != "" {
+			background-image: url(option($config, bg-image));
 			background-size: cover;
 		}
 
@@ -50,13 +50,13 @@
 		//---------------------------------------------------------
 		
 		@include setting(full-screen) {
-			@if map-get($header, absolute) and map-get($billboard, full-screen) {
+			@if option($header, absolute) and option($config, full-screen) {
 				height: 100%;
 				height: 100vh;
 			} @else {
 				height: 90%;
-				height: calc(100% - #{map-get($header, height)});
-				height: calc(100vh - #{map-get($header, height)});
+				height: calc(100% - #{option($header, height)});
+				height: calc(100vh - #{option($header, height)});
 			}
 		}
 		
@@ -78,8 +78,8 @@
 		
 		@include setting(overlay) {
 			@include bg-overlay(rgba(
-				map-get($billboard, overlay-color), 
-				map-get($billboard, overlay-opacity)
+				option($config, overlay-color), 
+				option($config, overlay-opacity)
 			));
 		}
 		
@@ -87,15 +87,15 @@
 	//-------------------------------------------------------------
 
 		@include sub-component(wrapper) {
-			color: map-get($billboard, color);
-			text-align: map-get($billboard, text-align);
+			color: option($config, color);
+			text-align: option($config, text-align);
 			@extend %horizontal-center;
 			@include vertical-center(absolute);
 			@include context((min-width: breakpoint(break-3))) {
-				width: map-get($billboard, wrapper-width);
+				width: option($config, wrapper-width);
 			}
 		}
 	
-	} // component(billboard)
+	} // component
 	
 } // @mixin billboard

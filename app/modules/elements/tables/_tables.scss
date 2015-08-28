@@ -22,25 +22,21 @@
 	//-------------------------------------------------------------
 	
 		width: 100%;
-	
-		thead, 
-		tfoot {
-			td {			
-				line-height: 2.4;
+		font-weight: lighter;
+		
+		th, td {
+			text-align: left;
+			padding: 0.5em;
+			border-bottom: 1px solid rgba(0,0,0,0.1);
+			border-left: 1px solid rgba(0,0,0,0.1);
+			vertical-align: top;
+			&:first-child {
+				border-left: none;
+				padding-left: 0;
 			}
 		}
 
 		tbody {
-			td {
-				line-height: 2;
-				padding-left: 0.75rem;
-				border-bottom: 1px solid rgba(0,0,0,0.1);
-				border-left: 1px solid rgba(0,0,0,0.1);
-				&:first-child {
-					border-left: none;
-					padding-left: 0;
-				}
-			}
 			tr {
 				&:last-child {
 					td {
@@ -55,6 +51,24 @@
 
 		@include modifier(fixed) {		
 			table-layout: fixed;
+		}
+		
+		@include modifier(small) {
+			font-size: 0.85em;
+		}
+		
+		@include modifier(style-1) {
+			td {
+				&:nth-child(1) {
+					width: 20%;
+				}
+				&:nth-child(2) {
+					width: 25%;
+				}
+				&:nth-child(3) {
+					width: 55%;
+				}
+			}
 		}
 	
 	} // component(table)

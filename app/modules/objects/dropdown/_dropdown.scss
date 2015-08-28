@@ -15,8 +15,10 @@
 		top-position          : 0,
 		dropdown-icon         : "\f105",
 		low-level-icon        : "\f105",
+		font-size             : font-size(size-2, true),
 		link-color            : color(greyscale, grey-4),
 		link-bg-color         : color(greyscale, grey-1),
+		link-padding          : 0.6rem,
 		link-hover-color      : color(greyscale, white),
 		link-hover-bg-color   : color(brand, primary),
 		link-active-color     : navigation(a-has-child-color),
@@ -36,9 +38,10 @@
 			ul {
 			
 				@extend %list-reset;
-				min-width: map-get($dropdown, width);
-				text-align: map-get($dropdown, text-align);
+				min-width: option($config, width);
+				text-align: option($config, text-align);
 				transition: base(transition);
+				font-size: option($config, font-size);
 				position: absolute;
 				z-index: 5;
 				opacity: 0;
@@ -49,8 +52,9 @@
 					position: relative;
 			
 					a {
-						background: map-get($dropdown, link-bg-color);
-						color: map-get($dropdown, link-color);
+						background: option($config, link-bg-color);
+						color: option($config, link-color);
+						padding: option($config, link-padding);
 						border-top: 1px solid color(greyscale, grey-2); 
 						&:before, 
 						&:after {
@@ -58,7 +62,7 @@
 						}
 						&:not(:only-child) {
 							&:after {
-								content: map-get($dropdown, dropdown-icon);
+								content: option($config, dropdown-icon);
 								right: 0.75em;
 								@include vertical-center(absolute);
 							}
@@ -81,8 +85,8 @@
 			
 					&:hover {
 						> a {
-							color: map-get($dropdown, link-hover-color);
-							background: map-get($dropdown, link-hover-bg-color);
+							color: option($config, link-hover-color);
+							background: option($config, link-hover-bg-color);
 							border-color: color(brand, primary);
 						}
 						+ li {
@@ -94,8 +98,8 @@
 			
 					&.active {
 						> a {
-							color: map-get($dropdown, link-active-color);
-							background: map-get($dropdown, link-active-bg-color);
+							color: option($config, link-active-color);
+							background: option($config, link-active-bg-color);
 						}
 					}
 			
@@ -115,7 +119,7 @@
 			
 			// first level only
 			> ul {
-				padding-top: map-get($dropdown, top-position);
+				padding-top: option($config, top-position);
 			}
 		
 		} // ul (dropdown)

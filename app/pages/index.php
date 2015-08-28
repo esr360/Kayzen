@@ -54,8 +54,7 @@
 		
 		<?php include ('../sections/contact-us.php'); ?>
 
-		<!-- Google Map -->
-		<div class="google-map" id="map"></div>
+		<?php include ('../modules/objects/google-map/google-map.php'); ?>
 
 		<?php include ('../modules/objects/footer/footer.php'); ?>
 

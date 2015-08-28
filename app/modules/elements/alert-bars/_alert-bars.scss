@@ -46,7 +46,7 @@
 	
 		@include modifier(help) {		
 			background: desaturate(
-				lighten(color(alert, help), 20%)
+				lighten(color(alert, help), 25%)
 			, 20%) !important;
 			color: darken(
 				desaturate(color(alert, help), 25%)
@@ -54,7 +54,7 @@
 		}
 	
 		@include modifier(info) {		
-			background: lighten(color(alert, info), 20%) !important;
+			background: lighten(color(alert, info), 25%) !important;
 			color: darken(
 				desaturate(color(alert, info), 15%)
 			, 15%);

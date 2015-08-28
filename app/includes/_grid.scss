@@ -186,7 +186,7 @@ http://github.com/esr360/Kayzen-GS/
 	
 		// Custom Stacking
 		@if grid-setting(responsive) and grid-setting(column-stacking) {
-			@each $bp, $width in map-get($grid, breakpoints) {
+			@each $bp, $width in option($config, breakpoints) {
 				@media (#{$scale}-width: $width) {
 					&.#{$bp} {
 						@include stack-columns;
@@ -260,13 +260,13 @@ http://github.com/esr360/Kayzen-GS/
 			// This is to allow the generated CSS to override when scaling
 			$reverse-breakpoints: if(
 				grid-setting(mobile-first),
-				map-get($grid, breakpoints),
-				reverse-map(map-get($grid, breakpoints))
+				option($config, breakpoints),
+				reverse-map(option($config, breakpoints))
 			);
 			
 			@each $bp, $width in $reverse-breakpoints {
 				@media (#{$scale}-width: $width) {
-					@each $name, $fraction in map-get($grid, fractions) {		
+					@each $name, $fraction in option($config, fractions) {		
 						&.#{$bp}-#{$name} {
 							width: flow-column-width(nth($fraction, 1), nth($fraction, 2));
 							@at-root #{$row-no-gutter} & {

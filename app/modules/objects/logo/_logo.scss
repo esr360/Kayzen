@@ -20,15 +20,15 @@
 	// Component
 	//-------------------------------------------------------------
 
-	.logo {	
+	@include component {	
 	
-		color: map-get($logo, color);
-		font-size: map-get($logo, size);
-		text-align: map-get($logo, text-align);
-		padding: map-get($logo, padding);
+		color: option($config, color);
+		font-size: option($config, size);
+		text-align: option($config, text-align);
+		padding: option($config, padding);
 		// for plain text logos
 		a {
-			color: map-get($logo, color);
+			color: option($config, color);
 			display: inline-block;
 			&:hover {
 				text-decoration: none;
@@ -39,8 +39,9 @@
 			height: 38px;
 			display: inline-block;
 			vertical-align: middle;
+			transition: base(transition);
 		}
 	
-	} // .logo
+	} // component
 	
 } // @mixin logo

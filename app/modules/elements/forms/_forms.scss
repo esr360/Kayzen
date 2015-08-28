@@ -94,7 +94,7 @@
 			border: 1px solid color(greyscale, grey-3);
 			transition: base(transition);
 			&::placeholder {
-				color: typography(colors, base);
+				color: base(text-color);
 				transition: base(transition);
 			}
 			&:focus {

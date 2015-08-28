@@ -43,7 +43,7 @@
 		header-dark              : (
 			default              : false,
 			// list-item
-			item-color           : typography(colors, base),
+			item-color           : base(text-color),
 			item-border          : 1px solid color(greyscale, white),
 			item-bg-color        : transparent,
 			// list-item:hover
@@ -55,7 +55,6 @@
 	// Settings
 	//-------------------------------------------------------------
 	
-		style                   : false,
 		no-icons                : false
 		
 	), $custom) !global;
@@ -97,12 +96,10 @@
 	    > ul {
 	
 	        @extend %list-reset;
-	        display: none; // hide by default for mobiles
+	        display: none; // hide by default for small resolutions
 	        vertical-align: middle;
 	
 	        > li {
-	
-	            transition: base(transition);
 	
 	            // add gap between items
 	            margin-left: option($navigation, item-gutter);
@@ -125,14 +122,14 @@
 	
 	            &:hover {
 	                > a {
-	                    color: option($navigation, link-hover-color);
-	                    background: map-get($navigation, item-hover-bg);
-						border: option($navigation, item-hover-border);
+	                    color: option($config, link-hover-color);
+	                    background: option($config, item-hover-bg);
+						border: option($config, item-hover-border);
 	                    // if item has child menu
 	                    &:not(:only-child) {
-							color: option($navigation, has-child-hover-color);
-							background: option($navigation, has-child-hover-bg);
-							border: option($navigation, has-child-hover-border);
+							color: option($config, has-child-hover-color);
+							background: option($config, has-child-hover-bg);
+							border: option($config, has-child-hover-border);
 							border-bottom-color: transparent;
 						}
 	                }
@@ -140,7 +137,7 @@
 	
 	            &.active {
 	                > a {
-	                    color: map-get($navigation, link-active-color);
+	                    color: option($config, link-active-color);
 	                }
 	                &:hover {
 						// if item is active and hovered
@@ -151,12 +148,6 @@
 	        } // > li
 	
 	    } // > ul
-		
-		// Conditionals
-		
-	    @if map-get($navigation, style-1) {
-	        @include extend(style-1);
-	    }
 	
 		// In Side-Header
 
@@ -211,8 +202,8 @@
 	    } // in side-header
 
 		// Larger Resolutions
-	    @media (min-width: breakpoint(break-3)) {
-	        text-align: map-get($navigation, text-align);
+	    @include context((min-width: breakpoint(break-3))) {
+	        text-align: option($config, text-align);
 	        > ul {
 	            display: inline-block;
 	            white-space: nowrap;
@@ -231,12 +222,6 @@
 				display: none;
 			}
 		}
-		
-		@include setting(style) {
-			@include option(1) {
-				
-			}
-		}
 	
 	} // component(navigation)
 
@@ -247,5 +232,5 @@
 //-------------------------------------------------------------
 
 @function navigation($option) {
-    @return map-get($navigation, $option);
+    @return option($navigation, $option);
 }
