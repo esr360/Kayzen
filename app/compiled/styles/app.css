@@ -741,7 +741,7 @@ p, ul, ol {
   font-size: 1.25em;
 }
 
-.row, [class*="row-"] {
+.row, [class*="row-"], .test-row {
   letter-spacing: -1em;
   display: table !important;
   width: 100%;
@@ -749,7 +749,7 @@ p, ul, ol {
   *word-spacing: -0.43em;
   table-layout: fixed;
 }
-.opera-only :-o-prefocus, .row, [class*="row-"] {
+.opera-only :-o-prefocus, .row, [class*="row-"], .test-row {
   word-spacing: -0.43em;
 }
 * {
@@ -958,7 +958,7 @@ p, ul, ol {
   }
 }
 
-[class*="span"] {
+[class*="span"], .test-column {
   display: inline-block;
   vertical-align: top;
   *display: inline;
@@ -3615,8 +3615,8 @@ progress.progress-alt::-moz-progress-bar {
   position: absolute;
   bottom: 0;
   height: 9em;
-  width: 1200px;
-  max-width: 90%;
+  width: grid-option(base-width);
+  max-width: grid-option(max-width);
 }
 [class*="section-"][class*="-banner"] {
   padding: 5em 0;
@@ -3668,6 +3668,34 @@ progress.progress-alt::-moz-progress-bar {
 @media (min-width: 940px) {
   .billboard_wrapper, [class*="billboard_wrapper-"] {
     width: 940px;
+  }
+}
+
+.test-row {
+  margin-left: -3%;
+  width: 103%;
+}
+
+.test-column {
+  width: 97%;
+  margin-left: 3%;
+}
+@media (max-width: 460px) {
+  .test-column {
+    width: 48.5%;
+    margin-left: 0;
+  }
+}
+@media (max-width: 720px) {
+  .test-column {
+    width: 31.33333%;
+    margin-left: 0;
+  }
+}
+@media (max-width: 940px) {
+  .test-column {
+    width: 22.75%;
+    margin-left: 0;
   }
 }
 

@@ -49,24 +49,24 @@
 	
 	@include component(container) {
 	
-        width: grid-option(base-width);
-        max-width: grid-option(max-width);
+        width: option($grid, options, base-width);
+        max-width: option($grid, options, max-width);
         margin: 0 auto;
 		position: relative;
 	
 	    @include modifier(small) {
-	        width: grid-option(small-width);
+	        width: option($grid, options, small-width);
 	    }
 	
 	    @include modifier(full) {
-	        width: grid-option(full-width);
-	        max-width: grid-option(full-width);
+	        width: option($grid, options, full-width);
+	        max-width: option($grid, options, full-width);
 	    }
 	
 	} // component(container)
 
 	.wrapper {
-	    padding: 0 grid-option(gutter);
+	    padding: 0 option($grid, options, gutter);
 	}
 	
 	.site-overlay {

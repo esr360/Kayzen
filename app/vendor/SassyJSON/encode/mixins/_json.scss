@@ -34,7 +34,7 @@
   }
 
   // Falsy media query
-  @if $flag == "media" or $flag == "all" {
+  @if $flag == "media" {
     @media -json-encode {
       json {
         json: $json;
