@@ -1,4 +1,4 @@
-// Safely using .ready() before including jQuery
+// Safely use .ready() before including jQuery
 // http://writing.colin-gourlay.com/safely-using-ready-before-including-jquery/
 
 (function ($, doc) {

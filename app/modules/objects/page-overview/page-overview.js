@@ -1,6 +1,6 @@
-//-----------------------------------------------------------------
+//=================================================================
 // Page Overview
-//-----------------------------------------------------------------
+//=================================================================
 
 $('#page-overview').clone()
 	.removeAttr('class id')
@@ -8,6 +8,12 @@ $('#page-overview').clone()
 	.prependTo('body')
 	.children('a').each(function() {
 		var $title = $(this).find($(heading)).text();
-		$(this).attr('class', 'tooltip-right')
+		$(this)
+			.attr('class', 'tooltip-right')
 			.attr('data-tooltip', $title);
+		$(window).load(function(){
+			$('.page-overview-fixed').scrollSpy({
+				selector : 'a'
+			});
+		});
 	});

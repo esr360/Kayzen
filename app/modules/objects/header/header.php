@@ -61,6 +61,7 @@
 							<li><a href="#">Deploy</a></li>
 						</ul>
 					</li>
+					<li><a href="#">About</a></li>
 				</ul>
 			</nav>
 

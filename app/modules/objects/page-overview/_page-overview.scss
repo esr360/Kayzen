@@ -9,7 +9,8 @@
 	//-------------------------------------------------------------
 
 	$page-overview: config((
-		name            : page-overview
+		name            : page-overview,
+		position        : left
 	), $custom);
 	
 	//-------------------------------------------------------------
@@ -40,6 +41,7 @@
 					right: -0.2em;
 					top: 0;
 				}
+				&.active,
 				&:hover {
 					background: color(brand, primary);
 					[class*="_icon"] {

@@ -27,7 +27,7 @@
 				<div class="widget_group-large row-magic text-center" id="page-overview">
 					
 					<!-- Feature 1 -->
-					<a class="widget-border-block-scale span tooltip-right" href="#">
+					<a class="widget-border-block-scale span tooltip-right" href="#getting-started">
 						<div class="widget_icon icon-plain-size-9">
 							<i class="fa fa-power-off"></i>
 						</div>
@@ -37,7 +37,7 @@
 					</a>
 					
 					<!-- Feature 2 -->
-					<a class="widget-border-block-scale span" href="#">
+					<a class="widget-border-block-scale span" href="#configure">
 						<div class="widget_icon icon-plain-size-9">
 							<i class="fa fa-cog"></i>
 						</div>
@@ -47,7 +47,7 @@
 					</a>
 					
 					<!-- Feature 3 -->
-					<a class="widget-border-block-scale span" href="#">
+					<a class="widget-border-block-scale span" href="#build">
 						<div class="widget_icon icon-plain-size-9">
 							<i class="fa fa-wrench"></i>
 						</div>
@@ -57,7 +57,7 @@
 					</a>
 					
 					<!-- Feature 4 -->
-					<a class="widget-border-block-scale span" href="#">
+					<a class="widget-border-block-scale span" href="#deploy">
 						<div class="widget_icon icon-plain-size-9">
 							<i class="fa fa-rocket"></i>
 						</div>
@@ -68,7 +68,13 @@
 					
 				</div>
 			
-				<h2 class="heading-light-size-5">Getting Started</h2>
+				<h2 class="heading-light-size-5" id="getting-started">Getting Started</h2>
+				
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras eu ligula vel turpis pellentesque posuere. Vestibulum cursus mi ut nunc ultrices porttitor. Donec imperdiet efficitur hendrerit.</p>
+				
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras eu ligula vel turpis pellentesque posuere. Vestibulum cursus mi ut nunc ultrices porttitor. Donec imperdiet efficitur hendrerit.</p>
+				
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras eu ligula vel turpis pellentesque posuere. Vestibulum cursus mi ut nunc ultrices porttitor. Donec imperdiet efficitur hendrerit.</p>
 				
 				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras eu ligula vel turpis pellentesque posuere. Vestibulum cursus mi ut nunc ultrices porttitor. Donec imperdiet efficitur hendrerit.</p>
 				
