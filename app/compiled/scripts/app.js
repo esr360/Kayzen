@@ -38,6 +38,7 @@ Made by @esr360
 //@prepros-append modules/objects/header/header.js
 //@prepros-append modules/objects/navigation/flyout-navigation.js
 //@prepros-append modules/objects/scroll-top/scroll-top.js
+//@prepros-append modules/objects/page-overview/page-overview.js
 
 //-----------------------------------------------------------------
 // Theme
@@ -4138,14 +4139,13 @@ $(tabs);
 ================================================================ */
 
 (function ( $ ) {
-	
+		
 	$.fn.extend({
 		
-		tooltip: function(options) {
+		tooltipInit: function(options) {
 			
 			var defaults = {  
-				position : "top",
-				style    : "default"
+				position : "top"
 			};  
 			
 			var options = $.extend(defaults, options);	
@@ -4153,13 +4153,12 @@ $(tabs);
 			return this.each(function() {
 				
 				var $content = $(this).attr("data-tooltip");			
-				var $position = options.position;		
-				var $style = options.style;
+				var $position = options.position;
 				
 				$(this).attr("ontouchstart", "");
 				
 				$(this).append(
-					$("<div class='tooltip-wrapper-" + $position + "-" + $style + "'><div class='tooltip-content'>"+ $content +"</div></div>")
+					$("<div class='tooltip_wrapper-" + $position + "'><div class='tooltip_content'>"+ $content +"</div></div>")
 				);
 				
 			});
@@ -4174,9 +4173,38 @@ $(tabs);
 // Tooltips
 //-----------------------------------------------------------------
 
-$("[data-tooltip]").tooltip({
-	position : "left",
-	color    : "light"
+$(window).load(function(){
+	
+	$(tooltip).each(function() {
+		
+		if ($(this).is('[class*="-top"]')) {
+			
+			$(this).tooltipInit({
+				position : "top"
+			});
+			
+		} else if ($(this).is('[class*="-bottom"]')) {
+			
+			$(this).tooltipInit({
+				position : "bottom"
+			});
+			
+		} else if ($(this).is('[class*="-left"]')) {
+			
+			$(this).tooltipInit({
+				position : "left"
+			});
+			
+		} else if ($(this).is('[class*="-right"]')) {
+			
+			$(this).tooltipInit({
+				position : "right"
+			});
+			
+		}
+		
+	});
+
 });
 //=================================================================
 // Header
@@ -4294,6 +4322,19 @@ $(window).bind("scroll", function() {
         $(".scroll-top").stop().removeClass('active');
     }
 });
+//-----------------------------------------------------------------
+// Page Overview
+//-----------------------------------------------------------------
+
+$('#page-overview').clone()
+	.removeAttr('class id')
+	.addClass('page-overview-fixed')
+	.prependTo('body')
+	.children('a').each(function() {
+		var $title = $(this).find($(heading)).text();
+		$(this).attr('class', 'tooltip-right')
+			.attr('data-tooltip', $title);
+	});
 //=================================================================
 // Kayzen
 //=================================================================

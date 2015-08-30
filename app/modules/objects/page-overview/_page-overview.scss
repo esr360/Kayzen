@@ -1,0 +1,57 @@
+//=================================================================
+// Page Overview
+//=================================================================
+
+@mixin page-overview($custom: ()) {
+
+	//-------------------------------------------------------------
+	// Config
+	//-------------------------------------------------------------
+
+	$page-overview: config((
+		name            : page-overview
+	), $custom);
+	
+	//-------------------------------------------------------------
+	// Component
+	//-------------------------------------------------------------
+
+	@include component {	
+		@include modifier(fixed) {
+			position: fixed;
+			z-index: 9;
+			top: 25%;
+			left: 0;
+			@include overwrite-sub(group, $parent: heading) {
+				display: none;
+			}
+			> a {
+				position: relative;
+				background: color(greyscale, white);
+				display: block;	
+				padding: 0.5em;
+				box-shadow: 0px 0px 1px rgba(black, 0.2);
+				&:after {
+					content: "";
+					height: 100%;
+					width: 0.2em;
+					background-color: color(brand, primary);
+					position: absolute;
+					right: -0.2em;
+					top: 0;
+				}
+				&:hover {
+					background: color(brand, primary);
+					[class*="_icon"] {
+						color: white;
+					}
+				}
+			}
+			[class*="_icon"] {
+				margin-bottom: 0;
+				font-size: 1.5rem;
+			}
+		}
+	} // component
+	
+} // @mixin page-overview

@@ -3,14 +3,13 @@
 ================================================================ */
 
 (function ( $ ) {
-	
+		
 	$.fn.extend({
 		
-		tooltip: function(options) {
+		tooltipInit: function(options) {
 			
 			var defaults = {  
-				position : "top",
-				style    : "default"
+				position : "top"
 			};  
 			
 			var options = $.extend(defaults, options);	
@@ -18,13 +17,12 @@
 			return this.each(function() {
 				
 				var $content = $(this).attr("data-tooltip");			
-				var $position = options.position;		
-				var $style = options.style;
+				var $position = options.position;
 				
 				$(this).attr("ontouchstart", "");
 				
 				$(this).append(
-					$("<div class='tooltip-wrapper-" + $position + "-" + $style + "'><div class='tooltip-content'>"+ $content +"</div></div>")
+					$("<div class='tooltip_wrapper-" + $position + "'><div class='tooltip_content'>"+ $content +"</div></div>")
 				);
 				
 			});
@@ -39,7 +37,36 @@
 // Tooltips
 //-----------------------------------------------------------------
 
-$("[data-tooltip]").tooltip({
-	position : "left",
-	color    : "light"
+$(window).load(function(){
+	
+	$(tooltip).each(function() {
+		
+		if ($(this).is('[class*="-top"]')) {
+			
+			$(this).tooltipInit({
+				position : "top"
+			});
+			
+		} else if ($(this).is('[class*="-bottom"]')) {
+			
+			$(this).tooltipInit({
+				position : "bottom"
+			});
+			
+		} else if ($(this).is('[class*="-left"]')) {
+			
+			$(this).tooltipInit({
+				position : "left"
+			});
+			
+		} else if ($(this).is('[class*="-right"]')) {
+			
+			$(this).tooltipInit({
+				position : "right"
+			});
+			
+		}
+		
+	});
+
 });

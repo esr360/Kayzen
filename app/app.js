@@ -38,6 +38,7 @@ Made by @esr360
 //@prepros-append modules/objects/header/header.js
 //@prepros-append modules/objects/navigation/flyout-navigation.js
 //@prepros-append modules/objects/scroll-top/scroll-top.js
+//@prepros-append modules/objects/page-overview/page-overview.js
 
 //-----------------------------------------------------------------
 // Theme

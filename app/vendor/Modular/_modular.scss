@@ -121,7 +121,7 @@ $component: null;
 //		<div class="logo">...</div>
 //	</div>
 
-@mixin overwrite($components, $type: $type, $special: null) {
+@mixin overwrite($components: map-get($config, name), $type: $type, $special: null) {
 	$selectors: ();
 	@each $component in $components {
 		$selector: #{$component};

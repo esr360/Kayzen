@@ -20,14 +20,14 @@ https://github.com/esr360/K-Tooltips
 		name           : tooltip,
 		// Size & Appearance
 		max-width      : 500px,
-		padding        : 1em,
+		padding        : 0.5em 0.6em,
 		distance       : -1em,
 		background     : rgba(black, 0.75),
-		border-radius  : 0.25em,
+		border-radius  : 0,
 		arrow-size     : 0.5em,
 		arrow-color    : rgba(black, 0.75),
 		// Typography
-		font-size      : 1em,
+		font-size      : font-size(size-2),
 		color          : white,
 		text-transform : none,
 		font-weight    : normal,
@@ -35,18 +35,6 @@ https://github.com/esr360/K-Tooltips
 		transition     : 0.4s,
 		z-index        : 9999
 	), $custom) !global;
-
-	//-------------------------------------------------------------
-	// Custom Styles
-	//-------------------------------------------------------------
-	
-	$tooltip-styles: (
-		light: (
-			background     : rgba(white, 0.8),
-			color          : #444,
-			arrow-color    : rgba(white, 0.8)
-		),
-	) !global;
 
 	//-------------------------------------------------------------
 	// Positions
@@ -60,26 +48,32 @@ https://github.com/esr360/K-Tooltips
 	// Component
 	//-------------------------------------------------------------
 
-	[data-tooltip] {
+	@include component {
 				
 	// Core Styles
 	//-------------------------------------------------------------
 	
-		position: relative;
 		cursor: pointer;	
 		
-	// Child Components
+	// Modifiers
+	//-------------------------------------------------------------
+	
+		@include modifier(light) {
+			
+		}
+	
+	// Sub-Components
 	//-------------------------------------------------------------
 	
 		@at-root .inline-tooltip {
 			display: inline-block;
 		}
 		
-		@at-root [class*="tooltip-wrapper"] {
+		@include sub-component(wrapper) {
 			text-align: center;
 		}
 	
-		@at-root .tooltip-content {
+		@include sub-component(content) {
 				
 			// Size & Appearance
 			max-width: tooltip(max-width);
@@ -98,7 +92,7 @@ https://github.com/esr360/K-Tooltips
 			// Other
 			transition: tooltip(transition);
 			z-index: tooltip(z-index);
-			white-space: pre-wrap;
+			white-space: nowrap;
 			
 			// Hide by default
 			opacity: 0;
@@ -126,7 +120,7 @@ https://github.com/esr360/K-Tooltips
 				
 			// Positions
 			@each $tooltip-position in $tooltip-positions {
-				[class*="tooltip-wrapper"][class*="-#{$tooltip-position}"] & {
+				[class*="tooltip_wrapper"][class*="-#{$tooltip-position}"] & {
 					#{$tooltip-position}: tooltip(distance);
 					@include triangle((
 						core     : false, 
@@ -147,39 +141,8 @@ https://github.com/esr360/K-Tooltips
 					}
 				}	
 			}
-				
-			// Custom Styles
-			@each $tooltip-style in $tooltip-styles {
-				
-			 	$custom-style: nth($tooltip-style, 1) !global;
-				 
-				[class*="tooltip-wrapper"][class*="-#{$custom-style}"] & {
 			
-					$tooltips: map-remove($tooltips, "distance", "arrow-size");
-					
-					@each $tooltip-position in $tooltip-positions {
-						@at-root [class*="-#{$tooltip-position}"][class*="-#{$custom-style}"] .tooltip-content {
-							#{$tooltip-position}: tooltip-custom(distance);
-							@include triangle((
-								position: #{$tooltip-position}, 
-								color :#{tooltip-custom(arrow-color)}
-							));
-						}	
-					}
-					
-					@each $tooltip-option in $tooltips {
-						$custom-key: nth($tooltip-option, 1);
-						$custom-value: tooltip-custom($custom-key);
-						@if map-has-key(map-get($tooltip-styles, $custom-style), $custom-key) {
-							#{$custom-key}: #{$custom-value} !important;
-						}
-					}
-					
-				}
-					
-			} // @tooltip-styles
-			
-		} // .tooltip-content
+		} // sub-component(content)
 	
 	} // component(tooltip)
 	
