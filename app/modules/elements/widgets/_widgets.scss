@@ -37,15 +37,33 @@
 		@include modifier(block) {
 			background: color(greyscale, white);	
 			padding: 2.5em 1em;
-			transition: base(transition);
-			&:hover {
-				background: color(brand, primary);		
+			@include nested-modifier(small) {
+				padding: 1.5em 1em;
+				@include overwrite-sub(icon) {
+					margin-bottom: base(margin) * 0.57; // magic number 1 of 1
+				}
+			}
+			@include nested-modifier(fill) {
+				background-color: color(brand, primary);	
 				color: color(greyscale, white);
 				@include overwrite(heading) {
 					color: color(greyscale, white);
 				}
 				@include overwrite-sub(icon) {
 					color: color(greyscale, white);
+				}
+			}
+			&:hover {
+				background-color: color(brand, primary);	
+				color: color(greyscale, white);
+				@include overwrite(heading) {
+					color: color(greyscale, white);
+				}
+				@include overwrite-sub(icon) {
+					color: color(greyscale, white);
+				}
+				@include nested-modifier(fill) {
+					background-color: darken(color(brand, primary), 10%);
 				}
 			}
 		}
@@ -59,14 +77,23 @@
 			}
 		}
 	
-		@include modifier(border-top) {
-			border-top: 8px solid color(greyscale, grey-2);
+		@include modifiers((borderLeft, borderTop)) {
+			@include nested-modifier(highlight) {
+				border-color: color(brand, primary);
+				&:hover {
+					border-color: rgba(black, 0.15);
+				}
+			}
+		}
+		
+		@include modifier(borderTop) {
+			border-top: 0.6em solid rgba(black, 0.15);
 		}
 	
-		@include modifier(border-left) {
-			border-left: 8px solid color(greyscale, grey-2);
+		@include modifier(borderLeft) {
+			border-left: 0.6em solid rgba(black, 0.15);
 		}
-	
+		
 		@include modifier(stacked) {
 			margin-bottom: base(margin);
 			@include vertical-rhythm(bottom);
@@ -108,24 +135,6 @@
 				}
 			}
 		}
-	
-	// Styles
-	//-------------------------------------------------------------
-	
-		@include modifier(primary) {
-			@include extend(block);
-			@include extend(border-top);
-			@include extend(scale);
-			border-color: color(brand, primary);
-		}
-		
-		@include modifier(secondary) {
-			@include extend(block);
-			@include extend(border-left);
-			&:hover {
-				border-color: color(brand, primary);
-			}
-		}
 			
 	// Sub Components
 	//-------------------------------------------------------------
@@ -134,7 +143,7 @@
 			@include modifier(inline) {
 				display: inline-block;
 				vertical-align: middle;
-				margin-bottom: 0;
+				margin-bottom: 0 !important;
 				+ p {
 					margin-top: (base(margin) / 2);
 				}

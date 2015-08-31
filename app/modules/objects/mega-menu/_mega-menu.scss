@@ -1,0 +1,71 @@
+//=================================================================
+// Dropdown
+//=================================================================
+
+@mixin mega-menu($custom: ()) {
+
+	//-------------------------------------------------------------
+	// Config
+	//-------------------------------------------------------------
+
+	$mega-menu: config((
+		name                  : mega-menu
+	), $custom) !global;
+	
+	//-------------------------------------------------------------
+	// Component
+	//-------------------------------------------------------------
+	
+	@include overwrite(navigation) {
+		
+		@include component(mega-menu) { 
+		
+			width: 100%;
+			left: 0;
+			right: 0;
+			position: fixed;
+			margin: auto;
+			padding: 1.5em;
+			width: option($grid, options, base-width);
+			background: color(greyscale, grey-1);
+			border-bottom: 0.6em solid color(brand, primary);
+	
+			ul {
+				position: relative;
+				left: 0;
+				display: block;
+				opacity: 1;
+				visibility: visible;
+				li {
+					a {
+						padding: 0;
+						border: none;
+						color: color(brand, primary);
+						display: inline-block;
+					}
+					&:hover {
+						a {
+							background: transparent;
+							border-color: transparent;
+							color: color(brand, primary);
+						}
+					}
+				}
+			}
+			
+			p {
+				margin: 1.5em 0;
+			}
+			
+			@include sub-component(title) {
+				margin-top: 0;
+				margin-bottom: 1em;
+				padding-bottom: 0.5em;
+				border-bottom: 1px solid color(greyscale, grey-2);
+			}
+		
+		} // component
+
+	} // overwrite(navigation)
+	
+} // @mixin dropdown

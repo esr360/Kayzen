@@ -79,7 +79,7 @@
 	                text-decoration: none;
 	            }
 	            // icon
-	            .fa {
+	            @include overwrite-sub(icon) {
 	                margin-right: 0.5em;
 	            }
 	        }       
@@ -218,7 +218,7 @@
 	//-------------------------------------------------------------
 	
 		@include setting(no-icons) {
-			.fa {
+			@include overwrite-sub(icon) {
 				display: none;
 			}
 		}

@@ -3,7 +3,7 @@
 	// start the ouput buffer
 	ob_start(); 
 	// page config
-	$title = 'Features';
+	$title = 'Awesome Features';
 ?>
 
 <!DOCTYPE html>
@@ -27,7 +27,7 @@
 				<div class="widget_group-grid-large row-flow" id="page-overview">
 					
 					<!-- Feature 1 -->
-					<a class="widget-secondary span-4" href="#modular-ui">
+					<a class="widget-block-borderLeft span-4" href="#modular-ui">
 						<div class="widget_icon-inline icon-plain-size-7">
 							<i class="fa fa-cubes"></i>
 						</div>
@@ -38,7 +38,7 @@
 					</a>
 					
 					<!-- Feature 2 -->
-					<a class="widget-secondary span-4" href="#configure">
+					<a class="widget-block-borderLeft span-4" href="#configure">
 						<div class="widget_icon-inline icon-plain-size-7">
 							<i class="fa fa-arrows"></i>
 						</div>
@@ -49,7 +49,7 @@
 					</a>
 					
 					<!-- Feature 3 -->
-					<a class="widget-secondary span-4" href="#build">
+					<a class="widget-block-borderLeft span-4" href="#build">
 						<div class="widget_icon-inline icon-plain-size-7">
 							<i class="fa fa-cog"></i>
 						</div>
@@ -60,7 +60,7 @@
 					</a>
 					
 					<!-- Feature 4 -->
-					<a class="widget-secondary span-4" href="#deploy">
+					<a class="widget-block-borderLeft span-4" href="#deploy">
 						<div class="widget_icon-inline icon-plain-size-7">
 							<i class="fa fa-th-large"></i>
 						</div>
@@ -71,7 +71,7 @@
 					</a>
 					
 					<!-- Feature 5 -->
-					<a class="widget-secondary span-4" href="#build">
+					<a class="widget-block-borderLeft span-4" href="#build">
 						<div class="widget_icon-inline icon-plain-size-7">
 							<i class="fa fa-eyedropper"></i>
 						</div>
@@ -82,7 +82,7 @@
 					</a>
 					
 					<!-- Feature 6 -->
-					<a class="widget-secondary span-4" href="#deploy">
+					<a class="widget-block-borderLeft span-4" href="#deploy">
 						<div class="widget_icon-inline icon-plain-size-7">
 							<i class="fa fa-tablet"></i>
 						</div>

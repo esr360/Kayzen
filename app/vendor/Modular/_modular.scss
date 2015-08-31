@@ -314,7 +314,16 @@ $component: null;
 
 @mixin extend($modifiers...) {
 	@each $modifier in $modifiers {
-		@extend [class*="#{$component}-"][class*="-#{$modifier}"];
+		@if type-of($modifier) == string {
+			@extend [class*="#{$component}-"][class*="-#{$modifier}"];
+		} @else if type-of($modifier) == list {
+			$selectors: ('[class*="#{$component}-"]');
+			@each $item in $modifier {
+				$selectors: join($selectors, '[class*="-#{$item}"]');
+			}
+			$selectors: to-string($selectors, "");
+			@extend #{$selectors};
+		}
 	}
 }
 

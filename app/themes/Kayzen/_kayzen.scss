@@ -59,9 +59,9 @@
 	));
 	
 	@include logo;
+	@include mega-menu;
 	
 	@include navigation((
-		no-icons               : true,
 		link-color             : color(greyscale, white)
 	));
 	
