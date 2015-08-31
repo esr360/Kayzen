@@ -27,7 +27,7 @@
 				<div class="widget_group-large row-magic text-center" id="page-overview">
 					
 					<!-- Feature 1 -->
-					<a class="widget-border-block-scale span tooltip-right" href="#getting-started">
+					<a class="widget-primary span" href="#getting-started">
 						<div class="widget_icon icon-plain-size-9">
 							<i class="fa fa-power-off"></i>
 						</div>
@@ -37,7 +37,7 @@
 					</a>
 					
 					<!-- Feature 2 -->
-					<a class="widget-border-block-scale span" href="#configure">
+					<a class="widget-primary span" href="#configure">
 						<div class="widget_icon icon-plain-size-9">
 							<i class="fa fa-cog"></i>
 						</div>
@@ -47,7 +47,7 @@
 					</a>
 					
 					<!-- Feature 3 -->
-					<a class="widget-border-block-scale span" href="#build">
+					<a class="widget-primary span" href="#build">
 						<div class="widget_icon icon-plain-size-9">
 							<i class="fa fa-wrench"></i>
 						</div>
@@ -57,7 +57,7 @@
 					</a>
 					
 					<!-- Feature 4 -->
-					<a class="widget-border-block-scale span" href="#deploy">
+					<a class="widget-primary span" href="#deploy">
 						<div class="widget_icon icon-plain-size-9">
 							<i class="fa fa-rocket"></i>
 						</div>

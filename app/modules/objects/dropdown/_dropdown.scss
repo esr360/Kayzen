@@ -113,17 +113,35 @@
 						}
 					}
 			
-				} // end li
+				} // li
 			
-			} // end ul
+			} // ul
 			
 			// first level only
 			> ul {
 				padding-top: option($config, top-position);
 			}
 		
-		} // ul (dropdown)
+		} // ul (parent)
 		
-	} // ul (parent)
+	// Mega Menu
+	//-------------------------------------------------------------
+		
+		@at-root .mega-menu {
+			width: 100%;
+			left: 0;
+			right: 0;
+			position: fixed !important;
+			margin: auto !important;
+			width: option($grid, options, base-width);
+			ul {
+				position: relative !important;
+				display: block !important;
+				opacity: 1 !important;
+				visibility: visible !important;
+			}
+		}
+		
+	} // component
 	
 } // @mixin dropdown

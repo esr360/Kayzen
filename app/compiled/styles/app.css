@@ -2944,21 +2944,20 @@ progress.progress-alt::-moz-progress-bar {
 .widget .heading_group, .widget [class*="heading_group-"], [class*="widget-"] .heading_group, [class*="widget-"] [class*="heading_group-"] {
   margin-bottom: 0;
 }
-[class*="widget-"][class*="-block"] {
+[class*="widget-"][class*="-block"], [class*="widget-"][class*="-primary"], [class*="widget-"][class*="-secondary"] {
   background: #ffffff;
+  padding: 2.5em 1em;
   -webkit-transition: 0.4s;
           transition: 0.4s;
-  padding: 2.5em 1em;
 }
-[class*="widget-"][class*="-block"]:hover {
+[class*="widget-"][class*="-block"]:hover, [class*="widget-"][class*="-primary"]:hover, [class*="widget-"][class*="-secondary"]:hover {
   background: #9B58B5;
-  border-color: #9B58B5;
   color: #ffffff;
 }
-[class*="widget-"][class*="-block"]:hover .heading, [class*="widget-"][class*="-block"]:hover [class*="heading-"] {
+[class*="widget-"][class*="-block"]:hover .heading, [class*="widget-"][class*="-primary"]:hover .heading, [class*="widget-"][class*="-secondary"]:hover .heading, [class*="widget-"][class*="-block"]:hover [class*="heading-"], [class*="widget-"][class*="-primary"]:hover [class*="heading-"], [class*="widget-"][class*="-secondary"]:hover [class*="heading-"] {
   color: #ffffff;
 }
-[class*="widget-"][class*="-block"]:hover .widget_icon, [class*="widget-"][class*="-block"]:hover [class*="widget_icon-"] {
+[class*="widget-"][class*="-block"]:hover .widget_icon, [class*="widget-"][class*="-primary"]:hover .widget_icon, [class*="widget-"][class*="-secondary"]:hover .widget_icon, [class*="widget-"][class*="-block"]:hover [class*="widget_icon-"], [class*="widget-"][class*="-primary"]:hover [class*="widget_icon-"], [class*="widget-"][class*="-secondary"]:hover [class*="widget_icon-"] {
   color: #ffffff;
 }
 [class*="widget-"][class*="-panel"] {
@@ -2969,11 +2968,11 @@ progress.progress-alt::-moz-progress-bar {
 [class*="widget-"][class*="-panel"][class*="-small"] {
   padding: 4% 2%;
 }
-[class*="widget-"][class*="-border"] {
-  border-top: 8px solid #9B58B5;
+[class*="widget-"][class*="-border-top"], [class*="widget-"][class*="-primary"] {
+  border-top: 8px solid #dee0e2;
 }
-[class*="widget-"][class*="-border"]:hover {
-  border-color: transparent;
+[class*="widget-"][class*="-border-left"], [class*="widget-"][class*="-secondary"] {
+  border-left: 8px solid #dee0e2;
 }
 [class*="widget-"][class*="-stacked"] {
   margin-bottom: 2rem;
@@ -2981,12 +2980,12 @@ progress.progress-alt::-moz-progress-bar {
 [class*="widget-"][class*="-stacked"] p {
   margin-top: 1rem;
 }
-[class*="widget-"][class*="-scale"] {
+[class*="widget-"][class*="-scale"], [class*="widget-"][class*="-primary"] {
   z-index: 1;
   -webkit-transform: translateZ(0);
           transform: translateZ(0);
 }
-[class*="widget-"][class*="-scale"]:hover {
+[class*="widget-"][class*="-scale"]:hover, [class*="widget-"][class*="-primary"]:hover {
   -webkit-transform: scale(1.1) translateZ(0);
           transform: scale(1.1) translateZ(0);
   z-index: 5;
@@ -3013,6 +3012,12 @@ progress.progress-alt::-moz-progress-bar {
 [class*="widget-"][class*="-spectrum-quarter"]:hover .icon, [class*="widget-"][class*="-spectrum-quarter"]:hover [class*="icon-"] {
   color: #ffffff;
 }
+[class*="widget-"][class*="-primary"] {
+  border-color: #9B58B5;
+}
+[class*="widget-"][class*="-secondary"]:hover {
+  border-color: #9B58B5;
+}
 [class*="widget_"][class*="-inline"] {
   display: inline-block;
   vertical-align: middle;
@@ -3025,10 +3030,10 @@ progress.progress-alt::-moz-progress-bar {
   margin-bottom: 4rem;
 }
 [class*="widget_group-"][class*="-grid"] {
-  margin-bottom: -2rem;
+  margin-bottom: -3% !important;
 }
 [class*="widget_group-"][class*="-grid"] .widget, [class*="widget_group-"][class*="-grid"] [class*="widget-"] {
-  margin-bottom: 2rem;
+  margin-bottom: 3%;
 }
 .widget_icon, [class*="widget_icon-"] {
   color: #bfc1c3;
@@ -3421,41 +3426,95 @@ progress.progress-alt::-moz-progress-bar {
 .navigation ul > ul, [class*="navigation-"] ul > ul {
   padding-top: 0;
 }
+.mega-menu {
+  width: 100%;
+  left: 0;
+  right: 0;
+  position: fixed !important;
+  margin: auto !important;
+  width: 1200px;
+}
+.mega-menu ul {
+  position: relative !important;
+  display: block !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
 
-[class*="page-overview-"][class*="-fixed"] {
+.page-overview, [class*="page-overview-"] {
   position: fixed;
   z-index: 9;
-  top: 25%;
-  left: 0;
 }
-[class*="page-overview-"][class*="-fixed"] .heading_group, [class*="page-overview-"][class*="-fixed"] [class*="heading_group-"] {
+.page-overview .heading_group, .page-overview [class*="heading_group-"], [class*="page-overview-"] .heading_group, [class*="page-overview-"] [class*="heading_group-"] {
   display: none;
 }
-[class*="page-overview-"][class*="-fixed"] > a {
+.page-overview .icon, .page-overview [class*="icon-"], [class*="page-overview-"] .icon, [class*="page-overview-"] [class*="icon-"] {
+  margin-bottom: 0;
+  font-size: 1.5rem;
+}
+[class*="page-overview-"][class*="-left"], [class*="page-overview-"][class*="-right"] {
+  top: 25%;
+}
+[class*="page-overview-"][class*="-left"] .page-overview_item:after, [class*="page-overview-"][class*="-left"] [class*="page-overview_item-"]:after, [class*="page-overview-"][class*="-right"] .page-overview_item:after, [class*="page-overview-"][class*="-right"] [class*="page-overview_item-"]:after {
+  top: 0;
+  height: 100%;
+  width: 0.2em;
+}
+[class*="page-overview-"][class*="-left"] {
+  left: 0;
+}
+[class*="page-overview-"][class*="-left"] .page-overview_item:after, [class*="page-overview-"][class*="-left"] [class*="page-overview_item-"]:after {
+  right: -0.2em;
+}
+[class*="page-overview-"][class*="-right"] {
+  right: 0;
+}
+[class*="page-overview-"][class*="-right"] .page-overview_item:after, [class*="page-overview-"][class*="-right"] [class*="page-overview_item-"]:after {
+  left: -0.2em;
+}
+[class*="page-overview-"][class*="-top"], [class*="page-overview-"][class*="-bottom"] {
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+[class*="page-overview-"][class*="-top"] .page-overview_item, [class*="page-overview-"][class*="-top"] [class*="page-overview_item-"], [class*="page-overview-"][class*="-bottom"] .page-overview_item, [class*="page-overview-"][class*="-bottom"] [class*="page-overview_item-"] {
+  float: left;
+}
+[class*="page-overview-"][class*="-top"] .page-overview_item:after, [class*="page-overview-"][class*="-top"] [class*="page-overview_item-"]:after, [class*="page-overview-"][class*="-bottom"] .page-overview_item:after, [class*="page-overview-"][class*="-bottom"] [class*="page-overview_item-"]:after {
+  left: 0;
+  height: 0.2em;
+  width: 100%;
+}
+[class*="page-overview-"][class*="-top"] {
+  top: 0;
+}
+[class*="page-overview-"][class*="-top"] .page-overview_item:after, [class*="page-overview-"][class*="-top"] [class*="page-overview_item-"]:after {
+  bottom: -0.2em;
+}
+[class*="page-overview-"][class*="-bottom"] {
+  bottom: 0;
+}
+[class*="page-overview-"][class*="-bottom"] .page-overview_item:after, [class*="page-overview-"][class*="-bottom"] [class*="page-overview_item-"]:after {
+  top: -0.2em;
+}
+.page-overview_item, [class*="page-overview_item-"] {
   position: relative;
   background: #ffffff;
   display: block;
   padding: 0.5em;
   box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);
 }
-[class*="page-overview-"][class*="-fixed"] > a:after {
+.page-overview_item:after, [class*="page-overview_item-"]:after {
   content: "";
-  height: 100%;
-  width: 0.2em;
   background-color: #9B58B5;
   position: absolute;
-  right: -0.2em;
-  top: 0;
 }
-[class*="page-overview-"][class*="-fixed"] > a.active, [class*="page-overview-"][class*="-fixed"] > a:hover {
+.page-overview_item.active, .page-overview_item:hover, [class*="page-overview_item-"].active, [class*="page-overview_item-"]:hover {
   background: #9B58B5;
 }
-[class*="page-overview-"][class*="-fixed"] > a.active [class*="_icon"], [class*="page-overview-"][class*="-fixed"] > a:hover [class*="_icon"] {
+.page-overview_item.active [class*="_icon"], .page-overview_item:hover [class*="_icon"], [class*="page-overview_item-"].active [class*="_icon"], [class*="page-overview_item-"]:hover [class*="_icon"] {
   color: white;
-}
-[class*="page-overview-"][class*="-fixed"] [class*="_icon"] {
-  margin-bottom: 0;
-  font-size: 1.5rem;
 }
 
 .scroll-top {

@@ -35,12 +35,11 @@
 	//-------------------------------------------------------------
 	
 		@include modifier(block) {
-			background: color(greyscale, white);
-			transition: base(transition);	
+			background: color(greyscale, white);	
 			padding: 2.5em 1em;
+			transition: base(transition);
 			&:hover {
-				background: color(brand, primary);	
-				border-color: color(brand, primary);	
+				background: color(brand, primary);		
 				color: color(greyscale, white);
 				@include overwrite(heading) {
 					color: color(greyscale, white);
@@ -60,11 +59,12 @@
 			}
 		}
 	
-		@include modifier(border) {
-			border-top: 8px solid color(brand, primary);
-			&:hover {
-				border-color: transparent;
-			}
+		@include modifier(border-top) {
+			border-top: 8px solid color(greyscale, grey-2);
+		}
+	
+		@include modifier(border-left) {
+			border-left: 8px solid color(greyscale, grey-2);
 		}
 	
 		@include modifier(stacked) {
@@ -108,7 +108,25 @@
 				}
 			}
 		}
+	
+	// Styles
+	//-------------------------------------------------------------
+	
+		@include modifier(primary) {
+			@include extend(block);
+			@include extend(border-top);
+			@include extend(scale);
+			border-color: color(brand, primary);
+		}
 		
+		@include modifier(secondary) {
+			@include extend(block);
+			@include extend(border-left);
+			&:hover {
+				border-color: color(brand, primary);
+			}
+		}
+			
 	// Sub Components
 	//-------------------------------------------------------------
 	
@@ -129,9 +147,9 @@
 				@include vertical-rhythm(bottom);
 			}
 			@include modifier(grid) {
-				margin-bottom: -#{base(margin)};
+				margin-bottom: -#{option($grid, options, gutter)} !important;
 				@include overwrite(widget) {
-					margin-bottom: base(margin);
+					margin-bottom: option($grid, options, gutter);
 				}
 			}
 		}
