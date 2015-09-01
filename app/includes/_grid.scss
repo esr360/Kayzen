@@ -120,7 +120,7 @@ http://github.com/esr360/Kayzen-GS/
 				margin-left: -#{option($grid, options, gutter)};
 				width: 100% + option($grid, options, gutter);
 				@for $i from 1 through option($grid, options, columns) {
-					.#{option($grid, options, col-namespace)}-#{$i} {		
+					> .#{option($grid, options, col-namespace)}-#{$i} {		
 						@if option($grid, settings, mobile-first) {
 							width: (100% - option($grid, options, gutter));
 							@media (min-width: option($grid, options, col-collapse)) {

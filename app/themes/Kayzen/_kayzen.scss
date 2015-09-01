@@ -59,12 +59,12 @@
 	));
 	
 	@include logo;
-	@include mega-menu;
 	
 	@include navigation((
 		link-color             : color(greyscale, white)
 	));
 	
+	@include mega-menu;
 	@include dropdown;
 	@include page-overview;
 	@include promo-banner;

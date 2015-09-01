@@ -84,5 +84,11 @@ $(window).on("load scroll", function(d,h) {
 window.sr = new scrollReveal();
 
 //-----------------------------------------------------------------
+// Pointer Events Polyfill
+//-----------------------------------------------------------------
+
+PointerEventsPolyfill.initialize({});
+
+//-----------------------------------------------------------------
 
 }); // document.ready

@@ -82,14 +82,7 @@
 	            @include overwrite-sub(icon) {
 	                margin-right: 0.5em;
 	            }
-	        }       
-	        // for child menus 
-	        &:hover {
-	            > ul {
-	                opacity: 1;
-	                visibility: visible;
-	            }
-	        }
+	        }   
 	    }
 	
 	    // parent level only

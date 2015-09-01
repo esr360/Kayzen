@@ -16,7 +16,7 @@
 	// Component
 	//-------------------------------------------------------------
 	
-	@include overwrite(navigation) {
+	[class*="#{option($navigation, name)}"] {
 		
 		@include component(mega-menu) { 
 		
@@ -36,12 +36,13 @@
 				display: block;
 				opacity: 1;
 				visibility: visible;
+				min-width: 0;
+				// prevent unwanted showing of mega-menu
+				pointer-events: none;
 				li {
 					a {
 						padding: 0;
-						border: none;
-						color: color(brand, primary);
-						display: inline-block;
+						border-color: transparent;
 					}
 					&:hover {
 						a {
@@ -54,7 +55,19 @@
 			}
 			
 			p {
-				margin: 1.5em 0;
+				margin: 1em 0;
+				@include vertical-rhythm;
+			}
+			
+			.link {
+				display: inline;
+				padding: 0;
+				border: none;
+				color: color(brand, primary);
+				transition: none;
+				&:hover {
+					border-bottom: 1px dotted;
+				}
 			}
 			
 			@include sub-component(title) {
@@ -63,8 +76,41 @@
 				padding-bottom: 0.5em;
 				border-bottom: 1px solid color(greyscale, grey-2);
 			}
+			
+			@include overwrite(widget) {
+				&#{$col-selector} {
+					display: inline-block;
+					&:after {
+						display: none;
+					}
+				}
+			}
+			
+			@include overwrite-sub(group, $parent: widget) {
+				&:not(:last-child) {
+					margin-bottom: 3%;
+				}
+			}
+			
+			@include overwrite-sub(group, $parent: heading) {
+				color: typography(colors, heading);
+			}
 		
 		} // component
+		
+		// parent list
+		ul {
+			li {
+				// reset pointer events
+				&:hover {
+					@include overwrite(mega-menu) {
+						ul {
+							pointer-events: auto;
+						}
+					}
+				}
+			}
+		}
 
 	} // overwrite(navigation)
 	

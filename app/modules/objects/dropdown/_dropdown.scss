@@ -29,12 +29,22 @@
 	// Component
 	//-------------------------------------------------------------
 	
-	@include overwrite(navigation) {
+	[class*="#{option($navigation, name)}"] {
 
 		// parent list
 		ul {
 			
-			// dropdown list
+			// show the dropdown
+			li {	
+				&:hover {
+					> ul {
+						opacity: 1;
+						visibility: visible;
+					}
+				}
+			}
+			
+			// dropdown
 			ul {
 			
 				@extend %list-reset;
@@ -44,6 +54,7 @@
 				font-size: option($config, font-size);
 				position: absolute;
 				z-index: 5;
+				// hide and remove pointer events until required
 				opacity: 0;
 				visibility: hidden;
 			
@@ -79,7 +90,7 @@
 					// remove bottom border on last item
 					&:last-child {
 						> a {
-							//border-bottom-color: transparent;
+							// border-bottom-color: transparent;
 						}
 					}
 			
@@ -90,7 +101,7 @@
 							border-color: color(brand, primary);
 						}
 						+ li {
-							a {
+							> a {
 								border-top-color: color(greyscale, grey-1);
 							}
 						}

@@ -19,6 +19,7 @@ Made by @esr360
 
 //@prepros-append vendor/Modular/modular.js
 //@prepros-append includes/adaptive-columns.js
+//@prepros-append includes/pointer-events-polyfill.js
 //@prepros-append includes/tools.js
 
 //-----------------------------------------------------------------
