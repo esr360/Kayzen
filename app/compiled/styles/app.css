@@ -2252,6 +2252,9 @@ button::-moz-focus-inner {
 [class*="heading_group-"][class*="-block"].has-icon {
   padding-bottom: 5em;
 }
+[class*="heading_group-"][class*="-small"] {
+  margin-bottom: 1rem;
+}
 [class*="heading_group-"][class*="-large"] {
   margin-bottom: 4rem;
 }
@@ -2677,13 +2680,18 @@ img {
 [class*="list-"][class*="-clear"] {
   padding-left: 1em;
 }
-[class*="list-"][class*="-arrow"] li {
+[class*="list-"][class*="-divider"] > li:not(:last-child) {
+  padding-bottom: 1em;
+  margin-bottom: 1em;
+  border-bottom: 1px dotted rgba(0, 0, 0, 0.2);
+}
+[class*="list-"][class*="-arrow"] > li {
   position: relative;
   line-height: 1.8;
   margin-bottom: 0 !important;
   padding-left: 1.5em;
 }
-[class*="list-"][class*="-arrow"] li:before {
+[class*="list-"][class*="-arrow"] > li:before {
   content: "\f138";
   position: absolute;
   left: 0;
@@ -2691,29 +2699,33 @@ img {
   margin-right: 0.5em;
   color: #9B58B5;
 }
-[class*="list-"][class*="-tags"] li {
+[class*="list-"][class*="-tags"] > li {
   display: inline-block;
   font-size: 0.83em;
   background: #bfc1c3;
   color: white;
-  border-radius: 0.3em;
   padding: 0.1em 0.4em;
+  -webkit-transition: 0.4s;
+          transition: 0.4s;
 }
-[class*="list-"][class*="-tags"] li.plain {
+[class*="list-"][class*="-tags"] > li.plain {
   border: 1px solid rgba(0, 0, 0, 0.1);
   background: white;
   color: #6f777b;
 }
-[class*="list-"][class*="-tags"] li.scss, [class*="list-"][class*="-tags"] li.sass {
+[class*="list-"][class*="-tags"] > li.scss, [class*="list-"][class*="-tags"] > li.sass {
   background: #009ED7;
 }
-[class*="list-"][class*="-tags"] li.js {
+[class*="list-"][class*="-tags"] > li.js {
   background: #90BB00;
 }
-[class*="list-"][class*="-tags"] li.html {
+[class*="list-"][class*="-tags"] > li.html {
   background: #D63A36;
 }
-[class*="list-"][class*="-tags"] li.php {
+[class*="list-"][class*="-tags"] > li.php {
+  background: #9B58B5;
+}
+[class*="list-"][class*="-tags"][class*="-links"] > li:hover {
   background: #9B58B5;
 }
 
@@ -2988,6 +3000,9 @@ progress.progress-alt::-moz-progress-bar {
 }
 [class*="widget-"][class*="-block"]:hover[class*="-fill"] {
   background-color: #804397;
+}
+[class*="widget-"][class*="-block"]:hover[class*="-panel"] {
+  border-color: #9B58B5;
 }
 [class*="widget-"][class*="-panel"] {
   padding: 4%;
@@ -3404,7 +3419,6 @@ progress.progress-alt::-moz-progress-bar {
   }
   .navigation > ul, [class*="navigation-"] > ul {
     display: inline-block;
-    white-space: nowrap;
   }
   .navigation > ul > li, [class*="navigation-"] > ul > li {
     display: inline-block;

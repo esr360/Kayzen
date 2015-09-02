@@ -190,6 +190,10 @@
 					padding-bottom: 5em;
 				}
 			}
+			
+			@include modifier(small) {
+				margin-bottom: (base(margin) / 2);
+			}
 		
 			@include modifier(large) {
 				margin-bottom: (base(margin) * 2);

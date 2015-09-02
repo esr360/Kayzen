@@ -65,6 +65,9 @@
 				@include nested-modifier(fill) {
 					background-color: darken(color(brand, primary), 10%);
 				}
+				@include nested-modifier(panel) {
+					border-color: color(brand, primary);
+				}
 			}
 		}
 	

@@ -32,9 +32,19 @@
 			padding-left: 1em;
 		}
 		
+		@include modifier(divider) {
+			> li {
+				&:not(:last-child) {
+					padding-bottom: 1em;
+					margin-bottom: 1em;
+					border-bottom: 1px dotted rgba(black, 0.2);
+				}
+			}
+		}
+		
 	    @include modifier(arrow) {
 			@include extend(reset);
-			li {
+			> li {
 				position: relative;
 				line-height: 1.8;
 				margin-bottom: 0 !important;
@@ -52,13 +62,13 @@
 		
 		@include modifier(tags) {
 			@include extend(reset);
-			li {
+			> li {
 				display: inline-block;
 				font-size: font-size(size-2);
 				background: color(greyscale, grey-3);
 				color: white;
-				border-radius: 0.3em;
 				padding: 0.1em 0.4em;
+				transition: base(transition);
 				&.plain {
 					border: 1px solid rgba(0,0,0, 0.1);
 					background: white;
@@ -76,7 +86,14 @@
 				&.php {
 					background: #9B58B5;
 				}
-			}		
+			}	
+			@include nested-modifier(links)	{
+				> li {
+					&:hover {
+						background: color(brand, primary);
+					}
+				}
+			}
 		}
 		
 	} // component(list)
