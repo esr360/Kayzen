@@ -1397,14 +1397,6 @@ pre, hr {
   vertical-align: bottom !important;
 }
 
-.left {
-  float: left;
-}
-
-.right {
-  float: right;
-}
-
 hr.line {
   border-top: 1px solid rgba(0, 0, 0, 0.2);
   border-bottom: 0;
@@ -2252,9 +2244,6 @@ button::-moz-focus-inner {
 [class*="heading_group-"][class*="-block"].has-icon {
   padding-bottom: 5em;
 }
-[class*="heading_group-"][class*="-small"] {
-  margin-bottom: 1rem;
-}
 [class*="heading_group-"][class*="-large"] {
   margin-bottom: 4rem;
 }
@@ -2544,6 +2533,7 @@ button::-moz-focus-inner {
 img {
   max-width: 100%;
   height: auto;
+  display: block;
 }
 
 .thumbnail {
@@ -2725,8 +2715,15 @@ img {
 [class*="list-"][class*="-tags"] > li.php {
   background: #9B58B5;
 }
+[class*="list-"][class*="-tags"][class*="-links"] > li a {
+  background-color: inherit;
+  color: inherit;
+}
 [class*="list-"][class*="-tags"][class*="-links"] > li:hover {
   background: #9B58B5;
+}
+[class*="list-"][class*="-tags"][class*="-links"] > li:hover a {
+  color: #ffffff;
 }
 
 .modal-content {
@@ -3046,6 +3043,9 @@ progress.progress-alt::-moz-progress-bar {
           transform: scale(1.1) translateZ(0);
   z-index: 5;
 }
+[class*="widget-"][class*="-media"] {
+  position: relative;
+}
 [class*="widget-"][class*="-spectrum-quarter"] {
   color: #ffffff;
   padding: 2.5em 1em;
@@ -3109,6 +3109,10 @@ progress.progress-alt::-moz-progress-bar {
 .widget_header + .widget_icon, .widget_header + [class*="widget_icon-"], [class*="widget_header-"] + .widget_icon, [class*="widget_header-"] + [class*="widget_icon-"] {
   margin-left: 0.5rem;
   margin-right: 0;
+}
+.widget_controls, [class*="widget_controls-"] {
+  position: absolute;
+  bottom: 0;
 }
 
 .breadcrumb {
@@ -3449,11 +3453,11 @@ progress.progress-alt::-moz-progress-bar {
   min-width: 0;
   pointer-events: none;
 }
-[class*="navigation"] .mega-menu ul li a, [class*="navigation"] [class*="mega-menu-"] ul li a {
+[class*="navigation"] .mega-menu ul li > a, [class*="navigation"] [class*="mega-menu-"] ul li > a {
   padding: 0;
   border-color: transparent;
 }
-[class*="navigation"] .mega-menu ul li:hover a, [class*="navigation"] [class*="mega-menu-"] ul li:hover a {
+[class*="navigation"] .mega-menu ul li:hover > a, [class*="navigation"] [class*="mega-menu-"] ul li:hover > a {
   background: transparent;
   border-color: transparent;
   color: #9B58B5;

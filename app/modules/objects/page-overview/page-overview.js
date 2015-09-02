@@ -17,7 +17,8 @@ if ($pageOverviewPos == 'left') {
 }
 
 // Create the overview navigation
-$('#page-overview').clone()
+$('#page-overview')
+	.clone()
 	.removeAttr('class id')
 	.addClass('page-overview-' + $pageOverviewPos)
 	.prependTo('body')

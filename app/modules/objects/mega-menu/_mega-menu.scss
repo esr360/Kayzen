@@ -40,12 +40,12 @@
 				// prevent unwanted showing of mega-menu
 				pointer-events: none;
 				li {
-					a {
+					> a {
 						padding: 0;
 						border-color: transparent;
 					}
 					&:hover {
-						a {
+						> a {
 							background: transparent;
 							border-color: transparent;
 							color: color(brand, primary);
