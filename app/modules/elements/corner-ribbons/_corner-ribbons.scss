@@ -9,7 +9,13 @@
 	//-------------------------------------------------------------
 
 	$corner-ribbons: config((
-		name            : corner-ribbon
+		name            : corner-ribbon,
+		colors          : (green, pink, purple),
+		default-color   : green,
+		sizes           : (
+			default     : 1em,
+			small       : 0.7em
+		)
 	), $custom);
 
 	//-------------------------------------------------------------
@@ -25,7 +31,7 @@
 		width: 7em;
 		top: -0.6em;
 		left: -0.65em;
-		font-size: 1em;
+		font-size: option($config, sizes, default);
 		&:before {
 			content: attr(data-ribbon);
 			position: absolute;
@@ -44,26 +50,28 @@
 	// Sizes
 	//-------------------------------------------------------------
 	
-		@include modifier(small) {
-			font-size: 0.7em;
+		@each $size in option($config, sizes) {
+			$key: nth($size, 1);
+			$value: nth($size, 2);
+			@if $key != 'default' {
+				@include modifier($key) {
+					font-size: #{$value};
+				}
+			}
 		}
 		
 	//-------------------------------------------------------------
 	// Colors
 	//-------------------------------------------------------------
 	
-		$ribbon-colors: (
-			green, pink, purple
-		);
-	
-		@each $color in $ribbon-colors {
+		@each $color in option($config, colors) {
 			@include modifier(#{$color}) {
 				background-image: url("#{$asset-path}images/corner-ribbons/corner-ribbon-#{$color}.png");
 			}
 		}
 		
 		// default color
-		@include extend(green);
+		@include extend(option($config, default-color));
 		
 	} // component
 	
