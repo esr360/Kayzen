@@ -1,0 +1,57 @@
+//=================================================================
+// Blockquotes
+//=================================================================
+
+@mixin corner-ribbons($custom: ()) {
+
+	//-------------------------------------------------------------
+	// Config
+	//-------------------------------------------------------------
+
+	$blockquotes: config((
+		name            : corner-ribbon
+	), $custom);
+
+	//-------------------------------------------------------------
+	// Component
+	//-------------------------------------------------------------
+	
+	@include component() {
+		
+		background-image: url("#{$asset-path}/images/corner-ribbon-green.png");
+		background-size: cover;
+		position: absolute;
+		height: 55px;
+		width: 55px;
+		top: -4px;
+		left: -4px;
+		&:before {
+			content: attr(data-ribbon);
+			position: absolute;
+			height: 55px;
+			width: 55px;
+			text-align: center;
+			transform: rotate(-45deg);
+			color: white;
+			font-weight: bold;
+			left: 12%;
+    		top: 11%;
+			font-size: font-size(size-1);
+		}
+		
+		// Ribbon Colors
+	
+		$ribbon-colors: (
+			green, pink, purple
+		);
+	
+		@each $color in $ribbon-colors {
+			@include modifier(#{$color}) {
+				background-image: url("#{$asset-path}/images/corner-ribbon-#{$color}.png");
+			}
+		}
+		
+	} // component
+	
+	
+} // @mixin corner-ribbons

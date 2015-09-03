@@ -9,65 +9,312 @@
 				<li class="span-3">
 					<h3 class="mega-menu_title heading">Business/Corporate</h3>
 					<ul class="list-divider">
+						
 						<li>
 							<div class="widget-media row">               
 								<div class="span-4">
-									<a rel="modal" href="<?php echo appDir ?>/images/stock-1-thumb.jpg">
+									<div class="corner-ribbon-pink" data-ribbon="Hot"></div>
+									<a href="#">
 										<img src="<?php echo appDir ?>/images/stock-1-thumb.jpg" alt="Theme One"/ >
 									</a>
 								</div> 
 								<div class="span-8">
 									<header class="heading_group">
-										<h3 class="heading-heavy-size-2">Theme One</h3>
-										<h4 class="heading-light-uppercase-brand-1-size-1">Donec finibus fringer</h4>
+										<a href="#">
+											<h3 class="heading-heavy-size-2">Nexus</h3>
+											<h4 class="heading-light-uppercase-brand-1-size-1">Digital Agency Demo</h4>
+										</a>
 									</header>   
 									<div class="widget_controls">
 										<ul class="list-tags-links">
-											<li class="tag"><a href="#">Business</a></li>
-											<li class="tag"><a href="#">Corporate</a></li>
+											<li class="tag"><a href="#">Multi-Page</a></li>
 										</ul>
 									</div>
 								</div>   
 							</div>
 						</li>
+						
 						<li>
 							<div class="widget-media row">               
 								<div class="span-4">
-									<img src="<?php echo appDir ?>/images/stock-2-thumb.jpg" alt="Theme One"/ >
+									<div class="corner-ribbon-purple" data-ribbon="Featured"></div>
+									<a href="#">
+										<img src="<?php echo appDir ?>/images/stock-2-thumb.jpg" alt="Theme One"/ >
+									</a>
 								</div> 
 								<div class="span-8">
 									<header class="heading_group">
-										<h3 class="heading-heavy-size-2">Theme Two</h3>
-										<h4 class="heading-light-uppercase-brand-1-size-1">Donec finibus fringer</h4>
+										<a href="#">
+											<h3 class="heading-heavy-size-2">Kayzen</h3>
+											<h4 class="heading-light-uppercase-brand-1-size-1">Original Demo</h4>
+										</a>
 									</header>   
 									<div class="widget_controls">
 										<ul class="list-tags-links">
-											<li class="tag"><a href="#">Business</a></li>
-											<li class="tag"><a href="#">Corporate</a></li>
+											<li class="tag"><a href="#">Multi-Page</a></li>
+											<li class="tag"><a href="#">Parallax</a></li>
 										</ul>
 									</div>
 								</div>   
 							</div>
 						</li>
+						
+						<li>
+							<div class="widget-media row">               
+								<div class="span-4">
+									<a href="#">
+										<img src="<?php echo appDir ?>/images/stock-3-thumb.jpg" alt="Theme One"/ >
+									</a>
+								</div> 
+								<div class="span-8">
+									<header class="heading_group">
+										<a href="#">
+											<h3 class="heading-heavy-size-2">Agenda</h3>
+											<h4 class="heading-light-uppercase-brand-1-size-1">Digital Agency Demo</h4>
+										</a>
+									</header>   
+									<div class="widget_controls">
+										<ul class="list-tags-links">
+											<li class="tag"><a href="#">One-Page</a></li>
+										</ul>
+									</div>
+								</div>   
+							</div>
+						</li>
+						
 					</ul>
 				</li>
 				
 				<li class="span-3">
-					<h3 class="mega-menu_title heading">Business/Corporate</h3>
+					<h3 class="mega-menu_title heading">Creative/Portfolio</h3>
 					<ul class="list-divider">
+						
+						<li>
+							<div class="widget-media row">               
+								<div class="span-4">
+									<div class="corner-ribbon-green" data-ribbon="New"></div>
+									<a href="#">
+										<img src="<?php echo appDir ?>/images/stock-4-thumb.jpg" alt="Theme One"/ >
+									</a>
+								</div> 
+								<div class="span-8">
+									<header class="heading_group">
+										<a href="#">
+											<h3 class="heading-heavy-size-2">Nexus</h3>
+											<h4 class="heading-light-uppercase-brand-1-size-1">Digital Agency Demo</h4>
+										</a>
+									</header>   
+									<div class="widget_controls">
+										<ul class="list-tags-links">
+											<li class="tag"><a href="#">Multi-Page</a></li>
+										</ul>
+									</div>
+								</div>   
+							</div>
+						</li>
+						
+						<li>
+							<div class="widget-media row">               
+								<div class="span-4">
+									<a href="#">
+										<img src="<?php echo appDir ?>/images/stock-5-thumb.jpg" alt="Theme One"/ >
+									</a>
+								</div> 
+								<div class="span-8">
+									<header class="heading_group">
+										<a href="#">
+											<h3 class="heading-heavy-size-2">Kayzen</h3>
+											<h4 class="heading-light-uppercase-brand-1-size-1">Original Demo</h4>
+										</a>
+									</header>   
+									<div class="widget_controls">
+										<ul class="list-tags-links">
+											<li class="tag"><a href="#">Multi-Page</a></li>
+											<li class="tag"><a href="#">Parallax</a></li>
+										</ul>
+									</div>
+								</div>   
+							</div>
+						</li>
+						
+						<li>
+							<div class="widget-media row">               
+								<div class="span-4">
+									<a href="#">
+										<img src="<?php echo appDir ?>/images/stock-6-thumb.jpg" alt="Theme One"/ >
+									</a>
+								</div> 
+								<div class="span-8">
+									<header class="heading_group">
+										<a href="#">
+											<h3 class="heading-heavy-size-2">Agenda</h3>
+											<h4 class="heading-light-uppercase-brand-1-size-1">Digital Agency Demo</h4>
+										</a>
+									</header>   
+									<div class="widget_controls">
+										<ul class="list-tags-links">
+											<li class="tag"><a href="#">One-Page</a></li>
+										</ul>
+									</div>
+								</div>   
+							</div>
+						</li>
+						
 					</ul>
 				</li>
 				
 				<li class="span-3">
-					<h3 class="mega-menu_title heading">Business/Corporate</h3>
-					<ul>
-						<li><a href="#">Lorem</a></li>
+					<h3 class="mega-menu_title heading">Shop/E-Commerce</h3>
+					<ul class="list-divider">
+						
+						<li>
+							<div class="widget-media row">               
+								<div class="span-4">
+									<div class="corner-ribbon-pink" data-ribbon="Hot"></div>
+									<a href="#">
+										<img src="<?php echo appDir ?>/images/stock-3-thumb.jpg" alt="Theme One"/ >
+									</a>
+								</div> 
+								<div class="span-8">
+									<header class="heading_group">
+										<a href="#">
+											<h3 class="heading-heavy-size-2">Nexus</h3>
+											<h4 class="heading-light-uppercase-brand-1-size-1">Digital Agency Demo</h4>
+										</a>
+									</header>   
+									<div class="widget_controls">
+										<ul class="list-tags-links">
+											<li class="tag"><a href="#">Multi-Page</a></li>
+										</ul>
+									</div>
+								</div>   
+							</div>
+						</li>
+						
+						<li>
+							<div class="widget-media row">               
+								<div class="span-4">
+									<a href="#">
+										<img src="<?php echo appDir ?>/images/stock-1-thumb.jpg" alt="Theme One"/ >
+									</a>
+								</div> 
+								<div class="span-8">
+									<header class="heading_group">
+										<a href="#">
+											<h3 class="heading-heavy-size-2">Kayzen</h3>
+											<h4 class="heading-light-uppercase-brand-1-size-1">Original Demo</h4>
+										</a>
+									</header>   
+									<div class="widget_controls">
+										<ul class="list-tags-links">
+											<li class="tag"><a href="#">Multi-Page</a></li>
+											<li class="tag"><a href="#">Parallax</a></li>
+										</ul>
+									</div>
+								</div>   
+							</div>
+						</li>
+						
+						<li>
+							<div class="widget-media row">               
+								<div class="span-4">
+									<a href="#">
+										<img src="<?php echo appDir ?>/images/stock-2-thumb.jpg" alt="Theme One"/ >
+									</a>
+								</div> 
+								<div class="span-8">
+									<header class="heading_group">
+										<a href="#">
+											<h3 class="heading-heavy-size-2">Agenda</h3>
+											<h4 class="heading-light-uppercase-brand-1-size-1">Digital Agency Demo</h4>
+										</a>
+									</header>   
+									<div class="widget_controls">
+										<ul class="list-tags-links">
+											<li class="tag"><a href="#">One-Page</a></li>
+										</ul>
+									</div>
+								</div>   
+							</div>
+						</li>
+						
 					</ul>
 				</li>
 				<li class="span-3">
-					<h3 class="mega-menu_title heading">Business/Corporate</h3>
-					<ul>
-						<li><a href="#">Lorem</a></li>
+					<h3 class="mega-menu_title heading">Blog/News</h3>
+					<ul class="list-divider">
+						
+						<li>
+							<div class="widget-media row">               
+								<div class="span-4">
+									<a href="#">
+										<img src="<?php echo appDir ?>/images/stock-6-thumb.jpg" alt="Theme One"/ >
+									</a>
+								</div> 
+								<div class="span-8">
+									<header class="heading_group">
+										<a href="#">
+											<h3 class="heading-heavy-size-2">Nexus</h3>
+											<h4 class="heading-light-uppercase-brand-1-size-1">Digital Agency Demo</h4>
+										</a>
+									</header>   
+									<div class="widget_controls">
+										<ul class="list-tags-links">
+											<li class="tag"><a href="#">Multi-Page</a></li>
+										</ul>
+									</div>
+								</div>   
+							</div>
+						</li>
+						
+						<li>
+							<div class="widget-media row">               
+								<div class="span-4">
+									<div class="corner-ribbon-green" data-ribbon="New"></div>
+									<a href="#">
+										<img src="<?php echo appDir ?>/images/stock-4-thumb.jpg" alt="Theme One"/ >
+									</a>
+								</div> 
+								<div class="span-8">
+									<header class="heading_group">
+										<a href="#">
+											<h3 class="heading-heavy-size-2">Kayzen</h3>
+											<h4 class="heading-light-uppercase-brand-1-size-1">Original Demo</h4>
+										</a>
+									</header>   
+									<div class="widget_controls">
+										<ul class="list-tags-links">
+											<li class="tag"><a href="#">Multi-Page</a></li>
+											<li class="tag"><a href="#">Parallax</a></li>
+										</ul>
+									</div>
+								</div>   
+							</div>
+						</li>
+						
+						<li>
+							<div class="widget-media row">               
+								<div class="span-4">
+									<a href="#">
+										<img src="<?php echo appDir ?>/images/stock-5-thumb.jpg" alt="Theme One"/ >
+									</a>
+								</div> 
+								<div class="span-8">
+									<header class="heading_group">
+										<a href="#">
+											<h3 class="heading-heavy-size-2">Agenda</h3>
+											<h4 class="heading-light-uppercase-brand-1-size-1">Digital Agency Demo</h4>
+										</a>
+									</header>   
+									<div class="widget_controls">
+										<ul class="list-tags-links">
+											<li class="tag"><a href="#">One-Page</a></li>
+										</ul>
+									</div>
+								</div>   
+							</div>
+						</li>
+						
 					</ul>
 				</li>
 			</ul>

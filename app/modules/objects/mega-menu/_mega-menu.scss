@@ -76,25 +76,6 @@
 				padding-bottom: 0.5em;
 				border-bottom: 1px solid color(greyscale, grey-2);
 			}
-			
-			@include overwrite(widget) {
-				&#{$col-selector} {
-					display: inline-block;
-					&:after {
-						display: none;
-					}
-				}
-			}
-			
-			@include overwrite-sub(group, $parent: widget) {
-				&:not(:last-child) {
-					margin-bottom: 3%;
-				}
-			}
-			
-			@include overwrite-sub(group, $parent: heading) {
-				color: typography(colors, heading);
-			}
 		
 		} // component
 		
@@ -110,6 +91,39 @@
 					}
 				}
 			}
+		}
+			
+		@include overwrite(widget) {
+			&#{$col-selector} {
+				display: inline-block;
+				&:after {
+					display: none;
+				}
+			}
+			a {
+				padding: 0;
+				border: none;
+				color: inherit;
+				&:after {
+					display: none;
+				}
+			}
+		}
+		
+		@include overwrite-sub(group, $parent: widget) {
+			&:not(:last-child) {
+				margin-bottom: 3%;
+			}
+		}
+		
+		@include overwrite-sub(group, $parent: heading) {
+			color: typography(colors, heading);
+		}
+		
+		// reset lightbox links
+		[data-lightbox] {
+			border: none;
+			padding: 0;
 		}
 
 	} // overwrite(navigation)
