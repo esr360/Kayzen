@@ -13,7 +13,7 @@
 						<li>
 							<div class="widget-media row">               
 								<div class="span-4">
-									<div class="corner-ribbon-pink" data-ribbon="Hot"></div>
+									<div class="corner-ribbon-small-pink" data-ribbon="Hot"></div>
 									<a href="#">
 										<img src="<?php echo appDir ?>/images/stock-1-thumb.jpg" alt="Theme One"/ >
 									</a>
@@ -37,7 +37,7 @@
 						<li>
 							<div class="widget-media row">               
 								<div class="span-4">
-									<div class="corner-ribbon-purple" data-ribbon="Featured"></div>
+									<div class="corner-ribbon-small-purple" data-ribbon="Featured"></div>
 									<a href="#">
 										<img src="<?php echo appDir ?>/images/stock-2-thumb.jpg" alt="Theme One"/ >
 									</a>
@@ -92,7 +92,7 @@
 						<li>
 							<div class="widget-media row">               
 								<div class="span-4">
-									<div class="corner-ribbon-green" data-ribbon="New"></div>
+									<div class="corner-ribbon-small-green" data-ribbon="New"></div>
 									<a href="#">
 										<img src="<?php echo appDir ?>/images/stock-4-thumb.jpg" alt="Theme One"/ >
 									</a>
@@ -170,7 +170,7 @@
 						<li>
 							<div class="widget-media row">               
 								<div class="span-4">
-									<div class="corner-ribbon-pink" data-ribbon="Hot"></div>
+									<div class="corner-ribbon-small-pink" data-ribbon="Hot"></div>
 									<a href="#">
 										<img src="<?php echo appDir ?>/images/stock-3-thumb.jpg" alt="Theme One"/ >
 									</a>
@@ -208,7 +208,6 @@
 									<div class="widget_controls">
 										<ul class="list-tags-links">
 											<li class="tag"><a href="#">Multi-Page</a></li>
-											<li class="tag"><a href="#">Parallax</a></li>
 										</ul>
 									</div>
 								</div>   
@@ -232,6 +231,7 @@
 									<div class="widget_controls">
 										<ul class="list-tags-links">
 											<li class="tag"><a href="#">One-Page</a></li>
+											<li class="tag"><a href="#">Parallax</a></li>
 										</ul>
 									</div>
 								</div>   
@@ -270,7 +270,7 @@
 						<li>
 							<div class="widget-media row">               
 								<div class="span-4">
-									<div class="corner-ribbon-green" data-ribbon="New"></div>
+									<div class="corner-ribbon-small-green" data-ribbon="New"></div>
 									<a href="#">
 										<img src="<?php echo appDir ?>/images/stock-4-thumb.jpg" alt="Theme One"/ >
 									</a>
@@ -285,7 +285,6 @@
 									<div class="widget_controls">
 										<ul class="list-tags-links">
 											<li class="tag"><a href="#">Multi-Page</a></li>
-											<li class="tag"><a href="#">Parallax</a></li>
 										</ul>
 									</div>
 								</div>   

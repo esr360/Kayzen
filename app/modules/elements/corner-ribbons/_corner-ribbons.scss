@@ -1,5 +1,5 @@
 //=================================================================
-// Blockquotes
+// Corner Ribbons
 //=================================================================
 
 @mixin corner-ribbons($custom: ()) {
@@ -8,7 +8,7 @@
 	// Config
 	//-------------------------------------------------------------
 
-	$blockquotes: config((
+	$corner-ribbons: config((
 		name            : corner-ribbon
 	), $custom);
 
@@ -18,28 +18,39 @@
 	
 	@include component() {
 		
-		background-image: url("#{$asset-path}/images/corner-ribbon-green.png");
 		background-size: cover;
 		position: absolute;
-		height: 55px;
-		width: 55px;
-		top: -4px;
-		left: -4px;
+		pointer-events: none;
+		height: 7em;
+		width: 7em;
+		top: -0.6em;
+		left: -0.65em;
+		font-size: 1em;
 		&:before {
 			content: attr(data-ribbon);
 			position: absolute;
-			height: 55px;
-			width: 55px;
+			height: 100%;
+			width: 100%;
 			text-align: center;
 			transform: rotate(-45deg);
 			color: white;
 			font-weight: bold;
-			left: 12%;
-    		top: 11%;
-			font-size: font-size(size-1);
+			left: 13%;
+    		top: 13%;
+			font-size: 1em;
 		}
 		
-		// Ribbon Colors
+	//-------------------------------------------------------------
+	// Sizes
+	//-------------------------------------------------------------
+	
+		@include modifier(small) {
+			font-size: 0.7em;
+		}
+		
+	//-------------------------------------------------------------
+	// Colors
+	//-------------------------------------------------------------
 	
 		$ribbon-colors: (
 			green, pink, purple
@@ -47,9 +58,12 @@
 	
 		@each $color in $ribbon-colors {
 			@include modifier(#{$color}) {
-				background-image: url("#{$asset-path}/images/corner-ribbon-#{$color}.png");
+				background-image: url("#{$asset-path}images/corner-ribbons/corner-ribbon-#{$color}.png");
 			}
 		}
+		
+		// default color
+		@include extend(green);
 		
 	} // component
 	
