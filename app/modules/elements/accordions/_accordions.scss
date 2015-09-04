@@ -11,7 +11,7 @@
 	$accordions: config((
 		name                  : accordion,
 		// icon (open/close)
-		icon                  : "\f138", // FontAwesome value
+		icon                  : test, // FontAwesome value
 		icon-color            : rgba(color(greyscale, grey-3), 0.6),
 		icon-active-color     : color(greyscale, white),
 		// each section

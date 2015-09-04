@@ -318,21 +318,62 @@
 				</li>
 			</ul>
 		</li>
+		
 		<li>
 			<a href="#"><i class="navigation_icon fa fa-desktop"></i> Templates</a>
-			<ul>
-				<li><a href="#">Link 1</a></li>
-				<li>
-					<a href="#">Link 2</a>
-					<ul>
-						<li><a href="#">Shop</a></li>
-						<li><a href="#">Contact Us</a></li>
-						<li><a href="#">Portfolio</a></li>
+			<ul class="mega-menu row">
+				
+				<li class="span-3">
+					<h3 class="mega-menu_title heading">Homepages</h3>
+					<ul class="list-arrow">
+						<li><a href="#">Homepage 1</a></li>
+						<li><a href="#">Homepage 2</a></li>
+						<li><a href="#">Homepage 3</a></li>
+						<li><a href="#">Homepage 4</a></li>
+						<li><a href="#">Homepage 5</a></li>
+						<li><a href="#">Homepage 6</a></li>
 					</ul>
 				</li>
-				<li><a href="#">Link 3</a></li>
+				
+				<li class="span-3">
+					<h3 class="mega-menu_title heading">Portfolio/Blog</h3>
+					<ul class="list-arrow">
+						<li><a href="#">Portfolio 1</a></li>
+						<li><a href="#">Portfolio 2</a></li>
+						<li><a href="#">Portfolio Single</a></li>
+						<li><a href="#">Portfolio Single 2</a></li>
+						<li><a href="#">Blog</a></li>
+						<li><a href="#">Blog Single</a></li>
+					</ul>
+				</li>
+				
+				<li class="span-3">
+					<h3 class="mega-menu_title heading">Further Pages</h3>
+					<ul class="list-arrow">
+						<li><a href="#">About Us</a></li>
+						<li><a href="#">Contact Us</a></li>
+						<li><a href="#">Services</a></li>
+						<li><a href="#">Shop</a></li>
+						<li><a href="#">Shop Category</a></li>
+						<li><a href="#">Shop Single</a></li>
+					</ul>
+				</li>
+				
+				<li class="span-3">
+					<h3 class="mega-menu_title heading">Utility Pages</h3>
+					<ul class="list-arrow">
+						<li><a href="#">404</a></li>
+						<li><a href="#">Login/Register</a></li>
+						<li><a href="#">Coming Soon</a></li>
+						<li><a href="#">Page Offline</a></li>
+						<li><a href="#">FAQ</a></li>
+						<li><a href="#">News</a></li>
+					</ul>
+				</li>
+				
 			</ul>
 		</li>
+		
 		<li>
 			<a href="#"><i class="navigation_icon fa fa-star"></i> Modules</a>
 			<ul class="mega-menu row">

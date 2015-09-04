@@ -15,6 +15,20 @@ function breakpoint(media, value) {
 window['baseTransition'] = module['base']['transition'].slice(0,-1) * 1000;
 
 //-----------------------------------------------------------------
+// Disable Mousewheel Scroll
+//-----------------------------------------------------------------
+
+function stopWheel(e){
+    if(!e){ // IE7, IE8, Chrome, Safari
+        e = window.event; 
+    }
+    if(e.preventDefault) { // Chrome, Safari, Firefox
+        e.preventDefault(); 
+    } 
+    e.returnValue = false; // IE7, IE8
+}
+
+//-----------------------------------------------------------------
 
 $(document).ready(function() {
 

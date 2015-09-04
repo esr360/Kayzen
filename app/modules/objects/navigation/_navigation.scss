@@ -195,7 +195,7 @@
 	    } // in side-header
 
 		// Larger Resolutions
-	    @include context((min-width: breakpoint(break-3))) {
+	    @media (min-width: breakpoint(break-3)) {
 	        text-align: option($config, text-align);
 	        > ul {
 	            display: inline-block;

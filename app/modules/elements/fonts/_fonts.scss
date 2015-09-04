@@ -2,6 +2,9 @@
 // Fonts
 //=================================================================
 
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700,900);
+@import url(http://fonts.googleapis.com/css?family=Raleway:300,700,900);
+	
 @mixin fonts($custom: ()) {
 
 	//-------------------------------------------------------------
@@ -18,8 +21,6 @@
 	// Font 1
 	//-------------------------------------------------------------
 	
-	@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700,900);
-	
 	.font-1 {
 	    font-family: typography(typefaces, primary);
 	}
@@ -27,9 +28,6 @@
 	//-------------------------------------------------------------
 	// Font 2
 	//-------------------------------------------------------------
-
-	// Raleway
-	@import url(http://fonts.googleapis.com/css?family=Raleway:300,700,900);
 	
 	.font-2 {
 		font-family: typography(typefaces, secondary);

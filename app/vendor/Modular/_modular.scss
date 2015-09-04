@@ -44,13 +44,12 @@ $component: null;
 	$selectors: ();
 	@each $component in $components {
 		@if $type == flex or $type == static {
-			$selectors: join($selectors, '.#{$component}');
+			$selectors: join($selectors, '.#{$component}', comma);
 		}
 		@if $type == flex or $type == chain {
-			$selectors: join($selectors, '[class*="#{$component}-"]');
+			$selectors: join($selectors, '[class*="#{$component}-"]', comma);
 		}
 	}
-	$selectors: to-string($selectors, ", ");
 	#{$selectors} {
 		@content;
 	}
@@ -83,13 +82,12 @@ $component: null;
 		$selectors: ();
 		@each $sub-component in $sub-components {
 			@if $type == flex or $type == static {
-				$selectors: join($selectors, '.#{$component}_#{$sub-component}');
+				$selectors: join($selectors, '.#{$component}_#{$sub-component}', comma);
 			}
 			@if $type == flex or $type == chain {
-				$selectors: join($selectors, '[class*="#{$component}_#{$sub-component}-"]');
+				$selectors: join($selectors, '[class*="#{$component}_#{$sub-component}-"]', comma);
 			}
 		}
-		$selectors: to-string($selectors, ", ");
 	}
 	@at-root {
 		#{$selectors} {
@@ -127,20 +125,19 @@ $component: null;
 		$selector: #{$component};
 		@if $type == flex or $type == static {
 			@if $special == adjacent-sibling {
-				$selectors: join($selectors, '+ .#{$selector}');
+				$selectors: join($selectors, '+ .#{$selector}', comma);
 			} @else {
-				$selectors: join($selectors, '.#{$selector}');
+				$selectors: join($selectors, '.#{$selector}', comma);
 			}
 		}
 		@if $type == flex or $type == chain {
 			@if $special == adjacent-sibling {
-				$selectors: join($selectors, '+ [class*="#{$selector}-"]');
+				$selectors: join($selectors, '+ [class*="#{$selector}-"]', comma);
 			} @else {
-				$selectors: join($selectors, '[class*="#{$selector}-"]');
+				$selectors: join($selectors, '[class*="#{$selector}-"]', comma);
 			}
 		}
 	}
-	$selectors: to-string($selectors, ", ");
 	#{$selectors} {
 		@content;
 	}
@@ -177,20 +174,19 @@ $component: null;
 		$selector: #{$component}_#{$sub-component};
 		@if $type == flex or $type == static {
 			@if $special == adjacent-sibling {
-				$selectors: join($selectors, '+ .#{$selector}');
+				$selectors: join($selectors, '+ .#{$selector}', comma);
 			} @else {
-				$selectors: join($selectors, '.#{$selector}');
+				$selectors: join($selectors, '.#{$selector}', comma);
 			}
 		}
 		@if $type == flex or $type == chain {
 			@if $special == adjacent-sibling {
-				$selectors: join($selectors, '+ [class*="#{$selector}-"]');
+				$selectors: join($selectors, '+ [class*="#{$selector}-"]', comma);
 			} @else {
-				$selectors: join($selectors, '[class*="#{$selector}-"]');
+				$selectors: join($selectors, '[class*="#{$selector}-"]', comma);
 			}
 		}
 	}
-	$selectors: to-string($selectors, ", ");
 	#{$selectors} {
 		@content;
 	}
@@ -218,7 +214,9 @@ $component: null;
 //	<div class="button-large">...</div>
 
 @mixin modifier($modifiers, $special: null) {
+	
 	$selectors: &;
+	
 	@if length(&) != 1 {
 		@if map-get($config, selector-type) == flex {
 			$selectors: ();
@@ -228,22 +226,21 @@ $component: null;
 			    @if $i == 2 {
 			        $i: 0;
 			    }@else{
-			        $selectors: append($selectors, $item);
+			        $selectors: append($selectors, $item, comma);
 			    }
 			}
-			$selectors: to-string($selectors, ", ");
 		}
 	}
+	
 	@at-root #{$selectors} {
 		$modifier-selectors: ();
 		@each $modifier in $modifiers {
 			@if $special == "not" {
-				$modifier-selectors: join($modifier-selectors, '&:not([class*="-#{$modifier}"])');
+				$modifier-selectors: join($modifier-selectors, '&:not([class*="-#{$modifier}"])', comma);
 			} @else {
-				$modifier-selectors: join($modifier-selectors, '&[class*="-#{$modifier}"]');
+				$modifier-selectors: join($modifier-selectors, '&[class*="-#{$modifier}"]', comma);
 			}
 		}
-		$modifier-selectors: to-string($modifier-selectors, ", ");
 		#{$modifier-selectors} {
 			@content;
 		}
@@ -275,11 +272,9 @@ $component: null;
 
 @mixin nested-modifier($modifiers) {
 	$selectors: ();
-	//variable-exists(setting) and to-string(&) == '%#{$component}-#{$setting}';
 	@each $modifier in $modifiers {
-		$selectors: join($selectors, '&[class*="-#{$modifier}"]');
+		$selectors: join($selectors, '&[class*="-#{$modifier}"]', comma);
 	}
-	$selectors: to-string($selectors, ", ");
 	@at-root #{$selectors} {
 		@content;
 	}
@@ -319,9 +314,8 @@ $component: null;
 		} @else if type-of($modifier) == list {
 			$selectors: ('[class*="#{$component}-"]');
 			@each $item in $modifier {
-				$selectors: join($selectors, '[class*="-#{$item}"]');
+				$selectors: join($selectors, '[class*="-#{$item}"]', comma);
 			}
-			$selectors: to-string($selectors, "");
 			@extend #{$selectors};
 		}
 	}
@@ -336,13 +330,12 @@ $component: null;
 	$selectors: ();
 	@each $item in $context {
 		@if map-get($config, selector-type) == flex or map-get($config, selector-type) == static {
-			$selectors: join($selectors, '.#{$component}');
+			$selectors: join($selectors, '.#{$component}', comma);
 		}
 		@if map-get($config, selector-type) == flex or map-get($config, selector-type) == chain {
-			$selectors: join($selectors, '[class*="#{$component}-"]');
+			$selectors: join($selectors, '[class*="#{$component}-"]', comma);
 		}
 	}
-	$selectors: to-string($selectors, ", ");
 	@if $context == parent-hovered {
 		@at-root {
 			#{$selectors} {
@@ -352,18 +345,6 @@ $component: null;
 					}
 				}
 			}
-		}
-	}
-	@if type-of($context) == map {
-		$selectors: ();
-		@each $query in $context {
-			$media-feature: nth($query, 1);
-			$value: nth($query, 2);
-			$selectors: join($selectors, "(#{$media-feature}: #{$value})");
-		}
-		$selectors: to-string($selectors, " and ");
-		@media #{$selectors} {
-			@content;
 		}
 	}
 }
@@ -479,28 +460,6 @@ $config-JSON: ();
 	@return $map-old;
 	
 } // config()
-
-// To String
-// http://hugogiraudel.com/2013/08/08/advanced-sass-list-functions/
-// Customized for use with Modular
-//-----------------------------------------------------------------
-
-@function to-string($list, $glue: '', $is-nested: false, $recursive: false) {
-	$result: null;
-	@for $i from 1 through length($list) {
-		$e: nth($list, $i);
-		@if type-of($e) == list and $recursive {
-			$result: $result#{to-string($e, $glue, true)};
-		}  
-		@else {
-			$result: if(
-				$i != length($list) or $is-nested, 
-				$result#{$e}#{$glue}, $result#{$e}
-			);
-		}
-	}
-	@return $result;
-}
 
 // Map-Set Function
 // http://git.io/vmBKD

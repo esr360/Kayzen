@@ -91,7 +91,7 @@
 			text-align: option($config, text-align);
 			@extend %horizontal-center;
 			@include vertical-center(absolute);
-			@include context((min-width: breakpoint(break-3))) {
+			@media (min-width: breakpoint(break-3)) {
 				width: option($config, wrapper-width);
 			}
 		}

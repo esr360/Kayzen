@@ -110,7 +110,7 @@ http://github.com/esr360/Kayzen-GS/
 		// No Gutter Row
 		@if option($grid, settings, no-gutter) {
 			@include modifier(no-gutter) {
-				$row-no-gutter: & !global;
+				$row-no-gutter: (&) !global;
 			}
 		}
 		
