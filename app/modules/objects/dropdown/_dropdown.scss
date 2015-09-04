@@ -27,12 +27,7 @@
 		link-hover-color      : color(greyscale, white),
 		link-hover-bg-color   : color(brand, primary),
 		link-active-color     : navigation(a-has-child-color),
-		link-active-bg-color  : navigation(a-has-child-color),
-		
-	// Settings
-	//-------------------------------------------------------------
-	
-		lock-screen           : true
+		link-active-bg-color  : navigation(a-has-child-color)
 		
 	), $custom) !global;
 	

@@ -85,6 +85,7 @@
 	    &.visible {
 	        visibility: visible;
 	        opacity: 1;
+			pointer-events: none;
 	    }
 	}
 
