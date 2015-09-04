@@ -53,6 +53,12 @@
 	
 	@include header((
 		bg                     : transparent,
+		side                   : (
+			default            : false
+		),
+		sticky                 : (
+			default            : true
+		),
 		absolute               : (
 			top-position       : 50px
 		)

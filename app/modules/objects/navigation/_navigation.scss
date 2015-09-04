@@ -218,11 +218,3 @@
 	} // component(navigation)
 
 } // @mixin navigation
-
-//-------------------------------------------------------------
-// Functions
-//-------------------------------------------------------------
-
-@function navigation($option) {
-    @return option($navigation, $option);
-}

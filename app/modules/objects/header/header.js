@@ -44,7 +44,7 @@ if (setting('app-header', 'sticky'))  {
 // Side Header
 //-----------------------------------------------------------------
 
-if (setting('app-header', 'side'))  {
+if (setting('app-header', 'side')) {
 	
 	$(appHeader).prependTo('body');
 	

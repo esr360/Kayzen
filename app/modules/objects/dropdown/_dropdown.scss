@@ -9,7 +9,12 @@
 	//-------------------------------------------------------------
 
 	$dropdown: config((
+		
 		name                  : dropdown,
+		
+	// Options
+	//-------------------------------------------------------------
+	
 		text-align            : left,
 		width                 : 175px,
 		top-position          : 0,
@@ -22,7 +27,13 @@
 		link-hover-color      : color(greyscale, white),
 		link-hover-bg-color   : color(brand, primary),
 		link-active-color     : navigation(a-has-child-color),
-		link-active-bg-color  : navigation(a-has-child-color)
+		link-active-bg-color  : navigation(a-has-child-color),
+		
+	// Settings
+	//-------------------------------------------------------------
+	
+		lock-screen           : true
+		
 	), $custom) !global;
 	
 	//-------------------------------------------------------------

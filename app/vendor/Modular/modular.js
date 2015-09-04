@@ -71,5 +71,11 @@ $.each(module, function(component) {
 //	}
 
 function setting(component, setting) {
-	return $(component).is('[class*="-' + setting + '"]') == true || module[component][setting]['default'] == true;
+	var $setting  = module[component][setting];
+	var $selector = $(component).is('[class*="-' + setting + '"]') == true;
+	if (typeof($setting[Object.keys($setting)[0]]) == 'boolean') {
+		return $selector || $setting['default'] != false;
+	} else {
+		return $selector || $setting != false;
+	}
 }
