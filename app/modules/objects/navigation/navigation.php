@@ -332,7 +332,6 @@
 						<li><a href="#">Homepage 4</a></li>
 						<li><a href="#">Homepage 5</a></li>
 						<li><a href="#">Homepage 6</a></li>
-						<li><a href="#">Homepage 7</a></li>
 					</ul>
 				</li>
 				
@@ -369,6 +368,7 @@
 						<li><a href="#">Page Offline</a></li>
 						<li><a href="#">FAQ</a></li>
 						<li><a href="#">News</a></li>
+						<li><a href="#">Search Results</a></li>
 					</ul>
 				</li>
 				

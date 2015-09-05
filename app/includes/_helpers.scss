@@ -128,6 +128,15 @@
 			margin: 2rem 0;
 		}
 		
+		hr.stripes {
+			height: 10px;    
+			background-image: url("#{$asset-path}/images/stripe-overlay.png");
+			background-repeat: repeat;
+			opacity: 0.3;
+			border: none;
+			margin: 0 auto;
+		}
+		
 	} // horizontal-rules
 
 	//-------------------------------------------------------------

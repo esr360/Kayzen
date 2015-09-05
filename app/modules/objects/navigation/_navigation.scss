@@ -16,10 +16,11 @@
 	//-------------------------------------------------------------
 	
 		text-align               : right,
+		font-size                : 1em,
 		dropdown-icon            : "\f107",
 		//list-item
 		item-gutter              : 0.5em,
-		item-padding             : 0.5em 0.75em,
+		item-padding             : 0.5rem 0.75rem,
 		item-color               : color(greyscale, white),
 		item-bg                  : transparent,
 		item-border              : 1px solid transparent,
@@ -38,7 +39,7 @@
 		// list-item:has-child
 		has-child-hover-color    : color(brand, primary),
 		has-child-hover-bg       : color(greyscale, grey-1),
-		has-child-hover-border   : 1px solid color(greyscale, grey-1),
+		has-child-hover-border   : 1px solid transparent,
 		// when inside optional header-dark modifier
 		header-dark              : (
 			default              : false,
@@ -67,6 +68,8 @@
 
 	// Core Styles
 	//-------------------------------------------------------------
+		
+		font-size: option($config, font-size);
 		
 	    // all levels
 	    li {    

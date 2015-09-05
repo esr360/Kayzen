@@ -86,6 +86,10 @@
 			padding: 5em 0;
 		}
 		
+		@include modifier(flush) {
+			padding-top: 0;
+		}
+		
 	// Sub Components
 	//-------------------------------------------------------------
 	

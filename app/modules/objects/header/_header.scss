@@ -13,6 +13,7 @@
 		// Options
 		bg                   : base(background),
 		height               : 100px,
+		font-size            : 1em,
 		z-index              : 5,
 		// Settings
 		bar                  : false,
@@ -34,7 +35,7 @@
 			bg               : color(greyscale, grey-5),
 			height           : 70px,
 			logo-height      : 28px,
-			text-size        : font-size(size-2) 
+			font-size        : font-size(size-2)
 		)
 	), $custom) !global;
 	
@@ -48,6 +49,7 @@
 	//-------------------------------------------------------------
 	
 		background-color: option($config, bg);
+		font-size: option($config, font-size);
 
 	// Settings
 	//-------------------------------------------------------------
@@ -119,7 +121,7 @@
 				width: 100%;
 				z-index: 12;
 				background: option($config, sticky, bg);
-				font-size: option($config, sticky, text-size);
+				font-size: option($config, sticky, font-size);
 				@include overwrite-sub(wrapper) {
 					height: option($config, sticky, height);
 				}
