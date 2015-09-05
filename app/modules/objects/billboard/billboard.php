@@ -23,8 +23,8 @@
 		<header class="heading_group">
 			<h2 class="heading-uppercase-light-strikethrough-spaced-size-4"><span>Kayzen</span></h2>
 			<h3 class="heading-uppercase-heavy-size-8 font-2"><?php echo $title ?></h3>
-			<?php if ( isset($modulePath) and ! is_null($modulePath) ) { ?>
-			<h4 class="heading-size-2-light"><i><?php echo $modulePath ?></i></h4>
+			<?php if ( isset($tagLine) and ! is_null($tagLine) ) { ?>
+			<h4 class="heading-size-2-light"><i><?php echo $tagLine ?></i></h4>
 			<?php } ?>
 		</header>
 	</div>

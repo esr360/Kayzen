@@ -4,7 +4,7 @@
 	ob_start(); 
 	// page config
 	$title = 'Accordions';
-	$modulePath = 'app/modules/elements/accordions';
+	$tagLine = 'app/modules/elements/accordions';
 ?>
 
 <!DOCTYPE html>

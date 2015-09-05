@@ -4,6 +4,7 @@
 	ob_start(); 
 	// page config
 	$title = 'Awesome Features';
+	$tagLine = 'Theming has never been so fast or efficient';
 ?>
 
 <!DOCTYPE html>
@@ -114,11 +115,11 @@
 		<section class="section-primary" id="page-builder">
 			<div class="container-small text-right">
 				<div class="row">
-					<div class="span-8">
+					<div class="span-7">
 						<header class="heading_group">
 							<h2 class="heading-light-size-6">Drag & Drop Page Builder</h2>
 						</header>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla accumsan neque eros, quis sodales orci tincidunt eget. Morbi vehicula nulla ac ante hendrerit tempus. Donec rutrum arcu a felis ornare, luctus condimentum velit semper.</p>
+						<p>Instantly prototype new pages using predefined modules by using our intuitive drag & drop page builder. Export your pages at the click of a button, ready for you to use in production. No coding knowledge required whatsoever, just use your mouse to drag & drop!</p>
 					</div>
 				</div>
 			</div>
@@ -133,7 +134,7 @@
 						<header class="heading_group">
 							<h2 class="heading-light-size-6">Unique Configuration</h2>
 						</header>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla accumsan neque eros, quis sodales orci tincidunt eget. Morbi vehicula nulla ac ante hendrerit tempus. Donec rutrum arcu a felis ornare, luctus condimentum velit semper.</p>
+						<p>Every configurable aspect of Kayzen can be controlled by simply setting the appropriate value in your project's theme file. Change the complete look and feel of your project instantly by changing only a few settings. You'll be amazed at how much you can change Kayzen's appearance without changing any of the source HTML!</p>
 					</div>
 				</div>
 			</div>
@@ -146,7 +147,7 @@
 						<header class="heading_group">
 							<h2 class="heading-light-size-6">Custom Grid system</h2>
 						</header>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla accumsan neque eros, quis sodales orci tincidunt eget. Morbi vehicula nulla ac ante hendrerit tempus. Donec rutrum arcu a felis ornare, luctus condimentum velit semper.</p>
+						<p>Kayzen doesn't use Bootstrap or any other third party framework - we have developed our own <a href="https://github.com/esr360/Kayzen-GS" target="blank">unique grid system</a> offering you more power than any other grid system out there. Expect no less, Kayzen's grid system is built mobile first and is 100% responsive.</p>
 					</div>
 				</div>
 			</div>
@@ -159,7 +160,7 @@
 						<header class="heading_group">
 							<h2 class="heading-light-size-6">Intelligent Theming</h2>
 						</header>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla accumsan neque eros, quis sodales orci tincidunt eget. Morbi vehicula nulla ac ante hendrerit tempus. Donec rutrum arcu a felis ornare, luctus condimentum velit semper.</p>
+						<p>Create multiple themes for your project and swap them at the change of a variable. Kayzen's unique theming system allows you to rapidly build multiple themes without altering any of the source code. The code for your theme is automatically generated based on the settings you pass in the configuration file.</p>
 					</div>
 				</div>
 			</div>
