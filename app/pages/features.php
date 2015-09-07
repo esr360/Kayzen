@@ -1,7 +1,5 @@
 <?php 
 	include ('../app.php');
-	// start the ouput buffer
-	ob_start(); 
 	// page config
 	$title = 'Awesome Features';
 	$tagLine = 'Theming has never been so fast or efficient';
@@ -99,27 +97,41 @@
 			
 		</section>
 		
-		<section class="section-primary" id="modular-ui" style="background-image: url('<?php echo appDir ?>/images/billboard-2.jpg')">
+		<section class="section-primary hide-overflow" id="modular-ui" style="background-image: url('<?php echo appDir ?>/images/billboard-2.jpg')">
 			<div class="container-small">
 				<div class="row">
-					<div class="span-8">
+					<div class="span-7">
 						<header class="heading_group">
 							<h2 class="heading-light-size-6">100% Modular UI</h2>
 						</header>
-						<p>Kayzen's revolutionary modular structure means that customizing your project's UI has never been easier. With UI elements for every purpose, you can easily include only the ones you need, keeping your assets lighter and your website faster.</p>
+						<p>Kayzen's revolutionary modular structure means that customizing your project has never been easier. With UI elements for every purpose, you can include only the ones you need, keeping your assets lighter and load times faster.</p>
+						<div class="button_group">
+							<a class="button-border-primary-size-2" href="#">View Modules</a>
+							<a class="button-border-size-2" href="#">Learn More</a>
+						</div>
+					</div>
+					<div class="section_graphic span-5 text-center">
+						<img class="span-10" src="<?php echo appDir ?>/images/tablet-base-dark.png" />
 					</div>
 				</div>
 			</div>
 		</section>
 		
 		<section class="section-primary" id="page-builder">
-			<div class="container-small text-right">
+			<div class="container-small">
 				<div class="row">
-					<div class="span-7">
+					<div class="span-5 va-middle text-center">
+						<img class="span-10" src="<?php echo appDir ?>/images/layouts/layout-header-alt.png" alt=""/ >
+					</div>
+					<div class="span-7 va-middle">
 						<header class="heading_group">
 							<h2 class="heading-light-size-6">Drag & Drop Page Builder</h2>
 						</header>
-						<p>Instantly prototype new pages using predefined modules by using our intuitive drag & drop page builder. Export your pages at the click of a button, ready for you to use in production. No coding knowledge required whatsoever, just use your mouse to drag & drop!</p>
+						<p>Instantly create new pages using predefined modules by using our intuitive drag & drop page builder. Export your pages at the click of a button, ready for production. No coding knowledge required, just use your mouse to drag & drop!</p>
+						<div class="button_group">
+							<a class="button-primary-size-2" href="#">View Modules</a>
+							<a class="button-size-2" href="#">Learn More</a>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -130,24 +142,34 @@
 		<section class="section-primary" id="unique-configuration">
 			<div class="container-small">
 				<div class="row">
-					<div class="span-8">
+					<div class="span-7 va-middle">
 						<header class="heading_group">
 							<h2 class="heading-light-size-6">Unique Configuration</h2>
 						</header>
-						<p>Every configurable aspect of Kayzen can be controlled by simply setting the appropriate value in your project's theme file. Change the complete look and feel of your project instantly by changing only a few settings. You'll be amazed at how much you can change Kayzen's appearance without changing any of the source HTML!</p>
+						<p>Every configurable aspect of Kayzen can be controlled by editing a single value in the theme's config file. Change the complete look and feel of your project instantly by changing only a few settings. You'll be amazed at how much you can change Kayzen's appearance without changing any HTML! <a href="#">Learn More</a></p>
+					</div>
+					<div class="span-5 va-middle text-center">
+						<img class="span-10" src="<?php echo appDir ?>/images/layouts/layout-topbar.png" alt=""/ >
 					</div>
 				</div>
 			</div>
 		</section>
 		
-		<section class="section-secondary-overlay" id="custom-grid-system" style="background-image: url('<?php echo appDir ?>/images/billboard-1.jpg')">
+		<section class="reveal section-secondary-overlay hide-overflow" id="custom-grid-system" style="background-image: url('<?php echo appDir ?>/images/billboard-1.jpg')">
 			<div class="container-small text-right">
 				<div class="row">
-					<div class="span-8">
+					<div class="section_graphic span-5 text-center">
+						<img class="span-10" src="<?php echo appDir ?>/images/tablet-base-light.png" />
+					</div>
+					<div class="span-7">
 						<header class="heading_group">
 							<h2 class="heading-light-size-6">Custom Grid system</h2>
 						</header>
-						<p>Kayzen doesn't use Bootstrap or any other third party framework - we have developed our own <a href="https://github.com/esr360/Kayzen-GS" target="blank">unique grid system</a> offering you more power than any other grid system out there. Expect no less, Kayzen's grid system is built mobile first and is 100% responsive.</p>
+						<p>Kayzen doesn't use Bootstrap or any other third party framework - we have developed our own <a href="https://github.com/esr360/Kayzen-GS" target="blank">unique grid system</a> built specifically for Kayzen, offering you more power than any other grid system out there. Expect no less, Kayzen's grid system is built using mobile first principles and is 100% responsive.</p>
+						<div class="button_group">
+							<a class="button-white-size-2" href="#">View Modules</a>
+							<a class="button-border-white-size-2" href="#">Learn More</a>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -156,11 +178,20 @@
 		<section class="section-primary" id="intelligent-theming">
 			<div class="container-small">
 				<div class="row">
-					<div class="span-8">
+					<div class="span-7 va-middle">
 						<header class="heading_group">
 							<h2 class="heading-light-size-6">Intelligent Theming</h2>
 						</header>
 						<p>Create multiple themes for your project and swap them at the change of a variable. Kayzen's unique theming system allows you to rapidly build multiple themes without altering any of the source code. The code for your theme is automatically generated based on the settings you pass in the configuration file.</p>
+						<div class="button_group">
+							<a class="button-primary-size-2" href="#">View Modules</a>
+							<a class="button-size-2" href="#">Learn More</a>
+						</div>
+					</div>
+					<div class="layered-images span-5 va-middle text-center">
+						<img class="span-9" src="<?php echo appDir ?>/images/layouts/layout-topbar.png" alt=""/ >
+						<img class="span-9" src="<?php echo appDir ?>/images/layouts/layout-topbar.png" alt=""/ >
+						<img class="span-9" src="<?php echo appDir ?>/images/layouts/layout-topbar.png" alt=""/ >
 					</div>
 				</div>
 			</div>
@@ -176,14 +207,3 @@
 
 </body>
 </html>
-
-<?php
-$cachefile = "../../features.html";
-$fp = fopen($cachefile, 'w'); 
-// save the contents of output buffer to the file
-fwrite($fp, ob_get_contents()); 
-// close the file
-fclose($fp); 
-// Send the output to the browser
-ob_end_flush(); 
-?>

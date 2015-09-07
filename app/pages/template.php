@@ -1,7 +1,5 @@
 <?php 
 	include ('../app.php');
-	// start the ouput buffer
-	ob_start(); 
 	// page config
 	$title = 'Template';
 ?>
@@ -34,14 +32,3 @@
 
 </body>
 </html>
-
-<?php
-$cachefile = "../../template.html";
-$fp = fopen($cachefile, 'w'); 
-// save the contents of output buffer to the file
-fwrite($fp, ob_get_contents()); 
-// close the file
-fclose($fp); 
-// Send the output to the browser
-ob_end_flush(); 
-?>

@@ -27,7 +27,7 @@
 		vertical-align: middle;
 		padding: 0 1.2em;
 		line-height: 2.4em;
-		font-weight: 400;
+		font-weight: lighter;
 		transition: 0.4s;
 	    border: 1px solid;
 	    border-color: transparent;
@@ -55,10 +55,11 @@
 	
 		@include modifier(border) {
 			background: none;
-			color: color(greyscale, grey-3);
-			border-color: color(greyscale, grey-3);
+			color: base(text-color);
+			border-color: base(text-color);
 			&:hover {
 				color: color(greyscale, white);
+				background: base(text-color);
 			}
 		}
 	

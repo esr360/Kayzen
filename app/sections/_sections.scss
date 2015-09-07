@@ -36,13 +36,12 @@
 	// Modifiers
 	//-------------------------------------------------------------
 
-		@include modifier(primary) {
+		@include modifiers((primary, secondary)) {
 			padding: 6em 0;
 		}
 	
 		@include modifier(secondary) {
 			background: color(brand, primary);
-			padding: 8em 0;
 			> .container {
 				position: relative;
 			}
@@ -99,6 +98,15 @@
 			padding: 7%;
 			background-color: color(greyscale, white);	
 			background-size: cover;
+		}
+		
+		@include sub-component(graphic) {
+			position: relative;
+			> img {
+				position: absolute;
+				transform: translateY(-10%);
+				@extend %horizontal-center;
+			}
 		}
 	
 	} // component(section)
