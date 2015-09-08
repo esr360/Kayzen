@@ -1,5 +1,5 @@
 <!-- Responsive -->
-<section class="section-primary-dot-map">
+<section class="section-primary-dot-map" id="mobile-optimized">
 	
 	<!-- Responsive Header -->
 	<header class="heading_group-large has-icon text-center">
@@ -12,7 +12,7 @@
 		</div>
 	</header>
 	
-	<div class="container">
+	<div class="container-section">
 		
 		<div class="row">
 			
@@ -52,10 +52,27 @@
 			
 			<!-- Responsive Graphics -->
 			<div class="span-6 va-middle text-center">
-				<div class="mobile-graphics span-6">
-					<img class="mobile-graphic-white-left" src="<?php echo appDir ?>/images/mobile-screen.png" alt=""/ >
-					<img class="mobile-graphic-blue-right" src="<?php echo appDir ?>/images/mobile-screen.png" alt=""/ >
-					<img class="mobile-graphic-purple-center" src="<?php echo appDir ?>/images/mobile-screen.png" alt=""/ >
+				<div class="center-xy span-6">
+					<img 
+						class="mobile-graphic-white" 
+						src="<?php echo appDir ?>/images/mobile-screen.png" 
+						data-reveal="transform: translate(-45%, -50%) translateZ(0) scale(0.85)"
+						data-hover="left: -25%"
+						alt=""
+					/ >
+					<img 
+						class="mobile-graphic-blue" 
+						src="<?php echo appDir ?>/images/mobile-screen.png" 
+						data-reveal="transform: translate(45%, -50%) translateZ(0) scale(0.85)"
+						data-hover="right: -25%"
+						alt=""
+					/ >
+					<img 
+						class="mobile-graphic-purple" 
+						src="<?php echo appDir ?>/images/mobile-screen.png" 
+						data-hover="transform: scale(1.05) translateY(-47.5%) translateZ(0)"
+						alt=""
+					/ >
 				</div>
 			</div>
 			

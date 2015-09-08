@@ -11,7 +11,7 @@ Made by @esr360
 
 //@prepros-append plugins/animate-numbers.js
 //@prepros-append plugins/visible.js
-//@prepros-append plugins/k-reveal.js
+//@prepros-append plugins/data-manipulate.js
 //@prepros-append plugins/scroll-reveal.js
 //@prepros-append plugins/scroll-spy.js
  
@@ -290,43 +290,88 @@ Animate Numbers
 
 })(jQuery);
 //=================================================================
-// K-Reveal
+// Data-Manipulate
 //=================================================================
 
-(function ($) {
+function dataM() {
 	
-	$.fn.extend({
+	// define data types
+	var elReveal = $('[data-reveal]'),
+		elReverseReveal = $('[data-reverse-reveal]'),
+		elHover = $('[data-hover]');
 	
-		kReveal: function(options) {
-			
-			var defaults = {  
-			};
-			
-			var options = $.extend(defaults, options);
-			
-			return this.each(function() {
-				
-				var el = this;
-					
-				$(window).bind("load scroll", function() {
-					if ($(el).visible()) {
-						console.log('test');
-					}
-				});
-			
-			});
+	// [data-reveal]
+	elReveal.each(function() {
 		
-		} // kReveal
+		var el = $(this),
+			styles = el.data('reveal');
+							
+		$(window).bind("load scroll", function() {
+			
+			// if element is visible in viewpoint
+			if (el.visible(true)) { // from 'visible.js'
+				el.attr('style', styles);
+			}
+			
+		});	
 	
-	});
-  
-}(jQuery));
+	}); // elReveal
+	
+	// [data-reverse-reveal]
+	elReverseReveal.each(function() {
+		
+		var el = $(this),
+			styles = el.data('reverse-reveal'),
+			cachedStyles = null;
+			
+		// cache current inline styles
+		if (typeof(el.attr('style')) != 'undefined') {
+			var cachedStyles = el.attr('style');
+		}
+		
+		// add new styles to element
+		el.attr('style', styles)
+							
+		$(window).bind("load scroll", function() {
+			// if element is visible in viewpoint
+			if (el.visible(true)) { // from 'visible.js'
+				// reset the styles
+				el.attr('style', cachedStyles);
+			}
+			
+		});	
+	
+	}); // elReverseReveal
+	
+	// [data-hover]
+	elHover.each(function(){
+		
+		var el = $(this),
+			styles = el.data('hover');
+						
+		el.mouseenter(function(){
+			
+			// cache current inline styles
+			cachedStyles = null;
+			if (typeof(el.attr('style')) != 'undefined') {
+				var cachedStyles = el.attr('style');
+			}
+			
+			// combine cached + new styles
+			el.attr('style', cachedStyles + ';' + styles);
+			
+			// remove new styles when move leaves element
+			$(this).mouseleave(function(){
+				el.attr('style', cachedStyles);
+			});
+			
+		});
+			
+	}); // elHover
+	
+} // dataM()
 
-//-----------------------------------------------------------------
-// K-Reveal
-//-----------------------------------------------------------------
-
-$('.reveal').kReveal();
+$(dataM);
 /*
                        _ _ _____                      _   _
                       | | |  __ \                    | | (_)

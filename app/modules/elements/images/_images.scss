@@ -123,48 +123,15 @@
 	// Mobile Graphic
 	//-------------------------------------------------------------
 	
-	.mobile-graphics {
-		position: relative;
-	}
-	
 	@include component(mobile-graphic) {
 	
-		background-image: url("#{$asset-path}/images/mobile-base-blue.png");
 		background-size: 100% 100%;
 		padding: 30% 8%;
-		transition: base(transition);
+		// fix for animations
+		transform: translateZ(0);
 	
-		@include modifier(position) {
-			position: absolute;
-			top: 0;
-			@extend %horizontal-center;
-		}
-	
-		@include modifier(left) {
-			transform: translateX(-45%) translateZ(0) scale(0.85);
-			@include extend(position);
-			&:hover {
-				left: -25%;
-			}
-		}
-	
-		@include modifier(right) {
-			transform: translateX(45%) translateZ(0) scale(0.85);
-			@include extend(position);
-			&:hover {
-				right: -25%;
-			}
-		}
-	
-		@include modifier(center) {
-			position: relative;
-			transform: translateZ(0);
-			&:hover {
-				transform: scale(1.05) translateZ(0);
-			}
-		}
-	
-		// Phone Colors
+	// Mobile Colors
+	//-------------------------------------------------------------
 	
 		$phone-colors: (
 			blue, green, purple, red, white, yellow
@@ -175,26 +142,21 @@
 				background-image: url("#{$asset-path}/images/mobile-base-#{$color}.png");
 			}
 		}
+		
+		//Default
+		background-image: url("#{$asset-path}/images/mobile-base-blue.png");
 	
 	} // component(mobile-graphic)
 		
 	//-------------------------------------------------------------
-	// Layered
+	// Horizontal & Vertical Centered Images
 	//-------------------------------------------------------------
 	
-	.layered-images {
+	.center-xy {
 		position: relative;
 		> img {
 			@include vertical-center(absolute);
 			@extend %horizontal-center;
-			&:nth-child(1) {
-				z-index: 0;
-				transform: translate(-10%, -60%);
-			}
-			&:nth-child(2) {
-				z-index: 3;
-				transform: translate(10%, -40%);
-			}
 		}
 	}
 	

@@ -4,10 +4,14 @@
 	<a href="#" target="blank" class="button-white-border-size-4">Get Kayzen Now</a>
 </section>
 <?php } else { ?>
-<section class="section-secondary promo-banner">
+<section class="section-secondary promo-banner">	
+	<?php if ($container == 'small') { ?>
+	<div class="container-small">
+	<?php } else { ?>
 	<div class="container">
+	<?php } ?>
 		<div class="row">
-			<div class="span-8 va-middle">
+			<div class="span-7 va-middle">
 				<header class="heading_group">
 					<h4 class="heading-size-5">
 						Start your <b class="font-2">new project</b> with a <em>fresh</em> approach...
@@ -15,7 +19,7 @@
 					<p class="heading">leave your visitors with an experience to remember and <a href="#" target="blank">Purchase Nexus</a> now.</p>
 				</header>
 			</div>
-			<div class="span-4 va-middle text-right button_group">
+			<div class="span-5 va-middle text-right button_group">
 				<a href="#" target="blank" class="button-white-border-size-3">Purchase Theme</a>
 				<span class="text-sep">or</span>
 				<a href="#about">Learn More</a>

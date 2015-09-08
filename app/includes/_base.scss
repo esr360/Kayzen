@@ -43,6 +43,13 @@
 	    line-height: base(line-height);
 	}
 
+	// animate data-manipulate.js elements
+	[data-reveal],
+	[data-reverse-reveal],
+	[data-hover] {
+		transition: base(transition);
+	}
+
 	//-------------------------------------------------------------
 	// Structure
 	//-------------------------------------------------------------
@@ -62,6 +69,10 @@
 	        width: option($grid, options, full-width);
 	        max-width: option($grid, options, full-width);
 	    }
+		
+		@include modifier(section) {
+			padding: 4em 0;
+		}
 	
 	} // component(container)
 

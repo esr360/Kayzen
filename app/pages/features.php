@@ -81,12 +81,12 @@
 					</a>
 					
 					<!-- Feature 6 -->
-					<a class="widget-block-borderLeft span-4" href="#mobile-optimised">
+					<a class="widget-block-borderLeft span-4" href="#mobile-optimized">
 						<div class="widget_icon-inline icon-plain-size-7">
 							<i class="fa fa-tablet"></i>
 						</div>
 						<header class="widget_header-inline heading_group">
-							<h3 class="heading">Mobile Optimised</h3>
+							<h3 class="heading">Mobile Optimized</h3>
 							<h4 class="heading-light-uppercase-brand-1-size-1">Perfect On Any Device</h4>
 						</header>
 					</a>
@@ -111,7 +111,12 @@
 						</div>
 					</div>
 					<div class="section_graphic span-5 text-center">
-						<img class="span-10" src="<?php echo appDir ?>/images/tablet-base-dark.png" />
+						<img 
+							class="span-10" 
+							src="<?php echo appDir ?>/images/tablet-base-dark.png"
+							data-reverse-reveal="transform: translateY(50%)"
+							alt=""
+						/>
 					</div>
 				</div>
 			</div>
@@ -155,11 +160,16 @@
 			</div>
 		</section>
 		
-		<section class="reveal section-secondary-overlay hide-overflow" id="custom-grid-system" style="background-image: url('<?php echo appDir ?>/images/billboard-1.jpg')">
+		<section class="section-secondary-overlay hide-overflow" id="custom-grid-system" style="background-image: url('<?php echo appDir ?>/images/billboard-1.jpg')">
 			<div class="container-small text-right">
 				<div class="row">
 					<div class="section_graphic span-5 text-center">
-						<img class="span-10" src="<?php echo appDir ?>/images/tablet-base-light.png" />
+						<img 
+							class="span-10" 
+							src="<?php echo appDir ?>/images/tablet-base-light.png" 
+							data-reverse-reveal="transform: translateY(50%)"
+							alt=""
+						/>
 					</div>
 					<div class="span-7">
 						<header class="heading_group">
@@ -188,13 +198,70 @@
 							<a class="button-size-2" href="#">Learn More</a>
 						</div>
 					</div>
-					<div class="layered-images span-5 va-middle text-center">
+					<div class="center-xy span-5 va-middle text-center">
+						<img 
+							class="span-9" 
+							src="<?php echo appDir ?>/images/layouts/layout-topbar.png" 
+							data-reveal="transform: translate(-10%, -60%)"
+							alt=""
+						/ >
 						<img class="span-9" src="<?php echo appDir ?>/images/layouts/layout-topbar.png" alt=""/ >
-						<img class="span-9" src="<?php echo appDir ?>/images/layouts/layout-topbar.png" alt=""/ >
-						<img class="span-9" src="<?php echo appDir ?>/images/layouts/layout-topbar.png" alt=""/ >
+						<img 
+							class="span-9" 
+							src="<?php echo appDir ?>/images/layouts/layout-topbar.png"
+							data-reveal="transform: translate(10%, -40%)"
+							alt=""/ >
 					</div>
 				</div>
 			</div>
+		</section>
+		
+		<?php $container = 'small'; include ('../sections/promo-banner.php'); ?>
+		
+		<section class="section-primary" id="mobile-optimized">
+		
+			<div class="container-small">
+				<div class="row-block">
+					<!-- Responsive Graphics -->
+					<div class="span-5 va-middle text-center">
+						<div class="span-10">
+							<div class="center-xy span-6 va-middle">
+								<img 
+									class="mobile-graphic-white" 
+									src="<?php echo appDir ?>/images/mobile-screen.png" 
+									data-reveal="transform: translate(-45%, -50%) translateZ(0) scale(0.85)"
+									data-hover="left: -25%"
+									alt=""
+								/ >
+								<img 
+									class="mobile-graphic-blue" 
+									src="<?php echo appDir ?>/images/mobile-screen.png" 
+									data-reveal="transform: translate(45%, -50%) translateZ(0) scale(0.85)"
+									data-hover="right: -25%"
+									alt=""
+								/ >
+								<img 
+									class="mobile-graphic-purple" 
+									src="<?php echo appDir ?>/images/mobile-screen.png" 
+									data-hover="transform: scale(1.05) translateY(-47.5%) translateZ(0)"
+									alt=""
+								/ >
+							</div>
+						</div>
+					</div>
+					<div class="span-7 va-middle">
+						<header class="heading_group">
+							<h2 class="heading-light-size-6">Mobile Optimized</h2>
+						</header>
+						<p>Create multiple themes for your project and swap them at the change of a variable. Kayzen's unique theming system allows you to rapidly build multiple themes without altering any of the source code. The code for your theme is automatically generated based on the settings you pass in the configuration file.</p>
+						<div class="button_group">
+							<a class="button-primary-size-2" href="#">View Modules</a>
+							<a class="button-size-2" href="#">Learn More</a>
+						</div>
+					</div>
+				</div>
+			</div>
+				
 		</section>
 
 		<?php include ('../modules/objects/footer/footer.php'); ?>
