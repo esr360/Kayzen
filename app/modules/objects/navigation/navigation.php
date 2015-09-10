@@ -325,7 +325,7 @@
 				
 				<li class="span-3">
 					<h3 class="mega-menu_title heading">Homepages</h3>
-					<ul class="list-overflow-arrow" data-list-height="8">
+					<ul class="list-overflow-arrow" data-list-height="6">
 						<li><a href="#">Homepage 1</a></li>
 						<li><a href="#">Homepage 2</a></li>
 						<li><a href="#">Homepage 3</a></li>
@@ -337,7 +337,7 @@
 				
 				<li class="span-3">
 					<h3 class="mega-menu_title heading">Portfolio/Blog</h3>
-					<ul class="list-overflow-arrow" data-list-height="8">
+					<ul class="list-overflow-arrow" data-list-height="6">
 						<li><a href="#">Portfolio 1</a></li>
 						<li><a href="#">Portfolio 2</a></li>
 						<li><a href="#">Portfolio Single</a></li>
@@ -349,7 +349,7 @@
 				
 				<li class="span-3">
 					<h3 class="mega-menu_title heading">Further Pages</h3>
-					<ul class="list-overflow-arrow" data-list-height="8">
+					<ul class="list-overflow-arrow" data-list-height="6">
 						<li><a href="#">About Us</a></li>
 						<li><a href="#">About Us 2</a></li>
 						<li><a href="#">Contact Us</a></li>
@@ -364,7 +364,7 @@
 				
 				<li class="span-3">
 					<h3 class="mega-menu_title heading">Utility Pages</h3>
-					<ul class="list-overflow-arrow" data-list-height="8">
+					<ul class="list-overflow-arrow" data-list-height="6">
 						<li><a href="#">404</a></li>
 						<li><a href="#">Login/Register</a></li>
 						<li><a href="#">Coming Soon</a></li>

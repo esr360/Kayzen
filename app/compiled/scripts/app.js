@@ -10,7 +10,6 @@ Made by @esr360
 //-----------------------------------------------------------------
 
 //@prepros-append plugins/animate-numbers.js
-//@prepros-append plugins/visible.js
 //@prepros-append plugins/data-manipulate.js
 //@prepros-append plugins/scroll-reveal.js
 //@prepros-append plugins/scroll-spy.js
@@ -220,86 +219,36 @@ Animate Numbers
 
 }(jQuery));
 
-(function($){
-
-    /**
-     * Copyright 2012, Digital Fusion
-     * Licensed under the MIT license.
-     * http://teamdf.com/jquery-plugins/license/
-     *
-     * @author Sam Sehnert
-     * @desc A small plugin that checks whether elements are within
-     *       the user visible viewport of a web browser.
-     *       only accounts for vertical position, not horizontal.
-     */
-	 
-    var $w = $(window);
-    $.fn.visible = function(partial,hidden,direction){
-
-        if (this.length < 1)
-            return;
-
-        var $t        = this.length > 1 ? this.eq(0) : this,
-            t         = $t.get(0),
-            vpWidth   = $w.width(),
-            vpHeight  = $w.height(),
-            direction = (direction) ? direction : 'both',
-            clientSize = hidden === true ? t.offsetWidth * t.offsetHeight : true;
-
-        if (typeof t.getBoundingClientRect === 'function'){
-
-            // Use this native browser method, if available.
-            var rec = t.getBoundingClientRect(),
-                tViz = rec.top    >= 0 && rec.top    <  vpHeight,
-                bViz = rec.bottom >  0 && rec.bottom <= vpHeight,
-                lViz = rec.left   >= 0 && rec.left   <  vpWidth,
-                rViz = rec.right  >  0 && rec.right  <= vpWidth,
-                vVisible   = partial ? tViz || bViz : tViz && bViz,
-                hVisible   = partial ? lViz || rViz : lViz && rViz;
-
-            if(direction === 'both')
-                return clientSize && vVisible && hVisible;
-            else if(direction === 'vertical')
-                return clientSize && vVisible;
-            else if(direction === 'horizontal')
-                return clientSize && hVisible;
-        } else {
-
-            var viewTop         = $w.scrollTop(),
-                viewBottom      = viewTop + vpHeight,
-                viewLeft        = $w.scrollLeft(),
-                viewRight       = viewLeft + vpWidth,
-                offset          = $t.offset(),
-                _top            = offset.top,
-                _bottom         = _top + $t.height(),
-                _left           = offset.left,
-                _right          = _left + $t.width(),
-                compareTop      = partial === true ? _bottom : _top,
-                compareBottom   = partial === true ? _top : _bottom,
-                compareLeft     = partial === true ? _right : _left,
-                compareRight    = partial === true ? _left : _right;
-
-            if(direction === 'both')
-                return !!clientSize && ((compareBottom <= viewBottom) && (compareTop >= viewTop)) && ((compareRight <= viewRight) && (compareLeft >= viewLeft));
-            else if(direction === 'vertical')
-                return !!clientSize && ((compareBottom <= viewBottom) && (compareTop >= viewTop));
-            else if(direction === 'horizontal')
-                return !!clientSize && ((compareRight <= viewRight) && (compareLeft >= viewLeft));
-        }
-    };
-
-})(jQuery);
 //=================================================================
 // Data-Manipulate
 //=================================================================
-
+		
 function dataM() {
 	
 	// define data types
 	var elReveal = $('[data-reveal]'),
 		elReverseReveal = $('[data-reverse-reveal]'),
-		elHover = $('[data-hover]');
-	
+		elHover = $('[data-hover]'),
+		elActive = $('.inactive');
+		
+	// function to decide if element is in viewport
+	$.fn.visible = function(whole){
+		// if the entire element is in view
+		if (whole) {
+			var a = this.offset().top + this.height();
+		// if any part of the element is in view
+		} else {
+			var a = this.offset().top;
+		}
+		var b = $(window).scrollTop() + $(window).height();
+		// is the element in the viewport?
+		if (a < b) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+
 	// [data-reveal]
 	elReveal.each(function() {
 		
@@ -309,7 +258,7 @@ function dataM() {
 		$(window).bind("load scroll", function() {
 			
 			// if element is visible in viewpoint
-			if (el.visible(true)) { // from 'visible.js'
+			if (el.visible(true)) {
 				el.attr('style', styles);
 			}
 			
@@ -334,7 +283,7 @@ function dataM() {
 							
 		$(window).bind("load scroll", function() {
 			// if element is visible in viewpoint
-			if (el.visible(true)) { // from 'visible.js'
+			if (el.visible(false)) {
 				// reset the styles
 				el.attr('style', cachedStyles);
 			}
@@ -360,7 +309,7 @@ function dataM() {
 			// combine cached + new styles
 			el.attr('style', cachedStyles + ';' + styles);
 			
-			// remove new styles when move leaves element
+			// remove new styles when mouse leaves element
 			$(this).mouseleave(function(){
 				el.attr('style', cachedStyles);
 			});
@@ -368,6 +317,18 @@ function dataM() {
 		});
 			
 	}); // elHover
+	
+	// .inactive
+	elActive.each(function(){
+		
+		// if element is visible in viewpoint
+		if ($(this).visible(true)) {
+			$(this)
+				.removeClass('inactive')
+				.addClass('active');
+		}
+		
+	}); // elActive
 	
 } // dataM()
 

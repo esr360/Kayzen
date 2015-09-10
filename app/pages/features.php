@@ -97,7 +97,7 @@
 			
 		</section>
 		
-		<section class="section-primary hide-overflow" id="modular-ui" style="background-image: url('<?php echo appDir ?>/images/billboard-2.jpg')">
+		<section class="inactive section-primary hide-overflow" id="modular-ui" style="background-image: url('<?php echo appDir ?>/images/billboard-2.jpg')">
 			<div class="container-small">
 				<div class="row">
 					<div class="span-7">
@@ -160,7 +160,11 @@
 			</div>
 		</section>
 		
-		<section class="section-secondary-overlay hide-overflow" id="custom-grid-system" style="background-image: url('<?php echo appDir ?>/images/billboard-1.jpg')">
+		<section 
+			class="section-secondary-overlay hide-overflow" 
+			id="custom-grid-system" 
+			style="background-image: url('<?php echo appDir ?>/images/billboard-1.jpg')
+		">
 			<div class="container-small text-right">
 				<div class="row">
 					<div class="section_graphic span-5 text-center">

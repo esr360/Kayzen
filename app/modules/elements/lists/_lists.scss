@@ -105,8 +105,8 @@
 		
 		@include modifier(overflow) {
 			overflow: auto;
-			&[data-list-height="8"] {
-				max-height: (2.15em) * 8;
+			&[data-list-height="6"] {
+				max-height: (2.15em) * 6;
 			}
 		}
 		

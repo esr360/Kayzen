@@ -18,7 +18,7 @@
 		<div class="widget_group row-magic text-center">
 			
 			<!-- Feature 1 -->
-			<div class="widget-border-block-scale span">
+			<div class="widget-borderTop-highlight-block-scale span">
 				<div class="widget_icon icon-plain-size-9">
 					<i class="fa fa-desktop"></i>
 				</div>
@@ -30,7 +30,7 @@
 			</div>
 			
 			<!-- Feature 2 -->
-			<div class="widget-border-block-scale span">
+			<div class="widget-borderTop-highlight-block-scale span">
 				<div class="widget_icon icon-plain-size-9">
 					<i class="fa fa-clipboard"></i>
 				</div>
@@ -42,7 +42,7 @@
 			</div>
 			
 			<!-- Feature 3 -->
-			<div class="widget-border-block-scale span">
+			<div class="widget-borderTop-highlight-block-scale span">
 				<div class="widget_icon icon-plain-size-9">
 					<i class="fa fa-photo"></i>
 				</div>
@@ -54,7 +54,7 @@
 			</div>
 			
 			<!-- Feature 4 -->
-			<div class="widget-border-block-scale span">
+			<div class="widget-borderTop-highlight-block-scale span">
 				<div class="widget_icon icon-plain-size-9">
 					<i class="fa fa-eyedropper"></i>
 				</div>
