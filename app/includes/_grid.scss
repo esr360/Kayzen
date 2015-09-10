@@ -27,7 +27,7 @@ http://github.com/esr360/Kayzen-GS/
 			gutter          : 3%,
 			col-collapse    : 940px,
 			row-namespace   : "row",
-			col-namespace   : "span"	
+			col-namespace   : "span",
 		),
 		settings: (
 			old-ie          : true,
@@ -38,7 +38,8 @@ http://github.com/esr360/Kayzen-GS/
 			flow-columns    : true,
 			magic-columns   : true,
 			block-columns   : true,
-			no-gutter       : true
+			no-gutter       : true,
+			reverse-columns : true
 		),
 		breakpoints: (
 			break-0         : 0px,
@@ -133,7 +134,7 @@ http://github.com/esr360/Kayzen-GS/
 				}
 				> #{$col-selector} {
 					margin-left: option($grid, options, gutter);
-					&:not([class*="break"]) {
+					&:not([class*="collapse"]) {
 						@if option($grid, settings, responsive) {
 							@if not option($grid, settings, mobile-first) {
 								@media (max-width: option($grid, options, col-collapse)) {
@@ -149,7 +150,7 @@ http://github.com/esr360/Kayzen-GS/
 		// Magic Columns Row
 		@if option($grid, settings, magic-columns) {
 			@include modifier(magic) {
-				> #{$col-selector}:not([class*="break"]) {	
+				> #{$col-selector}:not([class*="collapse"]) {	
 					@include magic-column((
 						semantic: false
 					));
@@ -160,7 +161,7 @@ http://github.com/esr360/Kayzen-GS/
 		// Block Columns Row
 		@if option($grid, settings, block-columns) {
 			@include modifier(block) {
-				> #{$col-selector}:not([class*="break"]) {			
+				> #{$col-selector}:not([class*="collapse"]) {			
 					@if option($grid, settings, mobile-first) {
 						@media (min-width: option($grid, options, col-collapse)) {
 							display: table-cell;
@@ -178,7 +179,7 @@ http://github.com/esr360/Kayzen-GS/
 		// Default Stacking
 		@if option($grid, settings, responsive) {
 			@media (#{$scale}-width: option($grid, options, col-collapse)) {
-				&:not([class*="break"]):not([class*="flow"]) {
+				&:not([class*="collapse"]):not([class*="flow"]) {
 					@include stack-columns;
 				}
 			}
@@ -188,7 +189,7 @@ http://github.com/esr360/Kayzen-GS/
 		@if option($grid, settings, responsive) and option($grid, settings, column-stacking) {
 			@each $bp, $width in option($grid, breakpoints) {
 				@media (#{$scale}-width: $width) {
-					&.#{$bp} {
+					&.collapse-#{$bp} {
 						@include stack-columns;
 						@if option($grid, settings, mobile-first) {
 							@include modifier(block) {
@@ -200,6 +201,21 @@ http://github.com/esr360/Kayzen-GS/
 					}
 				}
 			} 
+		}
+		
+		// Reverse Column Order
+		@if option($grid, settings, reverse-columns) {
+			@each $bp, $width in option($grid, breakpoints) {
+				@media (#{$scale}-width: $width) {
+					&.reverse-#{$bp} {
+						transform: rotate(180deg);
+						text-align: right;
+						> #{$col-selector} {
+							transform: scale(-1);
+						}
+					}
+				}
+			}
 		}
 		
 	} // component(row)
@@ -251,7 +267,7 @@ http://github.com/esr360/Kayzen-GS/
 			}	
 		}
 		
-	// Custom width overrides
+	// Custom Width Overrides
 	//-------------------------------------------------------------
 	
 		@if option($grid, settings, responsive) and option($grid, settings, width-override) {
@@ -278,7 +294,7 @@ http://github.com/esr360/Kayzen-GS/
 			}
 		
 		} //@if (responsive) & (width-override)
-		
+	
 	} // $col-selector
 	
 } // @mixin grid
@@ -361,11 +377,11 @@ http://github.com/esr360/Kayzen-GS/
 				width: column-width($i, option($grid, options, columns));
 			}
 		}
-		> #{$col-selector}:not([class*="break"]) {
+		> #{$col-selector}:not([class*="collapse"]) {
 			@include gutter;
 		}
 	} @else {
-		> #{$col-selector}:not([class*="break"]) {
+		> #{$col-selector}:not([class*="collapse"]) {
 			width: 100%;
 			margin-left: 0;
 			display: block;

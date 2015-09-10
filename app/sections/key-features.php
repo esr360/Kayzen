@@ -1,5 +1,5 @@
 <!-- Key Features -->
-<section class="section inactive" id="key-features">
+<section class="section" id="key-features">
 	
 	<!-- Key Features Header -->
 	<header class="heading_group-block has-icon text-center">

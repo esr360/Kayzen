@@ -159,6 +159,10 @@
 				line-height: 0.8;
 				@include vertical-rhythm;
 			}
+			
+			@include overwrite-sub(group, $parent: widget, $special: adjacent-sibling) {
+				border-bottom: 1px solid color(greyscale, grey-2);
+			}
 	
 			.lede {
 				color: color(greyscale, grey-4);
