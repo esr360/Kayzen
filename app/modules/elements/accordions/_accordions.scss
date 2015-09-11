@@ -10,6 +10,7 @@
 
 	$accordions: config((
 		name                  : accordion,
+		output-JSON           : true,
 		// icon (open/close)
 		icon                  : test, // FontAwesome value
 		icon-color            : rgba(color(greyscale, grey-3), 0.6),

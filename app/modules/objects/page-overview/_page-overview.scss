@@ -10,6 +10,7 @@
 
 	$page-overview: config((
 		name            : page-overview,
+		output-JSON     : true,
 		position        : left
 	), $custom);
 	

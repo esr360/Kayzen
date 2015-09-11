@@ -437,6 +437,9 @@ $extend-settings: true;
 // Module configuration
 //-----------------------------------------------------------------
 
+// output config to JSON by default?
+$output-JSON: false;
+
 $config-JSON: ();
 
 @function config($map-old, $map-new) {
@@ -444,6 +447,7 @@ $config-JSON: ();
 	$map-old: map-merge((
 		selector-type   : $type,
 		extend-settings : $extend-settings,
+		output-JSON     : $output-JSON
 	), $map-old);
 	
 	$map-old: map-merge-deep($map-old, $map-new);
@@ -451,11 +455,13 @@ $config-JSON: ();
 	// Store merged map in a variable
 	$config: $map-old !global;
 	
-	// Output options to JSON
-	$config-JSON: map-merge-deep(
-		(map-get($map-old, name): ($map-old)), 
-		$config-JSON
-	) !global;
+	@if option($map-old, output-JSON) {
+		// Output options to JSON
+		$config-JSON: map-merge-deep(
+			(map-get($map-old, name): ($map-old)), 
+			$config-JSON
+		) !global;
+	}
 	
 	// Return merged map
 	@return $map-old;

@@ -10,6 +10,7 @@
 
 	$base: config((
 		name             : base,
+		output-JSON      : true,
 		background       : color(greyscale, grey-1),
 		font-family      : typography(typefaces, primary),
 		text-color       : typography(colors, base),

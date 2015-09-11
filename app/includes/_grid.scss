@@ -18,6 +18,7 @@ http://github.com/esr360/Kayzen-GS/
 	
 	$grid: config((
 		name                : grid,
+		output-JSON         : true,
 		options: (
 			base-width      : 1200px,
 			max-width       : 90%,

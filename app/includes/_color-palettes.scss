@@ -10,6 +10,7 @@
 
 	$palettes: config((	
 		name            : palettes,	
+		output-JSON     : true,
 		greyscale: (
 			white       : #ffffff,
 			grey-1      : #f8f8f8,
