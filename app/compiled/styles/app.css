@@ -1388,7 +1388,6 @@ body {
 .site-overlay.visible {
   visibility: visible;
   opacity: 1;
-  pointer-events: none;
 }
 
 *, *:before, *:after {
@@ -3292,6 +3291,7 @@ progress.progress-alt::-moz-progress-bar {
   padding: 4% 2%;
 }
 [class*="widget-"][class*="-borderTop"] {
+  border: 0;
   border-top: 0.6em solid rgba(0, 0, 0, 0.15);
 }
 [class*="widget-"][class*="-borderTop"][class*="-highlight"] {
@@ -3460,6 +3460,7 @@ progress.progress-alt::-moz-progress-bar {
   -webkit-transform: translate3d(0, 0, 0);
           transform: translate3d(0, 0, 0);
   box-shadow: inset -10px 0 6px -9px rgba(0, 0, 0, 0.7);
+  font-size: 0.83em;
 }
 .flyout-container ul {
   padding: 0;
@@ -3730,7 +3731,6 @@ progress.progress-alt::-moz-progress-bar {
   position: absolute;
   margin: auto;
   padding: 1.5em;
-  width: 1200px;
   background: #f8f8f8;
   border-bottom: 0.6em solid #9B58B5;
 }

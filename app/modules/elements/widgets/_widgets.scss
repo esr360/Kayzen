@@ -81,6 +81,7 @@
 		}
 		
 		@include modifier(borderTop) {
+			border: 0; // reset border
 			border-top: 0.6em solid rgba(black, 0.15);
 			@include nested-modifier(highlight) {
 				border-top-color: color(brand, primary);

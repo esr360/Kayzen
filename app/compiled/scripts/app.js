@@ -4849,20 +4849,24 @@ if (setting('app-header', 'sticky'))  {
 	
 	function stickHeader() {
 		$(appHeader).addClass('fixed');
-		navDropdown.hover(
-			function(){ 
-				$("#site-overlay").addClass('visible');
-			},
-			function(){ 
-				$("#site-overlay").removeClass('visible');
-			}
-		)
+		if (!$('body').hasClass('flyout-active')) {
+			navDropdown.hover(
+				function(){ 
+					$("#site-overlay").addClass('visible');
+				},
+				function(){ 
+					$("#site-overlay").removeClass('visible');
+				}
+			);
+		}
 	}
 	
 	function unStickHeader() {
 		$(appHeader).removeClass('fixed');
 		navDropdown.unbind('mouseenter mouseleave');
-		$("#site-overlay").removeClass('visible');
+		if (!$('body').hasClass('flyout-active')) {
+			$("#site-overlay").removeClass('visible');
+		}
 	}
 	
 	$(window).on("load scroll", function(e) {
