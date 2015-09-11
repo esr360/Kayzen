@@ -455,8 +455,8 @@ $config-JSON: ();
 	// Store merged map in a variable
 	$config: $map-old !global;
 	
+	// Output options to JSON
 	@if option($map-old, output-JSON) {
-		// Output options to JSON
 		$config-JSON: map-merge-deep(
 			(map-get($map-old, name): ($map-old)), 
 			$config-JSON

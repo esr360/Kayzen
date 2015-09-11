@@ -3390,38 +3390,6 @@ progress.progress-alt::-moz-progress-bar {
   margin-left: 0.4em;
 }
 
-.flyout-trigger {
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
-  z-index: 14;
-}
-.flyout-trigger, .flyout-trigger .fa {
-  cursor: pointer;
-}
-.flyout-trigger .fa {
-  -webkit-transition: 0.4s;
-          transition: 0.4s;
-  -webkit-transform-origin: 50% 0;
-      -ms-transform-origin: 50% 0;
-          transform-origin: 50% 0;
-}
-.flyout-trigger .nav-close {
-  -webkit-transform: scale(0) translateY(-50%);
-      -ms-transform: scale(0) translateY(-50%);
-          transform: scale(0) translateY(-50%);
-}
-.flyout-trigger.active .nav-open {
-  -webkit-transform: scale(0) translateY(-50%);
-      -ms-transform: scale(0) translateY(-50%);
-          transform: scale(0) translateY(-50%);
-}
-.flyout-trigger.active .nav-close {
-  -webkit-transform: scale(1) translateY(-50%);
-      -ms-transform: scale(1) translateY(-50%);
-          transform: scale(1) translateY(-50%);
-}
-
 .flyout-container {
   position: fixed;
   width: 350px;
@@ -3478,6 +3446,38 @@ progress.progress-alt::-moz-progress-bar {
 
 .flyout-visible {
   z-index: 13;
+}
+
+.flyout-trigger, [class*="flyout-trigger-"] {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  z-index: 14;
+}
+.flyout-trigger, .flyout-trigger .fa, [class*="flyout-trigger-"], [class*="flyout-trigger-"] .fa {
+  cursor: pointer;
+}
+.flyout-trigger .fa, [class*="flyout-trigger-"] .fa {
+  -webkit-transition: 0.4s;
+          transition: 0.4s;
+  -webkit-transform-origin: 50% 0;
+      -ms-transform-origin: 50% 0;
+          transform-origin: 50% 0;
+}
+.flyout-trigger .nav-close, [class*="flyout-trigger-"] .nav-close {
+  -webkit-transform: scale(0) translateY(-50%);
+      -ms-transform: scale(0) translateY(-50%);
+          transform: scale(0) translateY(-50%);
+}
+.flyout-trigger.active .nav-open, [class*="flyout-trigger-"].active .nav-open {
+  -webkit-transform: scale(0) translateY(-50%);
+      -ms-transform: scale(0) translateY(-50%);
+          transform: scale(0) translateY(-50%);
+}
+.flyout-trigger.active .nav-close, [class*="flyout-trigger-"].active .nav-close {
+  -webkit-transform: scale(1) translateY(-50%);
+      -ms-transform: scale(1) translateY(-50%);
+          transform: scale(1) translateY(-50%);
 }
 
 .footer, [class*="footer-"] {

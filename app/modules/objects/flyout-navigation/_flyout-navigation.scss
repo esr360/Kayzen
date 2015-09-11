@@ -2,6 +2,8 @@
 // Flyout Navigation
 //=================================================================
 
+@import "flyout-trigger";
+
 @mixin flyout-navigation($custom: ()) {
 
 	//-------------------------------------------------------------
@@ -15,34 +17,6 @@
 	//-------------------------------------------------------------
 	// Component
 	//-------------------------------------------------------------
-	
-	.flyout-trigger {
-		
-		position: absolute;
-		top: 1rem;
-		right: 1rem;
-		z-index: 14;
-		
-		&, .fa {
-			cursor: pointer;
-		}
-		.fa {
-			transition: 0.4s;
-			transform-origin: 50% 0;
-		}
-		.nav-close {
-			transform: scale(0) translateY(-50%);
-		}
-		&.active {
-			.nav-open {
-				transform: scale(0) translateY(-50%);
-			}
-			.nav-close {
-				transform: scale(1) translateY(-50%);
-			}
-		}
-		
-	} // .flyout-trigger
 	
 	.flyout-container {
 	
@@ -119,5 +93,11 @@
 	.flyout-visible {
 		z-index: 13;
 	}
+	
+	//-------------------------------------------------------------
+	// Sub-Modules
+	//-------------------------------------------------------------
+	
+	@include flyout-trigger;
 	
 } // @mixin flyout-navigation

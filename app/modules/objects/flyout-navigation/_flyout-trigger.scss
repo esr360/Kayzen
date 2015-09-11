@@ -1,0 +1,47 @@
+//=================================================================
+// Flyout Trigger
+//=================================================================
+
+@mixin flyout-trigger($custom: ()) {
+
+	//-------------------------------------------------------------
+	// Config
+	//-------------------------------------------------------------
+
+	$site-overlay: config((
+		name            : flyout-trigger
+	), $custom);
+	
+	//-------------------------------------------------------------
+	// Component
+	//-------------------------------------------------------------
+	
+	@include component {
+		
+		position: absolute;
+		top: 1rem;
+		right: 1rem;
+		z-index: 14;
+		
+		&, .fa {
+			cursor: pointer;
+		}
+		.fa {
+			transition: 0.4s;
+			transform-origin: 50% 0;
+		}
+		.nav-close {
+			transform: scale(0) translateY(-50%);
+		}
+		&.active {
+			.nav-open {
+				transform: scale(0) translateY(-50%);
+			}
+			.nav-close {
+				transform: scale(1) translateY(-50%);
+			}
+		}
+		
+	} // component()
+		
+} // @mixin flyout-trigger
