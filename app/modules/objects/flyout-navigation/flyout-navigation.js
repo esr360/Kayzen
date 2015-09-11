@@ -27,7 +27,7 @@ $(window).load(function(){
         function flyoutEvents(){
             $('body').toggleClass('flyout-active');
             $('#flyout-trigger').toggleClass('active');
-            $('#site-overlay').toggleClass('visible');
+            $('#site-overlay').toggleClass('flyout-visible');
         }
         
         // is the flyout nav currently toggled?

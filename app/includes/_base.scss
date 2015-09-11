@@ -79,25 +79,6 @@
 	.wrapper {
 	    padding: 0 option($grid, options, gutter);
 	}
-	
-	.site-overlay {
-	    position: fixed;
-	    top: 0;
-	    right: 0;
-	    bottom: 0;
-	    left: 0;
-	    cursor: pointer;
-	    background: rgba(0,0,0,0.4);
-	    transform: translateZ(0);
-	    transition: base(transition);
-	    z-index: 10;
-	    visibility: hidden;
-	    opacity: 0;
-	    &.visible {
-	        visibility: visible;
-	        opacity: 1;
-	    }
-	}
 
 	//-------------------------------------------------------------
 	// Layout

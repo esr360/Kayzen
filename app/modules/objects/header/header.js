@@ -13,24 +13,20 @@ if (setting('app-header', 'sticky'))  {
 	
 	function stickHeader() {
 		$(appHeader).addClass('fixed');
-		if (!$('body').hasClass('flyout-active')) {
-			navDropdown.hover(
-				function(){ 
-					$("#site-overlay").addClass('visible');
-				},
-				function(){ 
-					$("#site-overlay").removeClass('visible');
-				}
-			);
-		}
+		navDropdown.hover(
+			function(){ 
+				$("#site-overlay").addClass('header-visible');
+			},
+			function(){ 
+				$("#site-overlay").removeClass('header-visible');
+			}
+		);
 	}
 	
 	function unStickHeader() {
 		$(appHeader).removeClass('fixed');
 		navDropdown.unbind('mouseenter mouseleave');
-		if (!$('body').hasClass('flyout-active')) {
-			$("#site-overlay").removeClass('visible');
-		}
+		$("#site-overlay").removeClass('header-visible');
 	}
 	
 	$(window).on("load scroll", function(e) {

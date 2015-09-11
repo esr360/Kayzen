@@ -21,7 +21,8 @@
 		position: absolute;
 		top: 1rem;
 		right: 1rem;
-		z-index: 11;
+		z-index: 14;
+		
 		&, .fa {
 			cursor: pointer;
 		}
@@ -113,5 +114,10 @@
 		}
 	
 	} // .flyout-container
+	
+	// site-overlay
+	.flyout-visible {
+		z-index: 13;
+	}
 	
 } // @mixin flyout-navigation
