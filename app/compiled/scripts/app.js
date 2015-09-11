@@ -40,7 +40,7 @@ Made by @esr360
 
 //@prepros-append modules/objects/header/header.js
 //@prepros-append modules/objects/dropdown/dropdown.js
-//@prepros-append modules/objects/navigation/flyout-navigation.js
+//@prepros-append modules/objects/flyout-navigation/flyout-navigation.js
 //@prepros-append modules/objects/scroll-top/scroll-top.js
 //@prepros-append modules/objects/page-overview/page-overview.js
 
@@ -4888,9 +4888,9 @@ if (setting('app-header', 'side')) {
 ;//=================================================================
 // Dropdown
 //=================================================================
-;
-/* Flyout Navigation
-================================================================ */
+;//=================================================================
+// Flyout Navigation
+//=================================================================
 
 $(document).ready(function() {
 
@@ -4898,11 +4898,13 @@ $(document).ready(function() {
 
     // create the flyout nav HTML
     function flyoutNav() {
+        
+        // relocate the flyout-trigger in the DOM
+        $("#flyout-trigger").detach().prependTo('body')
+        // clone the main nav into the flyout nav container
+        $("#app-nav > ul").clone().appendTo(fnContainer);
 
-        $("#flyout-trigger").detach().prependTo('body') // relocate the flyout-trigger in the DOM
-        $("#app-nav > ul").clone().appendTo(fnContainer); // clone the main nav into the flyout nav container
-
-    } // End flyoutNav()
+    } // flyoutNav()
 
     $(flyoutNav);
 
@@ -4917,20 +4919,21 @@ $(window).load(function(){
             $('#flyout-trigger').toggleClass('active');
             $('#site-overlay').toggleClass('visible');
         }
-
-        if($('body').hasClass('flyout-active')) {  // is the flyout nav currently toggled?
-            // yes we are
+        
+        // is the flyout nav currently toggled?
+        if($('body').hasClass('flyout-active')) {
+            // yes
             if(state != 1) {
                 flyoutEvents();
             }
         } else {
-            // no, we are not
+            // no
             if(state != 0) {
                 flyoutEvents();
             }
         }
 
-    } // end toggleFlyout()
+    } // toggleFlyout()
 
     // toggle the flyout nav
     $('#flyout-trigger').click(function() {
@@ -4941,7 +4944,7 @@ $(window).load(function(){
         toggleFlyout(0);
     });
 
-}); // end window.load
+}); // $(window).load()
 ;//-----------------------------------------------------------------
 // Scroll to Top
 //-----------------------------------------------------------------

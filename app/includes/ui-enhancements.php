@@ -6,7 +6,7 @@
 </a> 
 
 <!-- Flyout Nav Trigger -->
-<span class="icon-lrg flyout-trigger max-break-3" id="flyout-trigger">
+<span class="icon-lrg flyout-trigger" id="flyout-trigger">
 	<i class="fa fa-bars nav-open"></i>
 	<i class="fa fa-times nav-close"></i>
 </span>

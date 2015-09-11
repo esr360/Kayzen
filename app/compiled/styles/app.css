@@ -3447,12 +3447,11 @@ progress.progress-alt::-moz-progress-bar {
 
 .flyout-container {
   position: fixed;
-  width: 250px;
-  left: -250px;
+  width: 350px;
+  left: -350px;
   height: 100%;
   top: 0;
   z-index: 9999;
-  font-size: 1.17em;
   font-weight: bold;
   overflow: auto;
   background: #232627;
@@ -3494,6 +3493,9 @@ progress.progress-alt::-moz-progress-bar {
 }
 .flyout-active .flyout-container {
   left: 0;
+}
+.flyout-container .mega-menu, .flyout-container [class*="mega-menu-"] {
+  display: none !important;
 }
 
 .footer, [class*="footer-"] {

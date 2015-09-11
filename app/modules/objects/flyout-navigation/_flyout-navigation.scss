@@ -46,12 +46,11 @@
 	.flyout-container {
 	
 	    position: fixed;
-	    width: 250px;
-	    left: -250px;
+	    width: 350px;
+	    left: -350px;
 	    height: 100%;
 	    top: 0;
 	    z-index: 9999;
-	    font-size: font-size(size-3);
 	    font-weight: bold;
 	    overflow: auto;
 	    background: color(greyscale, grey-5);
@@ -106,6 +105,11 @@
 	    .flyout-active & {
 	    	left: 0;
 	    }
+		
+		// hide the mega-menu
+		@include overwrite(mega-menu) {
+			display: none !important;
+		}
 	
 	} // .flyout-container
 	
