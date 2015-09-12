@@ -11,6 +11,7 @@ Made by @esr360
 
 //@prepros-append plugins/animate-numbers.js
 //@prepros-append plugins/data-manipulate.js
+//@prepros-append plugins/parallax.js
 //@prepros-append plugins/scroll-reveal.js
 //@prepros-append plugins/scroll-spy.js
  

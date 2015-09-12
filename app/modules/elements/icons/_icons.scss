@@ -146,6 +146,15 @@
 				}
 			}
 			
+			@include modifier(small) {
+				@include overwrite(icon) {
+					margin-left: 0.25em;
+					&:first-child {
+						margin-left: 0;
+					}
+				}
+			}
+			
 		}
 
 	} // component(icon)

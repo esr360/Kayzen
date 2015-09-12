@@ -18,7 +18,7 @@
 
 		<?php include ('../modules/objects/billboard/billboard.php'); ?>
 		
-		<section class="section">
+		<section class="section-block">
 			
 			<header class="heading_group-block has-icon text-center">
 				<div class="container-small">
@@ -31,6 +31,10 @@
 			</header>
 				
 			<?php include ('../sections/elements.php'); ?>
+			
+		</section>
+			
+		<section class="section-block">
 			
 			<header class="heading_group-block has-icon text-center">
 				<div class="container-small">

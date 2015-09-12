@@ -1,6 +1,6 @@
 <!-- Billboard -->
 <?php if ($type == 'fullscreen') { ?>
-<section class="billboard-full-screen">
+<section class="billboard-full-screen" data-stellar-background-ratio="0.5">
 	<div class="billboard_wrapper container">
 		<header class="heading_group">
 			<h2 class="heading-uppercase-light-strikethrough-spaced-size-5"><span>Kayzen</span></h2>
@@ -18,7 +18,7 @@
 	<a href="#key-features" class="scroll-wheel"></a>
 </section>
 <?php } else { ?>
-<section class="billboard">
+<section class="billboard" data-stellar-background-ratio="0.5">
 	<div class="billboard_wrapper container">
 		<header class="heading_group">
 			<h2 class="heading-uppercase-light-strikethrough-spaced-size-4"><span>Kayzen</span></h2>

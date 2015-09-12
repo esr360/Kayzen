@@ -137,6 +137,11 @@
 			margin: 0 auto;
 		}
 		
+		hr.gutter {
+			$hr-gutter: option($grid, options, gutter);
+			margin: $hr-gutter 0 ($hr-gutter * 2);
+		}
+		
 	} // horizontal-rules
 
 	//-------------------------------------------------------------

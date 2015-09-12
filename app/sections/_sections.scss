@@ -89,6 +89,12 @@
 			padding-top: 0;
 		}
 		
+		@include modifier(block) {
+			& + & {
+				border-top: 1px solid color(greyscale, grey-2);
+			}
+		}
+		
 	// Sub Components
 	//-------------------------------------------------------------
 	

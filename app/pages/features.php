@@ -97,7 +97,12 @@
 			
 		</section>
 		
-		<section class="inactive section-primary hide-overflow" id="modular-ui" style="background-image: url('<?php echo appDir ?>/images/billboard-2.jpg')">
+		<section 
+			class="inactive section-primary hide-overflow" 
+			id="modular-ui" 
+			data-stellar-background-ratio="0.5"
+			style="background-image: url('<?php echo appDir ?>/images/billboard-2.jpg')"
+		>
 			<div class="container-small">
 				<div class="row">
 					<div class="span-7">
@@ -163,6 +168,7 @@
 		<section 
 			class="section-secondary-overlay hide-overflow" 
 			id="custom-grid-system" 
+			data-stellar-background-ratio="0.5"
 			style="background-image: url('<?php echo appDir ?>/images/billboard-1.jpg')
 		">
 			<div class="container-small text-right">

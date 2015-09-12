@@ -116,6 +116,13 @@ http://github.com/esr360/Kayzen-GS/
 			}
 		}
 		
+		// Grid Row
+		@include modifier(grid) {
+			> #{$col-selector} {
+				margin-bottom: option($config, options, gutter);
+			}
+		}
+		
 		// Flow Columns Row
 		@if option($grid, settings, flow-columns) {
 			@include modifier(flow) {
