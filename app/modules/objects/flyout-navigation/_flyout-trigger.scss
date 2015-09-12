@@ -27,7 +27,7 @@
 			cursor: pointer;
 		}
 		.fa {
-			transition: 0.4s;
+			transition: base(transition);
 			transform-origin: 50% 0;
 		}
 		.nav-close {

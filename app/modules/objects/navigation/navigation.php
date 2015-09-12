@@ -538,7 +538,14 @@
 			<a href="#"><i class="navigation_icon fa fa-star"></i> Features</a>
 			<ul>
 				<li><a href="#">100% Modular UI</a></li>
-				<li><a href="#">Drag & Drop Page Builder</a></li>
+				<li>
+					<a href="#">Drag & Drop Page Builder</a>
+					<ul>
+						<li><a href="#">Lorem</a></li>
+						<li><a href="#">Ipsum</a></li>
+						<li><a href="#">Dolor Sit</a></li>
+					</ul>
+				</li>
 				<li><a href="#">Unique Configuration</a></li>
 				<li><a href="#">Custom Grid System</a></li>
 				<li><a href="#">Intelligent Theming</a></li>
