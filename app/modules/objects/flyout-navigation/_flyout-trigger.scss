@@ -9,7 +9,12 @@
 	//-------------------------------------------------------------
 
 	$site-overlay: config((
-		name            : flyout-trigger
+		name            : flyout-trigger,
+		top             : 1rem,
+		bottom          : auto,
+		left            : auto,
+		right           : 1rem,
+		z-index         : 14
 	), $custom);
 	
 	//-------------------------------------------------------------
