@@ -1,24 +1,44 @@
 <div class="top-bar">
 	<div class="container">
-		<div class="row-block-magic">
-			<div class="icon_group-small span">
-				<a href="#" class="icon">
-					<i class="fa fa-facebook"></i>
-				</a>
-				<a href="#" class="icon">
-					<i class="fa fa-twitter"></i>
-				</a>
-				<a href="#" class="icon">
-					<i class="fa fa-dribbble"></i>
-				</a>
-				<a href="#" class="icon">
-					<i class="fa fa-google-plus"></i>
-				</a>
+		<div class="row-block">
+			
+			<div class="row span">
+				<div class="icon_group-small span va-middle">
+					<a href="#" class="icon-border-size-2">
+						<i class="fa fa-facebook"></i>
+					</a>
+					<a href="#" class="icon-border-size-2">
+						<i class="fa fa-twitter"></i>
+					</a>
+					<a href="#" class="icon-border-size-2">
+						<i class="fa fa-dribbble"></i>
+					</a>
+					<a href="#" class="icon-border-size-2">
+						<i class="fa fa-google-plus"></i>
+					</a>
+				</div>
+				<div class="span va-middle">
+					<small><a href="#"><i class="fa fa-envelope-o"></i> support@kayzen.com</a></small>
+				</div>
+				<div class="span va-middle">
+					<small><a href="#"><i class="fa fa-phone"></i> (310) 276-2251</a></small>
+				</div>
 			</div>
-			<div class="button_group span text-right">
-				<a href="#" class="button-border-white-size-2">Login</a>
-				<a href="#" class="button-primary-size-2">Register</a>
+			
+			<div class="span text-right">
+				<div class="button_group span va-middle text-right">
+					<a href="#" class="button-size-1">
+						<i class="fa fa-user"></i> Login
+					</a>
+					<a href="#" class="button-primary-size-1">
+						<i class="fa fa-pencil-square-o"></i> Register
+					</a>
+					<a href="#" class="icon-plain-size-3">
+						<i class="fa fa-search"></i>
+					</a>
+				</div>
 			</div>
-		</div>
-	</div>	
-</div>
+			
+		</div><!-- row-block -->
+	</div><!-- container -->
+</div><!-- top-bar -->

@@ -1686,7 +1686,7 @@ hr.gutter {
   color: #ffffff;
   display: inline-block;
   vertical-align: middle;
-  padding: 0 1.2em;
+  padding: 0 1em;
   line-height: 2.4em;
   font-weight: lighter;
   -webkit-transition: 0.4s;
@@ -2469,9 +2469,11 @@ button::-moz-focus-inner {
   background: none;
   height: 1em;
   width: 1em;
+  color: #bfc1c3;
 }
 [class*="icon-"][class*="-plain"]:hover {
   background: none;
+  color: #ffffff;
   border-color: transparent;
 }
 [class*="icon-"][class*="-border"] {
@@ -2640,17 +2642,11 @@ button::-moz-focus-inner {
   background: #000000;
   color: #ffffff;
 }
-.icon_group .icon, .icon_group [class*="icon-"], [class*="icon_group-"] .icon, [class*="icon_group-"] [class*="icon-"] {
-  margin-left: 1rem;
+.icon_group .icon:not(:first-child), .icon_group [class*="icon-"]:not(:first-child), [class*="icon_group-"] .icon:not(:first-child), [class*="icon_group-"] [class*="icon-"]:not(:first-child) {
+  margin-left: 1em;
 }
-.icon_group .icon:first-child, .icon_group [class*="icon-"]:first-child, [class*="icon_group-"] .icon:first-child, [class*="icon_group-"] [class*="icon-"]:first-child {
-  margin-left: 0;
-}
-[class*="icon_group-"][class*="-small"] .icon, [class*="icon_group-"][class*="-small"] [class*="icon-"] {
+[class*="icon_group-"][class*="-small"] .icon:not(:first-child), [class*="icon_group-"][class*="-small"] [class*="icon-"]:not(:first-child) {
   margin-left: 0.25em;
-}
-[class*="icon_group-"][class*="-small"] .icon:first-child, [class*="icon_group-"][class*="-small"] [class*="icon-"]:first-child {
-  margin-left: 0;
 }
 
 img {

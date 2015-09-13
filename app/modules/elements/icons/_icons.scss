@@ -57,8 +57,10 @@
 			background: none;
 			height: 1em;
 			width: 1em;
+			color: color(greyscale, grey-3);
 			&:hover {
 				background: none;
+				color: color(greyscale, white);
 				border-color: transparent;
 			}
 		}
@@ -140,21 +142,19 @@
 		@include sub-component(group) {
 			
 			@include overwrite(icon) {
-				margin-left: 1rem;
-				&:first-child {
-					margin-left: 0;
-				}
+				&:not(:first-child) {
+					margin-left: 1em;
+				}	
 			}
 			
 			@include modifier(small) {
 				@include overwrite(icon) {
-					margin-left: 0.25em;
-					&:first-child {
-						margin-left: 0;
-					}
+					&:not(:first-child) {
+						margin-left: 0.25em;
+					}	
 				}
 			}
-			
+			 
 		}
 
 	} // component(icon)
