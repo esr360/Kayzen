@@ -5631,7 +5631,7 @@ $(window).bind("scroll", function() {
 //=================================================================
 
 if ($(topBar).length) {
-	$('body').addClass('has-topBar');
+	//$('body').addClass('has-topBar');
 }
 ;//=================================================================
 // Page Overview

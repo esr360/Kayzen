@@ -119,13 +119,18 @@ $component: null;
 //		<div class="logo">...</div>
 //	</div>
 
-@mixin overwrite($components: map-get($config, name), $type: $type, $special: null) {
+@mixin overwrite($components: map-get($config, name), $type: $type, $modifiers: null, $special: null) {
 	$selectors: ();
+	@if $modifiers {
+		$type: 'chain';
+	}
 	@each $component in $components {
 		$selector: #{$component};
 		@if $type == flex or $type == static {
-			@if $special == adjacent-sibling {
+			@if $special == 'adjacent-sibling' {
 				$selectors: join($selectors, '+ .#{$selector}', comma);
+			} @else if $special == 'general-sibling' {
+				$selectors: join($selectors, '~ .#{$selector}', comma);
 			} @else {
 				$selectors: join($selectors, '.#{$selector}', comma);
 			}
@@ -133,8 +138,15 @@ $component: null;
 		@if $type == flex or $type == chain {
 			@if $special == adjacent-sibling {
 				$selectors: join($selectors, '+ [class*="#{$selector}-"]', comma);
-			} @else {
+			} @else if $special == 'general-sibling' {
+				$selectors: join($selectors, '~ [class*="#{$selector}-"]', comma);
+			}  @else {
 				$selectors: join($selectors, '[class*="#{$selector}-"]', comma);
+			}
+		}
+		@if $modifiers {
+			@each $modifier in $modifiers {
+				$selectors: selector-append($selectors, '[class*="-#{$modifier}"]')
 			}
 		}
 	}

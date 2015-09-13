@@ -3,5 +3,5 @@
 //=================================================================
 
 if ($(topBar).length) {
-	$('body').addClass('has-topBar');
+	//$('body').addClass('has-topBar');
 }

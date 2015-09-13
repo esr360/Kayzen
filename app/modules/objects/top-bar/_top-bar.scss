@@ -10,8 +10,9 @@
 
 	$top-bar: config((
 		name            : top-bar,
+		output-JSON     : true,
 		height          : 60px,
-		output-JSON     : true
+		padding         : 1em 0
 	), $custom) !global;
 
 	//-------------------------------------------------------------
@@ -20,9 +21,9 @@
 	
 	@include component {
 	
-		height: 60px;
+		height: option($config, height);
 		background: color(greyscale, grey-5);
-		padding: 1em 0;
+		padding: option($config, padding);
 		
 		a:not([class*="button"]) {
 			color: color(greyscale, grey-3);
