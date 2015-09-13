@@ -10,10 +10,10 @@
 
 	$site-overlay: config((
 		name            : flyout-trigger,
-		top             : 1rem,
+		top             : 0.85rem,
 		bottom          : auto,
 		left            : auto,
-		right           : 1rem,
+		right           : 0.85rem,
 		z-index         : 14
 	), $custom);
 	
@@ -24,8 +24,8 @@
 	@include component {
 		
 		position: absolute;
-		top: 1rem;
-		right: 1rem;
+		top: 0.85rem;
+		right: 0.85rem;
 		z-index: 14;
 		
 		&, .fa {

@@ -74,7 +74,7 @@
 		
 		@include setting(absolute) {
 			position: absolute;
-			top: option($config, absolute, top-position);
+			margin-top: option($config, absolute, top-position);
 			z-index: option($config, z-index);
 			width: 100%;
 		}
@@ -119,6 +119,7 @@
 		@include setting(sticky) {
 			&.fixed {
 				position: fixed;
+				margin-top: 0;
 				top: 0;
 				width: 100%;
 				z-index: 12;

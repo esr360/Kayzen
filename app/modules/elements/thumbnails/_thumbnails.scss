@@ -38,7 +38,7 @@
 		}
 		
 		@include sub-component(mask) {
-			background: rgba(black, 0.4);
+			background: rgba(black, 0.6);
 			position: absolute;
 			z-index: 2;
 			height: 100%;

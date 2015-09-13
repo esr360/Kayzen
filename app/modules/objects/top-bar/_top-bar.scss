@@ -8,9 +8,11 @@
 	// Config
 	//-------------------------------------------------------------
 
-	$forms: config((
-		name            : top-bar
-	), $custom);
+	$top-bar: config((
+		name            : top-bar,
+		height          : 60px,
+		output-JSON     : true
+	), $custom) !global;
 
 	//-------------------------------------------------------------
 	// Component
@@ -18,10 +20,13 @@
 	
 	@include component {
 	
+		height: 60px;
 		background: color(greyscale, grey-5);
-		border-bottom: 1px solid rgba(black, 0.75);
-		box-shadow: inset 0px -1px 0px rgba(white, 0.075);
 		padding: 1em 0;
+		
+		a:not([class*="button"]) {
+			color: color(greyscale, grey-3);
+		}
 		
 	}
 	

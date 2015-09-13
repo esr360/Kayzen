@@ -53,6 +53,9 @@
 			@if option($header, absolute) and option($config, full-screen) {
 				height: 100%;
 				height: 100vh;
+				.has-topBar & {
+					height: calc(100vh - #{option($top-bar, height)});
+				}
 			} @else {
 				height: 90%;
 				height: calc(100% - #{option($header, height)});
@@ -67,6 +70,9 @@
 						@include modifier(full-screen) {
 							height: 100%;
 							height: 100vh;
+							.has-topBar & {
+								height: calc(100vh - #{option($top-bar, height)});
+							}
 						}
 					}
 				}

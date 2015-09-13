@@ -79,6 +79,7 @@
 							font-family: FontAwesome;		
 						}
 						&:not(:only-child) {
+							padding-right: option($config, link-padding) + 1rem;
 							&:after {
 								content: option($config, dropdown-icon);
 								right: 0.75em;
