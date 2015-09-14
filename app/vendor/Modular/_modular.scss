@@ -145,8 +145,13 @@ $component: null;
 			}
 		}
 		@if $modifiers {
+			$modifiers-list: ();
 			@each $modifier in $modifiers {
-				$selectors: selector-append($selectors, '[class*="-#{$modifier}"]')
+				$selectors: join(
+					$modifiers-list, 
+					selector-append($selectors, 
+					'[class*="-#{$modifier}"]'), 
+				comma);
 			}
 		}
 	}
@@ -257,7 +262,8 @@ $component: null;
 			@content;
 		}
 	}
-}
+	
+} // modifier()
 
 // Alias for multiple modifiers
 @mixin modifiers($modifiers) {

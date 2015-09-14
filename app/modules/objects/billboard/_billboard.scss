@@ -49,17 +49,23 @@
 		// Full Screen
 		//---------------------------------------------------------
 		
-		@include setting(full-screen) {
-			@if option($header, absolute) and option($config, full-screen) {
-				height: 100%;
-				height: 100vh;
-			} @else {
-				height: 90%;
-				height: calc(100% - #{option($header, height)});
-				height: calc(100vh - #{option($header, height)});
-			}
+		// If billboard is "full-screen"
+		@if option($config, full-screen) {
+			height: 90%;
+			height: calc(100% - #{option($header, height)});
+			height: calc(100vh - #{option($header, height)});
+		}
+		@include modifier(full-screen) {
+			height: 90%;
+			height: calc(100% - #{option($header, height)});
+			height: calc(100vh - #{option($header, height)});
 		}
 		
+		// If header is "absolute" and billboard is "full-screen"
+		@if option($header, absolute) and option($config, full-screen) {
+			height: 100%;
+			height: 100vh;
+		}
 		@at-root {
 			@include overwrite(app-header, $modifiers: absolute) {
 				@include overwrite(billboard, $modifiers: full-screen, $special: adjacent-sibling) {
@@ -69,10 +75,40 @@
 			}
 		}
 		
+		// If website has "top-bar" and billboard is "full-screen"
 		@at-root {
 			@include overwrite(top-bar) {
-				@include overwrite($special: general-sibling) {
-					height: calc(100vh - #{option($top-bar, height)});
+				@if option($config, full-screen) {
+					@include overwrite($special: general-sibling) {
+						height: calc(100vh - #{option($header, height)} - #{option($top-bar, height)});
+					}
+				}
+			}	
+		}
+		@at-root {
+			@include overwrite(top-bar) {
+				@include overwrite(billboard, $modifiers: full-screen, $special: general-sibling) {
+					height: calc(100vh - #{option($header, height)} - #{option($top-bar, height)});
+				}
+			}
+		}
+		
+		// If website has "top-bar" and header is "absolute" and billboard is "full-screen"
+		@at-root {
+			@include overwrite(top-bar) {
+				@if option($header, absolute) and option($config, full-screen) {
+					@include overwrite($special: general-sibling) {
+						height: calc(100vh - #{option($top-bar, height)});
+					}
+				}
+			}	
+		}
+		@at-root {
+			@include overwrite(top-bar) {
+				@include overwrite(app-header, $modifiers: absolute, $special: adjacent-sibling) {
+					@include overwrite($modifiers: full-screen, $special: adjacent-sibling) {
+						height: calc(100vh - #{option($top-bar, height)});
+					}
 				}
 			}
 		}

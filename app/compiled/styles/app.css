@@ -4192,7 +4192,11 @@ progress.progress-alt::-moz-progress-bar {
   height: 100%;
   height: 100vh;
 }
-.top-bar ~ .billboard, .top-bar ~ [class*="billboard-"], [class*="top-bar-"] ~ .billboard, [class*="top-bar-"] ~ [class*="billboard-"] {
+.top-bar ~ [class*="billboard-"][class*="-full-screen"], [class*="top-bar-"] ~ [class*="billboard-"][class*="-full-screen"] {
+  height: -webkit-calc(100vh - 100px - 60px);
+  height: calc(100vh - 100px - 60px);
+}
+.top-bar + [class*="app-header-"][class*="-absolute"] + [class*="billboard-"][class*="-full-screen"], [class*="top-bar-"] + [class*="app-header-"][class*="-absolute"] + [class*="billboard-"][class*="-full-screen"] {
   height: -webkit-calc(100vh - 60px);
   height: calc(100vh - 60px);
 }
