@@ -43,7 +43,6 @@ Made by @esr360
 //@prepros-append modules/objects/dropdown/dropdown.js
 //@prepros-append modules/objects/flyout-navigation/flyout-navigation.js
 //@prepros-append modules/objects/scroll-top/scroll-top.js
-//@prepros-append modules/objects/top-bar/top-bar.js
 //@prepros-append modules/objects/page-overview/page-overview.js
 
 //-----------------------------------------------------------------
@@ -5627,13 +5626,6 @@ $(window).bind("scroll", function() {
     }
 });
 //=================================================================
-// Top Bar
-//=================================================================
-
-if ($(topBar).length) {
-	//$('body').addClass('has-topBar');
-}
-;//=================================================================
 // Page Overview
 //=================================================================
 
