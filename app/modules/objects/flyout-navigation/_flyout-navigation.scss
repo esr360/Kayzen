@@ -124,7 +124,7 @@
 	
 	// site-overlay
 	.flyout-visible {
-		z-index: 13;
+		z-index: 13 !important;
 	}
 	
 } // @mixin flyout-navigation

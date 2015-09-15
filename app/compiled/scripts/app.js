@@ -44,6 +44,7 @@ Made by @esr360
 //@prepros-append modules/objects/flyout-navigation/flyout-navigation.js
 //@prepros-append modules/objects/scroll-top/scroll-top.js
 //@prepros-append modules/objects/page-overview/page-overview.js
+//@prepros-append modules/objects/top-bar/top-bar.js
 
 //-----------------------------------------------------------------
 // Theme
@@ -5660,6 +5661,32 @@ $('#page-overview')
 			});
 		});
 	});
+//=================================================================
+// Top Bar
+//=================================================================
+
+var topBarDropdown = $('[class*="top-bar_nav"]').find("> ul > li > a:not(:only-child)").parent();
+
+$(window).on("load scroll", function(e) {
+	
+	var scroll = $(window).scrollTop(),
+		topBarHeight = $(topBar).height();
+		
+	if (scroll > topBarHeight) {
+		topBarDropdown.hover(
+			function(){ 
+				$("#site-overlay").addClass('top-bar-visible');
+			},
+			function(){ 
+				$("#site-overlay").removeClass('top-bar-visible');
+			}
+		);
+	} else {
+		topBarDropdown.unbind('mouseenter mouseleave');
+		$("#site-overlay").removeClass('top-bar-visible');
+	}
+	
+});
 //=================================================================
 // Kayzen
 //=================================================================

@@ -47,6 +47,7 @@
 // Objects
 //-----------------------------------------------------------------
 
+	@include top-bar;
 	@include breadcrumb;
 	@include flyout-navigation;
 	@include flyout-trigger;
@@ -58,9 +59,6 @@
 		font-size              : 0.9em,
 		side                   : (
 			default            : false
-		),
-		sticky                 : (
-			default            : true
 		),
 		absolute               : (
 			top-position       : 50px
@@ -80,7 +78,6 @@
 	@include scroll-top;
 	@include scroll-wheel;
 	@include site-overlay;
-	@include top-bar;
 	
 //-----------------------------------------------------------------
 // Sections

@@ -15,7 +15,8 @@
 		background       : color(greyscale, grey-5),
 		padding          : 1em 0,
 		link-color       : color(greyscale, grey-3),
-		link-hover-color : color(greyscale, white) 
+		link-hover-color : color(greyscale, white),
+		fixed            : false
 	), $custom) !global;
 
 	//-------------------------------------------------------------
@@ -42,20 +43,27 @@
 		}
 		
 		@include sub-component(nav) {
+			
 			height: option($config, height);
 			margin: 0 1em;
+			
 			&:first-child {
 				margin-left: 0;
 			}
 			&:last-child {
 				margin-right: 0;
 			}
-			> ul {
+			
+			ul {
 				@extend %list-reset;
+			}
+			
+			> ul {
 				&, > li {
 					height: 100%;
 				}
 				> li {
+					position: relative;
 					float: left;
 					display: table;
 					margin-left: 0;
@@ -74,9 +82,49 @@
 							transform: translate(80%, -100%);
 						}
 					}
+					&:hover {
+						ul {
+							opacity: 1;
+							visibility: visible;
+							top: 100%;
+						}
+					}
+				}
+				// Dropdown nav
+				ul {
+					@include triangle((
+						position : bottom,
+						color    : color(greyscale, grey-1)
+					));
+					font-size: font-size(size-2);
+					text-align: left;
+					position: absolute;
+					background: color(greyscale, grey-1);
+					transition: base(transition);
+					opacity: 0;
+					visibility: hidden;
+					padding: 0.5em;
+					z-index: 5;
+					left: -100%;
+					top: 115%;
+					min-width: 150px;
 				}
 			}
+			
 		} // sub-component(nav)
+		
+	// Settings
+	//-------------------------------------------------------------
+	
+		// Fixed Bar
+		//---------------------------------------------------------
+		
+		@include setting(fixed) {
+			position: fixed;
+			top: 0;
+			width: 100%;
+			z-index: 9;
+		}
 		
 	} // component
 	

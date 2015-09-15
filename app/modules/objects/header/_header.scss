@@ -51,6 +51,10 @@
 	
 		background-color: option($config, bg);
 		font-size: option($config, font-size);
+		
+		@if option($top-bar, fixed) {
+			margin-top: option($top-bar, height);
+		}
 
 	// Settings
 	//-------------------------------------------------------------

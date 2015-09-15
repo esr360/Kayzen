@@ -47,6 +47,9 @@
 							<a href="#" data-notification="3">
 								<i class="fa fa-shopping-cart"></i>
 							</a>
+							<ul>
+								<li>test</li>
+							</ul>
 						</li>
 						<li>
 							<a href="#">

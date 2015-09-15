@@ -144,12 +144,10 @@
 //-----------------------------------------------------------------
 
 @mixin triangle-core {
-	&:after {
-		content:'';
-		position: absolute;
-		width: 0;
-		height: 0;
-	}
+	content:'';
+	position: absolute;
+	width: 0;
+	height: 0;
 }
 
 @mixin triangle($config: ()) {
