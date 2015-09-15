@@ -51,6 +51,9 @@
 							color: color(brand, primary);
 						}
 					}
+					a:not(:only-child) {
+						padding: 0;
+					}
 				}
 			}
 			

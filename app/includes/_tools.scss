@@ -21,7 +21,7 @@
 // Vertical Centering
 //-----------------------------------------------------------------
 
-@mixin vertical-center($position) {
+@mixin vertical-center($position: relative) {
 	position: $position;
 	top: 50%;
 	transform: translateY(-50%);
