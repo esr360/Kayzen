@@ -139,6 +139,10 @@
 			));
 		}
 		
+		@include overwrite(header, $modifiers: (lorem, dopy)) {
+			content: 'dopy';
+		}
+		
 	// Child Components
 	//-------------------------------------------------------------
 

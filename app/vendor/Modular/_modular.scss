@@ -149,8 +149,7 @@ $component: null;
 			@each $modifier in $modifiers {
 				$selectors: join(
 					$modifiers-list, 
-					selector-append($selectors, 
-					'[class*="-#{$modifier}"]'), 
+					selector-append($selectors,'[class*="-#{$modifier}"]'), 
 				comma);
 			}
 		}

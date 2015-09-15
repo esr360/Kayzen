@@ -40,9 +40,9 @@
 		}
 
 		.fa {
-			font-size: 0.9em;
 			@include vertical-center(absolute);
 			@extend %horizontal-center;
+			font-size: 0.9em;
 		}
 
 	// Sizes
