@@ -3215,10 +3215,6 @@ progress.progress-alt::-moz-progress-bar {
   white-space: nowrap;
   opacity: 0;
   visibility: hidden;
-  content: '';
-  position: absolute;
-  width: 0;
-  height: 0;
 }
 [data-tooltip]:hover .tooltip_content, [data-tooltip]:hover [class*="tooltip_content-"] {
   opacity: 1;
@@ -3227,6 +3223,12 @@ progress.progress-alt::-moz-progress-bar {
 [data-tooltip]:active .tooltip_content, [data-tooltip]:active [class*="tooltip_content-"] {
   opacity: 1;
   visibility: visible;
+}
+.tooltip_content:after, [class*="tooltip_content-"]:after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 0;
 }
 .inline-tooltip .tooltip_content, .inline-tooltip [class*="tooltip_content-"] {
   white-space: nowrap;
@@ -3534,15 +3536,17 @@ progress.progress-alt::-moz-progress-bar {
 }
 .top-bar_nav > ul ul:after, [class*="top-bar_nav-"] > ul ul:after {
   margin-left: -0.5em;
-  content: '';
-  position: absolute;
-  width: 0;
-  height: 0;
   bottom: 100%;
   left: 50%;
   border-left: solid 0.5em transparent;
   border-right: solid 0.5em transparent;
   border-bottom: solid 0.5em #f8f8f8;
+}
+.top-bar_nav > ul ul:after:after, [class*="top-bar_nav-"] > ul ul:after:after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 0;
 }
 [class*="top-bar-"][class*="-fixed"] {
   position: fixed;

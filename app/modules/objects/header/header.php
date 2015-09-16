@@ -3,7 +3,7 @@
 	
 <!-- Header -->
 <?php if ($for == 'index') { ?>
-<header class="app-header-bar-absolute" id="app-header">
+<header class="app-header-bar-absolute-sticky" id="app-header">
 <?php } else { ?>
 <header class="app-header-bar-dark-sticky" id="app-header">
 <?php } ?>

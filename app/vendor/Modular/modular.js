@@ -71,8 +71,9 @@ $.each(module, function(component) {
 //	}
 
 function setting(component, setting) {
-	var $setting  = module[component][setting];
-	var $selector = $(component).is('[class*="-' + setting + '"]') == true;
+	var $setting  = module[component][setting],
+		$id = $('.' + component + ', [class*="' + component + '-"]'),
+		$selector = $id.is('[class*="-' + setting + '"]') == true;
 	if (typeof($setting[Object.keys($setting)[0]]) == 'boolean') {
 		return $selector || $setting['default'] != false;
 	} else {

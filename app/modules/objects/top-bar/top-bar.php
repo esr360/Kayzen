@@ -4,16 +4,16 @@
 			
 			<div class="top-bar_item row span">
 				<div class="icon_group-small span">
-					<a href="#" class="icon-border-size-2">
+					<a href="#" class="icon-border-size-2 tooltip-bottom" data-tooltip="Facebook">
 						<i class="fa fa-facebook"></i>
 					</a>
-					<a href="#" class="icon-border-size-2">
+					<a href="#" class="icon-border-size-2 tooltip-bottom" data-tooltip="Twitter">
 						<i class="fa fa-twitter"></i>
 					</a>
-					<a href="#" class="icon-border-size-2">
+					<a href="#" class="icon-border-size-2 tooltip-bottom" data-tooltip="Dribbble">
 						<i class="fa fa-dribbble"></i>
 					</a>
-					<a href="#" class="icon-border-size-2">
+					<a href="#" class="icon-border-size-2 tooltip-bottom" data-tooltip="Google Plus">
 						<i class="fa fa-google-plus"></i>
 					</a>
 				</div>
