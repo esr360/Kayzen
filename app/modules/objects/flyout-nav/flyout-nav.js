@@ -5,7 +5,7 @@
 $(document).ready(function() {
     
     $('#flyout')
-        .addClass('flyout-container')
+        .addClass('side-container')
         .append('<nav class="side-nav"></nav>');
 
     var fnContainer = $('#flyout .side-nav');

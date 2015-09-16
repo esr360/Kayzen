@@ -431,7 +431,7 @@ pre:last-child, hr:last-child, .accordion:last-child, [class*="accordion-"]:last
   margin-bottom: 0;
 }
 
-[class*="list-"][class*="-reset"], [class*="list-"][class*="-arrow"], [class*="list-"][class*="-tags"], .top-bar_nav ul, [class*="top-bar_nav-"] ul, .breadcrumb ul, .flyout-container nav ul, [class*="app-header-"][class*="-side"] nav ul, .footer_nav ul, [class*="header-"]:not([class*="-side"]) .navigation > ul, [class*="header-"]:not([class*="-side"]) [class*="navigation-"] > ul, [class*="header-"]:not([class*="-side"]) [class*="navigation"] ul ul {
+[class*="list-"][class*="-reset"], [class*="list-"][class*="-arrow"], [class*="list-"][class*="-tags"], .top-bar_nav ul, [class*="top-bar_nav-"] ul, .breadcrumb ul, .side-container nav ul, [class*="app-header-"][class*="-side"] nav ul, .footer_nav ul, [class*="header-"]:not([class*="-side"]) .navigation > ul, [class*="header-"]:not([class*="-side"]) [class*="navigation-"] > ul, [class*="header-"]:not([class*="-side"]) [class*="navigation"] ul ul {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -3571,7 +3571,7 @@ progress.progress-alt::-moz-progress-bar {
   margin-left: 0.4em;
 }
 
-.flyout-container, [class*="app-header-"][class*="-side"] {
+.side-container, [class*="app-header-"][class*="-side"] {
   position: fixed;
   height: 100%;
   top: 0;
@@ -3587,11 +3587,11 @@ progress.progress-alt::-moz-progress-bar {
   box-shadow: 1px 0 25px 0px rgba(0, 0, 0, 0.4);
   z-index: 15;
 }
-.flyout-container nav ul li:hover > a, [class*="app-header-"][class*="-side"] nav ul li:hover > a {
+.side-container nav ul li:hover > a, [class*="app-header-"][class*="-side"] nav ul li:hover > a {
   border-left: 5px solid #9B58B5;
   color: #ffffff;
 }
-.flyout-container nav ul a, [class*="app-header-"][class*="-side"] nav ul a {
+.side-container nav ul a, [class*="app-header-"][class*="-side"] nav ul a {
   display: block;
   text-decoration: none;
   padding: 1.2em;
@@ -3601,21 +3601,21 @@ progress.progress-alt::-moz-progress-bar {
   border-left: 5px solid rgba(0, 0, 0, 0.3);
   border-right: none;
 }
-.flyout-container nav ul ul ul, [class*="app-header-"][class*="-side"] nav ul ul ul {
+.side-container nav ul ul ul, [class*="app-header-"][class*="-side"] nav ul ul ul {
   padding-left: 1.5em;
 }
-.flyout-container nav > ul > li > a, [class*="app-header-"][class*="-side"] nav > ul > li > a {
+.side-container nav > ul > li > a, [class*="app-header-"][class*="-side"] nav > ul > li > a {
   color: #ffffff;
   border-left: 5px solid #9B58B5;
   background: rgba(0, 0, 0, 0.15);
 }
-.flyout-container nav > ul > li:hover > a, [class*="app-header-"][class*="-side"] nav > ul > li:hover > a {
+.side-container nav > ul > li:hover > a, [class*="app-header-"][class*="-side"] nav > ul > li:hover > a {
   background: #9B58B5;
 }
-.flyout-container .mega-menu, [class*="app-header-"][class*="-side"] .mega-menu, .flyout-container [class*="mega-menu-"], [class*="app-header-"][class*="-side"] [class*="mega-menu-"] {
+.side-container .mega-menu, [class*="app-header-"][class*="-side"] .mega-menu, .side-container [class*="mega-menu-"], [class*="app-header-"][class*="-side"] [class*="mega-menu-"] {
   display: none !important;
 }
-.flyout-active .flyout-container, .flyout-active [class*="app-header-"][class*="-side"] {
+.flyout-active .side-container, .flyout-active [class*="app-header-"][class*="-side"] {
   left: 0;
 }
 
@@ -3721,6 +3721,12 @@ progress.progress-alt::-moz-progress-bar {
   width: 350px;
   box-shadow: none;
 }
+[class*="app-header-"][class*="-side"] .container, [class*="app-header-"][class*="-side"] [class*="container-"] {
+  max-width: 100%;
+}
+[class*="app-header-"][class*="-side"] .logo, [class*="app-header-"][class*="-side"] [class*="logo-"], [class*="app-header-"][class*="-side"] .navigation, [class*="app-header-"][class*="-side"] [class*="navigation-"] {
+  display: block;
+}
 [class*="app-header-"][class*="-side"][class*="-left"] {
   left: 0;
   right: auto;
@@ -3734,12 +3740,6 @@ progress.progress-alt::-moz-progress-bar {
 }
 [class*="app-header-"][class*="-side"][class*="-right"] + #site-content {
   margin-right: 350px;
-}
-[class*="app-header-"][class*="-side"] .container, [class*="app-header-"][class*="-side"] [class*="container-"] {
-  max-width: 100%;
-}
-[class*="app-header-"][class*="-side"] .logo, [class*="app-header-"][class*="-side"] [class*="logo-"], [class*="app-header-"][class*="-side"] .navigation, [class*="app-header-"][class*="-side"] [class*="navigation-"] {
-  display: block;
 }
 [class*="app-header-"][class*="-dark"] {
   background-color: #232627;

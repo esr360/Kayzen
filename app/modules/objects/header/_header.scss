@@ -88,12 +88,19 @@
 		//---------------------------------------------------------
 	
 		@include setting(side) {
-			@extend .flyout-container;
+			
+			@extend .side-container;
 			width: option($config, 'side', 'width');
 			box-shadow: option($config, 'side', 'box-shadow');
-			@if option($config, 'side', 'default') != false {
-				#{option($config, side, default)}: 0;
+			
+			@include overwrite(container) {
+				max-width: option($config, 'side', 'container-width');
 			}
+			
+			@include overwrite(('logo', 'navigation')) {
+				display: block;
+			}
+			
 			@include option(left) {
 				left: 0;
 				right: auto;
@@ -101,6 +108,7 @@
 					margin-left: option($config, 'side', 'width');
 				}
 			}
+			
 			@include option(right) {
 				right: 0;
 				left: auto;
@@ -108,13 +116,8 @@
 					margin-right: option($config, 'side', 'width');
 				}
 			}
-			@include overwrite(container) {
-				max-width: option($config, 'side', 'container-width');
-			}
-			@include overwrite(('logo', 'navigation')) {
-				display: block;
-			}
-		}
+			
+		} // setting(side)
 		
 		
 		// Dark Header
