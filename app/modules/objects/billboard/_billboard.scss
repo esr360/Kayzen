@@ -54,49 +54,49 @@
 		//---------------------------------------------------------
 		
 		@if option($config, full-screen) {
+			
 			height: 90%;
 			height: calc(100% - #{option($header, height)});
 			height: calc(100vh - #{option($header, height)});
-		}
 		
-		// If header is "absolute"
-		@if option($header, absolute) and option($config, full-screen) {
-			height: 100%;
-			height: 100vh;
-		}
-		
-		// If website has "top-bar"
-		@at-root {
-			@include overwrite(top-bar) {
-				@if option($config, full-screen) {
+			// If header is "absolute"
+			@if option($header, absolute) {
+				height: 100%;
+				height: 100vh;
+			}
+			
+			// If website has "top-bar"
+			@at-root {
+				@include overwrite(top-bar) {
 					@include overwrite($special: general-sibling) {
 						height: calc(100vh - #{option($header, height)} - #{option($top-bar, height)});
 					}
-				}
-			}	
-		}
+				}	
+			}
 		
-		// If website has "top-bar" and header is "absolute"
-		@at-root {
-			@include overwrite(top-bar) {
-				@if option($header, absolute) and option($config, full-screen) {
-					@include overwrite($special: general-sibling) {
-						height: calc(100vh - #{option($top-bar, height)});
+			// If website has "top-bar" and header is "absolute"
+			@at-root {
+				@include overwrite(top-bar) {
+					@if option($header, absolute) {
+						@include overwrite($special: general-sibling) {
+							height: calc(100vh - #{option($top-bar, height)});
+						}
 					}
-				}
-			}	
-		}
+				}	
+			}
 		
-		// If website has "top-bar" and top-bar is "fixed" and header is "absolute"
-		@at-root {
-			@include overwrite(top-bar, $modifiers: fixed) {
-				@if option($header, absolute) and option($config, full-screen) {
-					@include overwrite($special: general-sibling) {
-						margin-top: option($top-bar, height);
+			// If website has "top-bar" and top-bar is "fixed" and header is "absolute"
+			@at-root {
+				@include overwrite(top-bar, $modifiers: fixed) {
+					@if option($header, absolute) {
+						@include overwrite($special: general-sibling) {
+							margin-top: option($top-bar, height);
+						}
 					}
 				}
 			}
-		}
+			
+		} // full-screen
 		
 		// Modifiers
 		//---------------------------------------------------------
