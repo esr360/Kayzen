@@ -49,7 +49,8 @@
 
 	@include top-bar;
 	@include breadcrumb;
-	@include flyout-navigation;
+	@include side-nav;
+	@include flyout-nav;
 	@include flyout-trigger;
 	@include footer;
 	@include google-map;

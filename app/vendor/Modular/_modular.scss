@@ -119,9 +119,9 @@ $component: null;
 //		<div class="logo">...</div>
 //	</div>
 
-@mixin overwrite($components: map-get($config, name), $type: $type, $modifiers: null, $special: null) {
+@mixin overwrite($components: map-get($config, name), $type: $type, $is: null, $not: null, $special: null) {
 	$selectors: ();
-	@if $modifiers {
+	@if $is or $not {
 		$type: 'chain';
 	}
 	@each $component in $components {
@@ -144,12 +144,21 @@ $component: null;
 				$selectors: join($selectors, '[class*="#{$selector}-"]', comma);
 			}
 		}
-		@if $modifiers {
+		@if $is {
 			$modifiers-list: ();
-			@each $modifier in $modifiers {
+			@each $modifier in $is {
 				$selectors: join(
 					$modifiers-list, 
 					selector-append($selectors,'[class*="-#{$modifier}"]'), 
+				comma);
+			}
+		}
+		@if $not {
+			$modifiers-list: ();
+			@each $modifier in $not {
+				$selectors: join(
+					$modifiers-list, 
+					selector-append($selectors,':not([class*="-#{$modifier}"])'), 
 				comma);
 			}
 		}

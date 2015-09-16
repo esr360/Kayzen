@@ -12,7 +12,7 @@
 </span>
 
 <!-- Flyout Nav -->
-<nav class="flyout-container" id="flyout"></nav>
+<div id="flyout"></div>
 
 <!-- Site Overlay -->
 <div class="site-overlay" id="site-overlay"></div>

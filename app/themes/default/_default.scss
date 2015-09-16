@@ -42,7 +42,6 @@
 //-----------------------------------------------------------------
 
 	@include breadcrumb;
-	@include flyout-navigation;
 	@include footer;
 	@include google-map;
 	@include header;
@@ -52,6 +51,7 @@
 	@include promo-banner;
 	@include scroll-top;
 	@include scroll-wheel;
+	@include side-nav;
 
 //-----------------------------------------------------------------
 // Sections

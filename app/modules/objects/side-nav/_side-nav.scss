@@ -2,16 +2,14 @@
 // Flyout Navigation
 //=================================================================
 
-@import "flyout-trigger";
-
-@mixin flyout-navigation($custom: ()) {
+@mixin side-nav($custom: ()) {
 
 	//-------------------------------------------------------------
 	// Config
 	//-------------------------------------------------------------
 
-	$flyout-navigation: config((
-		name                    : flyout-navigation,
+	$side-nav: config((
+		name                    : side-nav,
 		output-JSON             : true,
 		// settings
 		collapsible             : (
@@ -66,49 +64,53 @@
 	    transition: option($config, transition);
 	    box-shadow: option($config, box-shadow);
 	    z-index: option($config, z-index);
+		
+		nav {
 	
-		ul {
-			@extend %list-reset;
-			li {
-				&:hover {
-					> a {
-						border-left: option($config, item-hover-left-border);
-						color: color(greyscale, white);
-					}
-				}
-			}
-			a {
-			    display: block;
-			    text-decoration: none;
-			    padding: option($config, item-padding);
-				color: option($config, item-color);
-			    border-top: option($config, item-top-border);
-			    border-bottom: option($config, item-bottom-border);
-			    border-left: option($config, item-left-border);
-			    border-right: option($config, item-right-border);
-			}   
 			ul {
+				@extend %list-reset;
+				li {
+					&:hover {
+						> a {
+							border-left: option($config, item-hover-left-border);
+							color: color(greyscale, white);
+						}
+					}
+				}
+				a {
+					display: block;
+					text-decoration: none;
+					padding: option($config, item-padding);
+					color: option($config, item-color);
+					border-top: option($config, item-top-border);
+					border-bottom: option($config, item-bottom-border);
+					border-left: option($config, item-left-border);
+					border-right: option($config, item-right-border);
+				}   
 				ul {
-					padding-left: 1.5em;
-				}
-			}
-		}
-	
-		// Parent Items
-		> ul {		
-			> li {
-				> a {
-					color: option($config, parent-color);
-					border-left: option($config, parent-left-border);
-					background: option($config, parent-background);
-				}
-				&:hover {
-					> a {
-						background: option($config, parent-hover-background);
+					ul {
+						padding-left: 1.5em;
 					}
 				}
 			}
-		}
+		
+			// Parent Items
+			> ul {		
+				> li {
+					> a {
+						color: option($config, parent-color);
+						border-left: option($config, parent-left-border);
+						background: option($config, parent-background);
+					}
+					&:hover {
+						> a {
+							background: option($config, parent-hover-background);
+						}
+					}
+				}
+			}
+		
+		} // .side-nav
 	
 		// hide the mega-menu
 		@include overwrite(mega-menu) {
@@ -127,4 +129,4 @@
 		z-index: 13 !important;
 	}
 	
-} // @mixin flyout-navigation
+} // @mixin side-nav

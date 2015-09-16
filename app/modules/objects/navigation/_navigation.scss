@@ -64,161 +64,113 @@
 	//-------------------------------------------------------------
 	// Component
 	//-------------------------------------------------------------
-
-	@include component {
-
-	// Core Styles
-	//-------------------------------------------------------------
 		
-		font-size: option($config, font-size);
-		
-	    // all levels
-	    li {    
-	        a {
-	            display: block;
-	            padding: option($navigation, item-padding);
-	            color: option($navigation, item-color);
-				border: option($navigation, item-border);
-	            &:hover {
-	                text-decoration: none;
-	            }
-	            // icon
-	            @include overwrite-sub(icon) {
-	                margin-right: 0.5em;
-	            }
-	        }   
-	    }
+	@include overwrite('header', $not: 'side') {
 	
-	    // parent level only
-	    > ul {
+		@include component {
 	
-	        @extend %list-reset;
-	        display: none; // hide by default for small resolutions
-	        vertical-align: middle;
-	
-	        > li {
-	
-	            // add gap between items
-	            margin-left: option($navigation, item-gutter);
-	            &:first-child {
-	                margin-left: 0;
-	            }
-	
-	            > a {
-					background: option($navigation, item-bg);
-	                // if item has child menu
-	                &:not(:only-child) {
-						border-bottom-color: transparent;
-	                    &:after {
-	                        content: option($navigation, dropdown-icon);
-	                        font-family: FontAwesome;
-	                        margin-left: 0.5em;
-	                    }
-	                }
-	            }
-	
-	            &:hover {
-	                > a {
-	                    color: option($config, link-hover-color);
-	                    background: option($config, item-hover-bg);
-						border: option($config, item-hover-border);
-	                    // if item has child menu
-	                    &:not(:only-child) {
-							color: option($config, has-child-hover-color);
-							background: option($config, has-child-hover-bg);
-							border: option($config, has-child-hover-border);
-							border-bottom-color: transparent;
-						}
-	                }
-	            }
-	
-	            &.active {
-	                > a {
-	                    color: option($config, link-active-color);
-	                }
-	                &:hover {
-						// if item is active and hovered
-	                    // > a {}
-	                }
-	            }
-	
-	        } // > li
-	
-	    } // > ul
-	
-		// In Side-Header
-
-	    [class*="header-"][class*="-side"] & {
-	
-	        ul {
-	            display: block;
-	            visibility: visible;
-	            opacity: 1;
-	            position: relative;
-	            left: 0;
-	        }
-	
-	        li {
-	            display: block;
-	            margin-left: 0;            
-	            a {
-	                position: relative;
-	                &, &:last-child {
-	                    border-bottom: navigation(a-border-bottom);
-	                }
-	                &:not(:only-child) {
-	                    &:after {
-	                        content: navigation(dropdown-icon);
-	                        right: 1.5em;
-	                        @include vertical-center(absolute);
-	                    }
-	                }
-	            }
-	            // dropdown nav
-	            ul {
-	                // 2nd level and below
-	                ul {
-	                    font-size: font-size(size-2);
-	                    li {
-	                        a {
-	                            &:before {
-	                                font-family: FontAwesome;
-	                                content: "\f105";
-	                                margin-right: 0.5em;
-	                            }
-	                        }
-	                    }
-	                    // 3rd level and below
-	                    ul {
-	                        padding-left: 1rem;
-	                    }
-	                }
-	            }
-	        }
-	
-	    } // in side-header
-
-		// Larger Resolutions
-	    @media (min-width: breakpoint(break-3)) {
-	        text-align: option($config, text-align);
-	        > ul {
-	            display: inline-block;
-	            > li {
-	                display: inline-block;
-	                //position: relative;
-	            }
-	        }
-	    }
-
-	// Settings
-	//-------------------------------------------------------------
-	
-		@include setting(no-icons) {
-			@include overwrite-sub(icon) {
-				display: none;
+		// Core Styles
+		//-------------------------------------------------------------
+			
+			font-size: option($config, font-size);
+			
+			// all levels
+			li {    
+				a {
+					display: block;
+					padding: option($navigation, item-padding);
+					color: option($navigation, item-color);
+					border: option($navigation, item-border);
+					&:hover {
+						text-decoration: none;
+					}
+					// icon
+					@include overwrite-sub(icon) {
+						margin-right: 0.5em;
+					}
+				}   
 			}
-		}
+		
+			// parent level only
+			> ul {
+		
+				@extend %list-reset;
+				display: none; // hide by default for small resolutions
+				vertical-align: middle;
+		
+				> li {
+		
+					// add gap between items
+					margin-left: option($navigation, item-gutter);
+					&:first-child {
+						margin-left: 0;
+					}
+		
+					> a {
+						background: option($navigation, item-bg);
+						// if item has child menu
+						&:not(:only-child) {
+							border-bottom-color: transparent;
+							&:after {
+								content: option($navigation, dropdown-icon);
+								font-family: FontAwesome;
+								margin-left: 0.5em;
+							}
+						}
+					}
+		
+					&:hover {
+						> a {
+							color: option($config, link-hover-color);
+							background: option($config, item-hover-bg);
+							border: option($config, item-hover-border);
+							// if item has child menu
+							&:not(:only-child) {
+								color: option($config, has-child-hover-color);
+								background: option($config, has-child-hover-bg);
+								border: option($config, has-child-hover-border);
+								border-bottom-color: transparent;
+							}
+						}
+					}
+		
+					&.active {
+						> a {
+							color: option($config, link-active-color);
+						}
+						&:hover {
+							// if item is active and hovered
+							// > a {}
+						}
+					}
+		
+				} // > li
+		
+			} // > ul
 	
-	} // component(navigation)
+			// Larger Resolutions
+			@media (min-width: breakpoint(break-3)) {
+				text-align: option($config, text-align);
+				> ul {
+					display: inline-block;
+					> li {
+						display: inline-block;
+						//position: relative;
+					}
+				}
+			}
+	
+		// Settings
+		//-------------------------------------------------------------
+		
+			@include setting(no-icons) {
+				@include overwrite-sub(icon) {
+					display: none;
+				}
+			}
+	
+		} // component(navigation)
+		
+	} // overwrite('header')
 
 } // @mixin navigation

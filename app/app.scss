@@ -61,7 +61,7 @@ $to-JSON    : true;
 
 @import "modules/objects/billboard/billboard";
 @import "modules/objects/breadcrumb/breadcrumb";
-@import "modules/objects/flyout-navigation/flyout-navigation";
+@import "modules/objects/flyout-nav/flyout-nav";
 @import "modules/objects/footer/footer";
 @import "modules/objects/google-map/google-map";
 @import "modules/objects/header/header";
@@ -73,6 +73,7 @@ $to-JSON    : true;
 @import "modules/objects/page-overview/page-overview";
 @import "modules/objects/scroll-wheel/scroll-wheel";
 @import "modules/objects/scroll-top/scroll-top";
+@import "modules/objects/side-nav/side-nav";
 @import "modules/objects/site-overlay/site-overlay";
 @import "modules/objects/top-bar/top-bar";
 

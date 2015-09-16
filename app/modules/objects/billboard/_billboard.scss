@@ -109,8 +109,8 @@
 		
 		// If header is "absolute"
 		@at-root {
-			@include overwrite(app-header, $modifiers: absolute) {
-				@include overwrite(billboard, $modifiers: full-screen, $special: adjacent-sibling) {
+			@include overwrite(app-header, $is: absolute) {
+				@include overwrite(billboard, $is: full-screen, $special: adjacent-sibling) {
 					height: 100%;
 					height: 100vh;
 				}
@@ -120,7 +120,7 @@
 		// If website has "top-bar"
 		@at-root {
 			@include overwrite(top-bar) {
-				@include overwrite(billboard, $modifiers: full-screen, $special: general-sibling) {
+				@include overwrite(billboard, $is: full-screen, $special: general-sibling) {
 					height: calc(100vh - #{option($header, height)} - #{option($top-bar, height)});
 				}
 			}
@@ -129,8 +129,8 @@
 		// If website has "top-bar" and header is "absolute"
 		@at-root {
 			@include overwrite(top-bar) {
-				@include overwrite(app-header, $modifiers: absolute, $special: adjacent-sibling) {
-					@include overwrite($modifiers: full-screen, $special: adjacent-sibling) {
+				@include overwrite(app-header, $is: absolute, $special: adjacent-sibling) {
+					@include overwrite($is: full-screen, $special: adjacent-sibling) {
 						height: calc(100vh - #{option($top-bar, height)});
 					}
 				}
@@ -139,9 +139,9 @@
 		
 		// If website has "top-bar" and top-bar is "fixed" and header is "absolute"
 		@at-root {
-			@include overwrite(top-bar, $modifiers: fixed) {
-				@include overwrite(app-header, $modifiers: absolute, $special: adjacent-sibling) {
-					@include overwrite($modifiers: full-screen, $special: adjacent-sibling) {
+			@include overwrite(top-bar, $is: fixed) {
+				@include overwrite(app-header, $is: absolute, $special: adjacent-sibling) {
+					@include overwrite($is: full-screen, $special: adjacent-sibling) {
 						margin-top: option($top-bar, height);
 					}
 				}

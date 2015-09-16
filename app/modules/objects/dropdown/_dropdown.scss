@@ -35,114 +35,118 @@
 	// Component
 	//-------------------------------------------------------------
 	
-	[class*="#{option($navigation, name)}"] {
-
-		// parent list
-		ul {
-			
-			// show the dropdown
-			li {	
-				&:hover {
-					> ul {
-						opacity: 1;
-						visibility: visible;
-						z-index: 6;
+	@include overwrite('header', $not: 'side') {
+		
+		[class*="#{option($navigation, name)}"] {
+	
+			// parent list
+			ul {
+				
+				// show the dropdown
+				li {	
+					&:hover {
+						> ul {
+							opacity: 1;
+							visibility: visible;
+							z-index: 6;
+						}
 					}
 				}
-			}
-			
-			// dropdown
-			ul {
-			
-				@extend %list-reset;
-				min-width: option($config, width);
-				text-align: option($config, text-align);
-				transition: base(transition);
-				font-size: option($config, font-size);
-				position: absolute;
-				z-index: 5;
-				// hide and remove pointer events until required
-				opacity: 0;
-				visibility: hidden;
-			
-				li {
-			
-					position: relative;
-			
-					a {
-						background: option($config, link-bg-color);
-						color: option($config, link-color);
-						padding: option($config, link-padding);
-						border-top: 1px solid color(greyscale, grey-2); 
-						&:before, 
-						&:after {
-							font-family: FontAwesome;		
-						}
-						&:not(:only-child) {
-							padding-right: option($config, link-padding) + 1rem;
+				
+				// dropdown
+				ul {
+				
+					@extend %list-reset;
+					min-width: option($config, width);
+					text-align: option($config, text-align);
+					transition: base(transition);
+					font-size: option($config, font-size);
+					position: absolute;
+					z-index: 5;
+					// hide and remove pointer events until required
+					opacity: 0;
+					visibility: hidden;
+				
+					li {
+				
+						position: relative;
+				
+						a {
+							background: option($config, link-bg-color);
+							color: option($config, link-color);
+							padding: option($config, link-padding);
+							border-top: 1px solid color(greyscale, grey-2); 
+							&:before, 
 							&:after {
-								content: option($config, dropdown-icon);
-								right: 0.75em;
-								@include vertical-center(absolute);
+								font-family: FontAwesome;		
+							}
+							&:not(:only-child) {
+								padding-right: option($config, link-padding) + 1rem;
+								&:after {
+									content: option($config, dropdown-icon);
+									right: 0.75em;
+									@include vertical-center(absolute);
+								}
 							}
 						}
-					}
-			
-					// remove top border on first item
-					&:first-child {
-						> a {
-							border-top-color: transparent;
-						}
-					}
-					
-					// remove bottom border on last item
-					&:last-child {
-						> a {
-							// border-bottom-color: transparent;
-						}
-					}
-			
-					&:hover {
-						> a {
-							color: option($config, link-hover-color);
-							background: option($config, link-hover-bg-color);
-							border-color: color(brand, primary);
-						}
-						+ li {
+				
+						// remove top border on first item
+						&:first-child {
 							> a {
-								border-top-color: color(greyscale, grey-1);
+								border-top-color: transparent;
 							}
 						}
-					}
-			
-					&.active {
-						> a {
-							color: option($config, link-active-color);
-							background: option($config, link-active-bg-color);
-						}
-					}
-			
-					ul {
-						left: 100%;
-						top: 0;
-						li {
-							a {
-								border-left: 1px solid color(greyscale, grey-2);
+						
+						// remove bottom border on last item
+						&:last-child {
+							> a {
+								// border-bottom-color: transparent;
 							}
 						}
-					}
+				
+						&:hover {
+							> a {
+								color: option($config, link-hover-color);
+								background: option($config, link-hover-bg-color);
+								border-color: color(brand, primary);
+							}
+							+ li {
+								> a {
+									border-top-color: color(greyscale, grey-1);
+								}
+							}
+						}
+				
+						&.active {
+							> a {
+								color: option($config, link-active-color);
+								background: option($config, link-active-bg-color);
+							}
+						}
+				
+						ul {
+							left: 100%;
+							top: 0;
+							li {
+								a {
+									border-left: 1px solid color(greyscale, grey-2);
+								}
+							}
+						}
+				
+					} // li
+				
+				} // ul
+				
+				// first level only
+				> ul {
+					padding-top: option($config, top-position);
+				}
 			
-				} // li
+			} // ul (parent)
 			
-			} // ul
-			
-			// first level only
-			> ul {
-				padding-top: option($config, top-position);
-			}
-		
-		} // ul (parent)
-		
-	} // component
+		} // component
+	
+	} // overwrite('header')
 	
 } // @mixin dropdown

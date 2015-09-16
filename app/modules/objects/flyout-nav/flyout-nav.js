@@ -3,8 +3,12 @@
 //=================================================================
 
 $(document).ready(function() {
+    
+    $('#flyout')
+        .addClass('flyout-container')
+        .append('<nav class="side-nav"></nav>');
 
-    var fnContainer = $('#flyout');
+    var fnContainer = $('#flyout .side-nav');
 
     // create the flyout nav HTML
     function flyoutNav() {

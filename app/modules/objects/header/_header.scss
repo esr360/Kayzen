@@ -29,6 +29,7 @@
 		side                 : (
 			default          : false,
 			width            : 350px,
+			box-shadow       : none,
 			container-width  : 100%
 		),
 		sticky               : (
@@ -87,25 +88,31 @@
 		//---------------------------------------------------------
 	
 		@include setting(side) {
-			position: fixed;
-			z-index: option($config, z-index);
-			height: 100%;
-			top: 0;	
-			overflow: auto;
-			width: option($config, side, width);	
-			#{option($config, side, default)}: 0;
+			@extend .flyout-container;
+			width: option($config, 'side', 'width');
+			box-shadow: option($config, 'side', 'box-shadow');
+			@if option($config, 'side', 'default') != false {
+				#{option($config, side, default)}: 0;
+			}
 			@include option(left) {
+				left: 0;
+				right: auto;
 				+ #site-content {
-					margin-left: option($config, side, width);
+					margin-left: option($config, 'side', 'width');
 				}
 			}
 			@include option(right) {
+				right: 0;
+				left: auto;
 				+ #site-content {
-					margin-right: option($config, side, width);
+					margin-right: option($config, 'side', 'width');
 				}
 			}
 			@include overwrite(container) {
-				max-width: option($config, side, container-width);
+				max-width: option($config, 'side', 'container-width');
+			}
+			@include overwrite(('logo', 'navigation')) {
+				display: block;
 			}
 		}
 		
