@@ -3535,18 +3535,18 @@ progress.progress-alt::-moz-progress-bar {
   min-width: 150px;
 }
 .top-bar_nav > ul ul:after, [class*="top-bar_nav-"] > ul ul:after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 0;
+}
+.top-bar_nav > ul ul:after, [class*="top-bar_nav-"] > ul ul:after {
   margin-left: -0.5em;
   bottom: 100%;
   left: 50%;
   border-left: solid 0.5em transparent;
   border-right: solid 0.5em transparent;
   border-bottom: solid 0.5em #f8f8f8;
-}
-.top-bar_nav > ul ul:after:after, [class*="top-bar_nav-"] > ul ul:after:after {
-  content: '';
-  position: absolute;
-  width: 0;
-  height: 0;
 }
 [class*="top-bar-"][class*="-fixed"] {
   position: fixed;

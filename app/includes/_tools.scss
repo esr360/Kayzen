@@ -161,11 +161,12 @@
 		size     : 0.5em
 	), $config);
 	
+	@if map-get($config, core) {
+		@include triangle-core;
+	}
+		
 	&:after {
 		margin-left: -#{map-get($config, size)};
-		@if map-get($config, core) {
-			@include triangle-core;
-		}
 		@if map-get($config, position) == top {
 			top: 100%;
 			left: 50%;
