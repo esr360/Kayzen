@@ -4255,7 +4255,6 @@ progress.progress-alt::-moz-progress-bar {
   background-size: cover;
 }
 [class*="billboard-"][class*="-full-screen"] {
-  height: 90%;
   height: -webkit-calc(100% - 100px);
   height: calc(100% - 100px);
   height: -webkit-calc(100vh - 100px);
@@ -4265,9 +4264,19 @@ progress.progress-alt::-moz-progress-bar {
   height: 100%;
   height: 100vh;
 }
+[class*="app-header-"][class*="-side"] + #site-content [class*="billboard-"][class*="-full-screen"] {
+  height: 100%;
+  height: 100vh;
+}
 .top-bar ~ [class*="billboard-"][class*="-full-screen"], [class*="top-bar-"] ~ [class*="billboard-"][class*="-full-screen"] {
   height: -webkit-calc(100vh - 100px - 60px);
   height: calc(100vh - 100px - 60px);
+}
+[class*="app-header-"][class*="-side"] + #site-content .top-bar + [class*="billboard-"][class*="-full-screen"], [class*="app-header-"][class*="-side"] + #site-content [class*="top-bar-"] + [class*="billboard-"][class*="-full-screen"] {
+  height: -webkit-calc(100% - 60px);
+  height: calc(100% - 60px);
+  height: -webkit-calc(100vh - 60px);
+  height: calc(100vh - 60px);
 }
 .top-bar + [class*="app-header-"][class*="-absolute"] + [class*="billboard-"][class*="-full-screen"], [class*="top-bar-"] + [class*="app-header-"][class*="-absolute"] + [class*="billboard-"][class*="-full-screen"] {
   height: -webkit-calc(100vh - 60px);
