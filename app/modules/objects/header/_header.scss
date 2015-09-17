@@ -89,9 +89,11 @@
 	
 		@include setting(side) {
 			
-			@extend .side-container;
 			width: option($config, 'side', 'width');
 			box-shadow: option($config, 'side', 'box-shadow');
+			
+			// Side Navigation
+			@extend #{$side-nav-selector};
 			
 			@include overwrite(container) {
 				max-width: option($config, 'side', 'container-width');

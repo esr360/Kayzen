@@ -58,8 +58,8 @@
 			height: calc(100% - #{option($header, height)});
 			height: calc(100vh - #{option($header, height)});
 		
-			// If header is "absolute"
-			@if option($header, absolute) {
+			// If header is "absolute" or header is "side"
+			@if option($header, absolute) or option($header, side) {
 				height: 100%;
 				height: 100vh;
 			}
@@ -72,11 +72,21 @@
 					}
 				}	
 			}
-		
-			// If website has "top-bar" and header is "absolute"
-			@at-root {
+			
+			// If header is "side" and website has "top-bar"
+			@if option($header, side) {
 				@include overwrite(top-bar) {
-					@if option($header, absolute) {
+					@include overwrite($special: general-sibling) {
+						height: calc(100% - #{option($top-bar, height)});
+						height: calc(100vh - #{option($top-bar, height)});
+					}
+				}
+			}
+		
+			// If header is "absolute" and website has "top-bar"
+			@at-root {
+				@if option($header, absolute) {
+					@include overwrite(top-bar) {
 						@include overwrite($special: general-sibling) {
 							height: calc(100vh - #{option($top-bar, height)});
 						}
@@ -108,7 +118,7 @@
 		// If header is "absolute"
 		@at-root {
 			@include overwrite(app-header, $is: absolute) {
-				@include overwrite(billboard, $is: full-screen, $special: adjacent-sibling) {
+				@include overwrite($is: full-screen, $special: adjacent-sibling) {
 					height: 100%;
 					height: 100vh;
 				}
@@ -119,7 +129,7 @@
 		@at-root {
 			@include overwrite(app-header, $is: side) {
 				+ #site-content {
-					@include overwrite(billboard, $is: full-screen) {
+					@include overwrite($is: full-screen) {
 						height: 100%;
 						height: 100vh;
 					}
@@ -130,7 +140,7 @@
 		// If website has "top-bar"
 		@at-root {
 			@include overwrite(top-bar) {
-				@include overwrite(billboard, $is: full-screen, $special: general-sibling) {
+				@include overwrite($is: full-screen, $special: general-sibling) {
 					height: calc(100vh - #{option($header, height)} - #{option($top-bar, height)});
 				}
 			}
@@ -141,7 +151,7 @@
 			@include overwrite(app-header, $is: side) {
 				+ #site-content {
 					@include overwrite(top-bar) {
-						@include overwrite(billboard, $is: full-screen, $special: adjacent-sibling) {
+						@include overwrite($is: full-screen, $special: adjacent-sibling) {
 							height: calc(100% - #{option($top-bar, height)});
 							height: calc(100vh - #{option($top-bar, height)});
 						}

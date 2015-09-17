@@ -20,7 +20,6 @@
 		// options
 		width                   : 300px,
 		background              : color(greyscale, grey-5),
-		box-shadow              : 1px 0 25px 0px rgba(0, 0, 0, 0.4),
 		font-size               : font-size(size-2),
 		transition              : base(transition),
 		z-index                 : 15,
@@ -49,7 +48,10 @@
 	// Component
 	//-------------------------------------------------------------
 	
-	.side-container {
+	@include component {
+		
+		// Cache selector as variable
+		$side-nav-selector: & !global;
 	
 	    position: fixed;
 	    height: 100%;
@@ -58,11 +60,9 @@
 	    transform: translate3d(0,0,0);
 		
 	    width: option($config, width);
-	    left: -#{option($config, width)};
 		font-size: option($config, font-size);
 	    background: option($config, background);
 	    transition: option($config, transition);
-	    box-shadow: option($config, box-shadow);
 	    z-index: option($config, z-index);
 		
 		nav {
@@ -110,23 +110,13 @@
 				}
 			}
 		
-		} // .side-nav
+		} // nav
 	
 		// hide the mega-menu
 		@include overwrite(mega-menu) {
 			display: none !important;
 		}
-		
-		// Reveal the flyout navigation
-	    .flyout-active & {
-	    	left: 0;
-	    }
 	
-	} // .flyout-container
-	
-	// site-overlay
-	.flyout-visible {
-		z-index: 13 !important;
-	}
+	} // component
 	
 } // @mixin side-nav

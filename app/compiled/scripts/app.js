@@ -5566,10 +5566,10 @@ if (setting('app-header', 'side')) {
 $(document).ready(function() {
     
     $('#flyout')
-        .addClass('side-container')
+        .addClass('flyout-nav')
         .append('<nav class="side-nav"></nav>');
 
-    var fnContainer = $('#flyout .side-nav');
+    var fnContainer = $('#flyout').find(sideNav);
 
     // create the flyout nav HTML
     function flyoutNav() {

@@ -11,12 +11,36 @@
 	//-------------------------------------------------------------
 
 	$flyout-nav: config((
-		name           : flyout-nav		
+		name           : flyout-nav,
+		width          : 300px,
+		font-size      : font-size(base),
+		box-shadow     : 1px 0 25px 0px rgba(0, 0, 0, 0.4)
 	), $custom);
 	
 	//-------------------------------------------------------------
 	// Component
 	//-------------------------------------------------------------
+	
+	@include component {
+	
+		font-size: option($config, font-size);
+	    left: -#{option($config, width)};
+	    box-shadow: option($config, box-shadow);
+		
+		// Side Navigation
+		@extend #{$side-nav-selector};
+		
+		// Reveal the flyout navigation
+	    .flyout-active & {
+	    	left: 0;
+	    }
+		
+	}
+	
+	// site-overlay
+	.flyout-visible {
+		z-index: 13 !important;
+	}
 	
 	
 } // mixin flyout-nav()
