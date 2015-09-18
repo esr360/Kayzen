@@ -19,7 +19,7 @@
 	
 	[class*="#{option($navigation, name)}"] {
 			
-		@include component(mega-menu) { 
+		@include component { 
 		
 			width: 100%;
 			left: 0;

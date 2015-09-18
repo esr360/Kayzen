@@ -59,7 +59,6 @@ if (setting('app-header', 'side')) {
 			.find('.side-nav_openClose').remove();
 		$('.side-nav_openClose').each(function() {
 			$(this).click(function(){
-				console.log('test');
 				$(this).parent().find('~ ul').slideToggle(baseTransition);
 			});
 		});
