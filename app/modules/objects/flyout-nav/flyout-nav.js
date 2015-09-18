@@ -11,16 +11,38 @@ $(document).ready(function() {
     var fnContainer = $('#flyout').find(sideNav);
 
     // create the flyout nav HTML
-    function flyoutNav() {
+    function createFlyoutNav() {
         
         // relocate the flyout-trigger in the DOM
         $("#flyout-trigger").detach().prependTo('body')
         // clone the main nav into the flyout nav container
         $("#app-nav > ul").clone().appendTo(fnContainer);
+        
+        // add collapsible functionality
+        if (setting('flyout-nav', 'collapsible')) {
+            
+            $(flyoutNav)
+                .find('li > [class*="mega-menu"]').parent()
+                .find('.side-nav_openClose').remove();
+                
+            $(flyoutNav).on('click', '.side-nav_openClose', function(e){
+                $(this).parent().find('+ ul').slideToggle(baseTransition);
+            });
+                
+        } else {
+            $(flyoutNav).find('.side-nav_openClose').remove();
+        }
 
-    } // flyoutNav()
+        // collapse by default
+        var openDefault = module['flyout-nav']['collapsible']['open-by-default'];
+        
+        if ($(flyoutNav).is('[class*="-collapse"]') == true || openDefault == false) {
+            $(flyoutNav).find('a:not(:only-child) ~ ul').hide();
+        }
+    
+    } // createFlyoutNav()
 
-    $(flyoutNav);
+    $(createFlyoutNav);
 
 }); // document.ready
 

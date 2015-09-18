@@ -42,6 +42,7 @@ Made by @esr360
 //@prepros-append modules/objects/header/header.js
 //@prepros-append modules/objects/dropdown/dropdown.js
 //@prepros-append modules/objects/flyout-nav/flyout-nav.js
+//@prepros-append modules/objects/side-nav/side-nav.js
 //@prepros-append modules/objects/scroll-top/scroll-top.js
 //@prepros-append modules/objects/page-overview/page-overview.js
 //@prepros-append modules/objects/top-bar/top-bar.js

@@ -42,6 +42,7 @@ Made by @esr360
 //@prepros-append modules/objects/header/header.js
 //@prepros-append modules/objects/dropdown/dropdown.js
 //@prepros-append modules/objects/flyout-nav/flyout-nav.js
+//@prepros-append modules/objects/side-nav/side-nav.js
 //@prepros-append modules/objects/scroll-top/scroll-top.js
 //@prepros-append modules/objects/page-overview/page-overview.js
 //@prepros-append modules/objects/top-bar/top-bar.js
@@ -1866,7 +1867,7 @@ $('a[href*=#]').click(function() {
     if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') 
         || location.hostname == this.hostname) {
         var target = $(this.hash);
-        target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+        target = target.length ? target : $('[name="' + this.hash.slice(1) +'"]');
            if (target.length) {
              $('html,body').animate({
                  scrollTop: target.offset().top
@@ -5552,32 +5553,7 @@ if (setting('app-header', 'sticky'))  {
 //-----------------------------------------------------------------
 
 if (setting('app-header', 'side')) {
-	
-	$(appHeader).prependTo('body');
-	
-	// create open/close icon
-	var openClose = '<i class="side-nav_openClose fa ' + module['side-nav']['collapsible']['icon'] + '"></i>'
-	
-	// add collapsible functionality
-	if (setting('side-nav', 'collapsible')) {
-		$(navigation).find('a:not(:only-child)').prepend(openClose);
-		$(navigation)
-			.find('li > [class*="mega-menu"]').parent()
-			.find('.side-nav_openClose').remove();
-		$('.side-nav_openClose').each(function() {
-			$(this).click(function(){
-				$(this).parent().find('~ ul').slideToggle(baseTransition);
-			});
-		});
-	}
-	
-	// collapse by default
-	var setting = module['side-nav']['collapsible']['open-by-default'];
-	if ($(navigation).is('[class*="-collapse"]') == true || setting == false) {
-		$(navigation).find('a:not(:only-child) ~ ul').hide();
-	}
-	
-	
+	$(appHeader).prependTo('body');	
 }
 ;//=================================================================
 // Dropdown
@@ -5595,16 +5571,38 @@ $(document).ready(function() {
     var fnContainer = $('#flyout').find(sideNav);
 
     // create the flyout nav HTML
-    function flyoutNav() {
+    function createFlyoutNav() {
         
         // relocate the flyout-trigger in the DOM
         $("#flyout-trigger").detach().prependTo('body')
         // clone the main nav into the flyout nav container
         $("#app-nav > ul").clone().appendTo(fnContainer);
+        
+        // add collapsible functionality
+        if (setting('flyout-nav', 'collapsible')) {
+            
+            $(flyoutNav)
+                .find('li > [class*="mega-menu"]').parent()
+                .find('.side-nav_openClose').remove();
+                
+            $(flyoutNav).on('click', '.side-nav_openClose', function(e){
+                $(this).parent().find('+ ul').slideToggle(baseTransition);
+            });
+                
+        } else {
+            $(flyoutNav).find('.side-nav_openClose').remove();
+        }
 
-    } // flyoutNav()
+        // collapse by default
+        var openDefault = module['flyout-nav']['collapsible']['open-by-default'];
+        
+        if ($(flyoutNav).is('[class*="-collapse"]') == true || openDefault == false) {
+            $(flyoutNav).find('a:not(:only-child) ~ ul').hide();
+        }
+    
+    } // createFlyoutNav()
 
-    $(flyoutNav);
+    $(createFlyoutNav);
 
 }); // document.ready
 
@@ -5643,6 +5641,37 @@ $(window).load(function(){
     });
 
 }); // $(window).load()
+;//=================================================================
+// Side-Header Navigation
+//=================================================================
+
+if (setting('app-header', 'side')) {
+	
+	// add collapsible functionality
+	if (setting('side-nav', 'collapsible')) {
+		
+		// create open/close icon
+		var openClose = '<i class="side-nav_openClose fa ' + module['side-nav']['collapsible']['icon'] + '"></i>'
+		$(appHeader).find($(navigation)).find('a:not(:only-child)').prepend(openClose);
+		
+		$(navigation)
+			.find('li > [class*="mega-menu"]').parent()
+			.find('.side-nav_openClose').remove();
+			
+		$(navigation).on('click', '.side-nav_openClose', function(e){
+			$(this).parent().find('+ ul').slideToggle(baseTransition);
+		});
+			
+	}
+
+	// collapse by default
+	var openDefault = module['side-nav']['collapsible']['open-by-default'];
+	
+	if ($(navigation).is('[class*="-collapse"]') == true || openDefault == false) {
+		$(navigation).find('a:not(:only-child) ~ ul').hide();
+	}
+	
+}
 ;//-----------------------------------------------------------------
 // Scroll to Top
 //-----------------------------------------------------------------
