@@ -9,7 +9,8 @@
 	//-------------------------------------------------------------
 
 	$mega-menu: config((
-		name                  : mega-menu
+		name                  : mega-menu,
+		output-JSON           : true
 	), $custom) !global;
 	
 	//-------------------------------------------------------------
@@ -77,7 +78,7 @@
 				margin-top: 0;
 				margin-bottom: 1em;
 				padding-bottom: 0.5em;
-				border-bottom: 1px solid color(greyscale, grey-2);
+				border-bottom: 1px solid color('greyscale', 'grey-2');
 			}
 		
 		} // component

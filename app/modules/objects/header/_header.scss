@@ -29,7 +29,6 @@
 		side                 : (
 			default          : false,
 			width            : 350px,
-			box-shadow       : none,
 			container-width  : 100%
 		),
 		sticky               : (
@@ -89,11 +88,10 @@
 	
 		@include setting(side) {
 			
-			width: option($config, 'side', 'width');
-			box-shadow: option($config, 'side', 'box-shadow');
-			
 			// Side Navigation
 			@extend #{$side-nav-selector};
+			
+			width: option($config, 'side', 'width');
 			
 			@include overwrite(container) {
 				max-width: option($config, 'side', 'container-width');
@@ -101,6 +99,13 @@
 			
 			@include overwrite(('logo', 'navigation')) {
 				display: block;
+			}
+			
+			@include overwrite(logo) {
+				padding: 1em;
+				img {
+					height: option($config, sticky, logo-height);
+				}
 			}
 			
 			@include option(left) {

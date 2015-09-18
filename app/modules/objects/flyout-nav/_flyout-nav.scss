@@ -11,10 +11,17 @@
 	//-------------------------------------------------------------
 
 	$flyout-nav: config((
-		name           : flyout-nav,
-		width          : 300px,
-		font-size      : font-size(base),
-		box-shadow     : 1px 0 25px 0px rgba(0, 0, 0, 0.4)
+		name                : flyout-nav,
+		output-JSON         : true,
+		// Options
+		width               : 300px,
+		font-size           : font-size(base),
+		box-shadow          : 1px 0 25px 0px rgba(0, 0, 0, 0.4),
+		// Settings
+		collapsible         : (
+			default         : true,
+			open-by-default : true
+		),
 	), $custom);
 	
 	//-------------------------------------------------------------
@@ -23,12 +30,12 @@
 	
 	@include component {
 	
+		// Side Navigation
+		@extend #{$side-nav-selector};
+		
 		font-size: option($config, font-size);
 	    left: -#{option($config, width)};
 	    box-shadow: option($config, box-shadow);
-		
-		// Side Navigation
-		@extend #{$side-nav-selector};
 		
 		// Reveal the flyout navigation
 	    .flyout-active & {
