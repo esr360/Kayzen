@@ -70,6 +70,8 @@
 			ul {
 				@extend %list-reset;
 				li {
+					display: block;
+					margin-left: 0;
 					&:hover {
 						> a {
 							border-left: option($config, item-hover-left-border);

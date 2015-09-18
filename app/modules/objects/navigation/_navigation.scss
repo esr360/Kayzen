@@ -64,113 +64,109 @@
 	//-------------------------------------------------------------
 	// Component
 	//-------------------------------------------------------------
-		
-	@include overwrite('header', $not: 'side') {
+
+	@include component {
 	
-		@include component {
+	// Core Styles
+	//-------------------------------------------------------------
+		
+		font-size: option($config, font-size);
+		
+		// all levels
+		li {    
+			a {
+				display: block;
+				padding: option($navigation, item-padding);
+				color: option($navigation, item-color);
+				border: option($navigation, item-border);
+				&:hover {
+					text-decoration: none;
+				}
+				// icon
+				@include overwrite-sub(icon) {
+					margin-right: 0.5em;
+				}
+			}   
+		}
 	
-		// Core Styles
-		//-------------------------------------------------------------
-			
-			font-size: option($config, font-size);
-			
-			// all levels
-			li {    
-				a {
-					display: block;
-					padding: option($navigation, item-padding);
-					color: option($navigation, item-color);
-					border: option($navigation, item-border);
-					&:hover {
-						text-decoration: none;
+		// parent level only
+		> ul {
+	
+			@extend %list-reset;
+			display: none; // hide by default for small resolutions
+			vertical-align: middle;
+	
+			> li {
+	
+				// add gap between items
+				margin-left: option($navigation, item-gutter);
+				&:first-child {
+					margin-left: 0;
+				}
+	
+				> a {
+					background: option($navigation, item-bg);
+					// if item has child menu
+					&:not(:only-child) {
+						border-bottom-color: transparent;
+						&:after {
+							content: option($navigation, dropdown-icon);
+							font-family: FontAwesome;
+							margin-left: 0.5em;
+						}
 					}
-					// icon
-					@include overwrite-sub(icon) {
-						margin-right: 0.5em;
-					}
-				}   
-			}
-		
-			// parent level only
-			> ul {
-		
-				@extend %list-reset;
-				display: none; // hide by default for small resolutions
-				vertical-align: middle;
-		
-				> li {
-		
-					// add gap between items
-					margin-left: option($navigation, item-gutter);
-					&:first-child {
-						margin-left: 0;
-					}
-		
+				}
+	
+				&:hover {
 					> a {
-						background: option($navigation, item-bg);
+						color: option($config, link-hover-color);
+						background: option($config, item-hover-bg);
+						border: option($config, item-hover-border);
 						// if item has child menu
 						&:not(:only-child) {
+							color: option($config, has-child-hover-color);
+							background: option($config, has-child-hover-bg);
+							border: option($config, has-child-hover-border);
 							border-bottom-color: transparent;
-							&:after {
-								content: option($navigation, dropdown-icon);
-								font-family: FontAwesome;
-								margin-left: 0.5em;
-							}
 						}
 					}
-		
+				}
+	
+				&.active {
+					> a {
+						color: option($config, link-active-color);
+					}
 					&:hover {
-						> a {
-							color: option($config, link-hover-color);
-							background: option($config, item-hover-bg);
-							border: option($config, item-hover-border);
-							// if item has child menu
-							&:not(:only-child) {
-								color: option($config, has-child-hover-color);
-								background: option($config, has-child-hover-bg);
-								border: option($config, has-child-hover-border);
-								border-bottom-color: transparent;
-							}
-						}
+						// if item is active and hovered
+						// > a {}
 					}
-		
-					&.active {
-						> a {
-							color: option($config, link-active-color);
-						}
-						&:hover {
-							// if item is active and hovered
-							// > a {}
-						}
-					}
-		
-				} // > li
-		
-			} // > ul
+				}
 	
-			// Larger Resolutions
-			@media (min-width: breakpoint(break-3)) {
-				text-align: option($config, text-align);
-				> ul {
+			} // > li
+	
+		} // > ul
+
+		// Larger Resolutions
+		@media (min-width: breakpoint(break-3)) {
+			text-align: option($config, text-align);
+			> ul {
+				display: inline-block;
+				> li {
 					display: inline-block;
-					> li {
-						display: inline-block;
-						//position: relative;
-					}
+					//position: relative;
 				}
 			}
+		}
+
+	// Settings
+	//-------------------------------------------------------------
 	
-		// Settings
-		//-------------------------------------------------------------
-		
-			@include setting(no-icons) {
-				@include overwrite-sub(icon) {
-					display: none;
-				}
+		@include setting(no-icons) {
+			@include overwrite-sub(icon) {
+				display: none;
 			}
-	
-		} // component(navigation)
-		
-	} // overwrite('header')
+		}
+
+	} // component(navigation)
 
 } // @mixin navigation

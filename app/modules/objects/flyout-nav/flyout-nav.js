@@ -21,6 +21,10 @@ $(document).ready(function() {
         // add collapsible functionality
         if (setting('flyout-nav', 'collapsible')) {
             
+            // create open/close icon
+            var openClose = '<i class="side-nav_openClose fa ' + module['side-nav']['collapsible']['icon'] + '"></i>'
+            $(flyoutNav).find('a:not(:only-child)').prepend(openClose);
+        
             $(flyoutNav)
                 .find('li > [class*="mega-menu"]').parent()
                 .find('.side-nav_openClose').remove();
