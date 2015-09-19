@@ -1,0 +1,75 @@
+//=================================================================
+// Search
+//=================================================================
+
+@mixin search($custom: ()) {
+
+	//-------------------------------------------------------------
+	// Config
+	//-------------------------------------------------------------
+
+	$site-overlay: config((
+		name            : search,
+		output-JSON     : true
+	), $custom);
+	
+	//-------------------------------------------------------------
+	// Component
+	//-------------------------------------------------------------
+	
+	@include component {
+		
+		position: absolute;
+		height: option($top-bar, height);
+		width: 100%;
+		top: 0;
+		z-index: 7;
+		text-align: center;
+		transform: translateY(-100%);
+		transition: base(transition);
+		
+		[type="search"] {
+			background: color(greyscale, grey-5);
+			height: 100%;
+			width: 100%;
+			border: none;
+			padding: 0;
+			outline: 0;
+			&:focus {
+				&::placeholder {
+					//opacity: 0;
+				}
+			}
+		}
+				
+		@include modifier(visible) {
+			transform: translateY(0);
+		}
+		
+		@include sub-components((go, close)) {
+			&, .fa {
+				cursor: pointer;
+			}
+			&:focus {
+				outline: 0;
+			}
+		}
+		
+		@include overwrite(container) {
+			height: 100%;
+		}
+		
+		@include overwrite-sub(group, $parent: icon) {
+			@include vertical-center(absolute);
+			right: 0;
+		}
+		
+		::placeholder {
+			font-weight: lighter;
+			transition: base(transition);
+			color: base(text-color);
+		}
+		
+	} // component()
+		
+} // @mixin search

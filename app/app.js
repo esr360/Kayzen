@@ -45,6 +45,7 @@ Made by @esr360
 //@prepros-append modules/objects/side-nav/side-nav.js
 //@prepros-append modules/objects/scroll-top/scroll-top.js
 //@prepros-append modules/objects/page-overview/page-overview.js
+//@prepros-append modules/objects/search/search.js
 //@prepros-append modules/objects/top-bar/top-bar.js
 
 //-----------------------------------------------------------------

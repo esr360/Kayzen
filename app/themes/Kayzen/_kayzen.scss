@@ -59,7 +59,7 @@
 		bg                     : transparent,
 		font-size              : 0.9em,
 		dark                   : (
-			bg                 : rgba(black, 0.4),
+			bg                 : rgba(black, 0.3),
 		)
 	));
 	
@@ -74,6 +74,7 @@
 	@include page-overview;
 	@include promo-banner;
 	@include scroll-top;
+	@include search;
 	@include scroll-wheel;
 	@include site-overlay;
 	

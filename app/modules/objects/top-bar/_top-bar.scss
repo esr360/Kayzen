@@ -16,6 +16,7 @@
 		padding          : 1em 0,
 		link-color       : color(greyscale, grey-3),
 		link-hover-color : color(greyscale, white),
+		z-index          : 6,
 		fixed            : false
 	), $custom) !global;
 
@@ -28,6 +29,7 @@
 		background: option($config, background);
 		position: relative;
 		font-weight: lighter;
+		z-index: option($config, z-index);
 		
 		a:not([class*="button"]) {
 			color: option($config, link-color);

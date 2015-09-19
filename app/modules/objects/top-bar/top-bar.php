@@ -38,7 +38,7 @@
 				
 				<div class="top-bar_nav span va-middle">
 					<ul>
-						<li>
+						<li id="search-trigger">
 							<a href="#">
 								<i class="fa fa-search"></i>
 							</a>
