@@ -20,7 +20,7 @@
 		overlay-opacity : 0.6,
 		color           : color(greyscale, white),
 		text-align      : center,
-		min-height      : 450px,
+		min-height      : 500px,
 		wrapper-width   : breakpoint(break-2)
 	), $custom) !global;
 	
@@ -201,6 +201,15 @@
 			text-align: option($config, text-align);
 			@extend %horizontal-center;
 			@include vertical-center(absolute);
+			@at-root {
+				@include overwrite(app-header, $is: dark) {
+					@include overwrite(billboard, $special: adjacent-sibling) {
+						@include overwrite-sub(wrapper) {
+							transform: translateY(-15%);
+						}
+					}
+				}
+			}
 			@media (min-width: breakpoint(break-3)) {
 				width: option($config, wrapper-width);
 			}

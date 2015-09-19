@@ -58,8 +58,8 @@
 	@include header((
 		bg                     : transparent,
 		font-size              : 0.9em,
-		absolute               : (
-			top-position       : 50px
+		dark                   : (
+			bg                 : rgba(black, 0.4),
 		)
 	));
 	

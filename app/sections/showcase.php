@@ -234,7 +234,7 @@
 				stagePadding: 0,
 				responsive: {
 					600: {
-						items:4
+						items:6
 					}
 				}
 			})

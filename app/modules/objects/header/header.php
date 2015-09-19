@@ -3,9 +3,9 @@
 	
 <!-- Header -->
 <?php if ($for == 'index') { ?>
-<header class="app-header-bar-side-left" id="app-header">
+<header class="app-header-bar-absolute-sticky" id="app-header">
 <?php } else { ?>
-<header class="app-header-bar-dark-sticky" id="app-header">
+<header class="app-header-bar-absolute-dark-sticky" id="app-header">
 <?php } ?>
 			
 	<div class="container">
