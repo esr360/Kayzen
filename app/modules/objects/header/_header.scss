@@ -112,7 +112,7 @@
 				}
 			}
 			
-			@include option(left) {
+			@include option($option: default, $value: left) {
 				left: 0;
 				right: auto;
 				+ #site-content {
@@ -120,7 +120,7 @@
 				}
 			}
 			
-			@include option(right) {
+			@include option($option: default, $value: right) {
 				right: 0;
 				left: auto;
 				+ #site-content {
@@ -129,8 +129,9 @@
 			}
 			
 			// Always show vertical scrollbars
-			@include option(show-y-scrollbar) {
+			@include option($option: show-y-scrollbar, $value: true) {
 				overflow-y: scroll;
+				content: "dopy";
 			}
 			
 		} // setting(side)

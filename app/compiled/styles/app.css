@@ -3773,6 +3773,7 @@ progress.progress-alt::-moz-progress-bar {
 }
 [class*="app-header-"][class*="-side"][class*="-show-y-scrollbar"] {
   overflow-y: scroll;
+  content: "dopy";
 }
 [class*="app-header-"][class*="-dark"] {
   background-color: #232627;

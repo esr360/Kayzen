@@ -422,12 +422,39 @@ $extend-settings: true;
 //-----------------------------------------------------------------
 
 //	Usage
+//
+//	@mixin header($config: ()) {
+//
+//		$header: config((
+//			side : (
+//				default        : false,
+//				show-scrollbar : false
+//		), $config);
+//
+//		@include component {
+//			@include setting(side) {
+//				...
+//			}
+//		}
+//
+//	}
+//
+//	@include billboard: ((
+//		full-screen : true
+//	));
 
 @mixin option($option: default, $value: true) {
-	@if (option($config, $setting, $option) == $value) {
-		@include extend($option);
+	$nested-modifier: if(
+		$option == default,	$value, $option
+	);
+	@if (option($config, $setting, $option) == $value) {	
+		@if $option == default {
+			@include extend($value);
+		} @else {
+			@include extend($option);
+		}
 	}
-	@include nested-modifier($option) {	
+	@include nested-modifier($nested-modifier) {	
 		@content;
 	}
 }
