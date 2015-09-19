@@ -22,6 +22,7 @@
 			default         : true,
 			open-by-default : true
 		),
+		show-y-scrollbar    : false
 	), $custom);
 	
 	//-------------------------------------------------------------
@@ -41,6 +42,12 @@
 	    .flyout-active & {
 	    	left: 0;
 	    }
+		
+		@include setting(show-y-scrollbar) {
+			> nav {
+				overflow-y: scroll;
+			}
+		}
 		
 	}
 	

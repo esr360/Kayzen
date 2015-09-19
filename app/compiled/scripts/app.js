@@ -1729,6 +1729,7 @@ $.each(module, function(component) {
 //	}
 
 function setting(component, setting) {
+	
 	var $setting  = module[component][setting],
 		$id = $('.' + component + ', [class*="' + component + '-"]'),
 		$selector = $id.is('[class*="-' + setting + '"]') == true;
@@ -1737,6 +1738,7 @@ function setting(component, setting) {
 	} else {
 		return $selector || $setting != false;
 	}
+	
 }
 ;//=================================================================
 // Adaptive Columns

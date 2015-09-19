@@ -29,7 +29,8 @@
 		side                 : (
 			default          : false,
 			width            : 350px,
-			container-width  : 100%
+			container-width  : 100%,
+			show-y-scrollbar : false
 		),
 		sticky               : (
 			default          : false,
@@ -49,8 +50,11 @@
 	// Core Styles
 	//-------------------------------------------------------------
 	
-		background-color: option($config, bg);
 		font-size: option($config, font-size);
+		
+		@if not option($config, side) {
+			background: option($config, bg);
+		}
 		
 		@if option($top-bar, fixed) {
 			margin-top: option($top-bar, height);
@@ -124,8 +128,12 @@
 				}
 			}
 			
+			// Always show vertical scrollbars
+			@include option(show-y-scrollbar) {
+				overflow-y: scroll;
+			}
+			
 		} // setting(side)
-		
 		
 		// Dark Header
 		//---------------------------------------------------------

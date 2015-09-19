@@ -422,37 +422,13 @@ $extend-settings: true;
 //-----------------------------------------------------------------
 
 //	Usage
-//
-//	@mixin header($config: ()) {
-//
-//		$header: config((
-//			side : false
-//		), $config);
-//
-//		@include component(header) {
-//			@include setting(side) {
-//				@include option(left) {
-//					...
-//				}
-//				@include option(right) {
-//					...
-//				}
-//			}
-//		}
-//
-//	}
-//
-//	@include header: ((
-//		side : left
-//	));
 
-@mixin option($option) {
+@mixin option($option: default, $value: true) {
+	@if (option($config, $setting, $option) == $value) {
+		@include extend($option);
+	}
 	@include nested-modifier($option) {	
 		@content;
-	}
-	@if (type-of(option($config, $setting) == string) and map-get($config, $setting) == $option)
-	or (type-of(option($config, $setting) == map) and option($config, $setting, default) == $option) {
-		@include extend($option);
 	}
 }
 
