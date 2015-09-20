@@ -14,6 +14,7 @@ Made by @esr360
 //@prepros-append plugins/parallax.js
 //@prepros-append plugins/scroll-reveal.js
 //@prepros-append plugins/scroll-spy.js
+//@prepros-append plugins/tweetcool.js
  
 //-----------------------------------------------------------------
 // Includes
@@ -47,6 +48,7 @@ Made by @esr360
 //@prepros-append modules/objects/page-overview/page-overview.js
 //@prepros-append modules/objects/search/search.js
 //@prepros-append modules/objects/top-bar/top-bar.js
+//@prepros-append modules/objects/twitter-feed/twitter-feed.js
 
 //-----------------------------------------------------------------
 // Theme

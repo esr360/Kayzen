@@ -13,7 +13,7 @@ function breakpoint(media, value) {
 
 // Create a global variable for base transition duration
 window['baseTransition'] = module['base']['transition'].slice(0,-1) * 1000;
-
+    
 //-----------------------------------------------------------------
 
 $(document).ready(function() {
@@ -96,7 +96,7 @@ $.stellar({
 //-----------------------------------------------------------------
 
 PointerEventsPolyfill.initialize({});
-
+    
 //-----------------------------------------------------------------
 
 }); // document.ready

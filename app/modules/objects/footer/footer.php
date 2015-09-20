@@ -1,5 +1,9 @@
 <!-- Footer -->
 <footer class="footer">
+	<div class="twitter-feed">
+		<i class="loading-tweets fa fa-twitter"></i>
+		<div class="container" id="twitter-feed"></div>
+	</div>
 	<div class="container">
 		<div class="footer_wrapper">
 			<!-- Copyright Section -->

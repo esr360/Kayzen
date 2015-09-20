@@ -410,7 +410,7 @@ th {
   padding: 0;
 }
 
-[class*="carousel-"][class*="-scale"]:before, .icon .fa, [class*="icon-"] .fa, .center-xy > img, .thumbnail_mask .icon, .thumbnail_mask [class*="icon-"], [class*="thumbnail_mask-"] .icon, [class*="thumbnail_mask-"] [class*="icon-"], .top-bar_nav > ul > li [data-notification]:after, [class*="top-bar_nav-"] > ul > li [data-notification]:after, .scroll-wheel, .scroll-wheel:before, [class*="section-"][class*="-dot-map"]:before, .section_graphic > img, [class*="section_graphic-"] > img, .billboard_wrapper, [class*="billboard_wrapper-"] {
+[class*="carousel-"][class*="-scale"]:before, .icon .fa, [class*="icon-"] .fa, .center-xy > img, .thumbnail_mask .icon, .thumbnail_mask [class*="icon-"], [class*="thumbnail_mask-"] .icon, [class*="thumbnail_mask-"] [class*="icon-"], .top-bar_nav > ul > li [data-notification]:after, [class*="top-bar_nav-"] > ul > li [data-notification]:after, .scroll-wheel, .scroll-wheel:before, .loading-tweets, [class*="section-"][class*="-dot-map"]:before, .section_graphic > img, [class*="section_graphic-"] > img, .billboard_wrapper, [class*="billboard_wrapper-"] {
   left: 0;
   right: 0;
   margin: auto;
@@ -431,7 +431,7 @@ pre:last-child, hr:last-child, .accordion:last-child, [class*="accordion-"]:last
   margin-bottom: 0;
 }
 
-[class*="list-"][class*="-reset"], [class*="list-"][class*="-arrow"], [class*="list-"][class*="-tags"], .top-bar_nav ul, [class*="top-bar_nav-"] ul, .breadcrumb ul, .side-nav nav ul, .flyout-nav nav ul, [class*="flyout-nav-"] nav ul, [class*="app-header-"][class*="-side"] nav ul, [class*="side-nav-"] nav ul, .footer_nav ul, .navigation > ul, [class*="navigation-"] > ul, [class*="navigation"] ul ul {
+[class*="list-"][class*="-reset"], [class*="list-"][class*="-arrow"], [class*="list-"][class*="-tags"], .top-bar_nav ul, [class*="top-bar_nav-"] ul, .breadcrumb ul, .side-nav nav ul, .flyout-nav nav ul, [class*="flyout-nav-"] nav ul, [class*="app-header-"][class*="-side"] nav ul, [class*="side-nav-"] nav ul, .footer_nav ul, .navigation > ul, [class*="navigation-"] > ul, [class*="navigation"] ul ul, .tweets, .tweet-actions {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -3684,12 +3684,14 @@ progress.progress-alt::-moz-progress-bar {
 
 .footer, [class*="footer-"] {
   text-align: center;
-  padding: 2em 0;
   background: #232627;
   color: #ffffff;
 }
 .footer a, [class*="footer-"] a {
   color: #ffffff;
+}
+.footer_wrapper {
+  padding: 2em 0;
 }
 @media (min-width: 720px) {
   .footer_wrapper {
@@ -4252,6 +4254,83 @@ progress.progress-alt::-moz-progress-bar {
 .site-overlay[class*="visible"], [class*="site-overlay-"][class*="visible"] {
   visibility: visible;
   opacity: 1;
+}
+
+.twitter-feed, [class*="twitter-feed-"] {
+  padding: 3em 0;
+  background: #353a3b;
+  position: relative;
+}
+.twitter-feed a, [class*="twitter-feed-"] a {
+  color: #ab73c1;
+}
+.tweets {
+  text-align: left;
+}
+
+.tweet-avatar, .tweet-content,
+.tweet-actions, .tweet-actions li {
+  display: inline-block;
+}
+
+.tweet-avatar, .tweet-content,
+.tweet-meta, .tweet-actions {
+  vertical-align: middle;
+}
+
+.tweet-avatar {
+  width: 50px;
+}
+.tweet-avatar > img {
+  border-radius: 50%;
+}
+
+.tweet-content {
+  width: -webkit-calc(100% - 50px);
+  width: calc(100% - 50px);
+  padding-left: 1em;
+}
+
+.tweet-text {
+  margin: 0;
+}
+
+.tweet-actions {
+  font-size: 0.7em;
+}
+.tweet-actions li {
+  margin-left: 0.5em;
+}
+.tweet-actions li:hover a {
+  background: #9B58B5;
+  text-decoration: none;
+}
+.tweet-actions a {
+  color: #ffffff;
+  display: block;
+  position: relative;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 0 0.5em;
+  line-height: 1.9;
+  border-radius: 0.3em;
+}
+
+.tweet-user {
+  margin-left: 0.5em;
+}
+
+.tweet-timestamp {
+  color: rgba(255, 255, 255, 0.65);
+}
+
+.loading-tweets {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  opacity: 0.5;
+  font-size: 2em;
 }
 
 .section, [class*="section-"] {

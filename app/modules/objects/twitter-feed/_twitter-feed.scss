@@ -1,0 +1,104 @@
+//=================================================================
+// Twitter Feed
+//=================================================================
+
+@mixin twitter-feed($custom: ()) {
+
+	//-------------------------------------------------------------
+	// Config
+	//-------------------------------------------------------------
+
+	$twitter-feed: config((
+		name            : twitter-feed
+	), $custom);
+	
+	//-------------------------------------------------------------
+	// Component
+	//-------------------------------------------------------------
+	
+	@include component {
+		
+		padding: 3em 0;
+		background: lighten(color(greyscale, grey-5), 7.5%);
+		position: relative;
+			
+		a {
+			color: lighten(color(brand, primary), 7.5%);
+		}
+		
+		@at-root {
+			
+			.tweets {
+				@extend %list-reset;
+				text-align: left;
+			}
+			
+			.tweet-avatar, .tweet-content,
+			.tweet-actions, .tweet-actions li {
+				display: inline-block;
+			}
+			
+			.tweet-avatar, .tweet-content,
+			.tweet-meta, .tweet-actions {
+				vertical-align: middle;
+			}
+			
+			.tweet-avatar {
+				width: 50px;
+				> img {
+					border-radius: 50%;
+				}
+			}
+			
+			.tweet-content {
+				width: calc(100% - 50px);
+				padding-left: 1em;
+			}
+			
+			.tweet-text {
+				margin: 0;
+			}
+			
+			.tweet-actions {
+				@extend %list-reset;
+				font-size: 0.7em;
+				li {
+					margin-left: 0.5em;
+					&:hover {
+						a {
+							background: color(brand, primary);
+							text-decoration: none;
+						}
+					}
+				}
+				a {
+					color: color(greyscale, white);
+					display: block;
+					position: relative;
+					background: rgba(white, 0.2);
+					padding: 0 0.5em;
+					line-height: 1.9;
+					border-radius: 0.3em;
+				}
+			}
+			
+			.tweet-user {
+				margin-left: 0.5em;
+			}
+			
+			.tweet-timestamp {
+				color: rgba(white, 0.65);
+			}
+		
+			.loading-tweets {
+				@include vertical-center(absolute);
+				@extend %horizontal-center;
+				opacity: 0.5;
+				font-size: 2em;
+			}
+			
+		}
+		
+	} // component()
+		
+} // @mixin twitter-feed
