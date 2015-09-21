@@ -35,7 +35,6 @@
 				position: absolute;
 				top: 0.55em;
 				left: 0.65em;
-				transform: scale(1);
 				cursor: text;
 			}
 			@include overwrite-sub(group, static) {
@@ -49,8 +48,8 @@
 					+ label {
 						top: -1.4em;
 						left: 0;
-						transform: scale(0.85) translateX(-11%);
 						cursor: pointer;
+						font-size: 0.9em;
 					}
 					&::placeholder {
 						opacity: 0.5;
@@ -77,6 +76,10 @@
 					}
 				}
 			}
+		}
+		
+		@include modifier(small) {
+			font-size: 0.85em;
 		}
 	
 	// Sub Components

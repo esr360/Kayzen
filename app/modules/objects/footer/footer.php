@@ -1,11 +1,100 @@
+<!-- Twitter Feed -->
+<div class="twitter-feed-dark">
+	<a class="loading-tweets" href="http://twitter.com/esr360" target="blank">
+		<i class="fa fa-twitter"></i>
+	</a>
+	<div class="container" id="twitter-feed">
+		<div class="tweets-nav icon_group-small">
+			<div class="tweet-prev icon-border">
+				<i class="fa fa-angle-left"></i>
+			</div>
+			<div class="tweet-next icon-border">
+				<i class="fa fa-angle-right"></i>
+			</div>
+		</div>
+	</div>
+</div>
+
 <!-- Footer -->
 <footer class="footer">
-	<div class="twitter-feed">
-		<i class="loading-tweets fa fa-twitter"></i>
-		<div class="container" id="twitter-feed"></div>
+	<div class="footer_wrapper">
+		<div class="container">
+			<div class="row">
+				<div class="span-3">
+					<div class="logo">
+						<a href="/"><img src="<?php echo appDir ?>/images/logo-white.png" alt="logo"/ ></a>
+					</div>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris in hendrerit neque, suscipit congue mauris.</p>
+					<ul class="list-reset">
+						<li><b><i class="fa fa-globe"></i> Location:</b> Manchester, Unted Kingdom</li>
+						<li><b><i class="fa fa-phone-square"></i> Phone:</b> (0161) 123 4567</li>
+						<li><b><i class="fa fa-envelope"></i> Email:</b> <a href="mailto:support@themeforest.net">support@themeforest.net</a></li>
+					</ul>
+				</div>
+				<div class="span-3">
+					<header class="heading_group-small">
+						<h4 class="footer_title heading-heavy-uppercase-size-4 font-2">
+							Newsletter
+						</h4>
+						<h5 class="heading-light-brand-1">
+							Signup to our mailing list
+						</h5>
+					</header>
+					<p>Suspendisse tempus sodales neque eget.</p>
+					
+					<form class="form-faux-placeholders-small">
+						<div class="form_group">
+							<input type="text" class="form_input" id="footer-newsletter" placeholder="Ex: help@kayzen.com" required="">
+							<label for="footer-newsletter">Email Address</label>
+						</div>
+					</form>
+					
+					<div class="icon_group-small">
+						<a href="#" class="icon tooltip-top" data-tooltip="Dribbble">
+							<i class="fa fa-dribbble"></i>
+						</a>
+						<a href="#" class="icon tooltip-top" data-tooltip="Facebook">
+							<i class="fa fa-facebook"></i>
+						</a>
+						<a href="#" class="icon tooltip-top" data-tooltip="Twitter">
+							<i class="fa fa-twitter"></i>
+						</a>
+						<a href="#" class="icon tooltip-top" data-tooltip="LinkedIn">
+							<i class="fa fa-linkedin"></i>
+						</a>
+						<a href="#" class="icon tooltip-top" data-tooltip="DeviantArt">
+							<i class="fa fa-deviantart"></i>
+						</a>
+						<a href="#" class="icon tooltip-top" data-tooltip="Behance">
+							<i class="fa fa-behance"></i>
+						</a>
+					</div>
+				</div>
+				<div class="span-3">
+					<header class="heading_group-small">
+						<h4 class="footer_title heading-heavy-uppercase-size-4 font-2">
+							<i class="fa fa-twitter"></i> Twitter Feed
+						</h4>
+						<h5 class="heading-light-brand-1">
+							View our latest tweets
+						</h5>
+					</header>
+				</div>
+				<div class="span-3">
+					<header class="heading_group-small">
+						<h4 class="footer_title heading-heavy-uppercase-size-4 font-2">
+							Testimonials
+						</h4>
+						<h5 class="heading-light-brand-1">
+							See what our clients say
+						</h5>
+					</header>
+				</div>
+			</div>
+		</div>
 	</div>
 	<div class="container">
-		<div class="footer_wrapper">
+		<div class="footer_bar">
 			<!-- Copyright Section -->
 			<div class="footer_copyright">
 				<h4>© Your Website 2014</h4>

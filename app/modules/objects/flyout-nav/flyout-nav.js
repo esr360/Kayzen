@@ -15,6 +15,7 @@ $(document).ready(function() {
         
         // relocate the flyout-trigger in the DOM
         $("#flyout-trigger").detach().prependTo('body')
+        
         // clone the main nav into the flyout nav container
         $("#app-nav > ul").clone().appendTo(fnContainer);
         

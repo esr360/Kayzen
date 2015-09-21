@@ -20,6 +20,7 @@
 	@include component {
 		
 		position: absolute;
+		background: color(greyscale, grey-5);
 		height: option($top-bar, height);
 		width: 100%;
 		top: 0;
@@ -30,6 +31,8 @@
 		
 		[type="search"] {
 			background: color(greyscale, grey-5);
+			color: color(greyscale, white);
+			font-weight: lighter;
 			height: 100%;
 			width: 100%;
 			border: none;

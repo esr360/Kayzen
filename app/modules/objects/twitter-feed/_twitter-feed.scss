@@ -9,7 +9,8 @@
 	//-------------------------------------------------------------
 
 	$twitter-feed: config((
-		name            : twitter-feed
+		name            : twitter-feed,
+		dark            : false
 	), $custom);
 	
 	//-------------------------------------------------------------
@@ -17,20 +18,18 @@
 	//-------------------------------------------------------------
 	
 	@include component {
-		
+
+	// Core Styles
+	//-------------------------------------------------------------
+	
 		padding: 3em 0;
-		background: lighten(color(greyscale, grey-5), 7.5%);
+		background: darken(color(greyscale, grey-1), 3%);
 		position: relative;
-			
-		a {
-			color: lighten(color(brand, primary), 7.5%);
-		}
 		
 		@at-root {
 			
 			.tweets {
 				@extend %list-reset;
-				text-align: left;
 			}
 			
 			.tweet-avatar, .tweet-content,
@@ -51,7 +50,7 @@
 			}
 			
 			.tweet-content {
-				width: calc(100% - 50px);
+				width: calc(100% - 50px - 5em);
 				padding-left: 1em;
 			}
 			
@@ -62,32 +61,31 @@
 			.tweet-actions {
 				@extend %list-reset;
 				font-size: 0.7em;
+				margin-left: 0.5em;
 				li {
 					margin-left: 0.5em;
 					&:hover {
 						a {
 							background: color(brand, primary);
+							color: color(greyscale, white);
 							text-decoration: none;
 						}
 					}
 				}
 				a {
-					color: color(greyscale, white);
 					display: block;
 					position: relative;
-					background: rgba(white, 0.2);
+					background: color(greyscale, grey-2);
+					color: color(greyscale, grey-4);
 					padding: 0 0.5em;
 					line-height: 1.9;
 					border-radius: 0.3em;
+					font-weight: normal;
 				}
 			}
 			
 			.tweet-user {
 				margin-left: 0.5em;
-			}
-			
-			.tweet-timestamp {
-				color: rgba(white, 0.65);
 			}
 		
 			.loading-tweets {
@@ -95,8 +93,34 @@
 				@extend %horizontal-center;
 				opacity: 0.5;
 				font-size: 2em;
+				color: base(text-color);
 			}
 			
+			.tweets-nav {
+				@include vertical-center(absolute);
+				right: 0;
+				z-index: 2;
+				// hide until tweets loaded
+				display: none;
+			}
+			
+			.tweet-prev, .tweet-next {
+				&, .fa {
+					cursor: pointer;
+				}
+				&:hover {
+					background: color(brand, primary);
+				}
+			}
+			
+		}
+
+	// Modifiers
+	//-------------------------------------------------------------
+	
+		@include setting(dark) {
+			background: color(greyscale, grey-5);
+			color: color(greyscale, white);
 		}
 		
 	} // component()

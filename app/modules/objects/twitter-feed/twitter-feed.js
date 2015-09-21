@@ -17,11 +17,27 @@ $('#twitter-feed')
     .addClass('owl-carousel');
 
 $('body').on('DOMNodeInserted', '.tweet:nth-child(' + tweetCount + ')', function () {
+    
     $(document).ready(function() { 
+        
         $('.loading-tweets').hide();
-        $('#twitter-feed .tweets').owlCarousel({
+        $('.tweets-nav').show();
+        
+        var tweetCarousel = $('#twitter-feed .tweets');
+        
+        tweetCarousel.owlCarousel({
             items: 1,
             loop: true
         });
+        
+        $('.tweet-prev').click(function() {
+            tweetCarousel.trigger('prev.owl.carousel');
+        });
+        
+        $('.tweet-next').click(function() {
+            tweetCarousel.trigger('next.owl.carousel');
+        });
+        
     });
+    
 });

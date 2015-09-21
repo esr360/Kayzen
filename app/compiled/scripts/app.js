@@ -5744,6 +5744,7 @@ $(document).ready(function() {
         
         // relocate the flyout-trigger in the DOM
         $("#flyout-trigger").detach().prependTo('body')
+        
         // clone the main nav into the flyout nav container
         $("#app-nav > ul").clone().appendTo(fnContainer);
         
@@ -5955,13 +5956,29 @@ $('#twitter-feed')
     .addClass('owl-carousel');
 
 $('body').on('DOMNodeInserted', '.tweet:nth-child(' + tweetCount + ')', function () {
+    
     $(document).ready(function() { 
+        
         $('.loading-tweets').hide();
-        $('#twitter-feed .tweets').owlCarousel({
+        $('.tweets-nav').show();
+        
+        var tweetCarousel = $('#twitter-feed .tweets');
+        
+        tweetCarousel.owlCarousel({
             items: 1,
             loop: true
         });
+        
+        $('.tweet-prev').click(function() {
+            tweetCarousel.trigger('prev.owl.carousel');
+        });
+        
+        $('.tweet-next').click(function() {
+            tweetCarousel.trigger('next.owl.carousel');
+        });
+        
     });
+    
 });
 //=================================================================
 // Kayzen
