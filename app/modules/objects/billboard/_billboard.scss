@@ -203,7 +203,7 @@
 			@include vertical-center(absolute);
 			@at-root {
 				@include overwrite(app-header, $is: dark) {
-					@include overwrite(billboard, $special: adjacent-sibling) {
+					@include overwrite(billboard, $not: full-screen, $special: adjacent-sibling) {
 						@include overwrite-sub(wrapper) {
 							transform: translateY(-15%);
 						}

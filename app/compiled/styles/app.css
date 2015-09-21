@@ -4545,7 +4545,7 @@ progress.progress-alt::-moz-progress-bar {
       -ms-transform: translateY(-50%);
           transform: translateY(-50%);
 }
-[class*="app-header-"][class*="-dark"] + .billboard .billboard_wrapper, [class*="app-header-"][class*="-dark"] + .billboard [class*="billboard_wrapper-"], [class*="app-header-"][class*="-dark"] + [class*="billboard-"] .billboard_wrapper, [class*="app-header-"][class*="-dark"] + [class*="billboard-"] [class*="billboard_wrapper-"] {
+[class*="app-header-"][class*="-dark"] + [class*="billboard-"]:not([class*="-full-screen"]) .billboard_wrapper, [class*="app-header-"][class*="-dark"] + [class*="billboard-"]:not([class*="-full-screen"]) [class*="billboard_wrapper-"] {
   -webkit-transform: translateY(-15%);
       -ms-transform: translateY(-15%);
           transform: translateY(-15%);
