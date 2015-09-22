@@ -90,6 +90,14 @@
 			}
 		}
 		
+		@include sub-component {
+			@include modifier(nav) {
+				position: absolute;
+				top: 0;
+				right: 0;
+			}
+		}
+		
 	// Twitter Feed
 	//-------------------------------------------------------------
 	

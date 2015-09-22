@@ -32,7 +32,7 @@
 				&:after {
 					position: absolute;
 					font-family: FontAwesome;
-					font-size: 1.75rem;
+					font-size: 1.5rem;
 					color: rgba(0,0,0,0.3);
 				}
 				&:before {
@@ -89,6 +89,7 @@
 			> img {
 				max-width: none;
 				height: 100%;
+				width: auto;
 				transform: translateX(-16.6666%);
 				position: relative;
 				z-index: 0;

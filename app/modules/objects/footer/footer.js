@@ -31,14 +31,38 @@ $('body').on('DOMNodeInserted', '#footer-twitter-feed .tweet:nth-child(' + tweet
             loop: true
         });
         
-        $('#footer-twitter-feed .tweet-prev').click(function() {
+        $('.footer_tweets-nav .tweet-prev').click(function() {
             tweetCarousel.trigger('prev.owl.carousel');
         });
         
-        $('#footer-twitter-feed .tweet-next').click(function() {
+        $('.footer_tweets-nav .tweet-next').click(function() {
             tweetCarousel.trigger('next.owl.carousel');
         });
         
     });
     
+});
+
+//-----------------------------------------------------------------
+// Footer Testimonials
+//-----------------------------------------------------------------
+
+$(document).ready(function() { 
+        
+    var footerTestimonials = $('#footer-testimonials');
+    
+    footerTestimonials.owlCarousel({
+        items: 1,
+        loop: true,
+        margin: 20
+    });
+        
+    $('.footer_testimonials-nav .tweet-prev').click(function() {
+        footerTestimonials.trigger('prev.owl.carousel');
+    });
+    
+    $('.footer_testimonials-nav .tweet-next').click(function() {
+        footerTestimonials.trigger('next.owl.carousel');
+    });
+
 });

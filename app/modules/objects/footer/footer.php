@@ -71,6 +71,14 @@
 						<h5 class="heading-light-brand-1">
 							View our latest tweets
 						</h5>
+						<div class="footer_tweets-nav icon_group-small">
+							<div class="tweet-prev icon-circle-size-1">
+								<i class="fa fa-angle-left"></i>
+							</div>
+							<div class="tweet-next icon-circle-size-1">
+								<i class="fa fa-angle-right"></i>
+							</div>
+						</div>
 					</header>
 					<div id="footer-twitter-feed">
 					</div>
@@ -86,26 +94,55 @@
 						<h5 class="heading-light-brand-1">
 							See what our clients say
 						</h5>
-					</header>
-					
-					<blockquote class="blockquote-testimonial">
-						<div class="blockquote_bubble">
-							<div class="blockquote_content">
-								Aenean lobortis ante nunc. Integer justo ex. Curabitur at enim ac nisi...
+						<div class="footer_testimonials-nav icon_group-small">
+							<div class="tweet-prev icon-circle-size-1">
+								<i class="fa fa-angle-left"></i>
+							</div>
+							<div class="tweet-next icon-circle-size-1">
+								<i class="fa fa-angle-right"></i>
 							</div>
 						</div>
-						<footer class="blockquote_footer">
-							<a class="blockquote_avatar" href="">
-								<img src="<?php echo appDir ?>/images/team/team-2.jpg" alt="">
-							</a>
-							<div class="blockquote_cite heading_group">
-								<h4 class="heading-size-2 font-2">John Dough</h4>
-								<h5 class="heading-light-brand-1-size-2">Theme Forest</h5>
-							</div>
-						</footer>
-					</blockquote>
+					</header>
 					
-				</div>
+					<div id="footer-testimonials" class="owl-carousel">
+						
+						<blockquote class="blockquote-testimonial">
+							<div class="blockquote_bubble">
+								<div class="blockquote_content">
+									Aenean lobortis ante nunc. Integer justo ex. Curabitur at enim ac nisi...
+								</div>
+							</div>
+							<footer class="blockquote_footer">
+								<a class="blockquote_avatar" href="">
+									<img src="<?php echo appDir ?>/images/team/team-2.jpg" alt="">
+								</a>
+								<div class="blockquote_cite heading_group">
+									<h4 class="heading-size-2 font-2">John Dough</h4>
+									<h5 class="heading-light-brand-1-size-2">Theme Forest</h5>
+								</div>
+							</footer>
+						</blockquote>	
+						
+						<blockquote class="blockquote-testimonial">
+							<div class="blockquote_bubble">
+								<div class="blockquote_content">
+									Aenean lobortis ante nunc. Integer justo ex. Curabitur at enim ac nisi...
+								</div>
+							</div>
+							<footer class="blockquote_footer">
+								<a class="blockquote_avatar" href="">
+									<img src="<?php echo appDir ?>/images/team/team-2.jpg" alt="">
+								</a>
+								<div class="blockquote_cite heading_group">
+									<h4 class="heading-size-2 font-2">John Dough</h4>
+									<h5 class="heading-light-brand-1-size-2">Theme Forest</h5>
+								</div>
+							</footer>
+						</blockquote>
+					
+					</div>
+					
+				</div><!-- Testimonials -->
 				
 			</div>
 		</div>

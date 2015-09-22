@@ -88,6 +88,9 @@
 				right: 0;
 				height: 100%;
 				padding: 0 1em;
+				@include overwrite-sub(input, $special: 'adjacent-sibling') {
+					padding-right: 3em;
+				}
 			}
 			@include modifier(small) {
 				font-size: font-size(size-2);

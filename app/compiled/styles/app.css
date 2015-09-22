@@ -451,7 +451,7 @@ pre:last-child, hr:last-child, .accordion:last-child, [class*="accordion-"]:last
 }
 .auto-resizable-iframe > div {
   position: relative;
-  padding-bottom: 58%;
+  padding-bottom: 61%;
   height: 0px;
 }
 .auto-resizable-iframe iframe {
@@ -587,7 +587,6 @@ http://github.com/esr360/Kayzen-GS/
 }
 .owl-carousel .owl-item img {
   display: block;
-  width: 100%;
   -webkit-transform-style: preserve-3d;
 }
 .owl-carousel .owl-nav.disabled,
@@ -1662,7 +1661,7 @@ hr.gutter {
 [class*="blockquote-"][class*="-testimonial"] .blockquote_content:before, [class*="blockquote-"][class*="-testimonial"] .blockquote_content:after, [class*="blockquote-"][class*="-testimonial"] [class*="blockquote_content-"]:before, [class*="blockquote-"][class*="-testimonial"] [class*="blockquote_content-"]:after {
   position: absolute;
   font-family: FontAwesome;
-  font-size: 1.75rem;
+  font-size: 1.5rem;
   color: rgba(0, 0, 0, 0.3);
 }
 [class*="blockquote-"][class*="-testimonial"] .blockquote_content:before, [class*="blockquote-"][class*="-testimonial"] [class*="blockquote_content-"]:before {
@@ -1722,6 +1721,7 @@ hr.gutter {
 .blockquote_avatar > img, [class*="blockquote_avatar-"] > img {
   max-width: none;
   height: 100%;
+  width: auto;
   -webkit-transform: translateX(-16.6666%);
       -ms-transform: translateX(-16.6666%);
           transform: translateX(-16.6666%);
@@ -2244,6 +2244,9 @@ button::-moz-focus-inner {
   right: 0;
   height: 100%;
   padding: 0 1em;
+}
+.form_group [type="submit"] + .form_input, .form_group [type="submit"] + [class*="form_input-"], [class*="form_group-"] [type="submit"] + .form_input, [class*="form_group-"] [type="submit"] + [class*="form_input-"] {
+  padding-right: 3em;
 }
 [class*="form_group-"][class*="-small"] {
   font-size: 0.83em;
@@ -3805,6 +3808,11 @@ progress.progress-alt::-moz-progress-bar {
     display: table-cell;
     vertical-align: middle;
   }
+}
+[class*="footer_"][class*="-nav"] {
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 .footer .tweet-content, [class*="footer-"] .tweet-content {
   margin-top: -0.25em;
