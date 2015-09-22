@@ -33,7 +33,7 @@
 			color: color(greyscale, grey-3);
 			@include overwrite(logo) {
 				img {
-					height: 31px;
+					height: 34px;
 				}
 			}
 			b {
@@ -88,6 +88,32 @@
 				display: table-cell;
 				vertical-align: middle;
 			}
+		}
+		
+	// Twitter Feed
+	//-------------------------------------------------------------
+	
+		.tweet-content {
+			margin-top: -0.25em;
+		}
+		
+		.tweet {
+			> .tweet-avatar {
+				display: none;
+			}
+		}
+		
+		.tweet-actions {
+			float: right;
+			margin-top: 0.25em;
+		}
+		
+		.tweet-avatar {
+			width: 40px;
+		}
+		
+		.tweet-text {
+			margin-bottom: 1em;
 		}
 	
 	} // component(footer)

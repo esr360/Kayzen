@@ -32,21 +32,20 @@
 	
 		@include modifier(faux-placeholders) {
 			label {
-				position: absolute;
-				top: 0.55em;
+				@include vertical-center(absolute);
 				left: 0.65em;
 				cursor: text;
 			}
-			@include overwrite-sub(group, static) {
+			@include overwrite-sub(group) {
 				margin-bottom: base(margin);
 			}
-			@include overwrite-sub(input, static) {
+			@include overwrite-sub(input) {
 				&::placeholder {
 					opacity: 0;
 				}
 				&:focus {
 					+ label {
-						top: -1.4em;
+						top: -1em;
 						left: 0;
 						cursor: pointer;
 						font-size: 0.9em;
@@ -60,7 +59,7 @@
 		}
 		
 		@include modifier(html5) {
-			@include overwrite-sub(input, static) {
+			@include overwrite-sub(input) {
 				&:focus {
 					&:invalid {
 						&, + label {
@@ -77,31 +76,40 @@
 				}
 			}
 		}
-		
-		@include modifier(small) {
-			font-size: 0.85em;
-		}
 	
 	// Sub Components
 	//-------------------------------------------------------------
 	
-		@include sub-component(group, static) {
+		@include sub-component(group) {
 			position: relative;
 			margin-bottom: (base(margin) / 2);
+			[type="submit"] {
+				position: absolute;
+				right: 0;
+				height: 100%;
+				padding: 0 1em;
+			}
+			@include modifier(small) {
+				font-size: font-size(size-2);
+			}
 		}
 	
-		@include sub-component(input, static) {
+		@include sub-component(input) {
 			display: block;
 			width: 100%;
 			padding: 0.65em;
 			border: 1px solid color(greyscale, grey-3);
 			transition: base(transition);
+			color: base(text-color);
 			&::placeholder {
 				color: base(text-color);
 				transition: base(transition);
 			}
 			&:focus {
 				outline: 0;
+			}
+			@include modifier(plain) {
+				border-color: transparent;
 			}
 		}
 		

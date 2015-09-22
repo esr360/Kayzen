@@ -1,10 +1,14 @@
 //=================================================================
-// Twitter Feed
+// Footer
 //=================================================================
+
+//-----------------------------------------------------------------
+// Footer Twitter Feed
+//-----------------------------------------------------------------
 
 var tweetCount = 8;
 
-$('#twitter-feed')
+$('#footer-twitter-feed')
     .tweecool({
         username     : 'esr360', 
         limit        : tweetCount,
@@ -16,25 +20,22 @@ $('#twitter-feed')
     .find('.tweets')
     .addClass('owl-carousel');
 
-$('body').on('DOMNodeInserted', '#twitter-feed .tweet:nth-child(' + tweetCount + ')', function () {
+$('body').on('DOMNodeInserted', '#footer-twitter-feed .tweet:nth-child(' + tweetCount + ')', function () {
     
     $(document).ready(function() { 
         
-        $('.loading-tweets').hide();
-        $('.tweets-nav').show();
-        
-        var tweetCarousel = $('#twitter-feed .tweets');
+        var tweetCarousel = $('#footer-twitter-feed .tweets');
         
         tweetCarousel.owlCarousel({
             items: 1,
             loop: true
         });
         
-        $('#twitter-feed .tweet-prev').click(function() {
+        $('#footer-twitter-feed .tweet-prev').click(function() {
             tweetCarousel.trigger('prev.owl.carousel');
         });
         
-        $('#twitter-feed .tweet-next').click(function() {
+        $('#footer-twitter-feed .tweet-next').click(function() {
             tweetCarousel.trigger('next.owl.carousel');
         });
         

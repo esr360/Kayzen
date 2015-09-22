@@ -43,6 +43,7 @@ Made by @esr360
 //@prepros-append modules/objects/header/header.js
 //@prepros-append modules/objects/dropdown/dropdown.js
 //@prepros-append modules/objects/flyout-nav/flyout-nav.js
+//@prepros-append modules/objects/footer/footer.js
 //@prepros-append modules/objects/side-nav/side-nav.js
 //@prepros-append modules/objects/scroll-top/scroll-top.js
 //@prepros-append modules/objects/page-overview/page-overview.js
@@ -1798,10 +1799,11 @@ window.scrollReveal = (function( window ){
                                     '<p class="tweet-text">' + 
                                         mtext.replace(urlpattern, '<a href="$1" target="_blank">$1</a>')
                                         .replace(usernamepattern, '<a href="https://twitter.com/$1" target="_blank">@$1</a>')
-                                        .replace(hashpattern, '<a href="https://twitter.com/search?q=%23$1" target="_blank">#$1</a>') + media + 
+                                        .replace(hashpattern, '<a href="https://twitter.com/search?q=%23$1" target="_blank">#$1</a>') + media +
+                                        '<span class="tweet-timestamp"> - ' + timestamp + '</span>' +  
                                     '</p>' + 
                                     '<span class="tweet-meta">' +
-                                        '<span class="tweet-timestamp">' + timestamp + '</span>' + 
+                                        pIMG + 
                                         '<a class="tweet-user" href="https://twitter.com/' + o.username + '" target="blank">@' + o.username + '</a>' + 
                                     '</span>' +
                                     abox + 
@@ -5816,6 +5818,50 @@ $(window).load(function(){
 
 }); // $(window).load()
 ;//=================================================================
+// Footer
+//=================================================================
+
+//-----------------------------------------------------------------
+// Footer Twitter Feed
+//-----------------------------------------------------------------
+
+var tweetCount = 8;
+
+$('#footer-twitter-feed')
+    .tweecool({
+        username     : 'esr360', 
+        limit        : tweetCount,
+        show_actions : true,
+        action_reply_icon : '<i class="fa fa-reply"></i>',
+        action_retweet_icon : '<i class="fa fa-retweet"></i>',
+        action_favorite_icon : '<i class="fa fa-star"></i>'
+    })
+    .find('.tweets')
+    .addClass('owl-carousel');
+
+$('body').on('DOMNodeInserted', '#footer-twitter-feed .tweet:nth-child(' + tweetCount + ')', function () {
+    
+    $(document).ready(function() { 
+        
+        var tweetCarousel = $('#footer-twitter-feed .tweets');
+        
+        tweetCarousel.owlCarousel({
+            items: 1,
+            loop: true
+        });
+        
+        $('#footer-twitter-feed .tweet-prev').click(function() {
+            tweetCarousel.trigger('prev.owl.carousel');
+        });
+        
+        $('#footer-twitter-feed .tweet-next').click(function() {
+            tweetCarousel.trigger('next.owl.carousel');
+        });
+        
+    });
+    
+});
+//=================================================================
 // Side-Header Navigation
 //=================================================================
 
@@ -5955,7 +6001,7 @@ $('#twitter-feed')
     .find('.tweets')
     .addClass('owl-carousel');
 
-$('body').on('DOMNodeInserted', '.tweet:nth-child(' + tweetCount + ')', function () {
+$('body').on('DOMNodeInserted', '#twitter-feed .tweet:nth-child(' + tweetCount + ')', function () {
     
     $(document).ready(function() { 
         
@@ -5969,11 +6015,11 @@ $('body').on('DOMNodeInserted', '.tweet:nth-child(' + tweetCount + ')', function
             loop: true
         });
         
-        $('.tweet-prev').click(function() {
+        $('#twitter-feed .tweet-prev').click(function() {
             tweetCarousel.trigger('prev.owl.carousel');
         });
         
-        $('.tweet-next').click(function() {
+        $('#twitter-feed .tweet-next').click(function() {
             tweetCarousel.trigger('next.owl.carousel');
         });
         

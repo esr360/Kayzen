@@ -16,38 +16,85 @@
 	// Component
 	//-------------------------------------------------------------
 	
-	@include component(blockquote) {
+	@include component {
 
 	// Core Styles
 	//-------------------------------------------------------------
 			
 		margin: 0;
-		border: 0;;
-		position: relative;
+		border: 0;
 		font-family: typography(typefaces, secondary);
-		font-style: italic;
 		
-		p {
-			margin: 0;
-			padding: 0 3rem;
-			&:before {
-				position: absolute;
-				font-family: FontAwesome;
-				font-size: 1.75rem;
-				color: rgba(0,0,0,0.3);
+		@include modifier(testimonial) {
+			
+			@include overwrite-sub(content) {
+				&:before,
+				&:after {
+					position: absolute;
+					font-family: FontAwesome;
+					font-size: 1.75rem;
+					color: rgba(0,0,0,0.3);
+				}
+				&:before {
+					content: "\f10d";
+					top: 0.25em;
+					left: 0.25em;
+				}
+				&:after {
+					content: "\f10e";
+					bottom: 0.25em;
+					right: 0.25em;
+				}
 			}
-			&:before {
-				content: "\f10d";
-				top: -0.25rem;
-				left: 0;
+			
+			@include overwrite-sub(footer) {
+				margin-top: 1em;
+			}
+			
+			@include overwrite-sub(cite) {
+				margin-left: 0.5em;
+				color: color(greyscale, white);
+			}
+			
+		}
+		
+		@include sub-component(bubble) {
+			position: relative;
+			padding: 1em 3em;
+			background: color(brand, primary);
+			border-radius: 0.6em;
+			color: color(greyscale, white);
+			@include triangle((
+				position : top,
+				color    : color(brand, primary)
+			));
+			&:after {
+				left: 20%;
 			}
 		}
 		
-		cite {
-			font-weight: bold;
-			font-style: normal;
+		@include sub-components((avatar, cite)) {
+			display: inline-block;
+			vertical-align: middle;
 		}
-	
-	} // component(blockquote)
+		
+		@include sub-component(avatar) {
+			width: 44px;
+			height: 44px;
+			border-radius: 50%;
+			overflow: hidden;
+			border:1px solid transparent;
+			position: relative;
+			z-index: 2;
+			> img {
+				max-width: none;
+				height: 100%;
+				transform: translateX(-16.6666%);
+				position: relative;
+				z-index: 0;
+			}
+		}
+			
+	} // component
 	
 } // @mixin blockquotes

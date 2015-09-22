@@ -1,50 +1,40 @@
-<!-- Twitter Feed -->
-<div class="twitter-feed-dark">
-	<a class="loading-tweets" href="http://twitter.com/esr360" target="blank">
-		<i class="fa fa-twitter"></i>
-	</a>
-	<div class="container" id="twitter-feed">
-		<div class="tweets-nav icon_group-small">
-			<div class="tweet-prev icon-border">
-				<i class="fa fa-angle-left"></i>
-			</div>
-			<div class="tweet-next icon-border">
-				<i class="fa fa-angle-right"></i>
-			</div>
-		</div>
-	</div>
-</div>
-
 <!-- Footer -->
 <footer class="footer">
 	<div class="footer_wrapper">
 		<div class="container">
 			<div class="row">
+				
+				<!-- Meta -->
 				<div class="span-3">
 					<div class="logo">
 						<a href="/"><img src="<?php echo appDir ?>/images/logo-white.png" alt="logo"/ ></a>
 					</div>
 					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris in hendrerit neque, suscipit congue mauris.</p>
 					<ul class="list-reset">
-						<li><b><i class="fa fa-globe"></i> Location:</b> Manchester, Unted Kingdom</li>
-						<li><b><i class="fa fa-phone-square"></i> Phone:</b> (0161) 123 4567</li>
-						<li><b><i class="fa fa-envelope"></i> Email:</b> <a href="mailto:support@themeforest.net">support@themeforest.net</a></li>
+						<li><b><i class="fa fa-fw fa-brand fa-globe"></i> Location:</b> Manchester, Unted Kingdom</li>
+						<li><b><i class="fa fa-fw fa-brand fa-phone-square"></i> Phone:</b> (0161) 123 4567</li>
+						<li><b><i class="fa fa-fw fa-brand fa-envelope"></i> Email:</b> <a href="mailto:support@themeforest.net">support@themeforest.net</a></li>
 					</ul>
 				</div>
+				
+				<!-- Newsletter -->
 				<div class="span-3">
+					
 					<header class="heading_group-small">
-						<h4 class="footer_title heading-heavy-uppercase-size-4 font-2">
+						<h4 class="footer_title heading-heavy-uppercase-size-3 font-2">
 							Newsletter
 						</h4>
 						<h5 class="heading-light-brand-1">
 							Signup to our mailing list
 						</h5>
 					</header>
+					
 					<p>Suspendisse tempus sodales neque eget.</p>
 					
-					<form class="form-faux-placeholders-small">
-						<div class="form_group">
-							<input type="text" class="form_input" id="footer-newsletter" placeholder="Ex: help@kayzen.com" required="">
+					<form class="form-faux-placeholders">
+						<div class="form_group-small">
+							<button type="submit" class="icon-primary-size-4"><i class="fa fa-thumbs-o-up"></i></button>
+							<input type="text" class="form_input-plain" id="footer-newsletter" placeholder="Ex: help@kayzen.com" required="">
 							<label for="footer-newsletter">Email Address</label>
 						</div>
 					</form>
@@ -69,27 +59,54 @@
 							<i class="fa fa-behance"></i>
 						</a>
 					</div>
+					
 				</div>
+				
+				<!-- Twitter Feed -->
 				<div class="span-3">
 					<header class="heading_group-small">
-						<h4 class="footer_title heading-heavy-uppercase-size-4 font-2">
+						<h4 class="footer_title heading-heavy-uppercase-size-3 font-2">
 							<i class="fa fa-twitter"></i> Twitter Feed
 						</h4>
 						<h5 class="heading-light-brand-1">
 							View our latest tweets
 						</h5>
 					</header>
+					<div id="footer-twitter-feed">
+					</div>
 				</div>
+				
+				<!-- Testimonials -->
 				<div class="span-3">
+					
 					<header class="heading_group-small">
-						<h4 class="footer_title heading-heavy-uppercase-size-4 font-2">
+						<h4 class="footer_title heading-heavy-uppercase-size-3 font-2">
 							Testimonials
 						</h4>
 						<h5 class="heading-light-brand-1">
 							See what our clients say
 						</h5>
 					</header>
+					
+					<blockquote class="blockquote-testimonial">
+						<div class="blockquote_bubble">
+							<div class="blockquote_content">
+								Aenean lobortis ante nunc. Integer justo ex. Curabitur at enim ac nisi...
+							</div>
+						</div>
+						<footer class="blockquote_footer">
+							<a class="blockquote_avatar" href="">
+								<img src="<?php echo appDir ?>/images/team/team-2.jpg" alt="">
+							</a>
+							<div class="blockquote_cite heading_group">
+								<h4 class="heading-size-2 font-2">John Dough</h4>
+								<h5 class="heading-light-brand-1-size-2">Theme Forest</h5>
+							</div>
+						</footer>
+					</blockquote>
+					
 				</div>
+				
 			</div>
 		</div>
 	</div>

@@ -137,10 +137,11 @@
                                     '<p class="tweet-text">' + 
                                         mtext.replace(urlpattern, '<a href="$1" target="_blank">$1</a>')
                                         .replace(usernamepattern, '<a href="https://twitter.com/$1" target="_blank">@$1</a>')
-                                        .replace(hashpattern, '<a href="https://twitter.com/search?q=%23$1" target="_blank">#$1</a>') + media + 
+                                        .replace(hashpattern, '<a href="https://twitter.com/search?q=%23$1" target="_blank">#$1</a>') + media +
+                                        '<span class="tweet-timestamp"> - ' + timestamp + '</span>' +  
                                     '</p>' + 
                                     '<span class="tweet-meta">' +
-                                        '<span class="tweet-timestamp">' + timestamp + '</span>' + 
+                                        pIMG + 
                                         '<a class="tweet-user" href="https://twitter.com/' + o.username + '" target="blank">@' + o.username + '</a>' + 
                                     '</span>' +
                                     abox + 

@@ -93,7 +93,7 @@
 	
 	h1, h2, h3, h4, h5, h6, 
 	p, ul, ol, 
-	fieldset, legend, figure, table, 
+	form, fieldset, legend, figure, table, 
 	pre, hr {
 	    margin: base(margin) 0;
 	    @include vertical-rhythm;
