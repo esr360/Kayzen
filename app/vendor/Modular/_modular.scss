@@ -121,7 +121,7 @@ $component: null;
 
 @mixin overwrite($components: map-get($config, name), $type: $type, $is: null, $not: null, $special: null) {
 	$selectors: ();
-	@if $is or $not {
+	@if $is {
 		$type: 'chain';
 	}
 	@each $component in $components {

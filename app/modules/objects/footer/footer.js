@@ -28,7 +28,8 @@ $('body').on('DOMNodeInserted', '#footer-twitter-feed .tweet:nth-child(' + tweet
         
         tweetCarousel.owlCarousel({
             items: 1,
-            loop: true
+            loop: true,
+            margin: 20
         });
         
         $('.footer_tweets-nav .tweet-prev').click(function() {

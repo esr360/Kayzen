@@ -23,8 +23,8 @@
 					<i class="fa fa-cogs"></i>
 				</div>  
 				<header class="widget_header-inline heading_group">
-					<h3 class="heading-heavy-size-4">Fast Performance</h3>
-					<h4 class="heading-light-uppercase-brand-1">Donec finibus fringer</h4>
+					<h3 class="heading-heavy-uppercase">Fast Performance</h3>
+					<h4 class="heading-light-uppercase-brand-1-size-2">Donec finibus fringer</h4>
 				</header>     
 				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc et erat posuere consectetur adipiscing suscipit.</p>
 			</div>
@@ -35,8 +35,8 @@
 					<i class="fa fa-star"></i>
 				</div>  
 				<header class="widget_header-inline heading_group">
-					<h3 class="heading-heavy-size-4">Fast Performance</h3>
-					<h4 class="heading-light-uppercase-brand-1">Donec finibus fringer</h4>
+					<h3 class="heading-heavy-uppercase">Fast Performance</h3>
+					<h4 class="heading-light-uppercase-brand-1-size-2">Donec finibus fringer</h4>
 				</header>     
 				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc et erat posuere consectetur adipiscing suscipit.</p>
 			</div>
@@ -47,8 +47,8 @@
 					<i class="fa fa-eye"></i>
 				</div>  
 				<header class="widget_header-inline heading_group">
-					<h3 class="heading-heavy-size-4">Fast Performance</h3>
-					<h4 class="heading-light-uppercase-brand-1">Donec finibus fringer</h4>
+					<h3 class="heading-heavy-uppercase">Fast Performance</h3>
+					<h4 class="heading-light-uppercase-brand-1-size-2">Donec finibus fringer</h4>
 				</header>     
 				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc et erat posuere consectetur adipiscing suscipit.</p>
 			</div>
@@ -59,8 +59,8 @@
 					<i class="fa fa-home"></i>
 				</div>  
 				<header class="widget_header-inline heading_group">
-					<h3 class="heading-heavy-size-4">Fast Performance</h3>
-					<h4 class="heading-light-uppercase-brand-1">Donec finibus fringer</h4>
+					<h3 class="heading-heavy-uppercase">Fast Performance</h3>
+					<h4 class="heading-light-uppercase-brand-1-size-2">Donec finibus fringer</h4>
 				</header>     
 				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc et erat posuere consectetur adipiscing suscipit.</p>
 			</div>
@@ -71,8 +71,8 @@
 					<i class="fa fa-image"></i>
 				</div>  
 				<header class="widget_header-inline heading_group">
-					<h3 class="heading-heavy-size-4">Fast Performance</h3>
-					<h4 class="heading-light-uppercase-brand-1">Donec finibus fringer</h4>
+					<h3 class="heading-heavy-uppercase">Fast Performance</h3>
+					<h4 class="heading-light-uppercase-brand-1-size-2">Donec finibus fringer</h4>
 				</header>     
 				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc et erat posuere consectetur adipiscing suscipit.</p>
 			</div>
@@ -83,8 +83,8 @@
 					<i class="fa fa-search"></i>
 				</div>  
 				<header class="widget_header-inline heading_group">
-					<h3 class="heading-heavy-size-4">Fast Performance</h3>
-					<h4 class="heading-light-uppercase-brand-1">Donec finibus fringer</h4>
+					<h3 class="heading-heavy-uppercase">Fast Performance</h3>
+					<h4 class="heading-light-uppercase-brand-1-size-2">Donec finibus fringer</h4>
 				</header>     
 				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc et erat posuere consectetur adipiscing suscipit.</p>
 			</div>
@@ -95,8 +95,8 @@
 					<i class="fa fa-user"></i>
 				</div>  
 				<header class="widget_header-inline heading_group">
-					<h3 class="heading-heavy-size-4">Fast Performance</h3>
-					<h4 class="heading-light-uppercase-brand-1">Donec finibus fringer</h4>
+					<h3 class="heading-heavy-uppercase">Fast Performance</h3>
+					<h4 class="heading-light-uppercase-brand-1-size-2">Donec finibus fringer</h4>
 				</header>     
 				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc et erat posuere consectetur adipiscing suscipit.</p>
 			</div>
@@ -107,8 +107,8 @@
 					<i class="fa fa-twitter"></i>
 				</div>  
 				<header class="widget_header-inline heading_group">
-					<h3 class="heading-heavy-size-4">Fast Performance</h3>
-					<h4 class="heading-light-uppercase-brand-1">Donec finibus fringer</h4>
+					<h3 class="heading-heavy-uppercase">Fast Performance</h3>
+					<h4 class="heading-light-uppercase-brand-1-size-2">Donec finibus fringer</h4>
 				</header>     
 				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc et erat posuere consectetur adipiscing suscipit.</p>
 			</div>
@@ -119,8 +119,8 @@
 					<i class="fa fa-github-alt"></i>
 				</div>  
 				<header class="widget_header-inline heading_group">
-					<h3 class="heading-heavy-size-4">Fast Performance</h3>
-					<h4 class="heading-light-uppercase-brand-1">Donec finibus fringer</h4>
+					<h3 class="heading-heavy-uppercase">Fast Performance</h3>
+					<h4 class="heading-light-uppercase-brand-1-size-2">Donec finibus fringer</h4>
 				</header>     
 				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc et erat posuere consectetur adipiscing suscipit.</p>
 			</div>

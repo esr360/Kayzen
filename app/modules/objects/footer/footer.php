@@ -151,7 +151,7 @@
 		<div class="footer_bar">
 			<!-- Copyright Section -->
 			<div class="footer_copyright">
-				<h4>© Your Website 2014</h4>
+				<h4>© Your Website 2015</h4>
 			</div>
 			<!-- Footer Navigation -->
 			<nav class="footer_nav">                

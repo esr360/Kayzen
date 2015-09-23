@@ -16,19 +16,25 @@
 	<!-- Showcase Thumbnails -->
 	<section class="carousel-scale-3-greyscale-stage-bg owl-carousel" id="showcase-thumbnails">
 		<div class="showcase-thumbnail">
-			<img src="<?php echo appDir ?>/images/stock-1-thumb.jpg">
+			<img src="<?php echo appDir ?>/images/wallpapers/bg-1.jpg">
 		</div>
 		<div class="showcase-thumbnail">
-			<img src="<?php echo appDir ?>/images/stock-2-thumb.jpg">
+			<img src="<?php echo appDir ?>/images/wallpapers/bg-2.jpg">
 		</div>
 		<div class="showcase-thumbnail">
-			<img src="<?php echo appDir ?>/images/stock-4-thumb.jpg">
+			<img src="<?php echo appDir ?>/images/wallpapers/bg-3.jpg">
 		</div>
 		<div class="showcase-thumbnail">
-			<img src="<?php echo appDir ?>/images/stock-5-thumb.jpg">
+			<img src="<?php echo appDir ?>/images/wallpapers/bg-4.jpg">
 		</div>
 		<div class="showcase-thumbnail">
-			<img src="<?php echo appDir ?>/images/stock-3-thumb.jpg">
+			<img src="<?php echo appDir ?>/images/wallpapers/bg-5.jpg">
+		</div>
+		<div class="showcase-thumbnail">
+			<img src="<?php echo appDir ?>/images/wallpapers/bg-6.jpg">
+		</div>
+		<div class="showcase-thumbnail">
+			<img src="<?php echo appDir ?>/images/wallpapers/bg-7.jpg">
 		</div>
 	</section> 
 	
@@ -44,9 +50,8 @@
 	<div id="showcase-carousel" class="owl-carousel">
 		
 		<!-- Showcase Slide 1 -->
-		<div class="row-block">
-			<div class="section_block span-6 text-center va-middle" style="background-color: #262626;">
-				<div class="bg-img-scale-rotate" style="background-image: url('<?php echo appDir ?>/images/stock-1-bg.jpg')"></div>
+		<div class="row-block bg-cover" style="background-image: url('<?php echo appDir ?>/images/wallpapers/bg-1.jpg')">
+			<div class="section_block span-6 text-center va-middle">
 				<div class="block-content span-9">
 					<div class="desktop-graphic-scroll">
 						<img src="<?php echo appDir ?>/images/demo-screen.png" alt=""/ >
@@ -54,7 +59,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="section_block span-6 va-middle">
+			<div class="section_block-opaque span-6 va-middle">
 				<div class="block-content span-10">
 					<header class="heading_group">
 						<h2 class="heading-heavy-size-6 font-2">Creative Blog</h2>
@@ -76,9 +81,8 @@
 		</div>
 		
 		<!-- Showcase Slide 2 -->
-		<div class="row-block">
-			<div class="section_block span-6 text-center va-middle" style="background-color: #262626;">
-				<div class="bg-img-scale-rotate" style="background-image: url('<?php echo appDir ?>/images/stock-2-bg.jpg')"></div>
+		<div class="row-block bg-cover" style="background-image: url('<?php echo appDir ?>/images/wallpapers/bg-2.jpg')">
+			<div class="section_block span-6 text-center va-middle">
 				<div class="block-content span-9">
 					<div class="desktop-graphic-scroll">
 						<img src="<?php echo appDir ?>/images/demo-screen.png" alt=""/ >
@@ -86,7 +90,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="section_block span-6 va-middle">
+			<div class="section_block-opaque span-6 va-middle">
 				<div class="block-content span-10">
 					<header class="heading_group">
 						<h2 class="heading-heavy-size-6 font-2">Mobile App</h2>
@@ -108,9 +112,8 @@
 		</div>
 		
 		<!-- Showcase Slide 3 -->
-		<div class="row-block">
-			<div class="section_block span-6 text-center va-middle" style="background-color: #262626;">
-				<div class="bg-img-scale-rotate" style="background-image: url('<?php echo appDir ?>/images/stock-4-bg.jpg')"></div>
+		<div class="row-block bg-cover" style="background-image: url('<?php echo appDir ?>/images/wallpapers/bg-3.jpg')">
+			<div class="section_block span-6 text-center va-middle">
 				<div class="block-content span-9">
 					<div class="desktop-graphic-scroll">
 						<img src="<?php echo appDir ?>/images/demo-screen.png" alt=""/ >
@@ -118,7 +121,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="section_block span-6 va-middle">
+			<div class="section_block-opaque span-6 va-middle">
 				<div class="block-content span-10">
 					<header class="heading_group">
 						<h2 class="heading-heavy-size-6 font-2">Creative Blog</h2>
@@ -140,9 +143,12 @@
 		</div>
 		
 		<!-- Showcase Slide 4 -->
-		<div class="row-block">
-			<div class="section_block span-6 text-center va-middle" style="background-color: #262626;">
-				<div class="bg-img-scale-rotate" style="background-image: url('<?php echo appDir ?>/images/spotlight-1.png')"></div>
+		<div 
+			class="row-block bg-cover"
+			data-stellar-background-ratio="0.5"
+			style="background-image: url('<?php echo appDir ?>/images/wallpapers/bg-4.jpg')"
+		>
+			<div class="section_block span-6 text-center va-middle">
 				<div class="block-content span-9">
 					<div class="desktop-graphic-scroll">
 						<img src="<?php echo appDir ?>/images/demo-screen.png" alt=""/ >
@@ -150,7 +156,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="section_block span-6 va-middle">
+			<div class="section_block-opaque span-6 va-middle">
 				<div class="block-content span-10">
 					<header class="heading_group">
 						<h2 class="heading-heavy-size-6 font-2">Mobile App</h2>
@@ -172,9 +178,8 @@
 		</div>
 		
 		<!-- Showcase Slide 5 -->
-		<div class="row-block">
+		<div class="row-block bg-cover" style="background-image: url('<?php echo appDir ?>/images/wallpapers/bg-5.jpg')">
 			<div class="section_block span-6 text-center va-middle">
-				<div class="bg-img-scale-rotate" style="background-image: url('<?php echo appDir ?>/images/stock-3-bg.png')"></div>
 				<div class="block-content span-9">
 					<div class="desktop-graphic-scroll">
 						<img src="<?php echo appDir ?>/images/demo-screen.png" alt=""/ >
@@ -182,7 +187,69 @@
 					</div>
 				</div>
 			</div>
-			<div class="section_block span-6 va-middle">
+			<div class="section_block-opaque span-6 va-middle">
+				<div class="block-content span-10">
+					<header class="heading_group">
+						<h2 class="heading-heavy-size-6 font-2">Digital Agency</h2>
+						<h3 class="heading-light-brand-1-size-5">A Modern Template for Creative Blogs</h3>
+					</header>
+					<p class="lede">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus eget porta eros. Suspendisse vehicula massa in erat mattis.</p>
+					<ul class="list-arrow lede min-break-2">
+						<li>Lorem ipsum dolor sit amet consectetur</li>
+						<li>Donec malesuada metus non massa sodales auctor</li>
+						<li>Sed sed iaculis arcu, eu pharetra nulla</li>
+						<li>Etiam dapibus, nulla placerat</li>
+					</ul>
+					<p class="button_group">
+						<a href="#" target="blank" class="button-size-3">View Demo</a>
+						<a href="#" class="button-primary-size-3">Purchase Theme</a>
+					</p>
+				</div>
+			</div>
+		</div>
+		
+		<!-- Showcase Slide 6 -->
+		<div class="row-block bg-cover" style="background-image: url('<?php echo appDir ?>/images/wallpapers/bg-6.jpg')">
+			<div class="section_block span-6 text-center va-middle">
+				<div class="block-content span-9">
+					<div class="desktop-graphic-scroll">
+						<img src="<?php echo appDir ?>/images/demo-screen.png" alt=""/ >
+						<div style="background-image: url('<?php echo appDir ?>/images/stock-3.jpg')"></div>
+					</div>
+				</div>
+			</div>
+			<div class="section_block-opaque span-6 va-middle">
+				<div class="block-content span-10">
+					<header class="heading_group">
+						<h2 class="heading-heavy-size-6 font-2">Digital Agency</h2>
+						<h3 class="heading-light-brand-1-size-5">A Modern Template for Creative Blogs</h3>
+					</header>
+					<p class="lede">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus eget porta eros. Suspendisse vehicula massa in erat mattis.</p>
+					<ul class="list-arrow lede min-break-2">
+						<li>Lorem ipsum dolor sit amet consectetur</li>
+						<li>Donec malesuada metus non massa sodales auctor</li>
+						<li>Sed sed iaculis arcu, eu pharetra nulla</li>
+						<li>Etiam dapibus, nulla placerat</li>
+					</ul>
+					<p class="button_group">
+						<a href="#" target="blank" class="button-size-3">View Demo</a>
+						<a href="#" class="button-primary-size-3">Purchase Theme</a>
+					</p>
+				</div>
+			</div>
+		</div>
+		
+		<!-- Showcase Slide 7 -->
+		<div class="row-block bg-cover" style="background-image: url('<?php echo appDir ?>/images/wallpapers/bg-7.jpg')">
+			<div class="section_block span-6 text-center va-middle">
+				<div class="block-content span-9">
+					<div class="desktop-graphic-scroll">
+						<img src="<?php echo appDir ?>/images/demo-screen.png" alt=""/ >
+						<div style="background-image: url('<?php echo appDir ?>/images/stock-3.jpg')"></div>
+					</div>
+				</div>
+			</div>
+			<div class="section_block-opaque span-6 va-middle">
 				<div class="block-content span-10">
 					<header class="heading_group">
 						<h2 class="heading-heavy-size-6 font-2">Digital Agency</h2>
@@ -248,7 +315,7 @@
 					flag = false;
 				}
 			})
-			.trigger('to.owl.carousel', 2);
+			.trigger('to.owl.carousel', 3);
 			
 			// Slide Arrows
 			

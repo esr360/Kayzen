@@ -102,8 +102,10 @@
 			position: relative;
 			transition: base(transition);
 			padding: 7%;
-			background-color: color(greyscale, white);	
 			background-size: cover;
+			@include modifier(opaque) {
+				background: rgba(white, 0.95);
+			}
 		}
 		
 		@include sub-component(graphic) {

@@ -1552,6 +1552,10 @@ hr.gutter {
   }
 }
 
+.bg-cover {
+  background-size: cover;
+}
+
 .accordion, [class*="accordion-"] {
   margin-bottom: 2rem;
 }
@@ -2204,7 +2208,7 @@ button::-moz-focus-inner {
   opacity: 0;
 }
 [class*="form-"][class*="-faux-placeholders"] .form_input:focus + label, [class*="form-"][class*="-faux-placeholders"] [class*="form_input-"]:focus + label {
-  top: -1em;
+  top: -0.8em;
   left: 0;
   cursor: pointer;
   font-size: 0.9em;
@@ -2226,6 +2230,9 @@ button::-moz-focus-inner {
   opacity: 0.5;
   -webkit-transition: 0s;
           transition: 0s;
+}
+[class*="form-"][class*="-faux-placeholders"] textarea + label {
+  top: 1.4em;
 }
 [class*="form-"][class*="-html5"] .form_input:focus:invalid, [class*="form-"][class*="-html5"] .form_input:focus:invalid + label, [class*="form-"][class*="-html5"] [class*="form_input-"]:focus:invalid, [class*="form-"][class*="-html5"] [class*="form_input-"]:focus:invalid + label {
   border-color: #D91E18;
@@ -2328,6 +2335,10 @@ button::-moz-focus-inner {
 [class*="heading-"][class*="-brand-1"] {
   font-style: normal;
   color: #9B58B5;
+}
+[class*="heading-"][class*="-brand-1-light"] {
+  font-style: normal;
+  color: #b07bc5;
 }
 [class*="heading-"][class*="-uppercase"] {
   text-transform: uppercase;
@@ -4555,8 +4566,10 @@ progress.progress-alt::-moz-progress-bar {
   -webkit-transition: 0.4s;
           transition: 0.4s;
   padding: 7%;
-  background-color: #ffffff;
   background-size: cover;
+}
+[class*="section_block-"][class*="-opaque"] {
+  background: rgba(255, 255, 255, 0.95);
 }
 .section_graphic, [class*="section_graphic-"] {
   position: relative;
@@ -4623,10 +4636,11 @@ progress.progress-alt::-moz-progress-bar {
       -ms-transform: translateY(-50%);
           transform: translateY(-50%);
 }
-[class*="app-header-"][class*="-dark"] + [class*="billboard-"]:not([class*="-full-screen"]) .billboard_wrapper, [class*="app-header-"][class*="-dark"] + [class*="billboard-"]:not([class*="-full-screen"]) [class*="billboard_wrapper-"] {
+[class*="app-header-"][class*="-dark"] + .billboard:not([class*="-full-screen"]) .billboard_wrapper, [class*="app-header-"][class*="-dark"] + .billboard:not([class*="-full-screen"]) [class*="billboard_wrapper-"], [class*="app-header-"][class*="-dark"] + [class*="billboard-"]:not([class*="-full-screen"]) .billboard_wrapper, [class*="app-header-"][class*="-dark"] + [class*="billboard-"]:not([class*="-full-screen"]) [class*="billboard_wrapper-"] {
   -webkit-transform: translateY(-15%);
       -ms-transform: translateY(-15%);
           transform: translateY(-15%);
+  content: "dopy";
 }
 @media (min-width: 940px) {
   .billboard_wrapper, [class*="billboard_wrapper-"] {

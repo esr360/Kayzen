@@ -45,7 +45,7 @@
 				}
 				&:focus {
 					+ label {
-						top: -1em;
+						top: -0.8em;
 						left: 0;
 						cursor: pointer;
 						font-size: 0.9em;
@@ -54,6 +54,11 @@
 						opacity: 0.5;
 						transition: 0s;
 					}
+				}
+			}
+			textarea {
+				+ label {
+					top: 1.4em;
 				}
 			}
 		}

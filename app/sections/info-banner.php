@@ -2,7 +2,6 @@
 <?php if ($style == 'brand') { ?>
 <section 
 	class="section-secondary-overlay" 
-	data-stellar-background-ratio="0.5"
 	style="background-image: url('<?php echo appDir ?>/images/billboard-1.jpg')"
 >
 	<div class="container">

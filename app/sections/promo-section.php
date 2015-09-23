@@ -17,7 +17,7 @@
 			<div class="span-6">
 				<header class="heading_group">
 					<h2 class="heading-heavy-size-5-uppercase font-2">Kayzen is the Best</h2>
-					<h3 class="heading-light-brand-1-size-4">A Modern Template For Any Project</h3>
+					<h3 class="heading-light-brand-1-light-size-4">A Modern Template For Any Project</h3>
 				</header>
 				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus eget porta eros. Suspendisse vehicula massa in erat mattis.</p>
 				<ul class="list-arrow min-break-2">
@@ -48,7 +48,7 @@
 			<div class="span-6">
 				<header class="heading_group">
 					<h2 class="heading-heavy-size-5-uppercase font-2">Kayzen is the Best</h2>
-					<h3 class="heading-light-brand-1-size-4">A Modern Template For Any Project</h3>
+					<h3 class="heading-light-brand-1-light-size-4">A Modern Template For Any Project</h3>
 				</header>
 				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus eget porta eros. Suspendisse vehicula massa in erat mattis.</p>
 				<ul class="list-arrow min-break-2">
