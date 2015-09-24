@@ -163,9 +163,10 @@
 		// If website has "top-bar" and header is "absolute"
 		@at-root {
 			@include overwrite(top-bar) {
-				@include overwrite(app-header, $is: absolute, $special: adjacent-sibling) {
+				@include overwrite(app-header, $is: absolute, $special: general-sibling) {
 					@include overwrite($is: full-screen, $special: adjacent-sibling) {
 						height: calc(100vh - #{option($top-bar, height)});
+						content: "dopy"
 					}
 				}
 			}
@@ -206,7 +207,6 @@
 					@include overwrite(billboard, $not: full-screen, $special: adjacent-sibling) {
 						@include overwrite-sub(wrapper) {
 							transform: translateY(-15%);
-							content: 'dopy'
 						}
 					}
 				}

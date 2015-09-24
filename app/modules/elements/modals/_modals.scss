@@ -37,6 +37,69 @@
 			visibility: visible;
 		}
 		
+		@include modifier(animate) {
+			
+			transition: base(transition);
+			
+			@include nested-modifiers((top, bottom)) {
+				@include nested-modifier(visible) {
+					top: 50%;
+				}
+			}
+			
+			@include nested-modifier(top) {
+				top: 45%;
+			}
+			
+			@include nested-modifier(bottom) {
+				top: 55%;
+			}
+			
+			@include nested-modifiers((left, right)) {
+				@include nested-modifier(visible) {
+					transform: translateX(0) translateY(-50%);
+				}
+			}
+			
+			@include nested-modifier(left) {
+				transform: translateX(-15%) translateY(-50%);
+			}
+			
+			@include nested-modifier(right) {
+				transform: translateX(15%) translateY(-50%);
+			}
+			
+			@include nested-modifier(zoom) {
+				transform: scale(0.5) translateY(-75%);
+				@include nested-modifier(visible) {
+					transform: scale(1) translateY(-50%);
+				}
+			}
+			
+			@include nested-modifier(spin) {
+				transform: rotate(-360deg) translateY(-50%);
+				@include nested-modifier(visible) {
+					transform: rotate(0) translateY(-50%);
+				}
+			}
+			
+		}
+		
+		@include sub-component(close) {
+			position: absolute;
+			cursor: pointer;
+			top: 1em;
+			right: 1em;
+			transition: base(transition);
+			color: color(greyscale, grey-3);
+			.fa {
+				cursor: pointer;
+			}
+			&:hover {
+				color: color(brand, primary);
+			}	
+		}
+		
 	}
 
 } // @mixin modals

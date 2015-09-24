@@ -22,7 +22,12 @@ $(document).ready(function() {
 // Smooth Scroll
 //-----------------------------------------------------------------
 
-$('a[href*=#]').click(function() {
+// set which elements should be exempt from the smooth scroll effect
+var scrollExempt = [
+    ':not([href*="modal"])'
+]
+
+$('a[href*=#]' + scrollExempt).click(function() {
     if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') 
         || location.hostname == this.hostname) {
         var target = $(this.hash);

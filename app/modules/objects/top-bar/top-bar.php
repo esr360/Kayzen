@@ -64,3 +64,9 @@
 		</div><!-- row-block -->
 	</div><!-- container -->
 </div><!-- top-bar -->
+
+<!-- Login Box -->
+<div class="modal" id="modal-login">
+	<div class="modal_close"><i class="fa fa-times fa-2x"></i></div>
+	<p>test</p>
+</div>
