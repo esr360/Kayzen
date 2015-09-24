@@ -4,11 +4,11 @@
 
 $('#search-trigger').click(function() {
 	$(search)
-		.addClass('search-visible')
+		.addClass('search_visible')
 		.find('[type="search"]')
 		.focus();
 });
 
 $('.search_close').click(function () {
-	$(search).removeClass('search-visible');
+	$(search).removeClass('search_visible');
 });

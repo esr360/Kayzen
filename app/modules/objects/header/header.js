@@ -15,10 +15,10 @@ if (setting('app-header', 'sticky'))  {
 		$(appHeader).addClass('fixed');
 		navDropdown.hover(
 			function(){ 
-				$("#site-overlay").addClass('header-visible');
+				$("#site-overlay").addClass('header_visible');
 			},
 			function(){ 
-				$("#site-overlay").removeClass('header-visible');
+				$("#site-overlay").removeClass('header_visible');
 			}
 		);
 	}
@@ -26,7 +26,7 @@ if (setting('app-header', 'sticky'))  {
 	function unStickHeader() {
 		$(appHeader).removeClass('fixed');
 		navDropdown.unbind('mouseenter mouseleave');
-		$("#site-overlay").removeClass('header-visible');
+		$("#site-overlay").removeClass('header_visible');
 	}
 	
 	$(window).on("load scroll", function(e) {

@@ -15,6 +15,11 @@
 	</div>
 </div>
 
+<!-- Login Box -->
+<div class="modal" id="modal-login">
+	<p>test</p>
+</div>
+
 <!-- Scroll to top icon -->
 <a class="icon-border scroll-top" href="#site-content">
 	<i class="fa fa-angle-up"></i>

@@ -46,7 +46,7 @@
 			@include extend(reset);
 			> li {
 				position: relative;
-				line-height: 2;
+				line-height: 1.8;
 				margin-bottom: 0 !important;
 				padding-left: 1.5em;
 				&:before {
@@ -106,7 +106,7 @@
 		@include modifier(overflow) {
 			overflow: auto;
 			&[data-list-height="6"] {
-				max-height: (2.15em) * 6;
+				max-height: (1.9em) * 6;
 			}
 		}
 		

@@ -12,15 +12,15 @@ $(window).on("load scroll", function(e) {
 	if (scroll > topBarHeight) {
 		topBarDropdown.hover(
 			function(){ 
-				$("#site-overlay").addClass('top-bar-visible');
+				$("#site-overlay").addClass('top-bar_visible');
 			},
 			function(){ 
-				$("#site-overlay").removeClass('top-bar-visible');
+				$("#site-overlay").removeClass('top-bar_visible');
 			}
 		);
 	} else {
 		topBarDropdown.unbind('mouseenter mouseleave');
-		$("#site-overlay").removeClass('top-bar-visible');
+		$("#site-overlay").removeClass('top-bar_visible');
 	}
 	
 });

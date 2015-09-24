@@ -159,7 +159,7 @@
 			<div class="section_block-opaque span-6 va-middle">
 				<div class="block-content span-10">
 					<header class="heading_group">
-						<h2 class="heading-heavy-size-6 font-2">Mobile App</h2>
+						<h2 class="heading-heavy-size-6">Mobile App</h2>
 						<h3 class="heading-light-brand-1-size-5">A Modern Template for Creative Blogs</h3>
 					</header>
 					<p class="lede">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus eget porta eros. Suspendisse vehicula massa in erat mattis.</p>

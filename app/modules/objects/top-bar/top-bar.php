@@ -28,7 +28,7 @@
 			<div class="span text-right">
 				
 				<div class="button_group span va-middle">
-					<a href="#" class="button-size-1">
+					<a class="button-size-1" href="#modal-login" data-modal="modal-login">
 						<i class="fa fa-user"></i> Login
 					</a>
 					<a href="#" class="button-primary-size-1">
