@@ -5155,8 +5155,12 @@ $(accordionInit);
 				
 			$(this).attr('href', '#' + id);
 			
-			if (!typeof($(this).attr('data-modal-style')) === 'undefined') {
+			if ($(this).attr('data-modal-style')) {
 				var style = '-animate-' + $(this).attr('data-modal-style');
+			}
+			
+			if ($(this).attr('data-modal-content')) {
+				var content = $(this).attr('data-modal-content');
 			}
 				
 			$('body').append(
@@ -5184,6 +5188,9 @@ $(accordionInit);
 			var animateStyle = options.animate;
 			
 			function openModal(el) {
+				// close any pre-exisintg visible modals
+				$(modal).removeClass('modal-visible');
+				// show the target modal
 				el.addClass('modal-visible');
 				if (options.overlay) {
 					$('#site-overlay').addClass('modal_visible');
@@ -5627,13 +5634,13 @@ $('#page-overview')
 
 $('#search-trigger').click(function() {
 	$(search)
-		.addClass('search_visible')
+		.addClass('search-visible')
 		.find('[type="search"]')
 		.focus();
 });
 
 $('.search_close').click(function () {
-	$(search).removeClass('search_visible');
+	$(search).removeClass('search-visible');
 });
 //=================================================================
 // Top Bar

@@ -23,7 +23,6 @@
 		@extend %horizontal-center;
 		width: 650px;
 		max-width: 90%;
-		padding: 2em;
 		background: color(greyscale, grey-1);
 		position: fixed;
 		z-index: 9;
@@ -83,6 +82,10 @@
 				}
 			}
 			
+		}
+		
+		@include sub-component(content) {
+			padding: 2em;
 		}
 		
 		@include sub-component(close) {

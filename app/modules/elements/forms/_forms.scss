@@ -25,26 +25,29 @@
 		
 		label {
 			transition: base(transition);
+			cursor: pointer;
 		}
 		
 	// Modifiers
 	//-------------------------------------------------------------
 	
 		@include modifier(faux-placeholders) {
-			label {
-				@include vertical-center(absolute);
-				left: 0.65em;
-				cursor: text;
-			}
 			@include overwrite-sub(group) {
 				margin-bottom: base(margin);
+			}
+			@include overwrite-sub(group) {
+				label {
+					@include vertical-center(absolute);
+					left: 0.65em;
+					cursor: text;
+				}
 			}
 			@include overwrite-sub(input) {
 				&::placeholder {
 					opacity: 0;
 				}
 				&:focus {
-					+ label {
+					~ label {
 						top: -0.8em;
 						left: 0;
 						cursor: pointer;
@@ -57,8 +60,13 @@
 				}
 			}
 			textarea {
-				+ label {
+				~ label {
 					top: 1.4em;
+				}
+			}
+			@include overwrite-sub(icon) {
+				~ label {
+					left: 2em;
 				}
 			}
 		}
@@ -67,13 +75,13 @@
 			@include overwrite-sub(input) {
 				&:focus {
 					&:invalid {
-						&, + label {
+						&, ~ label, ~ .form_icon {
 							border-color: color(validation, invalid);
 							color: color(validation, invalid);
 						}
 					}
 					&:valid {
-						&, + label {
+						&, ~ label, ~ .form_icon {
 							border-color: color(validation, valid);
 							color: color(validation, valid);
 						}
@@ -93,13 +101,27 @@
 				right: 0;
 				height: 100%;
 				padding: 0 1em;
-				@include overwrite-sub(input, $special: 'adjacent-sibling') {
+				@include overwrite-sub(input, $special: 'general-sibling') {
 					padding-right: 3em;
 				}
 			}
 			@include modifier(small) {
 				font-size: font-size(size-2);
 			}
+			@include modifier(compound) {
+				margin-bottom: 0.5em;
+			}
+			@include modifier(has-icon) {
+				@include overwrite-sub(input) {
+					padding-left: 2em;
+				}
+			}
+		}
+	
+		@include sub-component(icon) {
+			@include vertical-center(absolute);
+			position: absolute;
+			left: 0.75em;
 		}
 	
 		@include sub-component(input) {

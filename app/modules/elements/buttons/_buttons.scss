@@ -51,6 +51,9 @@
 		@include modifier(block) {
 			width: 100%;
 			text-align: center;
+			@include overwrite($special: adjacent-sibling) {
+				margin-top: (base(margin) / 2);
+			}
 		} 
 	
 		@include modifier(border) {
@@ -104,7 +107,7 @@
 			@include modifier($greyscale) {
 				background: $color;
 				@if (lightness($color) > 50) {
-					color: color(brand, primary);
+					color: color(greyscale, grey-5);
 				}
 				&:hover {
 					background: darken($color, 10%);
@@ -121,6 +124,23 @@
 							color: color(greyscale, white);
 						}
 					}
+				}
+			}
+		}
+		
+		// Social Colors
+		
+		$social-colors: (
+			facebook    : option($palettes, social, facebook),
+			twitter     : option($palettes, social, twitter),
+			google-plus : option($palettes, social, google-plus),
+		);
+		
+		@each $social, $color in $social-colors {
+			@include modifier($social) {
+				background: $color;
+				&:hover {
+					background: darken($color, 10%);
 				}
 			}
 		}
