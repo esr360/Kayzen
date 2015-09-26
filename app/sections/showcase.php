@@ -273,7 +273,8 @@
 	</div><!-- Showcase Slides -->
 	
 	<!-- Showcase Carousel -->
-	<script>	
+	<script>
+		
 		$(document).ready(function() {
 			
 			var $sync1 = $("#showcase-carousel"),
@@ -327,6 +328,7 @@
 			});	
 			
 		}); // document.ready
+		
 	</script>
 	
 </section><!-- Showcase -->
