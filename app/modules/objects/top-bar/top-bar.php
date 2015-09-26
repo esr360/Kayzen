@@ -74,14 +74,14 @@
 				<h3 class="heading">Sign in to your account</h3>
 				<form class="form-faux-placeholders-html5">
 					<div class="form_group-compound-has-icon">
-						<input type="text" class="form_input" id="userName" placeholder="Ex: SkyUX" required="">
+						<input type="text" class="form_input" id="loginUsername" placeholder="Ex: SkyUX" required="">
 						<i class="form_icon fa fa-user"></i>
-						<label for="userName">Username</label>
+						<label for="loginUsername">Username</label>
 					</div>
 					<div class="form_group-compound-has-icon">
-						<input type="password" class="form_input" id="password" placeholder="••••••••" required="">
+						<input type="password" class="form_input" id="loginPassword" placeholder="••••••••" required="">
 						<i class="form_icon fa fa-key"></i>
-						<label for="password">Password</label>
+						<label for="loginPassword">Password</label>
 					</div>
 					<div class="row">
 						<div class="span-8 va-middle">
@@ -115,19 +115,19 @@
 				<h3 class="heading">Create your free account</h3>
 				<form class="form-faux-placeholders-html5">
 					<div class="form_group-compound-has-icon">
-						<input type="text" class="form_input" id="userName" placeholder="Ex: SkyUX" required="">
+						<input type="text" class="form_input" id="registerUsername" placeholder="Ex: SkyUX" required="">
 						<i class="form_icon fa fa-user"></i>
-						<label for="userName">Username</label>
+						<label for="registerUsername">Username</label>
 					</div>
 					<div class="form_group-compound-has-icon">
-						<input type="email" class="form_input" id="email" placeholder="Ex: hello@skyux.com" required="">
+						<input type="email" class="form_input" id="registerEmail" placeholder="Ex: hello@skyux.com" required="">
 						<i class="form_icon fa fa-envelope-o"></i>
-						<label for="email">Email</label>
+						<label for="registerEmail">Email</label>
 					</div>
 					<div class="form_group-compound-has-icon">
-						<input type="password" class="form_input" id="password" placeholder="••••••••" required="">
+						<input type="password" class="form_input" id="registerPassword" placeholder="••••••••" required="">
 						<i class="form_icon fa fa-key"></i>
-						<label for="password">Password</label>
+						<label for="registerPassword">Password</label>
 					</div>
 					<button type="submit" class="button-block-primary">Sign Up</button>
 				</form>
