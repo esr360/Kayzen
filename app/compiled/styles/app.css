@@ -2288,11 +2288,35 @@ button::-moz-focus-inner {
 [class*="form-"][class*="-faux-placeholders"] .form_icon ~ label, [class*="form-"][class*="-faux-placeholders"] [class*="form_icon-"] ~ label {
   left: 2em;
 }
-[class*="form-"][class*="-html5"] .form_input:focus:invalid, [class*="form-"][class*="-html5"] .form_input:focus:invalid ~ label, [class*="form-"][class*="-html5"] .form_input:focus:invalid ~ .form_icon, [class*="form-"][class*="-html5"] [class*="form_input-"]:focus:invalid, [class*="form-"][class*="-html5"] [class*="form_input-"]:focus:invalid ~ label, [class*="form-"][class*="-html5"] [class*="form_input-"]:focus:invalid ~ .form_icon {
+[class*="form-"][class*="-html5"] .form_input:focus:invalid, [class*="form-"][class*="-html5"] .form_input:focus:invalid ~ label, [class*="form-"][class*="-html5"] .form_input:focus:invalid ~ .form_icon, [class*="form-"][class*="-html5"] .form_input:focus:invalid::-webkit-input-placeholder, [class*="form-"][class*="-html5"] [class*="form_input-"]:focus:invalid, [class*="form-"][class*="-html5"] [class*="form_input-"]:focus:invalid ~ label, [class*="form-"][class*="-html5"] [class*="form_input-"]:focus:invalid ~ .form_icon, [class*="form-"][class*="-html5"] [class*="form_input-"]:focus:invalid::-webkit-input-placeholder {
   border-color: #D91E18;
   color: #D91E18;
 }
-[class*="form-"][class*="-html5"] .form_input:focus:valid, [class*="form-"][class*="-html5"] .form_input:focus:valid ~ label, [class*="form-"][class*="-html5"] .form_input:focus:valid ~ .form_icon, [class*="form-"][class*="-html5"] [class*="form_input-"]:focus:valid, [class*="form-"][class*="-html5"] [class*="form_input-"]:focus:valid ~ label, [class*="form-"][class*="-html5"] [class*="form_input-"]:focus:valid ~ .form_icon {
+[class*="form-"][class*="-html5"] .form_input:focus:invalid, [class*="form-"][class*="-html5"] .form_input:focus:invalid ~ label, [class*="form-"][class*="-html5"] .form_input:focus:invalid ~ .form_icon, [class*="form-"][class*="-html5"] .form_input:focus:invalid::-moz-placeholder, [class*="form-"][class*="-html5"] [class*="form_input-"]:focus:invalid, [class*="form-"][class*="-html5"] [class*="form_input-"]:focus:invalid ~ label, [class*="form-"][class*="-html5"] [class*="form_input-"]:focus:invalid ~ .form_icon, [class*="form-"][class*="-html5"] [class*="form_input-"]:focus:invalid::-moz-placeholder {
+  border-color: #D91E18;
+  color: #D91E18;
+}
+[class*="form-"][class*="-html5"] .form_input:focus:invalid, [class*="form-"][class*="-html5"] .form_input:focus:invalid ~ label, [class*="form-"][class*="-html5"] .form_input:focus:invalid ~ .form_icon, [class*="form-"][class*="-html5"] .form_input:focus:invalid:-ms-input-placeholder, [class*="form-"][class*="-html5"] [class*="form_input-"]:focus:invalid, [class*="form-"][class*="-html5"] [class*="form_input-"]:focus:invalid ~ label, [class*="form-"][class*="-html5"] [class*="form_input-"]:focus:invalid ~ .form_icon, [class*="form-"][class*="-html5"] [class*="form_input-"]:focus:invalid:-ms-input-placeholder {
+  border-color: #D91E18;
+  color: #D91E18;
+}
+[class*="form-"][class*="-html5"] .form_input:focus:invalid, [class*="form-"][class*="-html5"] .form_input:focus:invalid ~ label, [class*="form-"][class*="-html5"] .form_input:focus:invalid ~ .form_icon, [class*="form-"][class*="-html5"] .form_input:focus:invalid::placeholder, [class*="form-"][class*="-html5"] [class*="form_input-"]:focus:invalid, [class*="form-"][class*="-html5"] [class*="form_input-"]:focus:invalid ~ label, [class*="form-"][class*="-html5"] [class*="form_input-"]:focus:invalid ~ .form_icon, [class*="form-"][class*="-html5"] [class*="form_input-"]:focus:invalid::placeholder {
+  border-color: #D91E18;
+  color: #D91E18;
+}
+[class*="form-"][class*="-html5"] .form_input:focus:valid, [class*="form-"][class*="-html5"] .form_input:focus:valid ~ label, [class*="form-"][class*="-html5"] .form_input:focus:valid ~ .form_icon, [class*="form-"][class*="-html5"] .form_input:focus:valid::-webkit-input-placeholder, [class*="form-"][class*="-html5"] [class*="form_input-"]:focus:valid, [class*="form-"][class*="-html5"] [class*="form_input-"]:focus:valid ~ label, [class*="form-"][class*="-html5"] [class*="form_input-"]:focus:valid ~ .form_icon, [class*="form-"][class*="-html5"] [class*="form_input-"]:focus:valid::-webkit-input-placeholder {
+  border-color: #00B16A;
+  color: #00B16A;
+}
+[class*="form-"][class*="-html5"] .form_input:focus:valid, [class*="form-"][class*="-html5"] .form_input:focus:valid ~ label, [class*="form-"][class*="-html5"] .form_input:focus:valid ~ .form_icon, [class*="form-"][class*="-html5"] .form_input:focus:valid::-moz-placeholder, [class*="form-"][class*="-html5"] [class*="form_input-"]:focus:valid, [class*="form-"][class*="-html5"] [class*="form_input-"]:focus:valid ~ label, [class*="form-"][class*="-html5"] [class*="form_input-"]:focus:valid ~ .form_icon, [class*="form-"][class*="-html5"] [class*="form_input-"]:focus:valid::-moz-placeholder {
+  border-color: #00B16A;
+  color: #00B16A;
+}
+[class*="form-"][class*="-html5"] .form_input:focus:valid, [class*="form-"][class*="-html5"] .form_input:focus:valid ~ label, [class*="form-"][class*="-html5"] .form_input:focus:valid ~ .form_icon, [class*="form-"][class*="-html5"] .form_input:focus:valid:-ms-input-placeholder, [class*="form-"][class*="-html5"] [class*="form_input-"]:focus:valid, [class*="form-"][class*="-html5"] [class*="form_input-"]:focus:valid ~ label, [class*="form-"][class*="-html5"] [class*="form_input-"]:focus:valid ~ .form_icon, [class*="form-"][class*="-html5"] [class*="form_input-"]:focus:valid:-ms-input-placeholder {
+  border-color: #00B16A;
+  color: #00B16A;
+}
+[class*="form-"][class*="-html5"] .form_input:focus:valid, [class*="form-"][class*="-html5"] .form_input:focus:valid ~ label, [class*="form-"][class*="-html5"] .form_input:focus:valid ~ .form_icon, [class*="form-"][class*="-html5"] .form_input:focus:valid::placeholder, [class*="form-"][class*="-html5"] [class*="form_input-"]:focus:valid, [class*="form-"][class*="-html5"] [class*="form_input-"]:focus:valid ~ label, [class*="form-"][class*="-html5"] [class*="form_input-"]:focus:valid ~ .form_icon, [class*="form-"][class*="-html5"] [class*="form_input-"]:focus:valid::placeholder {
   border-color: #00B16A;
   color: #00B16A;
 }

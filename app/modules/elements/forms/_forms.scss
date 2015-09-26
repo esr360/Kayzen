@@ -75,13 +75,13 @@
 			@include overwrite-sub(input) {
 				&:focus {
 					&:invalid {
-						&, ~ label, ~ .form_icon {
+						&, ~ label, ~ .form_icon, &::placeholder {
 							border-color: color(validation, invalid);
 							color: color(validation, invalid);
 						}
 					}
 					&:valid {
-						&, ~ label, ~ .form_icon {
+						&, ~ label, ~ .form_icon, &::placeholder {
 							border-color: color(validation, valid);
 							color: color(validation, valid);
 						}

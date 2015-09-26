@@ -1775,7 +1775,7 @@ window.scrollReveal = (function( window ){
                             abox += '<li class="tweet-reply"><a title="Reply" target="blank" href="https://twitter.com/intent/tweet?in_reply_to=' + field.id_str + '">' + o.action_reply_icon + '</a></li>';
                             
                             // retweet icon
-                            abox += '<li class="retweet"><a title="Retweet" target="blank" href="https://twitter.com/intent/retweet?tweet_id=' + field.id_str + '">' + o.action_retweet_icon + '</a>' + (field.retweet_count_f != '' ? '<span class="retween-count">' + field.retweet_count_f + '</span>' : '') + '</li>';
+                            abox += '<li class="retweet"><a title="Retweet" target="blank" href="https://twitter.com/intent/retweet?tweet_id=' + field.id_str + '">' + o.action_retweet_icon + (field.retweet_count_f != '' ? '<span class="retween-count"> ' + field.retweet_count_f + '</span>' : '') + '</a>' + '</li>';
                             
                             // favourite iicon
                             abox += '<li class="tweet-favorite"><a title="Favorite" target="blank" href="https://twitter.com/intent/favorite?tweet_id=' + field.id_str + '">' + o.action_favorite_icon + (field.favorite_count_f != '' ? '<span class="favourite-count"> ' + field.favorite_count_f + '</span>' : '') + '</a>' + '</li>';
