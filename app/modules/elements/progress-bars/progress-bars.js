@@ -2,7 +2,8 @@
 // Progress Bars
 //-----------------------------------------------------------------
 
-$(".progress").each(function() {
-    attrProgress = $(this).attr('data-progress');
-    $(this).css({ width : attrProgress }); 
+$("progress.progress-bar").each(function() {
+    var attrProgress = $(this).attr('data-progress');
+    $(this).attr('value', attrProgress.replace(/[^-\d\.]/g, ''));
+    $(this).find('.progress').css({ width : attrProgress }); 
 });

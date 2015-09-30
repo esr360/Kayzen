@@ -2,13 +2,6 @@
 // Progress Bars
 //=================================================================
 
-$progress-radius : 0.4rem;
-$progress-height : 1rem;
-
-//-----------------------------------------------------------------
-// Mixin
-//-----------------------------------------------------------------
-
 @mixin progress-bars($custom: ()) {
 
 	//-------------------------------------------------------------
@@ -16,15 +9,28 @@ $progress-height : 1rem;
 	//-------------------------------------------------------------
 
 	$progress-bars: config((
-		name            : progressbar
+		name            : progress-bar
 	), $custom);
 	
-	// Core Styles
+	// Component
 	//-------------------------------------------------------------
 	
-	%progress-bar {
-		background: rgba(color(greyscale, black),0.15);
-		border-radius: $progress-radius;	
+	@include component {
+		display: block;
+		position: relative;
+		background: rgba(black, 0.15);
+		width: 100%;
+		height: 1.5em;
+		border: none;
+		border-radius: 0.25em;
+		overflow: hidden;
+		&:before {
+			@include vertical-center(absolute);
+			left: 0.5em;
+			content: attr(data-progress);
+			color: color(greyscale, white);
+			font-size: font-size(size-2);
+		}
 	}
 
 	// HTML5 Progress
@@ -32,53 +38,28 @@ $progress-height : 1rem;
 	
 	progress {
 	
-		width: 100%;
-		height: $progress-height;
-		display: block;
-		color: color(brand, primary);
-		border-radius: $progress-radius;
-		border: none;
-		-webkit-appearance: none;
-	
 		&::-webkit-progress-bar {
-			@extend %progress-bar;
+			background: rgba(black, 0.15);
+			height: 1.5em;
 		}
 	
 		&::-webkit-progress-value {
 			background: color(brand, primary);
-			border-radius: $progress-radius;
+			height: 1.5em;
 		}
 		
 		&::-moz-progress-bar {	
 			background: color(brand, primary);
-			border-radius: $progress-radius;	
-		}
-	
-		&.progress-alt {
-			color: color(brand, secondary);
-			&::-webkit-progress-value {
-				background: color(brand, secondary);		
-			}		
-			&::-moz-progress-bar {
-				background: color(brand, secondary);		
-			}
-	
 		}
 	
 	} // progress
-
+	
+	// Sub-Components
 	//-------------------------------------------------------------
-	// Component
-	//-------------------------------------------------------------
-
-	.progress-bar {
-		@extend %progress-bar;
-		width: 100%;
-		height: $progress-height;
-		overflow: hidden;
-		.progress {
-			background: color(brand, primary);
-			height: 100%;
+	
+	@include sub-component(group) {
+		@include overwrite(heading) {
+			margin-bottom: 0.5em;
 		}
 	}
 	

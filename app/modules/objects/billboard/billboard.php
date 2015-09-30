@@ -1,5 +1,5 @@
 <!-- Billboard -->
-<?php if ($type == 'fullscreen') { ?>
+<?php if ($for == 'homepage') { ?>
 <section class="billboard-full-screen" data-stellar-background-ratio="0.5">
 	<div class="billboard_wrapper container">
 		<header class="heading_group">

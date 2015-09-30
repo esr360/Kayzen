@@ -20,8 +20,7 @@
 		overlay-opacity : 0.6,
 		color           : color(greyscale, white),
 		text-align      : center,
-		min-height      : 500px,
-		wrapper-width   : breakpoint(break-2)
+		min-height      : 500px
 	), $custom) !global;
 	
 	//-------------------------------------------------------------
@@ -166,7 +165,6 @@
 				@include overwrite(app-header, $is: absolute, $special: general-sibling) {
 					@include overwrite($is: full-screen, $special: adjacent-sibling) {
 						height: calc(100vh - #{option($top-bar, height)});
-						content: "dopy"
 					}
 				}
 			}
@@ -210,9 +208,6 @@
 						}
 					}
 				}
-			}
-			@media (min-width: breakpoint(break-3)) {
-				width: option($config, wrapper-width);
 			}
 		}
 	

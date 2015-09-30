@@ -43,11 +43,6 @@
 			font-style: normal;
 			color: color(brand, primary);
 		}
-		
-		@include modifier(brand-1-light) {
-			font-style: normal;
-			color: lighten(color(brand, primary), 10%);
-		}
 	
 		@include modifier(uppercase) {
 			text-transform: uppercase;

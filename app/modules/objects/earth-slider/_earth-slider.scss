@@ -1,0 +1,82 @@
+//=================================================================
+// Earth Slider
+//=================================================================
+
+@mixin earth-slider($custom: ()) {
+
+	//-------------------------------------------------------------
+	// Config
+	//-------------------------------------------------------------
+
+	$earth-slider: config((
+		name            : earth-slider
+	), $custom);
+	
+	//-------------------------------------------------------------
+	// Component
+	//-------------------------------------------------------------
+	
+	@include component {
+		position: relative;
+		overflow: hidden;
+	}
+	
+	.earth-wrapper {
+		height: 185px;
+		margin: auto;
+		width: 55%;
+	}
+	
+	.earth {
+		position: relative;
+	}
+	
+	.globe {
+		@extend %horizontal-center;
+		//animation-name: spin;
+		animation-duration: 35s;
+		animation-iteration-count: infinite;
+		animation-timing-function: linear;
+		width: 92%;
+	}
+	
+	.pin-wrapper {
+		@include vertical-center(absolute);
+		&.active {
+			.pin {
+				background: color(brand, primary);
+			}
+		}
+		@media (min-width: breakpoint(break-3)) { 
+			transform-origin: center;
+			width: 100%;
+		}
+	}
+
+	.pin {
+		width: 55px;
+		height: 55px;
+		border-radius: 50% 50% 50% 0;
+		background: color(greyscale, grey-4);
+		cursor: pointer;
+		transition: 0.4s;
+		position: relative;
+		&:after {
+			content: '';
+			width: 50%;
+			height: 50%;
+			background: rgba(0,0,0,0.5);
+			position: absolute;
+			margin: auto;
+			left: 0;
+			right: 0;
+			top: 0;
+			bottom: 0;
+			border-radius: 50%;
+		}
+		@media (min-width: breakpoint(break-3)) { 
+			transform: translateX(-30%) rotate(-135deg);
+		}
+	}
+	
+}

@@ -1,7 +1,7 @@
 <!-- Promo Section -->
 <?php if ($style == 'light') { ?>
 <section 
-	class="section-primary" 
+	class="section-primary"
 	data-stellar-background-ratio="0.5"
 	style="background-image: url('<?php echo appDir ?>/images/billboard-2.jpg')"
 >
