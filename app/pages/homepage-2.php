@@ -261,7 +261,7 @@
 							</div>
 							<img src="<?php echo appDir ?>/images/team/team-1.jpg">
 						</div>
-						<header class="widget_header heading_group">
+						<header class="heading_group">
 							<h3 class="heading-heavy-size-4">Alexander	Welch</h3>
 							<h4 class="heading-light-uppercase-brand-1">Chief Executive Officer</h4>
 						</header>
@@ -297,7 +297,7 @@
 							</div>
 							<img src="<?php echo appDir ?>/images/team/team-2.jpg">
 						</div>
-						<header class="widget_header heading_group">
+						<header class="heading_group">
 							<h3 class="heading-heavy-size-4">Naomi Olson</h3>
 							<h4 class="heading-light-uppercase-brand-1">Graphic Designer</h4>
 						</header>
@@ -330,7 +330,7 @@
 							</div>
 							<img src="<?php echo appDir ?>/images/team/team-3.jpg">
 						</div>
-						<header class="widget_header heading_group">
+						<header class="heading_group">
 							<h3 class="heading-heavy-size-4">Brendan Mack</h3>
 							<h4 class="heading-light-uppercase-brand-1">Web Developer</h4>
 						</header>
@@ -390,7 +390,410 @@
 				</div>
 			</div>
 		</section>
+		
+		<section class="section-primary">
+			
+			<header class="heading_group-large text-center">
+				<div class="container-small">
+					<h2 class="heading-light-size-7 font-2">Our <span class="heading-brand-1">Services</span> Are <span class="heading-heavy font-2">World Class</span> <i class="fa fa-trophy fa-brand"></i></h2>
+					<div class="heading_icon">
+						<i class="fa fa-magic"></i>
+					</div>
+					<p class="lede">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In nec velit vel turpis imperdiet tempus. Etiam venenatis maximus luctus. Curabitur eget lorem tortor.</p>
+				</div>
+			</header>
+			
+			<div class="container">
 
+				<!-- More Features Row -->
+				<div class="widget_group-grid row-flow">
+					
+					<!-- Feature 1 -->
+					<div class="widget span-4">                     
+						<div class="widget_icon-inline icon-plain-size-7">
+							<i class="fa fa-cogs"></i>
+						</div>  
+						<header class="widget_header-inline heading_group">
+							<h3 class="heading-heavy-uppercase">Fast Performance</h3>
+							<h4 class="heading-light-uppercase-brand-1-size-2">Donec finibus fringer</h4>
+						</header>     
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc et erat posuere consectetur adipiscing suscipit.</p>
+					</div>
+					
+					<!-- Feature 2 -->
+					<div class="widget span-4">                     
+						<div class="widget_icon-inline icon-plain-size-7">
+							<i class="fa fa-star"></i>
+						</div>  
+						<header class="widget_header-inline heading_group">
+							<h3 class="heading-heavy-uppercase">Fast Performance</h3>
+							<h4 class="heading-light-uppercase-brand-1-size-2">Donec finibus fringer</h4>
+						</header>     
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc et erat posuere consectetur adipiscing suscipit.</p>
+					</div>
+					
+					<!-- Feature 3 -->
+					<div class="widget span-4">                     
+						<div class="widget_icon-inline icon-plain-size-7">
+							<i class="fa fa-eye"></i>
+						</div>  
+						<header class="widget_header-inline heading_group">
+							<h3 class="heading-heavy-uppercase">Fast Performance</h3>
+							<h4 class="heading-light-uppercase-brand-1-size-2">Donec finibus fringer</h4>
+						</header>     
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc et erat posuere consectetur adipiscing suscipit.</p>
+					</div>
+					
+					<!-- Feature 4 -->
+					<div class="widget span-4">                     
+						<div class="widget_icon-inline icon-plain-size-7">
+							<i class="fa fa-home"></i>
+						</div>  
+						<header class="widget_header-inline heading_group">
+							<h3 class="heading-heavy-uppercase">Fast Performance</h3>
+							<h4 class="heading-light-uppercase-brand-1-size-2">Donec finibus fringer</h4>
+						</header>     
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc et erat posuere consectetur adipiscing suscipit.</p>
+					</div>
+					
+					<!-- Feature 5 -->
+					<div class="widget span-4">                     
+						<div class="widget_icon-inline icon-plain-size-7">
+							<i class="fa fa-image"></i>
+						</div>  
+						<header class="widget_header-inline heading_group">
+							<h3 class="heading-heavy-uppercase">Fast Performance</h3>
+							<h4 class="heading-light-uppercase-brand-1-size-2">Donec finibus fringer</h4>
+						</header>     
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc et erat posuere consectetur adipiscing suscipit.</p>
+					</div>
+					
+					<!-- Feature 6 -->
+					<div class="widget span-4">                     
+						<div class="widget_icon-inline icon-plain-size-7">
+							<i class="fa fa-search"></i>
+						</div>  
+						<header class="widget_header-inline heading_group">
+							<h3 class="heading-heavy-uppercase">Fast Performance</h3>
+							<h4 class="heading-light-uppercase-brand-1-size-2">Donec finibus fringer</h4>
+						</header>     
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc et erat posuere consectetur adipiscing suscipit.</p>
+					</div>
+					
+					<!-- Feature 7 -->
+					<div class="widget span-4">                     
+						<div class="widget_icon-inline icon-plain-size-7">
+							<i class="fa fa-user"></i>
+						</div>  
+						<header class="widget_header-inline heading_group">
+							<h3 class="heading-heavy-uppercase">Fast Performance</h3>
+							<h4 class="heading-light-uppercase-brand-1-size-2">Donec finibus fringer</h4>
+						</header>     
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc et erat posuere consectetur adipiscing suscipit.</p>
+					</div>
+					
+					<!-- Feature 8 -->
+					<div class="widget span-4">                     
+						<div class="widget_icon-inline icon-plain-size-7">
+							<i class="fa fa-twitter"></i>
+						</div>  
+						<header class="widget_header-inline heading_group">
+							<h3 class="heading-heavy-uppercase">Fast Performance</h3>
+							<h4 class="heading-light-uppercase-brand-1-size-2">Donec finibus fringer</h4>
+						</header>     
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc et erat posuere consectetur adipiscing suscipit.</p>
+					</div>
+					
+					<!-- Feature 9 -->
+					<div class="widget span-4">                     
+						<div class="widget_icon-inline icon-plain-size-7">
+							<i class="fa fa-github-alt"></i>
+						</div>  
+						<header class="widget_header-inline heading_group">
+							<h3 class="heading-heavy-uppercase">Fast Performance</h3>
+							<h4 class="heading-light-uppercase-brand-1-size-2">Donec finibus fringer</h4>
+						</header>     
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc et erat posuere consectetur adipiscing suscipit.</p>
+					</div>
+					
+				</div><!-- Row -->
+				
+			</div>
+			
+		</section>
+		
+		<?php include ('../sections/statistics.php'); ?>
+		
+		<?php include ('../sections/key-features-2.php'); ?>
+		
+		<section 
+			class="section-secondary-overlay-alt"
+			style="background-image: url('<?php echo appDir ?>/images/billboard-1.jpg')"
+		>
+		
+			<div class="container">
+				<div class="row">
+					
+					<div class="span-4 va-middle">
+						<header class="heading_group">
+							<h4 class="heading-uppercase-light-brand-1-size-5">Our Clients</h4>
+							<h2 class="heading-heavy-size-6 font-2"><span>Who We Work With</span></h2>
+						</header>
+					</div>
+					<div class="span-8 va-middle">
+						<div id="clients-slider" class="carousel-thumbnails owl-carousel">
+							<a class="well-dark" href="#">
+								<img src="<?php echo appDir ?>/images/envato/envato-1.png">
+							</a>
+							<a class="well-dark" href="#">
+								<img src="<?php echo appDir ?>/images/envato/envato-2.png">
+							</a>
+							<a class="well-dark" href="#">
+								<img src="<?php echo appDir ?>/images/envato/envato-3.png">
+							</a>
+							<a class="well-dark" href="#">
+								<img src="<?php echo appDir ?>/images/envato/envato-4.png">
+							</a>
+							<a class="well-dark" href="#">
+								<img src="<?php echo appDir ?>/images/envato/envato-5.png">
+							</a>
+							<a class="well-dark" href="#">
+								<img src="<?php echo appDir ?>/images/envato/envato-6.png">
+							</a>
+							<a class="well-dark" href="#">
+								<img src="<?php echo appDir ?>/images/envato/envato-7.png">
+							</a>
+							<a class="well-dark" href="#">
+								<img src="<?php echo appDir ?>/images/envato/envato-8.png">
+							</a>
+						</div>
+						<script>
+							$(document).ready(function() {
+								
+								var clientsCarousel = $("#clients-slider");
+								
+								clientsCarousel.owlCarousel({
+									items: 3,
+									center: true,
+									loop: true,
+									margin: 30
+								})
+								
+							});
+						</script>
+					</div>
+					
+				</div>
+			</div>
+		
+		</section>
+		
+		<section class="section-primary">
+			
+			<header class="heading_group-large text-center">
+				<div class="container-small">
+					<h4 class="heading-uppercase-light-brand-1-spaced-size-4"><span>Our Pricing</span></h4>
+					<h2 class="heading-uppercase-heavy-size-7 font-2"><span>Our Best Packages</span></h2>
+					<div class="heading_icon">
+						<i class="fa fa-magic"></i>
+					</div>
+					<p class="lede">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In nec velit vel turpis imperdiet tempus. Etiam venenatis maximus luctus. Curabitur eget lorem tortor.</p>
+				</div>
+			</header>
+			
+			<div class="container">
+				<div class="row">
+					
+					<div class="span-4 price-chart_wrapper">
+						<div class="price-chart-free">
+							<header class="heading_group">
+								<h4 class="heading-heavy-size-6-flush">Free</h4>
+								<h5 class="heading-light-size-3">Our free package</h5>
+							</header>
+							<div class="price-chart_price">
+								<small>$</small><span>0</span>/mo
+							</div>
+							<ul>
+								<li><span><i class="fa fa-database"></i> Diskspace</span><strong>1GB</strong></li>
+								<li><span><i class="fa fa-group"></i> Bandwidth</span><strong>10GB</strong></li>
+								<li><span><i class="fa fa-desktop"></i> Sub-domains</span><strong>1</strong></li>
+								<li><span><i class="fa fa-envelope"></i> Emails</span><strong>5</strong></li>
+								<li><span><i class="fa fa-support"></i> Support</span><strong>None</strong></li>
+							</ul>
+							<div class="buy-now">
+								<a href="#" class="button-block-size-3"><i class="fa fa-shopping-cart"></i> Get For Free</a>
+							</div>
+						</div>
+					</div>
+					
+					<div class="span-4 price-chart_wrapper">                    
+						<div class="price-chart">
+							<div class="corner-ribbon-large-green" data-ribbon="Great Valule"></div>
+							<header class="heading_group">
+								<h4 class="heading-heavy-size-6-flush">Basic</h4>
+								<h5 class="heading-light-size-3">Our basic package</h5>
+							</header>
+							<div class="price-chart_price">
+								<small>$</small><span>5</span>/mo
+							</div>
+							<ul>
+								<li><span><i class="fa fa-database"></i> Diskspace</span><strong>5GB</strong></li>
+								<li><span><i class="fa fa-group"></i> Bandwidth</span><strong>50GB</strong></li>
+								<li><span><i class="fa fa-desktop"></i> Sub-domains</span><strong>10</strong></li>
+								<li><span><i class="fa fa-envelope"></i> Emails</span><strong>50</strong></li>
+								<li><span><i class="fa fa-support"></i> Support</span><strong>Yes</strong></li>
+							</ul>
+							<div class="buy-now">
+								<a href="#" class="button-primary-block-size-3"><i class="fa fa-shopping-cart"></i> Buy Now</a>
+							</div>
+						</div>
+					</div>
+					
+					<div class="span-4 price-chart_wrapper">
+						<div class="price-chart">
+							<header class="heading_group">
+								<h4 class="heading-heavy-size-6-flush">Pro <i class="fa fa-trophy"></i></h4>
+								<h5 class="heading-light-size-3">Our pro package</h5>
+							</header>
+							<div class="price-chart_price">
+								<small>$</small><span>15</span>/mo
+							</div>
+							<ul>
+								<li><span><i class="fa fa-database"></i> Diskspace</span><strong>500GB</strong></li>
+								<li><span><i class="fa fa-group"></i> Bandwidth</span><strong>Unlimited</strong></li>
+								<li><span><i class="fa fa-desktop"></i> Sub-domains</span><strong>500</strong></li>
+								<li><span><i class="fa fa-envelope"></i> Emails</span><strong>Unlimited</strong></li>
+								<li><span><i class="fa fa-support"></i> Support</span><strong>Yes</strong></li>
+							</ul>
+							<div class="buy-now">
+								<a href="#" class="button-primary-block-size-3"><i class="fa fa-shopping-cart"></i> Buy Now</a>
+							</div>
+						</div>
+					</div>
+					
+				</div><!-- row -->
+			</div><!-- container -->
+		
+		</section>
+		
+		<section class="section-secondary">
+			<div class="container-small">
+				<blockquote class="blockquote">
+					<div class="blockquote_content">
+						<h4 class="heading-light-size-6 font-2">We can take your awesome ideas and turn them into an <b class="heading-heavy">exciting reality</b>...</h4>
+					</div>
+				</blockquote>
+			</div>
+		</section>
+
+		<section class="section-primary">
+			
+			<header class="heading_group-large text-center">
+				<div class="container-small">
+					<h4 class="heading-uppercase-light-brand-1-spaced-size-4"><span>Our Portfolio</span></h4>
+					<h2 class="heading-uppercase-heavy-size-7 font-2"><span>Some Recent Work</span></h2>
+					<div class="heading_icon">
+						<i class="fa fa-magic"></i>
+					</div>
+					<p class="lede">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In nec velit vel turpis imperdiet tempus. Etiam venenatis maximus luctus. Curabitur eget lorem tortor.</p>
+				</div>
+			</header>
+			
+			<div class="container">
+				<div class="row-no-gutter-waffle">
+					
+					<div class="thumbnail span-4">
+						<div class="thumbnail_mask">
+							<div class="icon_group-small">
+								<a href="#" class="icon-border-circle-size-3">
+									<i class="fa fa-search"></i>
+								</a>
+								<a href="#" class="icon-border-circle-size-3">
+									<i class="fa fa-link"></i>
+								</a>
+							</div>
+						</div>
+						<img src="<?php echo appDir ?>/images/wallpapers/bg-1.jpg">
+					</div>
+					
+					<div class="thumbnail span-4">
+						<div class="thumbnail_mask">
+							<div class="icon_group-small">
+								<a href="#" class="icon-border-circle-size-3">
+									<i class="fa fa-search"></i>
+								</a>
+								<a href="#" class="icon-border-circle-size-3">
+									<i class="fa fa-link"></i>
+								</a>
+							</div>
+						</div>
+						<img src="<?php echo appDir ?>/images/wallpapers/bg-2.jpg">
+					</div>
+					
+					<div class="thumbnail span-4">
+						<div class="thumbnail_mask">
+							<div class="icon_group-small">
+								<a href="#" class="icon-border-circle-size-3">
+									<i class="fa fa-search"></i>
+								</a>
+								<a href="#" class="icon-border-circle-size-3">
+									<i class="fa fa-link"></i>
+								</a>
+							</div>
+						</div>
+						<img src="<?php echo appDir ?>/images/wallpapers/bg-3.jpg">
+					</div>
+					
+				</div>
+				<div class="row-no-gutter-waffle">
+					
+					<div class="thumbnail span-4">
+						<div class="thumbnail_mask">
+							<div class="icon_group-small">
+								<a href="#" class="icon-border-circle-size-3">
+									<i class="fa fa-search"></i>
+								</a>
+								<a href="#" class="icon-border-circle-size-3">
+									<i class="fa fa-link"></i>
+								</a>
+							</div>
+						</div>
+						<img src="<?php echo appDir ?>/images/wallpapers/bg-4.jpg">
+					</div>
+					
+					<div class="thumbnail span-4">
+						<div class="thumbnail_mask">
+							<div class="icon_group-small">
+								<a href="#" class="icon-border-circle-size-3">
+									<i class="fa fa-search"></i>
+								</a>
+								<a href="#" class="icon-border-circle-size-3">
+									<i class="fa fa-link"></i>
+								</a>
+							</div>
+						</div>
+						<img src="<?php echo appDir ?>/images/wallpapers/bg-5.jpg">
+					</div>
+					
+					<div class="thumbnail span-4">
+						<div class="thumbnail_mask">
+							<div class="icon_group-small">
+								<a href="#" class="icon-border-circle-size-3">
+									<i class="fa fa-search"></i>
+								</a>
+								<a href="#" class="icon-border-circle-size-3">
+									<i class="fa fa-link"></i>
+								</a>
+							</div>
+						</div>
+						<img src="<?php echo appDir ?>/images/wallpapers/bg-6.jpg">
+					</div>
+					
+				</div>
+			</div>
+			
+		</section>
+		
 		<?php include ('../modules/objects/footer/footer.php'); ?>
 
     </div><!-- Site Canvas -->

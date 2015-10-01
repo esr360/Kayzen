@@ -129,6 +129,10 @@
 				color: inherit;
 			}
 		}
+		
+		@include modifier(flush) {
+			margin: 0 !important;
+		}
 
 	// Styles
 	//-------------------------------------------------------------

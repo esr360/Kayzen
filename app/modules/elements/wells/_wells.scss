@@ -16,17 +16,26 @@
 	// Component
 	//-------------------------------------------------------------
 	
-	@include component(well) {
+	@include component {
 		
 	// Core Styles
 	//-------------------------------------------------------------
 	
-	    background-color: lighten(color(greyscale, grey-1), 5%);
-	    border: 1px solid rgba(color(greyscale, black), 0.15);
-	    border-radius: 0.6em;
-	    padding: 1rem;
+	    background: lighten(color(greyscale, grey-1), 5%);
+	    border: 1px solid rgba(black, 0.15);
+	    border-radius: 0.4em;
+	    padding: 1em;
 	    position: relative;
+		transition: base(transition);
 		
-	} // component(well)
+	// Modifiers
+	//-------------------------------------------------------------
+		
+		@include modifier(dark) {
+			background: rgba(black, 0.4);
+			border: none;
+		}
+		
+	} // component
 		
 } // @mixin wells

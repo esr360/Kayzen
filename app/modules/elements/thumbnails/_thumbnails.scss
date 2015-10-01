@@ -61,13 +61,14 @@
 				transform: scale(1.15);		   
 				transition: base(transition);
 			}
-			@include overwrite(icon) {
+			@include overwrite-sub(group, $parent: icon) {
 				@extend %horizontal-center;
 				position: absolute;
 				top: 42.5%;
 				transform: translateY(-50%);
 				display: inline-block;
 				z-index: 6;
+				transition: base(transition);
 			}
 			@include context(parent-hovered) {
 				opacity: 1;
@@ -75,7 +76,7 @@
 					opacity: 1;
 					transform: scale(1);
 				}
-				@include overwrite(icon) {
+				@include overwrite-sub(group, $parent: icon) {
 					top: 50%;
 				}
 			}

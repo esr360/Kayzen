@@ -1920,8 +1920,6 @@ $(document).ready(function() {
 // 2 columns
 //-----------------------------------------------------------------
 
-/*
-
 var twoCols = $('.2-cols');
 
 twoCols.owlCarousel({
@@ -1940,7 +1938,6 @@ twoCols.owlCarousel({
     }
 });
 
-*/
 
 }); // End document.ready
 ;/*

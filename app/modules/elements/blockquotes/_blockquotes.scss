@@ -23,25 +23,23 @@
 			
 		margin: 0;
 		border: 0;
+		padding: 0 3em;
 		font-family: typography(typefaces, secondary);
 		
 		@include modifier(testimonial) {
 			
+			padding: 0;
+			
 			@include overwrite-sub(content) {
 				&:before,
 				&:after {
-					position: absolute;
-					font-family: FontAwesome;
 					font-size: 1.5rem;
-					color: rgba(0,0,0,0.3);
 				}
 				&:before {
-					content: "\f10d";
 					top: 0.25em;
 					left: 0.25em;
 				}
 				&:after {
-					content: "\f10e";
 					bottom: 0.25em;
 					right: 0.25em;
 				}
@@ -76,6 +74,26 @@
 		@include sub-components((avatar, cite)) {
 			display: inline-block;
 			vertical-align: middle;
+		}
+		
+		@include sub-component(content) {
+			&:before,
+			&:after {
+				position: absolute;
+				font-family: FontAwesome;
+				font-size: 1.75rem;
+				color: rgba(0,0,0,0.3);
+			}
+			&:before {
+				content: "\f10d";
+				top: -0.2em;
+				left: 0;
+			}
+			&:after {
+				content: "\f10e";
+				bottom: -0.2em;
+				right: 0;
+			}
 		}
 		
 		@include sub-component(avatar) {

@@ -123,6 +123,13 @@ http://github.com/esr360/Kayzen-GS/
 			}
 		}
 		
+		// Waffle Row
+		@include modifier(waffle) {
+			> #{$col-selector} {
+				margin-bottom: 0;
+			}
+		}
+		
 		// Flow Columns Row
 		@if option($grid, settings, flow-columns) {
 			@include modifier(flow) {
