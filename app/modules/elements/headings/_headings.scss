@@ -252,6 +252,30 @@
 			}
 		
 		} // sub-component(icon)
+		
+		//---------------------------------------------------------
+		// Heading Date
+		//---------------------------------------------------------
+			
+			@include sub-component(date) {
+				float: right;
+				text-align: center;
+				width: 45px;
+				div {
+					&:first-child {
+						background: color(brand, primary);
+						color: white;
+						font-size: font-size(size-2);
+					}
+					&:last-child {
+						background: color(greyscale, white);
+						font-weight: lighter;
+						color: color(greyscale, grey-4);
+						border: 1px solid rgba(black, 0.1);
+						line-height: 2;
+					}
+				}
+			}
 
 	} // component(heading)
 	

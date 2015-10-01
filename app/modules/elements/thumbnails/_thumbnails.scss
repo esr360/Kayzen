@@ -17,6 +17,9 @@
 	//-------------------------------------------------------------
 	
 	@include component {
+
+	// Core Styles
+	//-------------------------------------------------------------
 	
 		position: relative;
 		overflow: hidden;
@@ -28,16 +31,44 @@
 			min-width: 100%;
 			display: block;
 		}
-		
+
+	// Modifiers
+	//-------------------------------------------------------------
+	
 		@include modifier(styled) {
 			border: 5px solid white;
 			box-shadow: 0px 0px 1px rgba(0,0,0,0.2);
 			display: block;
 		}
 		
+		@include modifier(profile) { 
+			height: 50px;
+			width: 50px;
+			border: 4px solid white;
+			border-radius: 50%;
+    		box-shadow: 0 0 0 7px rgba(black, 0.2);
+			> img {
+				max-width: none;
+				width: auto;
+				margin-left: -25%;
+				height: 101%;
+			}
+		}
+		
 		@include overwrite(icon) {
 			color: color(greyscale, white);
 		}
+	
+		@include modifier(zoom) {
+			&:hover {
+				img {
+					transform: scale(1.25);
+				}
+			}
+		}
+
+	// Sub-Components
+	//-------------------------------------------------------------
 		
 		@include sub-component(mask) {
 			background: rgba(black, 0.6);
@@ -81,11 +112,22 @@
 				}
 			}
 		}
-	
-		&:hover {
-			img {
-				transform: scale(1.25);
+		
+		// Nested thumbnail-profile
+		
+		&:hover {		
+			@include overwrite($is: profile, $special: adjacent-sibling) {
+				left: -3em;
+				opacity: 0;
 			}
+		}
+		
+		@include overwrite($is: profile, $special: adjacent-sibling) {
+			position: absolute;
+			top: 8%;
+			left: -0.5em;
+			opacity: 1;
+			transition: base(transition);
 		}
 		
 	}

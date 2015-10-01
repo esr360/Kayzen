@@ -1466,6 +1466,10 @@ pre:last-child, hr:last-child, .accordion:last-child, [class*="accordion-"]:last
   clear: both;
 }
 
+.relative {
+  position: relative;
+}
+
 .text-left {
   text-align: left !important;
 }
@@ -2652,6 +2656,23 @@ button::-moz-focus-inner {
 .heading_icon:after {
   right: -2em;
 }
+.heading_date, [class*="heading_date-"] {
+  float: right;
+  text-align: center;
+  width: 45px;
+}
+.heading_date div:first-child, [class*="heading_date-"] div:first-child {
+  background: #9B58B5;
+  color: white;
+  font-size: 0.83em;
+}
+.heading_date div:last-child, [class*="heading_date-"] div:last-child {
+  background: #ffffff;
+  font-weight: lighter;
+  color: #6f777b;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  line-height: 2;
+}
 
 .icon, [class*="icon-"] {
   background: #6f777b;
@@ -3324,8 +3345,26 @@ progress::-moz-progress-bar {
   box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);
   display: block;
 }
+[class*="thumbnail-"][class*="-profile"] {
+  height: 50px;
+  width: 50px;
+  border: 4px solid white;
+  border-radius: 50%;
+  box-shadow: 0 0 0 7px rgba(0, 0, 0, 0.2);
+}
+[class*="thumbnail-"][class*="-profile"] > img {
+  max-width: none;
+  width: auto;
+  margin-left: -25%;
+  height: 101%;
+}
 .thumbnail .icon, .thumbnail [class*="icon-"], [class*="thumbnail-"] .icon, [class*="thumbnail-"] [class*="icon-"] {
   color: #ffffff;
+}
+[class*="thumbnail-"][class*="-zoom"]:hover img {
+  -webkit-transform: scale(1.25);
+      -ms-transform: scale(1.25);
+          transform: scale(1.25);
 }
 .thumbnail_mask, [class*="thumbnail_mask-"] {
   background: rgba(0, 0, 0, 0.6);
@@ -3377,10 +3416,17 @@ progress::-moz-progress-bar {
 .thumbnail:hover .thumbnail_mask .icon_group, .thumbnail:hover .thumbnail_mask [class*="icon_group-"], .thumbnail:hover [class*="thumbnail_mask-"] .icon_group, .thumbnail:hover [class*="thumbnail_mask-"] [class*="icon_group-"], [class*="thumbnail-"]:hover .thumbnail_mask .icon_group, [class*="thumbnail-"]:hover .thumbnail_mask [class*="icon_group-"], [class*="thumbnail-"]:hover [class*="thumbnail_mask-"] .icon_group, [class*="thumbnail-"]:hover [class*="thumbnail_mask-"] [class*="icon_group-"] {
   top: 50%;
 }
-.thumbnail:hover img, [class*="thumbnail-"]:hover img {
-  -webkit-transform: scale(1.25);
-      -ms-transform: scale(1.25);
-          transform: scale(1.25);
+.thumbnail:hover + [class*="thumbnail-"][class*="-profile"], [class*="thumbnail-"]:hover + [class*="thumbnail-"][class*="-profile"] {
+  left: -3em;
+  opacity: 0;
+}
+.thumbnail + [class*="thumbnail-"][class*="-profile"], [class*="thumbnail-"] + [class*="thumbnail-"][class*="-profile"] {
+  position: absolute;
+  top: 8%;
+  left: -0.5em;
+  opacity: 1;
+  -webkit-transition: 0.4s;
+          transition: 0.4s;
 }
 
 .tooltip, [class*="tooltip-"] {
