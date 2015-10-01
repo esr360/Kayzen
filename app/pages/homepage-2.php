@@ -794,6 +794,195 @@
 			
 		</section>
 		
+		<section 
+			class="section-secondary-overlay-alt"
+			style="background-image: url('<?php echo appDir ?>/images/polygon-bg-blue.jpg')"
+		>
+		
+			<div class="container-small text-center owl-carousel" id="testimonials-carousel">
+				<blockquote class="blockquote">
+					<a class="blockquote_avatar-large" href="#">
+						<img src="/app/images/team/team-2.jpg" alt="">
+					</a>
+					<div class="blockquote_content">
+						<p class="lede">Suspendisse tempus sodales neque, eget eleifend <b>turpis tristique</b> eu. Nullam a nisl maximus, <b>ultrices est</b> ut blandit nislr, elit in lobortis mattis.</p>
+					</div>
+					<div class="blockquote_cite"> 
+						<h4 class="heading-highlight"><b>Brendon Mack - Theme Forest</b></h4>
+					</div>
+				</blockquote>
+				<blockquote class="blockquote">
+					<a class="blockquote_avatar-large" href="#">
+						<img src="/app/images/team/team-2.jpg" alt="">
+					</a>
+					<div class="blockquote_content">
+						<p class="lede">Suspendisse tempus sodales neque, eget eleifend <b>turpis tristique</b> eu. Nullam a nisl maximus, <b>ultrices est</b> ut blandit nislr, elit in lobortis mattis.</p>
+					</div>
+					<div class="blockquote_cite"> 
+						<h4 class="heading-highlight"><b>Brendon Mack - Theme Forest</b></h4>
+					</div>
+				</blockquote>
+			</div>
+			<nav class="slide-nav">
+				<button class="slide-prev icon-border-size-4-grey-3"><i class="fa fa-angle-left"></i></button>
+				<button class="slide-next icon-border-size-4-grey-3"><i class="fa fa-angle-right"></i></button>
+			</nav>
+			<script>
+				$(document).ready(function() {
+					
+					var testimonialsCarousel = $("#testimonials-carousel");
+					
+					testimonialsCarousel.owlCarousel({
+						items: 1,
+						loop: true,
+						margin: 30,
+						dots: false
+					})
+			
+					testimonialsCarousel.find("+ .slide-nav .slide-next").click(function() {
+						testimonialsCarousel.trigger('next.owl.carousel');
+					});
+					testimonialsCarousel.find("+ .slide-nav .slide-prev").click(function() {
+						testimonialsCarousel.trigger('prev.owl.carousel');
+					});
+					
+				});
+			</script>
+			
+		</section>
+		
+		<section class="section-primary">
+			
+			<header class="heading_group-large text-center">
+				<div class="container-small">
+					<h4 class="heading-uppercase-light-brand-1-spaced-size-4"><span>Our Blog</span></h4>
+					<h2 class="heading-uppercase-heavy-size-7 font-2"><span>Keep Up To Date</span></h2>
+					<div class="heading_icon">
+						<i class="fa fa-magic"></i>
+					</div>
+					<p class="lede">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In nec velit vel turpis imperdiet tempus. Etiam venenatis maximus luctus. Curabitur eget lorem tortor.</p>
+				</div>
+			</header>
+			
+			<div class="container">		
+				<div class="row">	
+					
+					<div class="span-4">	
+						<div class="thumbnail">
+							<div class="thumbnail_mask">
+								<div class="icon_group-small">
+									<a href="#" class="icon-border-circle-size-3">
+										<i class="fa fa-search"></i>
+									</a>
+									<a href="#" class="icon-border-circle-size-3">
+										<i class="fa fa-link"></i>
+									</a>
+								</div>
+							</div>
+							<img src="<?php echo appDir ?>/images/wallpapers/bg-7.jpg">
+						</div>
+						<header class="heading_group">
+							<h3 class="heading-heavy-size-5">Kayzen is Released</h3>
+							<h4 class="heading-light-size-3">Posted by <span class="heading-brand-1">Naomi Olson</span></h4>
+						</header>
+						<p>Cum socis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec finibus fringilla purus. Integer libero justo, mattis et magna eget...</p>
+						<div class="row">
+							<div class="span-6 va-middle">
+								<a href="#" class="button-oval-primary">Read More</a>
+							</div>
+							<div class="span-6 va-middle text-right">
+								<small>Posted in <a href="blog.html">Web Design</a></small>
+							</div>
+						</div>
+					</div>
+					
+					<div class="span-4">	
+						<div class="thumbnail">
+							<div class="thumbnail_mask">
+								<div class="icon_group-small">
+									<a href="#" class="icon-border-circle-size-3">
+										<i class="fa fa-search"></i>
+									</a>
+									<a href="#" class="icon-border-circle-size-3">
+										<i class="fa fa-link"></i>
+									</a>
+								</div>
+							</div>
+							<img src="<?php echo appDir ?>/images/wallpapers/bg-5.jpg">
+						</div>
+						<header class="heading_group">
+							<h3 class="heading-heavy-size-5">Kayzen is Released</h3>
+							<h4 class="heading-light-size-3">Posted by <span class="heading-brand-1">Naomi Olson</span></h4>
+						</header>
+						<p>Cum socis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec finibus fringilla purus. Integer libero justo, mattis et magna eget...</p>
+						<div class="row">
+							<div class="span-6 va-middle">
+								<a href="#" class="button-oval-primary">Read More</a>
+							</div>
+							<div class="span-6 va-middle text-right">
+								<small>Posted in <a href="blog.html">Web Design</a></small>
+							</div>
+						</div>
+					</div>
+					
+					<div class="span-4">	
+						<div class="thumbnail">
+							<div class="thumbnail_mask">
+								<div class="icon_group-small">
+									<a href="#" class="icon-border-circle-size-3">
+										<i class="fa fa-search"></i>
+									</a>
+									<a href="#" class="icon-border-circle-size-3">
+										<i class="fa fa-link"></i>
+									</a>
+								</div>
+							</div>
+							<img src="<?php echo appDir ?>/images/wallpapers/bg-3.jpg">
+						</div>
+						<header class="heading_group">
+							<h3 class="heading-heavy-size-5">Kayzen is Released</h3>
+							<h4 class="heading-light-size-3">Posted by <span class="heading-brand-1">Naomi Olson</span></h4>
+						</header>
+						<p>Cum socis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec finibus fringilla purus. Integer libero justo, mattis et magna eget...</p>
+						<div class="row">
+							<div class="span-6 va-middle">
+								<a href="#" class="button-oval-primary">Read More</a>
+							</div>
+							<div class="span-6 va-middle text-right">
+								<small>Posted in <a href="blog.html">Web Design</a></small>
+							</div>
+						</div>
+					</div>
+					
+				</div>
+			</div>
+			
+		</section>
+		
+		<section class="section-secondary promo-banner">
+			<div class="container">
+				<div class="row">
+					<div class="span-7 va-middle">
+						<header class="heading_group">
+							<h4 class="heading-size-5">
+								Start your <b class="font-2">new project</b> with a <em>fresh</em> approach...
+							</h4>
+							<p class="heading">leave your visitors with an experience to remember and <a href="#" target="blank">Purchase Nexus</a> now.</p>
+						</header>
+					</div>
+					<div class="span-5 va-middle text-right button_group">
+						<a href="#" target="blank" class="button-white-border-size-3-oval">Purchase Theme</a>
+						<span class="text-sep">or</span>
+						<a href="#about">Learn More</a>
+					</div>
+				</div>
+			</div>
+		</section>
+		
+		<?php include ('../sections/contact-us.php'); ?>
+		
+		<?php include ('../modules/objects/google-map/google-map.php'); ?>
+		
 		<?php include ('../modules/objects/footer/footer.php'); ?>
 
     </div><!-- Site Canvas -->

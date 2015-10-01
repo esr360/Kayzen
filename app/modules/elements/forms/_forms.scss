@@ -59,9 +59,11 @@
 					}
 				}
 			}
-			textarea {
-				~ label {
-					top: 1.4em;
+			@include overwrite-sub(group) {
+				textarea {
+					~ label {
+						top: 1.4em;
+					}
 				}
 			}
 			@include overwrite-sub(icon) {

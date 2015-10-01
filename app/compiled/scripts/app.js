@@ -5627,6 +5627,7 @@ $('body').on('DOMNodeInserted', '#footer-twitter-feed .tweet:nth-child(' + tweet
         
         tweetCarousel.owlCarousel({
             items: 1,
+            dots: false,
             loop: true,
             margin: 20
         });
@@ -5653,6 +5654,7 @@ $(document).ready(function() {
     
     footerTestimonials.owlCarousel({
         items: 1,
+        dots: false,
         loop: true,
         margin: 20
     });
