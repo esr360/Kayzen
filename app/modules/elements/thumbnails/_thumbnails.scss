@@ -115,18 +115,11 @@
 		
 		// Nested thumbnail-profile
 		
-		&:hover {		
-			@include overwrite($is: profile, $special: adjacent-sibling) {
-				left: -3em;
-				opacity: 0;
-			}
-		}
-		
 		@include overwrite($is: profile, $special: adjacent-sibling) {
 			position: absolute;
+			z-index: 3;
 			top: 8%;
 			left: -0.5em;
-			opacity: 1;
 			transition: base(transition);
 		}
 		

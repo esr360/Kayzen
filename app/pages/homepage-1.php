@@ -14,9 +14,15 @@
     <!-- Site Canvas -->
     <div id="site-content">
 		
-		<?php $for = 'index'; include ('../modules/objects/header/header.php'); ?>
+		<?php 
+			$for = 'index'; 
+			include ('../modules/objects/header/header.php'); 
+		?>
 
-		<?php $type = 'fullscreen'; include ('../modules/objects/billboard/billboard.php'); ?>
+		<?php 
+			$type = 'fullscreen'; 
+			include ('../modules/objects/billboard/billboard.php'); 
+		?>
 
 		<?php include ('../sections/key-features.php'); ?>
 

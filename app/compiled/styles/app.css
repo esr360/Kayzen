@@ -3416,15 +3416,11 @@ progress::-moz-progress-bar {
 .thumbnail:hover .thumbnail_mask .icon_group, .thumbnail:hover .thumbnail_mask [class*="icon_group-"], .thumbnail:hover [class*="thumbnail_mask-"] .icon_group, .thumbnail:hover [class*="thumbnail_mask-"] [class*="icon_group-"], [class*="thumbnail-"]:hover .thumbnail_mask .icon_group, [class*="thumbnail-"]:hover .thumbnail_mask [class*="icon_group-"], [class*="thumbnail-"]:hover [class*="thumbnail_mask-"] .icon_group, [class*="thumbnail-"]:hover [class*="thumbnail_mask-"] [class*="icon_group-"] {
   top: 50%;
 }
-.thumbnail:hover + [class*="thumbnail-"][class*="-profile"], [class*="thumbnail-"]:hover + [class*="thumbnail-"][class*="-profile"] {
-  left: -3em;
-  opacity: 0;
-}
 .thumbnail + [class*="thumbnail-"][class*="-profile"], [class*="thumbnail-"] + [class*="thumbnail-"][class*="-profile"] {
   position: absolute;
+  z-index: 3;
   top: 8%;
   left: -0.5em;
-  opacity: 1;
   -webkit-transition: 0.4s;
           transition: 0.4s;
 }
