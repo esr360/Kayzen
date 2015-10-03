@@ -42,6 +42,7 @@ Made by @esr360
 
 //@prepros-append modules/objects/header/header.js
 //@prepros-append modules/objects/dropdown/dropdown.js
+//@prepros-append modules/objects/billboard/billboard.js
 //@prepros-append modules/objects/earth-slider/earth-slider.js
 //@prepros-append modules/objects/flyout-nav/flyout-nav.js
 //@prepros-append modules/objects/footer/footer.js
@@ -5388,7 +5389,31 @@ if (setting('app-header', 'side')) {
 ;//=================================================================
 // Dropdown
 //=================================================================
-;
+;//=================================================================
+// Billboard
+//=================================================================
+
+//-----------------------------------------------------------------
+// Fade/Parralax Effect
+//-----------------------------------------------------------------
+	
+$(document).ready(function() {
+	
+	var heroTitle = $('#billboard-fade-parallax');
+
+	$(window).on('scroll', function() {
+
+		var st = $(this).scrollTop();
+
+		heroTitle.css({ 
+			'transform' : "translate3d(0px,"+(st/2.5)+"px, 0px)",
+			'opacity' : 1 - st/600
+		}); 
+
+	});
+	
+});
+
 /* Earth Slider
 ================================================================ */
 

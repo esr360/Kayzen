@@ -15,7 +15,6 @@
     <div id="site-content">
 		
 		<?php 
-			$for = 'index'; 
 			include ('../modules/objects/header/header.php'); 
 		?>
 

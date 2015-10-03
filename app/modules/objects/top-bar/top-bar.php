@@ -78,7 +78,7 @@
 </div>
 
 <!-- Top Bar -->
-<div class="top-bar">
+<div class="top-bar<?php echo $topBarModifiers ?>">
 	<div class="container">
 		<div class="row-block">
 			

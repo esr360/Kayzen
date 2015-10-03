@@ -1284,6 +1284,7 @@ body {
 }
 [class*="container-"][class*="-small"] {
   width: 940px;
+  max-width: 76.5%;
 }
 [class*="container-"][class*="-full"] {
   width: 100%;
@@ -1347,7 +1348,7 @@ pre:last-child, hr:last-child, .accordion:last-child, [class*="accordion-"]:last
   list-style: none;
 }
 
-[class*="section-"][class*="-overlay"]:before, [class*="section-"][class*="-overlay"][class*="-alt"]:before, [class*="billboard-"][class*="-overlay"]:before, .billboard:before, [class*="billboard-"]:before {
+[class*="section-"][class*="-overlay"]:before, [class*="section-"][class*="-overlay"][class*="-deep"]:before, [class*="section-"][class*="-overlay"][class*="-alt"]:before, [class*="billboard-"][class*="-overlay"]:before, .billboard:before, [class*="billboard-"]:before {
   position: absolute;
   height: 100%;
   width: 100%;
@@ -1468,6 +1469,10 @@ pre:last-child, hr:last-child, .accordion:last-child, [class*="accordion-"]:last
 
 .relative {
   position: relative;
+}
+
+.short {
+  width: 75%;
 }
 
 .text-left {
@@ -4494,7 +4499,7 @@ progress::-moz-progress-bar {
   height: 60px;
   width: 100%;
   top: 0;
-  z-index: 7;
+  z-index: 9;
   text-align: center;
   -webkit-transform: translateY(-100%);
       -ms-transform: translateY(-100%);
@@ -4741,13 +4746,16 @@ progress::-moz-progress-bar {
   padding: 6em 0;
 }
 [class*="section-"][class*="-secondary"] {
-  background: #9B58B5;
+  background-color: #9B58B5;
 }
 [class*="section-"][class*="-secondary"] > .container {
   position: relative;
 }
 [class*="section-"][class*="-secondary"], [class*="section-"][class*="-secondary"] a:not([class*="button-"]) {
   color: #ffffff;
+}
+[class*="section-"][class*="-secondary"] .owl-dot.active span {
+  background: #ffffff;
 }
 [class*="section-"][class*="-secondary"] .heading_group, [class*="section-"][class*="-secondary"] [class*="heading_group-"] {
   color: #ffffff;
@@ -4759,6 +4767,14 @@ progress::-moz-progress-bar {
   content: "";
   z-index: 0;
   background: rgba(155, 88, 181, 0.4);
+}
+[class*="section-"][class*="-overlay"][class*="-deep"] {
+  position: relative;
+}
+[class*="section-"][class*="-overlay"][class*="-deep"]:before {
+  content: "";
+  z-index: 0;
+  background: rgba(155, 88, 181, 0.75);
 }
 [class*="section-"][class*="-overlay"][class*="-alt"] {
   position: relative;

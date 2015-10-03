@@ -64,6 +64,7 @@
 	
 	    @include modifier(small) {
 	        width: option($grid, options, small-width);
+			max-width: (option($grid, options, max-width) * 0.85);
 	    }
 	
 	    @include modifier(full) {

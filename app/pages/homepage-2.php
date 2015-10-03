@@ -15,27 +15,34 @@
     <div id="site-content">
 		
 		<?php 
-			$for = 'homepage'; 
+			$topBarModifiers = '-fixed';
+			include ('../modules/objects/top-bar/top-bar.php'); 
+		?>
+
+		<?php 
+			$headerModifiers = '-bar-absolute-dark'; 
 			include ('../modules/objects/header/header.php'); 
 		?>
 
 		<section class="billboard-full-screen">
 			<div class="billboard_wrapper container text-left">
-				<header class="heading_group">
-					<h3 class="heading-uppercase-heavy-size-8 font-2">Welcome to Kayzen</h3>
-					<h2 class="heading-light-size-6"><span>A Unique & Modern Theme Framework</span></h2>
-				</header>
-				<p class="lede">Kayzen is a powerful themeing framework for architecting CSS for large, modular & scalable web applications. Built using only Sass (SCSS), Kayzen has the customizing power of a complete CMS theme.</p>
-				<p class="button_group">
-					<a class="button-oval-size-4-white" href="#ALAN">Purchase Now</a>
-					<a class="button-oval-size-4-border-white" href="#ALAN">Explore The Potential</a>
-				</p>
+				<div class="short" id="billboard-fade-parallax">
+					<header class="heading_group">
+						<h3 class="heading-uppercase-heavy-size-8 font-2">Welcome to Kayzen</h3>
+						<h2 class="heading-light-size-6"><span>A Unique & Modern Theme Framework</span></h2>
+					</header>
+					<p class="lede">Kayzen is a powerful themeing framework for architecting CSS for large, modular & scalable web applications. Built using only Sass (SCSS), Kayzen has the customizing power of a complete CMS theme.</p>
+					<p class="button_group">
+						<a class="button-oval-size-4-white" href="#ALAN">Purchase Now</a>
+						<a class="button-oval-size-4-border-white" href="#ALAN">Explore The Potential</a>
+					</p>
+				</div>
 			</div>
 			<nav class="slide-nav">
 				<button class="slide-prev icon-border-size-4-white"><i class="fa fa-angle-left"></i></button>
 				<button class="slide-next icon-border-size-4-white"><i class="fa fa-angle-right"></i></button>
 			</nav>
-			<a href="#key-features" class="scroll-wheel"></a>
+			<a href="#s-welcome" class="scroll-wheel"></a>
 		</section>
 		
 		<section class="section earth-slider" id="s-welcome">
@@ -65,6 +72,10 @@
 					</div>
 				</div>
 			</div>
+			<nav class="slide-nav">
+				<button class="slide-prev icon-border-size-4"><i class="fa fa-angle-left"></i></button>
+				<button class="slide-next icon-border-size-4"><i class="fa fa-angle-right"></i></button>
+			</nav>
 		</section>
 		
 		<section 
@@ -824,8 +835,8 @@
 				</blockquote>
 			</div>
 			<nav class="slide-nav">
-				<button class="slide-prev icon-border-size-4-grey-3"><i class="fa fa-angle-left"></i></button>
-				<button class="slide-next icon-border-size-4-grey-3"><i class="fa fa-angle-right"></i></button>
+				<button class="slide-prev icon-border-size-4"><i class="fa fa-angle-left"></i></button>
+				<button class="slide-next icon-border-size-4"><i class="fa fa-angle-right"></i></button>
 			</nav>
 			<script>
 				$(document).ready(function() {

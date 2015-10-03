@@ -1,12 +1,5 @@
-<!-- Top Bar -->
-<?php include ('../modules/objects/top-bar/top-bar.php'); ?>
-	
 <!-- Header -->
-<?php if ($for == 'homepage') { ?>
-<header class="app-header-bar-absolute-dark-sticky" id="app-header">
-<?php } else { ?>
-<header class="app-header-bar-absolute-dark-sticky" id="app-header">
-<?php } ?>
+<header class="app-header<?php echo $headerModifiers ?>" id="app-header">
 			
 	<div class="container">
 		

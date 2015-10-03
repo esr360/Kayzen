@@ -41,12 +41,19 @@
 		}
 	
 		@include modifier(secondary) {
-			background: color(brand, primary);
+			background-color: color(brand, primary);
 			> .container {
 				position: relative;
 			}
 			&, a:not([class*="button-"]) {
 				color: color(greyscale, white);
+			}
+			.owl-dot {
+				&.active {
+					span {
+						background: color(greyscale, white);
+					}
+				} 
 			}
 			@include overwrite-sub(group, $parent: heading) {
 				color: color(greyscale, white);
@@ -55,6 +62,9 @@
 	
 		@include modifier(overlay) {
 			@include bg-overlay(rgba(color(brand, primary), 0.4));
+			@include nested-modifier(deep) {
+				@include bg-overlay(rgba(color(brand, primary), 0.75));
+			}
 			@include nested-modifier(alt) {
 				@include bg-overlay(rgba(color(greyscale, grey-5), 0.5));			
 			}

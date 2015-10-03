@@ -64,8 +64,9 @@
 				</header>
 				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc et erat posuere suscipit.</p>
 			</div>
-		</div>
+			
+		</div><!-- Features Row -->
 		
-	</div><!-- Features Row -->
+	</div><!-- container -->
 	
 </section><!-- Key Features -->
