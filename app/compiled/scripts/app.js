@@ -5844,7 +5844,8 @@ $('body').on('DOMNodeInserted', '#twitter-feed .tweet:nth-child(' + tweetCount +
         
         tweetCarousel.owlCarousel({
             items: 1,
-            loop: true
+            loop: true,
+            dots: false
         });
         
         $('#twitter-feed .tweet-prev').click(function() {

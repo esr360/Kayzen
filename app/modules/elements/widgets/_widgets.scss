@@ -34,6 +34,10 @@
 	// Modifiers
 	//-------------------------------------------------------------
 	
+		//---------------------------------------------------------
+		// Block
+		//---------------------------------------------------------
+		
 		@include modifier(block) {
 			background: color(greyscale, white);	
 			padding: 2.5em 1em;
@@ -70,6 +74,10 @@
 				}
 			}
 		}
+		
+		//---------------------------------------------------------
+		// Panel
+		//---------------------------------------------------------
 	
 		@include modifier(panel) {
 			padding: 4%;
@@ -80,6 +88,10 @@
 			}
 		}
 		
+		//---------------------------------------------------------
+		// Border
+		//---------------------------------------------------------
+	
 		@include modifier(borderTop) {
 			border: 0; // reset border
 			border-top: 0.6em solid rgba(black, 0.15);
@@ -101,6 +113,10 @@
 			}
 		}
 		
+		//---------------------------------------------------------
+		// Stacked
+		//---------------------------------------------------------
+		
 		@include modifier(stacked) {
 			margin-bottom: base(margin);
 			@include vertical-rhythm(bottom);
@@ -108,6 +124,10 @@
 				margin-top: (base(margin) / 2);
 			}
 		}
+		
+		//---------------------------------------------------------
+		// Scale
+		//---------------------------------------------------------
 	
 		@include modifier(scale) {
 			z-index: 1;
@@ -118,10 +138,18 @@
 			}
 		}
 		
+		//---------------------------------------------------------
+		// Media
+		//---------------------------------------------------------
+		
 		@include modifier(media) {
 			position: relative;
 		}
-	
+		
+		//---------------------------------------------------------
+		// Spectrum
+		//---------------------------------------------------------
+		
 		@include modifier(spectrum-quarter) {
 			color: color(greyscale, white);
 			padding: 2.5em 1em;
@@ -147,6 +175,49 @@
 			}
 		}
 		
+		//---------------------------------------------------------
+		// Tub
+		//---------------------------------------------------------
+	
+		@include modifier(tub) {
+			padding: 0;
+			position: relative;
+			&:before {
+				@extend %fill-parent;
+				content: "";
+				background: rgba(black, 0.4);
+			}
+			&:hover {
+				@include overwrite-sub(lid) {
+					transform: translateY(-100%);
+				}
+				@include overwrite-sub(content) {
+					transform: scale(1) translateY(-50%);
+				}
+			}
+		}
+		
+		@include sub-component(lid) {
+			background-color: inherit;
+			position: relative;
+			transition: base(transition);
+			padding: 4em 1em;
+			z-index: 2;
+		}
+		
+		@include sub-component(content) {
+			@extend %horizontal-center;
+			position: absolute;
+			top: calc(50% - 1em);
+			width: 80%;
+			transition: base(transition);
+			transform: scale(0) translateY(-50%);
+		}
+	
+		//---------------------------------------------------------
+		// Greyscale
+		//---------------------------------------------------------
+		
 		@include modifier(greyscale) {    
 			filter: url("data:image/svg+xml;utf8,&lt;svg xmlns=\'http://www.w3.org/2000/svg\'&gt;&lt;filter id=\'grayscale\'&gt;&lt;feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/&gt;&lt;/filter&gt;&lt;/svg&gt;#grayscale"); // Firefox 10+, Firefox on Android
     		filter: gray; // IE6-9
@@ -171,6 +242,10 @@
 			}
 		}
 		
+		//---------------------------------------------------------
+		// Group
+		//---------------------------------------------------------
+		
 		@include sub-component(group) {
 			@include modifier(large) {
 				margin-bottom: (base(margin) * 2);
@@ -184,6 +259,10 @@
 			}
 		}
 		
+		//---------------------------------------------------------
+		// Icon
+		//---------------------------------------------------------
+		
 		@include sub-component(icon) {
 			color: color(greyscale, grey-3);
 			margin-bottom: base(margin);
@@ -195,12 +274,20 @@
 			}
 		}
 		
+		//---------------------------------------------------------
+		// Header
+		//---------------------------------------------------------
+		
 		@include sub-component(header) {
 			@include overwrite-sub(icon, $special: adjacent-sibling) {
 				margin-left: 0.5rem;
 				margin-right: 0;
 			}
 		}
+		
+		//---------------------------------------------------------
+		// Controls
+		//---------------------------------------------------------
 		
 		@include sub-component(controls) {
 			position: absolute;

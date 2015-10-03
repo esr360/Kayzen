@@ -1,5 +1,5 @@
 <!-- Twitter Feed -->
-<div class="twitter-feed">
+<div class="twitter-feed-dark">
 	<a class="loading-tweets" href="http://twitter.com/esr360" target="blank">
 		<i class="fa fa-twitter"></i>
 	</a>

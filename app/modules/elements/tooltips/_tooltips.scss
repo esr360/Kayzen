@@ -28,7 +28,7 @@ https://github.com/esr360/K-Tooltips
 		arrow-size     : 0.5em,
 		arrow-color    : rgba(black, 0.75),
 		// Typography
-		font-size      : font-size(size-2),
+		font-size      : font-size(size-2, $rem: true),
 		color          : white,
 		text-transform : none,
 		font-weight    : normal,

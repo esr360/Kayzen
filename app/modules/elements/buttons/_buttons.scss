@@ -26,7 +26,7 @@
 		display: inline-block;
 		vertical-align: middle;
 		padding: 0 1em;
-		line-height: 2.4em;
+		line-height: 2.4;
 		font-weight: lighter;
 		transition: 0.4s;
 	    border: 1px solid;
@@ -78,6 +78,10 @@
 	
 		@include modifier(oval) {
 			border-radius: 1.5em;
+		}
+		
+		@include modifier(fat) {
+			line-height: 2.8;
 		}
 
 	// Colors

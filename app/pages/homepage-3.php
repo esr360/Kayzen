@@ -239,17 +239,33 @@
 			
 			<div class="container">
 				<div class="icon_group-small text-center">
-					<a href="https://twitter.com/esr360" target="blank" class="icon-size-7-border-circle-primary">
+					<a 
+						href="#"
+						class="tooltip-top icon-size-7-border-circle-primary"
+						data-tooltip="Facebook"
+					>
+						<i class="fa fa-facebook"></i>
+					</a>
+					<a 
+						href="#"
+						class="tooltip-top icon-size-7-border-circle-primary"
+						data-tooltip="Twitter"
+					>
 						<i class="fa fa-twitter"></i>
 					</a>
-					<a href="https://github.com/esr360/One-Nexus" target="blank" class="icon-size-7-border-circle-primary">
+					<a 
+						href="#"
+						class="tooltip-top icon-size-7-border-circle-primary"
+						data-tooltip="Github"
+					>
 						<i class="fa fa-github-alt"></i>
 					</a>
-					<a href="ttps://dribbble.com/esr360" target="blank" class="icon-size-7-border-circle-primary">
+					<a 
+						href="#" 
+						class="tooltip-top icon-size-7-border-circle-primary"
+						data-tooltip="Dribbble"
+					>
 						<i class="fa fa-dribbble"></i>
-					</a>
-					<a href="http://codepen.io/esr360/" target="blank" class="icon-size-7-border-circle-primary">
-						<i class="fa fa-codepen"></i>
 					</a>
 				</div>
 			</div>

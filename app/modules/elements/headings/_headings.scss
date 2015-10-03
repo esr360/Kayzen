@@ -57,14 +57,17 @@
 		@include modifier(highlight) {
 			margin-left: 0.3em;
 			margin-right: 0.3em;
+			line-height: 1.45;
 			> b {
 				background: color(brand, primary);
 				color: white;
 				display: inline-block;
-				font-weight: lighter;
-				padding: 0.15em 0;
+				font-weight: inherit;
 				box-shadow: 0.3em 0 0 color(brand, primary), -0.3em 0 0 color(brand, primary);
-				text-shadow: none;            
+				text-shadow: none;    
+				&:not(:first-child) {
+					margin-top: 0.15em;
+				}        
 			}      
 			@-moz-document url-prefix() {
 				box-shadow: none;
@@ -73,6 +76,12 @@
 				padding: 0 0.3em;
 				> b {                
 					box-decoration-break: clone;
+				}
+			}
+			@include nested-modifier(dark) {
+				> b {
+					background: color(greyscale, grey-6);
+					box-shadow: 0.3em 0 0 color(greyscale, grey-6), -0.3em 0 0 color(greyscale, grey-6);
 				}
 			}
 		}
@@ -161,7 +170,8 @@
 			@include vertical-rhythm(bottom);
 	
 			@include overwrite(heading) {
-				margin: 0.5em 0;
+				margin-top: 0.5em;
+				margin-bottom: 0.5em;
 				line-height: 0.8;
 				@include vertical-rhythm;
 			}
