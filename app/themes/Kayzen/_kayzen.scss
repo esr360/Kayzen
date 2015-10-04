@@ -40,6 +40,7 @@
 	@include price-charts;
 	@include progress-bars;
 	@include tables;
+	@include tabs;
 	@include thumbnails;
 	@include tooltips;
 	@include wells;
@@ -95,22 +96,3 @@
 	));
 
 } // Kayzen
-
-
-// Demos
-//-----------------------------------------------------------------
-
-.test-row {
-    @include row(flow);
-}
-
-.test-column {
-    @include column((
-        type: flow,
-        respond-to: (
-            (half, break-1),
-            (third, break-2),
-            (quarter, break-3)
-        )
-    ));
-}

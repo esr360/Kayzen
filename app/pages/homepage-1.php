@@ -15,11 +15,17 @@
     <div id="site-content">
 		
 		<?php 
+			$topBarModifiers = '-fixed';
+			include ('../modules/objects/top-bar/top-bar.php'); 
+		?>
+		
+		<?php 
+			$headerModifiers = '-bar-absolute-dark';
 			include ('../modules/objects/header/header.php'); 
 		?>
 
 		<?php 
-			$type = 'fullscreen'; 
+			$for = 'homepage'; 
 			include ('../modules/objects/billboard/billboard.php'); 
 		?>
 

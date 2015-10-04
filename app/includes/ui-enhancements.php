@@ -1,14 +1,14 @@
 <!-- UI Enhancements -->
 
 <!-- Search Bar -->
-<div class="search">
+<div class="search-box">
 	<div class="container">
 		<input type="search" placeholder="Enter search query..." />
 		<div class="icon_group-small">
-			<button class="search_go icon-primary" type="submit">
+			<button class="search-box_go icon-primary" type="submit">
 				<i class="fa fa-search"></i>
 			</button>
-			<span class="search_close icon">
+			<span class="search-box_close icon">
 				<i class="fa fa-times"></i>
 			</span>
 		</div>

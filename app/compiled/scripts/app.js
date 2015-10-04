@@ -2112,6 +2112,17 @@ $.stellar({
 //-----------------------------------------------------------------
 
 PointerEventsPolyfill.initialize({});
+
+//-----------------------------------------------------------------
+// Data Background Images
+//-----------------------------------------------------------------
+
+$('[data-bg]').each(function() {
+    var bg = $(this).attr('data-bg');
+    $(this)
+        .addClass('relative')
+        .prepend('<div class="bg-img" style="background:' + bg + '"></div>')
+});
     
 //-----------------------------------------------------------------
 
@@ -5248,23 +5259,25 @@ $("progress.progress-bar").each(function() {
 /* Tabs
 ================================================================ */
 
-function tabs() {
+function tabsInit() {
 
-	$('.tabs .nav li, [class*="tabs-"] .nav li').click(function() {
+	$(tabs).find('[class*="tabs_nav"] > li').click(function() {
 
-		var $section = $(this).parents('.tabs, [class*="tabs-"]').find('> *:not(.nav)');
+		var $section = $(this).parents(tabs).find('.tabs_content');
 
 		$(this).siblings().removeClass('active');
 		$(this).addClass('active');
-		$section.slideUp(420);
-		$section.eq($(this).index()).slideDown(420);
+		$section.fadeOut(baseTransition/2);
+		setTimeout(function(){
+			$section.eq($(this).index()).fadeIn(baseTransition/2);
+		}, baseTransition/2);
 		return false;
 
 	});
   
 }
 
-$(tabs);
+$(tabsInit);
 //=================================================================
 // Tooltips
 //=================================================================
@@ -5779,15 +5792,16 @@ $('#page-overview')
 // Search
 //=================================================================
 
-$('#search-trigger').click(function() {
-	$(search)
-		.addClass('search-visible')
+$('#search-trigger').click(function(e) {
+	$(searchBox)
+		.addClass('search-box-visible')
 		.find('[type="search"]')
 		.focus();
+	e.preventDefault();
 });
 
-$('.search_close').click(function () {
-	$(search).removeClass('search-visible');
+$('.search-box_close').click(function() {
+	$(searchBox).removeClass('search-box-visible');
 });
 //=================================================================
 // Top Bar

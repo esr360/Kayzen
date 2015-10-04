@@ -30,8 +30,9 @@
 		pointer-events: none;
 		height: 7em;
 		width: 7em;
-		top: -0.6em;
-		left: -0.65em;
+		top: -0.62em;
+		left: -0.6em;
+		z-index: 3;
 		font-size: option($config, sizes, default);
 		&:before {
 			content: attr(data-ribbon);

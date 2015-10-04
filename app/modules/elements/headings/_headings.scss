@@ -163,11 +163,11 @@
 			// Core Styles
 			//-----------------------------------------------------
 		
+			@include vertical-rhythm(bottom);
 			margin-bottom: base(margin);
 			font-size: 1rem;
 			position: relative;
 			background-size: cover;
-			@include vertical-rhythm(bottom);
 	
 			@include overwrite(heading) {
 				margin-top: 0.5em;
@@ -206,14 +206,15 @@
 					padding-bottom: 5em;
 				}
 			}
+			
+			@include modifier(small) {
+				@include vertical-rhythm;
+				margin-top: (base(margin) / 2);
+				margin-bottom: (base(margin) / 2);
+			}
 		
 			@include modifier(large) {
 				margin-bottom: (base(margin) * 2);
-				@include vertical-rhythm(bottom);
-			}
-		
-			@include modifier(xlarge) {
-				margin-bottom: (base(margin) * 3);
 				@include vertical-rhythm(bottom);
 			}
 		

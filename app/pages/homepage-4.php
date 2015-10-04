@@ -1,7 +1,7 @@
 <?php 
 	include ('../app.php');
 	// page config
-	$title = 'Homepage 3';
+	$title = 'Homepage 4';
 ?>
 
 <!DOCTYPE html>

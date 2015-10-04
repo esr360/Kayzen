@@ -1,7 +1,7 @@
 <!-- Billboard -->
 <?php if ($for == 'homepage') { ?>
 <section class="billboard-full-screen" data-stellar-background-ratio="0.5">
-	<div class="billboard_wrapper container">
+	<div class="billboard_wrapper container-small">
 		<header class="heading_group">
 			<h2 class="heading-uppercase-light-strikethrough-spaced-size-5"><span>Kayzen</span></h2>
 			<h3 class="heading-uppercase-heavy-size-9 font-2">What's your theme?</h3>

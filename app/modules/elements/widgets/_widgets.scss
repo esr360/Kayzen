@@ -114,6 +114,21 @@
 		}
 		
 		//---------------------------------------------------------
+		// Card
+		//---------------------------------------------------------
+		
+		@include modifier(card) {
+			@include overwrite-sub(content) {
+				border: 1px solid rgba(black, 0.1);
+				border-top: 0;
+				padding: base(margin);
+			}
+			@include overwrite(thumbnail) {
+				margin-bottom: 0;
+			}
+		}
+	
+		//---------------------------------------------------------
 		// Stacked
 		//---------------------------------------------------------
 		
@@ -135,6 +150,22 @@
 			&:hover {
 				transform: scale(1.1) translateZ(0);
 				z-index: 5;
+			}
+		}
+		
+		//---------------------------------------------------------
+		// Zoom
+		//---------------------------------------------------------
+		
+		@include modifier(zoom) {
+			overflow: hidden;
+			@include overwrite-sub(group, $parent: heading) {
+				color: color(greyscale, white);
+			}
+			&:hover {
+				.bg-img {
+					transform: scale(1.3);
+				}
 			}
 		}
 		
@@ -195,6 +226,14 @@
 					transform: scale(1) translateY(-50%);
 				}
 			}
+			@include overwrite-sub(content) {
+				@extend %horizontal-center;
+				position: absolute;
+				top: calc(50% - 1em);
+				width: 80%;
+				transition: base(transition);
+				transform: scale(0) translateY(-50%);
+			}
 		}
 		
 		@include sub-component(lid) {
@@ -205,13 +244,12 @@
 			z-index: 2;
 		}
 		
-		@include sub-component(content) {
-			@extend %horizontal-center;
-			position: absolute;
-			top: calc(50% - 1em);
-			width: 80%;
-			transition: base(transition);
-			transform: scale(0) translateY(-50%);
+		//---------------------------------------------------------
+		// Feature
+		//---------------------------------------------------------
+		
+		@include modifier(feature) {
+			padding: 15% 2em 2em;
 		}
 	
 		//---------------------------------------------------------
@@ -282,6 +320,10 @@
 			@include overwrite-sub(icon, $special: adjacent-sibling) {
 				margin-left: 0.5rem;
 				margin-right: 0;
+			}
+			.col-full & {
+				position: absolute;
+				bottom: 2em;
 			}
 		}
 		
