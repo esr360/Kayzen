@@ -115,7 +115,7 @@
 								</div>
 							</div>
 							<footer class="blockquote_footer">
-								<a class="blockquote_avatar" href="">
+								<a class="blockquote_avatar-small" href="">
 									<img src="<?php echo appDir ?>/images/team/team-2.jpg" alt="">
 								</a>
 								<div class="blockquote_cite heading_group">
@@ -132,7 +132,7 @@
 								</div>
 							</div>
 							<footer class="blockquote_footer">
-								<a class="blockquote_avatar" href="">
+								<a class="blockquote_avatar-small" href="">
 									<img src="<?php echo appDir ?>/images/team/team-2.jpg" alt="">
 								</a>
 								<div class="blockquote_cite heading_group">

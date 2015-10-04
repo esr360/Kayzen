@@ -90,7 +90,7 @@
 		}
 		
 		@include sub-component(avatar) {
-			@include extend($parent: thumbnail, $modifiers: (profile, round, small));
+			@include extend($parent: thumbnail, $modifiers: (profile, round));
 			@include overwrite-sub(content, $special: 'adjacent-sibling') {
 				margin-top: 1.5em;
 			}

@@ -154,6 +154,9 @@
 		right: 0;
 		text-align: center;
 		margin-top: 1em;
+		.force-dots & {
+			position: static;
+		}
 	}
 	
 	.owl-dot {

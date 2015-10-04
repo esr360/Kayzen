@@ -28,6 +28,10 @@
 			@extend %list-reset;
 		}
 		
+		@include modifier(small) {
+			font-size: font-size(size-1);
+		}
+		
 	    @include modifier(clear) {
 			padding-left: 1em;
 		}
@@ -65,14 +69,12 @@
 			> li {
 				display: inline-block;
 				font-size: font-size(size-2);
-				background: color(greyscale, grey-3);
-				color: white;
-				padding: 0.1em 0.4em;
-				transition: base(transition);
 				&.plain {
-					border: 1px solid rgba(0,0,0, 0.1);
-					background: white;
-					color: base(text-color);
+					a, span {
+						border: 1px solid rgba(black, 0.1);
+						background: white;
+						color: inherit;
+					}
 				}
 				&.scss, &.sass {
 					background: #009ED7;
@@ -86,21 +88,21 @@
 				&.php {
 					background: #9B58B5;
 				}
-			}	
-			@include nested-modifier(links)	{
-				> li {
+				span, a {
+					background: color(greyscale, grey-3);
+					padding: 0.1em 0.4em;
+					color: white;
+				}
+				&:hover {
 					a {
-						background-color: inherit;
-						color: inherit;
-					}
-					&:hover {
 						background: color(brand, primary);
-						a {
-							color: color(greyscale, white);
-						}
+						border-color: color(brand, primary);
+						color: color(greyscale, white);
+						text-decoration: none;
 					}
 				}
-			}
+			}	
+			
 		}
 		
 		@include modifier(overflow) {

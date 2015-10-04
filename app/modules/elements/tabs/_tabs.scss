@@ -32,7 +32,7 @@
 			@extend .clearfix;
 			margin: auto;
 			position: relative;
-			z-index: 1;
+			z-index: 2;
 			
 			li {
 				cursor: pointer;
@@ -83,11 +83,26 @@
 			}
 			@include modifier(block) {
 				background: color(greyscale, white);
-				border: 1px solid color(greyscale, grey-3);
-				padding: 1em;
+				border: 1px solid color(greyscale, grey-2);
+				padding: 1.5em;
 				position: relative;
-				z-index: 0;
 				top: -1px;
+				@include nested-modifier(glue) {
+					$tabs-glue: 6px;
+					margin-top: $tabs-glue;
+					top: -2px;
+					z-index: 2;
+					&:before {
+						content: "";
+						position: absolute;
+						left: -1px;
+						top: -$tabs-glue;
+						height: $tabs-glue;
+						width: calc(100% + 2px);
+						border: 1px solid color(brand, primary);
+						background: color(brand, primary);
+					}
+				}
 			}
 		}
 	

@@ -35,6 +35,20 @@
 	// Modifiers
 	//-------------------------------------------------------------
 	
+		@include modifier(feature) {
+			@include overwrite-sub(content) {
+				position: absolute;
+				bottom: 0;
+				width: 100%;
+				background: rgba(black, 0.5);
+				padding: 1.5em;
+				color: color(greyscale, white);
+			}
+			@include overwrite-sub(group, $parent: heading) {
+				color: color(greyscale, white);
+			}
+		}
+	
 		@include modifier(profile) {
 			height: 50px;
 			width: 50px;
@@ -62,9 +76,13 @@
 				overflow: hidden;
 				border-radius: 50%;
 			}
-			@include modifier(large) {
+			@include modifier(xlarge) {
 				height: 95px;
 				width: 95px;
+			}
+			@include modifier(large) {
+				height: 75px;
+				width: 75px;
 			}
 			@include nested-modifier(small) {
 				height: 44px;
@@ -137,6 +155,26 @@
 				@include overwrite-sub(group, $parent: icon) {
 					top: 50%;
 				}
+			}
+		}
+		
+		@include sub-component(desc) {
+			font-weight: lighter;
+			color: color(greyscale, grey-2);
+		}
+		
+		@include sub-component(nav) {
+			.slide-prev, .slide-next {
+				background: rgba(black, 0.4);
+				&:hover {
+					background: color(brand, primary);
+				}
+			}
+			.slide-prev {
+				left: 0;
+			}
+			.slide-next {
+				right: 0;
 			}
 		}
 		
