@@ -3385,6 +3385,7 @@ progress::-moz-progress-bar {
 }
 [class*="tabs_nav-"][class*="-pills"] li {
   padding: 0.5em 1em;
+  background: #f8f8f8;
   border: 1px solid #bfc1c3;
 }
 [class*="tabs_nav-"][class*="-pills"] li.active {

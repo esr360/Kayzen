@@ -45,6 +45,7 @@
 				display: inline-block;
 				li {
 					padding: 0.5em 1em;
+					background: color(greyscale, grey-1);
 					border: 1px solid color(greyscale, grey-3);
 					&.active {
 						background: color(brand, primary);
