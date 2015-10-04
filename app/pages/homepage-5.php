@@ -47,7 +47,7 @@
 		
 		<section class="section-primary">
 			<div class="container">
-				<div class="row-grid">
+				<div class="row-no-gutter">
 					<div 
 						class="widget-feature-zoom span-4"
 						data-bg="url('<?php echo appDir ?>/images/wallpapers/bg-6.jpg')"
@@ -78,14 +78,16 @@
 						</header>
 					</div>
 				</div>
-				<div 
-					class="widget-feature-zoom span-8"
-					data-bg="url('<?php echo appDir ?>/images/wallpapers/bg-5.jpg')"
-				>
-					<header class="widget_header heading_group">
-						<h4 class="heading-heavy-uppercase-size-4 font-2">Lorem Ipsum</h4>
-						<h5 class="heading-light">Dolor Sit Amet</h4>
-					</header>
+				<div class="row-no-gutter">
+					<div 
+						class="widget-feature-zoom span-8"
+						data-bg="url('<?php echo appDir ?>/images/wallpapers/bg-5.jpg')"
+					>
+						<header class="widget_header heading_group">
+							<h4 class="heading-heavy-uppercase-size-4 font-2">Lorem Ipsum</h4>
+							<h5 class="heading-light">Dolor Sit Amet</h4>
+						</header>
+					</div>
 				</div>
 			</div>
 		</section>

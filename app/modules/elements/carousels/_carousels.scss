@@ -228,7 +228,7 @@
 	}
 	.owl-item img {
 		display: block;
-		-webkit-transform-style: preserve-3d;
+		//-webkit-transform-style: preserve-3d;
 	}
 	
 	.owl-nav.disabled,
@@ -340,7 +340,7 @@
 			transition: opacity, 400ms, ease;
   		}
 		img{
-			transform-style: preserve-3d;
+			//transform-style: preserve-3d;
 		}
 	}
 }

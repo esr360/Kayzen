@@ -1,5 +1,8 @@
 <!-- Header -->
-<header class="app-header<?php echo $headerModifiers ?>" id="app-header">
+<header 
+	class="app-header<?php echo $headerModifiers ?>" 
+	id="app-header"
+>
 			
 	<div class="container">
 		

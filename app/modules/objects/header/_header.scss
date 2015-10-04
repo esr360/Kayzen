@@ -142,6 +142,10 @@
 			background-color: option($config, dark, bg);
 		}
 		
+		@include modifier(brand) {
+			background-color: color(brand, primary);
+		}
+		
 		// Sticky Header
 		//---------------------------------------------------------
 		

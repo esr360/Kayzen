@@ -326,19 +326,26 @@ $component: null;
 //		@include modifier(success) {...}
 //
 //		@include modifier(primary) {
-//			@include extend(round, large, success);
+//			@include extend((round, large, success));
 //		}	
 //
 //	}
 //
 //	<div class="button-primary">...</div>
 
-@mixin extend($modifiers...) {
+@mixin extend($modifiers, $parent: null) {
 	@each $modifier in $modifiers {
 		@if type-of($modifier) == string {
-			@extend [class*="#{$component}-"][class*="-#{$modifier}"];
+			$selector: if(
+				$parent, $parent, $component
+			);
+			@extend [class*="#{$selector}-"][class*="-#{$modifier}"];
 		} @else if type-of($modifier) == list {
-			$selectors: ('[class*="#{$component}-"]');
+			$selectors: if(
+				$parent,
+				('[class*="#{$parent}-"]'),
+				('[class*="#{$component}-"]')
+			);
 			@each $item in $modifier {
 				$selectors: join($selectors, '[class*="-#{$item}"]', comma);
 			}
