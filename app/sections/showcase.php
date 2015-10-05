@@ -285,15 +285,13 @@
 			// Showcase Slides
 			$sync1.owlCarousel({
 				items: 1
-			})
-			.on('changed.owl.carousel', function (e) {
+			}).on('changed.owl.carousel', function (e) {
 				if (!flag) {
 					flag = true;
 					$sync2.trigger('to.owl.carousel', [e.item.index, duration, true]);
 					flag = false;
 				}
-			})
-			.trigger('to.owl.carousel', 2);
+			}).trigger('to.owl.carousel', 2);
 			
 			// Showcase Thumbs
 			$sync2.owlCarousel({
@@ -305,18 +303,15 @@
 						items:6
 					}
 				}
-			})
-			.on('click', '.owl-item', function () {
+			}).on('click', '.owl-item', function () {
 				$sync1.trigger('to.owl.carousel', [$(this).index(), duration, true]);
-			})
-			.on('changed.owl.carousel', function (e) {
+			}).on('changed.owl.carousel', function (e) {
 				if (!flag) {
 					flag = true;		
 					$sync1.trigger('to.owl.carousel', [e.item.index, duration, true]);
 					flag = false;
 				}
-			})
-			.trigger('to.owl.carousel', 3);
+			}).trigger('to.owl.carousel', 3);
 			
 			// Slide Arrows
 			

@@ -158,7 +158,7 @@
 			}
 		}
 		
-		@include sub-component(desc) {
+		@include sub-component(excerpt) {
 			font-weight: lighter;
 			color: color(greyscale, grey-2);
 		}
@@ -178,6 +178,21 @@
 			}
 		}
 		
+		@include sub-component(grid) {
+			margin: option($grid, options, gutter) auto;
+			@include modifier(fade) {
+				img {
+					opacity: 0.65;
+					cursor: pointer;
+					transition: base(transition);
+					transform: translateZ(0);
+					&:hover, &.active {
+						opacity: 1;
+					}
+				}
+			}
+		}
+		
 		// Nested thumbnail-profile
 		
 		@include overwrite($is: profile, $special: adjacent-sibling) {
@@ -188,6 +203,6 @@
 			transition: base(transition);
 		}
 		
-	}
+	} // component
 	
 } // @mixin thumbnails

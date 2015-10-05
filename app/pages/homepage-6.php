@@ -83,28 +83,140 @@
 				<div class="row">
 					
 					<div class="newsfeed span-8">
+							
+						<div class="relative">
 								
-						<!-- Latest Articles -->
-						
-						<div class="thumbnail-feature-zoom">
-							<img src="<?php echo appDir ?>/images/wallpapers/bg-7.jpg">
-							<div class="thumbnail_content">
-								<header class="heading_group-small">
-									<div class="heading_date">
-										<div>Sep</div>
-										<div>23</div>
+							<!-- Latest Articles -->
+							
+							<div class="owl-carousel" id="latest-articles">
+								
+								<div class="thumbnail-feature">
+									<img src="<?php echo appDir ?>/images/wallpapers/bg-2.jpg">
+									<div class="thumbnail_content">
+										<header class="heading_group-small">
+											<div class="heading_date">
+												<div>Sep</div>
+												<div>23</div>
+											</div>
+											<span>
+												<h3 class="heading-heavy-size-4">Kayzen is Released</h3>
+											</span>
+										</header>
+										<div class="thumbnail_excerpt">Cum socis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus...</div>
 									</div>
-									<span>
-										<h3 class="heading-heavy-size-4">Kayzen is Released</h3>
-									</span>
-								</header>
-								<div class="thumbnail_desc">Cum socis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus...</div>
+								</div>
+								
+								<div class="thumbnail-feature">
+									<img src="<?php echo appDir ?>/images/wallpapers/bg-3.jpg">
+									<div class="thumbnail_content">
+										<header class="heading_group-small">
+											<div class="heading_date">
+												<div>Sep</div>
+												<div>23</div>
+											</div>
+											<span>
+												<h3 class="heading-heavy-size-4">Kayzen is Released</h3>
+											</span>
+										</header>
+										<div class="thumbnail_excerpt">Cum socis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus...</div>
+									</div>
+								</div>
+								
+								<div class="thumbnail-feature">
+									<img src="<?php echo appDir ?>/images/wallpapers/bg-5.jpg">
+									<div class="thumbnail_content">
+										<header class="heading_group-small">
+											<div class="heading_date">
+												<div>Sep</div>
+												<div>23</div>
+											</div>
+											<span>
+												<h3 class="heading-heavy-size-4">Kayzen is Released</h3>
+											</span>
+										</header>
+										<div class="thumbnail_excerpt">Cum socis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus...</div>
+									</div>
+								</div>
+								
+								<div class="thumbnail-feature">
+									<img src="<?php echo appDir ?>/images/wallpapers/bg-6.jpg">
+									<div class="thumbnail_content">
+										<header class="heading_group-small">
+											<div class="heading_date">
+												<div>Sep</div>
+												<div>23</div>
+											</div>
+											<span>
+												<h3 class="heading-heavy-size-4">Kayzen is Released</h3>
+											</span>
+										</header>
+										<div class="thumbnail_excerpt">Cum socis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus...</div>
+									</div>
+								</div>
+								
+								<div class="thumbnail-feature">
+									<img src="<?php echo appDir ?>/images/wallpapers/bg-7.jpg">
+									<div class="thumbnail_content">
+										<header class="heading_group-small">
+											<div class="heading_date">
+												<div>Sep</div>
+												<div>23</div>
+											</div>
+											<span>
+												<h3 class="heading-heavy-size-4">Kayzen is Released</h3>
+											</span>
+										</header>
+										<div class="thumbnail_excerpt">Cum socis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus...</div>
+									</div>
+								</div>
+								
 							</div>
+							
 							<nav class="thumbnail_nav slide-nav">
 								<button class="slide-prev icon-size-5"><i class="fa fa-angle-left"></i></button>
 								<button class="slide-next icon-size-5"><i class="fa fa-angle-right"></i></button>
 							</nav>
+						
 						</div>
+						
+						<div class="thumbnail_grid-fade row-magic" id="latest-articles-thumbs">
+							<img class="span active" src="<?php echo appDir ?>/images/wallpapers/bg-2.jpg">
+							<img class="span" src="<?php echo appDir ?>/images/wallpapers/bg-3.jpg">
+							<img class="span" src="<?php echo appDir ?>/images/wallpapers/bg-5.jpg">
+							<img class="span" src="<?php echo appDir ?>/images/wallpapers/bg-6.jpg">
+							<img class="span" src="<?php echo appDir ?>/images/wallpapers/bg-7.jpg">
+						</div>
+						
+						<script>
+							$(document).ready(function() {
+								
+								var $latestArticles = $('#latest-articles'),
+									$latestArticlesThumbs = $('#latest-articles-thumbs');
+								
+								$latestArticles.owlCarousel({
+									items: 1,
+									dots: false
+								}).on('next.owl.carousel', function (e) {
+									$latestArticlesThumbs.find('.active').removeClass('active').next().addClass('active');
+								}).on('prev.owl.carousel', function (e) {
+									$latestArticlesThumbs.find('.active').removeClass('active').prev().addClass('active');
+								});
+								
+								$latestArticlesThumbs.find('img').click(function() {
+									var $index = $(this).index();
+									$(this).siblings().removeClass('active').end().addClass('active');
+									$latestArticles.trigger('to.owl.carousel', [$index, 400, true]);
+								});
+								
+								$latestArticles.find("+ .slide-nav .slide-next").click(function() {
+									$latestArticles.trigger('next.owl.carousel');
+								});
+								$latestArticles.find("+ .slide-nav .slide-prev").click(function() {
+									$latestArticles.trigger('prev.owl.carousel');
+								});	
+								
+							}); // document.ready
+						</script>
 						
 						<hr class="hrule-stripes-large" />
 								
@@ -134,7 +246,7 @@
 										<div>Sep</div>
 										<div>23</div>
 									</div>
-									<h3 class="heading-heavy-size-5">Kayzen is Released</h3>
+									<h3 class="heading-heavy-size-4">Kayzen is Released</h3>
 									<h4 class="heading-light-size-3">Posted by <a href="#">Naomi Olson</a></h4>
 								</header>
 								<p>Cum socis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec finibus fringilla purus. Integer libero justo, mattis et magna eget...</p>
@@ -170,7 +282,7 @@
 										<div>Sep</div>
 										<div>23</div>
 									</div>
-									<h3 class="heading-heavy-size-5">Kayzen is Released</h3>
+									<h3 class="heading-heavy-size-4">Kayzen is Released</h3>
 									<h4 class="heading-light-size-3">Posted by <a href="#">Naomi Olson</a></h4>
 								</header>
 								<p>Cum socis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec finibus fringilla purus. Integer libero justo, mattis et magna eget...</p>
@@ -271,7 +383,6 @@
 									
 									testimonialsCarousel.owlCarousel({
 										items: 1,
-										loop: true,
 										margin: 30
 									})
 									
