@@ -32,28 +32,24 @@
 			<div id="portfolio-carousel" class="owl-carousel">
 				
 				<div class="container">
-	
-					<?php 
-						$rows = 2; 
-						$columns = 2; 
-						$noGutter = true;
-						$waffle = true;
-						include ('../includes/portfolio-items.php'); 
-					?>
-				
-				</div><!-- container -->
+					<div class="row-flow-no-gutter-waffle">
+						<?php 
+							$rows = 2; 
+							$columns = 2;
+							include ('../includes/portfolio-items.php'); 
+						?>
+					</div>
+				</div>
 				
 				<div class="container">
-	
-					<?php 
-						$rows = 2; 
-						$columns = 2; 
-						$noGutter = true;
-						$waffle = true;
-						include ('../includes/portfolio-items.php'); 
-					?>
-				
-				</div><!-- container -->
+					<div class="row-flow-no-gutter-waffle">
+						<?php 
+							$rows = 2; 
+							$columns = 2;
+							include ('../includes/portfolio-items.php'); 
+						?>
+					</div>
+				</div>
 							
 			</div><!-- portfolio-carousel -->
 			

@@ -414,7 +414,7 @@
 
 		<?php include ('../sections/promo-banner.php'); ?>
 		
-		<section class="section-primary">
+		<section class="section-primary-dot-map">
 			
 			<header class="heading_group-large text-center">
 				<div class="container-small">

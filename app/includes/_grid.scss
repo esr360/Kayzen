@@ -133,8 +133,10 @@ http://github.com/esr360/Kayzen-GS/
 		// Flow Columns Row
 		@if option($grid, settings, flow-columns) {
 			@include modifier(flow) {
-				margin-left: -#{option($grid, options, gutter)};
-				width: 100% + option($grid, options, gutter);
+				&:not([class*="no-gutter"]) {
+					margin-left: -#{option($grid, options, gutter)};
+					width: 100% + option($grid, options, gutter);
+				}
 				@for $i from 1 through option($grid, options, columns) {
 					> .#{option($grid, options, col-namespace)}-#{$i} {		
 						@if option($grid, settings, mobile-first) {
@@ -147,14 +149,14 @@ http://github.com/esr360/Kayzen-GS/
 						}
 					}
 				}
-				> #{$col-selector} {
+				&:not([class*="no-gutter"]) > #{$col-selector} {
 					margin-left: option($grid, options, gutter);
-					&:not([class*="collapse"]) {
-						@if option($grid, settings, responsive) {
-							@if not option($grid, settings, mobile-first) {
-								@media (max-width: option($grid, options, col-collapse)) {
-									width: (100% - option($grid, options, gutter));
-								}
+				} 
+				> #{$col-selector}:not([class*="collapse"]) {
+					@if option($grid, settings, responsive) {
+						@if not option($grid, settings, mobile-first) {
+							@media (max-width: option($grid, options, col-collapse)) {
+								width: (100% - option($grid, options, gutter));
 							}
 						}
 					}

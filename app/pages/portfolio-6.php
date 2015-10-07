@@ -37,7 +37,7 @@
 						
 						<?php 
 							$rows = 2; 
-							$columns = 3;
+							$columns = 2;
 							$widgetTitle = true;
 							include ('../includes/portfolio-items.php'); 
 						?>
@@ -52,7 +52,7 @@
 						
 						<?php 
 							$rows = 2; 
-							$columns = 3;
+							$columns = 2;
 							$widgetTitle = true;
 							include ('../includes/portfolio-items.php'); 
 						?>

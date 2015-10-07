@@ -33,25 +33,29 @@
 				
 				<div class="container">
 	
-					<?php 
-						$rows = 2; 
-						$columns = 3; 
-						$noGutter = true;
-						$waffle = true;
-						include ('../includes/portfolio-items.php'); 
-					?>
+					<div class="row-flow-no-gutter-waffle">
+						
+						<?php 
+							$rows = 2; 
+							$columns = 3;
+							include ('../includes/portfolio-items.php'); 
+						?>
+						
+					</div>
 				
 				</div><!-- container -->
 				
 				<div class="container">
 	
-					<?php 
-						$rows = 2; 
-						$columns = 3; 
-						$noGutter = true;
-						$waffle = true;
-						include ('../includes/portfolio-items.php'); 
-					?>
+					<div class="row-flow-no-gutter-waffle">
+						
+						<?php 
+							$rows = 2; 
+							$columns = 3;
+							include ('../includes/portfolio-items.php'); 
+						?>
+						
+					</div>
 				
 				</div><!-- container -->
 							

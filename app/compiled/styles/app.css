@@ -676,7 +676,7 @@ p, ul, ol {
 [class*="row-"][class*="-waffle"] > [class*="span"] {
   margin-bottom: 0;
 }
-[class*="row-"][class*="-flow"] {
+[class*="row-"][class*="-flow"]:not([class*="no-gutter"]) {
   margin-left: -3%;
   width: 103%;
 }
@@ -716,7 +716,7 @@ p, ul, ol {
 [class*="row-"][class*="-flow"] > .span-12 {
   width: 97%;
 }
-[class*="row-"][class*="-flow"] > [class*="span"] {
+[class*="row-"][class*="-flow"]:not([class*="no-gutter"]) > [class*="span"] {
   margin-left: 3%;
 }
 @media (max-width: 940px) {

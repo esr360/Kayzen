@@ -27,39 +27,29 @@
 
 		<?php include ('../modules/objects/billboard/billboard.php'); ?>
 		
-		<section class="section-primary relative">
+		<section class="section relative">
 			
 			<div id="portfolio-carousel" class="owl-carousel">
-				
-				<div class="container">
 	
-					<div class="row-flow-grid">
-						
-						<?php 
-							$rows = 2; 
-							$columns = 3;
-							$widgetTitle = true;
-							include ('../includes/portfolio-items.php'); 
-						?>
-						
-					</div>
-				
-				</div><!-- container -->
-				
-				<div class="container">
-	
-					<div class="row-flow-grid">
-						
-						<?php 
-							$rows = 2; 
-							$columns = 3;
-							$widgetTitle = true;
-							include ('../includes/portfolio-items.php'); 
-						?>
-						
-					</div>
-				
-				</div><!-- container -->
+				<div class="row-flow-no-gutter">
+					
+					<?php 
+						$rows = 2; 
+						$columns = 4;
+						include ('../includes/portfolio-items.php'); 
+					?>
+					
+				</div>
+
+				<div class="row-flow-no-gutter">
+					
+					<?php 
+						$rows = 2; 
+						$columns = 4;
+						include ('../includes/portfolio-items.php'); 
+					?>
+					
+				</div>
 							
 			</div><!-- portfolio-carousel -->
 			
@@ -75,7 +65,8 @@
 					
 					portfolioCarousel.owlCarousel({
 						items: 1,
-						loop: true
+						loop: true,
+						dots: false
 					})
 			
 					portfolioCarousel.find("+ .slide-nav .slide-next").click(function() {
