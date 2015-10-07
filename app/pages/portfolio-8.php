@@ -100,10 +100,6 @@
 						items: 1,
 						loop: true,
 						dots: false
-					}).on('next.owl.carousel', function (e) {
-						$portfolioCats.find('.active').removeClass('active').next().addClass('active');
-					}).on('prev.owl.carousel', function (e) {
-						$portfolioCats.find('.active').removeClass('active').prev().addClass('active');
 					});
 								
 					$portfolioCats.find('li').click(function() {
@@ -113,9 +109,22 @@
 					});
 			
 					$("#portfolio-carousel-nav .slide-next").click(function() {
+						var $activeItem = $portfolioCats.find('.active');
+						if ($activeItem.is(':last-child')) {
+							$activeItem.removeClass('active').siblings(':first').addClass('active');
+						} else {
+							$activeItem.removeClass('active').next().addClass('active');
+						}
 						$portfolioCarousel.trigger('next.owl.carousel');
 					});
+					
 					$("#portfolio-carousel-nav .slide-prev").click(function() {
+						var $activeItem = $portfolioCats.find('.active');
+						if ($activeItem.is(':first-child')) {
+							$activeItem.removeClass('active').siblings(':last').addClass('active');
+						} else {
+							$activeItem.removeClass('active').prev().addClass('active');
+						}
 						$portfolioCarousel.trigger('prev.owl.carousel');
 					});
 					
