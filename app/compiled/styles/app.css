@@ -3568,12 +3568,12 @@ progress::-moz-progress-bar {
   top: 4em;
 }
 [class*="thumbnail_title"] {
-  bottom: 2em;
+  bottom: 1em;
   left: 3em;
   text-align: left;
 }
 .thumbnail:hover [class*="thumbnail_title"], [class*="thumbnail-"]:hover [class*="thumbnail_title"] {
-  bottom: 4em;
+  bottom: 3em;
 }
 [class*="thumbnail_excerpt"] {
   font-weight: lighter;

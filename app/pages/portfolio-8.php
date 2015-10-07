@@ -49,6 +49,7 @@
 					<?php 
 						$rows = 2; 
 						$columns = 3;
+						$thumbTitle = true;
 						include ('../includes/portfolio-items.php'); 
 					?>
 					
@@ -59,6 +60,7 @@
 					<?php 
 						$rows = 2; 
 						$columns = 3;
+						$thumbTitle = true;
 						include ('../includes/portfolio-items.php'); 
 					?>
 					
@@ -69,6 +71,7 @@
 					<?php 
 						$rows = 2; 
 						$columns = 3;
+						$thumbTitle = true;
 						include ('../includes/portfolio-items.php'); 
 					?>
 					
@@ -79,6 +82,7 @@
 					<?php 
 						$rows = 2; 
 						$columns = 3;
+						$thumbTitle = true;
 						include ('../includes/portfolio-items.php'); 
 					?>
 					

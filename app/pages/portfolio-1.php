@@ -36,8 +36,9 @@
 					<div class="row-flow-no-gutter-waffle">
 						
 						<?php 
-							$rows = 2; 
+							$rows = 3; 
 							$columns = 4;
+							$thumbTitle = 'small';
 							include ('../includes/portfolio-items.php'); 
 						?>
 						
@@ -50,8 +51,9 @@
 					<div class="row-flow-no-gutter-waffle">
 						
 						<?php 
-							$rows = 2; 
+							$rows = 3; 
 							$columns = 4;
+							$thumbTitle = 'small';
 							include ('../includes/portfolio-items.php'); 
 						?>
 						

@@ -36,6 +36,7 @@
 						<?php 
 							$rows = 2; 
 							$columns = 2;
+							$thumbTitle = true;
 							include ('../includes/portfolio-items.php'); 
 						?>
 					</div>
@@ -46,6 +47,7 @@
 						<?php 
 							$rows = 2; 
 							$columns = 2;
+							$thumbTitle = true;
 							include ('../includes/portfolio-items.php'); 
 						?>
 					</div>
