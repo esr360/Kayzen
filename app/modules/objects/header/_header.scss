@@ -67,7 +67,7 @@
 		//---------------------------------------------------------
 		
 		@include setting(bar) {
-			@include sub-component(wrapper, static) {	
+			@include sub-component(wrapper) {	
 				display: table;
 				width: 100%;
 			}
@@ -177,7 +177,7 @@
 	// Sub-Components
 	//-------------------------------------------------------------
 
-		@include sub-component(wrapper, static) {
+		@include sub-component(wrapper) {
 			height: option($config, height);
 			transition: height base(transition);
 		}

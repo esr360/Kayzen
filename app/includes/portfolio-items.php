@@ -7,7 +7,7 @@
 <div class="widget-card span-<?php echo $span ?>">
 	<div class="thumbnail">
 		<div class="thumbnail_mask">
-			<div class="icon_group-small">
+			<div class="thumbnail_controls-corner icon_group-small">
 				<a href="#" class="icon-border-circle-size-3">
 					<i class="fa fa-search"></i>
 				</a>
@@ -15,6 +15,10 @@
 					<i class="fa fa-link"></i>
 				</a>
 			</div>
+			<header class="thumbnail_title heading_group">
+				<h4 class="heading-heavy-size-5 font-2">Lorem Ipsum</h4>
+				<h5 class="heading-light">Cras dictum erat id tortor ornare.</h5>
+			</header>
 		</div>
 		<img src="<?php echo appDir ?>/images/wallpapers/bg-<?php echo rand(1, 7) ?>.jpg">
 	</div>

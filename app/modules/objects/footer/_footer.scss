@@ -45,7 +45,7 @@
 			color: color(greyscale, white);
 		}
 	
-		@include sub-component(bar, static) {
+		@include sub-component(bar) {
 			padding: 2em 0;
 			font-size: 0.9em;
 			@media (min-width: breakpoint(break-2)) {		
@@ -61,7 +61,7 @@
 			}
 		}
 	
-		@include sub-component(nav, static) {
+		@include sub-component(nav) {
 			ul {
 			    @extend %list-reset;
 			}
@@ -83,7 +83,7 @@
 			}
 		}
 		
-		@include sub-components((nav, copyright), static) {
+		@include sub-components((nav, copyright)) {
 			@media (min-width: breakpoint(break-2)) {
 				display: table-cell;
 				vertical-align: middle;

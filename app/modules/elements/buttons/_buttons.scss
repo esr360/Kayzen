@@ -66,6 +66,15 @@
 				border-color: color(brand, primary);
 			}
 		}
+		
+		@include modifier(pill) {
+			&:first-child {
+				border-radius: 0.4em 0 0 0.4em;
+			}
+			&:last-child {
+				border-radius: 0 0.4em 0.4em 0;
+			}
+		}
 	
 		@include modifier(disabled) {
 			opacity: 0.6;
@@ -84,7 +93,11 @@
 		@include modifier(fat) {
 			line-height: 2.8;
 		}
-
+		
+		@include modifier(thin) {
+			line-height: 2;
+		}
+		
 	// Colors
 	//-------------------------------------------------------------
 	
@@ -147,6 +160,16 @@
 				&:hover {
 					background: darken($color, 10%);
 				}
+			}
+		}
+		
+		// Active Button
+
+		&.active {
+			background: color(brand, primary);
+			color: color(greyscale, white);
+			&:hover {
+				background: color(brand, primary);;
 			}
 		}
 

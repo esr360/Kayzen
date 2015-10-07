@@ -48,7 +48,7 @@
 					
 					<?php 
 						$rows = 2; 
-						$columns = 4;
+						$columns = 3;
 						include ('../includes/portfolio-items.php'); 
 					?>
 					
@@ -58,7 +58,7 @@
 					
 					<?php 
 						$rows = 2; 
-						$columns = 4;
+						$columns = 3;
 						include ('../includes/portfolio-items.php'); 
 					?>
 					
@@ -68,7 +68,7 @@
 					
 					<?php 
 						$rows = 2; 
-						$columns = 4;
+						$columns = 3;
 						include ('../includes/portfolio-items.php'); 
 					?>
 					
@@ -78,7 +78,7 @@
 					
 					<?php 
 						$rows = 2; 
-						$columns = 4;
+						$columns = 3;
 						include ('../includes/portfolio-items.php'); 
 					?>
 					

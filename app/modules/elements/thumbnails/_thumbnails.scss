@@ -137,14 +137,10 @@
 				transform: scale(1.15);		   
 				transition: base(transition);
 			}
-			@include overwrite-sub(group, $parent: icon) {
-				@extend %horizontal-center;
-				position: absolute;
-				top: 42.5%;
-				transform: translateY(-50%);
-				display: inline-block;
-				z-index: 6;
-				transition: base(transition);
+			@include overwrite-sub(group, $parent: heading) {
+				&[class*="thumbnail_title"] { 
+					color: color(greyscale, white);
+				}
 			}
 			@include context(parent-hovered) {
 				opacity: 1;
@@ -152,10 +148,41 @@
 					opacity: 1;
 					transform: scale(1);
 				}
-				@include overwrite-sub(group, $parent: icon) {
-					top: 50%;
+			}
+		}
+		
+		@include sub-components((controls, title)) {
+			position: absolute;
+			z-index: 6;
+			transition: base(transition);
+		}
+		
+		@include sub-component(controls) {
+			@extend %horizontal-center;
+			top: 42.5%;
+			transform: translateY(-50%);
+			display: inline-block;
+			@include context(parent-hovered) {
+				top: 50%;
+			}
+			@include modifier(corner) {
+				top: 2em;
+				left: auto;
+				right: 3em;
+				@include context(parent-hovered) {
+					top: 4em;
 				}
 			}
+		}
+		
+		@include sub-component(title) {
+			bottom: 2em;
+			left: 3em;
+			text-align: left;
+			@include context(parent-hovered) {
+				bottom: 4em;
+			}
+			$test: & !global;
 		}
 		
 		@include sub-component(excerpt) {

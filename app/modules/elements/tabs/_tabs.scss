@@ -54,22 +54,8 @@
 			}
 			
 			@include modifier(pills) {
-				margin-bottom: base(margin);
 				display: inline-block;
-				li {
-					background: color(greyscale, grey-1);
-					&.active {
-						background: color(brand, primary);
-					}
-					&:first-child {
-						border-radius: 0.4em 0 0 0.4em;
-					}
-					&:last-child {
-						border-radius: 0 0.4em 0.4em 0;
-					}
-				}
 				@include nested-modifier(large) {
-					font-size: 1.2em;
 					margin-bottom: (base(margin) * 2);
 				}
 			}

@@ -76,17 +76,12 @@ $component: null;
 //
 //	<div class="header_wrapper">...</div>
 
-@mixin sub-component($sub-components: null, $type: $type) {
+@mixin sub-component($sub-components: null) {
 	$selectors: '[class*="#{$component}_"]';
 	@if $sub-components != null {
 		$selectors: ();
 		@each $sub-component in $sub-components {
-			@if $type == flex or $type == static {
-				$selectors: join($selectors, '.#{$component}_#{$sub-component}', comma);
-			}
-			@if $type == flex or $type == chain {
-				$selectors: join($selectors, '[class*="#{$component}_#{$sub-component}-"]', comma);
-			}
+			$selectors: join($selectors, '[class*="#{$component}_#{$sub-component}"]', comma);
 		}
 	}
 	@at-root {
@@ -97,8 +92,8 @@ $component: null;
 }
 
 // Alias for multiple components
-@mixin sub-components($sub-components, $type: $type) {
-	@include sub-component($sub-components, $type) {
+@mixin sub-components($sub-components) {
+	@include sub-component($sub-components) {
 		@content;
 	}
 }
@@ -192,24 +187,15 @@ $component: null;
 //		<input class="form_input" type="text" />
 //	</div>
 
-@mixin overwrite-sub($sub-components, $type: $type, $parent: null, $special: null) {
+@mixin overwrite-sub($sub-components, $parent: null, $special: null) {
 	$component: if($parent != null, $parent, $component);
 	$selectors: ();
 	@each $sub-component in $sub-components {
 		$selector: #{$component}_#{$sub-component};
-		@if $type == flex or $type == static {
-			@if $special == adjacent-sibling {
-				$selectors: join($selectors, '+ .#{$selector}', comma);
-			} @else {
-				$selectors: join($selectors, '.#{$selector}', comma);
-			}
-		}
-		@if $type == flex or $type == chain {
-			@if $special == adjacent-sibling {
-				$selectors: join($selectors, '+ [class*="#{$selector}-"]', comma);
-			} @else {
-				$selectors: join($selectors, '[class*="#{$selector}-"]', comma);
-			}
+		@if $special == adjacent-sibling {
+			$selectors: join($selectors, '+ [class*="#{$selector}"]', comma);
+		} @else {
+			$selectors: join($selectors, '[class*="#{$selector}"]', comma);
 		}
 	}
 	#{$selectors} {

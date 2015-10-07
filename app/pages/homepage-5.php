@@ -113,9 +113,9 @@
 					
 					<div class="text-center">
 						<ul class="tabs_nav-pills-large">
-							<li class="active">New Arrivals</li>
-							<li>Best Sellers</li>
-							<li>On Offer</li>
+							<li class="button-pill-grey-1-thin active">New Arrivals</li>
+							<li class="button-pill-grey-1-thin">Best Sellers</li>
+							<li class="button-pill-grey-1-thin">On Offer</li>
 						</ul>
 					</div>
 					

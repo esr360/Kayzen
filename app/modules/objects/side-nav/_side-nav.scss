@@ -123,7 +123,7 @@
 	// Sub Components
 	//-------------------------------------------------------------
 	
-		@include sub-component(openClose, static) {
+		@include sub-component(openClose) {
 			position: absolute;
 			top: -1px;
 			right: 0;
