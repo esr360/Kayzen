@@ -93,21 +93,10 @@
 			<script>
 				$(document).ready(function() {
 					
-					var $portfolioCarousel = $("#portfolio-carousel"),
-						$portfolioCats = $('#portfolio-categories');
-						
-					$portfolioCarousel.owlCarousel({
-						items: 1,
-						loop: true,
-						dots: false
+					$("#portfolio-carousel").kCarousel({
+						navId: '#portfolio-carousel-nav',
+						pagerId: '#portfolio-categories'
 					});
-					
-					kCarousel(
-						'#portfolio-carousel',
-						'#portfolio-carousel-nav',
-						'#portfolio-categories',
-						'li'
-					);
 					
 				});
 			</script>
