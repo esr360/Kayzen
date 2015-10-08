@@ -6,6 +6,13 @@ Made by @esr360
 ******************************************************************/
 
 //-----------------------------------------------------------------
+// Vendor
+//-----------------------------------------------------------------
+
+//@prepros-append vendor/Modular/modular.js
+//@prepros-append vendor/Owl-Carousel/owl.compiled.js
+
+//-----------------------------------------------------------------
 // Plugins
 //-----------------------------------------------------------------
 
@@ -20,7 +27,6 @@ Made by @esr360
 // Includes
 //-----------------------------------------------------------------
 
-//@prepros-append vendor/Modular/modular.js
 //@prepros-append includes/adaptive-columns.js
 //@prepros-append includes/pointer-events-polyfill.js
 //@prepros-append includes/tools.js
