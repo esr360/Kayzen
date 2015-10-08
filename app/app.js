@@ -10,7 +10,7 @@ Made by @esr360
 //-----------------------------------------------------------------
 
 //@prepros-append vendor/Modular/modular.js
-//@prepros-append vendor/Owl-Carousel/owl.compiled.js
+//@prepros-append vendor/Owl-Carousel/owl-carousel.js
 
 //-----------------------------------------------------------------
 // Plugins
