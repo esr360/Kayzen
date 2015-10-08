@@ -101,32 +101,13 @@
 						loop: true,
 						dots: false
 					});
-								
-					$portfolioCats.find('li').click(function() {
-						var $index = $(this).index();
-						$(this).siblings().removeClass('active').end().addClass('active');
-						$portfolioCarousel.trigger('to.owl.carousel', [$index, 400, true]);
-					});
-			
-					$("#portfolio-carousel-nav .slide-next").click(function() {
-						var $activeItem = $portfolioCats.find('.active');
-						if ($activeItem.is(':last-child')) {
-							$activeItem.removeClass('active').siblings(':first').addClass('active');
-						} else {
-							$activeItem.removeClass('active').next().addClass('active');
-						}
-						$portfolioCarousel.trigger('next.owl.carousel');
-					});
 					
-					$("#portfolio-carousel-nav .slide-prev").click(function() {
-						var $activeItem = $portfolioCats.find('.active');
-						if ($activeItem.is(':first-child')) {
-							$activeItem.removeClass('active').siblings(':last').addClass('active');
-						} else {
-							$activeItem.removeClass('active').prev().addClass('active');
-						}
-						$portfolioCarousel.trigger('prev.owl.carousel');
-					});
+					kCarousel(
+						'#portfolio-carousel',
+						'#portfolio-carousel-nav',
+						'#portfolio-categories',
+						'li'
+					);
 					
 				});
 			</script>
