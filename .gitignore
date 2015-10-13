@@ -14,10 +14,11 @@ $RECYCLE.BIN/
 *.msm
 *.msp
 
-#C ustom Options
+# Custom Options
 *.cfg
 tod.txt
 .settings
+/node_modules
 
 # =========================
 # Operating System Files
