@@ -1,0 +1,238 @@
+//=================================================================
+// Tools
+//=================================================================
+
+@mixin tools() {
+
+//-----------------------------------------------------------------
+// Horizontal Centering
+//-----------------------------------------------------------------
+
+	%horizontal-center {
+		left: 0;
+		right: 0;
+		margin: auto;  
+		text-align: center;
+	}
+	
+//-----------------------------------------------------------------
+// Vertical Rhythm
+//-----------------------------------------------------------------
+
+	// Remove top spacing 
+	%top-rhythm {
+		&:first-child {
+			margin-top: 0;
+		}   
+	}
+	
+	// Remove bottom spacing 
+	%bottom-rhythm {
+		&:last-child {
+			margin-bottom: 0;
+		}  
+	}
+
+//-----------------------------------------------------------------
+// Reset List Styles
+//-----------------------------------------------------------------
+
+	%list-reset {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+
+//-----------------------------------------------------------------
+// Fill Parent Element
+//-----------------------------------------------------------------
+	
+	%fill-parent {
+		position: absolute;
+		height: 100%;
+		width: 100%;
+		top: 0;
+		left: 0;
+	}
+
+//-----------------------------------------------------------------
+// Iframe
+//-----------------------------------------------------------------
+	
+	.auto-resizable-iframe {
+		max-width: breakpoint(break-2);
+		margin: 0px auto;
+		> div { 
+			position: relative;
+			padding-bottom: 58.5%;
+			height: 0px;           
+		}
+		iframe {
+			position: absolute;
+			border: 0px;
+			top: 0px;
+			left: 0px;
+			width: 100%;
+			height: 100%;
+		}
+	}
+	
+//-----------------------------------------------------------------
+// Vertical Seperator
+//-----------------------------------------------------------------
+
+	.v-sep {
+		height: 100%;
+		position: relative;
+		&:before {
+			@extend %horizontal-center;
+			content: "";
+			height: 100%;
+			width: 0;
+			border-left: 1px solid rgba(white, 0.75);
+			border-right: 1px solid rgba(black, 0.05);
+			position: absolute;
+		}
+		&:after {
+			@include vertical-center(absolute);
+			@extend %horizontal-center;
+			content: "Or";
+			font-size: font-size(size-1);
+			font-weight: lighter;
+			height: 2.5em;
+			width: 2.5em;
+			line-height: 2.5em;
+			border-radius: 50%;
+			color: color(greyscale, white);
+			background: color(brand, primary);
+		}
+	}
+
+//-----------------------------------------------------------------
+// Keyframes
+//-----------------------------------------------------------------
+
+	@keyframes spin { 
+		0% {
+			transform: rotate(0deg); 
+		}
+		100% { 
+			transform: rotate(360deg); 
+		} 
+	}
+
+} // @mixin tools
+
+//=================================================================
+// Mixins
+//=================================================================
+
+//-----------------------------------------------------------------
+// Vertical Rhythm
+//-----------------------------------------------------------------
+
+@mixin vertical-rhythm($position: null) {  
+	@if $position == top { 
+		@extend %top-rhythm;
+	} @else if $position == bottom {
+		@extend %bottom-rhythm;
+	} @else {
+		@extend %top-rhythm;
+		@extend %bottom-rhythm;
+	}
+}
+
+//-----------------------------------------------------------------
+// Vertical Centering
+//-----------------------------------------------------------------
+
+@mixin vertical-center($position: relative) {
+	position: $position;
+	top: 50%;
+	transform: translateY(-50%);
+}
+	
+//-----------------------------------------------------------------
+// Font Sizes
+//-----------------------------------------------------------------
+
+@mixin font-sizes {
+	@each $size, $value in typography-config(sizes) {
+		@include modifier($size) {
+			font-size: $value;
+		}
+	}
+}
+
+//-----------------------------------------------------------------
+// Overlay
+//-----------------------------------------------------------------
+
+@mixin bg-overlay($background) {
+	position: relative;
+	&:before {
+		content: "";
+		z-index: 0;
+		background: $background;
+		@extend %fill-parent;
+	}
+}
+
+//-----------------------------------------------------------------
+// CSS Triangle
+//-----------------------------------------------------------------
+
+@mixin triangle-core {
+	&:after {
+		content:'';
+		position: absolute;
+		width: 0;
+		height: 0;
+	}
+}
+
+@mixin triangle($config: ()) {
+	
+	$config: map-merge((
+		core     : true, 
+		position : top, 
+		color    : rgba(black, 0.8),
+		size     : 0.5em
+	), $config);
+	
+	@if map-get($config, core) {
+		@include triangle-core;
+	}
+		
+	&:after {
+		margin-left: -#{map-get($config, size)};
+		@if map-get($config, position) == top {
+			top: 100%;
+			left: 50%;
+			border-left: solid map-get($config, size) transparent;
+			border-right: solid map-get($config, size) transparent;
+			border-top: solid map-get($config, size) map-get($config, color);
+		} @else if map-get($config, position) == bottom {
+			bottom: 100%;
+			left: 50%;
+			border-left: solid map-get($config, size) transparent;
+			border-right: solid map-get($config, size) transparent;
+			border-bottom: solid map-get($config, size) map-get($config, color);
+		} @else if map-get($config, position) == left {
+			top: 50%;
+			right: -#{map-get($config, size)};
+			transform: translateY(-50%);
+			border-top: solid map-get($config, size) transparent;
+			border-bottom: solid map-get($config, size) transparent;
+			border-left: solid map-get($config, size) map-get($config, color);
+		} @else if map-get($config, position) == right {
+			top: 50%;
+			right: 100%;
+			transform: translateY(-50%);
+			border-top: solid map-get($config, size) transparent;
+			border-bottom: solid map-get($config, size) transparent;
+			border-right: solid map-get($config, size) map-get($config, color);
+		}
+	}
+	
+} // triangle

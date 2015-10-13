@@ -1,0 +1,117 @@
+//=================================================================
+// Lists
+//=================================================================
+
+@mixin lists($custom: ()) {
+
+	//-------------------------------------------------------------
+	// Config
+	//-------------------------------------------------------------
+
+	$lists: config((
+		name            : list
+	), $custom);
+	
+	//-------------------------------------------------------------
+	// Component
+	//-------------------------------------------------------------
+	
+	@include component(list) {
+	
+	// Core Styles
+	//-------------------------------------------------------------
+	
+	// Modifiers
+	//-------------------------------------------------------------
+
+	    @include modifier(reset) {
+			@extend %list-reset;
+		}
+		
+		@include modifier(small) {
+			font-size: font-size(size-1);
+		}
+		
+	    @include modifier(clear) {
+			padding-left: 1em;
+		}
+		
+		@include modifier(divider) {
+			> li {
+				&:not(:last-child) {
+					padding-bottom: 1em;
+					margin-bottom: 1em;
+					border-bottom: 1px dotted rgba(black, 0.2);
+				}
+			}
+		}
+		
+	    @include modifier(arrow) {
+			@include extend(reset);
+			> li {
+				position: relative;
+				line-height: 1.8;
+				margin-bottom: 0 !important;
+				padding-left: 1.5em;
+				&:before {
+					@include vertical-center(absolute);
+					content: "\f138";
+					left: 0;
+					font-family: FontAwesome;
+					margin-right: 0.5em;
+					color: color(brand, primary);
+				}
+			}
+		}
+		
+		@include modifier(tags) {
+			@include extend(reset);
+			> li {
+				display: inline-block;
+				font-size: font-size(size-2);
+				&.plain {
+					a, span {
+						border: 1px solid rgba(black, 0.1);
+						background: white;
+						color: inherit;
+					}
+				}
+				&.scss, &.sass {
+					background: #009ED7;
+				}
+				&.js {
+					background: #90BB00;
+				}
+				&.html {
+					background: #D63A36;
+				}
+				&.php {
+					background: #9B58B5;
+				}
+				span, a {
+					background: color(greyscale, grey-3);
+					padding: 0.1em 0.4em;
+					color: white;
+				}
+				&:hover {
+					a {
+						background: color(brand, primary);
+						border-color: color(brand, primary);
+						color: color(greyscale, white);
+						text-decoration: none;
+					}
+				}
+			}	
+			
+		}
+		
+		@include modifier(overflow) {
+			overflow: auto;
+			&[data-list-height="6"] {
+				max-height: (1.9em) * 6;
+			}
+		}
+		
+	} // component(list)
+	
+} // @mixin lists

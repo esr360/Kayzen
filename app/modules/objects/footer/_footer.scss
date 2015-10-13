@@ -1,0 +1,129 @@
+//=================================================================
+// Footer
+//=================================================================
+
+@mixin footer($custom: ()) {
+
+	//-------------------------------------------------------------
+	// Config
+	//-------------------------------------------------------------
+
+	$footer: config((
+		name            : footer
+	), $custom);
+	
+	//-------------------------------------------------------------
+	// Component
+	//-------------------------------------------------------------
+
+	@include component {
+
+	// Core Styles
+	//-------------------------------------------------------------
+	
+		background: color(greyscale, grey-6);
+		
+	// Sub-Components
+	//-------------------------------------------------------------
+	
+		@include sub-component(wrapper) {
+			padding: 4em;
+			font-size: 0.9em;
+			background: color(greyscale, grey-5);
+			color: color(greyscale, grey-3);
+			@include overwrite(logo) {
+				img {
+					height: 34px;
+				}
+			}
+			b {
+				color: color(greyscale, white);
+			}
+		}
+		
+		@include sub-component(title) {
+			color: color(greyscale, white);
+		}
+	
+		@include sub-component(bar) {
+			padding: 2em 0;
+			font-size: 0.9em;
+			@media (min-width: breakpoint(break-2)) {		
+				display: table;
+				width: 100%;
+				text-align: left;
+			}
+		}
+		
+		@include sub-component(copyright) {
+			h4 {
+				font-weight: lighter;
+			}
+		}
+	
+		@include sub-component(nav) {
+			ul {
+			    @extend %list-reset;
+			}
+		    li {
+			    display: inline-block;
+			    &:not(:last-child) {
+					margin-right: 1em;
+			    }
+		    }
+			a {
+				color: color(greyscale, grey-3);
+				&:hover {
+					text-decoration: none;
+					color: color(greyscale, white);
+				}
+			}
+			@media (min-width: breakpoint(break-2)) {
+				text-align: right;
+			}
+		}
+		
+		@include sub-components((nav, copyright)) {
+			@media (min-width: breakpoint(break-2)) {
+				display: table-cell;
+				vertical-align: middle;
+			}
+		}
+		
+		@include sub-component {
+			@include modifier(nav) {
+				position: absolute;
+				top: 0;
+				right: 0;
+			}
+		}
+		
+	// Twitter Feed
+	//-------------------------------------------------------------
+	
+		.tweet-content {
+			margin-top: -0.25em;
+		}
+		
+		.tweet {
+			> .tweet-avatar {
+				display: none;
+			}
+		}
+		
+		.tweet-actions {
+			float: right;
+			margin-top: 0.25em;
+		}
+		
+		.tweet-avatar {
+			width: 40px;
+		}
+		
+		.tweet-text {
+			margin-bottom: 1em;
+		}
+	
+	} // component(footer)
+	
+} // @mixin footer

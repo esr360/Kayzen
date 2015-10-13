@@ -1,0 +1,142 @@
+//=================================================================
+// Side Navigation
+//=================================================================
+
+@mixin side-nav($custom: ()) {
+
+	//-------------------------------------------------------------
+	// Config
+	//-------------------------------------------------------------
+
+	$side-nav: config((
+		name                    : side-nav,
+		output-JSON             : true,
+		// options
+		width                   : 300px,
+		background              : color(greyscale, grey-5),
+		font-size               : font-size(size-2),
+		transition              : base(transition),
+		z-index                 : 15,
+		// parent-item
+		parent-color            : color(greyscale, white),
+		parent-background       : rgba(black, 0.15),
+		parent-left-border      : 5px solid color(brand, primary),
+		// parent-item:hover
+		parent-hover-background : color(brand, primary),
+		// list-item
+		item-padding            : 1.2em,
+		item-color              : color(greyscale, grey-3),
+		item-bg                 : transparent,
+		item-top-border         : 1px solid rgba(color(greyscale, white), 0.05),
+		item-bottom-border      : 1px solid rgba(color(greyscale, black), 0.1),
+		item-left-border        : 5px solid rgba(color(greyscale, black), 0.3),
+		item-right-border       : none,
+		// list-item:hover
+		item-hover-left-border  : 5px solid color(brand, primary),
+		// list-item.active
+		// list-item.active:hover
+		// list-item:has-child
+		// settings
+		collapsible             : (
+			default             : true,
+			open-by-default     : true,
+			icon                : 'fa-chevron-circle-down'
+		)
+	), $custom) !global;
+	
+	//-------------------------------------------------------------
+	// Component
+	//-------------------------------------------------------------
+	
+	@include component {
+		
+		// Cache selector as variable
+		$side-nav-selector: & !global;
+	
+	    position: fixed;
+	    height: 100%;
+	    top: 0;
+	    overflow: auto;
+	    transform: translate3d(0,0,0);
+		
+	    width: option($config, width);
+		font-size: option($config, font-size);
+	    background: option($config, background);
+	    transition: option($config, transition);
+	    z-index: option($config, z-index);
+		
+		nav {
+	
+			ul {
+				@extend %list-reset;
+				li {
+					display: block;
+					margin-left: 0;
+					&:hover {
+						> a {
+							border-left: option($config, item-hover-left-border);
+							color: color(greyscale, white);
+						}
+					}
+				}
+				a {
+					display: block;
+					position: relative;
+					text-decoration: none;
+					padding: option($config, item-padding);
+					color: option($config, item-color);
+					border-top: option($config, item-top-border);
+					border-bottom: option($config, item-bottom-border);
+					border-left: option($config, item-left-border);
+					border-right: option($config, item-right-border);
+				}   
+				ul {
+					ul {
+						padding-left: 1.5em;
+					}
+				}
+			}
+		
+			// Parent Items
+			> ul {		
+				> li {
+					> a {
+						color: option($config, parent-color);
+						border-left: option($config, parent-left-border);
+						background: option($config, parent-background);
+					}
+					&:hover {
+						> a {
+							background: option($config, parent-hover-background);
+						}
+					}
+				}
+			}
+		
+		} // nav
+	
+		// hide the mega-menu
+		@include overwrite(mega-menu) {
+			display: none !important;
+		}
+		
+	// Sub Components
+	//-------------------------------------------------------------
+	
+		@include sub-component(openClose) {
+			position: absolute;
+			top: -1px;
+			right: 0;
+			padding: 1.45em;
+			cursor: pointer;
+			transition: base(transition);
+			opacity: 0.6;
+			&:hover {
+				background: rgba(color(greyscale, black), 0.2);
+				opacity: 1;
+			}
+		}
+	
+	} // component
+	
+} // @mixin side-nav

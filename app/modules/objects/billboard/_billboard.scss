@@ -1,0 +1,217 @@
+//=================================================================
+// Billboard
+//=================================================================
+
+@mixin billboard($custom: ()) {
+
+	//-------------------------------------------------------------
+	// Config
+	//-------------------------------------------------------------
+
+	$billboard: config((
+		name            : billboard,
+		// Settings
+		full-screen     : false,
+		overlay         : false,
+		// Options
+		bg-color        : color(greyscale, grey-5),
+		bg-image        : "",
+		overlay-color   : color(brand, primary),
+		overlay-opacity : 0.6,
+		color           : color(greyscale, white),
+		text-align      : center,
+		min-height      : 500px
+	), $custom) !global;
+	
+	//-------------------------------------------------------------
+	// Component
+	//-------------------------------------------------------------
+
+	@include component {
+
+	// Core Styles
+	//-------------------------------------------------------------
+
+		min-height: option($config, min-height);
+		background-color: option($config, bg-color);
+		position: relative;
+		padding: 6em 0;
+		
+		// only apply a bg image if there is one to apply
+		@if option($config, bg-image) != "" {
+			background-image: url(option($config, bg-image));
+			background-size: cover;
+		}
+
+	// Settings
+	//-------------------------------------------------------------
+		
+		//---------------------------------------------------------
+		// Full Screen
+		//---------------------------------------------------------
+		
+		// Conditionals
+		//---------------------------------------------------------
+		
+		@if option($config, full-screen) {
+			
+			height: calc(100% - #{option($header, height)});
+			height: calc(100vh - #{option($header, height)});
+		
+			// If header is "absolute" or header is "side"
+			@if option($header, absolute) or option($header, side) {
+				height: 100%;
+				height: 100vh;
+			}
+			
+			// If website has "top-bar"
+			@at-root {
+				@include overwrite(top-bar) {
+					@include overwrite($special: general-sibling) {
+						height: calc(100vh - #{option($header, height)} - #{option($top-bar, height)});
+					}
+				}	
+			}
+			
+			// If header is "side" and website has "top-bar"
+			@if option($header, side) {
+				@include overwrite(top-bar) {
+					@include overwrite($special: general-sibling) {
+						height: calc(100% - #{option($top-bar, height)});
+						height: calc(100vh - #{option($top-bar, height)});
+					}
+				}
+			}
+		
+			// If header is "absolute" and website has "top-bar"
+			@at-root {
+				@if option($header, absolute) {
+					@include overwrite(top-bar) {
+						@include overwrite($special: general-sibling) {
+							height: calc(100vh - #{option($top-bar, height)});
+						}
+					}
+				}	
+			}
+		
+			// If website has "top-bar" and top-bar is "fixed" and header is "absolute"
+			@at-root {
+				@include overwrite(top-bar, $modifiers: fixed) {
+					@if option($header, absolute) {
+						@include overwrite($special: general-sibling) {
+							margin-top: option($top-bar, height);
+						}
+					}
+				}
+			}
+			
+		} // full-screen
+		
+		// Modifiers
+		//---------------------------------------------------------
+		
+		@include modifier(full-screen) {
+			height: calc(100% - #{option($header, height)});
+			height: calc(100vh - #{option($header, height)});
+		}
+		
+		// If header is "absolute"
+		@at-root {
+			@include overwrite(app-header, $is: absolute) {
+				@include overwrite($is: full-screen, $special: adjacent-sibling) {
+					height: 100%;
+					height: 100vh;
+				}
+			}
+		}
+		
+		// If header is "side"
+		@at-root {
+			@include overwrite(app-header, $is: side) {
+				+ #site-content {
+					@include overwrite($is: full-screen) {
+						height: 100%;
+						height: 100vh;
+					}
+				}
+			}
+		}
+		
+		// If website has "top-bar"
+		@at-root {
+			@include overwrite(top-bar) {
+				@include overwrite($is: full-screen, $special: general-sibling) {
+					height: calc(100vh - #{option($header, height)} - #{option($top-bar, height)});
+				}
+			}
+		}
+		
+		// If website has "top-bar" and header is "side"
+		@at-root {
+			@include overwrite(app-header, $is: side) {
+				+ #site-content {
+					@include overwrite(top-bar) {
+						@include overwrite($is: full-screen, $special: adjacent-sibling) {
+							height: calc(100% - #{option($top-bar, height)});
+							height: calc(100vh - #{option($top-bar, height)});
+						}
+					}
+				}
+			}
+		}
+		
+		// If website has "top-bar" and header is "absolute"
+		@at-root {
+			@include overwrite(top-bar) {
+				@include overwrite(app-header, $is: absolute, $special: general-sibling) {
+					@include overwrite($is: full-screen, $special: adjacent-sibling) {
+						height: calc(100vh - #{option($top-bar, height)});
+					}
+				}
+			}
+		}
+		
+		// If website has "top-bar" and top-bar is "fixed" and header is "absolute"
+		@at-root {
+			@include overwrite(top-bar, $is: fixed) {
+				@include overwrite(app-header, $is: absolute, $special: adjacent-sibling) {
+					@include overwrite($is: full-screen, $special: adjacent-sibling) {
+						margin-top: option($top-bar, height);
+					}
+				}
+			}
+		}
+
+		//---------------------------------------------------------
+		// Overlay
+		//---------------------------------------------------------
+		
+		@include setting(overlay) {
+			@include bg-overlay(rgba(
+				option($config, overlay-color), 
+				option($config, overlay-opacity)
+			));
+		}
+		
+	// Sub Components
+	//-------------------------------------------------------------
+
+		@include sub-component(wrapper) {
+			color: option($config, color);
+			text-align: option($config, text-align);
+			@extend %horizontal-center;
+			@include vertical-center(absolute);
+			@at-root {
+				@include overwrite(app-header, $is: dark) {
+					@include overwrite(billboard, $not: full-screen, $special: adjacent-sibling) {
+						@include overwrite-sub(wrapper) {
+							transform: translateY(-15%);
+						}
+					}
+				}
+			}
+		}
+	
+	} // component
+	
+} // @mixin billboard

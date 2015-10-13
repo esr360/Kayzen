@@ -1,0 +1,231 @@
+//=================================================================
+// Buttons
+//=================================================================
+
+@mixin buttons($custom: ()) {
+
+	//-------------------------------------------------------------
+	// Config
+	//-------------------------------------------------------------
+
+	$buttons: config((
+		name            : button
+	), $custom);
+
+	//-------------------------------------------------------------
+	// Component
+	//-------------------------------------------------------------
+
+	@include component(button) {
+
+	// Core Styles
+	//-------------------------------------------------------------
+	
+		background: color(greyscale, grey-4);
+		color: color(greyscale, white);
+		display: inline-block;
+		vertical-align: middle;
+		padding: 0 1em;
+		line-height: 2.4;
+		font-weight: lighter;
+		transition: 0.4s;
+	    border: 1px solid;
+	    border-color: transparent;
+		cursor: pointer;
+		text-decoration: none;
+
+		&:hover {
+			background: darken(color(greyscale, grey-4), 10%);
+			color: color(greyscale, white);
+			text-decoration: none;
+		}
+
+	// Sizes
+	//-------------------------------------------------------------
+
+    	@include font-sizes;
+
+	// Patterns
+	//-------------------------------------------------------------
+
+		@include modifier(block) {
+			width: 100%;
+			text-align: center;
+			@include overwrite($special: adjacent-sibling) {
+				margin-top: (base(margin) / 2);
+			}
+		} 
+	
+		@include modifier(border) {
+			background: none;
+			color: base(text-color);
+			border-color: base(text-color);
+			&:hover {
+				color: color(greyscale, white);
+				background: color(brand, primary);
+				border-color: color(brand, primary);
+			}
+		}
+		
+		@include modifier(pill) {
+			&:first-child {
+				border-radius: 0.4em 0 0 0.4em;
+			}
+			&:last-child {
+				border-radius: 0 0.4em 0.4em 0;
+			}
+		}
+	
+		@include modifier(disabled) {
+			opacity: 0.6;
+			cursor: not-allowed;
+			transition-delay: 999s;
+		}
+	
+		@include modifier(round) {
+			border-radius: 0.4em;
+		}
+	
+		@include modifier(oval) {
+			border-radius: 1.5em;
+		}
+		
+		@include modifier(fat) {
+			line-height: 2.8;
+		}
+		
+		@include modifier(thin) {
+			line-height: 2;
+		}
+		
+	// Colors
+	//-------------------------------------------------------------
+	
+		// Brand Colors
+		@each $brand, $color in palette(brand) {
+			@include modifier($brand) {
+				background: $color;
+				&:hover {
+					background: darken($color, 10%);
+				}
+				@include nested-modifier(border) {
+					background: transparent;
+					border-color: $color;
+					color: $color;
+					&:hover {
+						background: $color;
+						color: color(greyscale, white);
+					}
+				}
+			}
+		}
+	
+		// Greyscale Colors
+		@each $greyscale, $color in palette(greyscale) {
+			@include modifier($greyscale) {
+				background: $color;
+				@if (lightness($color) > 50) {
+					color: color(greyscale, grey-5);
+				}
+				&:hover {
+					background: darken($color, 10%);
+				}
+				@include nested-modifier(border) {
+					background: transparent;
+					border-color: $color;
+					color: $color;
+					&:hover {
+						background: $color;
+						@if (lightness($color) > 80) {
+							color: color(brand, primary);
+						} @else {
+							color: color(greyscale, white);
+						}
+					}
+				}
+			}
+		}
+		
+		// Social Colors
+		
+		$social-colors: (
+			facebook    : option($palettes, social, facebook),
+			twitter     : option($palettes, social, twitter),
+			google-plus : option($palettes, social, google-plus),
+		);
+		
+		@each $social, $color in $social-colors {
+			@include modifier($social) {
+				background: $color;
+				&:hover {
+					background: darken($color, 10%);
+				}
+			}
+		}
+		
+		// Active Button
+
+		&.active {
+			background: color(brand, primary);
+			color: color(greyscale, white);
+			&:hover {
+				background: color(brand, primary);;
+			}
+		}
+
+	// Styles
+	//-------------------------------------------------------------
+
+//		@include modifier(primary) {
+//			@include extend(round, size-4, brand-1);
+//		}	
+
+	// Sub-Components
+	//-------------------------------------------------------------
+	
+		@include sub-component(group) {
+
+			@include overwrite(button) {
+				margin-left: 0.5em;
+				&:first-child {
+					margin-left: 0;
+				}
+			}
+	
+			> a, .text-sep {
+				margin-left: 0.5em;
+				&:first-child {
+					margin-left: 0;
+				}
+			}
+	
+			@media (max-width: breakpoint(break-1)) {
+				@include overwrite(button) {
+					margin-left: 0;
+					display: block;
+					width: 100%;
+					margin-bottom: 1rem;
+					text-align: center;
+					&:last-child {
+						margin-bottom: 0;
+					}
+				}		
+			}
+		}
+
+	} // component(button)
+
+	//-------------------------------------------------------------
+	// Browser Hacks
+	//-------------------------------------------------------------
+	
+	// Makes input, button and .button elements equal height in Firefox
+	input::-moz-focus-inner,
+	button::-moz-focus-inner { 
+	    border: 0;
+	    padding: 0;
+		margin-top: 1px; 
+		margin-bottom: 1px;
+	}
+	
+} // @mixin buttons

@@ -1,0 +1,110 @@
+//=================================================================
+// Blockquotes
+//=================================================================
+
+@mixin blockquotes($custom: ()) {
+
+	//-------------------------------------------------------------
+	// Config
+	//-------------------------------------------------------------
+
+	$blockquotes: config((
+		name            : blockquote
+	), $custom);
+
+	//-------------------------------------------------------------
+	// Component
+	//-------------------------------------------------------------
+	
+	@include component {
+
+	// Core Styles
+	//-------------------------------------------------------------
+			
+		margin: 0;
+		border: 0;
+		padding: 0 3em;
+		font-family: typography(typefaces, secondary);
+		
+	// Modifiers
+	//-------------------------------------------------------------
+	
+		@include modifier(testimonial) {
+			
+			padding: 0;
+			
+			@include overwrite-sub(content) {
+				&:before,
+				&:after {
+					font-size: 1.5rem;
+				}
+			}
+			
+		}
+		
+	// Sub-Components
+	//-------------------------------------------------------------
+	
+		@include sub-component(bubble) {
+			position: relative;
+			padding: 1em 3em;
+			background: color(brand, primary);
+			border-radius: 0.6em;
+			color: color(greyscale, white);
+			@include triangle((
+				position : top,
+				color    : color(brand, primary)
+			));
+			&:after {
+				left: 20%;
+			}
+		}
+		
+		@include sub-components((avatar, cite)) {
+			display: inline-block;
+			vertical-align: middle;
+		}
+		
+		@include sub-component(content) {
+			position: relative;
+			&:before,
+			&:after {
+				position: absolute;
+				font-family: FontAwesome;
+				font-size: 1.75rem;
+				color: rgba(0,0,0,0.3);
+			}
+			&:before {
+				content: "\f10d";
+				top: -0.2em;
+				left: -1.5em;
+			}
+			&:after {
+				content: "\f10e";
+				bottom: -0.2em;
+				right: -1.5em;
+			}
+			@include overwrite-sub(cite, $special: 'adjacent-sibling') {
+				margin-top: 1.5em;
+			}
+		}
+		
+		@include sub-component(avatar) {
+			@include extend($parent: thumbnail, $modifiers: (profile, round));
+			@include overwrite-sub(content, $special: 'adjacent-sibling') {
+				margin-top: 1.5em;
+			}
+		}
+		
+		@include sub-component(cite) {
+			margin-left: 0.5em;
+			color: color(greyscale, white);
+		}
+		
+		@include sub-component(footer) {
+			margin-top: 1em;			
+		}
+			
+	} // component
+	
+} // @mixin blockquotes

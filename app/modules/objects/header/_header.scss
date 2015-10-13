@@ -1,0 +1,187 @@
+//=================================================================
+// Header
+//=================================================================
+
+@mixin header($custom: ()) {
+	
+	//-------------------------------------------------------------
+	// Config
+	//-------------------------------------------------------------
+
+	$header: config((
+		name                 : app-header,
+		output-JSON          : true,
+		// Options
+		bg                   : base(background),
+		height               : 100px,
+		font-size            : 1em,
+		z-index              : 5,
+		// Settings
+		bar                  : false,
+		absolute             : (
+			default          : false,
+			top-position     : 0
+		),
+		dark                 : (
+			default          : false,
+			bg               : color(greyscale, grey-6)
+		),
+		side                 : (
+			default          : false,
+			width            : 350px,
+			container-width  : 100%,
+			show-y-scrollbar : false
+		),
+		sticky               : (
+			default          : false,
+			bg               : color(greyscale, grey-6),
+			height           : 70px,
+			logo-height      : 28px,
+			font-size        : font-size(size-2)
+		)
+	), $custom) !global;
+	
+	//-------------------------------------------------------------
+	// Component
+	//-------------------------------------------------------------
+
+	@include component {
+
+	// Core Styles
+	//-------------------------------------------------------------
+	
+		font-size: option($config, font-size);
+		
+		@if not option($config, side) {
+			background: option($config, bg);
+		}
+		
+		@if option($top-bar, fixed) {
+			margin-top: option($top-bar, height);
+		}
+
+	// Settings
+	//-------------------------------------------------------------
+	
+		// Header Bar
+		//---------------------------------------------------------
+		
+		@include setting(bar) {
+			@include sub-component(wrapper) {	
+				display: table;
+				width: 100%;
+			}
+			@include overwrite((logo, navigation)) {
+				display: table-cell;
+				vertical-align: middle;
+			}
+		}
+		
+		// Absolute Position Header
+		//---------------------------------------------------------
+		
+		@include setting(absolute) {
+			position: absolute;
+			margin-top: option($config, absolute, top-position);
+			z-index: option($config, z-index);
+			width: 100%;
+		}
+
+		// Side Header
+		//---------------------------------------------------------
+	
+		@include setting(side) {
+			
+			// Side Navigation
+			@extend #{$side-nav-selector};
+			
+			width: option($config, 'side', 'width');
+			
+			@include overwrite(container) {
+				max-width: option($config, 'side', 'container-width');
+			}
+			
+			@include overwrite(('logo', 'navigation')) {
+				display: block;
+			}
+			
+			@include overwrite(logo) {
+				padding: 1em;
+				img {
+					height: option($config, sticky, logo-height);
+				}
+			}
+			
+			@include option($value: left) {
+				left: 0;
+				right: auto;
+				+ #site-content {
+					margin-left: option($config, 'side', 'width');
+				}
+			}
+			
+			@include option($value: right) {
+				right: 0;
+				left: auto;
+				+ #site-content {
+					margin-right: option($config, 'side', 'width');
+				}
+			}
+			
+			// Always show vertical scrollbars
+			@include option($option: show-y-scrollbar) {
+				overflow-y: scroll;
+			}
+			
+		} // setting(side)
+		
+		// Dark Header
+		//---------------------------------------------------------
+	
+		@include setting(dark) {
+			background-color: option($config, dark, bg);
+		}
+		
+		@include modifier(brand) {
+			background-color: color(brand, primary);
+		}
+		
+		// Sticky Header
+		//---------------------------------------------------------
+		
+		@include setting(sticky) {
+			&.fixed {
+				position: fixed;
+				margin-top: 0;
+				top: 0;
+				width: 100%;
+				z-index: 12;
+				background: option($config, sticky, bg);
+				font-size: option($config, sticky, font-size);
+				@include overwrite-sub(wrapper) {
+					height: option($config, sticky, height);
+				}
+				@include overwrite(logo) {
+					img {
+						height: option($config, sticky, logo-height);
+					}
+				}
+				@include modifier(absolute, "not") {
+					@include overwrite(billboard, $special: adjacent-sibling) {
+						margin-top: option($config, sticky, height);
+					}
+				}
+			}
+		}
+		
+	// Sub-Components
+	//-------------------------------------------------------------
+
+		@include sub-component(wrapper) {
+			height: option($config, height);
+			transition: height base(transition);
+		}
+		
+	} // component(app-header)
+
+} // @mixin header

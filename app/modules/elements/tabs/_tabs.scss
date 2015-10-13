@@ -1,0 +1,97 @@
+//=================================================================
+// Tabs
+//=================================================================
+
+//-----------------------------------------------------------------
+// Mixin
+//-----------------------------------------------------------------
+
+@mixin tabs($custom: ()) {
+
+	//-------------------------------------------------------------
+	// Config
+	//-------------------------------------------------------------
+
+	$tabs: config((
+		name            : tabs,
+		output-JSON     : true
+	), $custom);
+
+	//-------------------------------------------------------------
+	// Component
+	//-------------------------------------------------------------
+	
+	@include component {
+			
+	// Child Components
+	//-------------------------------------------------------------
+
+		@include sub-component(nav) {
+			
+			@extend %list-reset;
+			@extend .clearfix;
+			margin: auto;
+			position: relative;
+			z-index: 2;
+			
+			li {
+				cursor: pointer;
+				transition: base(transition);
+				float: left;
+				padding: 0.5em 1em;
+				border: 1px solid color(greyscale, grey-3);
+				&.active {
+					color: color(greyscale, white);
+					border-color: color(brand, primary);
+					background: color(brand, primary);
+					+ li {
+						border-left-color: color(brand, primary);
+					}
+				}
+				&:not(:last-child) {
+					border-right: none;
+				}
+			}
+			
+			@include modifier(pills) {
+				display: inline-block;
+				@include nested-modifier(large) {
+					margin-bottom: (base(margin) * 2);
+				}
+			}
+			
+		} // sub-component(nav)
+		
+		@include sub-component(content) {
+			display: none;
+			&.active {
+				display: block;
+			}
+			@include modifier(block) {
+				background: color(greyscale, white);
+				border: 1px solid color(greyscale, grey-2);
+				padding: 1.5em;
+				position: relative;
+				top: -1px;
+				@include nested-modifier(glue) {
+					$tabs-glue: 6px;
+					margin-top: $tabs-glue;
+					top: -2px;
+					z-index: 2;
+					&:before {
+						content: "";
+						position: absolute;
+						left: -1px;
+						top: -$tabs-glue;
+						height: $tabs-glue;
+						width: calc(100% + 2px);
+						border: 1px solid color(brand, primary);
+						background: color(brand, primary);
+					}
+				}
+			}
+		}
+	
+	} // component
+	
+} // @mixin tabs
