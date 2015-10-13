@@ -1,0 +1,42 @@
+//=================================================================
+// Breadcrumb
+//=================================================================
+
+@mixin breadcrumb($custom: ()) {
+
+	//-------------------------------------------------------------
+	// Config
+	//-------------------------------------------------------------
+
+	$breadcrumb: config((
+		name            : breadcrumb
+	), $custom);
+	
+	//-------------------------------------------------------------
+	// Component
+	//-------------------------------------------------------------
+
+	.breadcrumb {	
+	
+		font-size: 0.9em;
+		margin: base(margin) 0;
+		
+		ul {
+			@extend %list-reset;
+		}
+		
+		li {
+			display: inline;
+			&:not(:last-child) {
+				margin-right: 0.2em;
+				&:after {
+					content: "\f105";
+					font-family: FontAwesome;
+					margin-left: 0.4em;
+				}
+			}
+		}
+	
+	} // .breadcrumb
+	
+} // @mixin breadcrumb

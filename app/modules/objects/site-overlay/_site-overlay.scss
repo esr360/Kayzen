@@ -1,0 +1,41 @@
+//=================================================================
+// Site Overlay
+//=================================================================
+
+@mixin site-overlay($custom: ()) {
+
+	//-------------------------------------------------------------
+	// Config
+	//-------------------------------------------------------------
+
+	$site-overlay: config((
+		name            : site-overlay
+	), $custom);
+	
+	//-------------------------------------------------------------
+	// Component
+	//-------------------------------------------------------------
+	
+	@include component {
+	
+	    position: fixed;
+	    top: 0;
+	    right: 0;
+	    bottom: 0;
+	    left: 0;
+	    cursor: pointer;
+		z-index: 6;
+	    background: rgba(0,0,0,0.4);
+	    transform: translateZ(0);
+	    transition: base(transition);
+	    visibility: hidden;
+	    opacity: 0;
+		
+	    &[class*="visible"] {
+	        visibility: visible;
+	        opacity: 1;
+	    }
+		
+	} // component()
+		
+} // @mixin site-overlay

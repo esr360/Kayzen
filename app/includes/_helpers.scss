@@ -1,0 +1,188 @@
+//=================================================================
+// Helper Classes
+//=================================================================
+
+@mixin helpers($custom: ()) {
+
+	//-------------------------------------------------------------
+	// Config
+	//-------------------------------------------------------------
+	
+	$helpers: config((
+		name                  : helpers
+	), $custom) !global;
+
+	//-------------------------------------------------------------
+	// Visibility
+	//-------------------------------------------------------------
+
+	//Hide visually and from screen readers:
+	.hidden {
+		display: none !important;
+	}
+	
+	// Hide only visually, but keep for screen readers
+	// http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+	.visually-hidden {
+		border: 0;
+		clip: rect(0 0 0 0);
+		height: 1px;
+		margin: -1px;
+		overflow: hidden;
+		padding: 0;
+		position: absolute;
+		width: 1px;
+		&.focusable {
+			&:active, &:focus {
+				clip: auto;
+				height: auto;
+				margin: 0;
+				overflow: visible;
+				position: static;
+				width: auto;
+			}
+		}
+	}
+
+	// Hide visually and from screen readers, but maintain layout
+	.invisible {
+		visibility: hidden;
+	}
+	
+	// Hide Overflow
+	.hide-overflow {
+		position: relative;
+		overflow: hidden;
+	}
+
+	//-------------------------------------------------------------
+	// Clearfix
+	//-------------------------------------------------------------
+
+	.clearfix, .cf {
+		zoom: 1;
+		&:before, 
+		&:after { 
+			content: ""; 
+			display: table; 
+		}
+		&:after { 
+			clear: both; 
+		}
+	}
+	
+	//-------------------------------------------------------------
+	// Positioning
+	//-------------------------------------------------------------
+	
+	.relative {
+		position: relative;
+	}
+	
+	//-------------------------------------------------------------
+	// Sizing
+	//-------------------------------------------------------------
+	
+	.short {
+		width: 75%;
+	}
+	
+	.col-full {
+		position: absolute;
+		height: 100%;
+	}
+		
+	//-------------------------------------------------------------
+	// Aligning
+	//-------------------------------------------------------------
+
+	// Text Aligning
+	
+	.text-left { 
+		text-align: left !important; 
+	}
+	.text-center { 
+		text-align: center !important; 
+	}
+	.text-right { 
+		text-align: right !important; 
+	}
+	
+	// Vertical Aligning
+	
+	.va-top {
+		vertical-align: top !important;
+	}
+	.va-middle {
+		vertical-align: middle !important;
+	}
+	.va-bottom {
+		vertical-align: bottom !important;
+	}
+	
+	// Vertical Center
+	
+	.v-center {
+		@include vertical-center;
+	}
+	
+	//-------------------------------------------------------------
+	// Horizontal Rules
+	//-------------------------------------------------------------
+	
+	@include component(hrule) {
+		margin: base(margin) 0;
+		@include modifier(line) {
+			border-top: 1px solid rgba(0, 0, 0, 0.15);
+			border-bottom: 0;
+		}
+		@include modifier(stripes) {
+			height: 10px;    
+			background-image: url("#{$asset-path}/images/stripe-overlay.png");
+			background-repeat: repeat;
+			opacity: 0.3;
+			border: none;
+		}
+		@include modifier(gutter) {
+			$hr-gutter: option($grid, options, gutter);
+			margin: $hr-gutter 0 ($hr-gutter * 2);
+		}
+		@include modifier(small) {
+			margin: 1.5em 0;
+		}
+		@include modifier(large) {
+			margin: (base(margin) * 1.5) 0;
+		}
+	}
+
+	//-------------------------------------------------------------
+	// Responsive Visibility
+	//-------------------------------------------------------------
+
+	// Show only when resolution is at most X
+	@each $bp, $width in map-get($grid, breakpoints) {
+		.max-#{$bp} {
+			@media (min-width: $width) {
+				display: none !important;
+			}
+		}
+	}
+	
+	// Show only when resolution is at least X
+	@each $bp, $width in map-get($grid, breakpoints) {
+		.min-#{$bp} {
+			@media (max-width: $width) {
+				display: none !important;
+			}
+		}
+	}
+	
+	//-------------------------------------------------------------
+	// Background Size
+	//-------------------------------------------------------------
+	
+	.bg-cover {
+		background-size: cover;
+	}
+	
+} // @mixin helpers

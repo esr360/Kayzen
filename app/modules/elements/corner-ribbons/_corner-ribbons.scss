@@ -1,0 +1,92 @@
+//=================================================================
+// Corner Ribbons
+//=================================================================
+
+@mixin corner-ribbons($custom: ()) {
+
+	//-------------------------------------------------------------
+	// Config
+	//-------------------------------------------------------------
+
+	$corner-ribbons: config((
+		name            : corner-ribbon,
+		colors          : (green, pink, purple),
+		default-color   : green,
+		sizes           : (
+			default     : 1em,
+			small       : 0.7em,
+			large       : 1em
+		)
+	), $custom);
+
+	//-------------------------------------------------------------
+	// Component
+	//-------------------------------------------------------------
+	
+	@include component() {
+		
+		background-size: cover;
+		position: absolute;
+		pointer-events: none;
+		height: 7em;
+		width: 7em;
+		top: -0.62em;
+		left: -0.6em;
+		z-index: 3;
+		font-size: option($config, sizes, default);
+		&:before {
+			content: attr(data-ribbon);
+			position: absolute;
+			height: 100%;
+			width: 100%;
+			text-align: center;
+			transform: rotate(-45deg);
+			color: white;
+			font-weight: bold;
+    		top: 13%;
+			left: 13%;
+			font-size: 1em;
+		}
+		
+	//-------------------------------------------------------------
+	// Sizes
+	//-------------------------------------------------------------
+	
+		@each $size in option($config, sizes) {
+			$key: nth($size, 1);
+			$value: nth($size, 2);
+			@if $key != 'default' {
+				@include modifier($key) {
+					font-size: #{$value};
+				}
+			}
+		}
+		
+		@include modifier(large) {
+			height: 10em;
+			width: 10em;
+			top: -0.8em;
+			left: -0.85em;
+			&:before {
+				top: 15%;
+				left: 15%;
+			}
+		}
+		
+	//-------------------------------------------------------------
+	// Colors
+	//-------------------------------------------------------------
+	
+		@each $color in option($config, colors) {
+			@include modifier(#{$color}) {
+				background-image: url("#{$asset-path}images/corner-ribbons/corner-ribbon-#{$color}.png");
+			}
+		}
+		
+		// default color
+		@include extend(option($config, default-color));
+		
+	} // component
+	
+	
+} // @mixin corner-ribbons

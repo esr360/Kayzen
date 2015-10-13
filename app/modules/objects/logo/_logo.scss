@@ -1,0 +1,47 @@
+//=================================================================
+// Logo
+//=================================================================
+
+@mixin logo($custom: ()) {
+	
+	//-------------------------------------------------------------
+	// Config
+	//-------------------------------------------------------------
+
+	$logo: config((
+		name       : logo,
+		text-align : left,
+		color      : white,
+		size       : font-size(size-5),
+		padding    : 0
+	), $custom);
+	
+	//-------------------------------------------------------------
+	// Component
+	//-------------------------------------------------------------
+
+	@include component {	
+	
+		color: option($config, color);
+		font-size: option($config, size);
+		text-align: option($config, text-align);
+		padding: option($config, padding);
+		// for plain text logos
+		a {
+			color: option($config, color);
+			display: inline-block;
+			&:hover {
+				text-decoration: none;
+			}
+		}
+		// for image logos
+		img {
+			height: 38px;
+			display: inline-block;
+			vertical-align: middle;
+			transition: base(transition);
+		}
+	
+	} // component
+	
+} // @mixin logo
