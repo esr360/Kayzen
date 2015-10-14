@@ -2517,7 +2517,7 @@ button::-moz-focus-inner {
   margin-bottom: 3em;
 }
 [class*="heading_group"][class*="-dots"]:after {
-  content: "ÔÇó ÔÇó ÔÇó";
+  content: "• • •";
   position: absolute;
   color: rgba(0, 0, 0, 0.4);
   font-size: 24px;

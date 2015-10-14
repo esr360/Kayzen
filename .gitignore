@@ -20,6 +20,7 @@ tod.txt
 .settings
 /node_modules
 .sass-cache
+app/vendor
 
 # =========================
 # Operating System Files
