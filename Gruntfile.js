@@ -25,19 +25,26 @@ module.exports = function(grunt) {
                     
                     // Themes
                 ],
-                dest: 'app/compiled/scripts/app.js',
+                dest: 'app/build/scripts/app.js',
+            }
+        },
+
+        modernizr: {
+            dist: {
+                "uglify" : false,
+                "dest" : "app/build/scripts/modernizr.js"
             }
         },
 		
         uglify: {
             build: {
-                src: 'app/compiled/scripts/app.js',
-                dest: 'app/compiled/scripts/app.min.js'
+                src: 'app/build/scripts/app.js',
+                dest: 'app/build/scripts/app.min.js'
             },
             Modernizr: {
-                src: 'app/vendor/Modernizr/modernizr.js',
-                dest: 'app/compiled/scripts/modernizr.min.js'
-            }
+                src: 'app/build/scripts/modernizr.js',
+                dest: 'app/build/scripts/modernizr.min.js'
+            },
         },
         
         sass: {
@@ -46,7 +53,15 @@ module.exports = function(grunt) {
                     style: 'expanded'
                 },
                 files: {
-                    'app/compiled/styles/app.css': 'app/app.scss'
+                    'app/build/styles/app.css': 'app/app.scss'
+                }
+            },
+            compressed: {
+                options: {
+                    style: 'compressed'
+                },
+                files: {
+                    'app/build/styles/app.min.css': 'app/app.scss'
                 }
             } 
         },
@@ -66,13 +81,6 @@ module.exports = function(grunt) {
                     spawn: false,
                 }
             }
-        },
-        
-        run_grunt: {
-            Modernizr: {
-                //task: ['clean', 'jshint:strictTarget', 'mocha:subTarget'],
-                //src: ['app/vendor/Modernizr/Gruntfile.js']
-            }
         }
 
     });
@@ -82,7 +90,6 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-sass');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks("grunt-modernizr");
-    grunt.loadNpmTasks('grunt-run-grunt');
 
     grunt.registerTask('default', ['concat', 'uglify', 'sass', 'watch']);
 
