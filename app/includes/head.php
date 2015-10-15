@@ -17,13 +17,13 @@
     <!--[if IE]><link rel="shortcut icon" href="<?php echo appDir ?>/images/favicon.ico"><![endif]-->
 
     <!-- Stylesheet -->
-    <link rel="stylesheet" href="<?php echo appDir ?>/compiled/styles/app.css">
+    <link rel="stylesheet" href="<?php echo appDir ?>/build/styles/app.css">
 	
     <!-- Modernizr -->
     <!--<script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>-->
-    <script src="<?php echo appDir ?>/vendor/Modernizr/modernizr.min.js"></script>
+    <script src="<?php echo appDir ?>/build/scripts/modernizr.min.js"></script>
 	
-	<!-- jQuery Helper -->
-	<script src="<?php echo appDir ?>/includes/jquery-helper-begin.js"></script>
+    <!-- sudojQuery start -->
+    <script src="<?php echo appDir ?>/build/scripts/sudojQuery-start.min.js"></script>
 	
 </head>

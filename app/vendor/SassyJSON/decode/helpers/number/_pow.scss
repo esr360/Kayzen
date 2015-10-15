@@ -1,8 +1,10 @@
-/// Power function
-/// @access private
-/// @param {Number} $x - number
-/// @param {Number} $n - power
-/// @return {Number}
+// Power function
+// --------------------------------------------------------------------------------
+// @param [number] $x: number
+// @param [number] $n: power
+// --------------------------------------------------------------------------------
+// @return [number] $x ^ $n
+
 @function _pow($x, $n) {
   @if $n == 0 { @return 1; }
   $ret: 1;

@@ -1,16 +1,16 @@
-/// Parses a JSON encoded object
-/// @param {String} $source - JSON complete source
-/// @param {Number} $pointer - current pointer
-/// @throw Unexpected comma in object literal.
-/// @throw Unexpected token $token in object literal.
-/// @throw Missing comma in object literal.
-/// @throw Unterminated object literal.
-/// @throw Consuming token `:` failed.
-/// @return {List} (new pointer, map)
-/// @require {function} _throw
-/// @require {function} _consume
-/// @require {function} _json-decode--value
-/// @require {function} _json-decode--string
+// Parses a JSON encoded object
+// --------------------------------------------------------------------------------
+// @param [string] $source: JSON complete source
+// @param [number] $pointer: current pointer
+// --------------------------------------------------------------------------------
+// @throw "Unexpected comma in object literal."
+// @throw "Unexpected token $token in object literal."
+// @throw "Missing comma in object literal."
+// @throw "Unterminated object literal."
+// @throw "Consuming token `:` failed."
+// --------------------------------------------------------------------------------
+// @return [list|false] (new pointer, map)
+
 @function _json-decode--map($source, $pointer) {
   $length: str-length($source);
   $map: ();
@@ -30,14 +30,20 @@
         @return _throw("Unexpected comma in object literal.", $pointer);
       }
       @return ($pointer, $map);
-    } @else if $token == " " or $token == "	" {
+    }
+
+    @else if $token == " " or $token == "	" {
       // @continue;
-    } @else if $token == "," {
+    }
+
+    @else if $token == "," {
       @if not $needs-comma {
         @return _throw("Unexpected comma in object literal.", $pointer);
       }
       $needs-comma: false;
-    } @else if $token == '"' {
+    }
+
+    @else if $token == '"' {
       @if $needs-comma {
         @return _throw("Missing comma in object literal.", $pointer);
       }
@@ -45,7 +51,7 @@
       // Read key
       $read-key:  _json-decode--string($source, $pointer);
       $pointer: nth($read-key, 1);
-      $key:     nth($read-key, 2);
+      $key:      nth($read-key, 2);
 
       // Remove colon
       $pointer: _consume($source, $pointer, ":");
@@ -61,7 +67,9 @@
       // Add pair to map
       $map: map-merge($map, ($key: $value));
       $needs-comma: true;
-    } @else {
+    }
+
+    @else {
       @return _throw("Unexpected token `" + $token + "` in object literal.", $pointer);
     }
   }

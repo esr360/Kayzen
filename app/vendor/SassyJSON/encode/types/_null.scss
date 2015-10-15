@@ -1,7 +1,9 @@
-/// Encode `null` to JSON
-/// @access private
-/// @param {Null} $null - `null`
-/// @return {String}
+// Encode `null` to JSON
+// --------------------------------------------------------------------------------
+// @param $null: `null`
+// --------------------------------------------------------------------------------
+// @return [string] `null`
+
 @function _json-encode--null($null) {
   @return "null";
 }

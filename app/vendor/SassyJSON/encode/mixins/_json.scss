@@ -1,21 +1,20 @@
-/// JSON.stringify a value and pass it as a font-family of head element
-/// @access public
-/// @param {*} $value - value to be stringified
-/// @param {String} $flag (all) - output driver
-/// @require {function} json-encode
-@mixin json-encode($value, $flag: "pseudo", $selector: "#stylesConfigJSON") {
-	
+// JSON.stringify a value and pass it as a font-family of head element
+// --------------------------------------------------------------------------------
+// @param $value: value to be stringified
+// @parem $flag: output driver
+
+@mixin json-encode($value, $flag: all) {
+  $flag: if(not index(all regular media comment, $flag), all, $flag);
   $json: json-encode($value);
 
   // Persistent comment
-  @if $flag == "comment" {
+  @if $flag == comment or $flag == all {
     /*! json-encode: #{$json} */
   }
-  
   // Regular property value pair
-  @if $flag == "pseudo" {
+  @if $flag == regular or $flag == all {
     // All browsers except IE8-
-    #{$selector}::before {
+    body::before {
       // This element must be in the render tree to get it via getComputedStyle(document.body, ':before');
       content: json-encode($value);
       display: block;
@@ -23,10 +22,7 @@
       overflow: hidden;
       width: 0;
     }
-  }
 
-  // Regular property value pair
-  @if $flag == "head" {
     // All browsers except Opera (Presto based)
     head {
       font-family: json-encode($value);
@@ -34,12 +30,11 @@
   }
 
   // Falsy media query
-  @if $flag == "media" {
+  @if $flag == media or $flag == all {
     @media -json-encode {
       json {
         json: $json;
       }
     }
   }
-  
 }

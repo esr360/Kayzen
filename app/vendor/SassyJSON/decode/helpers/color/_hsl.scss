@@ -1,8 +1,9 @@
-/// Cast a JSON encoded string into a hsl(a) color
-/// @access private
-/// @param {String} $string - JSON string
-/// @return {Color | String} - string or hsl(a) color, depending on the match
-/// @require {function} _get-color-value
+// Cast a JSON encoded string into a hsl(a) color
+// --------------------------------------------------------------------------------
+// @param [string] $string: JSON string
+// --------------------------------------------------------------------------------
+// @return [color|string] string or hsl(a) color, depending on the match
+
 @function _from-hsl($string) {
   $frags: ();
   $string-lower: to-lower-case($string);
@@ -14,9 +15,11 @@
     $token: str-slice($string-lower, $i, $i);
     @if $token == ' ' or $token == "	" {
       // @continue;
-    } @else if $token == '(' or $token == ',' {
+    }
+    @else if $token == '(' or $token == ',' {
       $frags: append($frags, "");
-    } @else if $token == ')' {
+    }
+    @else if $token == ')' {
       @if length($frags) != if($is-alpha, 4, 3) { @return $string; } // Parsing error
       $hue: _get-color-value(nth($frags, 1));
       $saturation: _get-color-value(nth($frags, 2));
@@ -34,7 +37,8 @@
       }
 
       @return hsl($hue, $saturation, $lightness);
-    } @else {
+    }
+    @else {
       $frags: set-nth($frags, length($frags), nth($frags, length($frags)) + $token);
     }
   }

@@ -19,7 +19,11 @@ $to-JSON    : true;
 @import "vendor/SassyJSON/SassyJSON";
 @import "vendor/Modular/modular";
 @import "vendor/Normalize/normalize";
-@import "vendor/Owl-Carousel/owl-carousel";
+@import "vendor/Owl-Carousel/scss/owl.animate";
+@import "vendor/Owl-Carousel/scss/owl.autoheight";
+@import "vendor/Owl-Carousel/scss/owl.core";
+@import "vendor/Owl-Carousel/scss/owl.lazyload";
+@import "vendor/Owl-Carousel/scss/owl.video";
 
 // Theme files
 @import "includes/tools";
