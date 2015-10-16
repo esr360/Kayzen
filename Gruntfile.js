@@ -92,6 +92,12 @@ module.exports = function(grunt) {
         },
         
         copy: {
+            jQuery: {
+              files: [{
+                  src: 'app/vendor/jQuery/dist/jquery.min.js',
+                  dest: 'app/build/scripts/jquery.min.js'
+              }]  
+            },
             normalize: {
                 files: [{
                     expand: true,
