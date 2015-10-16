@@ -90,6 +90,20 @@ module.exports = function(grunt) {
                 colorizeOutput: true
             },
         },
+        
+        copy: {
+            normalize: {
+                files: [{
+                    expand: true,
+                    cwd: 'app/vendor/Normalize/',
+                    src: ['normalize.css'],
+                    dest: 'app/includes/',
+                    rename: function(dest, src) {
+                        return dest + src.replace(/\.css$/, ".scss");
+                    }
+                }]
+            }
+        },
   
         watch: {
             scripts: {
@@ -114,6 +128,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-sass');
     grunt.loadNpmTasks('grunt-contrib-watch');
+    grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-scss-lint');
     grunt.loadNpmTasks("grunt-modernizr");
 
