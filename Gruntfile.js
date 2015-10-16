@@ -29,7 +29,7 @@ module.exports = function(grunt) {
                     'app/modules/elements/**/*.js',
                     
                     // Objects					
-                    'app/modules/objects/**/*.js'
+                    ['app/modules/objects/**/*.js', '!app/modules/objects/google-map/google-map.js']
                     
                     // Themes
                 ],
@@ -54,11 +54,11 @@ module.exports = function(grunt) {
                 dest: 'app/build/scripts/modernizr.min.js'
             },
             sudojQueryStart: {
-                src: 'app/vendor/sudojQuery/sudojQuery-start.js',
+                src: 'app/vendor/sudojQuery/src/sudojQuery-start.js',
                 dest: 'app/build/scripts/sudojQuery-start.min.js'
             },
             sudojQueryEnd: {
-                src: 'app/vendor/sudojQuery/sudojQuery-end.js',
+                src: 'app/vendor/sudojQuery/src/sudojQuery-end.js',
                 dest: 'app/build/scripts/sudojQuery-end.min.js'
             }
         },
