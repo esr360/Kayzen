@@ -18,10 +18,10 @@ module.exports = function(grunt) {
                     'app/includes/*.js',
                     
                     // Elements
-                    'app/modules/elements/*/*.js',
+                    'app/modules/elements/**/*.js',
                     
                     // Objects					
-                    'app/modules/objects/*/*.js'
+                    'app/modules/objects/**/*.js'
                     
                     // Themes
                 ],
@@ -73,7 +73,16 @@ module.exports = function(grunt) {
                 }
             } 
         },
-
+        
+        scsslint: {
+            allFiles: [
+                'app/app.scss',
+            ],
+            options: {
+                colorizeOutput: true
+            },
+        },
+  
         watch: {
             scripts: {
                 files: ['**/*.js'],
@@ -89,15 +98,6 @@ module.exports = function(grunt) {
                     spawn: false,
                 }
             }
-        },
-        
-        copy: {
-            SassyJSON: {
-                expand: true,
-                cwd: 'node_modules/sassyjson/stylesheets/',
-                src: '**/*',
-                dest: 'app/vendor/SassyJSON/'
-            },
         }
 
     });
@@ -107,6 +107,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-sass');
     grunt.loadNpmTasks('grunt-contrib-watch');
+    grunt.loadNpmTasks('grunt-scss-lint');
     grunt.loadNpmTasks("grunt-modernizr");
 
     grunt.registerTask('default', [
