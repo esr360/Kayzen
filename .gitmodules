@@ -16,3 +16,6 @@
 [submodule "app/vendor/sudojQuery"]
 	path = app/vendor/sudojQuery
 	url = https://github.com/esr360/sudojQuery.git
+[submodule "app/vendor/jQuery"]
+	path = app/vendor/jQuery
+	url = https://github.com/jquery/jquery.git
