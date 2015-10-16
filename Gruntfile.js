@@ -9,15 +9,15 @@ module.exports = function(grunt) {
                 src: [
                     // Vendor					
                     'app/vendor/Modular/modular.js',
-                    'app/vendor/Owl-Carousel/js/owl.carousel.js',
-                    'app/vendor/Owl-Carousel/js/owl.animate.js',
-                    'app/vendor/Owl-Carousel/js/owl.autoheight.js',
-                    'app/vendor/Owl-Carousel/js/owl.autoplay.js',
-                    'app/vendor/Owl-Carousel/js/owl.compiled.js',
-                    'app/vendor/Owl-Carousel/js/owl.hash.js',
-                    'app/vendor/Owl-Carousel/js/owl.lazyload.js',
-                    'app/vendor/Owl-Carousel/js/owl.navigation.js',
-                    'app/vendor/Owl-Carousel/js/owl.video.js',
+                    'app/vendor/Owl-Carousel/src/js/owl.carousel.js',
+                    'app/vendor/Owl-Carousel/src/js/owl.animate.js',
+                    'app/vendor/Owl-Carousel/src/js/owl.autoheight.js',
+                    'app/vendor/Owl-Carousel/src/js/owl.autoplay.js',
+                    'app/vendor/Owl-Carousel/src/js/owl.compiled.js',
+                    'app/vendor/Owl-Carousel/src/js/owl.hash.js',
+                    'app/vendor/Owl-Carousel/src/js/owl.lazyload.js',
+                    'app/vendor/Owl-Carousel/src/js/owl.navigation.js',
+                    'app/vendor/Owl-Carousel/src/js/owl.video.js',
                     
                     // Plugins					
                     'app/plugins/*.js',
