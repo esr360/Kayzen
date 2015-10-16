@@ -9,9 +9,6 @@
     "grunt-contrib-uglify": "^0.9.2",
     "grunt-contrib-watch": "^0.6.1",
     "grunt-modernizr": "^1.0.0",
-    "grunt-run-grunt": "^0.1.4",
-    "grunt-scss-lint": "^0.3.8",
-    "grunt-string-replace": "^1.2.0",
-    "sassyjson": "^1.1.8"
+    "grunt-scss-lint": "^0.3.8"
   }
 }

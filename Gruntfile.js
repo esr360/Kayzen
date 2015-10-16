@@ -9,7 +9,15 @@ module.exports = function(grunt) {
                 src: [
                     // Vendor					
                     'app/vendor/Modular/modular.js',
-                    'app/vendor/Owl-Carousel/js/*.js',
+                    'app/vendor/Owl-Carousel/js/owl.carousel.js',
+                    'app/vendor/Owl-Carousel/js/owl.animate.js',
+                    'app/vendor/Owl-Carousel/js/owl.autoheight.js',
+                    'app/vendor/Owl-Carousel/js/owl.autoplay.js',
+                    'app/vendor/Owl-Carousel/js/owl.compiled.js',
+                    'app/vendor/Owl-Carousel/js/owl.hash.js',
+                    'app/vendor/Owl-Carousel/js/owl.lazyload.js',
+                    'app/vendor/Owl-Carousel/js/owl.navigation.js',
+                    'app/vendor/Owl-Carousel/js/owl.video.js',
                     
                     // Plugins					
                     'app/plugins/*.js',
@@ -103,7 +111,6 @@ module.exports = function(grunt) {
     });
 
     grunt.loadNpmTasks('grunt-contrib-concat');
-    grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-sass');
     grunt.loadNpmTasks('grunt-contrib-watch');
@@ -112,7 +119,6 @@ module.exports = function(grunt) {
 
     grunt.registerTask('default', [
         'concat',
-        'copy',
         'uglify',
         'sass',
         'watch'
