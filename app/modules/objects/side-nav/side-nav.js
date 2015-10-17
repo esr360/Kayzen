@@ -5,7 +5,7 @@
 if (setting('app-header', 'side')) {
 	
 	// replace navigation class
-	$(navigation).removeClass (function (index, css) {
+	$(_navigation).removeClass (function (index, css) {
 		return (css.match (/(^|\s)navigation\S+/g) || []).join(' ');
 	}).addClass('app-header_side-nav');
 	

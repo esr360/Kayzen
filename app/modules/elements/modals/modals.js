@@ -37,7 +37,7 @@
 	// call function on all modals
 	$.fn.extend({
 		
-		modalInit: function(options) {
+		modal: function(options) {
 			
 			var defaults = {  
 				overlay : true,
@@ -50,7 +50,7 @@
 			
 			function openModal(el) {
 				// close any pre-exisintg visible modals
-				$(modal).removeClass('modal-visible');
+				$(_modal).removeClass('modal-visible');
 				// show the target modal
 				el.addClass('modal-visible');
 				if (options.overlay) {
@@ -88,12 +88,12 @@
 				
 			});
 			
-		} // tooltip
+		} // modal
 		
 	});
 
 }(jQuery));
 
-$(modal).modalInit({
+$(_modal).modal({
 	animate: 'left'
 });

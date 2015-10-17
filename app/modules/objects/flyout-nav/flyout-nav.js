@@ -8,7 +8,7 @@ $(document).ready(function() {
         .addClass('flyout-nav')
         .append('<nav class="side-nav"></nav>');
 
-    var fnContainer = $('#flyout').find(sideNav);
+    var fnContainer = $('#flyout').find(_sideNav);
 
     // create the flyout nav HTML
     function createFlyoutNav() {
@@ -24,25 +24,25 @@ $(document).ready(function() {
             
             // create open/close icon
             var openClose = '<i class="side-nav_openClose fa ' + module['side-nav']['collapsible']['icon'] + '"></i>'
-            $(flyoutNav).find('a:not(:only-child)').prepend(openClose);
+            $(_flyoutNav).find('a:not(:only-child)').prepend(openClose);
         
-            $(flyoutNav)
+            $(_flyoutNav)
                 .find('li > [class*="mega-menu"]').parent()
                 .find('.side-nav_openClose').remove();
                 
-            $(flyoutNav).on('click', '.side-nav_openClose', function(e){
+            $(_flyoutNav).on('click', '.side-nav_openClose', function(e){
                 $(this).parent().find('+ ul').slideToggle(baseTransition);
             });
                 
         } else {
-            $(flyoutNav).find('.side-nav_openClose').remove();
+            $(_flyoutNav).find('.side-nav_openClose').remove();
         }
 
         // collapse by default
         var openDefault = module['flyout-nav']['collapsible']['open-by-default'];
         
-        if ($(flyoutNav).is('[class*="-collapse"]') == true || openDefault == false) {
-            $(flyoutNav).find('a:not(:only-child) ~ ul').hide();
+        if ($(_flyoutNav).is('[class*="-collapse"]') == true || openDefault == false) {
+            $(_flyoutNav).find('a:not(:only-child) ~ ul').hide();
         }
     
     } // createFlyoutNav()

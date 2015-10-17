@@ -7,7 +7,7 @@ var topBarDropdown = $('[class*="top-bar_nav"]').find("> ul > li > a:not(:only-c
 $(window).on("load scroll", function(e) {
 	
 	var scroll = $(window).scrollTop(),
-		topBarHeight = $(topBar).height();
+		topBarHeight = $(_topBar).height();
 		
 	if (scroll > topBarHeight) {
 		topBarDropdown.hover(

@@ -6,7 +6,7 @@
 		
 	$.fn.extend({
 		
-		tooltipInit: function(options) {
+		tooltip: function(options) {
 			
 			var defaults = {  
 				position : "top"
@@ -39,29 +39,29 @@
 
 $(window).load(function(){
 	
-	$(tooltip).each(function() {
+	$(_tooltip).each(function() {
 		
 		if ($(this).is('[class*="-top"]')) {
 			
-			$(this).tooltipInit({
+			$(this).tooltip({
 				position : "top"
 			});
 			
 		} else if ($(this).is('[class*="-bottom"]')) {
 			
-			$(this).tooltipInit({
+			$(this).tooltip({
 				position : "bottom"
 			});
 			
 		} else if ($(this).is('[class*="-left"]')) {
 			
-			$(this).tooltipInit({
+			$(this).tooltip({
 				position : "left"
 			});
 			
 		} else if ($(this).is('[class*="-right"]')) {
 			
-			$(this).tooltipInit({
+			$(this).tooltip({
 				position : "right"
 			});
 			

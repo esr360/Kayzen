@@ -49,7 +49,7 @@ var moduleCC = getStylesConfig(camelCase);
 var componentIndex = 0;
 $.each(module, function(component) {
 	var componentCC = moduleCC[Object.keys(moduleCC)[componentIndex]]['name'];
-	window[componentCC] = '.' + component + ', [class*="' + component + '-"]';
+	window['_' + componentCC] = '.' + component + ', [class*="' + component + '-"]';
 	componentIndex++;
 });
 
@@ -5082,11 +5082,11 @@ $('[data-bg]').each(function() {
 // Accordions
 //=================================================================
 
-function accordionInit() {
+function accordion() {
 
-	$(accordion).find('> *.active > *:first-child + *').addClass('active');
+	$(_accordion).find('> *.active > *:first-child + *').addClass('active');
 
-	$(accordion).find('> * > *:first-child').click(function () {
+	$(_accordion).find('> * > *:first-child').click(function () {
 
 		var $parent = $(this).parent();
 
@@ -5100,9 +5100,9 @@ function accordionInit() {
 
 	});
   
-} // accordionInit
+} // accordion
 
-$(accordionInit);
+$(accordion);
 //=================================================================
 // Carousels
 //=================================================================
@@ -5233,7 +5233,7 @@ $("#portfolio-carousel").kCarousel({
 	// call function on all modals
 	$.fn.extend({
 		
-		modalInit: function(options) {
+		modal: function(options) {
 			
 			var defaults = {  
 				overlay : true,
@@ -5246,7 +5246,7 @@ $("#portfolio-carousel").kCarousel({
 			
 			function openModal(el) {
 				// close any pre-exisintg visible modals
-				$(modal).removeClass('modal-visible');
+				$(_modal).removeClass('modal-visible');
 				// show the target modal
 				el.addClass('modal-visible');
 				if (options.overlay) {
@@ -5284,13 +5284,13 @@ $("#portfolio-carousel").kCarousel({
 				
 			});
 			
-		} // tooltip
+		} // modal
 		
 	});
 
 }(jQuery));
 
-$(modal).modalInit({
+$(_modal).modal({
 	animate: 'left'
 });
 //-----------------------------------------------------------------
@@ -5306,9 +5306,9 @@ $("progress.progress-bar").each(function() {
 /* Tabs
 ================================================================ */
 
-function tabsInit() {
+function tabs() {
 
-	$(tabs).find('[class*="tabs_nav"] > li').click(function() {
+	$(_tabs).find('[class*="tabs_nav"] > li').click(function() {
 
 		var $section = $(this).parents(tabs).find('.tabs_content');
 
@@ -5324,7 +5324,7 @@ function tabsInit() {
   
 }
 
-$(tabsInit);
+$(tabs);
 //=================================================================
 // Tooltips
 //=================================================================
@@ -5333,7 +5333,7 @@ $(tabsInit);
 		
 	$.fn.extend({
 		
-		tooltipInit: function(options) {
+		tooltip: function(options) {
 			
 			var defaults = {  
 				position : "top"
@@ -5366,29 +5366,29 @@ $(tabsInit);
 
 $(window).load(function(){
 	
-	$(tooltip).each(function() {
+	$(_tooltip).each(function() {
 		
 		if ($(this).is('[class*="-top"]')) {
 			
-			$(this).tooltipInit({
+			$(this).tooltip({
 				position : "top"
 			});
 			
 		} else if ($(this).is('[class*="-bottom"]')) {
 			
-			$(this).tooltipInit({
+			$(this).tooltip({
 				position : "bottom"
 			});
 			
 		} else if ($(this).is('[class*="-left"]')) {
 			
-			$(this).tooltipInit({
+			$(this).tooltip({
 				position : "left"
 			});
 			
 		} else if ($(this).is('[class*="-right"]')) {
 			
-			$(this).tooltipInit({
+			$(this).tooltip({
 				position : "right"
 			});
 			
@@ -5555,7 +5555,7 @@ $(document).ready(function() {
         .addClass('flyout-nav')
         .append('<nav class="side-nav"></nav>');
 
-    var fnContainer = $('#flyout').find(sideNav);
+    var fnContainer = $('#flyout').find(_sideNav);
 
     // create the flyout nav HTML
     function createFlyoutNav() {
@@ -5571,25 +5571,25 @@ $(document).ready(function() {
             
             // create open/close icon
             var openClose = '<i class="side-nav_openClose fa ' + module['side-nav']['collapsible']['icon'] + '"></i>'
-            $(flyoutNav).find('a:not(:only-child)').prepend(openClose);
+            $(_flyoutNav).find('a:not(:only-child)').prepend(openClose);
         
-            $(flyoutNav)
+            $(_flyoutNav)
                 .find('li > [class*="mega-menu"]').parent()
                 .find('.side-nav_openClose').remove();
                 
-            $(flyoutNav).on('click', '.side-nav_openClose', function(e){
+            $(_flyoutNav).on('click', '.side-nav_openClose', function(e){
                 $(this).parent().find('+ ul').slideToggle(baseTransition);
             });
                 
         } else {
-            $(flyoutNav).find('.side-nav_openClose').remove();
+            $(_flyoutNav).find('.side-nav_openClose').remove();
         }
 
         // collapse by default
         var openDefault = module['flyout-nav']['collapsible']['open-by-default'];
         
-        if ($(flyoutNav).is('[class*="-collapse"]') == true || openDefault == false) {
-            $(flyoutNav).find('a:not(:only-child) ~ ul').hide();
+        if ($(_flyoutNav).is('[class*="-collapse"]') == true || openDefault == false) {
+            $(_flyoutNav).find('a:not(:only-child) ~ ul').hide();
         }
     
     } // createFlyoutNav()
@@ -5714,11 +5714,11 @@ $(document).ready(function() {
 
 if (setting('app-header', 'sticky'))  {
 	
-	var stickyOffset = $(appHeader).offset().top,
-		navDropdown  = $(navigation).find("> ul > li > a:not(:only-child)").parent();
+	var stickyOffset = $(_appHeader).offset().top,
+		navDropdown  = $(_navigation).find("> ul > li > a:not(:only-child)").parent();
 	
 	function stickHeader() {
-		$(appHeader).addClass('fixed');
+		$(_appHeader).addClass('fixed');
 		navDropdown.hover(
 			function(){ 
 				$("#site-overlay").addClass('header_visible');
@@ -5730,7 +5730,7 @@ if (setting('app-header', 'sticky'))  {
 	}
 	
 	function unStickHeader() {
-		$(appHeader).removeClass('fixed');
+		$(_appHeader).removeClass('fixed');
 		navDropdown.unbind('mouseenter mouseleave');
 		$("#site-overlay").removeClass('header_visible');
 	}
@@ -5751,7 +5751,7 @@ if (setting('app-header', 'sticky'))  {
 //-----------------------------------------------------------------
 
 if (setting('app-header', 'side')) {
-	$(appHeader).prependTo('body');	
+	$(_appHeader).prependTo('body');	
 }
 //=================================================================
 // Page Overview
@@ -5821,7 +5821,7 @@ $('.search-box_close').click(function() {
 if (setting('app-header', 'side')) {
 	
 	// replace navigation class
-	$(navigation).removeClass (function (index, css) {
+	$(_navigation).removeClass (function (index, css) {
 		return (css.match (/(^|\s)navigation\S+/g) || []).join(' ');
 	}).addClass('app-header_side-nav');
 	
@@ -5859,7 +5859,7 @@ var topBarDropdown = $('[class*="top-bar_nav"]').find("> ul > li > a:not(:only-c
 $(window).on("load scroll", function(e) {
 	
 	var scroll = $(window).scrollTop(),
-		topBarHeight = $(topBar).height();
+		topBarHeight = $(_topBar).height();
 		
 	if (scroll > topBarHeight) {
 		topBarDropdown.hover(

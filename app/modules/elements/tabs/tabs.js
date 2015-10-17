@@ -2,9 +2,9 @@
 /* Tabs
 ================================================================ */
 
-function tabsInit() {
+function tabs() {
 
-	$(tabs).find('[class*="tabs_nav"] > li').click(function() {
+	$(_tabs).find('[class*="tabs_nav"] > li').click(function() {
 
 		var $section = $(this).parents(tabs).find('.tabs_content');
 
@@ -20,4 +20,4 @@ function tabsInit() {
   
 }
 
-$(tabsInit);
+$(tabs);

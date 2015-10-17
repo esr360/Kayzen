@@ -49,7 +49,7 @@ var moduleCC = getStylesConfig(camelCase);
 var componentIndex = 0;
 $.each(module, function(component) {
 	var componentCC = moduleCC[Object.keys(moduleCC)[componentIndex]]['name'];
-	window[componentCC] = '.' + component + ', [class*="' + component + '-"]';
+	window['_' + componentCC] = '.' + component + ', [class*="' + component + '-"]';
 	componentIndex++;
 });
 

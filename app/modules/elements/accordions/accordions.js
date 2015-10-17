@@ -2,11 +2,11 @@
 // Accordions
 //=================================================================
 
-function accordionInit() {
+function accordion() {
 
-	$(accordion).find('> *.active > *:first-child + *').addClass('active');
+	$(_accordion).find('> *.active > *:first-child + *').addClass('active');
 
-	$(accordion).find('> * > *:first-child').click(function () {
+	$(_accordion).find('> * > *:first-child').click(function () {
 
 		var $parent = $(this).parent();
 
@@ -20,6 +20,6 @@ function accordionInit() {
 
 	});
   
-} // accordionInit
+} // accordion
 
-$(accordionInit);
+$(accordion);
