@@ -36,22 +36,11 @@ module.exports = function(grunt) {
                 dest: 'app/build/scripts/app.js',
             }
         },
-
-        modernizr: {
-            dist: {
-                "uglify" : false,
-                "dest" : "app/build/scripts/modernizr.js"
-            }
-        },
 		
         uglify: {
             build: {
                 src: 'app/build/scripts/app.js',
                 dest: 'app/build/scripts/app.min.js'
-            },
-            Modernizr: {
-                src: 'app/build/scripts/modernizr.js',
-                dest: 'app/build/scripts/modernizr.min.js'
             },
             sudojQueryStart: {
                 src: 'app/vendor/sudojQuery/src/sudojQuery-start.js',
@@ -136,7 +125,6 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-scss-lint');
-    grunt.loadNpmTasks("grunt-modernizr");
 
     grunt.registerTask('default', [
         'concat',
