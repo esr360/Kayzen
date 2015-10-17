@@ -19,3 +19,6 @@
 [submodule "app/vendor/jQuery"]
 	path = app/vendor/jQuery
 	url = https://github.com/jquery/jquery.git
+[submodule "app/vendor/Modular"]
+	path = app/vendor/Modular
+	url = https://github.com/esr360/Modular.git
