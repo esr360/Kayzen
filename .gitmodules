@@ -19,3 +19,6 @@
 [submodule "app/vendor/Modular"]
 	path = app/vendor/Modular
 	url = https://github.com/esr360/Modular.git
+[submodule "app/vendor/Enlighter"]
+	path = app/vendor/Enlighter
+	url = https://github.com/AndiDittrich/EnlighterJS.git
