@@ -8,7 +8,7 @@ module.exports = function(grunt) {
             dist: {
                 src: [
                     // Vendor					
-                    'app/vendor/Modular/modular.js',
+                    'app/vendor/Modular/src/modular.js',
                     'app/vendor/Owl-Carousel/src/js/owl.carousel.js',
                     'app/vendor/Owl-Carousel/src/js/owl.animate.js',
                     'app/vendor/Owl-Carousel/src/js/owl.autoheight.js',
