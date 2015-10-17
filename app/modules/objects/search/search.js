@@ -3,7 +3,7 @@
 //=================================================================
 
 $('#search-trigger').click(function(e) {
-	$(searchBox)
+	$(_searchBox)
 		.addClass('search-box-visible')
 		.find('[type="search"]')
 		.focus();
@@ -11,5 +11,5 @@ $('#search-trigger').click(function(e) {
 });
 
 $('.search-box_close').click(function() {
-	$(searchBox).removeClass('search-box-visible');
+	$(_searchBox).removeClass('search-box-visible');
 });
