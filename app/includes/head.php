@@ -20,6 +20,10 @@
     <link rel="stylesheet" href="<?php echo appDir ?>/build/styles/app.css">
 	
     <!-- sudojQuery start -->
-    <script src="<?php echo appDir ?>/build/scripts/sudojQuery-start.min.js"></script>
+    <?php if (env == 'dev') { ?>
+        <script src="<?php echo appDir ?>/build/scripts/sudojQuery-start.js"></script>
+    <?php } else if (env == 'prod') { ?>
+        <script src="<?php echo appDir ?>/build/scripts/sudojQuery-start.min.js"></script>
+    <?php } ?>
 	
 </head>

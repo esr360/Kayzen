@@ -239,6 +239,24 @@ module.exports = function(grunt) {
                     message: 'Your app has been successfully built!'
                 }
             }
+        },
+      
+        //---------------------------------------------------------
+        // Notify
+        // https://github.com/sindresorhus/grunt-sass
+        //---------------------------------------------------------
+        
+        setPHPConstant: {
+            dev: {
+                constant    : 'env',
+                value       : 'dev',
+                file        : 'app/app.php'
+            },
+            prod: {
+                constant    : 'env',
+                value       : 'prod',
+                file        : 'app/app.php'
+            }
         }
 
     });
@@ -256,14 +274,16 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-postcss');
     grunt.loadNpmTasks('grunt-scss-lint');
     grunt.loadNpmTasks('grunt-notify');
+    grunt.loadNpmTasks('grunt-php-set-constant');
     
     //-------------------------------------------------------------
     // Register Tasks
     //-------------------------------------------------------------
     
     grunt.registerTask('compile:dev', [
-        'copy:fontAwesome',
+        'setPHPConstant:dev',
         'clean',
+        'copy:fontAwesome',
         'concat',
         'sass:dev',
         'copy:dev',
@@ -271,8 +291,9 @@ module.exports = function(grunt) {
     ]);
     
     grunt.registerTask('compile:prod', [
-        'copy:fontAwesome',
+        'setPHPConstant:prod',
         'clean',
+        'copy:fontAwesome',
         'uglify',
         'sass:prod',
         'copy:prod',

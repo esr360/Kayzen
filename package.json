@@ -10,7 +10,9 @@
     "grunt-contrib-uglify": "^0.9.2",
     "grunt-contrib-watch": "^0.6.1",
     "grunt-notify": "^0.4.1",
+    "grunt-php-set-constant": "0.0.15",
     "grunt-postcss": "^0.6.0",
-    "grunt-scss-lint": "^0.3.8"
+    "grunt-scss-lint": "^0.3.8",
+    "grunt-text-replace": "^0.4.0"
   }
 }
