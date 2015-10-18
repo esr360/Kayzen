@@ -120,7 +120,7 @@ module.exports = function(grunt) {
                     })
                 ]
             },
-            dist: {
+            build: {
                 src: buildStyles + '*.css'
             }
         },

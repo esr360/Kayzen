@@ -19,10 +19,6 @@
     <!-- Stylesheet -->
     <link rel="stylesheet" href="<?php echo appDir ?>/build/styles/app.css">
 	
-    <!-- Modernizr -->
-    <!--<script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>-->
-    <script src="<?php echo appDir ?>/build/scripts/modernizr.min.js"></script>
-	
     <!-- sudojQuery start -->
     <script src="<?php echo appDir ?>/build/scripts/sudojQuery-start.min.js"></script>
 	
