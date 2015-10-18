@@ -28,3 +28,6 @@
 [submodule "app/vendor/Stellar"]
 	path = app/vendor/Stellar
 	url = https://github.com/markdalgleish/stellar.js.git
+[submodule "app/vendor/TweeCool"]
+	path = app/vendor/TweeCool
+	url = https://github.com/esr360/tweecool-jquery-plugin.git
