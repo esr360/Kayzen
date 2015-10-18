@@ -25,3 +25,6 @@
 [submodule "app/vendor/jquery-animateNumber"]
 	path = app/vendor/jquery-animateNumber
 	url = https://github.com/aishek/jquery-animateNumber.git
+[submodule "app/vendor/Stellar"]
+	path = app/vendor/Stellar
+	url = https://github.com/markdalgleish/stellar.js.git
