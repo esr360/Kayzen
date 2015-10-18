@@ -32,6 +32,7 @@ module.exports = function(grunt) {
         'app/vendor/Modular/src/modular.js',
         'app/vendor/jquery-animateNumber/jquery.animateNumber.js.js',
         'app/vendor/Stellar/src/jquery.stellar.js',
+        'app/vendor/TweeCool/src/tweecool.js',
         'app/plugins/*.js',
         'app/includes/*.js',
         'app/modules/elements/**/*.js',
@@ -91,7 +92,8 @@ module.exports = function(grunt) {
                 },
                 files: {
                     [buildStyles + 'app.css']: 'app/app.scss'
-                }
+                },
+                tasks: ['postcss']
             },
             prod: {
                 options: {
@@ -99,10 +101,30 @@ module.exports = function(grunt) {
                 },
                 files: {
                     [buildStyles + 'app.min.css']: 'app/app.scss'
-                }
+                },
+                tasks: ['postcss']
             } 
         },
+        
+        //---------------------------------------------------------
+        // PostCSS
+        // https://github.com/sindresorhus/grunt-sass
+        //---------------------------------------------------------
       
+        postcss: {
+            options: {
+                map: true,
+                processors: [
+                    require('autoprefixer')({
+                        browsers: ['last 2 versions']
+                    })
+                ]
+            },
+            dist: {
+                src: buildStyles + '*.css'
+            }
+        },
+  
         //---------------------------------------------------------
         // Scss Lint
         // https://github.com/sindresorhus/grunt-sass
@@ -231,6 +253,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-contrib-clean');
+    grunt.loadNpmTasks('grunt-postcss');
     grunt.loadNpmTasks('grunt-scss-lint');
     grunt.loadNpmTasks('grunt-notify');
     
@@ -259,7 +282,8 @@ module.exports = function(grunt) {
 
     grunt.registerTask('default', [
         'compile:dev',
-        'watch'
+        'watch',
+        'postcss:dist'
     ]);
 
 }; // function(grunt)
