@@ -22,3 +22,6 @@
 [submodule "app/vendor/Enlighter"]
 	path = app/vendor/Enlighter
 	url = https://github.com/AndiDittrich/EnlighterJS.git
+[submodule "app/vendor/jquery-animateNumber"]
+	path = app/vendor/jquery-animateNumber
+	url = https://github.com/aishek/jquery-animateNumber.git
