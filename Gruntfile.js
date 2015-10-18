@@ -30,6 +30,7 @@ module.exports = function(grunt) {
     var _scripts = [   
         _owl,
         'app/vendor/Modular/src/modular.js',
+        'app/vendor/jquery-animateNumber/jquery.animateNumber.js.js',
         'app/plugins/*.js',
         'app/includes/*.js',
         'app/modules/elements/**/*.js',
@@ -69,11 +70,11 @@ module.exports = function(grunt) {
             },
             sudojQueryStart: {
                 src: 'app/vendor/sudojQuery/src/sudojQuery-start.js',
-                dest: 'app/build/scripts/sudojQuery-start.min.js'
+                dest: buildScripts + 'sudojQuery-start.min.js'
             },
             sudojQueryEnd: {
                 src: 'app/vendor/sudojQuery/src/sudojQuery-end.js',
-                dest: 'app/build/scripts/sudojQuery-end.min.js'
+                dest: buildScripts + 'sudojQuery-end.min.js'
             }
         },
       
@@ -121,30 +122,27 @@ module.exports = function(grunt) {
         //---------------------------------------------------------
         
         copy: {
-            normalize: {
+            fontAwesome: {
                 files: [{
-                    expand: true,
-                    cwd: 'app/vendor/Normalize/',
-                    src: ['normalize.css'],
-                    dest: 'app/includes/',
-                    rename: function(dest, src) {
-                        return dest + src.replace(/\.css$/, ".scss");
-                    }
+                    cwd: 'app/vendor/Font-Awesome/fonts',
+                    src: '**/*',
+                    dest: 'app/build/fonts',
+                    expand: true
                 }]
             },
             dev: {
                 files: [
                     {
                         src: 'app/vendor/jQuery/dist/jquery.js',
-                        dest: 'app/build/scripts/jquery.js'
+                        dest: buildScripts + 'jquery.js'
                     },
                     {
                         src: 'app/vendor/sudojQuery/src/sudojQuery-start.js',
-                        dest: 'app/build/scripts/sudojQuery-start.js'
+                        dest: buildScripts + 'sudojQuery-start.js'
                     },
                     {
                         src: 'app/vendor/sudojQuery/src/sudojQuery-end.js',
-                        dest: 'app/build/scripts/sudojQuery-end.js'
+                        dest: buildScripts + 'sudojQuery-end.js'
                     }
                 ]
             },
@@ -152,7 +150,7 @@ module.exports = function(grunt) {
                 files: [
                     {
                         src: 'app/vendor/jQuery/dist/jquery.min.js',
-                        dest: 'app/build/scripts/jquery.min.js'
+                        dest: buildScripts + 'jquery.min.js'
                     }
                 ]
             }
@@ -176,9 +174,7 @@ module.exports = function(grunt) {
   
         watch: {
             scripts: {
-                files: [
-                    'app/modules/**/*.js'
-                ],
+                files: _scripts,
                 tasks: ['concat', 'uglify', 'notify:scripts'],
                 options: {
                     spawn: false,
@@ -186,6 +182,7 @@ module.exports = function(grunt) {
             },
             css: {
                 files: [
+                    'app/includes/*.scss',
                     'app/modules/**/*.scss'
                 ],
                 tasks: ['sass', 'notify:css'],
@@ -212,6 +209,12 @@ module.exports = function(grunt) {
                     title: 'Styles Compiled',
                     message: 'All styles have been successfully compiled!'
                 }
+            },
+            app: {
+                options: {
+                    title: 'App Built',
+                    message: 'Your app has been successfully built!'
+                }
             }
         }
 
@@ -227,27 +230,30 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-contrib-clean');
-    grunt.loadNpmTasks('grunt-notify');
     grunt.loadNpmTasks('grunt-scss-lint');
+    grunt.loadNpmTasks('grunt-notify');
     
     //-------------------------------------------------------------
     // Register Tasks
     //-------------------------------------------------------------
     
     grunt.registerTask('compile:dev', [
+        'copy:fontAwesome',
         'clean',
         'concat',
-        'copy:normalize',
         'sass:dev',
-        'copy:dev'
+        'copy:dev',
+        'notify:app'
     ]);
     
     grunt.registerTask('compile:prod', [
+        'copy:fontAwesome',
         'clean',
-        'uglify', 
-        'copy:normalize',
+        'uglify',
         'sass:prod',
-        'copy:prod'
+        'copy:prod',
+        'scsslint',
+        'notify:app'
     ]);
 
     grunt.registerTask('default', [

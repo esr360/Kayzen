@@ -16,9 +16,10 @@ $to-JSON    : true;
 //-----------------------------------------------------------------
 
 // Vendor Files
-@import "includes/normalize";
+@import "vendor/Normalize/normalize";
 @import "vendor/SassyJSON/stylesheets/SassyJSON";
 @import "vendor/Modular/src/modular";
+@import "vendor/Font-Awesome/scss/font-awesome";
 @import "vendor/Owl-Carousel/src/scss/owl.animate";
 @import "vendor/Owl-Carousel/src/scss/owl.autoheight";
 @import "vendor/Owl-Carousel/src/scss/owl.core";
