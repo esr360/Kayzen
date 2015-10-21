@@ -27,7 +27,7 @@
 	// Component
 	//-------------------------------------------------------------
 
-	@include component {
+	@include component($type: chain) {
 
 	// Core Styles
 	//-------------------------------------------------------------
@@ -186,7 +186,7 @@
 		// Overlay
 		//---------------------------------------------------------
 		
-		@include setting(overlay) {
+		@include option(overlay) {
 			@include bg-overlay(rgba(
 				option($config, overlay-color), 
 				option($config, overlay-opacity)

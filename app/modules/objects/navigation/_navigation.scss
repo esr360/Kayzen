@@ -161,7 +161,7 @@
 	// Settings
 	//-------------------------------------------------------------
 	
-		@include setting(no-icons) {
+		@include option(no-icons) {
 			@include overwrite-sub(icon) {
 				display: none;
 			}

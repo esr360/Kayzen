@@ -66,7 +66,7 @@
 		// Header Bar
 		//---------------------------------------------------------
 		
-		@include setting(bar) {
+		@include option(bar) {
 			@include sub-component(wrapper) {	
 				display: table;
 				width: 100%;
@@ -80,7 +80,7 @@
 		// Absolute Position Header
 		//---------------------------------------------------------
 		
-		@include setting(absolute) {
+		@include option(absolute) {
 			position: absolute;
 			margin-top: option($config, absolute, top-position);
 			z-index: option($config, z-index);
@@ -90,7 +90,7 @@
 		// Side Header
 		//---------------------------------------------------------
 	
-		@include setting(side) {
+		@include option(side) {
 			
 			// Side Navigation
 			@extend #{$side-nav-selector};
@@ -112,7 +112,7 @@
 				}
 			}
 			
-			@include option($value: left) {
+			@include value($value: left) {
 				left: 0;
 				right: auto;
 				+ #site-content {
@@ -120,7 +120,7 @@
 				}
 			}
 			
-			@include option($value: right) {
+			@include value($value: right) {
 				right: 0;
 				left: auto;
 				+ #site-content {
@@ -129,7 +129,7 @@
 			}
 			
 			// Always show vertical scrollbars
-			@include option($option: show-y-scrollbar) {
+			@include value($setting: show-y-scrollbar) {
 				overflow-y: scroll;
 			}
 			
@@ -138,7 +138,7 @@
 		// Dark Header
 		//---------------------------------------------------------
 	
-		@include setting(dark) {
+		@include option(dark) {
 			background-color: option($config, dark, bg);
 		}
 		
@@ -149,7 +149,7 @@
 		// Sticky Header
 		//---------------------------------------------------------
 		
-		@include setting(sticky) {
+		@include option(sticky) {
 			&.fixed {
 				position: fixed;
 				margin-top: 0;

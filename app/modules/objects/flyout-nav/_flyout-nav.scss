@@ -43,7 +43,7 @@
 	    	left: 0;
 	    }
 		
-		@include setting(show-y-scrollbar) {
+		@include option(show-y-scrollbar) {
 			> nav {
 				overflow-y: scroll;
 			}

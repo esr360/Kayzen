@@ -44,7 +44,7 @@
 	// Modifiers
 	//-------------------------------------------------------------
 	
-		@include setting(dark) {
+		@include option(dark) {
 			background: color(greyscale, grey-5);
 			color: color(greyscale, white);
 		}

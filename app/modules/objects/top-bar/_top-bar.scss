@@ -121,7 +121,7 @@
 		// Fixed Bar
 		//---------------------------------------------------------
 		
-		@include setting(fixed) {
+		@include option(fixed) {
 			position: fixed;
 			top: 0;
 			width: 100%;
