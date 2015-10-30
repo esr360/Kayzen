@@ -32,7 +32,7 @@
 			<div id="portfolio-carousel" class="owl-carousel">
 				
 				<div class="container">
-					<div class="row-flow-no-gutter-waffle">
+					<div class="row-no-gutter">
 						<?php 
 							$rows = 2; 
 							$columns = 2;
@@ -43,7 +43,7 @@
 				</div>
 				
 				<div class="container">
-					<div class="row-flow-no-gutter-waffle">
+					<div class="row-no-gutter">
 						<?php 
 							$rows = 2; 
 							$columns = 2;

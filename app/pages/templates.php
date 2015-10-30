@@ -72,7 +72,7 @@
 					<h2 class="heading-uppercase-heavy-size-6 font-2"><span>Homepages</span></h2>
 				</header>
 				
-				<div class="row-flow-grid">
+				<div class="row-flow">
 					<div class="thumbnail span-4">
 						<div class="thumbnail_mask">
 							<a href="#" class="icon-border-circle-size-3">

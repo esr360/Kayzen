@@ -16,6 +16,9 @@
 			max-width       : 90%,
 			small-width     : 940px,
 			full-width      : 100%
+        ),
+        breakpoints: (
+            break-5         : 1400px
         )
     ), $kayzenGS);
     
@@ -24,3 +27,7 @@
     @include kayzen-gs($grid);
     
 } // @mixin grid
+
+@function breakpoint($breakpoint) {
+    @return kgs-breakpoint($breakpoint);
+}

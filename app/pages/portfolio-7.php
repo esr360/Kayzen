@@ -44,7 +44,7 @@
 			
 			<div id="portfolio-carousel" class="owl-carousel">
 	
-				<div class="row-flow-no-gutter">
+				<div class="row-no-gutter">
 					
 					<?php 
 						$rows = 2; 
@@ -55,7 +55,7 @@
 					
 				</div>
 
-				<div class="row-flow-no-gutter">
+				<div class="row-no-gutter">
 					
 					<?php 
 						$rows = 2; 
@@ -66,7 +66,7 @@
 					
 				</div>
 
-				<div class="row-flow-no-gutter">
+				<div class="row-no-gutter">
 					
 					<?php 
 						$rows = 2; 
@@ -76,7 +76,7 @@
 					
 				</div>
 
-				<div class="row-flow-no-gutter">
+				<div class="row-no-gutter">
 					
 					<?php 
 						$rows = 2; 

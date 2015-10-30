@@ -33,7 +33,7 @@
 				
 				<div class="container">
 	
-					<div class="row-flow-no-gutter-waffle">
+					<div class="row-no-gutter">
 						
 						<?php 
 							$rows = 2; 
@@ -48,7 +48,7 @@
 				
 				<div class="container">
 	
-					<div class="row-flow-no-gutter-waffle">
+					<div class="row-no-gutter">
 						
 						<?php 
 							$rows = 2; 

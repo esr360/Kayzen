@@ -13,7 +13,7 @@
 	</header>
 	
 	<!-- Features Row 1 -->
-	<div class="widget_group row-magic-block text-center">
+	<div class="widget_group row-block text-center">
 		
 		<!-- Feature 1 -->
 		<div class="widget-block-panel span">
@@ -66,7 +66,7 @@
 	</div><!-- Features Row 1 -->
 	
 	<!-- Features Row 2 -->
-	<div class="widget_group row-magic-block text-center">
+	<div class="widget_group row-block text-center">
 		
 		<!-- Feature 5 -->
 		<div class="widget-block-panel span">
