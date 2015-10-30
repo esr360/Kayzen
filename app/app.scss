@@ -16,15 +16,16 @@ $to-JSON    : true;
 //-----------------------------------------------------------------
 
 // Vendor Files
-@import "vendor/Normalize/normalize.css";
-@import "vendor/SassyJSON/stylesheets/SassyJSON";
-@import "vendor/Modular/src/modular";
-@import "vendor/Font-Awesome/scss/font-awesome";
+@import "vendor/Kayzen-GS/src/kayzen-gs";
 @import "vendor/Owl-Carousel/src/scss/owl.animate";
 @import "vendor/Owl-Carousel/src/scss/owl.autoheight";
 @import "vendor/Owl-Carousel/src/scss/owl.core";
 @import "vendor/Owl-Carousel/src/scss/owl.lazyload";
 @import "vendor/Owl-Carousel/src/scss/owl.video";
+@import "vendor/Font-Awesome/scss/font-awesome";
+@import "vendor/Modular/src/modular";
+@import "vendor/Normalize/normalize.css";
+@import "vendor/SassyJSON/stylesheets/SassyJSON";
 
 // Theme files
 @import "includes/tools";

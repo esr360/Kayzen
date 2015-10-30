@@ -96,9 +96,9 @@
 				}
 			}
 		}
-			
+
 		@include overwrite(widget) {
-			&#{$col-selector} {
+			&[class*="#{option($grid, 'options', 'col-namespace')}"] {
 				display: inline-block;
 				&:after {
 					display: none;
