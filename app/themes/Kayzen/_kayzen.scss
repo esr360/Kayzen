@@ -10,7 +10,7 @@
 
 	@include palettes((
 		brand: (
-			primary            : #9B58B5
+			primary : #9B58B5
 		)
 	));
 	
@@ -60,17 +60,17 @@
 	@include google-map;
 	
 	@include header((
-		bg                     : transparent,
-		font-size              : 0.9em,
-		dark                   : (
-			bg                 : rgba(black, 0.3),
+		bg        : transparent,
+		font-size : 0.9em,
+		dark      : (
+			bg    : rgba(black, 0.3),
 		)
 	));
 	
 	@include logo;
 	
 	@include navigation((
-		link-color             : color(greyscale, white)
+		link-color : color(greyscale, white)
 	));
 	
 	@include mega-menu;
@@ -90,9 +90,9 @@
 	@include sections;
 	
 	@include billboard((
-		overlay                : true,
-		bg-image               : "#{$asset-path}/images/billboard-1.jpg",
-		wrapper-width          : breakpoint(break-3)
+		overlay       : true,
+		bg-image      : "#{$asset-path}/images/billboard-1.jpg",
+		wrapper-width : breakpoint(break-3)
 	));
 
 } // Kayzen

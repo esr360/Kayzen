@@ -7,9 +7,6 @@
 [submodule "app/vendor/SassyJSON"]
 	path = app/vendor/SassyJSON
 	url = https://github.com/esr360/SassyJSON.git
-[submodule "app/vendor/Normalize"]
-	path = app/vendor/Normalize
-	url = https://github.com/necolas/normalize.css.git
 [submodule "app/vendor/sudojQuery"]
 	path = app/vendor/sudojQuery
 	url = https://github.com/esr360/sudojQuery.git
