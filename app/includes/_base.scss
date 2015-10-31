@@ -51,8 +51,8 @@
 	}
 
 	// animate data-manipulate.js elements
-	[data-reveal],
-	[data-reverse-reveal],
+	[data-trigger],
+	[data-trigger-reverse],
 	[data-hover] {
 		transition: base(transition);
 	}

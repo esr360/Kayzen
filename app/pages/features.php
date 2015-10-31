@@ -118,7 +118,7 @@
 						<img 
 							class="span-10" 
 							src="<?php echo appDir ?>/images/tablet-base-dark.png"
-							data-reverse-reveal="transform: translateY(50%)"
+							data-trigger-reverse="transform: translateY(50%)"
 							alt=""
 						/>
 					</div>
@@ -175,7 +175,7 @@
 						<img 
 							class="span-10" 
 							src="<?php echo appDir ?>/images/tablet-base-light.png" 
-							data-reverse-reveal="transform: translateY(50%)"
+							data-trigger-reverse="transform: translateY(50%)"
 							alt=""
 						/>
 					</div>
@@ -210,14 +210,14 @@
 						<img 
 							class="span-9" 
 							src="<?php echo appDir ?>/images/layouts/layout-topbar.png" 
-							data-reveal="transform: translate(-10%, -60%)"
+							data-trigger="transform: translate(-10%, -60%)"
 							alt=""
 						/ >
 						<img class="span-9" src="<?php echo appDir ?>/images/layouts/layout-topbar.png" alt=""/ >
 						<img 
 							class="span-9" 
 							src="<?php echo appDir ?>/images/layouts/layout-topbar.png"
-							data-reveal="transform: translate(10%, -40%)"
+							data-trigger="transform: translate(10%, -40%)"
 							alt=""/ >
 					</div>
 				</div>
@@ -237,14 +237,14 @@
 								<img 
 									class="mobile-graphic-white" 
 									src="<?php echo appDir ?>/images/mobile-screen.png" 
-									data-reveal="transform: translate(-45%, -50%) translateZ(0) scale(0.85)"
+									data-trigger="transform: translate(-45%, -50%) translateZ(0) scale(0.85)"
 									data-hover="left: -25%"
 									alt=""
 								/ >
 								<img 
 									class="mobile-graphic-blue" 
 									src="<?php echo appDir ?>/images/mobile-screen.png" 
-									data-reveal="transform: translate(45%, -50%) translateZ(0) scale(0.85)"
+									data-trigger="transform: translate(45%, -50%) translateZ(0) scale(0.85)"
 									data-hover="right: -25%"
 									alt=""
 								/ >

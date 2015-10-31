@@ -3259,6 +3259,124 @@ function _option(component, option) {
 
 }(jQuery));
 
+/*-----------------------------------------------------------------
+
+ScrollTrigger
+Made by @esr360
+http://github.com/esr360/ScrollTrigger
+	
+-----------------------------------------------------------------*/
+		
+function scrollTrigger() {
+	
+    // define data types
+    var elReveal = $('[data-trigger]'),
+        elReverseReveal = $('[data-trigger-reverse]'),
+        elHover = $('[data-hover]'),
+        elActive = $('.inactive');
+        
+    // function to decide if element is in viewport
+    $.fn.visible = function(whole){
+        // if the entire element is in view
+        if (whole) {
+            var a = this.offset().top + this.height();
+        // if any part of the element is in view
+        } else {
+            var a = this.offset().top;
+        }
+        var b = $(window).scrollTop() + $(window).height();
+        // is the element in the viewport?
+        if (a < b) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+    
+    // [data-trigger]
+    elReveal.each(function() {
+        
+        var el = $(this),
+            styles = el.data('trigger');
+                            
+        $(window).bind("load scroll", function() {
+            
+            // if element is visible in viewpoint
+            if (el.visible(true)) {
+                el.attr('style', styles);
+            }
+            
+        });	
+    
+    }); // elReveal
+    
+    // [data-trigger-reverse]
+    elReverseReveal.each(function() {
+        
+        var el = $(this),
+            styles = el.data('trigger-reverse'),
+            cachedStyles = null;
+            
+        // cache current inline styles
+        if (typeof(el.attr('style')) != 'undefined') {
+            var cachedStyles = el.attr('style');
+        }
+        
+        // add new styles to element
+        el.attr('style', styles)
+                            
+        $(window).bind("load scroll", function() {
+            // if element is visible in viewpoint
+            if (el.visible(false)) {
+                // reset the styles
+                el.attr('style', cachedStyles);
+            }
+            
+        });	
+    
+    }); // elReverseReveal
+    
+    // [data-hover]
+    elHover.each(function(){
+        
+        var el = $(this),
+            styles = el.data('hover');
+                        
+        el.mouseenter(function(){
+            
+            // cache current inline styles
+            cachedStyles = null;
+            if (typeof(el.attr('style')) != 'undefined') {
+                var cachedStyles = el.attr('style');
+            }
+            
+            // combine cached + new styles
+            el.attr('style', cachedStyles + ';' + styles);
+            
+            // remove new styles when mouse leaves element
+            $(this).mouseleave(function(){
+                el.attr('style', cachedStyles);
+            });
+            
+        });
+            
+    }); // elHover
+    
+    // .inactive
+    elActive.each(function(){
+        
+        // if element is visible in viewpoint
+        if ($(this).visible(true)) {
+            $(this)
+                .removeClass('inactive')
+                .addClass('active');
+        }
+        
+    }); // elActive
+	
+} // scrollTrigger()
+
+$(scrollTrigger);
 ;(function($, window, document, undefined) {
 
 	var pluginName = 'stellar',
@@ -4075,192 +4193,6 @@ function _option(component, option) {
     }); // fn.extend
 
 })(jQuery);
-//=================================================================
-// Data-Manipulate
-//=================================================================
-		
-function dataM() {
-	
-	// define data types
-	var elReveal = $('[data-reveal]'),
-		elReverseReveal = $('[data-reverse-reveal]'),
-		elHover = $('[data-hover]'),
-		elActive = $('.inactive');
-		
-	// function to decide if element is in viewport
-	$.fn.visible = function(whole){
-		// if the entire element is in view
-		if (whole) {
-			var a = this.offset().top + this.height();
-		// if any part of the element is in view
-		} else {
-			var a = this.offset().top;
-		}
-		var b = $(window).scrollTop() + $(window).height();
-		// is the element in the viewport?
-		if (a < b) {
-			return true;
-		} else {
-			return false;
-		}
-	}
-
-	// [data-reveal]
-	elReveal.each(function() {
-		
-		var el = $(this),
-			styles = el.data('reveal');
-							
-		$(window).bind("load scroll", function() {
-			
-			// if element is visible in viewpoint
-			if (el.visible(true)) {
-				el.attr('style', styles);
-			}
-			
-		});	
-	
-	}); // elReveal
-	
-	// [data-reverse-reveal]
-	elReverseReveal.each(function() {
-		
-		var el = $(this),
-			styles = el.data('reverse-reveal'),
-			cachedStyles = null;
-			
-		// cache current inline styles
-		if (typeof(el.attr('style')) != 'undefined') {
-			var cachedStyles = el.attr('style');
-		}
-		
-		// add new styles to element
-		el.attr('style', styles)
-							
-		$(window).bind("load scroll", function() {
-			// if element is visible in viewpoint
-			if (el.visible(false)) {
-				// reset the styles
-				el.attr('style', cachedStyles);
-			}
-			
-		});	
-	
-	}); // elReverseReveal
-	
-	// [data-hover]
-	elHover.each(function(){
-		
-		var el = $(this),
-			styles = el.data('hover');
-						
-		el.mouseenter(function(){
-			
-			// cache current inline styles
-			cachedStyles = null;
-			if (typeof(el.attr('style')) != 'undefined') {
-				var cachedStyles = el.attr('style');
-			}
-			
-			// combine cached + new styles
-			el.attr('style', cachedStyles + ';' + styles);
-			
-			// remove new styles when mouse leaves element
-			$(this).mouseleave(function(){
-				el.attr('style', cachedStyles);
-			});
-			
-		});
-			
-	}); // elHover
-	
-	// .inactive
-	elActive.each(function(){
-		
-		// if element is visible in viewpoint
-		if ($(this).visible(true)) {
-			$(this)
-				.removeClass('inactive')
-				.addClass('active');
-		}
-		
-	}); // elActive
-	
-} // dataM()
-
-$(dataM);
-//=================================================================
-// Scroll Spy
-//=================================================================
-
-(function ($) {
-	
-	$.fn.extend({
-	
-		scrollSpy: function(options) {
-			
-			var defaults = {  
-				selector : 'li'
-			};
-			
-			var options = $.extend(defaults, options);
-			
-			return this.each(function() {
-				
-				var $parent   = this,
-					$selector = options.selector;
-				
-				// Cache selectors
-				var lastId,
-					topMenuHeight = $($parent).outerHeight()+15,
-					// All items
-					items = $($parent).find($selector),
-					// Anchors corresponding to menu items
-					scrollItems = items.map(function() {
-						if ($(this).prop('tagName') == 'A') {
-							var item = $($(this).attr("href"));
-						} else {
-							var item = $($(this).find('a').attr("href"));
-						}
-						if (item.length) { return item; }
-					});
-			
-				// Bind to scroll
-				$(window).scroll(function() {
-					
-					// Get container scroll position
-					var fromTop = $(this).scrollTop()+topMenuHeight;
-					
-					// Get id of current scroll item
-					var cur = scrollItems.map(function(){
-					if ($(this).offset().top < fromTop)
-						return this;
-					});
-					
-					// Get the id of the current element
-					cur = cur[cur.length-1];
-					var id = cur && cur.length ? cur[0].id : "";
-					
-					if (lastId !== id) {
-						lastId = id;
-						// Set/remove active class
-						items.removeClass("active");
-						if ($($selector).prop('tagName') == 'A') {
-							items.filter("[href=#"+id+"]").addClass("active");
-						} else {
-							items.find('a').filter("[href=#"+id+"]").end().addClass("active");
-						}
-					}   
-									
-				});
-			
-			});
-		
-		} // scrollSpy
-	
-	});
-  
-}(jQuery));
 //=================================================================
 // Adaptive Columns
 //=================================================================

@@ -56,14 +56,14 @@
 					<img 
 						class="mobile-graphic-white" 
 						src="<?php echo appDir ?>/images/mobile-screen.png" 
-						data-reveal="transform: translate(-45%, -50%) translateZ(0) scale(0.85)"
+						data-trigger="transform: translate(-45%, -50%) translateZ(0) scale(0.85)"
 						data-hover="left: -25%"
 						alt=""
 					/ >
 					<img 
 						class="mobile-graphic-blue" 
 						src="<?php echo appDir ?>/images/mobile-screen.png" 
-						data-reveal="transform: translate(45%, -50%) translateZ(0) scale(0.85)"
+						data-trigger="transform: translate(45%, -50%) translateZ(0) scale(0.85)"
 						data-hover="right: -25%"
 						alt=""
 					/ >

@@ -347,7 +347,7 @@
 						<img 
 							class="span-10" 
 							src="<?php echo appDir ?>/images/tablet-base-dark.png"
-							data-reverse-reveal="transform: translateY(50%)"
+							data-trigger-reverse="transform: translateY(50%)"
 							alt=""
 						/>
 					</div>

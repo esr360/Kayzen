@@ -40,5 +40,5 @@ Thumbs.db
 #============================================================
 *.cfg
 .settings
-/node_modules
 .sass-cache
+node_modules
