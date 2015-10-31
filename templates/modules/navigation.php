@@ -340,22 +340,28 @@
 					<ul class="list-overflow-arrow" data-list-height="6">
 						<li><a href="#">Portfolio 1</a></li>
 						<li><a href="#">Portfolio 2</a></li>
+						<li><a href="#">Portfolio 3</a></li>
+						<li><a href="#">Portfolio 4</a></li>
+						<li><a href="#">Portfolio 5</a></li>
+						<li><a href="#">Portfolio 6</a></li>
+						<li><a href="#">Portfolio 7</a></li>
+						<li><a href="#">Portfolio 8</a></li>
+						<li><a href="#">Portfolio 9</a></li>
+						<li><a href="#">Portfolio 10</a></li>
 						<li><a href="#">Portfolio Single</a></li>
 						<li><a href="#">Portfolio Single 2</a></li>
-						<li><a href="#">Blog</a></li>
-						<li><a href="#">Blog Single</a></li>
 					</ul>
 				</li>
 				
 				<li class="span">
 					<h3 class="mega-menu_title heading">Blog</h3>
 					<ul class="list-overflow-arrow" data-list-height="6">
-						<li><a href="#">Portfolio 1</a></li>
-						<li><a href="#">Portfolio 2</a></li>
-						<li><a href="#">Portfolio Single</a></li>
-						<li><a href="#">Portfolio Single 2</a></li>
-						<li><a href="#">Blog</a></li>
+						<li><a href="#">Blog 1</a></li>
+						<li><a href="#">Blog 2</a></li>
+						<li><a href="#">Blog 3</a></li>
+						<li><a href="#">Blog 4</a></li>
 						<li><a href="#">Blog Single</a></li>
+						<li><a href="#">Blog Single 2</a></li>
 					</ul>
 				</li>
 				
