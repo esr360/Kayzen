@@ -321,9 +321,9 @@
 		
 		<li>
 			<a href="#"><i class="navigation_icon fa fa-desktop"></i> Templates</a>
-			<ul class="mega-menu row">
+			<ul class="mega-menu row-magic">
 				
-				<li class="span-3">
+				<li class="span">
 					<h3 class="mega-menu_title heading">Homepages</h3>
 					<ul class="list-overflow-arrow" data-list-height="6">
 						<li><a href="#">Homepage 1</a></li>
@@ -335,8 +335,8 @@
 					</ul>
 				</li>
 				
-				<li class="span-3">
-					<h3 class="mega-menu_title heading">Portfolio/Blog</h3>
+				<li class="span">
+					<h3 class="mega-menu_title heading">Portfolio</h3>
 					<ul class="list-overflow-arrow" data-list-height="6">
 						<li><a href="#">Portfolio 1</a></li>
 						<li><a href="#">Portfolio 2</a></li>
@@ -347,7 +347,19 @@
 					</ul>
 				</li>
 				
-				<li class="span-3">
+				<li class="span">
+					<h3 class="mega-menu_title heading">Blog</h3>
+					<ul class="list-overflow-arrow" data-list-height="6">
+						<li><a href="#">Portfolio 1</a></li>
+						<li><a href="#">Portfolio 2</a></li>
+						<li><a href="#">Portfolio Single</a></li>
+						<li><a href="#">Portfolio Single 2</a></li>
+						<li><a href="#">Blog</a></li>
+						<li><a href="#">Blog Single</a></li>
+					</ul>
+				</li>
+				
+				<li class="span">
 					<h3 class="mega-menu_title heading">Further Pages</h3>
 					<ul class="list-overflow-arrow" data-list-height="6">
 						<li><a href="#">About Us</a></li>
@@ -362,7 +374,7 @@
 					</ul>
 				</li>
 				
-				<li class="span-3">
+				<li class="span">
 					<h3 class="mega-menu_title heading">Utility Pages</h3>
 					<ul class="list-overflow-arrow" data-list-height="6">
 						<li><a href="#">404</a></li>
