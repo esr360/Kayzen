@@ -31,6 +31,7 @@ module.exports = function(grunt) {
         _owl,
         'app/vendor/Modular/src/modular.js',
         'app/vendor/jquery-animateNumber/jquery.animateNumber.js',
+        'app/vendor/Kayzen.ScrollSpy/Kayzen.ScrollSpy.js',
         'app/vendor/Stellar/src/jquery.stellar.js',
         'app/vendor/TweeCool/src/tweecool.js',
         'app/plugins/*.js',

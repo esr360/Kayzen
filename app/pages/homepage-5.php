@@ -416,7 +416,7 @@
 		
 		<section class="section-primary-dot-map">
 			
-			<header class="heading_group-large text-center">
+			<header class="heading_group text-center">
 				<div class="container-small">
 					<h4 class="heading-uppercase-light-brand-1-spaced-size-4"><span>Share The Love</span></h4>
 					<h2 class="heading-uppercase-heavy-size-7 font-2"><span>We Are Social <i class="fa fa-heart fa-brand"></i></span></h2>

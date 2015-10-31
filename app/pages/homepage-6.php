@@ -617,7 +617,7 @@
 							class="fb-page" 
 							data-href="https://www.facebook.com/envato" 
 							data-width="500" 
-							data-height="400" 
+							data-height="394" 
 							data-small-header="false" 
 							data-adapt-container-width="true" 
 							data-hide-cover="false" 
