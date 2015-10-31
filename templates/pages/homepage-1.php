@@ -16,17 +16,17 @@
 		
 		<?php 
 			$topBarModifiers = '-fixed';
-			include ('../modules/objects/top-bar/top-bar.php'); 
+			include ('../modules/top-bar.php'); 
 		?>
 		
 		<?php 
 			$headerModifiers = '-bar-absolute-dark';
-			include ('../modules/objects/header/header.php'); 
+			include ('../modules/header.php'); 
 		?>
 
 		<?php 
 			$for = 'homepage'; 
-			include ('../modules/objects/billboard/billboard.php'); 
+			include ('../modules/billboard.php'); 
 		?>
 
 		<?php include ('../sections/key-features.php'); ?>
@@ -65,9 +65,9 @@
 
 		<?php include ('../sections/twitter-feed.php'); ?>
 
-		<?php include ('../modules/objects/google-map/google-map.php'); ?>
+		<?php include ('../includes/google-map.php'); ?>
 
-		<?php include ('../modules/objects/footer/footer.php'); ?>
+		<?php include ('../modules/footer.php'); ?>
 
     </div><!-- Site Canvas -->
 

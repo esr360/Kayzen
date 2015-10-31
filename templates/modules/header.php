@@ -13,7 +13,7 @@
 				<a href="/"><img src="<?php echo appDir ?>/images/logo-white.png" alt="logo"/ ></a>
 			</div>
 
-			<?php include ('../modules/objects/navigation/navigation.php'); ?>
+			<?php include ('navigation.php'); ?>
 
 		</div><!-- Header Wrapper -->
 		
