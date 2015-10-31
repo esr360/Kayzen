@@ -122,3 +122,17 @@
 @function base($key) {
     @return map-get($base, $key);
 }
+
+//-----------------------------------------------------------------
+// Hacks - if this gets big move to seperate file
+//-----------------------------------------------------------------
+
+.owl-carousel .owl-item img {
+    transform-style: flat;
+    width: auto;
+}
+
+.owl-carousel .owl-item > img {
+    transform-style: preserve-3d;
+    width: 100%;
+}
