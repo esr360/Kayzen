@@ -91,28 +91,9 @@
 			<script>
 				$(document).ready(function() {
 					
-					var $portfolioCarousel = $("#portfolio-carousel"),
-						$portfolioCats = $('#portfolio-categories');
-						
-					$portfolioCarousel.owlCarousel({
-						items: 1,
-						loop: true,
-						dots: false
-					});
-								
-					$portfolioCats.find('li').click(function() {
-						var $index = $(this).index();
-						$(this).siblings().removeClass('active').end().addClass('active');
-						$portfolioCarousel.trigger('to.owl.carousel', [$index, 400, true]);
-					});
-			
-					$("#portfolio-carousel-nav .slide-next").click(function() {
-						$portfolioCarousel.trigger('next.owl.carousel');
-						$portfolioCats.find('.active').removeClass('active').next().addClass('active');
-					});
-					$("#portfolio-carousel-nav .slide-prev").click(function() {
-						$portfolioCarousel.trigger('prev.owl.carousel');
-						$portfolioCats.find('.active').removeClass('active').prev().addClass('active');
+					$("#portfolio-carousel").kCarousel({
+						navId: '#portfolio-carousel-nav',
+						pagerId: '#portfolio-categories'
 					});
 					
 				});

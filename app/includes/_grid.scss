@@ -26,6 +26,14 @@
     
     @include kayzen-gs($grid);
     
+    @include component(#{option($grid, 'options', 'row-namespace')}) {
+        @include modifier('waffle') {
+            > [class*="#{option($grid, 'options', 'col-namespace')}"] {
+                margin-bottom: option($grid, 'options', 'gutter');
+            }
+        }
+    }
+    
 } // @mixin grid
 
 @function breakpoint($breakpoint) {
