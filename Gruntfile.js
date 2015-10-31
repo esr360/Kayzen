@@ -96,7 +96,8 @@ module.exports = function(grunt) {
             },
             prod: {
                 options: {
-                    style: 'compressed'
+                    style: 'compressed',
+                    sourcemap: 'none'
                 },
                 files: {
                     [buildStyles + 'app.min.css']: 'app/app.scss'
@@ -300,7 +301,7 @@ module.exports = function(grunt) {
         'sass:prod',
         'postcss',
         'copy:prod',
-        'scsslint',
+        //'scsslint',
         'notify:app'
     ]);
 
