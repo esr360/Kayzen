@@ -253,12 +253,12 @@ module.exports = function(grunt) {
             dev: {
                 constant    : 'env',
                 value       : 'dev',
-                file        : 'app/app.php'
+                file        : 'templates/app.php'
             },
             prod: {
                 constant    : 'env',
                 value       : 'prod',
-                file        : 'app/app.php'
+                file        : 'templates/app.php'
             }
         }
 

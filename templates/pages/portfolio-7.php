@@ -17,15 +17,15 @@
 		
 		<?php 
 			$topBarModifiers = '';
-			include ('../modules/objects/top-bar/top-bar.php'); 
+			include ('../modules/top-bar.php'); 
 		?>
 
 		<?php 
 			$headerModifiers = '-bar-absolute-dark-sticky'; 
-			include ('../modules/objects/header/header.php'); 
+			include ('../modules/header.php'); 
 		?>
 
-		<?php include ('../modules/objects/billboard/billboard.php'); ?>
+		<?php include ('../modules/billboard.php'); ?>
 		
 		<section class="section-primary-mini relative text-center">	
 			<ul class="tabs_nav-pills" id="portfolio-categories">
@@ -103,7 +103,7 @@
 		
 		<?php include ('../sections/promo-banner.php'); ?>
 		
-		<?php include ('../modules/objects/footer/footer.php'); ?>
+		<?php include ('../modules/footer.php'); ?>
 
     </div><!-- Site Canvas -->
 

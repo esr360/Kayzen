@@ -16,12 +16,12 @@
 		
 		<?php 
 			$topBarModifiers = '-fixed';
-			include ('../modules/objects/top-bar/top-bar.php'); 
+			include ('../modules/top-bar.php'); 
 		?>
 
 		<?php 
 			$headerModifiers = '-bar-absolute-dark'; 
-			include ('../modules/objects/header/header.php'); 
+			include ('../modules/header.php'); 
 		?>
 
 		<section class="billboard-full-screen">
@@ -1013,9 +1013,9 @@
 		
 		<?php include ('../sections/contact-us.php'); ?>
 		
-		<?php include ('../modules/objects/google-map/google-map.php'); ?>
+		<?php include ('../includes/google-map.php'); ?>
 		
-		<?php include ('../modules/objects/footer/footer.php'); ?>
+		<?php include ('../modules/footer.php'); ?>
 
     </div><!-- Site Canvas -->
 
