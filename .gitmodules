@@ -37,3 +37,6 @@
 [submodule "app/vendor/Kayzen.ScrollSpy"]
 	path = app/vendor/Kayzen.ScrollSpy
 	url = https://github.com/esr360/Kayzen.ScrollSpy.git
+[submodule "app/vendor/ScrollTrigger"]
+	path = app/vendor/ScrollTrigger
+	url = https://github.com/esr360/ScrollTrigger.git
