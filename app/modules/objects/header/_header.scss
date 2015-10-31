@@ -142,6 +142,9 @@
 			background-color: option($config, dark, bg);
 		}
 		
+		// Brand Header
+		//---------------------------------------------------------
+        
 		@include modifier(brand) {
 			background-color: color(brand, primary);
 		}

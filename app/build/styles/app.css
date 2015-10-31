@@ -5,7 +5,7 @@ Kayzen
 Made by @esr360
 
 ******************************************************************/
-@import url(vendor/Normalize/normalize.css);
+@import url(../../vendor/Normalize/normalize.css);
 @import url(http://fonts.googleapis.com/css?family=Lato:300,400,700,900);
 @import url(http://fonts.googleapis.com/css?family=Raleway:100,300,700,900);
 * {
@@ -3978,7 +3978,7 @@ pre:last-child, hr:last-child,
   list-style: none;
 }
 
-[class*="widget-"][class*="-tub"]:before, [class*="section-"][class*="-overlay"]:before, [class*="section-"][class*="-overlay"][class*="-deep"]:before, [class*="section-"][class*="-overlay"][class*="-alt"]:before, [class*="billboard-"][class*="-overlay"]:before, [class*="billboard-"]:before {
+[class*="widget-"][class*="-tub"]:before, [class*="section-"][class*="-overlay"]:before, [class*="section-"][class*="-overlay"][class*="-deep"]:before, [class*="section-"][class*="-overlay"][class*="-alt"]:before, [class*="billboard-"][class*="-overlay"]:before, .billboard:before, [class*="billboard-"]:before {
   position: absolute;
   height: 100%;
   width: 100%;
@@ -7668,7 +7668,7 @@ progress::-moz-progress-bar {
           transform: translateY(-10%);
 }
 
-[class*="billboard-"] {
+.billboard, [class*="billboard-"] {
   min-height: 500px;
   background-color: #232627;
   position: relative;
@@ -7701,10 +7701,10 @@ progress::-moz-progress-bar {
 [class*="top-bar-"][class*="-fixed"] + [class*="app-header-"][class*="-absolute"] + [class*="billboard-"][class*="-full-screen"] {
   margin-top: 60px;
 }
-[class*="billboard-"][class*="-overlay"], [class*="billboard-"] {
+[class*="billboard-"][class*="-overlay"], .billboard, [class*="billboard-"] {
   position: relative;
 }
-[class*="billboard-"][class*="-overlay"]:before, [class*="billboard-"]:before {
+[class*="billboard-"][class*="-overlay"]:before, .billboard:before, [class*="billboard-"]:before {
   content: "";
   z-index: 0;
   background: rgba(155, 88, 181, 0.6);
