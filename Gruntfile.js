@@ -92,8 +92,7 @@ module.exports = function(grunt) {
                 },
                 files: {
                     [buildStyles + 'app.css']: 'app/app.scss'
-                },
-                tasks: ['postcss']
+                }
             },
             prod: {
                 options: {
@@ -101,8 +100,7 @@ module.exports = function(grunt) {
                 },
                 files: {
                     [buildStyles + 'app.min.css']: 'app/app.scss'
-                },
-                tasks: ['postcss']
+                }
             } 
         },
         
@@ -116,7 +114,10 @@ module.exports = function(grunt) {
                 map: true,
                 processors: [
                     require('autoprefixer')({
-                        browsers: ['last 2 versions']
+                        browsers: [
+                            'last 2 versions', 
+                            'ie >= 9'
+                        ]
                     })
                 ]
             },
@@ -208,7 +209,7 @@ module.exports = function(grunt) {
                     'app/includes/*.scss',
                     'app/modules/**/*.scss'
                 ],
-                tasks: ['sass', 'notify:css'],
+                tasks: ['sass', 'postcss', 'notify:css'],
                 options: {
                     spawn: false,
                 }
@@ -286,6 +287,7 @@ module.exports = function(grunt) {
         'copy:fontAwesome',
         'concat',
         'sass:dev',
+        'postcss',
         'copy:dev',
         'notify:app'
     ]);
@@ -296,6 +298,7 @@ module.exports = function(grunt) {
         'copy:fontAwesome',
         'uglify',
         'sass:prod',
+        'postcss',
         'copy:prod',
         'scsslint',
         'notify:app'
