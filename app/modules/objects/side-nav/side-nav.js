@@ -2,7 +2,7 @@
 // Side-Header Navigation
 //=================================================================
 
-if (setting('app-header', 'side')) {
+if (_option('app-header', 'side')) {
 	
 	// replace navigation class
 	$(_navigation).removeClass (function (index, css) {
@@ -10,10 +10,10 @@ if (setting('app-header', 'side')) {
 	}).addClass('app-header_side-nav');
 	
 	// add collapsible functionality
-	if (setting('side-nav', 'collapsible')) {
+	if (_option('side-nav', 'collapsible')) {
 		
 		// create open/close icon
-		var openClose = '<i class="side-nav_openClose fa ' + module['side-nav']['collapsible']['icon'] + '"></i>'
+		var openClose = '<i class="side-nav_openClose fa ' + _module['side-nav']['collapsible']['icon'] + '"></i>'
 		$('.app-header_side-nav').find('a:not(:only-child)').prepend(openClose);
 		
 		$('.app-header_side-nav')
@@ -27,7 +27,7 @@ if (setting('app-header', 'side')) {
 	}
 
 	// collapse by default
-	var openDefault = module['side-nav']['collapsible']['open-by-default'];
+	var openDefault = _module['side-nav']['collapsible']['open-by-default'];
 	
 	if ($('.app-header_side-nav').is('[class*="-collapse"]') == true || openDefault == false) {
 		$('.app-header_side-nav').find('a:not(:only-child) ~ ul').hide();

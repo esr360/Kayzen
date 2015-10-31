@@ -20,10 +20,10 @@ $(document).ready(function() {
         $("#app-nav > ul").clone().appendTo(fnContainer);
         
         // add collapsible functionality
-        if (setting('flyout-nav', 'collapsible')) {
+        if (_option('flyout-nav', 'collapsible')) {
             
             // create open/close icon
-            var openClose = '<i class="side-nav_openClose fa ' + module['side-nav']['collapsible']['icon'] + '"></i>'
+            var openClose = '<i class="side-nav_openClose fa ' + _module['side-nav']['collapsible']['icon'] + '"></i>'
             $(_flyoutNav).find('a:not(:only-child)').prepend(openClose);
         
             $(_flyoutNav)
@@ -39,7 +39,7 @@ $(document).ready(function() {
         }
 
         // collapse by default
-        var openDefault = module['flyout-nav']['collapsible']['open-by-default'];
+        var openDefault = _module['flyout-nav']['collapsible']['open-by-default'];
         
         if ($(_flyoutNav).is('[class*="-collapse"]') == true || openDefault == false) {
             $(_flyoutNav).find('a:not(:only-child) ~ ul').hide();

@@ -3,7 +3,7 @@
 //=================================================================
 
 // Get the page-overview position
-var $pageOverviewPos = module['page-overview']['position'];
+var $pageOverviewPos = _module['page-overview']['position'];
 
 // Set the correct tooltip position
 if ($pageOverviewPos == 'left') {
