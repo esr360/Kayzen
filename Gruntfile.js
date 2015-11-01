@@ -84,12 +84,8 @@ module.exports = function(grunt) {
                 dest: buildScripts + 'masonry.pkgd.min.js'
             },
             infiniteScroll: {
-                src: 'app/vendor/infinite-scroll/jquery.infinitescroll.js',
-                dest: buildScripts + 'jquery.infinitescroll.min.js'
-            },
-            imagesLoaded: {
-                src: 'app/vendor/imagesLoaded/imagesloaded.pkgd.js',
-                dest: buildScripts + 'imagesloaded.pkgd.min.js'
+                src: 'app/vendor/Infinite-AJAX-Scroll/dist/jquery-ias.js',
+                dest: buildScripts + 'jquery-ias.min.js'
             }
         },
       
@@ -187,12 +183,8 @@ module.exports = function(grunt) {
                         dest: buildScripts + 'masonry.pkgd.js'
                     },
                     {
-                        src: 'app/vendor/infinite-scroll/jquery.infinitescroll.js',
-                        dest: buildScripts + 'jquery.infinitescroll.js'
-                    },
-                    {
-                        src: 'app/vendor/imagesLoaded/imagesloaded.pkgd.js',
-                        dest: buildScripts + 'imagesloaded.pkgd.js'
+                        src: 'app/vendor/Infinite-AJAX-Scroll/dist/jquery-ias.js',
+                        dest: buildScripts + 'jquery-ias.js'
                     }
                 ]
             },
