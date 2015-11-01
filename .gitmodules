@@ -40,3 +40,6 @@
 [submodule "app/vendor/ScrollTrigger"]
 	path = app/vendor/ScrollTrigger
 	url = https://github.com/esr360/ScrollTrigger.git
+[submodule "app/vendor/Masonry"]
+	path = app/vendor/Masonry
+	url = https://github.com/desandro/masonry.git
