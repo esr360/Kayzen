@@ -87,18 +87,11 @@
 						include ('../includes/masonry-item.php'); 
 					?>
                     
-                    <?php 
-						$span = 4;
-                        $img = 'wallpapers/bg-4.jpg';
-                        $hidden = true;
-						include ('../includes/masonry-item.php'); 
-					?>
-                    
                 </div>
                 
-                <div class="pagination hidden">
-                    <a href="portfolio-9-page-2.php" class="pagination-next">Next</a>
-                </div>
+                <ul id="pagination">
+                    <li class="next"><a href="../includes/masonry-items.php">1</a></li>
+                </ul>
             
             </div><!-- container -->
 			
@@ -115,13 +108,11 @@
     <?php include ('../includes/scripts.php'); ?>
     
     <?php if (env == 'dev') { ?>
-        <script src="<?php echo appDir ?>/build/scripts/jquery.infinitescroll.js"></script>
+        <script src="<?php echo appDir ?>/build/scripts/jquery-ias.js"></script>
         <script src="<?php echo appDir ?>/build/scripts/masonry.pkgd.js"></script>
-        <script src="<?php echo appDir ?>/build/scripts/imagesloaded.pkgd.js"></script>
     <?php } else if (env == 'prod') { ?>
-        <script src="<?php echo appDir ?>/build/scripts/jquery.infinitescroll.min.js"></script>
+        <script src="<?php echo appDir ?>/build/scripts/jquery-ias.min.js"></script>
         <script src="<?php echo appDir ?>/build/scripts/masonry.pkgd.min.js"></script>
-        <script src="<?php echo appDir ?>/build/scripts/imagesloaded.pkgd.min.js"></script>
     <?php } ?>
 
 </body>

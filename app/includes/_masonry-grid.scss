@@ -3,61 +3,72 @@
 //=================================================================
 
 @mixin masonry-grid($custom: ()) {
-    .js-masonry {
-        > [class*="#{option($grid, 'options', 'col-namespace')}"] {
-            transition: base('transition');
+    
+    .ias-spinner, .ias-noneleft {
+        position: absolute;
+        bottom: -2em;
+        left: 0;
+        right: 0;
+        text-align: center;
+        margin-left: option($grid, 'options', 'gutter'); // offset flow row gutter
+    }
+    
+    .ias-spinner { 
+        img {
+            margin: auto;
         }
     }
-}
-
-.tiles {
-    position: relative;
-    display: block;
-    margin: 0 auto;
-    width: 80%;
-    &:after {
-        content: "";
-        clear: both;
-        display: table;
-    }
-}
-
-.tile {
-    display: inline-block;
-    vertical-align: top;
-    font-size: 16px;
-    position: relative;
-    float: left;
-    &-box {
-        width: 50%;
+    
+    .tiles {
+        position: relative;
+        display: block;
+        margin: 0 auto;
+        width: 80%;
         &:after {
             content: "";
-            padding-top: 100%;
+            clear: both;
             display: table;
         }
     }
-    &-tall {
-        width: 50%;
-        &:after {
-            content: "";
-            display: block;
-            padding-top: 200%;
+
+    .tile {
+        display: inline-block;
+        vertical-align: top;
+        font-size: 16px;
+        position: relative;
+        float: left;
+        &-box {
+            width: 50%;
+            &:after {
+                content: "";
+                padding-top: 100%;
+                display: table;
+            }
+        }
+        &-tall {
+            width: 50%;
+            &:after {
+                content: "";
+                display: block;
+                padding-top: 200%;
+            }
+        }
+        &-rec {
+            width: 100%;
+            &:after {
+                content: "";
+                display: block;
+                padding-top: 50%;
+            }
+        }
+        &-img {
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            bottom: 5px;
+            left: 5px;
+            background: #eee;
         }
     }
-    &-rec {
-        width: 100%;
-        &:after {
-            content: "";
-            display: block;
-            padding-top: 50%;
-        }
-    }
-    &-img {
-        position: absolute;
-        top: 5px;
-		right: 5px;
-		bottom: 5px;
-        left: 5px;
-		background: #eee;
-    }
+    
 }

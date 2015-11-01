@@ -101,65 +101,39 @@ $(window).bind("load resize", function() {
 // Load Content On Scroll
 //-----------------------------------------------------------------
 
-/**
- * Infinite Scroll + Masonry + ImagesLoaded
- */
-(function() {
+(function () {
+    
+    var container = document.querySelector('#portfolio-items');
+    var msnry = new Masonry( container, {
+        itemSelector: '.span-4',
+        containerStyle: { 
+            marginBottom: '2em' 
+        }
+    });
+    
+    var ias = $.ias({
+        container: "#portfolio-items",
+        item: ".span-4",
+        pagination: "#pagination",
+        next: ".next a",
+        delay: 400
+    });
+    
+    ias.on('render', function(items) {
+        $(items).css({ opacity: 0 });
+    });
+    
+    ias.on('rendered', function(items) {
+        msnry.appended(items);
+    });
+    
+    ias.extension(new IASSpinnerExtension());
+    
+    ias.extension(new IASNoneLeftExtension({
+        html: '<div class="ias-noneleft"><p>You have reached the end!</p></div>'
+    }));
 
-	// Main content container
-	var $container = $('#portfolio-items');
-
-	// Masonry + ImagesLoaded
-	$container.imagesLoaded(function(){
-		$container.masonry({
-			// selector for entry content
-			itemSelector: '.span-4'
-		});
-	});
-
-	// Infinite Scroll
-	$container.infinitescroll({
-
-		// selector for the paged navigation (it will be hidden)
-		navSelector  : ".pagination",
-		// selector for the NEXT link (to page 2)
-		nextSelector : ".pagination-next",
-		// selector for all items you'll retrieve
-		itemSelector : "#portfolio-items",
-
-		// finished message
-		loading: {
-			finishedMsg: 'No more pages to load.'
-			}
-		},
-
-		// Trigger Masonry as a callback
-		function( newElements ) {
-			// hide new items while they are loading
-			var $newElems = $( newElements ).css({ opacity: 0 });
-			// ensure that images load before adding to masonry layout
-			$newElems.imagesLoaded(function(){
-				// show elems now they're ready
-				$newElems.animate({ opacity: 1 });
-				$container.masonry( 'appended', $newElems, true );
-			});
-
-	});
-
-})();
-/*
-$(window).bind('scroll', function() {
-    var a = ($(".js-masonry").offset().top + $(".js-masonry").height());
-    var b = ($(window).height() + $(window).scrollTop() - 100);
-    if ( b > a ) {
-        $('.js-masonry > [class*="span"]:visible:last')
-            .nextAll(':lt(3)')
-            .show()
-            .removeClass('unloaded');
-        $('.js-masonry').masonry();
-    }
-})
-*/
+}());
 
 //-----------------------------------------------------------------
 // Parallax Scroll
