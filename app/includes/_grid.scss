@@ -26,15 +26,21 @@
     
     @include kayzen-gs($grid);
     
-	// Waffle Row
-	//-------------------------------------------------------------
-    
     @include component(#{option($grid, 'options', 'row-namespace')}) {
+    
+        // Waffle Row
+        //---------------------------------------------------------
+    
         @include modifier('waffle') {
             > [class*="#{option($grid, 'options', 'col-namespace')}"] {
                 margin-bottom: option($grid, 'options', 'gutter');
             }
         }
+        
+    }
+    
+    .masonry-pull {
+        transform: translateY(calc((-100% + 6.2em) / 2))
     }
     
 } // @mixin grid

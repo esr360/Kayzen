@@ -78,6 +78,10 @@ module.exports = function(grunt) {
             sudojQueryEnd: {
                 src: 'app/vendor/sudojQuery/src/sudojQuery-end.js',
                 dest: buildScripts + 'sudojQuery-end.min.js'
+            },
+            Masonry: {
+                src: 'app/vendor/Masonry/dist/masonry.pkgd.js',
+                dest: buildScripts + 'masonry.pkgd.min.js'
             }
         },
       
@@ -169,6 +173,10 @@ module.exports = function(grunt) {
                     {
                         src: 'app/vendor/sudojQuery/src/sudojQuery-end.js',
                         dest: buildScripts + 'sudojQuery-end.js'
+                    },
+                    {
+                        src: 'app/vendor/Masonry/dist/masonry.pkgd.js',
+                        dest: buildScripts + 'masonry.pkgd.js'
                     }
                 ]
             },
