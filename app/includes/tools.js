@@ -83,6 +83,21 @@ $(window).on("load scroll", function(d,h) {
 });
 
 //-----------------------------------------------------------------
+// Masonry Grid
+//-----------------------------------------------------------------
+
+$(window).bind("load resize", function() {
+    $('.js-masonry').each(function() {
+        var $break = (_module['grid']['options']['col-break']).replace(/[^-\d\.]/g, '');
+        if (($(document).width()) < $break) {
+            $(this).masonry('destroy');
+        } else {
+            $(this).masonry();
+        }
+    });
+});
+
+//-----------------------------------------------------------------
 // Parallax Scroll
 //-----------------------------------------------------------------
 

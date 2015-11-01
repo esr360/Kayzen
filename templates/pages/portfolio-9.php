@@ -31,29 +31,61 @@
 				
             <div class="container">
 
-                <div class="row-flow row-waffle">
+                <div class="row-flow row-waffle js-masonry" id="portfolio-masonry">
                     
-                    <div class="widget-card span-4">
-                        <div class="thumbnail">
-                            <div class="thumbnail_mask">
-                                <div class="thumbnail_controls icon_group-small">
-                                    <a href="#" class="icon-border-circle-size-3">
-                                        <i class="fa fa-search"></i>
-                                    </a>
-                                    <a href="#" class="icon-border-circle-size-3">
-                                        <i class="fa fa-link"></i>
-                                    </a>
-                                </div>
-                            </div>
-                            <img src="<?php echo appDir ?>/images/wallpapers/tall/bg-7.png">
-                        </div>
-                        <div class="widget_content text-center">
-                            <header class="heading_group">
-                                <h3 class="heading-heavy-size-3">Leather Jackets</h3>
-                                <h4 class="heading-light-uppercase-brand-1-size-2">Donec finibus fringer</h4>
-                            </header>
-                        </div>
-                    </div>
+                    <?php 
+						$span = 4;
+                        $img = 'wallpapers/tall/bg-7.jpg';
+						include ('../includes/masonry-item.php'); 
+					?>
+                    
+                    <?php 
+						$span = 4;
+                        $img = 'wallpapers/bg-5.jpg';
+						include ('../includes/masonry-item.php'); 
+					?>
+                    
+                    <?php 
+						$span = 4;
+                        $img = 'wallpapers/tall/bg-7.jpg';
+						include ('../includes/masonry-item.php'); 
+					?>
+                    
+                    <?php 
+						$span = 4;
+                        $img = 'wallpapers/tall/bg-7.jpg';
+						include ('../includes/masonry-item.php'); 
+					?>
+                    
+                    <?php 
+						$span = 4;
+                        $img = 'wallpapers/bg-3.jpg';
+						include ('../includes/masonry-item.php'); 
+					?>
+                    
+                    <?php 
+						$span = 4;
+                        $img = 'wallpapers/tall/bg-7.jpg';
+						include ('../includes/masonry-item.php'); 
+					?>
+                    
+                    <?php 
+						$span = 4;
+                        $img = 'wallpapers/tall/bg-7.jpg';
+						include ('../includes/masonry-item.php'); 
+					?>
+                    
+                    <?php 
+						$span = 4;
+                        $img = 'wallpapers/bg-6.jpg';
+						include ('../includes/masonry-item.php'); 
+					?>
+                    
+                    <?php 
+						$span = 4;
+                        $img = 'wallpapers/bg-4.jpg';
+						include ('../includes/masonry-item.php'); 
+					?>
                     
                 </div>
             
