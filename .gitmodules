@@ -43,6 +43,3 @@
 [submodule "app/vendor/Masonry"]
 	path = app/vendor/Masonry
 	url = https://github.com/desandro/masonry.git
-[submodule "app/vendor/Infnite-AJAX-Scroll"]
-	path = app/vendor/Infnite-AJAX-Scroll
-	url = https://github.com/webcreate/infinite-ajax-scroll.git
