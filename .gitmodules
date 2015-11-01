@@ -43,3 +43,9 @@
 [submodule "app/vendor/Masonry"]
 	path = app/vendor/Masonry
 	url = https://github.com/desandro/masonry.git
+[submodule "app/vendor/infinite-scroll"]
+	path = app/vendor/infinite-scroll
+	url = https://github.com/infinite-scroll/infinite-scroll.git
+[submodule "app/vendor/imagesLoaded"]
+	path = app/vendor/imagesLoaded
+	url = https://github.com/desandro/imagesloaded.git
