@@ -31,7 +31,7 @@
 				
             <div class="container">
 
-                <div class="row-flow row-waffle js-masonry" id="portfolio-masonry">
+                <div class="row-flow row-waffle js-masonry">
                     
                     <?php 
 						$span = 4;
@@ -84,6 +84,13 @@
                     <?php 
 						$span = 4;
                         $img = 'wallpapers/bg-4.jpg';
+						include ('../includes/masonry-item.php'); 
+					?>
+                    
+                    <?php 
+						$span = 4;
+                        $img = 'wallpapers/bg-4.jpg';
+                        $hidden = true;
 						include ('../includes/masonry-item.php'); 
 					?>
                     

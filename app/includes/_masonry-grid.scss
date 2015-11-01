@@ -1,6 +1,14 @@
 //=================================================================
-// Grid
+// Masonry Grid
 //=================================================================
+
+@mixin masonry-grid($custom: ()) {
+    .js-masonry {
+        > [class*="#{option($grid, 'options', 'col-namespace')}"] {
+            transition: base('transition');
+        }
+    }
+}
 
 .tiles {
     position: relative;

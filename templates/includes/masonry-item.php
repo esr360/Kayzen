@@ -1,4 +1,6 @@
-<div class="widget-card span-<?php echo $span ?>">
+<div 
+    class="widget-card span-<?php echo $span; if ($hidden === true) echo ' unloaded' ?>"
+>
     <div class="thumbnail">
         <div class="thumbnail_mask">
             <div class="thumbnail_controls icon_group-small">

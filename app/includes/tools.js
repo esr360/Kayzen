@@ -98,6 +98,21 @@ $(window).bind("load resize", function() {
 });
 
 //-----------------------------------------------------------------
+// Load Content On Scroll
+//-----------------------------------------------------------------
+
+$(window).bind('scroll', function() {
+    var a = ($(".js-masonry").offset().top + $(".js-masonry").height());
+    var b = ($(window).height() + $(window).scrollTop() - 100);
+    if ( b > a ) {
+        $('.js-masonry > [class*="span"]:visible:last')
+            .nextAll(':lt(3)')
+            .show();
+        $('.js-masonry').masonry();
+    }
+})
+
+//-----------------------------------------------------------------
 // Parallax Scroll
 //-----------------------------------------------------------------
 
