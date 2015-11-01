@@ -82,6 +82,14 @@ module.exports = function(grunt) {
             Masonry: {
                 src: 'app/vendor/Masonry/dist/masonry.pkgd.js',
                 dest: buildScripts + 'masonry.pkgd.min.js'
+            },
+            infiniteScroll: {
+                src: 'app/vendor/infinite-scroll/jquery.infinitescroll.js',
+                dest: buildScripts + 'jquery.infinitescroll.min.js'
+            },
+            imagesLoaded: {
+                src: 'app/vendor/imagesLoaded/imagesloaded.pkgd.js',
+                dest: buildScripts + 'imagesloaded.pkgd.min.js'
             }
         },
       
@@ -177,6 +185,14 @@ module.exports = function(grunt) {
                     {
                         src: 'app/vendor/Masonry/dist/masonry.pkgd.js',
                         dest: buildScripts + 'masonry.pkgd.js'
+                    },
+                    {
+                        src: 'app/vendor/infinite-scroll/jquery.infinitescroll.js',
+                        dest: buildScripts + 'jquery.infinitescroll.js'
+                    },
+                    {
+                        src: 'app/vendor/imagesLoaded/imagesloaded.pkgd.js',
+                        dest: buildScripts + 'imagesloaded.pkgd.js'
                     }
                 ]
             },
@@ -253,7 +269,7 @@ module.exports = function(grunt) {
         },
       
         //---------------------------------------------------------
-        // Notify
+        // Set PHP Constant
         // https://github.com/sindresorhus/grunt-sass
         //---------------------------------------------------------
         

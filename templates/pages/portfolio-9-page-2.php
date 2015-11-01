@@ -87,17 +87,6 @@
 						include ('../includes/masonry-item.php'); 
 					?>
                     
-                    <?php 
-						$span = 4;
-                        $img = 'wallpapers/bg-4.jpg';
-                        $hidden = true;
-						include ('../includes/masonry-item.php'); 
-					?>
-                    
-                </div>
-                
-                <div class="pagination hidden">
-                    <a href="portfolio-9-page-2.php" class="pagination-next">Next</a>
                 </div>
             
             </div><!-- container -->
