@@ -31,7 +31,7 @@
 				
             <div class="container">
 
-                <div class="row-flow row-waffle" id="portfolio-items">
+                <div class="row-flow row-waffle-infinite" id="portfolio-items">
                     
                     <?php 
 						$span = 4;
@@ -105,7 +105,7 @@
                 </script>
                 
                 <ul id="pagination">
-                    <li class="next"><a href="">1</a></li>
+                    <li class="next"><a href="3-cols-infinite-scroll-2.php">2</a></li>
                 </ul>
             
             </div><!-- container -->

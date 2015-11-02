@@ -3895,7 +3895,7 @@ p, ul, ol {
   left: 103%;
 }
 
-[class*="row-"][class*="-waffle"] {
+[class*="row-"][class*="-waffle"]:not([class*="-infinite"]) {
   margin-bottom: -3%;
 }
 [class*="row-"][class*="-waffle"] > [class*="span"] {

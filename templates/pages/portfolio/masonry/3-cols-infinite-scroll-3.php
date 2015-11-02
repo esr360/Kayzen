@@ -27,94 +27,80 @@
 
 		<?php include (ROOT.'/modules/billboard.php'); ?>
 		
-		<section class="section-primary-mini relative text-center">	
-			<ul class="tabs_nav-pills" id="portfolio-categories">
-				<li class="button-pill-grey-1-thin active" data-filter="*">View All</li>
-				<li class="button-pill-grey-1-thin" data-filter="[data-HTML-theme]">HTML Themes</li>
-				<li class="button-pill-grey-1-thin" data-filter="[data-photography]">Photography</li>
-				<li class="button-pill-grey-1-thin" data-filter="[data-logo]">Logos</li>
-			</ul>
-		</section>
-		
-		<section class="section-primary-flush relative">
+		<section class="section-primary relative">
 				
             <div class="container">
 
-                <div class="row-flow row-waffle js-isotope" id="portfolio-items">
+                <div class="row-flow row-waffle" id="portfolio-items">
                     
                     <?php 
 						$span = 4;
-                        $filterItems = 'data-HTML-theme';
+                        $filterItems = 'filter-HTML-theme';
                         $img = 'wallpapers/tall/bg-7.jpg';
 						include (ROOT.'/includes/masonry-item.php'); 
 					?>
                     
                     <?php 
 						$span = 4;
-                        $filterItems = 'data-photography data-logo';
+                        $filterItems = 'filter-photography filter-logo';
                         $img = 'wallpapers/bg-5.jpg';
 						include (ROOT.'/includes/masonry-item.php'); 
 					?>
                     
                     <?php 
 						$span = 4;
-                        $filterItems = 'data-logo';
+                        $filterItems = 'filter-logo';
                         $img = 'wallpapers/tall/bg-7.jpg';
 						include (ROOT.'/includes/masonry-item.php'); 
 					?>
                     
                     <?php 
 						$span = 4;
-                        $filterItems = 'data-HTML-theme data-logo';
+                        $filterItems = 'filter-HTML-theme filter-logo';
                         $img = 'wallpapers/tall/bg-7.jpg';
 						include (ROOT.'/includes/masonry-item.php'); 
 					?>
                     
                     <?php 
 						$span = 4;
-                        $filterItems = 'data-photography';
+                        $filterItems = 'filter-photography';
                         $img = 'wallpapers/bg-3.jpg';
 						include (ROOT.'/includes/masonry-item.php'); 
 					?>
                     
                     <?php 
 						$span = 4;
-                        $filterItems = 'data-HTML-theme data-photography';
+                        $filterItems = 'filter-HTML-theme filter-photography';
                         $img = 'wallpapers/tall/bg-7.jpg';
 						include (ROOT.'/includes/masonry-item.php'); 
 					?>
                     
                     <?php 
 						$span = 4;
-                        $filterItems = 'data-photography';
+                        $filterItems = 'filter-photography';
                         $img = 'wallpapers/tall/bg-7.jpg';
 						include (ROOT.'/includes/masonry-item.php'); 
 					?>
                     
                     <?php 
 						$span = 4;
-                        $filterItems = 'data-logo';
+                        $filterItems = 'filter-logo';
                         $img = 'wallpapers/bg-6.jpg';
 						include (ROOT.'/includes/masonry-item.php'); 
 					?>
                     
                     <?php 
 						$span = 4;
-                        $filterItems = 'data-HTML-theme';
+                        $filterItems = 'filter-HTML-theme';
                         $img = 'wallpapers/bg-4.jpg';
 						include (ROOT.'/includes/masonry-item.php'); 
 					?>
                     
                 </div>
-                
+                    
                 <script>
                     $(document).ready(function() {
-                        $('#portfolio-categories').on( 'click', 'li', function() {
-                            var filterValue = $(this).attr('data-filter');
-                            $('#portfolio-items').isotope({ 
-                                filter: filterValue 
-                            });
-                        });
+                        $("#portfolio-items").masonryInfiniteScroll();
                     });
                 </script>
             
