@@ -3901,6 +3901,9 @@ p, ul, ol {
 [class*="row-"][class*="-waffle"] > [class*="span"] {
   margin-bottom: 3%;
 }
+[class*="row-"][class*="-filterable"] > [class*="span"] {
+  transition: 0s;
+}
 
 html, body {
   padding: 0;

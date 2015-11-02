@@ -40,7 +40,7 @@
 				
             <div class="container">
 
-                <div class="row-flow row-waffle js-isotope" id="portfolio-items">
+                <div class="row-flow row-waffle-filterable" id="portfolio-items">
                     
                     <?php 
 						$span = 4;
@@ -109,6 +109,7 @@
                 
                 <script>
                     $(document).ready(function() {
+                        $('#portfolio-items').isotope();
                         $('#portfolio-categories').on( 'click', 'li', function() {
                             var filterValue = $(this).attr('data-filter');
                             $('#portfolio-items').isotope({ 

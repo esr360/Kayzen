@@ -40,6 +40,13 @@
             }
         }
         
+        // Remove CSS transition from filterable elements
+        @include modifier('filterable') {
+            > [class*="#{option($grid, 'options', 'col-namespace')}"] {
+                transition: 0s;
+            }                
+        }
+        
     }
     
 } // @mixin grid

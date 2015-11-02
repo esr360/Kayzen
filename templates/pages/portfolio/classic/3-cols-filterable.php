@@ -37,25 +37,33 @@
 		</section>
 		
 		<section class="section-primary-flush relative">
-			
-			<div id="portfolio-items">
 				
-				<div class="container">
-	
-					<div class="row-flow row-waffle">
-						
-						<?php 
-							$rows = 4; 
-							$columns = 3;
-							$widgetTitle = true;
-							include (ROOT.'/includes/portfolio-items.php'); 
-						?>
-						
-					</div>
-				
-				</div><!-- container -->
-							
-			</div>
+            <div class="container">
+
+                <div class="row-flow row-waffle-filterable" id="portfolio-items">
+                    
+                    <?php 
+                        $rows = 4; 
+                        $columns = 3;
+                        $widgetTitle = true;
+                        include (ROOT.'/includes/portfolio-items.php'); 
+                    ?>
+                    
+                </div>
+            
+                <script>
+                    $(document).ready(function() {
+                        $('#portfolio-items').isotope();
+                        $('#portfolio-categories').on( 'click', 'li', function() {
+                            var filterValue = $(this).attr('data-filter');
+                            $('#portfolio-items').isotope({ 
+                                filter: filterValue 
+                            });
+                        });
+                    });
+                </script>
+            
+            </div><!-- container -->
 			
 		</section>
 		

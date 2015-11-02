@@ -1,6 +1,6 @@
 <?php 
 
-    $filterTypes = array('HTML-themes', 'photography', 'logos');
+    $filterTypes = array('HTML-theme', 'photography', 'logo');
     
 	$totalCols = 12;
 	$items = $rows * $columns;
@@ -10,7 +10,10 @@
         
 ?>
 
-<div class="widget-card span-<?php echo $span ?>">
+<div 
+    class="widget-card span-<?php echo $span ?>"
+    <?php echo 'data-'.$filterTypes[array_rand($filterTypes)] ?>
+>
 	<div class="thumbnail">
 		<div class="thumbnail_mask">
 			<div class="thumbnail_controls<?php if($thumbTitle) echo '-corner' ?> icon_group-small">

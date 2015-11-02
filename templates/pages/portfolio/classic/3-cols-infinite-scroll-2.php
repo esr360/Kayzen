@@ -49,7 +49,7 @@
                 </script>
                 
                 <ul id="pagination">
-                    <li class="next"><a href="3-cols-infinite-scroll-2.php">2</a></li>
+                    <li class="next"><a href="3-cols-infinite-scroll-3.php">3</a></li>
                 </ul>
             
             </div><!-- container -->
