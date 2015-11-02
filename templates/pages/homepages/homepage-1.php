@@ -1,5 +1,5 @@
 <?php 
-	include ('../app.php');
+	include ('../../app.php');
 	// page config
 	$title = 'Index';
 ?>

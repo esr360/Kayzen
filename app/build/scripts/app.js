@@ -4193,47 +4193,55 @@ $(scrollTrigger);
     }); // fn.extend
 
 })(jQuery);
-//=================================================================
-// Adaptive Columns
-//=================================================================
-
-$(document).ready(function() {
-
-//-----------------------------------------------------------------
-// 2 columns
-//-----------------------------------------------------------------
-
-var twoCols = $('.2-cols');
-
-twoCols.owlCarousel({
-    items: 1,
-    loop: false,
-    dots: false,
-    nav: true,
-    navText: [],
-    margin: 31,
-    slideBy: 1,
-    mouseDrag: false,
-    responsive:{
-        460 :{                
-            items: 2
-        }
-    }
-});
-
-
-}); // End document.ready
 /**
  *
- * Kayzen - @esr360
- * Masonry Infinite Scroll
- * Uses "Isotope" and "Infinite Ajax Scroll" Git modules
+ * Kayzen.clckHelper
+ * @author @esr360
+ * @description Add class to element & remove from siblings
  *
  */
 
 (function ($) {
  
-    $.fn.masonryInfiniteScroll = function(custom) {
+    $.fn.KayzenClickHelper = function(custom) {
+        
+        // Options
+        var options = $.extend({
+            
+            targetClass : 'active'
+            
+        }, custom);
+            
+        // Run the code on each occurance of the element
+        return this.each(function() {
+            
+            // Execute the code when any child is clicked
+            $(this).children().click(function() {
+                
+                // Remove the class from each sibling
+                $(this).siblings().removeClass(options.targetClass);
+                
+                // Add the class to the new item
+                $(this).addClass(options.targetClass);
+                
+            });
+            
+        }); // this.each
+ 
+    }; // KayenInfiniteScroll()
+ 
+}(jQuery));
+/**
+ *
+ * Kayzen.infiniteScroll
+ * @author @esr360
+ * @description Uses "Isotope" and "Infinite Ajax Scroll" plugins
+ *
+ */
+
+(function ($) {
+ 
+    $.fn.KayenInfiniteScroll = function(custom) {
         
         // Options
         var options = $.extend({
@@ -4290,9 +4298,39 @@ twoCols.owlCarousel({
             
         }); // this.each
  
-    }; // masonryInfiniteScroll()
+    }; // KayenInfiniteScroll()
  
 }(jQuery));
+//=================================================================
+// Adaptive Columns
+//=================================================================
+
+$(document).ready(function() {
+
+//-----------------------------------------------------------------
+// 2 columns
+//-----------------------------------------------------------------
+
+var twoCols = $('.2-cols');
+
+twoCols.owlCarousel({
+    items: 1,
+    loop: false,
+    dots: false,
+    nav: true,
+    navText: [],
+    margin: 31,
+    slideBy: 1,
+    mouseDrag: false,
+    responsive:{
+        460 :{                
+            items: 2
+        }
+    }
+});
+
+
+}); // End document.ready
 /*
  * Pointer Events Polyfill: Adds support for the style attribute "pointer-events: none" to browsers without this feature (namely, IE).
  * (c) 2013, Kent Mewhort, licensed under BSD. See LICENSE.txt for details.
@@ -4715,29 +4753,68 @@ $("progress.progress-bar").each(function() {
     $(this).attr('value', attrProgress.replace(/[^-\d\.]/g, ''));
     $(this).find('.progress').css({ width : attrProgress }); 
 });
+/**
+ * 
+ * Kayzen.Tabs
+ * @version 1.0.0
+ * @author @esr360
+ * @license The MIT License (MIT)
+ * 
+ */
 
-/* Tabs
-================================================================ */
+(function ($) {
+ 
+    $.fn.KayenTabs = function(custom) {
+        
+        // Options
+        var options = $.extend({
+            
+            navParent   : '[class*="tabs_nav"]',
+            navItem     : 'li',
+            content     : '.tabs_content',
+            activeClass : 'active',
+            transition  : baseTransition/2
+            
+        }, custom);
+        
+        // Run the code on each occurance of the element
+        return this.each(function() {
+            
+            // Cache parent's selector
+            var parent = $(this);
+            
+            // Add active class to appropriate nav item
+            $(options.navParent).KayzenClickHelper({
+                targetClass : options.activeClass
+            });
+            
+            // Execute the code when a tab navigation item is clicked 
+            $(this).find(options.navParent).find(options.navItem).click(function() {
+        
+                // Cache the current index of clicked item
+                var index = $(this).index();
+                // Get the tab content sections
+                var content = $(this).parents(parent).find(options.content);
+                
+                // Hide previously selected content
+                content.fadeOut(options.transition);
+                
+                // Show the new content
+		        setTimeout(function(){
+                    content.eq(index).fadeIn(options.transition);
+                }, options.transition);
+                
+                return false;
+        
+            });
+            
+        }); // this.each
+ 
+    }; // KayenTabs()
+ 
+}(jQuery));
 
-function tabs() {
-
-	$(_tabs).find('[class*="tabs_nav"] > li').click(function() {
-
-		var $section = $(this).parents(tabs).find('.tabs_content');
-
-		$(this).siblings().removeClass('active');
-		$(this).addClass('active');
-		$section.fadeOut(baseTransition/2);
-		setTimeout(function(){
-			$section.eq($(this).index()).fadeIn(baseTransition/2);
-		}, baseTransition/2);
-		return false;
-
-	});
-  
-}
-
-$(tabs);
+$(_tabs).KayenTabs();
 //=================================================================
 // Tooltips
 //=================================================================

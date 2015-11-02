@@ -100,7 +100,7 @@
                     
                 <script>
                     $(document).ready(function() {
-                        $("#portfolio-items").masonryInfiniteScroll();
+                        $("#portfolio-items").KayenInfiniteScroll();
                     });
                 </script>
                 

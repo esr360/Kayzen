@@ -1,14 +1,14 @@
 /**
  *
- * Kayzen - @esr360
- * Masonry Infinite Scroll
- * Uses "Isotope" and "Infinite Ajax Scroll" Git modules
+ * Kayzen.infiniteScroll
+ * @author @esr360
+ * @description Uses "Isotope" and "Infinite Ajax Scroll" plugins
  *
  */
 
 (function ($) {
  
-    $.fn.masonryInfiniteScroll = function(custom) {
+    $.fn.KayenInfiniteScroll = function(custom) {
         
         // Options
         var options = $.extend({
@@ -65,6 +65,6 @@
             
         }); // this.each
  
-    }; // masonryInfiniteScroll()
+    }; // KayenInfiniteScroll()
  
 }(jQuery));

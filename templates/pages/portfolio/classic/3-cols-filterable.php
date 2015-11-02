@@ -53,13 +53,18 @@
             
                 <script>
                     $(document).ready(function() {
+                        
+                        $('#portfolio-categories').KayzenClickHelper();
+                        
                         $('#portfolio-items').isotope();
+                        
                         $('#portfolio-categories').on( 'click', 'li', function() {
                             var filterValue = $(this).attr('data-filter');
                             $('#portfolio-items').isotope({ 
                                 filter: filterValue 
                             });
                         });
+                        
                     });
                 </script>
             
