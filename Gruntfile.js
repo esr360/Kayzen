@@ -83,6 +83,10 @@ module.exports = function(grunt) {
                 src: 'app/vendor/Masonry/dist/masonry.pkgd.js',
                 dest: buildScripts + 'masonry.pkgd.min.js'
             },
+            Isotope: {
+                src: 'app/vendor/Isotope/dist/isotope.pkgd.js',
+                dest: buildScripts + 'isotope.pkgd.min.js'
+            },
             infiniteScroll: {
                 src: 'app/vendor/Infinite-AJAX-Scroll/dist/jquery-ias.js',
                 dest: buildScripts + 'jquery-ias.min.js'
@@ -181,6 +185,10 @@ module.exports = function(grunt) {
                     {
                         src: 'app/vendor/Masonry/dist/masonry.pkgd.js',
                         dest: buildScripts + 'masonry.pkgd.js'
+                    },
+                    {
+                        src: 'app/vendor/Isotope/dist/isotope.pkgd.js',
+                        dest: buildScripts + 'isotope.pkgd.js'
                     },
                     {
                         src: 'app/vendor/Infinite-AJAX-Scroll/dist/jquery-ias.js',

@@ -8,7 +8,7 @@
 <!DOCTYPE html>
 <html class="no-js">
 
-<?php include ('../includes/head.php'); ?>
+<?php include (ROOT.'/includes/head.php'); ?>
 
 <body>
 
@@ -17,15 +17,15 @@
 		
 		<?php 
 			$topBarModifiers = '';
-			include ('../modules/top-bar.php'); 
+			include (ROOT.'/modules/top-bar.php'); 
 		?>
 
 		<?php 
 			$headerModifiers = '-bar-absolute-dark-sticky'; 
-			include ('../modules/header.php'); 
+			include (ROOT.'/modules/header.php'); 
 		?>
 
-		<?php include ('../modules/billboard.php'); ?>
+		<?php include (ROOT.'/modules/billboard.php'); ?>
 		
 		<section class="section-primary relative">
 			
@@ -37,9 +37,9 @@
 						
 						<?php 
 							$rows = 2; 
-							$columns = 4;
+							$columns = 3;
 							$widgetTitle = true;
-							include ('../includes/portfolio-items.php'); 
+							include (ROOT.'/includes/portfolio-items.php'); 
 						?>
 						
 					</div>
@@ -52,9 +52,9 @@
 						
 						<?php 
 							$rows = 2; 
-							$columns = 4;
+							$columns = 3;
 							$widgetTitle = true;
-							include ('../includes/portfolio-items.php'); 
+							include (ROOT.'/includes/portfolio-items.php'); 
 						?>
 						
 					</div>
@@ -90,14 +90,14 @@
 			
 		</section>
 		
-		<?php include ('../sections/promo-banner.php'); ?>
+		<?php include (ROOT.'/sections/promo-banner.php'); ?>
 		
-		<?php include ('../modules/footer.php'); ?>
+		<?php include (ROOT.'/modules/footer.php'); ?>
 
     </div><!-- Site Canvas -->
 
-    <?php include ('../includes/ui-enhancements.php'); ?>
+    <?php include (ROOT.'/includes/ui-enhancements.php'); ?>
 
-    <?php include ('../includes/scripts.php'); ?>
+    <?php include (ROOT.'/includes/scripts.php'); ?>
 
 </body>

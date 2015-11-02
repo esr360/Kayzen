@@ -8,7 +8,7 @@
 <!DOCTYPE html>
 <html class="no-js">
 
-<?php include ('../includes/head.php'); ?>
+<?php include (ROOT.'/includes/head.php'); ?>
 
 <body>
 
@@ -17,49 +17,41 @@
 		
 		<?php 
 			$topBarModifiers = '';
-			include ('../modules/top-bar.php'); 
+			include (ROOT.'/modules/top-bar.php'); 
 		?>
 
 		<?php 
 			$headerModifiers = '-bar-absolute-dark-sticky'; 
-			include ('../modules/header.php'); 
+			include (ROOT.'/modules/header.php'); 
 		?>
 
-		<?php include ('../modules/billboard.php'); ?>
+		<?php include (ROOT.'/modules/billboard.php'); ?>
 		
 		<section class="section-primary relative">
 			
 			<div id="portfolio-carousel" class="owl-carousel">
 				
 				<div class="container">
-	
 					<div class="row-no-gutter">
-						
 						<?php 
 							$rows = 2; 
-							$columns = 3;
+							$columns = 2;
 							$thumbTitle = true;
-							include ('../includes/portfolio-items.php'); 
+							include (ROOT.'/includes/portfolio-items.php'); 
 						?>
-						
 					</div>
-				
-				</div><!-- container -->
+				</div>
 				
 				<div class="container">
-	
 					<div class="row-no-gutter">
-						
 						<?php 
 							$rows = 2; 
-							$columns = 3;
+							$columns = 2;
 							$thumbTitle = true;
-							include ('../includes/portfolio-items.php'); 
+							include (ROOT.'/includes/portfolio-items.php'); 
 						?>
-						
 					</div>
-				
-				</div><!-- container -->
+				</div>
 							
 			</div><!-- portfolio-carousel -->
 			
@@ -90,14 +82,14 @@
 			
 		</section>
 		
-		<?php include ('../sections/promo-banner.php'); ?>
+		<?php include (ROOT.'/sections/promo-banner.php'); ?>
 		
-		<?php include ('../modules/footer.php'); ?>
+		<?php include (ROOT.'/modules/footer.php'); ?>
 
     </div><!-- Site Canvas -->
 
-    <?php include ('../includes/ui-enhancements.php'); ?>
+    <?php include (ROOT.'/includes/ui-enhancements.php'); ?>
 
-    <?php include ('../includes/scripts.php'); ?>
+    <?php include (ROOT.'/includes/scripts.php'); ?>
 
 </body>

@@ -4380,24 +4380,27 @@ $(window).on("load scroll", function(d,h) {
 //-----------------------------------------------------------------
 
 $(window).bind("load resize", function() {
+    
+    var $break = (_module['grid']['options']['col-break']).replace(/[^-\d\.]/g, '');
+        
     $('.js-masonry').each(function() {
-        var $break = (_module['grid']['options']['col-break']).replace(/[^-\d\.]/g, '');
         if (($(document).width()) < $break) {
             $(this).masonry('destroy');
         } else {
             $(this).masonry();
         }
     });
+
 });
+    
+// Portfolio Infinite-Scroll
+//-------------------------------------------------------------
 
-//-----------------------------------------------------------------
-// Load Content On Scroll
-//-----------------------------------------------------------------
-
-(function () {
+var infiniteMasonry = (function () {
     
     var container = document.querySelector('#portfolio-items');
-    var msnry = new Masonry( container, {
+    
+    var isotopeGrid = new Isotope( container, {
         itemSelector: '.span-4',
         containerStyle: { 
             marginBottom: '2em' 
@@ -4417,7 +4420,7 @@ $(window).bind("load resize", function() {
     });
     
     ias.on('rendered', function(items) {
-        msnry.appended(items);
+        isotopeGrid.appended(items);
     });
     
     ias.extension(new IASSpinnerExtension());
@@ -4425,6 +4428,11 @@ $(window).bind("load resize", function() {
     ias.extension(new IASNoneLeftExtension({
         html: '<div class="ias-noneleft"><p>You have reached the end!</p></div>'
     }));
+    
+    $('#portfolio-categories').on( 'click', 'li', function() {
+        var filterValue = $(this).attr('data-filter');
+        $('#portfolio-items').isotope({ filter: filterValue });
+    });
 
 }());
 

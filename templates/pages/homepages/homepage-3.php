@@ -7,7 +7,7 @@
 <!DOCTYPE html>
 <html class="no-js">
 
-<?php include ('../includes/head.php'); ?>
+<?php include (ROOT.'/includes/head.php'); ?>
 
 <body>
 
@@ -16,12 +16,12 @@
 		
 		<?php 
 			$topBarModifiers = '-fixed';
-			include ('../modules/top-bar.php'); 
+			include (ROOT.'/modules/top-bar.php'); 
 		?>
 
 		<?php 
 			$headerModifiers = '-bar-absolute-dark'; 
-			include ('../modules/header.php'); 
+			include (ROOT.'/modules/header.php'); 
 		?>
 
 		<section class="billboard-full-screen">
@@ -272,15 +272,15 @@
 			
 		</section>
 		
-		<?php include ('../includes/google-map.php'); ?>
+		<?php include (ROOT.'/includes/google-map.php'); ?>
 		
-		<?php include ('../modules/footer.php'); ?>
+		<?php include (ROOT.'/modules/footer.php'); ?>
 
     </div><!-- Site Canvas -->
 
-    <?php include ('../includes/ui-enhancements.php'); ?>
+    <?php include (ROOT.'/includes/ui-enhancements.php'); ?>
 
-    <?php include ('../includes/scripts.php'); ?>
+    <?php include (ROOT.'/includes/scripts.php'); ?>
 
 </body>
 </html>
