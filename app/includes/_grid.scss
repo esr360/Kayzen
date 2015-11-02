@@ -32,6 +32,7 @@
         //---------------------------------------------------------
     
         @include modifier('waffle') {
+            margin-bottom: -3%;
             > [class*="#{option($grid, 'options', 'col-namespace')}"] {
                 margin-bottom: option($grid, 'options', 'gutter');
             }

@@ -1,12 +1,12 @@
 <?php 
-	include ('../app.php');
+	include ('../../../app.php');
 	// page config
 	$title = 'Our Portfolio';
 	$tagLine = 'Some of our most recent and best work';
 ?>
 
 <!DOCTYPE html>
-<html class="no-js">
+<html>
 
 <?php include (ROOT.'/includes/head.php'); ?>
 
@@ -37,7 +37,7 @@
 						
 						<?php 
 							$rows = 2; 
-							$columns = 4;
+							$columns = 2;
 							$widgetTitle = true;
 							include (ROOT.'/includes/portfolio-items.php'); 
 						?>
@@ -52,7 +52,7 @@
 						
 						<?php 
 							$rows = 2; 
-							$columns = 4;
+							$columns = 2;
 							$widgetTitle = true;
 							include (ROOT.'/includes/portfolio-items.php'); 
 						?>

@@ -1,9 +1,15 @@
 <?php 
+
+    $filterTypes = array('HTML-themes', 'photography', 'logos');
+    
 	$totalCols = 12;
 	$items = $rows * $columns;
 	$span = ($totalCols / $columns); 
+    
 	for($item = 0 ; $item < $items; $item++) { 
+        
 ?>
+
 <div class="widget-card span-<?php echo $span ?>">
 	<div class="thumbnail">
 		<div class="thumbnail_mask">
@@ -35,4 +41,5 @@
 	</div>
 	<?php } ?>
 </div>
+
 <?php } ?>

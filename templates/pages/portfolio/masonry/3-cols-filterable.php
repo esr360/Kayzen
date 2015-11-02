@@ -1,12 +1,12 @@
 <?php 
-	include ('../app.php');
+	include ('../../../app.php');
 	// page config
 	$title = 'Our Portfolio';
 	$tagLine = 'Some of our most recent and best work';
 ?>
 
 <!DOCTYPE html>
-<html class="no-js">
+<html>
 
 <?php include (ROOT.'/includes/head.php'); ?>
 
@@ -30,9 +30,9 @@
 		<section class="section-primary-mini relative text-center">	
 			<ul class="tabs_nav-pills" id="portfolio-categories">
 				<li class="button-pill-grey-1-thin active" data-filter="*">View All</li>
-				<li class="button-pill-grey-1-thin" data-filter=".filter-HTML-theme">HTML Themes</li>
-				<li class="button-pill-grey-1-thin" data-filter=".filter-photography">Photography</li>
-				<li class="button-pill-grey-1-thin" data-filter=".filter-logo">Logos</li>
+				<li class="button-pill-grey-1-thin" data-filter="[data-HTML-theme]">HTML Themes</li>
+				<li class="button-pill-grey-1-thin" data-filter="[data-photography]">Photography</li>
+				<li class="button-pill-grey-1-thin" data-filter="[data-logo]">Logos</li>
 			</ul>
 		</section>
 		
@@ -44,63 +44,63 @@
                     
                     <?php 
 						$span = 4;
-                        $filterItems = 'filter-HTML-theme';
+                        $filterItems = 'data-HTML-theme';
                         $img = 'wallpapers/tall/bg-7.jpg';
 						include (ROOT.'/includes/masonry-item.php'); 
 					?>
                     
                     <?php 
 						$span = 4;
-                        $filterItems = 'filter-photography filter-logo';
+                        $filterItems = 'data-photography data-logo';
                         $img = 'wallpapers/bg-5.jpg';
 						include (ROOT.'/includes/masonry-item.php'); 
 					?>
                     
                     <?php 
 						$span = 4;
-                        $filterItems = 'filter-logo';
+                        $filterItems = 'data-logo';
                         $img = 'wallpapers/tall/bg-7.jpg';
 						include (ROOT.'/includes/masonry-item.php'); 
 					?>
                     
                     <?php 
 						$span = 4;
-                        $filterItems = 'filter-HTML-theme filter-logo';
+                        $filterItems = 'data-HTML-theme data-logo';
                         $img = 'wallpapers/tall/bg-7.jpg';
 						include (ROOT.'/includes/masonry-item.php'); 
 					?>
                     
                     <?php 
 						$span = 4;
-                        $filterItems = 'filter-photography';
+                        $filterItems = 'data-photography';
                         $img = 'wallpapers/bg-3.jpg';
 						include (ROOT.'/includes/masonry-item.php'); 
 					?>
                     
                     <?php 
 						$span = 4;
-                        $filterItems = 'filter-HTML-theme filter-photography';
+                        $filterItems = 'data-HTML-theme data-photography';
                         $img = 'wallpapers/tall/bg-7.jpg';
 						include (ROOT.'/includes/masonry-item.php'); 
 					?>
                     
                     <?php 
 						$span = 4;
-                        $filterItems = 'filter-photography';
+                        $filterItems = 'data-photography';
                         $img = 'wallpapers/tall/bg-7.jpg';
 						include (ROOT.'/includes/masonry-item.php'); 
 					?>
                     
                     <?php 
 						$span = 4;
-                        $filterItems = 'filter-logo';
+                        $filterItems = 'data-logo';
                         $img = 'wallpapers/bg-6.jpg';
 						include (ROOT.'/includes/masonry-item.php'); 
 					?>
                     
                     <?php 
 						$span = 4;
-                        $filterItems = 'filter-HTML-theme';
+                        $filterItems = 'data-HTML-theme';
                         $img = 'wallpapers/bg-4.jpg';
 						include (ROOT.'/includes/masonry-item.php'); 
 					?>

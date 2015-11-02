@@ -3895,6 +3895,9 @@ p, ul, ol {
   left: 103%;
 }
 
+[class*="row-"][class*="-waffle"] {
+  margin-bottom: -3%;
+}
 [class*="row-"][class*="-waffle"] > [class*="span"] {
   margin-bottom: 3%;
 }

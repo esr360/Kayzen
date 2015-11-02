@@ -1,12 +1,12 @@
 <?php 
-	include ('../app.php');
+	include ('../../app.php');
 	// page config
 	$title = 'Our Portfolio';
 	$tagLine = 'Some of our most recent and best work';
 ?>
 
 <!DOCTYPE html>
-<html class="no-js">
+<html>
 
 <?php include (ROOT.'/includes/head.php'); ?>
 
@@ -32,26 +32,34 @@
 			<div id="portfolio-carousel" class="owl-carousel">
 				
 				<div class="container">
+	
 					<div class="row-no-gutter">
+						
 						<?php 
-							$rows = 2; 
-							$columns = 2;
-							$thumbTitle = true;
+							$rows = 3; 
+							$columns = 4;
+							$thumbTitle = 'small';
 							include (ROOT.'/includes/portfolio-items.php'); 
 						?>
+						
 					</div>
-				</div>
+				
+				</div><!-- container -->
 				
 				<div class="container">
+	
 					<div class="row-no-gutter">
+						
 						<?php 
-							$rows = 2; 
-							$columns = 2;
-							$thumbTitle = true;
+							$rows = 3; 
+							$columns = 4;
+							$thumbTitle = 'small';
 							include (ROOT.'/includes/portfolio-items.php'); 
 						?>
+						
 					</div>
-				</div>
+				
+				</div><!-- container -->
 							
 			</div><!-- portfolio-carousel -->
 			

@@ -1,4 +1,4 @@
-<div class="widget-card span-<?php echo $span .' '. $filterItems; ?>">
+<div class="widget-card span-<?php echo $span ?>" <?php echo $filterItems ?>>
     <div class="thumbnail">
         <div class="thumbnail_mask">
             <div class="thumbnail_controls icon_group-small">

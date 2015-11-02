@@ -99,49 +99,6 @@ $(window).bind("load resize", function() {
     });
 
 });
-    
-// Portfolio Infinite-Scroll
-//-------------------------------------------------------------
-
-var infiniteMasonry = (function () {
-    
-    var container = document.querySelector('#portfolio-items');
-    
-    var isotopeGrid = new Isotope( container, {
-        itemSelector: '.span-4',
-        containerStyle: { 
-            marginBottom: '2em' 
-        }
-    });
-    
-    var ias = $.ias({
-        container: "#portfolio-items",
-        item: ".span-4",
-        pagination: "#pagination",
-        next: ".next a",
-        delay: 400
-    });
-    
-    ias.on('render', function(items) {
-        $(items).css({ opacity: 0 });
-    });
-    
-    ias.on('rendered', function(items) {
-        isotopeGrid.appended(items);
-    });
-    
-    ias.extension(new IASSpinnerExtension());
-    
-    ias.extension(new IASNoneLeftExtension({
-        html: '<div class="ias-noneleft"><p>You have reached the end!</p></div>'
-    }));
-    
-    $('#portfolio-categories').on( 'click', 'li', function() {
-        var filterValue = $(this).attr('data-filter');
-        $('#portfolio-items').isotope({ filter: filterValue });
-    });
-
-}());
 
 //-----------------------------------------------------------------
 // Parallax Scroll
