@@ -46,3 +46,6 @@
 [submodule "app/vendor/Infinite-AJAX-Scroll"]
 	path = app/vendor/Infinite-AJAX-Scroll
 	url = https://github.com/webcreate/infinite-ajax-scroll.git
+[submodule "app/vendor/Isotope"]
+	path = app/vendor/Isotope
+	url = https://github.com/metafizzy/isotope.git
