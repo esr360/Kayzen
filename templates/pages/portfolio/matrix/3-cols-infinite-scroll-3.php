@@ -28,7 +28,7 @@
 		<?php include (ROOT.'/modules/billboard.php'); ?>
 		
 		<section class="section-primary relative">
-                
+            
             <div class="container">
 			
                 <div id="portfolio-items" class="row-no-gutter">
@@ -40,17 +40,7 @@
                         include (ROOT.'/includes/portfolio-items.php'); 
                     ?>
                                 
-                </div><!-- portfolio-items -->
-                    
-                <script>
-                    $(document).ready(function() {
-                        $("#portfolio-items").KayenInfiniteScroll();
-                    });
-                </script>
-                
-                <ul id="pagination">
-                    <li class="next"><a href="3-cols-infinite-scroll-2.php">2</a></li>
-                </ul>   
+                </div><!-- portfolio-items -->  
             
             </div>       
 			
@@ -65,13 +55,5 @@
     <?php include (ROOT.'/includes/ui-enhancements.php'); ?>
 
     <?php include (ROOT.'/includes/scripts.php'); ?>
-    
-    <?php if (env == 'dev') { ?>
-        <script src="<?php echo appDir ?>/build/scripts/jquery-ias.js"></script>
-        <script src="<?php echo appDir ?>/build/scripts/isotope.pkgd.js"></script>
-    <?php } else if (env == 'prod') { ?>
-        <script src="<?php echo appDir ?>/build/scripts/jquery-ias.min.js"></script>
-        <script src="<?php echo appDir ?>/build/scripts/isotope.pkgd.min.js"></script>
-    <?php } ?>
 
 </body>
