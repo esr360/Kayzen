@@ -1,5 +1,5 @@
 <?php 
-	include ('../../app.php');
+	include ('../../../app.php');
 	// page config
 	$title = 'Our Portfolio';
 	$tagLine = 'Some of our most recent and best work';

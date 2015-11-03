@@ -4195,6 +4195,35 @@ $(scrollTrigger);
 })(jQuery);
 /**
  *
+ * Kayzen.carouselColumns
+ * @author @esr360
+ * @description convert row into responsive carousel
+ *
+ */
+
+$(document).ready(function() {
+
+    var twoCols = $('.2-cols');
+    
+    twoCols.owlCarousel({
+        items: 1,
+        loop: false,
+        dots: false,
+        nav: true,
+        navText: [],
+        margin: 31,
+        slideBy: 1,
+        mouseDrag: false,
+        responsive:{
+            460 :{                
+                items: 2
+            }
+        }
+    });
+
+}); // document.ready
+/**
+ *
  * Kayzen.clckHelper
  * @author @esr360
  * @description Add class to element & remove from siblings
@@ -4302,104 +4331,6 @@ $(scrollTrigger);
  
 }(jQuery));
 //=================================================================
-// Adaptive Columns
-//=================================================================
-
-$(document).ready(function() {
-
-//-----------------------------------------------------------------
-// 2 columns
-//-----------------------------------------------------------------
-
-var twoCols = $('.2-cols');
-
-twoCols.owlCarousel({
-    items: 1,
-    loop: false,
-    dots: false,
-    nav: true,
-    navText: [],
-    margin: 31,
-    slideBy: 1,
-    mouseDrag: false,
-    responsive:{
-        460 :{                
-            items: 2
-        }
-    }
-});
-
-
-}); // End document.ready
-/*
- * Pointer Events Polyfill: Adds support for the style attribute "pointer-events: none" to browsers without this feature (namely, IE).
- * (c) 2013, Kent Mewhort, licensed under BSD. See LICENSE.txt for details.
- */
-
-// constructor
-function PointerEventsPolyfill(options){
-    // set defaults
-    this.options = {
-        selector: '*',
-        mouseEvents: ['click','dblclick','mousedown','mouseup'],
-        usePolyfillIf: function(){
-            if(navigator.appName == 'Microsoft Internet Explorer')
-            {
-                var agent = navigator.userAgent;
-                if (agent.match(/MSIE ([0-9]{1,}[\.0-9]{0,})/) != null){
-                    var version = parseFloat( RegExp.$1 );
-                    if(version < 11)
-                      return true;
-                }
-            }
-            return false;
-        }
-    };
-    if(options){
-        var obj = this;
-        $.each(options, function(k,v){
-          obj.options[k] = v;
-        });
-    }
-
-    if(this.options.usePolyfillIf())
-      this.register_mouse_events();
-}
-
-// singleton initializer
-PointerEventsPolyfill.initialize = function(options){
-    if(PointerEventsPolyfill.singleton == null)
-      PointerEventsPolyfill.singleton = new PointerEventsPolyfill(options);
-    return PointerEventsPolyfill.singleton;
-};
-
-// handle mouse events w/ support for pointer-events: none
-PointerEventsPolyfill.prototype.register_mouse_events = function(){
-    // register on all elements (and all future elements) matching the selector
-    $(document).on(this.options.mouseEvents.join(" "), this.options.selector, function(e){
-       if($(this).css('pointer-events') == 'none'){
-             // peak at the element below
-             var origDisplayAttribute = $(this).css('display');
-             $(this).css('display','none');
-
-             var underneathElem = document.elementFromPoint(e.clientX, e.clientY);
-
-            if(origDisplayAttribute)
-                $(this)
-                    .css('display', origDisplayAttribute);
-            else
-                $(this).css('display','');
-
-             // fire the mouse event on the element below
-            e.target = underneathElem;
-            $(underneathElem).trigger(e);
-
-            return false;
-        }
-        return true;
-    });
-};
-//=================================================================
 // Tools
 //=================================================================
 
@@ -4441,23 +4372,6 @@ $('a[href*=#]' + scrollExempt).click(function() {
         }
     }
 });
-
-//-----------------------------------------------------------------
-// Add Active Class
-//-----------------------------------------------------------------
-
-if(breakpoint('min-width', 'break-3')) {
-    tiles = $(".inactive");
-    $(window).bind("load scroll", function(d,h) { 
-        tiles.each(function(i) {
-            a = $(this).offset().top + $(this).height();
-            b = $(window).scrollTop() + $(window).height();
-            if (a < b) $(this).removeClass('inactive').addClass('active');
-        });
-    });
-} else {
-    $('.inactive').removeClass('inactive');
-}
 
 //-----------------------------------------------------------------
 // Animated Numbers
@@ -4508,12 +4422,6 @@ $(window).bind("load resize", function() {
 $.stellar({
     horizontalScrolling:false
 });
-
-//-----------------------------------------------------------------
-// Pointer Events Polyfill
-//-----------------------------------------------------------------
-
-PointerEventsPolyfill.initialize({});
 
 //-----------------------------------------------------------------
 // Data Background Images

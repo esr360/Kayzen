@@ -1,3 +1,10 @@
+/**
+ *
+ * Google Map
+ * Modified for use with Kayzen
+ *
+ */
+
 $(document).ready(function() {
 
     // When the window has finished loading create our google map below
@@ -17,12 +24,11 @@ $(document).ready(function() {
             'administrative' : _mapColor['administrative'],
             'park'           : _mapColor['park']
         };
-        
-        console.log(mapColors['water']);
             
         // Basic options for a simple Google Map
         // For more options see: https://developers.google.com/maps/documentation/javascript/reference#MapOptions
         var mapOptions = {
+            
             // How zoomed in you want the map to start at (always required)
             zoom: 14,
 

@@ -1,6 +1,9 @@
-//=================================================================
-// Tools
-//=================================================================
+/**
+ *
+ * Tools
+ * @description general JS tools & helpers for Kayzen
+ *
+ */
 
 //-----------------------------------------------------------------
 // Styles Configuration
@@ -40,23 +43,6 @@ $('a[href*=#]' + scrollExempt).click(function() {
         }
     }
 });
-
-//-----------------------------------------------------------------
-// Add Active Class
-//-----------------------------------------------------------------
-
-if(breakpoint('min-width', 'break-3')) {
-    tiles = $(".inactive");
-    $(window).bind("load scroll", function(d,h) { 
-        tiles.each(function(i) {
-            a = $(this).offset().top + $(this).height();
-            b = $(window).scrollTop() + $(window).height();
-            if (a < b) $(this).removeClass('inactive').addClass('active');
-        });
-    });
-} else {
-    $('.inactive').removeClass('inactive');
-}
 
 //-----------------------------------------------------------------
 // Animated Numbers
@@ -107,12 +93,6 @@ $(window).bind("load resize", function() {
 $.stellar({
     horizontalScrolling:false
 });
-
-//-----------------------------------------------------------------
-// Pointer Events Polyfill
-//-----------------------------------------------------------------
-
-PointerEventsPolyfill.initialize({});
 
 //-----------------------------------------------------------------
 // Data Background Images

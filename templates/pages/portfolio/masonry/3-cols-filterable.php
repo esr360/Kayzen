@@ -109,13 +109,18 @@
                 
                 <script>
                     $(document).ready(function() {
+                        
+                        $('#portfolio-categories').KayzenClickHelper();
+                        
                         $('#portfolio-items').isotope();
-                        $('#portfolio-categories').on( 'click', 'li', function() {
+                        
+                        $('#portfolio-categories').on('click', 'li', function() {
                             var filterValue = $(this).attr('data-filter');
                             $('#portfolio-items').isotope({ 
                                 filter: filterValue 
                             });
                         });
+                        
                     });
                 </script>
             
@@ -134,10 +139,8 @@
     <?php include (ROOT.'/includes/scripts.php'); ?>
     
     <?php if (env == 'dev') { ?>
-        <script src="<?php echo appDir ?>/build/scripts/jquery-ias.js"></script>
         <script src="<?php echo appDir ?>/build/scripts/isotope.pkgd.js"></script>
     <?php } else if (env == 'prod') { ?>
-        <script src="<?php echo appDir ?>/build/scripts/jquery-ias.min.js"></script>
         <script src="<?php echo appDir ?>/build/scripts/isotope.pkgd.min.js"></script>
     <?php } ?>
 

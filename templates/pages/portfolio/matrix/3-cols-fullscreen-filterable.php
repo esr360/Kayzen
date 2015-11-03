@@ -36,39 +36,35 @@
 			</ul>
 		</section>
 		
-		<section class="section-primary-flush relative">
-				
-            <div class="container">
-
-                <div class="row-flow row-waffle-filterable" id="portfolio-items">
-                    
-                    <?php 
-                        $rows = 4; 
-                        $columns = 3;
-                        $widgetTitle = true;
-                        include (ROOT.'/includes/portfolio-items.php'); 
-                    ?>
-                    
-                </div>
+		<section class="section relative">
+			
+			<div id="portfolio-items" class="row-no-gutter row-filterable">
+	
+                <?php 
+                    $rows = 4; 
+                    $columns = 3;
+                    $thumbTitle = true;
+                    include (ROOT.'/includes/portfolio-items.php'); 
+                ?>
+							
+			</div><!-- portfolio-items -->
             
-                <script>
-                    $(document).ready(function() {
-                        
-                        $('#portfolio-categories').KayzenClickHelper();
-                        
-                        $('#portfolio-items').isotope();
-                        
-                        $('#portfolio-categories').on('click', 'li', function() {
-                            var filterValue = $(this).attr('data-filter');
-                            $('#portfolio-items').isotope({ 
-                                filter: filterValue 
-                            });
+            <script>
+                $(document).ready(function() {
+                    
+                    $('#portfolio-categories').KayzenClickHelper();
+                    
+                    $('#portfolio-items').isotope();
+                    
+                    $('#portfolio-categories').on('click', 'li', function() {
+                        var filterValue = $(this).attr('data-filter');
+                        $('#portfolio-items').isotope({ 
+                            filter: filterValue 
                         });
-                        
                     });
-                </script>
-            
-            </div><!-- container -->
+                    
+                });
+            </script>            
 			
 		</section>
 		

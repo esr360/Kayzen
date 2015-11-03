@@ -40,6 +40,10 @@
             }
         }
         
+        @include modifier(has-dots) {
+            margin-bottom: option($grid, 'options', 'gutter');
+        }
+        
         // Remove CSS transition from filterable elements
         @include modifier('filterable') {
             > [class*="#{option($grid, 'options', 'col-namespace')}"] {

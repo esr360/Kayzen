@@ -1,5 +1,5 @@
 <?php 
-	include ('../../app.php');
+	include ('../../../app.php');
 	// page config
 	$title = 'Our Portfolio';
 	$tagLine = 'Some of our most recent and best work';
@@ -29,10 +29,10 @@
 		
 		<section class="section-primary relative">
 			
-			<div id="portfolio-carousel" class="owl-carousel">
+			<div id="portfolio-items" class="owl-carousel">
 				
 				<div class="container">
-					<div class="row-no-gutter">
+					<div class="row-no-gutter row-has-dots">
 						<?php 
 							$rows = 2; 
 							$columns = 2;
@@ -43,7 +43,7 @@
 				</div>
 				
 				<div class="container">
-					<div class="row-no-gutter">
+					<div class="row-no-gutter row-has-dots">
 						<?php 
 							$rows = 2; 
 							$columns = 2;
@@ -53,7 +53,7 @@
 					</div>
 				</div>
 							
-			</div><!-- portfolio-carousel -->
+			</div><!-- portfolio-items -->
 			
 			<nav class="slide-nav">
 				<button class="slide-prev icon-border-size-4"><i class="fa fa-angle-left"></i></button>
@@ -63,7 +63,7 @@
 			<script>
 				$(document).ready(function() {
 					
-					var portfolioCarousel = $("#portfolio-carousel");
+					var portfolioCarousel = $("#portfolio-items");
 					
 					portfolioCarousel.owlCarousel({
 						items: 1,
