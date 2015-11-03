@@ -4,6 +4,22 @@ $(document).ready(function() {
     google.maps.event.addDomListener(window, 'load', init);
 
     function init() {
+            
+        // Fetch the map colors from the CSS
+        var _mapColor = _module['google-map']['colors']
+        var mapColors = {
+            'water'          : _mapColor['water'],
+            'landscape'      : _mapColor['landscape'],
+            'road'           : _mapColor['road'],
+            'poi'            : _mapColor['poi'],
+            'transit'        : _mapColor['transit'],
+            'stroke'         : _mapColor['stroke'],
+            'administrative' : _mapColor['administrative'],
+            'park'           : _mapColor['park']
+        };
+        
+        console.log(mapColors['water']);
+            
         // Basic options for a simple Google Map
         // For more options see: https://developers.google.com/maps/documentation/javascript/reference#MapOptions
         var mapOptions = {
@@ -20,7 +36,97 @@ $(document).ready(function() {
 
             // How you would like to style the map. 
             // This is where you would paste any style found on Snazzy Maps.
-            styles: [{"featureType":"water","elementType":"geometry","stylers":[{"color":"#713f7c"}]},{"featureType":"landscape","elementType":"geometry","stylers":[{"color":"#8f4ca2"}]},{"featureType":"road","elementType":"geometry","stylers":[{"color":"#8f51af"},{"lightness":-37}]},{"featureType":"poi","elementType":"geometry","stylers":[{"color":"#9d55b9"}]},{"featureType":"transit","elementType":"geometry","stylers":[{"color":"#9d55b9"}]},{"elementType":"labels.text.stroke","stylers":[{"visibility":"on"},{"color":"#944fab"},{"weight":2},{"gamma":0.84}]},{"elementType":"labels.text.fill","stylers":[{"color":"#ffffff"}]},{"featureType":"administrative","elementType":"geometry","stylers":[{"weight":0.6},{"color":"#6f3f7d"}]},{"elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"poi.park","elementType":"geometry","stylers":[{"color":"#8f4ca2"}]}]
+            
+            styles: [
+                {
+                    "featureType" : "water", 
+                    "elementType" : "geometry",
+                    "stylers" : [{
+                        "color" : mapColors['water']
+                    }]
+                },
+                {
+                    "featureType" : "landscape",
+                    "elementType" : "geometry",
+                    "stylers" : [{
+                        "color" : mapColors['landscape']
+                    }]
+                },
+                {
+                    "featureType" : "road",
+                    "elementType" : "geometry",
+                    "stylers" : [
+                        {
+                            "color" : mapColors['road']
+                        },
+                        {
+                            "lightness" : -37
+                        }
+                    ]
+                },
+                {
+                    "featureType" : "poi",
+                    "elementType" : "geometry",
+                    "stylers" : [{
+                        "color" : mapColors['poi']
+                    }]
+                },
+                {
+                    "featureType" : "transit",
+                    "elementType" : "geometry",
+                    "stylers" : [{
+                        "color" : mapColors['transit']
+                    }]
+                },
+                {
+                    "elementType" : "labels.text.stroke",
+                    "stylers" : [
+                        {
+                            "visibility" : "on"
+                        },
+                        {
+                            "color" : mapColors['stroke']
+                        },
+                        {
+                            "weight" : 2
+                        },
+                        {
+                            "gamma" : 0.84
+                        }
+                    ]
+                },
+                {
+                    "elementType" : "labels.text.fill",
+                    "stylers" : [{
+                        "color" : "#ffffff"
+                    }]
+                },
+                {
+                    "featureType" : "administrative",
+                    "elementType" : "geometry",
+                    "stylers" : [
+                        {
+                            "weight" : 0.6
+                        },
+                        {
+                            "color" : mapColors['administrative']
+                        }
+                    ]
+                },
+                {
+                    "elementType" : "labels.icon",
+                    "stylers" : [{
+                        "visibility" : "off"
+                    }]
+                },
+                {
+                    "featureType" : "poi.park",
+                    "elementType" : "geometry",
+                    "stylers" : [{
+                        "color" : mapColors['park']
+                    }]
+                }
+            ]
         };
 
         // Get the HTML DOM element that will contain your map 
@@ -32,4 +138,4 @@ $(document).ready(function() {
         
     }
 
-}); // End document.ready
+}); // document.ready

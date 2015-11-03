@@ -7,9 +7,62 @@
 	//-------------------------------------------------------------
 	// Config
 	//-------------------------------------------------------------
+    
+    $baseMapColor: color('brand', 'primary');
 
 	$google-map: config((
-		name            : google-maps
+		'name'               : 'google-map',
+        'output-JSON'        : true,
+        'colors'             : (
+            'water'          : adjust-color(
+                $baseMapColor,
+                $hue         : 5.95deg, 
+                $saturation  : -5.97%, 
+                $lightness   : -16.08%
+            ),
+            'landscape'      : adjust-color(
+                $baseMapColor,
+                $hue         : 3.52deg, 
+                $saturation  : -2.45%, 
+                $lightness   : -6.08%
+            ),
+            'road'           : adjust-color(
+                $baseMapColor,
+                $hue         : -3.65deg, 
+                $saturation  : -1.58%, 
+                $lightness   : -2.55%
+            ),
+            'poi'            : adjust-color(
+                $baseMapColor,
+                $hue         : -0.03deg, 
+                $saturation  : 3.08%, 
+                $lightness   : 0.20%
+            ),
+            'transit'        : adjust-color(
+                $baseMapColor,
+                $hue         : -0.03deg, 
+                $saturation  : 3.08%, 
+                $lightness   : 0.20%
+            ),
+            'stroke'         : adjust-color(
+                $baseMapColor,
+                $hue         : 1.77deg, 
+                $saturation  : -1.79%, 
+                $lightness   : -3.73%
+            ),
+            'administrative' : adjust-color(
+                $baseMapColor,
+                $hue         : 3.23deg, 
+                $saturation  : -5.61%, 
+                $lightness   : -15.88%
+            ),
+            'park'           : adjust-color(
+                $baseMapColor,
+                $hue         : 3.52deg, 
+                $saturation  : -2.45%, 
+                $lightness   : -6.08%
+            )
+        )
 	), $custom);
 	
 	//-------------------------------------------------------------
@@ -24,3 +77,18 @@
 	}
 	
 } // @mixin google-map
+
+@function color-diff($a, $b) {
+    
+    $sat: saturation($a) - saturation($b);
+    $lig: lightness($a) - lightness($b);
+    $fn-sat: if($sat > 0, 'desaturate', 'saturate');
+    $fn-lig: if($lig > 0, 'darken', 'lighten');
+    
+    @return (
+        adjust-hue: -(hue($a) - hue($b)),
+        #{$fn-sat}: abs($sat),
+        #{$fn-lig}: abs($lig)
+    );
+    
+}
