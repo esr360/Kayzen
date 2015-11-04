@@ -12,10 +12,9 @@ $asset-path : "../../";
 $to-JSON    : true;
 
 //-----------------------------------------------------------------
-// Skeleton
+// Vendor Files
 //-----------------------------------------------------------------
 
-// Vendor Files
 @import "../../vendor/Normalize/normalize.css";
 @import "vendor/Kayzen-GS/src/kayzen-gs";
 @import "vendor/Owl-Carousel/src/scss/owl.animate";
@@ -27,16 +26,19 @@ $to-JSON    : true;
 @import "vendor/Modular/src/modular";
 @import "vendor/SassyJSON/stylesheets/SassyJSON";
 
-// Theme files
-@import "includes/tools";
-@import "includes/grid";
-@import "includes/color-palettes";
-@import "includes/typography";
-@import "includes/base";
-@import "includes/masonry-grid";
-@import "includes/helpers";
-@import "includes/print";
-@import "includes/sections";
+//-----------------------------------------------------------------
+// Utilities
+//-----------------------------------------------------------------
+
+@import "modules/utilities/tools";
+@import "modules/utilities/grid";
+@import "modules/utilities/color-palettes";
+@import "modules/utilities/typography";
+@import "modules/utilities/base";
+@import "modules/utilities/masonry-grid";
+@import "modules/utilities/helpers";
+@import "modules/utilities/print";
+@import "modules/utilities/sections";
 
 //-----------------------------------------------------------------
 // Elements

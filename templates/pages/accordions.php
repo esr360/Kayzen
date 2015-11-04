@@ -15,9 +15,17 @@
     <!-- Site Canvas -->
     <div id="site-content">
 		
-		<?php include (ROOT.'/modules/objects/header/header.php'); ?>
+		<?php 
+			$topBarModifiers = '';
+			include (ROOT.'/modules/top-bar.php'); 
+		?>
 
-		<?php include (ROOT.'/modules/objects/billboard/billboard.php'); ?>
+		<?php 
+			$headerModifiers = '-bar-absolute-dark-sticky'; 
+			include (ROOT.'/modules/header.php'); 
+		?>
+
+		<?php include (ROOT.'/modules/billboard.php'); ?>
 		
 		<section class="section-primary">
 			
@@ -338,7 +346,7 @@
 			
 		</section>
 
-		<?php include (ROOT.'/modules/objects/footer/footer.php'); ?>
+		<?php include (ROOT.'/modules/footer.php'); ?>
 
     </div><!-- Site Canvas -->
 

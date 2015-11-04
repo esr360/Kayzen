@@ -29,7 +29,7 @@
 		
 		<section class="section-primary relative">
 			
-			<div id="portfolio-carousel" class="owl-carousel">
+			<div id="portfolio-items" class="owl-carousel">
 				
 				<div class="container">
 	
@@ -61,7 +61,7 @@
 				
 				</div><!-- container -->
 							
-			</div><!-- portfolio-carousel -->
+			</div><!-- portfolio-items -->
 			
 			<nav class="slide-nav">
 				<button class="slide-prev icon-border-size-4"><i class="fa fa-angle-left"></i></button>
@@ -71,7 +71,7 @@
 			<script>
 				$(document).ready(function() {
 					
-					var portfolioCarousel = $("#portfolio-carousel");
+					var portfolioCarousel = $("#portfolio-items");
 					
 					portfolioCarousel.owlCarousel({
 						items: 1,
