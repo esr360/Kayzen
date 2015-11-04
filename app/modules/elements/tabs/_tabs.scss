@@ -30,7 +30,8 @@
 			
 			@extend %list-reset;
 			@extend .clearfix;
-			margin: auto;
+			margin-left: auto;
+			margin-right: auto;
 			position: relative;
 			z-index: 2;
 			

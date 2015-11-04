@@ -100,6 +100,14 @@
 		text-align: right !important; 
 	}
 	
+    // Object Aligning
+    
+    .object-center {
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    
 	// Vertical Aligning
 	
 	.va-top {

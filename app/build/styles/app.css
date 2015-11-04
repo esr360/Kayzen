@@ -5,7 +5,7 @@ Kayzen
 Made by @esr360
 
 ******************************************************************/
-@import url(vendor/Normalize/normalize.css);
+@import url(../../vendor/Normalize/normalize.css);
 @import url(http://fonts.googleapis.com/css?family=Lato:300,400,700,900);
 @import url(http://fonts.googleapis.com/css?family=Raleway:100,300,700,900);
 * {
@@ -3984,7 +3984,7 @@ pre, hr,
   text-shadow: none;
 }
 
-.v-sep:before, .v-sep:after, [class*="carousel-"][class*="-scale"]:before, .icon .fa, [class*="icon-"] .fa, .center-xy > img, .modal, [class*="modal-"], [class*="thumbnail_controls"], [class*="widget-"][class*="-tub"] [class*="widget_content"], [class*="top-bar_nav"] > ul > li [data-notification]:after, .globe, .scroll-wheel, .scroll-wheel:before, .loading-tweets, [class*="section-"][class*="-dot-map"]:before, [class*="section_graphic"] > img, [class*="billboard_wrapper"] {
+.v-sep:before, .v-sep:after, [class*="carousel-"][class*="-scale"]:before, .icon .fa, [class*="icon-"] .fa, .center-xy > img, [class*="thumbnail-"][class*="-article"] > img, .modal, [class*="modal-"], [class*="thumbnail_controls"], [class*="widget-"][class*="-tub"] [class*="widget_content"], [class*="top-bar_nav"] > ul > li [data-notification]:after, .globe, .scroll-wheel, .scroll-wheel:before, .loading-tweets, [class*="section-"][class*="-dot-map"]:before, [class*="section_graphic"] > img, [class*="billboard_wrapper"] {
   left: 0;
   right: 0;
   margin: auto;
@@ -4220,6 +4220,14 @@ pre:last-child, hr:last-child,
 
 .text-right {
   text-align: right !important;
+}
+
+.object-center {
+  position: relative;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
 }
 
 .va-top {
@@ -5772,10 +5780,10 @@ img {
   background-image: url("../..//images/mobile-base-yellow.png");
 }
 
-.center-xy {
+.center-xy, [class*="thumbnail-"][class*="-article"] {
   position: relative;
 }
-.center-xy > img {
+.center-xy > img, [class*="thumbnail-"][class*="-article"] > img {
   position: absolute;
   top: 50%;
   -webkit-transform: translateY(-50%);
@@ -5816,6 +5824,9 @@ img {
   display: inline-block;
   font-size: 0.83em;
 }
+[class*="list-"][class*="-tags"] > li.title {
+  color: inherit;
+}
 [class*="list-"][class*="-tags"] > li.plain a, [class*="list-"][class*="-tags"] > li.plain span {
   border: 1px solid rgba(0, 0, 0, 0.1);
   background: white;
@@ -5831,6 +5842,9 @@ img {
   background: #D63A36;
 }
 [class*="list-"][class*="-tags"] > li.php {
+  background: #9B58B5;
+}
+[class*="list-"][class*="-tags"] > li.brand {
   background: #9B58B5;
 }
 [class*="list-"][class*="-tags"] > li span, [class*="list-"][class*="-tags"] > li a {
@@ -5849,6 +5863,10 @@ img {
 }
 [class*="list-"][class*="-overflow"][data-list-height="6"] {
   max-height: 11.4em;
+}
+
+.pagination {
+  margin-top: 4rem;
 }
 
 .modal, [class*="modal-"] {
@@ -6068,7 +6086,8 @@ progress::-moz-progress-bar {
 }
 
 [class*="tabs_nav"] {
-  margin: auto;
+  margin-left: auto;
+  margin-right: auto;
   position: relative;
   z-index: 2;
 }
@@ -6202,6 +6221,9 @@ progress::-moz-progress-bar {
   -webkit-transform: scale(1.25);
       -ms-transform: scale(1.25);
           transform: scale(1.25);
+}
+[class*="thumbnail-"][class*="-article"] {
+  height: 200px;
 }
 [class*="thumbnail_mask"] {
   background: rgba(0, 0, 0, 0.6);

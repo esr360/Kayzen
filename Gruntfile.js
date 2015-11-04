@@ -35,6 +35,7 @@ module.exports = function(grunt) {
         'app/vendor/ScrollTrigger/src/ScrollTrigger.js',
         'app/vendor/Stellar/src/jquery.stellar.js',
         'app/vendor/TweeCool/src/tweecool.js',
+        'app/modules/utilities/core/core.js',
         'app/includes/*.js',
         'app/modules/elements/**/*.js',
         ['app/modules/objects/**/*.js', '!app/modules/objects/google-map/google-map.js'],

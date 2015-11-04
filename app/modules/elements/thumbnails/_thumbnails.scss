@@ -111,6 +111,11 @@
 				}
 			}
 		}
+        
+        @include modifier('article') {
+            height: 200px;
+            @extend .center-xy;
+        }
 
 	// Sub-Components
 	//-------------------------------------------------------------
