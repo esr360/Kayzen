@@ -5,7 +5,7 @@ Kayzen
 Made by @esr360
 
 ******************************************************************/
-@import url(../../vendor/Normalize/normalize.css);
+@import url(vendor/Normalize/normalize.css);
 @import url(http://fonts.googleapis.com/css?family=Lato:300,400,700,900);
 @import url(http://fonts.googleapis.com/css?family=Raleway:100,300,700,900);
 * {

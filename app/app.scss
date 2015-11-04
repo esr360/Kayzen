@@ -15,7 +15,7 @@ $to-JSON    : true;
 // Vendor Files
 //-----------------------------------------------------------------
 
-@import "../../vendor/Normalize/normalize.css";
+@import "vendor/Normalize/normalize.css";
 @import "vendor/Kayzen-GS/src/kayzen-gs";
 @import "vendor/Owl-Carousel/src/scss/owl.animate";
 @import "vendor/Owl-Carousel/src/scss/owl.autoheight";
@@ -30,15 +30,15 @@ $to-JSON    : true;
 // Utilities
 //-----------------------------------------------------------------
 
-@import "modules/utilities/tools";
-@import "modules/utilities/grid";
-@import "modules/utilities/color-palettes";
-@import "modules/utilities/typography";
-@import "modules/utilities/base";
-@import "modules/utilities/masonry-grid";
-@import "modules/utilities/helpers";
-@import "modules/utilities/print";
-@import "modules/utilities/sections";
+@import "modules/utilities/tools/tools";
+@import "modules/utilities/grid/grid";
+@import "modules/utilities/color-palette/color-palette";
+@import "modules/utilities/typography/typography";
+@import "modules/utilities/core/core";
+@import "modules/utilities/masonry-grid/masonry-grid";
+@import "modules/utilities/helpers/helpers";
+@import "modules/utilities/print/print";
+@import "modules/utilities/sections/sections";
 
 //-----------------------------------------------------------------
 // Elements
@@ -99,10 +99,6 @@ $theme: Kayzen;
 
 @import "themes/default/default";
 @import "themes/Kayzen/kayzen";
-
-//
-
-@import "includes/masonry-grid";
 
 // Output all configuration data to JSON only if setting exists 
 // and setting is "true"
