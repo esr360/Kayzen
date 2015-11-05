@@ -23,7 +23,8 @@
 			
 		margin: 0;
 		border: 0;
-		padding: 0 3em;
+		padding: 0 2.5em;
+        position: relative;
 		font-family: typography(typefaces, secondary);
 		
 	// Modifiers
@@ -41,12 +42,35 @@
 			}
 			
 		}
+        
+        @include modifiers(('pull-left', 'pull-right')) {
+            margin: 1em;
+            width: 340px;
+            max-width: 50%;
+            text-align: left;
+            font-style: italic;
+            @include nested-modifier('top') {
+                margin-top: 0;
+            }
+            @include nested-modifier('bottom') {
+                margin-bottom: 0;
+            }
+        }
+        
+        @include modifier('pull-left') {
+            float: left;
+            margin-left: 0;
+        }
+        
+        @include modifier('pull-right') {
+            float: right;
+            margin-right: 0;
+        }
 		
 	// Sub-Components
 	//-------------------------------------------------------------
 	
 		@include sub-component(bubble) {
-			position: relative;
 			padding: 1em 3em;
 			background: color(brand, primary);
 			border-radius: 0.6em;
@@ -55,6 +79,15 @@
 				position : top,
 				color    : color(brand, primary)
 			));
+            @include overwrite-sub('content') {
+                position: relative;
+                &:before {
+                    left: -1.35em;
+                }
+                &:after {
+                    right: -1.35em;
+                }
+            }
 			&:after {
 				left: 20%;
 			}
@@ -66,7 +99,6 @@
 		}
 		
 		@include sub-component(content) {
-			position: relative;
 			&:before,
 			&:after {
 				position: absolute;
@@ -77,12 +109,12 @@
 			&:before {
 				content: "\f10d";
 				top: -0.2em;
-				left: -1.5em;
+				left: 0;
 			}
 			&:after {
 				content: "\f10e";
 				bottom: -0.2em;
-				right: -1.5em;
+				right: 0;
 			}
 			@include overwrite-sub(cite, $special: 'adjacent-sibling') {
 				margin-top: 1.5em;

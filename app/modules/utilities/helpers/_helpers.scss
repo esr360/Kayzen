@@ -99,6 +99,9 @@
 	.text-right { 
 		text-align: right !important; 
 	}
+    .text-justify {
+        text-align: justify;
+    }
 	
     // Object Aligning
     
@@ -154,6 +157,16 @@
 			margin: (base(margin) * 1.5) 0;
 		}
 	}
+    
+	//-------------------------------------------------------------
+	// Social Background Colors
+	//-------------------------------------------------------------
+    
+    @each $name, $color in palette('social') {
+        .bg-#{$name} {
+            background-color: #{$color};
+        }
+    }
 
 	//-------------------------------------------------------------
 	// Responsive Visibility

@@ -182,7 +182,6 @@
 		//---------------------------------------------------------
 		
 		@include modifier(spectrum-quarter) {
-			color: color(greyscale, white);
 			padding: 2.5em 1em;
 			&:nth-child(1) {
 				background: darken(color(brand, primary), 6%);
@@ -197,7 +196,7 @@
 				background: lighten(color(brand, primary), 6%);
 			}
 			@include overwrite(icon) {
-				color: rgba(color(greyscale, white), 0.5);
+				color: rgba(white, 0.5);
 			}
 			&:hover {
 				@include overwrite(icon) {
@@ -213,6 +212,7 @@
 		@include modifier(tub) {
 			padding: 0;
 			position: relative;
+			color: color(greyscale, white);
 			&:before {
 				@extend %fill-parent;
 				content: "";
@@ -225,24 +225,53 @@
 				@include overwrite-sub(content) {
 					transform: scale(1) translateY(-50%);
 				}
+				@include overwrite-sub(sticker) {
+					top: 50%;
+				}
 			}
 			@include overwrite-sub(content) {
-				@extend %horizontal-center;
 				position: absolute;
-				top: calc(50% - 1em);
+                top: calc(50% - 1em);
 				width: 80%;
 				transition: base(transition);
+                left: 0;
+                right: 0;
+                margin: auto;
 				transform: scale(0) translateY(-50%);
+                @include overwrite('button', $special: 'adjacent-sibling') {
+                    position: absolute;
+                    z-index: 2;
+                    left: 0;
+                    bottom: 0;
+                    background: rgba(black, 0.4);
+                    font-weight: bold;
+                }
 			}
+			@include overwrite-sub('group', $parent: 'heading') {
+                color: color(greyscale, white);
+            }
 		}
 		
 		@include sub-component(lid) {
 			background-color: inherit;
 			position: relative;
 			transition: base(transition);
-			padding: 4em 1em;
+			padding-top: 80%;
+            height: 0;
 			z-index: 2;
+            @include overwrite('icon') {
+                color: color(greyscale, white);
+            }
 		}
+        
+        @include sub-component('sticker') {
+            position: absolute;
+            top: calc(50% - 0.5em);
+            transform: translateY(-50%);
+            left: 0;
+            right: 0;
+            margin: auto;
+        }
 		
 		//---------------------------------------------------------
 		// Feature
