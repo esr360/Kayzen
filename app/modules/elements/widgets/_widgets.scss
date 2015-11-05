@@ -265,6 +265,34 @@
     			-webkit-filter: grayscale(0%);
 			}
 		}
+		
+		//---------------------------------------------------------
+		// Article
+		//---------------------------------------------------------
+        
+        @include modifier('article') {
+            margin-bottom: base(margin);
+            &:after {
+                content: "";
+                display: block;
+                margin-top: base(margin);
+			    @include extend(
+                    $parent: 'hrule', 
+                    $modifiers: 'stripes'
+                );
+            }
+            &:last-of-type {
+                margin-bottom: 0;
+                &:after {
+                    display: none;
+                }
+            }
+            + .ias-noneleft {
+               position: relative;
+               bottom: 0;
+               margin-top: base('margin');
+            }
+        }
 			
 	// Sub Components
 	//-------------------------------------------------------------

@@ -4,21 +4,6 @@
 
 @mixin masonry-grid($custom: ()) {
     
-    .ias-spinner, .ias-noneleft {
-        position: absolute;
-        bottom: -2em;
-        left: 0;
-        right: 0;
-        text-align: center;
-        margin-left: option($grid, 'options', 'gutter'); // offset flow row gutter
-    }
-    
-    .ias-spinner { 
-        img {
-            margin: auto;
-        }
-    }
-    
     .tiles {
         position: relative;
         display: block;

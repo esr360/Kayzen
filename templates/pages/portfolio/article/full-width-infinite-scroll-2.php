@@ -6,7 +6,7 @@
 ?>
 
 <!DOCTYPE html>
-<html>
+<html class="no-js">
 
 <?php include (ROOT.'/includes/head.php'); ?>
 
@@ -27,22 +27,25 @@
 
 		<?php include (ROOT.'/modules/billboard.php'); ?>
 		
-		<section class="section-primary relative">
+		<section class="section-primary">
 				
-            <div class="container">
-
-                <div class="row-flow row-waffle-infinite" id="portfolio-items">
+			<div class="container-small">
+                
+                <div id="portfolio-items">
+                        
+                    <?php $fullWidth = true; include (ROOT.'/includes/article-item.php'); ?>
                     
-                    <?php 
-                        $rows = 4; 
-                        $columns = 3;
-                        $widgetTitle = true;
-                        include (ROOT.'/includes/portfolio-items.php'); 
-                    ?>
+                    <?php include (ROOT.'/includes/article-item.php'); ?>
                     
+                    <?php include (ROOT.'/includes/article-item.php'); ?>
+                    
+                    <?php include (ROOT.'/includes/article-item.php'); ?>
+                    
+                    <?php include (ROOT.'/includes/article-item.php'); ?>
+                
                 </div>
-                    
-                <script>
+                
+                <script>     
 				    $(document).ready(function() { 
                         $("#portfolio-items").KayenInfiniteScroll({
                             isotopeGrid : false
@@ -51,11 +54,11 @@
                 </script>
                 
                 <ul id="pagination">
-                    <li class="next"><a href="3-cols-infinite-scroll-2.php">2</a></li>
+                    <li class="next"><a href="full-width-infinite-scroll-3.php">3</a></li>
                 </ul>
-            
-            </div><!-- container -->
-			
+				
+			</div><!-- container -->
+
 		</section>
 		
 		<?php include (ROOT.'/sections/promo-banner.php'); ?>

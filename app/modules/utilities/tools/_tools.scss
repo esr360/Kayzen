@@ -107,6 +107,28 @@
 			background: color(brand, primary);
 		}
 	}
+    
+//-----------------------------------------------------------------
+// Infinite Ajax Scroll
+//-----------------------------------------------------------------
+
+    .ias-spinner, .ias-noneleft {
+        position: absolute;
+        bottom: -2em;
+        left: 0;
+        right: 0;
+        text-align: center;
+        // offset flow row gutter
+        [class*="-flow"] & {
+            margin-left: option($grid, 'options', 'gutter');
+        }
+    }
+    
+    .ias-spinner { 
+        img {
+            margin: auto;
+        }
+    }
 
 //-----------------------------------------------------------------
 // Keyframes

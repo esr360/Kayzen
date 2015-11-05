@@ -2,7 +2,7 @@
  *
  * Kayzen.infiniteScroll
  * @author @esr360
- * @description Uses "Isotope" and "Infinite Ajax Scroll" plugins
+ * @description Uses "Isotope" (optional) and "Infinite Ajax Scroll" plugins
  *
  */
 
@@ -13,8 +13,9 @@
         // Options
         var options = $.extend({
             
-            delay       : 600,
+            isotopeGrid : true,
             loadSpinner : true,
+            delay       : 600,
             pagination  : '#pagination',
             next        : '.next a',
             endText     : 'You have reached the end!'
@@ -24,15 +25,17 @@
         // Run the code on each occurance of the element
         return this.each(function() {
             
-            var col = $(this).children().attr('class').split(' ')[0];
             var row = this.id;
+            var col = $(this).children().attr('class').split(' ')[0];
             
             // Convert the passed element into an Isotope grid
-            var isotopeGrid = new Isotope(this, {
-                itemSelector     : '.' + col
-            });
+            if (options.isotopeGrid) {
+                var isotopeGrid = new Isotope(this, {
+                    itemSelector     : '.' + col
+                });
+            }
             
-            // Call the infinite scroll plugin
+            // Set the infinite scroll options
             var ias = $.ias({
                 container  : '#' + row,
                 item       : '.' + col,
@@ -40,16 +43,23 @@
                 next       : options.next,
                 delay      : options.delay
             });
-            
-            // Set loaded item's initial opacity to 0
+                
+            // Hide the items to allow them to animate in
             ias.on('render', function(items) {
                 $(items).css({ opacity: 0 });
             });
             
-            // Call the infinite scroll plugin
-            ias.on('rendered', function(items) {
-                isotopeGrid.appended(items);
-            });
+            if (options.isotopeGrid) {
+                // Append new items to Isotope grid
+                ias.on('rendered', function(items) {
+                    isotopeGrid.appended(items);
+                });
+            } else {
+                // Show the items
+                ias.on('rendered', function(items) {
+                    $(items).css({ opacity: 1 });
+                });
+            }
             
             // Add a loading spinner image
             if (options.loadSpinner) {
