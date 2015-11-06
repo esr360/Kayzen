@@ -3972,8 +3972,12 @@ pre, hr,
   margin: 2rem 0;
 }
 
-.object-mini {
-  margin: 1em 0;
+.object-small {
+  margin: 1rem 0;
+}
+
+.object-large {
+  margin: 4rem 0;
 }
 
 ::-moz-selection {
@@ -3999,7 +4003,7 @@ h1:first-child, h2:first-child, h3:first-child, h4:first-child, h5:first-child, 
 p:first-child, ul:first-child, ol:first-child,
 form:first-child, fieldset:first-child, legend:first-child, figure:first-child, table:first-child,
 pre:first-child, hr:first-child,
-.object:first-child, .object-mini:first-child, [class*="heading_group"] .heading:first-child, [class*="heading_group"] [class*="heading-"]:first-child, [class*="heading_group"][class*="-small"]:first-child, .thumbnail:first-child, [class*="thumbnail-"]:first-child, [class*="navigation"] .mega-menu p:first-child, [class*="navigation"] [class*="mega-menu-"] p:first-child {
+.object:first-child, .object-small:first-child, .object-large:first-child, [class*="heading_group"] .heading:first-child, [class*="heading_group"] [class*="heading-"]:first-child, [class*="heading_group"][class*="-small"]:first-child, .thumbnail:first-child, [class*="thumbnail-"]:first-child, [class*="navigation"] .mega-menu p:first-child, [class*="navigation"] [class*="mega-menu-"] p:first-child {
   margin-top: 0;
 }
 
@@ -4007,7 +4011,7 @@ h1:last-child, h2:last-child, h3:last-child, h4:last-child, h5:last-child, h6:la
 p:last-child, ul:last-child, ol:last-child,
 form:last-child, fieldset:last-child, legend:last-child, figure:last-child, table:last-child,
 pre:last-child, hr:last-child,
-.object:last-child, .object-mini:last-child, .accordion:last-child, [class*="accordion-"]:last-child, [class*="heading_group"]:last-child, [class*="heading_group"] .heading:last-child, [class*="heading_group"] [class*="heading-"]:last-child, .thumbnail:last-child, [class*="thumbnail-"]:last-child, [class*="widget-"][class*="-stacked"]:last-child, [class*="widget_group"][class*="-large"]:last-child, [class*="navigation"] .mega-menu p:last-child, [class*="navigation"] [class*="mega-menu-"] p:last-child {
+.object:last-child, .object-small:last-child, .object-large:last-child, .accordion:last-child, [class*="accordion-"]:last-child, [class*="heading_group"]:last-child, [class*="heading_group"] .heading:last-child, [class*="heading_group"] [class*="heading-"]:last-child, .thumbnail:last-child, [class*="thumbnail-"]:last-child, [class*="widget-"][class*="-stacked"]:last-child, [class*="widget_group"][class*="-large"]:last-child, [class*="navigation"] .mega-menu p:last-child, [class*="navigation"] [class*="mega-menu-"] p:last-child {
   margin-bottom: 0;
 }
 
@@ -5425,10 +5429,10 @@ button::-moz-focus-inner {
   background: #161819;
   box-shadow: 0.3em 0 0 #161819, -0.3em 0 0 #161819;
 }
-[class*="heading-"][class*="-strikethrough"] span {
+[class*="heading-"][class*="-strikethrough"] > span {
   position: relative;
 }
-[class*="heading-"][class*="-strikethrough"] span:before, [class*="heading-"][class*="-strikethrough"] span:after {
+[class*="heading-"][class*="-strikethrough"] > span:before, [class*="heading-"][class*="-strikethrough"] > span:after {
   content: "";
   position: absolute;
   width: 75px;
@@ -5439,15 +5443,15 @@ button::-moz-focus-inner {
   -webkit-transform: translateY(-50%) translateZ(0);
           transform: translateY(-50%) translateZ(0);
 }
-[class*="heading-"][class*="-strikethrough"] span:before {
+[class*="heading-"][class*="-strikethrough"] > span:before {
   left: -90px;
   left: calc(-75px - 1rem);
 }
-[class*="heading-"][class*="-strikethrough"] span:after {
+[class*="heading-"][class*="-strikethrough"] > span:after {
   right: -90px;
   right: calc(-75px - 1rem);
 }
-[class*="heading-"][class*="-strikethrough"][class*="-dots"] span:before, [class*="heading-"][class*="-strikethrough"][class*="-dots"] span:after {
+[class*="heading-"][class*="-strikethrough"][class*="-dots"] > span:before, [class*="heading-"][class*="-strikethrough"][class*="-dots"] > span:after {
   border-bottom-style: dotted;
   opacity: 0.5;
 }
@@ -6598,6 +6602,7 @@ progress::-moz-progress-bar {
 }
 [class*="well-"][class*="-comment"] {
   position: relative;
+  padding: 1.5em;
 }
 [class*="well-"][class*="-comment"]:before {
   content: "";

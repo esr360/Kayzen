@@ -38,6 +38,7 @@
         
         @include modifier('comment') {
             position: relative;
+	       padding: 1.5em;
             &:before {
                 content: "";
                 position: absolute;

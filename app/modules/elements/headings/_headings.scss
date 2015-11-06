@@ -87,7 +87,7 @@
 		}
 	
 		@include modifier(strikethrough) {
-			span {
+            > span {
 				position: relative;
 				&:before,
 				&:after {
@@ -110,7 +110,7 @@
 				}
 			}
             @include nested-modifier('dots') {
-                span {
+                > span {
                     &:before, &:after {
                         border-bottom-style: dotted;
                         opacity: 0.5;

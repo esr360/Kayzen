@@ -35,7 +35,7 @@
                     <img src="<?php echo appDir ?>/images/wallpapers/bg-<?php echo rand(1, 7) ?>.jpg">
                 </div>
                 
-                <div class="post-content object lede text-justify">
+                <div class="post-content lede text-justify">
                     
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. <a href="#">Inquit, dasne adolescenti veniam?</a> Ergo instituto veterum, quo etiam Stoici utuntur, hinc capiamus exordium. Quarum ambarum rerum cum medicinam pollicetur, luxuriae licentiam pollicetur. Duo Reges: constructio interrete. Docent enim nos, ut scis, dialectici, si ea quae rem aliquam sequantur, falsa sint.</p>
         
@@ -52,6 +52,14 @@
                     <p>Quis non odit sordidos, vanos, leves, futtiles? Quid censes eos esse facturos, qui omnino virtutem a bonorum fine segregaverunt, Epicurum, Hieronymum, illos etiam, si qui Carneadeum finem tueri volunt? <b>Virtutibus igitur rectissime</b> mihi videris et ad consuetudinem nostrae orationis vitia posuisse contraria. Ita fit beatae vitae domina fortuna, quam Epicurus ait exiguam intervenire sapienti. <a href="#">Sed ego in hoc resisto;</a> Si longus, levis; Satisne vobis videor pro meo iure in vestris auribus commentatus? <a href="#">Satis est ad hoc responsum</a>. In qua si nihil est praeter rationem, sit in una virtute finis bonorum; Traditur, inquit, ab Epicuro ratio neglegendi doloris. </p>
         
                     <p>Modo etiam paulum ad dexteram de via declinavi, ut ad Pericli sepulcrum accederem. In motu et in statu corporis nihil inest, quod animadvertendum esse ipsa natura iudicet? <a href="#">Ita nemo beato beatior.</a> Mihi autem nihil tam perspicuum videtur, quam has sententias eorum philosophorum re inter se magis quam verbis dissidere; Quacumque enim ingredimur, in aliqua historia vestigium ponimus. Quae sunt igitur communia vobis cum antiquis, iis sic utamur quasi concessis; Quod non faceret, si in voluptate summum bonum poneret. Qua tu etiam inprudens utebare non numquam. </p>
+                    
+                    <ul class="list-tags">
+                        <li class="title">Tags:</li>
+                        <li class="plain"><a href="#">Theme</a></li>
+                        <li class="plain"><a href="#">HTML</a></li>
+                        <li class="plain"><a href="#">CSS</a></li>
+                        <li class="plain"><a href="#">JavaScript</a></li>
+                    </ul>
                     
                 </div>
                 
@@ -178,194 +186,176 @@
                 </div>
     
                 <script>
-                    $(document).ready(function() {	
-                        	
+                    $(document).ready(function() {
                         $.fn.KayzenSocialShareCount({
                             url : 'http://themeforest.net'
                         });
-                        
                     });
                 </script>
-        
-			</div><!-- container -->
-
-		</section>
-        
-        <section class="section-primary-flush">
-            
-            <div class="container-small">
                 
-                <h2 class="heading-size-6-light-strikethrough-dots text-center"><span>The Author</span></h2>
-                
-                <div class="row object">
-                    <div class="span-2 text-center">
-                        <div class="thumbnail-mini-profile-round-xlarge-styled">
-                            <img src="<?php echo appDir ?>/images/team/team-2.jpg" alt="">
-                        </div>
-                        <div class="icon_group-small">
-                            <a href="#" class="icon-border-size-2 tooltip-top" data-tooltip="Facebook">
-                                <i class="fa fa-facebook"></i>
-                            </a>
-                            <a href="#" class="icon-border-size-2 tooltip-top" data-tooltip="Twitter">
-                                <i class="fa fa-twitter"></i>
-                            </a>
-                            <a href="#" class="icon-border-size-2 tooltip-top" data-tooltip="LinkedIn">
-                                <i class="fa fa-linkedin"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="span-10">
-                        <header class="heading_group">
-                            <h3 class="heading-heavy-size-4 font-2">Jane Doe</h3>
-                            <h3 class="heading-light-size-3-brand-1 font-2">Graphic Designer</h3>
-                        </header>
-                        <p>Nunc pharetra et massa eu volutpat. Duis at posuere justo. Vivamus lobortis mi at leo pellentesque vehicula. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aliquam erat volutpat. Proin ac augue quam. Etiam sollicitudin magna vitae nunc accumsan cursus.</p>
-                    </div>
-                </div>
-                
-            </div><!-- container -->
-            
-        </section>
-        
-        <section class="section-primary-flush">
-            
-            <div class="container-small">
-                
-                <h2 class="heading-size-6-light-strikethrough-dots text-center"><span>Comments</span></h2>
-                
-                <div class="comments object">
-                
-                    <div class="comment object-mini">
-                        <div class="row object-mini">
-                            <div class="span-2 va-middle text-center">
-                                <div class="thumbnail-profile-round-xlarge-styled">
-                                    <img src="<?php echo appDir ?>/images/team/team-2.jpg" alt="">
-                                </div>
+                <div class="object-large">
+                    
+                    <h2 class="heading-size-6-light-strikethrough-dots text-center"><span>The Author</span></h2>
+                    
+                    <div class="row">
+                        <div class="span-2 text-center">
+                            <div class="thumbnail-mini-profile-round-xlarge-styled">
+                                <img src="<?php echo appDir ?>/images/team/team-2.jpg" alt="">
                             </div>
-                            <div class="span-10 va-middle">
-                                <div class="well-comment">
-                                    <div class="row-block">
-                                        <div class="span">
-                                            <header class="heading_group-small">
-                                                <h4 class="heading font-2">John Doe</h4>
-                                            </header>
-                                        </div>
-                                        <div class="span text-right">
-                                            <header class="heading_group-small">
-                                                <h4 class="heading-light"><b>Posted:</b> Today, 9:16pm</h4>
-                                            </header>
-                                        </div>
-                                    </div>
-                                    <div class="comment_content">
-                                        <p>Nunc pharetra et massa eu volutpat. Duis at posuere justo. Vivamus lobortis mi at leo pellentesque vehicula. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aliquam erat volutpat. Proin ac augue quam. Etiam sollicitudin magna vitae nunc accumsan cursus.</p>
-                                    </div>
-                                </div>
+                            <div class="icon_group-small">
+                                <a href="#" class="icon-border-size-2 tooltip-top" data-tooltip="Facebook">
+                                    <i class="fa fa-facebook"></i>
+                                </a>
+                                <a href="#" class="icon-border-size-2 tooltip-top" data-tooltip="Twitter">
+                                    <i class="fa fa-twitter"></i>
+                                </a>
+                                <a href="#" class="icon-border-size-2 tooltip-top" data-tooltip="LinkedIn">
+                                    <i class="fa fa-linkedin"></i>
+                                </a>
                             </div>
                         </div>
-                        <div class="button_group text-right">
-                            <a class="button-size-2">Reply</a>
-                            <a class="button-size-2-error">Report</a>
-                        </div>
-                    </div>
-                
-                    <div class="comment object-mini text-right">
-                        <div class="row object-mini span-10 text-left">
-                            <div class="span-2 va-middle text-center">
-                                <div class="thumbnail-profile-round-xlarge-styled">
-                                    <img src="<?php echo appDir ?>/images/team/team-2.jpg" alt="">
-                                </div>
-                            </div>
-                            <div class="span-10 va-middle">
-                                <div class="well-comment">
-                                    <div class="row-block">
-                                        <div class="span">
-                                            <header class="heading_group-small">
-                                                <h4 class="heading font-2">John Doe</h4>
-                                            </header>
-                                        </div>
-                                        <div class="span text-right">
-                                            <header class="heading_group-small">
-                                                <h4 class="heading-light"><b>Posted:</b> Today, 9:16pm</h4>
-                                            </header>
-                                        </div>
-                                    </div>
-                                    <div class="comment_content">
-                                        <p>Nunc pharetra et massa eu volutpat. Duis at posuere justo. Vivamus lobortis mi at leo pellentesque vehicula. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aliquam erat volutpat.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="button_group text-right">
-                            <a class="button-size-2">Reply</a>
-                            <a class="button-size-2-error">Report</a>
-                        </div>
-                    </div>
-                
-                    <div class="comment object">
-                        <div class="row object-mini">
-                            <div class="span-2 va-middle text-center">
-                                <div class="thumbnail-profile-round-xlarge-styled">
-                                    <img src="<?php echo appDir ?>/images/team/team-2.jpg" alt="">
-                                </div>
-                            </div>
-                            <div class="span-10 va-middle">
-                                <div class="well-comment">
-                                    <div class="row-block">
-                                        <div class="span">
-                                            <header class="heading_group-small">
-                                                <h4 class="heading font-2">John Doe</h4>
-                                            </header>
-                                        </div>
-                                        <div class="span text-right">
-                                            <header class="heading_group-small">
-                                                <h4 class="heading-light"><b>Posted:</b> Today, 9:16pm</h4>
-                                            </header>
-                                        </div>
-                                    </div>
-                                    <div class="comment_content">
-                                        <p>Nunc pharetra et massa eu volutpat. Duis at posuere justo. Vivamus lobortis mi at leo pellentesque vehicula. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aliquam erat volutpat. Proin ac augue quam. Etiam sollicitudin magna vitae nunc accumsan cursus.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="button_group text-right">
-                            <a class="button-size-2">Reply</a>
-                            <a class="button-size-2-error">Report</a>
+                        <div class="span-10">
+                            <header class="heading_group">
+                                <h3 class="heading-size-4 font-2">Jane Doe</h3>
+                                <h3 class="heading-light-size-3-brand-1 font-2">Graphic Designer</h3>
+                            </header>
+                            <p>Nunc pharetra et massa eu volutpat. Duis at posuere justo. Vivamus lobortis mi at leo pellentesque vehicula. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aliquam erat volutpat. Proin ac augue quam. Etiam sollicitudin magna vitae nunc accumsan cursus.</p>
                         </div>
                     </div>
                 
                 </div>
                 
-                <header class="heading_group">
-                    <h4 class="heading-size-3">Leave a Comment</h4>
-                </header>
-	
-                <!-- Contact Form -->
-                <form class="form-faux-placeholders-html5">
-                    <div class="row-flow">
-                        <div class="form_group span-6">
-                            <input type="text" class="form_input" id="name" placeholder="Ex: John Doe" required="">
-                            <label for="firstName">Name</label>
+                <div class="object-large">
+                            
+                    <h2 class="heading-size-6-light-strikethrough-dots text-center">
+                        <span><span class="heading-brand-1">3</span> Comments</span>
+                    </h2>
+                    
+                    <div class="comments object">
+                    
+                        <div class="comment object-small">
+                            <div class="row object-small">
+                                <div class="span-2 va-middle text-center">
+                                    <div class="thumbnail-profile-round-xlarge-styled">
+                                        <img src="<?php echo appDir ?>/images/team/team-2.jpg" alt="">
+                                    </div>
+                                </div>
+                                <div class="span-10 va-middle">
+                                    <div class="well-comment">
+                                        <div class="row-block">
+                                            <div class="span">
+                                                <header class="heading_group-small">
+                                                    <h4 class="heading font-2">John Doe</h4>
+                                                </header>
+                                            </div>
+                                            <div class="span text-right">
+                                                <h4 class="heading-light-size-2"><b>Posted:</b> Today, 9:16pm</h4>
+                                            </div>
+                                        </div>
+                                        <div class="comment_content">
+                                            <p>Nunc pharetra et massa eu volutpat. Duis at posuere justo. Vivamus lobortis mi at leo pellentesque vehicula. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aliquam erat volutpat. Proin ac augue quam. Etiam sollicitudin magna vitae nunc accumsan cursus.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="button_group text-right">
+                                <a class="button-size-1">Reply</a>
+                                <a class="button-size-1-error">Report</a>
+                            </div>
                         </div>
-                        <div class="form_group span-6">
-                            <input type="email" class="form_input" id="emailAddress" placeholder="john@doe.com" required="">
-                            <label for="emailAddress">Email Address</label>
+                    
+                        <div class="comment object-small text-right">
+                            <div class="row object-small span-10 text-left">
+                                <div class="span-2 va-middle text-center">
+                                    <div class="thumbnail-profile-round-large-styled">
+                                        <img src="<?php echo appDir ?>/images/team/team-2.jpg" alt="">
+                                    </div>
+                                </div>
+                                <div class="span-10 va-middle">
+                                    <div class="well-comment">
+                                        <div class="row-block">
+                                            <div class="span">
+                                                <header class="heading_group-small">
+                                                    <h4 class="heading font-2">John Doe</h4>
+                                                </header>
+                                            </div>
+                                            <div class="span text-right">
+                                                <h4 class="heading-light-size-2"><b>Posted:</b> Today, 9:16pm</h4>
+                                            </div>
+                                        </div>
+                                        <div class="comment_content">
+                                            <p>Nunc pharetra et massa eu volutpat. Duis at posuere justo. Vivamus lobortis mi at leo pellentesque vehicula. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aliquam erat volutpat.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="button_group text-right">
+                                <a class="button-size-1">Reply</a>
+                                <a class="button-size-1-error">Report</a>
+                            </div>
                         </div>
+                    
+                        <div class="comment object">
+                            <div class="row object-small">
+                                <div class="span-2 va-middle text-center">
+                                    <div class="thumbnail-profile-round-xlarge-styled">
+                                        <img src="<?php echo appDir ?>/images/team/team-2.jpg" alt="">
+                                    </div>
+                                </div>
+                                <div class="span-10 va-middle">
+                                    <div class="well-comment">
+                                        <div class="row-block">
+                                            <div class="span">
+                                                <header class="heading_group-small">
+                                                    <h4 class="heading font-2">John Doe</h4>
+                                                </header>
+                                            </div>
+                                            <div class="span text-right">
+                                                <h4 class="heading-light-size-2"><b>Posted:</b> Today, 9:16pm</h4>
+                                            </div>
+                                        </div>
+                                        <div class="comment_content">
+                                            <p>Nunc pharetra et massa eu volutpat. Duis at posuere justo. Vivamus lobortis mi at leo pellentesque vehicula. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aliquam erat volutpat. Proin ac augue quam. Etiam sollicitudin magna vitae nunc accumsan cursus.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="button_group text-right">
+                                <a class="button-size-1">Reply</a>
+                                <a class="button-size-1-error">Report</a>
+                            </div>
+                        </div>
+                    
                     </div>
-                    <div class="form_group">
-                        <textarea class="form_input" placeholder="We aim to respond to all messages within 24 hours." id="yourMessage" rows="8" required=""></textarea>
-                        <label for="yourMessage">Your Message</label>
-                    </div>
-                    <button type="submit" class="button-block-primary-size-3">Submit Message</button>
-                </form>
-                
-            </div><!-- container -->
-            
-        </section>
+                    
+                    <header class="heading_group">
+                        <h4 class="heading-size-3">Leave a Comment</h4>
+                    </header>
         
-        <section class="section-primary-flush">
-            
-            <div class="container-small">
+                    <!-- Contact Form -->
+                    <form class="form-faux-placeholders-html5">
+                        <div class="row-flow">
+                            <div class="form_group span-4">
+                                <input type="text" class="form_input" id="name" placeholder="Ex: John Doe" required="">
+                                <label for="firstName">Name</label>
+                            </div>
+                            <div class="form_group span-4">
+                                <input type="email" class="form_input" id="emailAddress" placeholder="john@doe.com" required="">
+                                <label for="emailAddress">Email Address</label>
+                            </div>
+                            <div class="form_group span-4">
+                                <input type="url" class="form_input" id="website" placeholder="themeforest.net" required="">
+                                <label for="website">Website</label>
+                            </div>
+                        </div>
+                        <div class="form_group">
+                            <textarea class="form_input" id="yourMessage" rows="8" required=""></textarea>
+                            <label for="yourMessage">Your Message</label>
+                        </div>
+                        <button type="submit" class="button-block-primary-size-3">Submit Message</button>
+                    </form>
+                    
+                </div>
                 
                 <h2 class="heading-size-6-light-strikethrough-dots text-center"><span>Related Posts</span></h2>
 

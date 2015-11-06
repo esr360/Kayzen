@@ -107,8 +107,13 @@
 	    @include vertical-rhythm;
 	}
     
-    .object-mini {
-	    margin: 1em 0;
+    .object-small {
+	    margin: (base(margin) / 2) 0;
+	    @include vertical-rhythm;
+    }
+    
+    .object-large {
+	    margin: (base(margin) * 2) 0;
 	    @include vertical-rhythm;
     }
 	

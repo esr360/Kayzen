@@ -33,22 +33,13 @@
                         
                 <?php include (ROOT.'/includes/article-item.php'); ?>
                 
-                <hr class="hrule-stripes">
+                <?php include (ROOT.'/includes/article-item.php'); ?>
                 
                 <?php include (ROOT.'/includes/article-item.php'); ?>
                 
-                <hr class="hrule-stripes">
-                
                 <?php include (ROOT.'/includes/article-item.php'); ?>
                 
-                <hr class="hrule-stripes">
-                
                 <?php include (ROOT.'/includes/article-item.php'); ?>
-                
-                <hr class="hrule-stripes">
-                
-                <?php include (ROOT.'/includes/article-item.php'); ?>
-                
                 
                 <ul class="pagination tabs_nav-pills object-center" id="portfolio-categories">
                     <small>
