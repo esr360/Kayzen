@@ -2955,8 +2955,11 @@ a {
   transition: 0.4s;
   text-decoration: none;
 }
-a:hover {
-  text-decoration: underline;
+p > a, .text a {
+  border-bottom: 1px dotted transparent;
+}
+p > a:hover, .text a:hover {
+  border-bottom-color: inherit;
 }
 
 p, ul, ol {
@@ -4030,8 +4033,8 @@ pre:last-child, hr:last-child,
 }
 
 .auto-resizable-iframe {
-  max-width: 720px;
-  margin: 0px auto;
+  margin-left: auto;
+  margin-right: auto;
 }
 .auto-resizable-iframe > div {
   position: relative;
@@ -5936,6 +5939,12 @@ img {
 
 [class*="list-"][class*="-small"] {
   font-size: 0.67em;
+}
+[class*="list-"][class*="-inline"] > li {
+  display: inline-block;
+}
+[class*="list-"][class*="-inline"] > li + li {
+  margin-left: 1em;
 }
 [class*="list-"][class*="-clear"] {
   padding-left: 1em;

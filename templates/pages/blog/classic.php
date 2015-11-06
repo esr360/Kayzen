@@ -31,11 +31,11 @@
 				
 			<div class="container-small">
                         
-                <?php include (ROOT.'/includes/article-item.php'); ?>
+                <?php $type = 'image'; include (ROOT.'/includes/article-item.php'); ?>
                 
-                <?php include (ROOT.'/includes/article-item.php'); ?>
+                <?php $type = 'video'; include (ROOT.'/includes/article-item.php'); ?>
                 
-                <?php include (ROOT.'/includes/article-item.php'); ?>
+                <?php $type = 'carousel'; include (ROOT.'/includes/article-item.php'); ?>
                 
                 <?php include (ROOT.'/includes/article-item.php'); ?>
                 
@@ -54,6 +54,17 @@
                 </ul>
 				
 			</div><!-- container -->
+            
+            <script>
+				$(document).ready(function() {
+                    $('.article-thumbnail-carousel').each(function() {
+                        $(this).owlCarousel({
+                            items: 1,
+                            loop: true
+                        })
+                    })
+				});
+            </script>
 
 		</section>
 		

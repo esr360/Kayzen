@@ -40,8 +40,11 @@
         color: color(brand, primary);
         transition: 0.4s;
         text-decoration: none;
-        &:hover {
-            text-decoration: underline;
+        p > &, .text & {
+            border-bottom: 1px dotted transparent;
+            &:hover {
+                border-bottom-color: inherit;
+            }
         }
     }
 	

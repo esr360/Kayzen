@@ -37,6 +37,13 @@
                 
                 <div class="post-content lede text-justify">
                     
+                    <ul class="list-reset-inline-small text">
+                        <li><i class="fa fa-calendar"></i> 5th November 2015</li>
+                        <li><i class="fa fa-user"></i> <a href="#">John Doe</a></li>
+                        <li><i class="fa fa-folder-o"></i> <a href="#">HTML Themes</a></li>
+                        <li><i class="fa fa-comment-o"></i> <a href="#">3 Comments</a></li>
+                    </ul>
+                    
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. <a href="#">Inquit, dasne adolescenti veniam?</a> Ergo instituto veterum, quo etiam Stoici utuntur, hinc capiamus exordium. Quarum ambarum rerum cum medicinam pollicetur, luxuriae licentiam pollicetur. Duo Reges: constructio interrete. Docent enim nos, ut scis, dialectici, si ea quae rem aliquam sequantur, falsa sint.</p>
         
                     <p><q class="blockquote-pull-left-top"><span class="blockquote_content">An vero, inquit, quisquam potest probare, quod perceptfum quod.</span></q>Falsam illam ipsam esse, quam sequantur. Universa enim illorum ratione cum tota vestra confligendum puto. Perturbationes autem nulla naturae <b>vi commoventur, omniaque ea sunt opiniones</b> ac iudicia levitatis. <a href="#">Haec dicuntur inconstantissime.</a> Restinguet citius, si ardentem acceperit. Quae sequuntur igitur? Quicquid enim a sapientia proficiscitur, id continuo debet expletum esse omnibus suis partibus; Quod non subducta utilitatis ratione effici solet, sed ipsum a se oritur et sua sponte nascitur. Non enim solum Torquatus dixit quid sentiret, sed etiam cur. </p>
@@ -259,8 +266,8 @@
                                 </div>
                             </div>
                             <div class="button_group text-right">
-                                <a class="button-size-1">Reply</a>
-                                <a class="button-size-1-error">Report</a>
+                                <a class="button-size-1-round"><i class="fa fa-reply"></i> Reply</a>
+                                <a class="button-size-1-round-error"><i class="fa fa-exclamation-triangle"></i> Report</a>
                             </div>
                         </div>
                     
@@ -290,8 +297,8 @@
                                 </div>
                             </div>
                             <div class="button_group text-right">
-                                <a class="button-size-1">Reply</a>
-                                <a class="button-size-1-error">Report</a>
+                                <a class="button-size-1-round"><i class="fa fa-reply"></i> Reply</a>
+                                <a class="button-size-1-round-error"><i class="fa fa-exclamation-triangle"></i> Report</a>
                             </div>
                         </div>
                     
@@ -321,8 +328,8 @@
                                 </div>
                             </div>
                             <div class="button_group text-right">
-                                <a class="button-size-1">Reply</a>
-                                <a class="button-size-1-error">Report</a>
+                                <a class="button-size-1-round"><i class="fa fa-reply"></i> Reply</a>
+                                <a class="button-size-1-round-error"><i class="fa fa-exclamation-triangle"></i> Report</a>
                             </div>
                         </div>
                     

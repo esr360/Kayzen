@@ -32,6 +32,15 @@
 			font-size: font-size(size-1);
 		}
 		
+		@include modifier(inline) {
+            > li {
+                display: inline-block;
+                + li {
+                    margin-left: 1em;
+                }
+            }
+		}
+		
 	    @include modifier(clear) {
 			padding-left: 1em;
 		}

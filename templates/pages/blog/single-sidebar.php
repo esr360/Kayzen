@@ -40,6 +40,13 @@
                         </div>
                         
                         <div class="post-content lede text-justify">
+                    
+                            <ul class="list-reset-inline-small text">
+                                <li><i class="fa fa-calendar"></i> 5th November 2015</li>
+                                <li><i class="fa fa-user"></i> <a href="#">John Doe</a></li>
+                                <li><i class="fa fa-folder-o"></i> <a href="#">HTML Themes</a></li>
+                                <li><i class="fa fa-comment-o"></i> <a href="#">3 Comments</a></li>
+                            </ul>
                             
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. <a href="#">Inquit, dasne adolescenti veniam?</a> Ergo instituto veterum, quo etiam Stoici utuntur, hinc capiamus exordium. Quarum ambarum rerum cum medicinam pollicetur, luxuriae licentiam pollicetur. Duo Reges: constructio interrete. Docent enim nos, ut scis, dialectici, si ea quae rem aliquam sequantur, falsa sint.</p>
                 
@@ -265,8 +272,8 @@
                                         </div>
                                     </div>
                                     <div class="button_group text-right">
-                                        <a class="button-size-1">Reply</a>
-                                        <a class="button-size-1-error">Report</a>
+                                        <a class="button-size-1-round"><i class="fa fa-reply"></i> Reply</a>
+                                        <a class="button-size-1-round-error"><i class="fa fa-exclamation-triangle"></i> Report</a>
                                     </div>
                                 </div>
                             
@@ -296,8 +303,8 @@
                                         </div>
                                     </div>
                                     <div class="button_group text-right">
-                                        <a class="button-size-1">Reply</a>
-                                        <a class="button-size-1-error">Report</a>
+                                        <a class="button-size-1-round"><i class="fa fa-reply"></i> Reply</a>
+                                        <a class="button-size-1-round-error"><i class="fa fa-exclamation-triangle"></i> Report</a>
                                     </div>
                                 </div>
                             
@@ -327,8 +334,8 @@
                                         </div>
                                     </div>
                                     <div class="button_group text-right">
-                                        <a class="button-size-1">Reply</a>
-                                        <a class="button-size-1-error">Report</a>
+                                        <a class="button-size-1-round"><i class="fa fa-reply"></i> Reply</a>
+                                        <a class="button-size-1-round-error"><i class="fa fa-exclamation-triangle"></i> Report</a>
                                     </div>
                                 </div>
                             
