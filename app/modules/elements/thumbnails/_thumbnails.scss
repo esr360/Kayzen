@@ -25,6 +25,10 @@
 		overflow: hidden;
 		margin-bottom: base(margin);
 		@include vertical-rhythm;
+        .text-center > & {
+            margin-left: auto;
+            margin-right: auto;
+        }
 		
 		img {
 			transition: 0.4s;
@@ -34,6 +38,10 @@
 
 	// Modifiers
 	//-------------------------------------------------------------
+    
+        @include modifier('mini') {
+            margin-bottom: 1em;
+        }
 	
 		@include modifier(feature) {
 			@include overwrite-sub(content) {

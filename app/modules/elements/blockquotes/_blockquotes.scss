@@ -138,5 +138,11 @@
 		}
 			
 	} // component
+    
+    q {
+        &:before, &:after {
+            content: "";
+        }
+    }
 	
 } // @mixin blockquotes

@@ -146,6 +146,16 @@
 			}
 		}
 		
+		// Alert Colos
+        @each $name, $color in palette('alert') {
+            @include modifier($name) {
+                background: $color;
+                &:hover {
+                    background: darken($color, 10%);
+                }
+            }
+        }
+        
 		// Social Colors
 		
 		$social-colors: (

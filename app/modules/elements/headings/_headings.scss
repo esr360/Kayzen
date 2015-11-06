@@ -94,9 +94,10 @@
 					content: "";
 					position: absolute;
 					width: 75px;
-					border-bottom: 1px solid color(greyscale, white);
+					border-bottom: 1px solid;
 					opacity: 0.75;
 					top: 50%;
+                    color: inherit;
 					transform: translateY(-50%) translateZ(0);
 				}
 				&:before {
@@ -108,14 +109,14 @@
 					right: calc(-75px - 1rem);
 				}
 			}
-			@include nested-modifier(brand-1) {
-				span {
-					&:before,
-					&:after {
-						border-bottom-color: color(brand, primary);
-					}            
-				}            
-			}
+            @include nested-modifier('dots') {
+                span {
+                    &:before, &:after {
+                        border-bottom-style: dotted;
+                        opacity: 0.5;
+                    }
+                }
+            }
 		}
 	
 		@include modifier(spaced) {

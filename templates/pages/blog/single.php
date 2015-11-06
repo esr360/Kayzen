@@ -39,7 +39,7 @@
                     
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. <a href="#">Inquit, dasne adolescenti veniam?</a> Ergo instituto veterum, quo etiam Stoici utuntur, hinc capiamus exordium. Quarum ambarum rerum cum medicinam pollicetur, luxuriae licentiam pollicetur. Duo Reges: constructio interrete. Docent enim nos, ut scis, dialectici, si ea quae rem aliquam sequantur, falsa sint.</p>
         
-                    <p><q class="blockquote-pull-left-top"><span class="blockquote_content">An vero, inquit, quisquam potest probare, quod perceptfum, quod.</span></q>Falsam illam ipsam esse, quam sequantur. Universa enim illorum ratione cum tota vestra confligendum puto. Perturbationes autem nulla naturae <b>vi commoventur, omniaque ea sunt opiniones</b> ac iudicia levitatis. <a href="#">Haec dicuntur inconstantissime.</a> Restinguet citius, si ardentem acceperit. Quae sequuntur igitur? Quicquid enim a sapientia proficiscitur, id continuo debet expletum esse omnibus suis partibus; Quod non subducta utilitatis ratione effici solet, sed ipsum a se oritur et sua sponte nascitur. Non enim solum Torquatus dixit quid sentiret, sed etiam cur. </p>
+                    <p><q class="blockquote-pull-left-top"><span class="blockquote_content">An vero, inquit, quisquam potest probare, quod perceptfum quod.</span></q>Falsam illam ipsam esse, quam sequantur. Universa enim illorum ratione cum tota vestra confligendum puto. Perturbationes autem nulla naturae <b>vi commoventur, omniaque ea sunt opiniones</b> ac iudicia levitatis. <a href="#">Haec dicuntur inconstantissime.</a> Restinguet citius, si ardentem acceperit. Quae sequuntur igitur? Quicquid enim a sapientia proficiscitur, id continuo debet expletum esse omnibus suis partibus; Quod non subducta utilitatis ratione effici solet, sed ipsum a se oritur et sua sponte nascitur. Non enim solum Torquatus dixit quid sentiret, sed etiam cur. </p>
         
                     <p>Nullis enim partitionibus, nullis definitionibus utuntur ipsique dicunt ea se modo probare, quibus natura tacita adsentiatur. Quacumque enim ingredimur, in aliqua historia vestigium ponimus. Quae sunt igitur communia vobis cum antiquis, iis sic utamur quasi concessis. Immo alio genere. </p>
         
@@ -55,11 +55,12 @@
                     
                 </div>
                 
-                <h2 class="heading-size-6-light text-center"><span>The Author</span></h2>
+                <hr class="hrule-stripes-large" />
                 
 				<div class="row-block text-center">
                     
-                    <div class="widget-tub span bg-facebook">
+                    <!-- Facebook Shares Widget -->
+                    <a href="#" class="widget-tub span bg-facebook">
                         <div class="widget_lid">
                             <div class="widget_sticker icon-plain-size-7">
                                 <i class="fa fa-facebook"></i>
@@ -67,14 +68,15 @@
                         </div>
                         <div class="widget_content">
                             <header class="heading_group share-amount">
-                                <h3 class="heading-size-5">346</h3>
+                                <h3 id="facebookShareCount" class="heading-size-5">0</h3>
                                 <h3 class="heading-size-2-light-uppercase">Shares</h3>
                             </header>
                         </div>
-                        <a class="button-block relative font-2">Facebook</a>
-                    </div>
+                        <div class="button-block relative font-2">Facebook</div>
+                    </a>
                     
-                    <div class="widget-tub span bg-twitter">
+                    <!-- Twitter Shares Widget -->
+                    <a href="#" class="widget-tub span bg-twitter">
                         <div class="widget_lid">
                             <div class="widget_sticker icon-plain-size-7">
                                 <i class="fa fa-twitter"></i>
@@ -82,14 +84,15 @@
                         </div>
                         <div class="widget_content">
                             <header class="heading_group share-amount">
-                                <h3 class="heading-size-5">346</h3>
+                                <h3 id="twitterShareCount" class="heading-size-5">0</h3>
                                 <h3 class="heading-size-2-light-uppercase">Shares</h3>
                             </header>
                         </div>
-                        <a class="button-block relative font-2">Twitter</a>
-                    </div>
+                        <div class="button-block relative font-2">Twitter</div>
+                    </a>
                     
-                    <div class="widget-tub span bg-google-plus">
+                    <!-- Google Plus Shares Widget -->
+                    <a href="#" class="widget-tub span bg-google-plus">
                         <div class="widget_lid">
                             <div class="widget_sticker icon-plain-size-7">
                                 <i class="fa fa-google-plus"></i>
@@ -97,49 +100,382 @@
                         </div>
                         <div class="widget_content">
                             <header class="heading_group share-amount">
-                                <h3 class="heading-size-5">346</h3>
+                                <h3 id="googlePlusShareCount" class="heading-size-5">0</h3>
                                 <h3 class="heading-size-2-light-uppercase">Shares</h3>
                             </header>
                         </div>
-                        <a class="button-block relative font-2">Google Plus</a>
-                    </div>
+                        <div class="button-block relative font-2">Google Plus</div>
+                    </a>
                     
-                    <div class="widget-tub span bg-rss">
+                    <!-- LinkedIn Shares Widget -->
+                    <a href="#" class="widget-tub span bg-linkedin">
                         <div class="widget_lid">
                             <div class="widget_sticker icon-plain-size-7">
-                                <i class="fa fa-rss"></i>
+                                <i class="fa fa-linkedin"></i>
                             </div>
                         </div>
                         <div class="widget_content">
                             <header class="heading_group share-amount">
-                                <h3 class="heading-size-5">346</h3>
+                                <h3 id="linkedInShareCount" class="heading-size-5">0</h3>
                                 <h3 class="heading-size-2-light-uppercase">Shares</h3>
                             </header>
                         </div>
-                        <a class="button-block relative font-2">RSS</a>
-                    </div>
+                        <div class="button-block relative font-2">LinkedIn</div>
+                    </a>
                     
-                    <div class="widget-tub span bg-email">
+                    <!-- StumbleUpon Shares Widget -->
+                    <a href="#" class="widget-tub span bg-stumbleupon">
                         <div class="widget_lid">
                             <div class="widget_sticker icon-plain-size-7">
-                                <i class="fa fa-envelope-o"></i>
+                                <i class="fa fa-stumbleupon"></i>
                             </div>
                         </div>
                         <div class="widget_content">
                             <header class="heading_group share-amount">
-                                <h3 class="heading-size-5">346</h3>
+                                <h3 id="stumbleUponShareCount" class="heading-size-5">0</h3>
+                                <h3 class="heading-size-2-light-uppercase">Views</h3>
+                            </header>
+                        </div>
+                        <div class="button-block relative font-2">StumbleUpon</div>
+                    </a>
+                    
+                    <!-- Pinterest Shares Widget -->
+                    <!--
+                    <a href="#" class="widget-tub span bg-pinterest">
+                        <div class="widget_lid">
+                            <div class="widget_sticker icon-plain-size-7">
+                                <i class="fa fa-pinterest"></i>
+                            </div>
+                        </div>
+                        <div class="widget_content">
+                            <header class="heading_group share-amount">
+                                <h3 id="pinterestShareCount" class="heading-size-5">0</h3>
                                 <h3 class="heading-size-2-light-uppercase">Shares</h3>
                             </header>
                         </div>
-                        <a class="button-block relative font-2">Email</a>
-                    </div>
+                        <div class="button-block relative font-2">Pinterest</div>
+                    </a>
+                    -->
+                    
+                    <!-- Reddit Shares Widget -->
+                    <!--
+                    <a href="#" class="widget-tub span bg-reddit">
+                        <div class="widget_lid">
+                            <div class="widget_sticker icon-plain-size-7">
+                                <i class="fa fa-reddit"></i>
+                            </div>
+                        </div>
+                        <div class="widget_content">
+                            <header class="heading_group share-amount">
+                                <h3 id="redditShareCount" class="heading-size-5">0</h3>
+                                <h3 class="heading-size-2-light-uppercase">Shares</h3>
+                            </header>
+                        </div>
+                        <div class="button-block relative font-2">Reddit</div>
+                    </a>
+                    -->
                     
                 </div>
+    
+                <script>
+                    $(document).ready(function() {	
+                        	
+                        $.fn.KayzenSocialShareCount({
+                            url : 'http://themeforest.net'
+                        });
+                        
+                    });
+                </script>
         
 			</div><!-- container -->
 
 		</section>
+        
+        <section class="section-primary-flush">
+            
+            <div class="container-small">
+                
+                <h2 class="heading-size-6-light-strikethrough-dots text-center"><span>The Author</span></h2>
+                
+                <div class="row object">
+                    <div class="span-2 text-center">
+                        <div class="thumbnail-mini-profile-round-xlarge-styled">
+                            <img src="<?php echo appDir ?>/images/team/team-2.jpg" alt="">
+                        </div>
+                        <div class="icon_group-small">
+                            <a href="#" class="icon-border-size-2 tooltip-top" data-tooltip="Facebook">
+                                <i class="fa fa-facebook"></i>
+                            </a>
+                            <a href="#" class="icon-border-size-2 tooltip-top" data-tooltip="Twitter">
+                                <i class="fa fa-twitter"></i>
+                            </a>
+                            <a href="#" class="icon-border-size-2 tooltip-top" data-tooltip="LinkedIn">
+                                <i class="fa fa-linkedin"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="span-10">
+                        <header class="heading_group">
+                            <h3 class="heading-heavy-size-4 font-2">Jane Doe</h3>
+                            <h3 class="heading-light-size-3-brand-1 font-2">Graphic Designer</h3>
+                        </header>
+                        <p>Nunc pharetra et massa eu volutpat. Duis at posuere justo. Vivamus lobortis mi at leo pellentesque vehicula. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aliquam erat volutpat. Proin ac augue quam. Etiam sollicitudin magna vitae nunc accumsan cursus.</p>
+                    </div>
+                </div>
+                
+            </div><!-- container -->
+            
+        </section>
+        
+        <section class="section-primary-flush">
+            
+            <div class="container-small">
+                
+                <h2 class="heading-size-6-light-strikethrough-dots text-center"><span>Comments</span></h2>
+                
+                <div class="comments object">
+                
+                    <div class="comment object-mini">
+                        <div class="row object-mini">
+                            <div class="span-2 va-middle text-center">
+                                <div class="thumbnail-profile-round-xlarge-styled">
+                                    <img src="<?php echo appDir ?>/images/team/team-2.jpg" alt="">
+                                </div>
+                            </div>
+                            <div class="span-10 va-middle">
+                                <div class="well-comment">
+                                    <div class="row-block">
+                                        <div class="span">
+                                            <header class="heading_group-small">
+                                                <h4 class="heading font-2">John Doe</h4>
+                                            </header>
+                                        </div>
+                                        <div class="span text-right">
+                                            <header class="heading_group-small">
+                                                <h4 class="heading-light"><b>Posted:</b> Today, 9:16pm</h4>
+                                            </header>
+                                        </div>
+                                    </div>
+                                    <div class="comment_content">
+                                        <p>Nunc pharetra et massa eu volutpat. Duis at posuere justo. Vivamus lobortis mi at leo pellentesque vehicula. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aliquam erat volutpat. Proin ac augue quam. Etiam sollicitudin magna vitae nunc accumsan cursus.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="button_group text-right">
+                            <a class="button-size-2">Reply</a>
+                            <a class="button-size-2-error">Report</a>
+                        </div>
+                    </div>
+                
+                    <div class="comment object-mini text-right">
+                        <div class="row object-mini span-10 text-left">
+                            <div class="span-2 va-middle text-center">
+                                <div class="thumbnail-profile-round-xlarge-styled">
+                                    <img src="<?php echo appDir ?>/images/team/team-2.jpg" alt="">
+                                </div>
+                            </div>
+                            <div class="span-10 va-middle">
+                                <div class="well-comment">
+                                    <div class="row-block">
+                                        <div class="span">
+                                            <header class="heading_group-small">
+                                                <h4 class="heading font-2">John Doe</h4>
+                                            </header>
+                                        </div>
+                                        <div class="span text-right">
+                                            <header class="heading_group-small">
+                                                <h4 class="heading-light"><b>Posted:</b> Today, 9:16pm</h4>
+                                            </header>
+                                        </div>
+                                    </div>
+                                    <div class="comment_content">
+                                        <p>Nunc pharetra et massa eu volutpat. Duis at posuere justo. Vivamus lobortis mi at leo pellentesque vehicula. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aliquam erat volutpat.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="button_group text-right">
+                            <a class="button-size-2">Reply</a>
+                            <a class="button-size-2-error">Report</a>
+                        </div>
+                    </div>
+                
+                    <div class="comment object">
+                        <div class="row object-mini">
+                            <div class="span-2 va-middle text-center">
+                                <div class="thumbnail-profile-round-xlarge-styled">
+                                    <img src="<?php echo appDir ?>/images/team/team-2.jpg" alt="">
+                                </div>
+                            </div>
+                            <div class="span-10 va-middle">
+                                <div class="well-comment">
+                                    <div class="row-block">
+                                        <div class="span">
+                                            <header class="heading_group-small">
+                                                <h4 class="heading font-2">John Doe</h4>
+                                            </header>
+                                        </div>
+                                        <div class="span text-right">
+                                            <header class="heading_group-small">
+                                                <h4 class="heading-light"><b>Posted:</b> Today, 9:16pm</h4>
+                                            </header>
+                                        </div>
+                                    </div>
+                                    <div class="comment_content">
+                                        <p>Nunc pharetra et massa eu volutpat. Duis at posuere justo. Vivamus lobortis mi at leo pellentesque vehicula. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aliquam erat volutpat. Proin ac augue quam. Etiam sollicitudin magna vitae nunc accumsan cursus.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="button_group text-right">
+                            <a class="button-size-2">Reply</a>
+                            <a class="button-size-2-error">Report</a>
+                        </div>
+                    </div>
+                
+                </div>
+                
+                <header class="heading_group">
+                    <h4 class="heading-size-3">Leave a Comment</h4>
+                </header>
+	
+                <!-- Contact Form -->
+                <form class="form-faux-placeholders-html5">
+                    <div class="row-flow">
+                        <div class="form_group span-6">
+                            <input type="text" class="form_input" id="name" placeholder="Ex: John Doe" required="">
+                            <label for="firstName">Name</label>
+                        </div>
+                        <div class="form_group span-6">
+                            <input type="email" class="form_input" id="emailAddress" placeholder="john@doe.com" required="">
+                            <label for="emailAddress">Email Address</label>
+                        </div>
+                    </div>
+                    <div class="form_group">
+                        <textarea class="form_input" placeholder="We aim to respond to all messages within 24 hours." id="yourMessage" rows="8" required=""></textarea>
+                        <label for="yourMessage">Your Message</label>
+                    </div>
+                    <button type="submit" class="button-block-primary-size-3">Submit Message</button>
+                </form>
+                
+            </div><!-- container -->
+            
+        </section>
+        
+        <section class="section-primary-flush">
+            
+            <div class="container-small">
+                
+                <h2 class="heading-size-6-light-strikethrough-dots text-center"><span>Related Posts</span></h2>
+
+                <div class="row">
+                    
+                    <div class="span-4 relative">	
+                        <div class="thumbnail-zoom">
+                            <div class="thumbnail_mask">
+                                <div class="icon_group-small">
+                                    <a href="#" class="icon-border-circle-size-3">
+                                        <i class="fa fa-search"></i>
+                                    </a>
+                                    <a href="#" class="icon-border-circle-size-3">
+                                        <i class="fa fa-link"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <img src="<?php echo appDir ?>/images/wallpapers/bg-7.jpg">
+                        </div>
+                        <header class="heading_group">
+                            <div class="heading_date">
+                                <div>Sep</div>
+                                <div>23</div>
+                            </div>
+                            <h3 class="heading-heavy-size-3">Kayzen is Released</h3>
+                            <h4 class="heading-light">Posted by <a href="#">Naomi Olson</a></h4>
+                        </header>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Inquit, dasne adolescenti veniam? Ergo instituto veterum...</p>
+                        <div class="row">
+                            <div class="span-5 va-middle">
+                                <a href="#" class="button-oval-primary-size-2">Read More</a>
+                            </div>
+                            <div class="span-7 va-middle text-right">
+                                <small>Posted in <a href="blog.html">Web Design</a></small>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="span-4 relative">	
+                        <div class="thumbnail-zoom">
+                            <div class="thumbnail_mask">
+                                <div class="icon_group-small">
+                                    <a href="#" class="icon-border-circle-size-3">
+                                        <i class="fa fa-search"></i>
+                                    </a>
+                                    <a href="#" class="icon-border-circle-size-3">
+                                        <i class="fa fa-link"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <img src="<?php echo appDir ?>/images/wallpapers/bg-5.jpg">
+                        </div>
+                        <header class="heading_group">
+                            <div class="heading_date">
+                                <div>Sep</div>
+                                <div>23</div>
+                            </div>
+                            <h3 class="heading-heavy-size-3">Kayzen is Released</h3>
+                            <h4 class="heading-light">Posted by <a href="#">Naomi Olson</a></h4>
+                        </header>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Inquit, dasne adolescenti veniam? Ergo instituto veterum...</p>
+                        <div class="row">
+                            <div class="span-5 va-middle">
+                                <a href="#" class="button-oval-primary-size-2">Read More</a>
+                            </div>
+                            <div class="span-7 va-middle text-right">
+                                <small>Posted in <a href="blog.html">Web Design</a></small>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="span-4 relative">	
+                        <div class="thumbnail-zoom">
+                            <div class="thumbnail_mask">
+                                <div class="icon_group-small">
+                                    <a href="#" class="icon-border-circle-size-3">
+                                        <i class="fa fa-search"></i>
+                                    </a>
+                                    <a href="#" class="icon-border-circle-size-3">
+                                        <i class="fa fa-link"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <img src="<?php echo appDir ?>/images/wallpapers/bg-3.jpg">
+                        </div>
+                        <header class="heading_group">
+                            <div class="heading_date">
+                                <div>Sep</div>
+                                <div>23</div>
+                            </div>
+                            <h3 class="heading-heavy-size-3">Kayzen is Released</h3>
+                            <h4 class="heading-light">Posted by <a href="#">Naomi Olson</a></h4>
+                        </header>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Inquit, dasne adolescenti veniam? Ergo instituto veterum...</p>
+                        <div class="row">
+                            <div class="span-5 va-middle">
+                                <a href="#" class="button-oval-primary-size-2">Read More</a>
+                            </div>
+                            <div class="span-7 va-middle text-right">
+                                <small>Posted in <a href="blog.html">Web Design</a></small>
+                            </div>
+                        </div>
+                    </div>
+            
+                </div>
 		
+            </div><!-- container -->
+            
+        </section>
+        
 		<?php include (ROOT.'/sections/promo-banner.php'); ?>
 		
 		<?php include (ROOT.'/modules/footer.php'); ?>
