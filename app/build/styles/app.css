@@ -8,6 +8,129 @@ Made by @esr360
 @import url(../../vendor/Normalize/normalize.css);
 @import url(http://fonts.googleapis.com/css?family=Lato:300,400,700,900);
 @import url(http://fonts.googleapis.com/css?family=Raleway:100,300,700,900);
+@-webkit-keyframes fluidboxLoading {
+  0% {
+    -webkit-transform: translate(-50%, -50%) rotateX(0) rotateY(0);
+  }
+  50% {
+    -webkit-transform: translate(-50%, -50%) rotateX(-180deg) rotateY(0);
+  }
+  100% {
+    -webkit-transform: translate(-50%, -50%) rotateX(-180deg) rotateY(-180deg);
+  }
+}
+@keyframes fluidboxLoading {
+  0% {
+    -webkit-transform: translate(-50%, -50%) rotateX(0) rotateY(0);
+            transform: translate(-50%, -50%) rotateX(0) rotateY(0);
+  }
+  50% {
+    -webkit-transform: translate(-50%, -50%) rotateX(-180deg) rotateY(0);
+            transform: translate(-50%, -50%) rotateX(-180deg) rotateY(0);
+  }
+  100% {
+    -webkit-transform: translate(-50%, -50%) rotateX(-180deg) rotateY(-180deg);
+            transform: translate(-50%, -50%) rotateX(-180deg) rotateY(-180deg);
+  }
+}
+.fluidbox {
+  outline: none;
+}
+
+.fluidbox__overlay {
+  background-color: rgba(255, 255, 255, 0.85);
+  cursor: pointer;
+  cursor: -webkit-zoom-out;
+  cursor: zoom-out;
+  opacity: 0;
+  pointer-events: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  /* Transition time for overlay is halved to ensure that flickering doesn't happen */
+  transition: all 0.5s ease-in-out;
+}
+.fluidbox--opened .fluidbox__overlay {
+  pointer-events: auto;
+}
+
+.fluidbox__wrap {
+  background-position: center center;
+  background-size: cover;
+  margin: 0 auto;
+  position: relative;
+  transition: all 0.5s ease-in-out;
+}
+
+.fluidbox__thumb {
+  transition: opacity 0s ease-in-out 0s;
+  /* To prevent flickering, we delay the showing of the image */
+}
+.fluidbox--closed .fluidbox__thumb {
+  transition: opacity 0s ease-in-out 0s;
+}
+
+.fluidbox__ghost {
+  background-size: 100% 100%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  position: absolute;
+  transition-property: opacity, -webkit-transform;
+  transition-property: opacity, transform;
+  transition-duration: 0s, 0.5s;
+  transition-delay: 0s;
+}
+.fluidbox--opened .fluidbox__ghost {
+  cursor: pointer;
+  cursor: -webkit-zoom-out;
+  cursor: zoom-out;
+}
+.fluidbox--closed .fluidbox__ghost {
+  transition-delay: 0.5s, 0s;
+}
+
+.fluidbox__loader {
+  -webkit-perspective: 200px;
+  perspective: 200px;
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+.fluidbox__loader::before {
+  /* You can replace this with any color you want, or even a loading gif if desired */
+  background-color: rgba(255, 255, 255, 0.85);
+  content: '';
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 20%;
+  padding-bottom: 20%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+  transition-property: -webkit-transform;
+  transition-property: transform;
+  transition-duration: 0.5s;
+  transition-delay: 0s;
+}
+
+.fluidbox--loading .fluidbox__loader {
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out 0.5s;
+}
+.fluidbox--loading .fluidbox__loader::before {
+  -webkit-animation: fluidboxLoading 1s 0s infinite ease-in-out forwards;
+  animation: fluidboxLoading 1s 0s infinite ease-in-out forwards;
+}
+
 * {
   letter-spacing: normal;
   word-spacing: normal;
@@ -4163,14 +4286,18 @@ pre:last-child, hr:last-child,
   padding-top: 50%;
 }
 .tile-img {
-  position: absolute;
   top: 4px;
   right: 4px;
   bottom: 4px;
   left: 4px;
+  position: absolute;
+  transition: 0.4s;
   background-size: cover;
   background-position: center center;
   background-color: #eee;
+}
+.tile-img:hover {
+  opacity: 0.6;
 }
 
 .hidden {

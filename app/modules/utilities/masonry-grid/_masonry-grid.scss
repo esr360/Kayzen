@@ -59,14 +59,18 @@
             }
         }
         &-img {
-            position: absolute;
             top: option($config, 'spacing');
             right: option($config, 'spacing');
             bottom: option($config, 'spacing');
             left: option($config, 'spacing');
+            position: absolute;
+            transition: base(transition);
             background-size: cover;
             background-position: center center;
             background-color: #eee;
+            &:hover {
+                opacity: 0.6;
+            }
         }
     }
     

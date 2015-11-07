@@ -3,7 +3,7 @@
         <div class="thumbnail-article">
             <div class="thumbnail_mask">
                 <div class="thumbnail_controls icon_group-small">
-                    <a href="#" class="icon-border-circle-size-3">
+                    <a href="<?php echo appDir ?>/images/wallpapers/bg-<?php echo rand(1, 7) ?>.jpg" class="icon-border-circle-size-3">
                         <i class="fa fa-search"></i>
                     </a>
                     <a href="#" class="icon-border-circle-size-3">

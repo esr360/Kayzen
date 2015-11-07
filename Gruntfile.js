@@ -29,6 +29,8 @@ module.exports = function(grunt) {
     // App Scripts
     var _scripts = [   
         _owl,
+        'app/vendor/jQuery-throttle-debounce/jquery.ba-throttle-debounce.js',
+        'app/vendor/Fluidbox/src/js/jquery.fluidbox.js',
         'app/vendor/Modular/src/modular.js',
         'app/vendor/jquery-animateNumber/jquery.animateNumber.js',
         'app/vendor/Kayzen.ScrollSpy/Kayzen.ScrollSpy.js',
