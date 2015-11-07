@@ -25,10 +25,20 @@ module.exports = function(grunt) {
         _owlPath + 'owl.navigation.js',
         _owlPath + 'owl.video.js',
     ];
+    
+    // Magnific Popup
+    var _magnificPath = 'app/vendor/Magnific-Popup/src/js/'; 
+    var _magnific = [
+        _magnificPath + 'core.js',
+        _magnificPath + 'gallery.js',
+        _magnificPath + 'image.js',
+        _magnificPath + 'retina.js',
+    ];
 
     // App Scripts
     var _scripts = [   
         _owl,
+        _magnific,
         'app/vendor/jQuery-throttle-debounce/jquery.ba-throttle-debounce.js',
         'app/vendor/Fluidbox/src/js/jquery.fluidbox.js',
         'app/vendor/Modular/src/modular.js',

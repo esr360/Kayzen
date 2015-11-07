@@ -3008,918 +3008,1484 @@
 
 })(window.Zepto || window.jQuery, window, document);
 
-/*!
- * jQuery throttle / debounce - v1.1 - 3/7/2010
- * http://benalman.com/projects/jquery-throttle-debounce-plugin/
+/**
  * 
- * Copyright (c) 2010 "Cowboy" Ben Alman
- * Dual licensed under the MIT and GPL licenses.
- * http://benalman.com/about/license/
+ * Magnific Popup Core JS file
+ * 
  */
 
-// Script: jQuery throttle / debounce: Sometimes, less is more!
-//
-// *Version: 1.1, Last updated: 3/7/2010*
-// 
-// Project Home - http://benalman.com/projects/jquery-throttle-debounce-plugin/
-// GitHub       - http://github.com/cowboy/jquery-throttle-debounce/
-// Source       - http://github.com/cowboy/jquery-throttle-debounce/raw/master/jquery.ba-throttle-debounce.js
-// (Minified)   - http://github.com/cowboy/jquery-throttle-debounce/raw/master/jquery.ba-throttle-debounce.min.js (0.7kb)
-// 
-// About: License
-// 
-// Copyright (c) 2010 "Cowboy" Ben Alman,
-// Dual licensed under the MIT and GPL licenses.
-// http://benalman.com/about/license/
-// 
-// About: Examples
-// 
-// These working examples, complete with fully commented code, illustrate a few
-// ways in which this plugin can be used.
-// 
-// Throttle - http://benalman.com/code/projects/jquery-throttle-debounce/examples/throttle/
-// Debounce - http://benalman.com/code/projects/jquery-throttle-debounce/examples/debounce/
-// 
-// About: Support and Testing
-// 
-// Information about what version or versions of jQuery this plugin has been
-// tested with, what browsers it has been tested in, and where the unit tests
-// reside (so you can test it yourself).
-// 
-// jQuery Versions - none, 1.3.2, 1.4.2
-// Browsers Tested - Internet Explorer 6-8, Firefox 2-3.6, Safari 3-4, Chrome 4-5, Opera 9.6-10.1.
-// Unit Tests      - http://benalman.com/code/projects/jquery-throttle-debounce/unit/
-// 
-// About: Release History
-// 
-// 1.1 - (3/7/2010) Fixed a bug in <jQuery.throttle> where trailing callbacks
-//       executed later than they should. Reworked a fair amount of internal
-//       logic as well.
-// 1.0 - (3/6/2010) Initial release as a stand-alone project. Migrated over
-//       from jquery-misc repo v0.4 to jquery-throttle repo v1.0, added the
-//       no_trailing throttle parameter and debounce functionality.
-// 
-// Topic: Note for non-jQuery users
-// 
-// jQuery isn't actually required for this plugin, because nothing internal
-// uses any jQuery methods or properties. jQuery is just used as a namespace
-// under which these methods can exist.
-// 
-// Since jQuery isn't actually required for this plugin, if jQuery doesn't exist
-// when this plugin is loaded, the method described below will be created in
-// the `Cowboy` namespace. Usage will be exactly the same, but instead of
-// $.method() or jQuery.method(), you'll need to use Cowboy.method().
 
-(function(window,undefined){
-  '$:nomunge'; // Used by YUI compressor.
-  
-  // Since jQuery really isn't required for this plugin, use `jQuery` as the
-  // namespace only if it already exists, otherwise use the `Cowboy` namespace,
-  // creating it if necessary.
-  var $ = window.jQuery || window.Cowboy || ( window.Cowboy = {} ),
-    
-    // Internal method reference.
-    jq_throttle;
-  
-  // Method: jQuery.throttle
-  // 
-  // Throttle execution of a function. Especially useful for rate limiting
-  // execution of handlers on events like resize and scroll. If you want to
-  // rate-limit execution of a function to a single time, see the
-  // <jQuery.debounce> method.
-  // 
-  // In this visualization, | is a throttled-function call and X is the actual
-  // callback execution:
-  // 
-  // > Throttled with `no_trailing` specified as false or unspecified:
-  // > ||||||||||||||||||||||||| (pause) |||||||||||||||||||||||||
-  // > X    X    X    X    X    X        X    X    X    X    X    X
-  // > 
-  // > Throttled with `no_trailing` specified as true:
-  // > ||||||||||||||||||||||||| (pause) |||||||||||||||||||||||||
-  // > X    X    X    X    X             X    X    X    X    X
-  // 
-  // Usage:
-  // 
-  // > var throttled = jQuery.throttle( delay, [ no_trailing, ] callback );
-  // > 
-  // > jQuery('selector').bind( 'someevent', throttled );
-  // > jQuery('selector').unbind( 'someevent', throttled );
-  // 
-  // This also works in jQuery 1.4+:
-  // 
-  // > jQuery('selector').bind( 'someevent', jQuery.throttle( delay, [ no_trailing, ] callback ) );
-  // > jQuery('selector').unbind( 'someevent', callback );
-  // 
-  // Arguments:
-  // 
-  //  delay - (Number) A zero-or-greater delay in milliseconds. For event
-  //    callbacks, values around 100 or 250 (or even higher) are most useful.
-  //  no_trailing - (Boolean) Optional, defaults to false. If no_trailing is
-  //    true, callback will only execute every `delay` milliseconds while the
-  //    throttled-function is being called. If no_trailing is false or
-  //    unspecified, callback will be executed one final time after the last
-  //    throttled-function call. (After the throttled-function has not been
-  //    called for `delay` milliseconds, the internal counter is reset)
-  //  callback - (Function) A function to be executed after delay milliseconds.
-  //    The `this` context and all arguments are passed through, as-is, to
-  //    `callback` when the throttled-function is executed.
-  // 
-  // Returns:
-  // 
-  //  (Function) A new, throttled, function.
-  
-  $.throttle = jq_throttle = function( delay, no_trailing, callback, debounce_mode ) {
-    // After wrapper has stopped being called, this timeout ensures that
-    // `callback` is executed at the proper times in `throttle` and `end`
-    // debounce modes.
-    var timeout_id,
-      
-      // Keep track of the last time `callback` was executed.
-      last_exec = 0;
-    
-    // `no_trailing` defaults to falsy.
-    if ( typeof no_trailing !== 'boolean' ) {
-      debounce_mode = callback;
-      callback = no_trailing;
-      no_trailing = undefined;
-    }
-    
-    // The `wrapper` function encapsulates all of the throttling / debouncing
-    // functionality and when executed will limit the rate at which `callback`
-    // is executed.
-    function wrapper() {
-      var that = this,
-        elapsed = +new Date() - last_exec,
-        args = arguments;
-      
-      // Execute `callback` and update the `last_exec` timestamp.
-      function exec() {
-        last_exec = +new Date();
-        callback.apply( that, args );
-      };
-      
-      // If `debounce_mode` is true (at_begin) this is used to clear the flag
-      // to allow future `callback` executions.
-      function clear() {
-        timeout_id = undefined;
-      };
-      
-      if ( debounce_mode && !timeout_id ) {
-        // Since `wrapper` is being called for the first time and
-        // `debounce_mode` is true (at_begin), execute `callback`.
-        exec();
-      }
-      
-      // Clear any existing timeout.
-      timeout_id && clearTimeout( timeout_id );
-      
-      if ( debounce_mode === undefined && elapsed > delay ) {
-        // In throttle mode, if `delay` time has been exceeded, execute
-        // `callback`.
-        exec();
-        
-      } else if ( no_trailing !== true ) {
-        // In trailing throttle mode, since `delay` time has not been
-        // exceeded, schedule `callback` to execute `delay` ms after most
-        // recent execution.
-        // 
-        // If `debounce_mode` is true (at_begin), schedule `clear` to execute
-        // after `delay` ms.
-        // 
-        // If `debounce_mode` is false (at end), schedule `callback` to
-        // execute after `delay` ms.
-        timeout_id = setTimeout( debounce_mode ? clear : exec, debounce_mode === undefined ? delay - elapsed : delay );
-      }
-    };
-    
-    // Set the guid of `wrapper` function to the same of original callback, so
-    // it can be removed in jQuery 1.4+ .unbind or .die by using the original
-    // callback as a reference.
-    if ( $.guid ) {
-      wrapper.guid = callback.guid = callback.guid || $.guid++;
-    }
-    
-    // Return the wrapper function.
-    return wrapper;
-  };
-  
-  // Method: jQuery.debounce
-  // 
-  // Debounce execution of a function. Debouncing, unlike throttling,
-  // guarantees that a function is only executed a single time, either at the
-  // very beginning of a series of calls, or at the very end. If you want to
-  // simply rate-limit execution of a function, see the <jQuery.throttle>
-  // method.
-  // 
-  // In this visualization, | is a debounced-function call and X is the actual
-  // callback execution:
-  // 
-  // > Debounced with `at_begin` specified as false or unspecified:
-  // > ||||||||||||||||||||||||| (pause) |||||||||||||||||||||||||
-  // >                          X                                 X
-  // > 
-  // > Debounced with `at_begin` specified as true:
-  // > ||||||||||||||||||||||||| (pause) |||||||||||||||||||||||||
-  // > X                                 X
-  // 
-  // Usage:
-  // 
-  // > var debounced = jQuery.debounce( delay, [ at_begin, ] callback );
-  // > 
-  // > jQuery('selector').bind( 'someevent', debounced );
-  // > jQuery('selector').unbind( 'someevent', debounced );
-  // 
-  // This also works in jQuery 1.4+:
-  // 
-  // > jQuery('selector').bind( 'someevent', jQuery.debounce( delay, [ at_begin, ] callback ) );
-  // > jQuery('selector').unbind( 'someevent', callback );
-  // 
-  // Arguments:
-  // 
-  //  delay - (Number) A zero-or-greater delay in milliseconds. For event
-  //    callbacks, values around 100 or 250 (or even higher) are most useful.
-  //  at_begin - (Boolean) Optional, defaults to false. If at_begin is false or
-  //    unspecified, callback will only be executed `delay` milliseconds after
-  //    the last debounced-function call. If at_begin is true, callback will be
-  //    executed only at the first debounced-function call. (After the
-  //    throttled-function has not been called for `delay` milliseconds, the
-  //    internal counter is reset)
-  //  callback - (Function) A function to be executed after delay milliseconds.
-  //    The `this` context and all arguments are passed through, as-is, to
-  //    `callback` when the debounced-function is executed.
-  // 
-  // Returns:
-  // 
-  //  (Function) A new, debounced, function.
-  
-  $.debounce = function( delay, at_begin, callback ) {
-    return callback === undefined
-      ? jq_throttle( delay, at_begin, false )
-      : jq_throttle( delay, callback, at_begin !== false );
-  };
-  
-})(this);
+/**
+ * Private static constants
+ */
+var CLOSE_EVENT = 'Close',
+	BEFORE_CLOSE_EVENT = 'BeforeClose',
+	AFTER_CLOSE_EVENT = 'AfterClose',
+	BEFORE_APPEND_EVENT = 'BeforeAppend',
+	MARKUP_PARSE_EVENT = 'MarkupParse',
+	OPEN_EVENT = 'Open',
+	CHANGE_EVENT = 'Change',
+	NS = 'mfp',
+	EVENT_NS = '.' + NS,
+	READY_CLASS = 'mfp-ready',
+	REMOVING_CLASS = 'mfp-removing',
+	PREVENT_CLOSE_CLASS = 'mfp-prevent-close';
 
-// the semi-colon before function invocation is a safety net against concatenated
-// scripts and/or other plugins which may not be closed properly.
-;(function ( $, window, document, undefined ) {
 
-	"use strict";
+/**
+ * Private vars 
+ */
+/*jshint -W079 */
+var mfp, // As we have only one instance of MagnificPopup object, we define it locally to not to use 'this'
+	MagnificPopup = function(){},
+	_isJQ = !!(window.jQuery),
+	_prevStatus,
+	_window = $(window),
+	_document,
+	_prevContentType,
+	_wrapClasses,
+	_currPopupType;
 
-		// undefined is used here as the undefined global variable in ECMAScript 3 is
-		// mutable (ie. it can be changed by someone else). undefined isn't really being
-		// passed in so we can ensure the value of it is truly undefined. In ES5, undefined
-		// can no longer be modified.
 
-		// window and document are passed through as local variable rather than global
-		// as this (slightly) quickens the resolution process and can be more efficiently
-		// minified (especially when both are regularly referenced in your plugin).
-
-		// Create the defaults once
-		var $w			= $(window),
-			$d			= $(document),
-			pluginName	= "fluidbox",
-			defaults	= {
-				immediateOpen: false,
-				loader: false,
-				maxWidth: 0,
-				maxHeight: 0,
-				resizeThrottle: 500,
-				stackIndex: 1000,
-				stackIndexDelta: 10,
-				viewportFill: 0.95,
-			},
-			globalData = {},
-			keyboardEvents = ['keyup', 'keydown', 'keypress'];
-
-		// Global plugin instance tracker
-		var fbInstance = 0;
-
-		// Check if dependencies are loaded
-		// 1. Ben Almen's debounce/throttle plugin
-		if (!$.isFunction($.throttle)) {
-			console.warn('Fluidbox: The jQuery debounce/throttle plugin is not found/loaded. Even though Fluidbox works without it, the window resize event will fire extremely rapidly in browsers, resulting in significant degradation in performance upon viewport resize.');
+/**
+ * Private functions
+ */
+var _mfpOn = function(name, f) {
+		mfp.ev.on(NS + name + EVENT_NS, f);
+	},
+	_getEl = function(className, appendTo, html, raw) {
+		var el = document.createElement('div');
+		el.className = 'mfp-'+className;
+		if(html) {
+			el.innerHTML = html;
 		}
+		if(!raw) {
+			el = $(el);
+			if(appendTo) {
+				el.appendTo(appendTo);
+			}
+		} else if(appendTo) {
+			appendTo.appendChild(el);
+		}
+		return el;
+	},
+	_mfpTrigger = function(e, data) {
+		mfp.ev.triggerHandler(NS + e, data);
 
-		// ---------------------------------------------------------------------------------------------------------------------- //
-		//  Dependency: David Walsh (http://davidwalsh.name/css-animation-callback)                                               //
-		//              and                                                                                                       //
-		//              Jonathan Suh (https://jonsuh.com/blog/detect-the-end-of-css-animations-and-transitions-with-javascript/)  //
-		// ---------------------------------------------------------------------------------------------------------------------- //
-		var whichTransitionEvent = function() {
-			var t,
-				el = document.createElement("fakeelement");
+		if(mfp.st.callbacks) {
+			// converts "mfpEventName" to "eventName" callback and triggers it if it's present
+			e = e.charAt(0).toLowerCase() + e.slice(1);
+			if(mfp.st.callbacks[e]) {
+				mfp.st.callbacks[e].apply(mfp, $.isArray(data) ? data : [data]);
+			}
+		}
+	},
+	_getCloseBtn = function(type) {
+		if(type !== _currPopupType || !mfp.currTemplate.closeBtn) {
+			mfp.currTemplate.closeBtn = $( mfp.st.closeMarkup.replace('%title%', mfp.st.tClose ) );
+			_currPopupType = type;
+		}
+		return mfp.currTemplate.closeBtn;
+	},
+	// Initialize Magnific Popup only when called at least once
+	_checkInstance = function() {
+		if(!$.magnificPopup.instance) {
+			/*jshint -W020 */
+			mfp = new MagnificPopup();
+			mfp.init();
+			$.magnificPopup.instance = mfp;
+		}
+	},
+	// CSS transition detection, http://stackoverflow.com/questions/7264899/detect-css-transitions-using-javascript-and-without-modernizr
+	supportsTransitions = function() {
+		var s = document.createElement('p').style, // 's' for style. better to create an element if body yet to exist
+			v = ['ms','O','Moz','Webkit']; // 'v' for vendor
 
-			var transitions = {
-				"transition"      : "transitionend",
-				"OTransition"     : "oTransitionEnd",
-				"MozTransition"   : "transitionend",
-				"WebkitTransition": "webkitTransitionEnd"
-			};
+		if( s['transition'] !== undefined ) {
+			return true; 
+		}
+			
+		while( v.length ) {
+			if( v.pop() + 'Transition' in s ) {
+				return true;
+			}
+		}
+				
+		return false;
+	};
 
-			for (t in transitions){
-				if (el.style[t] !== undefined){
-					return transitions[t];
+
+
+/**
+ * Public functions
+ */
+MagnificPopup.prototype = {
+
+	constructor: MagnificPopup,
+
+	/**
+	 * Initializes Magnific Popup plugin. 
+	 * This function is triggered only once when $.fn.magnificPopup or $.magnificPopup is executed
+	 */
+	init: function() {
+		var appVersion = navigator.appVersion;
+		mfp.isIE7 = appVersion.indexOf("MSIE 7.") !== -1; 
+		mfp.isIE8 = appVersion.indexOf("MSIE 8.") !== -1;
+		mfp.isLowIE = mfp.isIE7 || mfp.isIE8;
+		mfp.isAndroid = (/android/gi).test(appVersion);
+		mfp.isIOS = (/iphone|ipad|ipod/gi).test(appVersion);
+		mfp.supportsTransition = supportsTransitions();
+
+		// We disable fixed positioned lightbox on devices that don't handle it nicely.
+		// If you know a better way of detecting this - let me know.
+		mfp.probablyMobile = (mfp.isAndroid || mfp.isIOS || /(Opera Mini)|Kindle|webOS|BlackBerry|(Opera Mobi)|(Windows Phone)|IEMobile/i.test(navigator.userAgent) );
+		_document = $(document);
+
+		mfp.popupsCache = {};
+	},
+
+	/**
+	 * Opens popup
+	 * @param  data [description]
+	 */
+	open: function(data) {
+
+		var i;
+
+		if(data.isObj === false) { 
+			// convert jQuery collection to array to avoid conflicts later
+			mfp.items = data.items.toArray();
+
+			mfp.index = 0;
+			var items = data.items,
+				item;
+			for(i = 0; i < items.length; i++) {
+				item = items[i];
+				if(item.parsed) {
+					item = item.el[0];
+				}
+				if(item === data.el[0]) {
+					mfp.index = i;
+					break;
 				}
 			}
-		};
-		var customTransitionEnd = whichTransitionEvent();
+		} else {
+			mfp.items = $.isArray(data.items) ? data.items : [data.items];
+			mfp.index = data.index || 0;
+		}
 
-		// The actual plugin constructor
-		function Plugin (element, options) {
-			// Assign element
-			this.element = element;
+		// if popup is already opened - we just update the content
+		if(mfp.isOpen) {
+			mfp.updateItemHTML();
+			return;
+		}
+		
+		mfp.types = []; 
+		_wrapClasses = '';
+		if(data.mainEl && data.mainEl.length) {
+			mfp.ev = data.mainEl.eq(0);
+		} else {
+			mfp.ev = _document;
+		}
 
-			// Manipulate HTML5 dataset object
-			// -  Format: data-fluidbox-(setting-name). When converted into camel case: fluidboxSettingName
-			// - So, we will have to remove 'fluidbox' in the front, and change the first letter to lowercase
-			var elementData = {};
-			$.each($(this.element).data(), function(k,v) {
-				var capitalize = function(s) {
-						return s && s[0].toLowerCase() + s.slice(1);
-					},
-					key = capitalize(k.replace('fluidbox',''));
+		if(data.key) {
+			if(!mfp.popupsCache[data.key]) {
+				mfp.popupsCache[data.key] = {};
+			}
+			mfp.currTemplate = mfp.popupsCache[data.key];
+		} else {
+			mfp.currTemplate = {};
+		}
 
-				// Only push non-empty keys (that are part of the Fluidbox HTML5 data- attributes) into new object
-				if(key !== '' || key !== null) {
-					// Coerce boolean values
-					if (v == 'false') {
-						v = false;
-					} else {
-						v = true;
-					}
-					elementData[key] = v;
+
+
+		mfp.st = $.extend(true, {}, $.magnificPopup.defaults, data ); 
+		mfp.fixedContentPos = mfp.st.fixedContentPos === 'auto' ? !mfp.probablyMobile : mfp.st.fixedContentPos;
+
+		if(mfp.st.modal) {
+			mfp.st.closeOnContentClick = false;
+			mfp.st.closeOnBgClick = false;
+			mfp.st.showCloseBtn = false;
+			mfp.st.enableEscapeKey = false;
+		}
+		
+
+		// Building markup
+		// main containers are created only once
+		if(!mfp.bgOverlay) {
+
+			// Dark overlay
+			mfp.bgOverlay = _getEl('bg').on('click'+EVENT_NS, function() {
+				mfp.close();
+			});
+
+			mfp.wrap = _getEl('wrap').attr('tabindex', -1).on('click'+EVENT_NS, function(e) {
+				if(mfp._checkIfClose(e.target)) {
+					mfp.close();
 				}
 			});
-			
-			// Merge defaults into options, into dataset
-			this.settings = $.extend( {}, defaults, options, elementData);
 
-			// Coerce settings
-			this.settings.viewportFill = Math.max(Math.min(parseFloat(this.settings.viewportFill), 1), 0);
-			if(this.settings.stackIndex < this.settings.stackIndexDelta) {
-				settings.stackIndexDelta = settings.stackIndex;
-			}
-
-			// Store plugin name
-			this._name = pluginName;
-
-			// Initialize
-			this.init();
+			mfp.container = _getEl('container', mfp.wrap);
 		}
 
-		// Private functions
-		var _fun = {
-			dom: function() {
-				// Wrap and add ghost element
-				var $fb_innerWrap = $('<div />', {
-					'class': 'fluidbox__wrap',
-					css: {
-						zIndex: this.settings.stackIndex - this.settings.stackIndexDelta
-					}
+		mfp.contentContainer = _getEl('content');
+		if(mfp.st.preloader) {
+			mfp.preloader = _getEl('preloader', mfp.container, mfp.st.tLoading);
+		}
+
+
+		// Initializing modules
+		var modules = $.magnificPopup.modules;
+		for(i = 0; i < modules.length; i++) {
+			var n = modules[i];
+			n = n.charAt(0).toUpperCase() + n.slice(1);
+			mfp['init'+n].call(mfp);
+		}
+		_mfpTrigger('BeforeOpen');
+
+
+		if(mfp.st.showCloseBtn) {
+			// Close button
+			if(!mfp.st.closeBtnInside) {
+				mfp.wrap.append( _getCloseBtn() );
+			} else {
+				_mfpOn(MARKUP_PARSE_EVENT, function(e, template, values, item) {
+					values.close_replaceWith = _getCloseBtn(item.type);
 				});
-				$(this.element)
-				.addClass('fluidbox--closed')
-				.wrapInner($fb_innerWrap)
-				.find('img')
-					.first()
-					.css({ opacity: 1})
-					.addClass('fluidbox__thumb')
-					.after('<div class="fluidbox__ghost" />');
-
-				// Append loader
-				if(this.settings.loader) {
-					var $fbLoader = $('<div />', {
-						'class': 'fluidbox__loader',
-						css: {
-							zIndex: 2
-						}
-					});
-					$(this.element).find('.fluidbox__wrap').append($fbLoader);
-				}
-			},
-			prepareFb: function() {
-				var fb	= this,
-					$fb	= $(this.element);
-
-				// Thumbnail is successfully loaded, fire event
-				$fb.trigger('thumbloaddone.fluidbox');
-
-				// Get basic measurements and to resize the ghost element
-				_fun.measure.fbElements.call(this);
-
-				// Bind events
-				fb.bindEvents();
-
-				// Status: Fluidbox is ready to use
-				$fb.addClass('fluidbox--ready');
-
-				// Bind listeners
-				fb.bindListeners();
-
-				// Emit custom event
-				$fb.trigger('ready.fluidbox');
-			},
-			measure: {
-				viewport: function() {
-					globalData.viewport = {
-						w: $w.width(),
-						h: $w.height()
-					};
-				},
-				fbElements: function() {
-					var fb			= this,
-						$fb			= $(this.element),
-						$fbThumb	= $fb.find('img').first(),
-						$fbGhost	= $fb.find('.fluidbox__ghost'),
-						$fbWrap		= $fb.find('.fluidbox__wrap');
-
-					// Store image dimensions in instance data
-					fb.instanceData.thumb = {
-						natW:	$fbThumb[0].naturalWidth,
-						natH:	$fbThumb[0].naturalHeight,
-						w:		$fbThumb.width(),
-						h:		$fbThumb.height()
-					};
-
-					// Set ghost dimensions
-					$fbGhost
-					.css({
-						width: $fbThumb.width(),
-						height: $fbThumb.height(),
-						top: $fbThumb.offset().top - $fbWrap.offset().top + parseInt($fbThumb.css('borderTopWidth')) + parseInt($fbThumb.css('paddingTop')),
-						left: $fbThumb.offset().left - $fbWrap.offset().left + parseInt($fbThumb.css('borderLeftWidth')) + parseInt($fbThumb.css('paddingLeft'))
-					});
-				}
+				_wrapClasses += ' mfp-close-btn-in';
 			}
-		};
+		}
 
-		// Public functions
-		$.extend(Plugin.prototype, {
-			init: function () {
-			
-				// Define elements
-				var fb				= this,
-					$fb				= $(this.element),
-					$fbThumb		= $fb.find('img').first();
+		if(mfp.st.alignTop) {
+			_wrapClasses += ' mfp-align-top';
+		}
 
-				// Get basic measurements
-				_fun.measure.viewport();
+	
 
-				// Only perform initialization when
-				// - It is not yet initialized
-				// + DOM checks are satisfied:
-				// +-- An anchor element is selected
-				// +-- Contains one and only one child
-				// +-- The only child is an image element OR a picture element
-				// +-- The element must not be hidden (itself or its parents)
-				if(
-					(!fb.instanceData || !fb.instanceData.initialized) &&
-					(
-						$fb.is('a') &&
-						$fb.children().length === 1 &&
-						(
-							$fb.children().is('img') || (
-								$fb.children().is('picture') &&
-								$fb.find('img').length === 1
-							)
-						) &&
-						$fb.css('display') !== 'none' &&
-						$fb.children().css('display') !== 'none' &&
-						$fb.parents().css('display') !== 'none'
-					)
-				) {
+		if(mfp.fixedContentPos) {
+			mfp.wrap.css({
+				overflow: mfp.st.overflowY,
+				overflowX: 'hidden',
+				overflowY: mfp.st.overflowY
+			});
+		} else {
+			mfp.wrap.css({ 
+				top: _window.scrollTop(),
+				position: 'absolute'
+			});
+		}
+		if( mfp.st.fixedBgPos === false || (mfp.st.fixedBgPos === 'auto' && !mfp.fixedContentPos) ) {
+			mfp.bgOverlay.css({
+				height: _document.height(),
+				position: 'absolute'
+			});
+		}
 
-					// Initialize and store original node
-					$fb.removeClass('fluidbox--destroyed');
-					fb.instanceData = {};
-					fb.instanceData.initialized = true;
-					fb.instanceData.originalNode = $fb.html();
+		
 
-					// Append instance ID
-					fbInstance += 1;
-					fb.instanceData.id = fbInstance;
-					$fb.addClass('fluidbox__instance-'+fbInstance);
-
-					// Status: Fluidbox has been initialized
-					$fb.addClass('fluidbox--initialized');
-
-					// DOM replacement
-					_fun.dom.call(fb);
-
-					// Emit custom event
-					$fb.trigger('init.fluidbox');
-
-					// Wait for image to load, but only if image is not found in cache
-					var img = new Image();
-					if($fbThumb.width() > 0 && $fbThumb.height() > 0) {
-						// Thumbnail loaded from cache, let's prepare fluidbox
-						_fun.prepareFb.call(fb);
-					} else {
-						img.onload = function() {
-							// Thumbnail loaded, let's prepare fluidbox
-							_fun.prepareFb.call(fb);
-						};
-						img.onerror = function() {
-							// Trigger custom error event
-							$fb.trigger('thumbloadfail.fluidbox');
-						};
-						img.src = $fbThumb.attr('src');
-					}
+		if(mfp.st.enableEscapeKey) {
+			// Close on ESC key
+			_document.on('keyup' + EVENT_NS, function(e) {
+				if(e.keyCode === 27) {
+					mfp.close();
 				}
+			});
+		}
 
-			},
-			open: function() {
-				// Open Fluidbox
-				var fb			= this,
-					$fb			= $(this.element),
-					$fbThumb	= $fb.find('img').first(),
-					$fbGhost	= $fb.find('.fluidbox__ghost'),
-					$fbWrap		= $fb.find('.fluidbox__wrap');
-
-				// Forcibly turn off transition end detection,
-				// otherwise users will get choppy transition if toggling between states rapidly
-				$fbGhost.off(customTransitionEnd);
-
-				// Close all other Fluidbox instances
-				$('.fluidbox--opened').fluidbox('close');
-
-				// Append overlay
-				var $fbOverlay = $('<div />', {
-					'class': 'fluidbox__overlay',
-					css: {
-						zIndex: -1
-					}
-				});
-				$fbWrap.append($fbOverlay);
-
-				// Add class to indicate larger image being loaded
-				$fb
-				.removeClass('fluidbox--closed')
-				.addClass('fluidbox--loading');
-
-				// Set thumbnail image source as background image first, worry later
-				$fbGhost.css({
-					'background-image': 'url('+$fbThumb.attr('src')+')',
-					opacity: 1
-				});
-
-				// Set dimensions for ghost
-				_fun.measure.fbElements.call(fb);
-
-				// Wait for ghost image to preload
-				var img;
-				if (fb.settings.immediateOpen) {
-					// Update classes
-					$fb
-					.addClass('fluidbox--opened fluidbox--loaded')
-					.find('.fluidbox__wrap')
-						.css({ zIndex: fb.settings.stackIndex + fb.settings.stackIndexDelta });
-
-					// Emit custom event
-					$fb.trigger('openstart.fluidbox');
-
-					// Compute
-					fb.compute();
-
-					// Hide thumbnail
-					$fbThumb.css({ opacity: 0 });
-
-					// Show overlay
-					$('.fluidbox__overlay').css({ opacity: 1 });
-
-					// Emit custom event when ghost image finishes transition
-					$fbGhost.one(customTransitionEnd, function() {
-						$fb.trigger('openend.fluidbox');
-					});
-
-					img = new Image();
-					img.onload = function() {
-						// Perform only if the Fluidbox instance is still open
-						if (fb.instanceData.state === 1) {
-							// Set new natural dimensions
-							fb.instanceData.thumb.natW = img.naturalWidth;
-							fb.instanceData.thumb.natH = img.naturalHeight;
-
-							// Remove loading status
-							$fb.removeClass('fluidbox--loading');
-
-							// Set new image background
-							$fbGhost.css({ 'background-image': 'url('+img.src+')' });
-
-							// Compute
-							fb.compute();
-						}
-					};
-					img.onerror = function() {
-						// Trigger closing
-						fb.close();
-
-						// Emit custom event
-						$fb.trigger('imageloadfail.fluidbox');
-						$fb.trigger('delayedloadfail.fluidbox');
-					};
-					img.src = $fb.attr('href');
-					
-				} else {
-					img = new Image();
-					img.onload = function() {
-
-						// Update classes
-						$fb
-						.removeClass('fluidbox--loading')
-						.addClass('fluidbox--opened fluidbox--loaded')
-						.find('.fluidbox__wrap')
-							.css({ zIndex: fb.settings.stackIndex + fb.settings.stackIndexDelta });
-
-						// Emit custom event
-						$fb.trigger('openstart.fluidbox');
-
-						// Set new image background
-						$fbGhost.css({ 'background-image': 'url('+img.src+')' });
-
-						// Set new natural dimensions
-						fb.instanceData.thumb.natW = img.naturalWidth;
-						fb.instanceData.thumb.natH = img.naturalHeight;
-
-						// Compute
-						fb.compute();
-
-						// Hide thumbnail
-						$fbThumb.css({ opacity: 0 });
-
-						// Show overlay
-						$('.fluidbox__overlay').css({ opacity: 1 });
-
-						// Emit custom event when ghost image finishes transition
-						$fbGhost.one(customTransitionEnd, function() {
-							$fb.trigger('openend.fluidbox');
-						});
-					};
-					img.onerror = function() {
-						// Trigger closing
-						fb.close();
-
-						// Emit custom event
-						$fb.trigger('imageloadfail.fluidbox');
-					};
-					img.src = $fb.attr('href');
-				}
-					
-			},
-			compute: function() {
-				var fb			= this,
-					$fb			= $(this.element),
-					$fbThumb	= $fb.find('img').first(),
-					$fbGhost	= $fb.find('.fluidbox__ghost'),
-					$fbWrap		= $fb.find('.fluidbox__wrap');
-
-				// Shorthand for dimensions
-				var imgNatW = fb.instanceData.thumb.natW,
-					imgNatH = fb.instanceData.thumb.natH,
-					imgW	= fb.instanceData.thumb.w,
-					imgH	= fb.instanceData.thumb.h;
-
-				// Calculate aspect ratios
-				var thumbRatio = imgNatW / imgNatH,
-					viewportRatio = globalData.viewport.w / globalData.viewport.h;
-
-				// Replace dimensions if maxWidth or maxHeight is declared
-				if (fb.settings.maxWidth > 0) {
-					imgNatW = fb.settings.maxWidth;
-					imgNatH = imgNatW / thumbRatio;
-				} else if (fb.settings.maxHeight > 0) {
-					imgNatH = fb.settings.maxHeight;
-					imgNatW = imgNatH * thumbRatio;
-				}
-
-				// Compare image ratio with viewport ratio
-				var computedHeight, computedWidth, imgScaleY, imgScaleX, imgMinScale;
-				if (viewportRatio > thumbRatio) {
-					computedHeight	= (imgNatH < globalData.viewport.h) ? imgNatH : globalData.viewport.h*fb.settings.viewportFill;
-					imgScaleY		= computedHeight / imgH;
-					imgScaleX		= imgNatW * (imgH * imgScaleY / imgNatH) / imgW;
-					imgMinScale		= imgScaleY;
-				} else {
-					computedWidth	= (imgNatW < globalData.viewport.w) ? imgNatW : globalData.viewport.w*fb.settings.viewportFill;
-					imgScaleX		= computedWidth / imgW;
-					imgScaleY		= imgNatH * (imgW * imgScaleX / imgNatW) / imgH;
-					imgMinScale		= imgScaleX;
-				}
-
-				// Display console error if both maxHeight and maxWidth are specific
-				if (fb.settings.maxWidth && fb.settings.maxHeight)
-					console.warn('Fluidbox: Both maxHeight and maxWidth are specified. You can only specify one. If both are specified, only the maxWidth property will be respected. This will not generate any error, but may cause unexpected sizing behavior.');
-
-				// Scale
-				var offsetY = $w.scrollTop() - $fbThumb.offset().top + 0.5*(imgH*(imgMinScale-1)) + 0.5*($w.height() - imgH*imgMinScale),
-					offsetX = 0.5*(imgW*(imgMinScale-1)) + 0.5*($w.width() - imgW*imgMinScale) - $fbThumb.offset().left,
-					scale = parseInt(imgScaleX*100)/100 + ',' + parseInt(imgScaleY*100)/100;
-
-				// Apply styles to ghost and loader (if present)
-				$fbGhost
-				.css({
-					'transform': 'translate(' + parseInt(offsetX*100)/100 + 'px,' + parseInt(offsetY*100)/100 + 'px) scale(' + scale + ')',
-					top: $fbThumb.offset().top - $fbWrap.offset().top,
-					left: $fbThumb.offset().left - $fbWrap.offset().left
-				});
-				$fb.find('.fluidbox__loader').css({
-					'transform': 'translate(' + parseInt(offsetX*100)/100 + 'px,' + parseInt(offsetY*100)/100 + 'px) scale(' + scale + ')'
-				});
-
-				// Emit custom event
-				$fb.trigger('computeend.fluidbox');
-			},
-			recompute: function() {
-				// Recompute is simply an alias for the compute method
-				this.compute();
-			},
-			close: function() {
-				// Close Fluidbox
-				var fb			= this,
-					$fb			= $(this.element),
-					$fbThumb	= $fb.find('img').first(),
-					$fbGhost	= $fb.find('.fluidbox__ghost'),
-					$fbWrap		= $fb.find('.fluidbox__wrap'),
-					$fbOverlay	= $fb.find('.fluidbox__overlay');
-
-				// Emit custom event
-				$fb.trigger('closestart.fluidbox');
-
-				// Change classes
-				$fb
-				.removeClass(function(i,c) {
-					return (c.match (/(^|\s)fluidbox--[opened|loaded|loading]+/g) || []).join(' ');
-				})
-				.addClass('fluidbox--closed');
-
-				$fbGhost
-				.css({
-					'transform': 'translate(0,0) scale(1,1)',
-					top: $fbThumb.offset().top - $fbWrap.offset().top + parseInt($fbThumb.css('borderTopWidth')) + parseInt($fbThumb.css('paddingTop')),
-					left: $fbThumb.offset().left - $fbWrap.offset().left + parseInt($fbThumb.css('borderLeftWidth')) + parseInt($fbThumb.css('paddingLeft'))
-				});
-
-				$fb.find('.fluidbox__loader')
-				.css({
-					'transform': 'none'
-				});
-
-				$fbGhost.one(customTransitionEnd, function() {
-					$fbGhost.css({ opacity: 0 });
-					$fbThumb.css({ opacity: 1 });
-					$fbOverlay.remove();
-					$fbWrap.css({ zIndex: fb.settings.stackIndex - fb.settings.stackIndexDelta });
-					$fb.trigger('closeend.fluidbox');
-				});
-
-				// Fadeout overlay
-				$fbOverlay.css({ opacity: 0 });		
-			},
-			bindEvents: function() {
-				var fb = this,
-					$fb = $(this.element);
-
-				// Click handler
-				$fb.on('click.fluidbox', function(e) {
-					e.preventDefault();
-
-					// Check state
-					// If state does not exist, or if Fluidbox is closed, we open it
-					if(!fb.instanceData.state || fb.instanceData.state === 0) {
-						// Update state
-						fb.instanceData.state = 1;
-
-						// Open Fluidbox
-						fb.open();
-
-					// If state exists, we close it
-					} else {
-						// Update state
-						fb.instanceData.state = 0;
-
-						// Close Fluidbox
-						fb.close();
-					}
-				});
-			},
-			bindListeners: function() {
-				var fb	= this,
-					$fb = $(this.element);
-
-				// Window resize
-				// Namespaced using unique instance IDs so that we can unbind resize event specific to a Fluidbox instance
-				var resizeFunction = function() {
-					// Re-measure viewport dimensions
-					_fun.measure.viewport();
-					_fun.measure.fbElements.call(fb);
-
-					// Re-compute, but only for the active element
-					if($fb.hasClass('fluidbox--opened')) fb.compute();
-				};
-				if ($.isFunction($.throttle)) {
-					$w.on('resize.fluidbox'+fb.instanceData.id, $.throttle(fb.settings.resizeThrottle, resizeFunction));
-				} else {
-					$w.on('resize.fluidbox'+fb.instanceData.id, resizeFunction);
-				}
-
-				// Reposition
-				$fb.on('reposition.fluidbox', function() {
-					fb.reposition();
-				});
-
-				// Recompute
-				$fb.on('recompute.fluidbox, compute.fluidbox', function() {
-					fb.compute();
-				});
-
-				// Destroy
-				$fb.on('destroy.fluidbox', function() {
-					fb.destroy();
-				});
-
-				// Close
-				$fb.on('close.fluidbox', function() {
-					fb.close();
-				});
-			},
-			unbind: function() {
-				$(this.element).off('click.fluidbox, reposition.fluidbox, recompute.fluidbox, compute.fluidbox, destroy.fluidbox, close.fluidbox');
-				$w.off('resize.fluidbox'+this.instanceData.id);
-			},
-			reposition: function() {
-				_fun.measure.fbElements.call(this);
-			},
-			destroy: function() {
-				// Cache original node
-				var originalNode = this.instanceData.originalNode;
-
-				// Unbind event hanlders
-				this.unbind();
-
-				// Destroy plugin data entirely
-				$.data(this.element, 'plugin_' + pluginName, null);
-
-				// DOM reversal
-				$(this.element)
-				.removeClass(function(i,c) {
-					return (c.match (/(^|\s)fluidbox[--|__]\S+/g) || []).join(' ');
-				})
-				.empty()
-				.html(originalNode)
-				.addClass('fluidbox--destroyed')
-				.trigger('destroyed.fluidbox');
-			},
-			getMetadata: function() {
-				// Return instance data
-				return this.instanceData;
-			}
+		_window.on('resize' + EVENT_NS, function() {
+			mfp.updateSize();
 		});
 
-		// A really lightweight plugin wrapper around the constructor,
-		// preventing against multiple instantiations
-		$.fn[pluginName] = function (options) {
 
-			var args = arguments;
+		if(!mfp.st.closeOnContentClick) {
+			_wrapClasses += ' mfp-auto-cursor';
+		}
+		
+		if(_wrapClasses)
+			mfp.wrap.addClass(_wrapClasses);
 
-			// Check the options parameter
-			// If it is undefined or is an object (plugin configuration),
-			// we create a new instance (conditionally, see inside) of the plugin
-			if (options === undefined || typeof options === 'object') {
 
-				return this.each(function() {
-					// Only if the plugin_fluidbox data is not present,
-					// to prevent multiple instances being created
-					if (!$.data(this, "plugin_" + pluginName)) {
+		// this triggers recalculation of layout, so we get it once to not to trigger twice
+		var windowHeight = mfp.wH = _window.height();
 
-						$.data(this, "plugin_" + pluginName, new Plugin(this, options));
-					}
-				});
+		
+		var windowStyles = {};
 
-			// If it is defined, but it is a string, does not start with an underscore and does not call init(),
-			// we allow users to make calls to public methods
-			} else if (typeof options === 'string' && options[0] !== '_' && options !== 'init') {
-				var returnVal;
+		if( mfp.fixedContentPos ) {
+            if(mfp._hasScrollBar(windowHeight)){
+                var s = mfp._getScrollbarSize();
+                if(s) {
+                    windowStyles.marginRight = s;
+                }
+            }
+        }
 
-				this.each(function() {
-					var instance = $.data(this, 'plugin_' + pluginName);
-					if (instance instanceof Plugin && typeof instance[options] === 'function') {
-						returnVal = instance[options].apply(instance, Array.prototype.slice.call(args, 1));
-					} else {
-						console.warn('Fluidbox: The method "' + options + '" used is not defined in Fluidbox. Please make sure you are calling the correct public method.');
-					}
-				});
-				return returnVal !== undefined ? returnVal : this;
+		if(mfp.fixedContentPos) {
+			if(!mfp.isIE7) {
+				windowStyles.overflow = 'hidden';
+			} else {
+				// ie7 double-scroll bug
+				$('body, html').css('overflow', 'hidden');
+			}
+		}
+
+		
+		
+		var classesToadd = mfp.st.mainClass;
+		if(mfp.isIE7) {
+			classesToadd += ' mfp-ie7';
+		}
+		if(classesToadd) {
+			mfp._addClassToMFP( classesToadd );
+		}
+
+		// add content
+		mfp.updateItemHTML();
+
+		_mfpTrigger('BuildControls');
+
+		// remove scrollbar, add margin e.t.c
+		$('html').css(windowStyles);
+		
+		// add everything to DOM
+		mfp.bgOverlay.add(mfp.wrap).prependTo( mfp.st.prependTo || $(document.body) );
+
+		// Save last focused element
+		mfp._lastFocusedEl = document.activeElement;
+		
+		// Wait for next cycle to allow CSS transition
+		setTimeout(function() {
+			
+			if(mfp.content) {
+				mfp._addClassToMFP(READY_CLASS);
+				mfp._setFocus();
+			} else {
+				// if content is not defined (not loaded e.t.c) we add class only for BG
+				mfp.bgOverlay.addClass(READY_CLASS);
+			}
+			
+			// Trap the focus in popup
+			_document.on('focusin' + EVENT_NS, mfp._onFocusIn);
+
+		}, 16);
+
+		mfp.isOpen = true;
+		mfp.updateSize(windowHeight);
+		_mfpTrigger(OPEN_EVENT);
+
+		return data;
+	},
+
+	/**
+	 * Closes the popup
+	 */
+	close: function() {
+		if(!mfp.isOpen) return;
+		_mfpTrigger(BEFORE_CLOSE_EVENT);
+
+		mfp.isOpen = false;
+		// for CSS3 animation
+		if(mfp.st.removalDelay && !mfp.isLowIE && mfp.supportsTransition )  {
+			mfp._addClassToMFP(REMOVING_CLASS);
+			setTimeout(function() {
+				mfp._close();
+			}, mfp.st.removalDelay);
+		} else {
+			mfp._close();
+		}
+	},
+
+	/**
+	 * Helper for close() function
+	 */
+	_close: function() {
+		_mfpTrigger(CLOSE_EVENT);
+
+		var classesToRemove = REMOVING_CLASS + ' ' + READY_CLASS + ' ';
+
+		mfp.bgOverlay.detach();
+		mfp.wrap.detach();
+		mfp.container.empty();
+
+		if(mfp.st.mainClass) {
+			classesToRemove += mfp.st.mainClass + ' ';
+		}
+
+		mfp._removeClassFromMFP(classesToRemove);
+
+		if(mfp.fixedContentPos) {
+			var windowStyles = {marginRight: ''};
+			if(mfp.isIE7) {
+				$('body, html').css('overflow', '');
+			} else {
+				windowStyles.overflow = '';
+			}
+			$('html').css(windowStyles);
+		}
+		
+		_document.off('keyup' + EVENT_NS + ' focusin' + EVENT_NS);
+		mfp.ev.off(EVENT_NS);
+
+		// clean up DOM elements that aren't removed
+		mfp.wrap.attr('class', 'mfp-wrap').removeAttr('style');
+		mfp.bgOverlay.attr('class', 'mfp-bg');
+		mfp.container.attr('class', 'mfp-container');
+
+		// remove close button from target element
+		if(mfp.st.showCloseBtn &&
+		(!mfp.st.closeBtnInside || mfp.currTemplate[mfp.currItem.type] === true)) {
+			if(mfp.currTemplate.closeBtn)
+				mfp.currTemplate.closeBtn.detach();
+		}
+
+
+		if(mfp._lastFocusedEl) {
+			$(mfp._lastFocusedEl).focus(); // put tab focus back
+		}
+		mfp.currItem = null;	
+		mfp.content = null;
+		mfp.currTemplate = null;
+		mfp.prevHeight = 0;
+
+		_mfpTrigger(AFTER_CLOSE_EVENT);
+	},
+	
+	updateSize: function(winHeight) {
+
+		if(mfp.isIOS) {
+			// fixes iOS nav bars https://github.com/dimsemenov/Magnific-Popup/issues/2
+			var zoomLevel = document.documentElement.clientWidth / window.innerWidth;
+			var height = window.innerHeight * zoomLevel;
+			mfp.wrap.css('height', height);
+			mfp.wH = height;
+		} else {
+			mfp.wH = winHeight || _window.height();
+		}
+		// Fixes #84: popup incorrectly positioned with position:relative on body
+		if(!mfp.fixedContentPos) {
+			mfp.wrap.css('height', mfp.wH);
+		}
+
+		_mfpTrigger('Resize');
+
+	},
+
+	/**
+	 * Set content of popup based on current index
+	 */
+	updateItemHTML: function() {
+		var item = mfp.items[mfp.index];
+
+		// Detach and perform modifications
+		mfp.contentContainer.detach();
+
+		if(mfp.content)
+			mfp.content.detach();
+
+		if(!item.parsed) {
+			item = mfp.parseEl( mfp.index );
+		}
+
+		var type = item.type;	
+
+		_mfpTrigger('BeforeChange', [mfp.currItem ? mfp.currItem.type : '', type]);
+		// BeforeChange event works like so:
+		// _mfpOn('BeforeChange', function(e, prevType, newType) { });
+		
+		mfp.currItem = item;
+
+		
+
+		
+
+		if(!mfp.currTemplate[type]) {
+			var markup = mfp.st[type] ? mfp.st[type].markup : false;
+
+			// allows to modify markup
+			_mfpTrigger('FirstMarkupParse', markup);
+
+			if(markup) {
+				mfp.currTemplate[type] = $(markup);
+			} else {
+				// if there is no markup found we just define that template is parsed
+				mfp.currTemplate[type] = true;
+			}
+		}
+
+		if(_prevContentType && _prevContentType !== item.type) {
+			mfp.container.removeClass('mfp-'+_prevContentType+'-holder');
+		}
+		
+		var newContent = mfp['get' + type.charAt(0).toUpperCase() + type.slice(1)](item, mfp.currTemplate[type]);
+		mfp.appendContent(newContent, type);
+
+		item.preloaded = true;
+
+		_mfpTrigger(CHANGE_EVENT, item);
+		_prevContentType = item.type;
+		
+		// Append container back after its content changed
+		mfp.container.prepend(mfp.contentContainer);
+
+		_mfpTrigger('AfterChange');
+	},
+
+
+	/**
+	 * Set HTML content of popup
+	 */
+	appendContent: function(newContent, type) {
+		mfp.content = newContent;
+		
+		if(newContent) {
+			if(mfp.st.showCloseBtn && mfp.st.closeBtnInside &&
+				mfp.currTemplate[type] === true) {
+				// if there is no markup, we just append close button element inside
+				if(!mfp.content.find('.mfp-close').length) {
+					mfp.content.append(_getCloseBtn());
+				}
+			} else {
+				mfp.content = newContent;
+			}
+		} else {
+			mfp.content = '';
+		}
+
+		_mfpTrigger(BEFORE_APPEND_EVENT);
+		mfp.container.addClass('mfp-'+type+'-holder');
+
+		mfp.contentContainer.append(mfp.content);
+	},
+
+
+
+	
+	/**
+	 * Creates Magnific Popup data object based on given data
+	 * @param  {int} index Index of item to parse
+	 */
+	parseEl: function(index) {
+		var item = mfp.items[index],
+			type;
+
+		if(item.tagName) {
+			item = { el: $(item) };
+		} else {
+			type = item.type;
+			item = { data: item, src: item.src };
+		}
+
+		if(item.el) {
+			var types = mfp.types;
+
+			// check for 'mfp-TYPE' class
+			for(var i = 0; i < types.length; i++) {
+				if( item.el.hasClass('mfp-'+types[i]) ) {
+					type = types[i];
+					break;
+				}
 			}
 
-			// Return to allow chaining
-			return this;
+			item.src = item.el.attr('data-mfp-src');
+			if(!item.src) {
+				item.src = item.el.attr('href');
+			}
+		}
+
+		item.type = type || mfp.st.type || 'inline';
+		item.index = index;
+		item.parsed = true;
+		mfp.items[index] = item;
+		_mfpTrigger('ElementParse', item);
+
+		return mfp.items[index];
+	},
+
+
+	/**
+	 * Initializes single popup or a group of popups
+	 */
+	addGroup: function(el, options) {
+		var eHandler = function(e) {
+			e.mfpEl = this;
+			mfp._openClick(e, el, options);
 		};
 
+		if(!options) {
+			options = {};
+		} 
+
+		var eName = 'click.magnificPopup';
+		options.mainEl = el;
+		
+		if(options.items) {
+			options.isObj = true;
+			el.off(eName).on(eName, eHandler);
+		} else {
+			options.isObj = false;
+			if(options.delegate) {
+				el.off(eName).on(eName, options.delegate , eHandler);
+			} else {
+				options.items = el;
+				el.off(eName).on(eName, eHandler);
+			}
+		}
+	},
+	_openClick: function(e, el, options) {
+		var midClick = options.midClick !== undefined ? options.midClick : $.magnificPopup.defaults.midClick;
 
 
-})(jQuery, window, document);
+		if(!midClick && ( e.which === 2 || e.ctrlKey || e.metaKey || e.altKey || e.shiftKey ) ) {
+			return;
+		}
+
+		var disableOn = options.disableOn !== undefined ? options.disableOn : $.magnificPopup.defaults.disableOn;
+
+		if(disableOn) {
+			if($.isFunction(disableOn)) {
+				if( !disableOn.call(mfp) ) {
+					return true;
+				}
+			} else { // else it's number
+				if( _window.width() < disableOn ) {
+					return true;
+				}
+			}
+		}
+		
+		if(e.type) {
+			e.preventDefault();
+
+			// This will prevent popup from closing if element is inside and popup is already opened
+			if(mfp.isOpen) {
+				e.stopPropagation();
+			}
+		}
+			
+
+		options.el = $(e.mfpEl);
+		if(options.delegate) {
+			options.items = el.find(options.delegate);
+		}
+		mfp.open(options);
+	},
+
+
+	/**
+	 * Updates text on preloader
+	 */
+	updateStatus: function(status, text) {
+
+		if(mfp.preloader) {
+			if(_prevStatus !== status) {
+				mfp.container.removeClass('mfp-s-'+_prevStatus);
+			}
+
+			if(!text && status === 'loading') {
+				text = mfp.st.tLoading;
+			}
+
+			var data = {
+				status: status,
+				text: text
+			};
+			// allows to modify status
+			_mfpTrigger('UpdateStatus', data);
+
+			status = data.status;
+			text = data.text;
+
+			mfp.preloader.html(text);
+
+			mfp.preloader.find('a').on('click', function(e) {
+				e.stopImmediatePropagation();
+			});
+
+			mfp.container.addClass('mfp-s-'+status);
+			_prevStatus = status;
+		}
+	},
+
+
+	/*
+		"Private" helpers that aren't private at all
+	 */
+	// Check to close popup or not
+	// "target" is an element that was clicked
+	_checkIfClose: function(target) {
+
+		if($(target).hasClass(PREVENT_CLOSE_CLASS)) {
+			return;
+		}
+
+		var closeOnContent = mfp.st.closeOnContentClick;
+		var closeOnBg = mfp.st.closeOnBgClick;
+
+		if(closeOnContent && closeOnBg) {
+			return true;
+		} else {
+
+			// We close the popup if click is on close button or on preloader. Or if there is no content.
+			if(!mfp.content || $(target).hasClass('mfp-close') || (mfp.preloader && target === mfp.preloader[0]) ) {
+				return true;
+			}
+
+			// if click is outside the content
+			if(  (target !== mfp.content[0] && !$.contains(mfp.content[0], target))  ) {
+				if(closeOnBg) {
+					// last check, if the clicked element is in DOM, (in case it's removed onclick)
+					if( $.contains(document, target) ) {
+						return true;
+					}
+				}
+			} else if(closeOnContent) {
+				return true;
+			}
+
+		}
+		return false;
+	},
+	_addClassToMFP: function(cName) {
+		mfp.bgOverlay.addClass(cName);
+		mfp.wrap.addClass(cName);
+	},
+	_removeClassFromMFP: function(cName) {
+		this.bgOverlay.removeClass(cName);
+		mfp.wrap.removeClass(cName);
+	},
+	_hasScrollBar: function(winHeight) {
+		return (  (mfp.isIE7 ? _document.height() : document.body.scrollHeight) > (winHeight || _window.height()) );
+	},
+	_setFocus: function() {
+		(mfp.st.focus ? mfp.content.find(mfp.st.focus).eq(0) : mfp.wrap).focus();
+	},
+	_onFocusIn: function(e) {
+		if( e.target !== mfp.wrap[0] && !$.contains(mfp.wrap[0], e.target) ) {
+			mfp._setFocus();
+			return false;
+		}
+	},
+	_parseMarkup: function(template, values, item) {
+		var arr;
+		if(item.data) {
+			values = $.extend(item.data, values);
+		}
+		_mfpTrigger(MARKUP_PARSE_EVENT, [template, values, item] );
+
+		$.each(values, function(key, value) {
+			if(value === undefined || value === false) {
+				return true;
+			}
+			arr = key.split('_');
+			if(arr.length > 1) {
+				var el = template.find(EVENT_NS + '-'+arr[0]);
+
+				if(el.length > 0) {
+					var attr = arr[1];
+					if(attr === 'replaceWith') {
+						if(el[0] !== value[0]) {
+							el.replaceWith(value);
+						}
+					} else if(attr === 'img') {
+						if(el.is('img')) {
+							el.attr('src', value);
+						} else {
+							el.replaceWith( '<img src="'+value+'" class="' + el.attr('class') + '" />' );
+						}
+					} else {
+						el.attr(arr[1], value);
+					}
+				}
+
+			} else {
+				template.find(EVENT_NS + '-'+key).html(value);
+			}
+		});
+	},
+
+	_getScrollbarSize: function() {
+		// thx David
+		if(mfp.scrollbarSize === undefined) {
+			var scrollDiv = document.createElement("div");
+			scrollDiv.style.cssText = 'width: 99px; height: 99px; overflow: scroll; position: absolute; top: -9999px;';
+			document.body.appendChild(scrollDiv);
+			mfp.scrollbarSize = scrollDiv.offsetWidth - scrollDiv.clientWidth;
+			document.body.removeChild(scrollDiv);
+		}
+		return mfp.scrollbarSize;
+	}
+
+}; /* MagnificPopup core prototype end */
+
+
+
+
+/**
+ * Public static functions
+ */
+$.magnificPopup = {
+	instance: null,
+	proto: MagnificPopup.prototype,
+	modules: [],
+
+	open: function(options, index) {
+		_checkInstance();	
+
+		if(!options) {
+			options = {};
+		} else {
+			options = $.extend(true, {}, options);
+		}
+			
+
+		options.isObj = true;
+		options.index = index || 0;
+		return this.instance.open(options);
+	},
+
+	close: function() {
+		return $.magnificPopup.instance && $.magnificPopup.instance.close();
+	},
+
+	registerModule: function(name, module) {
+		if(module.options) {
+			$.magnificPopup.defaults[name] = module.options;
+		}
+		$.extend(this.proto, module.proto);			
+		this.modules.push(name);
+	},
+
+	defaults: {   
+
+		// Info about options is in docs:
+		// http://dimsemenov.com/plugins/magnific-popup/documentation.html#options
+		
+		disableOn: 0,	
+
+		key: null,
+
+		midClick: false,
+
+		mainClass: '',
+
+		preloader: true,
+
+		focus: '', // CSS selector of input to focus after popup is opened
+		
+		closeOnContentClick: false,
+
+		closeOnBgClick: true,
+
+		closeBtnInside: true, 
+
+		showCloseBtn: true,
+
+		enableEscapeKey: true,
+
+		modal: false,
+
+		alignTop: false,
+	
+		removalDelay: 0,
+
+		prependTo: null,
+		
+		fixedContentPos: 'auto', 
+	
+		fixedBgPos: 'auto',
+
+		overflowY: 'auto',
+
+		closeMarkup: '<button title="%title%" type="button" class="mfp-close">&#215;</button>',
+
+		tClose: 'Close (Esc)',
+
+		tLoading: 'Loading...'
+
+	}
+};
+
+
+
+$.fn.magnificPopup = function(options) {
+	_checkInstance();
+
+	var jqEl = $(this);
+
+	// We call some API method of first param is a string
+	if (typeof options === "string" ) {
+
+		if(options === 'open') {
+			var items,
+				itemOpts = _isJQ ? jqEl.data('magnificPopup') : jqEl[0].magnificPopup,
+				index = parseInt(arguments[1], 10) || 0;
+
+			if(itemOpts.items) {
+				items = itemOpts.items[index];
+			} else {
+				items = jqEl;
+				if(itemOpts.delegate) {
+					items = items.find(itemOpts.delegate);
+				}
+				items = items.eq( index );
+			}
+			mfp._openClick({mfpEl:items}, jqEl, itemOpts);
+		} else {
+			if(mfp.isOpen)
+				mfp[options].apply(mfp, Array.prototype.slice.call(arguments, 1));
+		}
+
+	} else {
+		// clone options obj
+		options = $.extend(true, {}, options);
+		
+		/*
+		 * As Zepto doesn't support .data() method for objects 
+		 * and it works only in normal browsers
+		 * we assign "options" object directly to the DOM element. FTW!
+		 */
+		if(_isJQ) {
+			jqEl.data('magnificPopup', options);
+		} else {
+			jqEl[0].magnificPopup = options;
+		}
+
+		mfp.addGroup(jqEl, options);
+
+	}
+	return jqEl;
+};
+
+
+//Quick benchmark
+/*
+var start = performance.now(),
+	i,
+	rounds = 1000;
+
+for(i = 0; i < rounds; i++) {
+
+}
+console.log('Test #1:', performance.now() - start);
+
+start = performance.now();
+for(i = 0; i < rounds; i++) {
+
+}
+console.log('Test #2:', performance.now() - start);
+*/
+
+/**
+ * Get looped index depending on number of slides
+ */
+var _getLoopedId = function(index) {
+		var numSlides = mfp.items.length;
+		if(index > numSlides - 1) {
+			return index - numSlides;
+		} else  if(index < 0) {
+			return numSlides + index;
+		}
+		return index;
+	},
+	_replaceCurrTotal = function(text, curr, total) {
+		return text.replace(/%curr%/gi, curr + 1).replace(/%total%/gi, total);
+	};
+
+$.magnificPopup.registerModule('gallery', {
+
+	options: {
+		enabled: false,
+		arrowMarkup: '<button title="%title%" type="button" class="mfp-arrow mfp-arrow-%dir%"></button>',
+		preload: [0,2],
+		navigateByImgClick: true,
+		arrows: true,
+
+		tPrev: 'Previous (Left arrow key)',
+		tNext: 'Next (Right arrow key)',
+		tCounter: '%curr% of %total%'
+	},
+
+	proto: {
+		initGallery: function() {
+
+			var gSt = mfp.st.gallery,
+				ns = '.mfp-gallery',
+				supportsFastClick = Boolean($.fn.mfpFastClick);
+
+			mfp.direction = true; // true - next, false - prev
+			
+			if(!gSt || !gSt.enabled ) return false;
+
+			_wrapClasses += ' mfp-gallery';
+
+			_mfpOn(OPEN_EVENT+ns, function() {
+
+				if(gSt.navigateByImgClick) {
+					mfp.wrap.on('click'+ns, '.mfp-img', function() {
+						if(mfp.items.length > 1) {
+							mfp.next();
+							return false;
+						}
+					});
+				}
+
+				_document.on('keydown'+ns, function(e) {
+					if (e.keyCode === 37) {
+						mfp.prev();
+					} else if (e.keyCode === 39) {
+						mfp.next();
+					}
+				});
+			});
+
+			_mfpOn('UpdateStatus'+ns, function(e, data) {
+				if(data.text) {
+					data.text = _replaceCurrTotal(data.text, mfp.currItem.index, mfp.items.length);
+				}
+			});
+
+			_mfpOn(MARKUP_PARSE_EVENT+ns, function(e, element, values, item) {
+				var l = mfp.items.length;
+				values.counter = l > 1 ? _replaceCurrTotal(gSt.tCounter, item.index, l) : '';
+			});
+
+			_mfpOn('BuildControls' + ns, function() {
+				if(mfp.items.length > 1 && gSt.arrows && !mfp.arrowLeft) {
+					var markup = gSt.arrowMarkup,
+						arrowLeft = mfp.arrowLeft = $( markup.replace(/%title%/gi, gSt.tPrev).replace(/%dir%/gi, 'left') ).addClass(PREVENT_CLOSE_CLASS),			
+						arrowRight = mfp.arrowRight = $( markup.replace(/%title%/gi, gSt.tNext).replace(/%dir%/gi, 'right') ).addClass(PREVENT_CLOSE_CLASS);
+
+					var eName = supportsFastClick ? 'mfpFastClick' : 'click';
+					arrowLeft[eName](function() {
+						mfp.prev();
+					});			
+					arrowRight[eName](function() {
+						mfp.next();
+					});	
+
+					// Polyfill for :before and :after (adds elements with classes mfp-a and mfp-b)
+					if(mfp.isIE7) {
+						_getEl('b', arrowLeft[0], false, true);
+						_getEl('a', arrowLeft[0], false, true);
+						_getEl('b', arrowRight[0], false, true);
+						_getEl('a', arrowRight[0], false, true);
+					}
+
+					mfp.container.append(arrowLeft.add(arrowRight));
+				}
+			});
+
+			_mfpOn(CHANGE_EVENT+ns, function() {
+				if(mfp._preloadTimeout) clearTimeout(mfp._preloadTimeout);
+
+				mfp._preloadTimeout = setTimeout(function() {
+					mfp.preloadNearbyImages();
+					mfp._preloadTimeout = null;
+				}, 16);		
+			});
+
+
+			_mfpOn(CLOSE_EVENT+ns, function() {
+				_document.off(ns);
+				mfp.wrap.off('click'+ns);
+			
+				if(mfp.arrowLeft && supportsFastClick) {
+					mfp.arrowLeft.add(mfp.arrowRight).destroyMfpFastClick();
+				}
+				mfp.arrowRight = mfp.arrowLeft = null;
+			});
+
+		}, 
+		next: function() {
+			mfp.direction = true;
+			mfp.index = _getLoopedId(mfp.index + 1);
+			mfp.updateItemHTML();
+		},
+		prev: function() {
+			mfp.direction = false;
+			mfp.index = _getLoopedId(mfp.index - 1);
+			mfp.updateItemHTML();
+		},
+		goTo: function(newIndex) {
+			mfp.direction = (newIndex >= mfp.index);
+			mfp.index = newIndex;
+			mfp.updateItemHTML();
+		},
+		preloadNearbyImages: function() {
+			var p = mfp.st.gallery.preload,
+				preloadBefore = Math.min(p[0], mfp.items.length),
+				preloadAfter = Math.min(p[1], mfp.items.length),
+				i;
+
+			for(i = 1; i <= (mfp.direction ? preloadAfter : preloadBefore); i++) {
+				mfp._preloadItem(mfp.index+i);
+			}
+			for(i = 1; i <= (mfp.direction ? preloadBefore : preloadAfter); i++) {
+				mfp._preloadItem(mfp.index-i);
+			}
+		},
+		_preloadItem: function(index) {
+			index = _getLoopedId(index);
+
+			if(mfp.items[index].preloaded) {
+				return;
+			}
+
+			var item = mfp.items[index];
+			if(!item.parsed) {
+				item = mfp.parseEl( index );
+			}
+
+			_mfpTrigger('LazyLoad', item);
+
+			if(item.type === 'image') {
+				item.img = $('<img class="mfp-img" />').on('load.mfploader', function() {
+					item.hasSize = true;
+				}).on('error.mfploader', function() {
+					item.hasSize = true;
+					item.loadError = true;
+					_mfpTrigger('LazyLoadError', item);
+				}).attr('src', item.src);
+			}
+
+
+			item.preloaded = true;
+		}
+	}
+});
+
+/*
+Touch Support that might be implemented some day
+
+addSwipeGesture: function() {
+	var startX,
+		moved,
+		multipleTouches;
+
+		return;
+
+	var namespace = '.mfp',
+		addEventNames = function(pref, down, move, up, cancel) {
+			mfp._tStart = pref + down + namespace;
+			mfp._tMove = pref + move + namespace;
+			mfp._tEnd = pref + up + namespace;
+			mfp._tCancel = pref + cancel + namespace;
+		};
+
+	if(window.navigator.msPointerEnabled) {
+		addEventNames('MSPointer', 'Down', 'Move', 'Up', 'Cancel');
+	} else if('ontouchstart' in window) {
+		addEventNames('touch', 'start', 'move', 'end', 'cancel');
+	} else {
+		return;
+	}
+	_window.on(mfp._tStart, function(e) {
+		var oE = e.originalEvent;
+		multipleTouches = moved = false;
+		startX = oE.pageX || oE.changedTouches[0].pageX;
+	}).on(mfp._tMove, function(e) {
+		if(e.originalEvent.touches.length > 1) {
+			multipleTouches = e.originalEvent.touches.length;
+		} else {
+			//e.preventDefault();
+			moved = true;
+		}
+	}).on(mfp._tEnd + ' ' + mfp._tCancel, function(e) {
+		if(moved && !multipleTouches) {
+			var oE = e.originalEvent,
+				diff = startX - (oE.pageX || oE.changedTouches[0].pageX);
+
+			if(diff > 20) {
+				mfp.next();
+			} else if(diff < -20) {
+				mfp.prev();
+			}
+		}
+	});
+},
+*/
+
+var _imgInterval,
+	_getTitle = function(item) {
+		if(item.data && item.data.title !== undefined) 
+			return item.data.title;
+
+		var src = mfp.st.image.titleSrc;
+
+		if(src) {
+			if($.isFunction(src)) {
+				return src.call(mfp, item);
+			} else if(item.el) {
+				return item.el.attr(src) || '';
+			}
+		}
+		return '';
+	};
+
+$.magnificPopup.registerModule('image', {
+
+	options: {
+		markup: '<div class="mfp-figure">'+
+					'<div class="mfp-close"></div>'+
+					'<figure>'+
+						'<div class="mfp-img"></div>'+
+						'<figcaption>'+
+							'<div class="mfp-bottom-bar">'+
+								'<div class="mfp-title"></div>'+
+								'<div class="mfp-counter"></div>'+
+							'</div>'+
+						'</figcaption>'+
+					'</figure>'+
+				'</div>',
+		cursor: 'mfp-zoom-out-cur',
+		titleSrc: 'title', 
+		verticalFit: true,
+		tError: '<a href="%url%">The image</a> could not be loaded.'
+	},
+
+	proto: {
+		initImage: function() {
+			var imgSt = mfp.st.image,
+				ns = '.image';
+
+			mfp.types.push('image');
+
+			_mfpOn(OPEN_EVENT+ns, function() {
+				if(mfp.currItem.type === 'image' && imgSt.cursor) {
+					$(document.body).addClass(imgSt.cursor);
+				}
+			});
+
+			_mfpOn(CLOSE_EVENT+ns, function() {
+				if(imgSt.cursor) {
+					$(document.body).removeClass(imgSt.cursor);
+				}
+				_window.off('resize' + EVENT_NS);
+			});
+
+			_mfpOn('Resize'+ns, mfp.resizeImage);
+			if(mfp.isLowIE) {
+				_mfpOn('AfterChange', mfp.resizeImage);
+			}
+		},
+		resizeImage: function() {
+			var item = mfp.currItem;
+			if(!item || !item.img) return;
+
+			if(mfp.st.image.verticalFit) {
+				var decr = 0;
+				// fix box-sizing in ie7/8
+				if(mfp.isLowIE) {
+					decr = parseInt(item.img.css('padding-top'), 10) + parseInt(item.img.css('padding-bottom'),10);
+				}
+				item.img.css('max-height', mfp.wH-decr);
+			}
+		},
+		_onImageHasSize: function(item) {
+			if(item.img) {
+				
+				item.hasSize = true;
+
+				if(_imgInterval) {
+					clearInterval(_imgInterval);
+				}
+				
+				item.isCheckingImgSize = false;
+
+				_mfpTrigger('ImageHasSize', item);
+
+				if(item.imgHidden) {
+					if(mfp.content)
+						mfp.content.removeClass('mfp-loading');
+					
+					item.imgHidden = false;
+				}
+
+			}
+		},
+
+		/**
+		 * Function that loops until the image has size to display elements that rely on it asap
+		 */
+		findImageSize: function(item) {
+
+			var counter = 0,
+				img = item.img[0],
+				mfpSetInterval = function(delay) {
+
+					if(_imgInterval) {
+						clearInterval(_imgInterval);
+					}
+					// decelerating interval that checks for size of an image
+					_imgInterval = setInterval(function() {
+						if(img.naturalWidth > 0) {
+							mfp._onImageHasSize(item);
+							return;
+						}
+
+						if(counter > 200) {
+							clearInterval(_imgInterval);
+						}
+
+						counter++;
+						if(counter === 3) {
+							mfpSetInterval(10);
+						} else if(counter === 40) {
+							mfpSetInterval(50);
+						} else if(counter === 100) {
+							mfpSetInterval(500);
+						}
+					}, delay);
+				};
+
+			mfpSetInterval(1);
+		},
+
+		getImage: function(item, template) {
+
+			var guard = 0,
+
+				// image load complete handler
+				onLoadComplete = function() {
+					if(item) {
+						if (item.img[0].complete) {
+							item.img.off('.mfploader');
+							
+							if(item === mfp.currItem){
+								mfp._onImageHasSize(item);
+
+								mfp.updateStatus('ready');
+							}
+
+							item.hasSize = true;
+							item.loaded = true;
+
+							_mfpTrigger('ImageLoadComplete');
+							
+						}
+						else {
+							// if image complete check fails 200 times (20 sec), we assume that there was an error.
+							guard++;
+							if(guard < 200) {
+								setTimeout(onLoadComplete,100);
+							} else {
+								onLoadError();
+							}
+						}
+					}
+				},
+
+				// image error handler
+				onLoadError = function() {
+					if(item) {
+						item.img.off('.mfploader');
+						if(item === mfp.currItem){
+							mfp._onImageHasSize(item);
+							mfp.updateStatus('error', imgSt.tError.replace('%url%', item.src) );
+						}
+
+						item.hasSize = true;
+						item.loaded = true;
+						item.loadError = true;
+					}
+				},
+				imgSt = mfp.st.image;
+
+
+			var el = template.find('.mfp-img');
+			if(el.length) {
+				var img = document.createElement('img');
+				img.className = 'mfp-img';
+				if(item.el && item.el.find('img').length) {
+					img.alt = item.el.find('img').attr('alt');
+				}
+				item.img = $(img).on('load.mfploader', onLoadComplete).on('error.mfploader', onLoadError);
+				img.src = item.src;
+
+				// without clone() "error" event is not firing when IMG is replaced by new IMG
+				// TODO: find a way to avoid such cloning
+				if(el.is('img')) {
+					item.img = item.img.clone();
+				}
+
+				img = item.img[0];
+				if(img.naturalWidth > 0) {
+					item.hasSize = true;
+				} else if(!img.width) {										
+					item.hasSize = false;
+				}
+			}
+
+			mfp._parseMarkup(template, {
+				title: _getTitle(item),
+				img_replaceWith: item.img
+			}, item);
+
+			mfp.resizeImage();
+
+			if(item.hasSize) {
+				if(_imgInterval) clearInterval(_imgInterval);
+
+				if(item.loadError) {
+					template.addClass('mfp-loading');
+					mfp.updateStatus('error', imgSt.tError.replace('%url%', item.src) );
+				} else {
+					template.removeClass('mfp-loading');
+					mfp.updateStatus('ready');
+				}
+				return template;
+			}
+
+			mfp.updateStatus('loading');
+			item.loading = true;
+
+			if(!item.hasSize) {
+				item.imgHidden = true;
+				template.addClass('mfp-loading');
+				mfp.findImageSize(item);
+			} 
+
+			return template;
+		}
+	}
+});
+
+
+
+var RETINA_NS = 'retina';
+
+$.magnificPopup.registerModule(RETINA_NS, {
+	options: {
+		replaceSrc: function(item) {
+			return item.src.replace(/\.\w+$/, function(m) { return '@2x' + m; });
+		},
+		ratio: 1 // Function or number.  Set to 1 to disable.
+	},
+	proto: {
+		initRetina: function() {
+			if(window.devicePixelRatio > 1) {
+
+				var st = mfp.st.retina,
+					ratio = st.ratio;
+
+				ratio = !isNaN(ratio) ? ratio : ratio();
+
+				if(ratio > 1) {
+					_mfpOn('ImageHasSize' + '.' + RETINA_NS, function(e, item) {
+						item.img.css({
+							'max-width': item.img[0].naturalWidth / ratio,
+							'width': '100%'
+						});
+					});
+					_mfpOn('ElementParse' + '.' + RETINA_NS, function(e, item) {
+						item.src = st.replaceSrc(item, ratio);
+					});
+				}
+			}
+
+		}
+	}
+});
 /*-----------------------------------------------------------------
 
 Modular - JS Extension
@@ -5213,11 +5779,21 @@ $('.auto-resizable-iframe').each(function() {
 });
 
 //-----------------------------------------------------------------
-// Fluidbox
+// Magnific Popup
 //-----------------------------------------------------------------
 
-$(function () {
-    $('#test').fluidbox();
+$('[rel="lightbox"]').magnificPopup({
+    type : 'image'
+});
+
+$('.lightbox-gallery').each(function() {
+    $(this).magnificPopup({
+        delegate : 'a',
+        type : 'image',
+        gallery: {
+            enabled : true
+        }
+    });
 });
 
 //-----------------------------------------------------------------

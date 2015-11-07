@@ -106,11 +106,21 @@ $('.auto-resizable-iframe').each(function() {
 });
 
 //-----------------------------------------------------------------
-// Fluidbox
+// Magnific Popup
 //-----------------------------------------------------------------
 
-$(function () {
-    $('#test').fluidbox();
+$('[rel="lightbox"]').magnificPopup({
+    type : 'image'
+});
+
+$('.lightbox-gallery').each(function() {
+    $(this).magnificPopup({
+        delegate : 'a',
+        type : 'image',
+        gallery: {
+            enabled : true
+        }
+    });
 });
 
 //-----------------------------------------------------------------

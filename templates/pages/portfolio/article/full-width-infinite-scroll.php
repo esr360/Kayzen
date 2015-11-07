@@ -54,7 +54,7 @@
                 </script>
                 
                 <ul id="pagination">
-                    <li class="next"><a href="full-width-infinite-scroll-2.php">3</a></li>
+                    <li class="next"><a href="full-width-infinite-scroll-2.php">2</a></li>
                 </ul>
 				
 			</div><!-- container -->

@@ -33,10 +33,18 @@
     
         @include modifier('waffle') {
             @include modifier('infinite', $special: 'not') {
-                margin-bottom: -3%;
+                margin-bottom: - option($grid, 'options', 'gutter');
             }
             > [class*="#{option($grid, 'options', 'col-namespace')}"] {
                 margin-bottom: option($grid, 'options', 'gutter');
+            }
+            @include nested-modifier('large') {
+                > [class*="#{option($grid, 'options', 'col-namespace')}"] {
+                    margin-bottom: (option($grid, 'options', 'gutter') * 2);
+                }
+                @include modifier('infinite', $special: 'not') {
+                    margin-bottom: - (option($grid, 'options', 'gutter') * 2);
+                }
             }
         }
         

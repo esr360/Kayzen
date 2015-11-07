@@ -41,6 +41,8 @@
                 
                 <?php $type = 'audio'; include (ROOT.'/includes/article-item.php'); ?>
                 
+                <?php $type = 'codepen'; include (ROOT.'/includes/article-item.php'); ?>
+                
                 <ul class="pagination tabs_nav-pills object-center" id="portfolio-categories">
                     <small>
                         <li class="button-pill-grey-1-thin"><i class="fa fa-angle-left"></i></li>
