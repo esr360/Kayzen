@@ -49,3 +49,9 @@
 [submodule "app/vendor/Isotope"]
 	path = app/vendor/Isotope
 	url = https://github.com/metafizzy/isotope.git
+[submodule "app/vendor/Fluidbox"]
+	path = app/vendor/Fluidbox
+	url = https://github.com/terrymun/Fluidbox.git
+[submodule "app/vendor/jQuery-throttle-debounce"]
+	path = app/vendor/jQuery-throttle-debounce
+	url = https://github.com/cowboy/jquery-throttle-debounce.git
