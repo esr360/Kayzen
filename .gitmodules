@@ -49,3 +49,6 @@
 [submodule "app/vendor/Isotope"]
 	path = app/vendor/Isotope
 	url = https://github.com/metafizzy/isotope.git
+[submodule "app/vendor/Magnific-Popup"]
+	path = app/vendor/Magnific-Popup
+	url = https://github.com/dimsemenov/Magnific-Popup.git
