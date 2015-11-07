@@ -34,26 +34,18 @@
 				<div class="row">
 					
 					<div class="span-8">
+                                
+                        <?php $type = 'image'; include (ROOT.'/includes/article-item.php'); ?>
                         
-                        <?php include (ROOT.'/includes/article-item.php'); ?>
+                        <?php $type = 'video'; include (ROOT.'/includes/article-item.php'); ?>
                         
-                        <hr class="hrule-stripes">
+                        <?php $type = 'carousel'; include (ROOT.'/includes/article-item.php'); ?>
                         
-                        <?php include (ROOT.'/includes/article-item.php'); ?>
+                        <?php $type = 'masonry'; include (ROOT.'/includes/article-item.php'); ?>
                         
-                        <hr class="hrule-stripes">
+                        <?php $type = 'audio'; include (ROOT.'/includes/article-item.php'); ?>
                         
-                        <?php include (ROOT.'/includes/article-item.php'); ?>
-                        
-                        <hr class="hrule-stripes">
-                        
-                        <?php include (ROOT.'/includes/article-item.php'); ?>
-                        
-                        <hr class="hrule-stripes">
-                        
-                        <?php include (ROOT.'/includes/article-item.php'); ?>
-                        
-                        <ul class="pagination tabs_nav-pills" id="portfolio-categories">
+                        <ul class="pagination tabs_nav-pills object-center" id="portfolio-categories">
                             <small>
                                 <li class="button-pill-grey-1-thin"><i class="fa fa-angle-left"></i></li>
                                 <li class="button-pill-grey-1-thin">1</li>
@@ -64,6 +56,22 @@
                                 <li class="button-pill-grey-1-thin"><i class="fa fa-angle-right"></i></li>
                             </small>
                         </ul>
+                    
+                        <script>
+                            $(document).ready(function() {
+                                $('.article-thumbnails-carousel').each(function() {
+                                    $(this).owlCarousel({
+                                        items : 1,
+                                        nav : true,
+                                        navText : [
+                                            '<i class="fa fa-angle-left fa-3x"></i>',
+                                            '<i class="fa fa-angle-right fa-3x"></i>'
+                                        ],
+                                        loop : true
+                                    })
+                                })
+                            });
+                        </script>
                         
 					</div>
 					

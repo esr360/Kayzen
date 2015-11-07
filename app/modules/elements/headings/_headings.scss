@@ -287,6 +287,9 @@
 						line-height: 2;
 					}
 				}
+                + [class*="heading"] {
+                    margin-top: 0;
+                }
 			}
 
 	} // component(heading)

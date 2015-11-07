@@ -3,12 +3,26 @@
 //=================================================================
 
 @mixin masonry-grid($custom: ()) {
+
+	//-------------------------------------------------------------
+	// Config
+	//-------------------------------------------------------------
+
+	$masonry-grid: config((
+		'name'            : 'masonry-grid',
+        'spacing'         : 4px
+	), $custom);
+
+	//-------------------------------------------------------------
+	// Core Styles
+	//-------------------------------------------------------------
     
     .tiles {
+        @extend .object;
         position: relative;
         display: block;
-        margin: 0 auto;
-        width: 80%;
+        width: calc(100% + (#{option($config, 'spacing')} * 2));
+        left: - option($config, 'spacing');
         &:after {
             content: "";
             clear: both;
@@ -17,11 +31,9 @@
     }
 
     .tile {
-        display: inline-block;
-        vertical-align: top;
-        font-size: 16px;
         position: relative;
         float: left;
+        overflow: hidden;
         &-box {
             width: 50%;
             &:after {
@@ -48,11 +60,13 @@
         }
         &-img {
             position: absolute;
-            top: 5px;
-            right: 5px;
-            bottom: 5px;
-            left: 5px;
-            background: #eee;
+            top: option($config, 'spacing');
+            right: option($config, 'spacing');
+            bottom: option($config, 'spacing');
+            left: option($config, 'spacing');
+            background-size: cover;
+            background-position: center center;
+            background-color: #eee;
         }
     }
     

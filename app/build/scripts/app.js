@@ -4306,9 +4306,7 @@ $('.auto-resizable-iframe').each(function() {
 
 $('[data-bg]').each(function() {
     var bg = $(this).attr('data-bg');
-    $(this)
-        .addClass('relative')
-        .prepend('<div class="bg-img" style="background:' + bg + '"></div>')
+    $(this).prepend('<div class="bg-img" style="background-image: url(' + bg + ')"></div>')
 });
     
 //-----------------------------------------------------------------

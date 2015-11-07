@@ -2955,10 +2955,10 @@ a {
   transition: 0.4s;
   text-decoration: none;
 }
-p > a, .text a {
+p > a, .text a, .list a, [class*="list-"] a {
   border-bottom: 1px dotted transparent;
 }
-p > a:hover, .text a:hover {
+p > a:hover, .text a:hover, .list a:hover, [class*="list-"] a:hover {
   border-bottom-color: inherit;
 }
 
@@ -3971,7 +3971,9 @@ h1, h2, h3, h4, h5, h6,
 p, ul, ol,
 form, fieldset, legend, figure, table,
 pre, hr,
-.object {
+.object,
+.tiles,
+[class*="widget-"][class*="-article"] > .owl-carousel {
   margin: 2rem 0;
 }
 
@@ -4006,7 +4008,9 @@ h1:first-child, h2:first-child, h3:first-child, h4:first-child, h5:first-child, 
 p:first-child, ul:first-child, ol:first-child,
 form:first-child, fieldset:first-child, legend:first-child, figure:first-child, table:first-child,
 pre:first-child, hr:first-child,
-.object:first-child, .object-small:first-child, .object-large:first-child, [class*="heading_group"] .heading:first-child, [class*="heading_group"] [class*="heading-"]:first-child, [class*="heading_group"][class*="-small"]:first-child, .thumbnail:first-child, [class*="thumbnail-"]:first-child, [class*="navigation"] .mega-menu p:first-child, [class*="navigation"] [class*="mega-menu-"] p:first-child {
+.object:first-child,
+.tiles:first-child,
+[class*="widget-"][class*="-article"] > .owl-carousel:first-child, .object-small:first-child, .object-large:first-child, [class*="heading_group"] .heading:first-child, [class*="heading_group"] [class*="heading-"]:first-child, [class*="heading_group"][class*="-small"]:first-child, .thumbnail:first-child, [class*="thumbnail-"]:first-child, [class*="navigation"] .mega-menu p:first-child, [class*="navigation"] [class*="mega-menu-"] p:first-child {
   margin-top: 0;
 }
 
@@ -4014,7 +4018,9 @@ h1:last-child, h2:last-child, h3:last-child, h4:last-child, h5:last-child, h6:la
 p:last-child, ul:last-child, ol:last-child,
 form:last-child, fieldset:last-child, legend:last-child, figure:last-child, table:last-child,
 pre:last-child, hr:last-child,
-.object:last-child, .object-small:last-child, .object-large:last-child, .accordion:last-child, [class*="accordion-"]:last-child, [class*="heading_group"]:last-child, [class*="heading_group"] .heading:last-child, [class*="heading_group"] [class*="heading-"]:last-child, .thumbnail:last-child, [class*="thumbnail-"]:last-child, [class*="widget-"][class*="-stacked"]:last-child, [class*="widget_group"][class*="-large"]:last-child, [class*="navigation"] .mega-menu p:last-child, [class*="navigation"] [class*="mega-menu-"] p:last-child {
+.object:last-child,
+.tiles:last-child,
+[class*="widget-"][class*="-article"] > .owl-carousel:last-child, .object-small:last-child, .object-large:last-child, .accordion:last-child, [class*="accordion-"]:last-child, [class*="heading_group"]:last-child, [class*="heading_group"] .heading:last-child, [class*="heading_group"] [class*="heading-"]:last-child, .thumbnail:last-child, [class*="thumbnail-"]:last-child, [class*="widget-"][class*="-stacked"]:last-child, [class*="widget_group"][class*="-large"]:last-child, [class*="navigation"] .mega-menu p:last-child, [class*="navigation"] [class*="mega-menu-"] p:last-child {
   margin-bottom: 0;
 }
 
@@ -4118,8 +4124,8 @@ pre:last-child, hr:last-child,
 .tiles {
   position: relative;
   display: block;
-  margin: 0 auto;
-  width: 80%;
+  width: calc(100% + (4px * 2));
+  left: -4px;
 }
 .tiles:after {
   content: "";
@@ -4128,11 +4134,9 @@ pre:last-child, hr:last-child,
 }
 
 .tile {
-  display: inline-block;
-  vertical-align: top;
-  font-size: 16px;
   position: relative;
   float: left;
+  overflow: hidden;
 }
 .tile-box {
   width: 50%;
@@ -4160,11 +4164,13 @@ pre:last-child, hr:last-child,
 }
 .tile-img {
   position: absolute;
-  top: 5px;
-  right: 5px;
-  bottom: 5px;
-  left: 5px;
-  background: #eee;
+  top: 4px;
+  right: 4px;
+  bottom: 4px;
+  left: 4px;
+  background-size: cover;
+  background-position: center center;
+  background-color: #eee;
 }
 
 .hidden {
@@ -5030,6 +5036,37 @@ button::-moz-focus-inner {
 [class*="carousel-"][class*="-stage-bg"] .owl-stage-outer {
   background: #bfc1c3;
 }
+[class*="carousel-"][class*="-cornerDots"] .owl-dots {
+  top: 0;
+  left: auto;
+  right: 1.25em;
+}
+[class*="carousel-"][class*="-revealNav"] .owl-prev, [class*="carousel-"][class*="-revealNav"] .owl-next {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  padding: 0 1em;
+  color: #ffffff;
+  text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.4);
+  opacity: 0.5;
+}
+[class*="carousel-"][class*="-revealNav"] .owl-prev:hover, [class*="carousel-"][class*="-revealNav"] .owl-next:hover {
+  opacity: 1;
+}
+[class*="carousel-"][class*="-revealNav"] .owl-prev {
+  left: -3em;
+}
+[class*="carousel-"][class*="-revealNav"] .owl-next {
+  right: -3em;
+}
+[class*="carousel-"][class*="-revealNav"]:hover .owl-prev {
+  left: 0.25em;
+}
+[class*="carousel-"][class*="-revealNav"]:hover .owl-next {
+  right: 0.25em;
+}
 [class*="carousel-"][class*="-thumbnails"] .owl-item {
   height: 100%;
 }
@@ -5100,6 +5137,14 @@ button::-moz-focus-inner {
   -webkit-transform: translateY(-50%);
       -ms-transform: translateY(-50%);
           transform: translateY(-50%);
+}
+
+.owl-nav .fa {
+  cursor: pointer;
+}
+
+.owl-prev, .owl-next {
+  transition: 0.4s;
 }
 
 .owl-dots {
@@ -5575,6 +5620,9 @@ button::-moz-focus-inner {
   border: 1px solid rgba(0, 0, 0, 0.1);
   line-height: 2;
 }
+[class*="heading_date"] + [class*="heading"] {
+  margin-top: 0;
+}
 
 .icon, [class*="icon-"] {
   background: #6f777b;
@@ -5870,7 +5918,7 @@ img {
   left: 0;
   transition: 0.4s;
 }
-[class*="bg-img-"][class*="-scale-rotate"]:hover, [class*="s-block-"]:hover [class*="bg-img-"][class*="-scale-rotate"] {
+[class*="bg-img-"][class*="-scale-rotate"]:hover, [class*="s-block"]:hover [class*="bg-img-"][class*="-scale-rotate"] {
   -webkit-transform: scale(1.3) rotate(7.5deg);
       -ms-transform: scale(1.3) rotate(7.5deg);
           transform: scale(1.3) rotate(7.5deg);
@@ -6839,6 +6887,7 @@ progress::-moz-progress-bar {
 }
 [class*="widget-"][class*="-article"] {
   margin-bottom: 2rem;
+  overflow: hidden;
 }
 [class*="widget-"][class*="-article"]:after {
   content: "";
@@ -6855,6 +6904,9 @@ progress::-moz-progress-bar {
   position: relative;
   bottom: 0;
   margin-top: 2rem;
+}
+[class*="widget-"][class*="-article"] .owl-dot.active span {
+  background-color: #ffffff;
 }
 [class*="widget_"][class*="-inline"] {
   display: inline-block;

@@ -301,6 +301,7 @@
         
         @include modifier('article') {
             margin-bottom: base(margin);
+            overflow: hidden;
             &:after {
                 content: "";
                 display: block;
@@ -320,6 +321,16 @@
                position: relative;
                bottom: 0;
                margin-top: base('margin');
+            }
+            > .owl-carousel {
+                @extend .object;
+            }
+            .owl-dot {
+                &.active {
+                    span {
+                        background-color: color(greyscale, white);
+                    }
+                }
             }
         }
 			

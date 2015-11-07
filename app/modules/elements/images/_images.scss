@@ -38,7 +38,7 @@
 	
 		@include modifier(scale-rotate) {
 			&:hover,
-			[class*="s-block-"]:hover & {
+			[class*="s-block"]:hover & {
 				transform: scale(1.3) rotate(7.5deg);
 			}
 		}
