@@ -2,7 +2,7 @@
     
     <?php if ($type === 'image') { ?>
     
-        <div class="thumbnail-article">
+        <div class="thumbnail">
             <div class="thumbnail_mask">
                 <div class="thumbnail_controls icon_group-small">
                     <a 

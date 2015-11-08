@@ -5965,7 +5965,7 @@ $(document).ready(function() {
 
 (function ($) {
  
-    $.fn.KayenInfiniteScroll = function(custom) {
+    $.fn.KayenInfiniteScroll = function(custom, callback) {
         
         // Options
         var options = $.extend({
@@ -6006,6 +6006,13 @@ $(document).ready(function() {
                 $(items).css({ opacity: 0 });
             });
             
+            // Pass any callback functions to the newly loaded items
+            if (callback) {
+                ias.on('rendered', function(items) {
+                    callback();
+                });
+            }
+        
             if (options.isotopeGrid) {
                 // Append new items to Isotope grid
                 ias.on('rendered', function(items) {

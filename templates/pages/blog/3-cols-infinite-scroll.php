@@ -73,20 +73,25 @@
             
                 <script>
                     $(document).ready(function() {
-                        $('.article-thumbnails-carousel').each(function() {
-                            $(this).owlCarousel({
-                                items : 1,
-                                nav : true,
-                                navText : [
-                                    '<i class="fa fa-angle-left fa-3x"></i>',
-                                    '<i class="fa fa-angle-right fa-3x"></i>'
-                                ],
-                                loop : true
-                            })
-                        });
+                        
+                        function articlesCarousel() {
+                            $('.article-thumbnails-carousel').each(function() {
+                                $(this).owlCarousel({
+                                    items : 1,
+                                    nav : true,
+                                    navText : [
+                                        '<i class="fa fa-angle-left fa-3x"></i>',
+                                        '<i class="fa fa-angle-right fa-3x"></i>'
+                                    ],
+                                    loop : true
+                                })
+                            });
+                        } articlesCarousel();
+
                         $("#blog-items").KayenInfiniteScroll({
                             isotopeGrid : false
-                        });
+                        }, articlesCarousel);
+                        
                     });
                 </script>
                 

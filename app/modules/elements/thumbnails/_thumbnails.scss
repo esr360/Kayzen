@@ -120,7 +120,7 @@
 			}
 		}
         
-        @include modifier('max-article') {
+        @include modifier('article') {
             height: 200px;
             @extend .center-xy;
         }
