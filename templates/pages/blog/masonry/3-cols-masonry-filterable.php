@@ -1,5 +1,5 @@
 <?php 
-	include ('../../app.php');
+	include ('../../../app.php');
 	// page config
 	$title = 'Our Blog';
 	$tagLine = 'Read about all the great work we do';
@@ -27,52 +27,63 @@
 
 		<?php include (ROOT.'/modules/billboard.php'); ?>
 		
-		<section class="section-primary">
+		<section class="section-primary-mini relative text-center">	
+			<ul class="tabs_nav-pills" id="portfolio-categories">
+				<li class="button-pill-grey-1-thin active" data-filter="*">View All</li>
+				<li class="button-pill-grey-1-thin" data-filter="[data-HTML-theme]">Image</li>
+				<li class="button-pill-grey-1-thin" data-filter="[data-photography]">Carousel</li>
+				<li class="button-pill-grey-1-thin" data-filter="[data-logo]">Video</li>
+				<li class="button-pill-grey-1-thin" data-filter="[data-logo]">Audio</li>
+			</ul>
+		</section>
+		
+		<section class="section-primary-flush">
 				
 			<div class="container">
                 
-                <div id="blog-items" class="row-flow row-waffle-large-infinite">
+                <div id="blog-items" class="row-flow row-waffle">
                         
                     <div class="span-4">
-                        <?php $type = 'image'; $size = 'small'; include (ROOT.'/includes/article-item.php'); ?>
+                        <?php articleItem('image', 'small', 'tall'); ?>
                     </div>
                     
                     <div class="span-4">
-                        <?php $type = 'carousel'; $size = 'small'; include (ROOT.'/includes/article-item.php'); ?>
+                        <?php articleItem('video', 'small'); ?>
                     </div>
                     
                     <div class="span-4">
-                        <?php $type = 'video'; $size = 'small'; include (ROOT.'/includes/article-item.php'); ?>
+                        <?php articleItem('carousel', 'small', 'tall'); ?>
                     </div>
                     
                     <div class="span-4">
-                        <?php $type = 'image'; $size = 'small'; include (ROOT.'/includes/article-item.php'); ?>
+                        <?php articleItem('audio', 'small', 'tall'); ?>
                     </div>
                     
                     <div class="span-4">
-                        <?php $type = 'video'; $size = 'small'; include (ROOT.'/includes/article-item.php'); ?>
+                        <?php articleItem('video', 'small', 'tall'); ?>
                     </div>
                     
                     <div class="span-4">
-                        <?php $type = 'image'; $size = 'small'; include (ROOT.'/includes/article-item.php'); ?>
+                        <?php articleItem('image', 'small'); ?>
                     </div>
                     
                     <div class="span-4">
-                        <?php $type = 'image'; $size = 'small'; include (ROOT.'/includes/article-item.php'); ?>
+                        <?php articleItem('carousel', 'small'); ?>
                     </div>
                     
                     <div class="span-4">
-                        <?php $type = 'image'; $size = 'small'; include (ROOT.'/includes/article-item.php'); ?>
+                        <?php articleItem('carousel', 'small', 'tall'); ?>
                     </div>
                     
                     <div class="span-4">
-                        <?php $type = 'carousel'; $size = 'small'; include (ROOT.'/includes/article-item.php'); ?>
+                        <?php articleItem('audio', 'small'); ?>
                     </div>
                 
                 </div>
             
                 <script>
                     $(document).ready(function() {
+                        
                         $('.article-thumbnails-carousel').each(function() {
                             $(this).owlCarousel({
                                 items : 1,
@@ -82,8 +93,13 @@
                                     '<i class="fa fa-angle-right fa-3x"></i>'
                                 ],
                                 loop : true
-                            })
-                        })
+                            });
+                        });
+                        
+                        $(window).load(function() {
+                            $('#blog-items').isotope();
+                        });
+                        
                     });
                 </script>
 				
@@ -100,5 +116,11 @@
     <?php include (ROOT.'/includes/ui-enhancements.php'); ?>
 
     <?php include (ROOT.'/includes/scripts.php'); ?>
+    
+    <?php if (env == 'dev') { ?>
+        <script src="<?php echo appDir ?>/build/scripts/isotope.pkgd.js"></script>
+    <?php } else if (env == 'prod') { ?>
+        <script src="<?php echo appDir ?>/build/scripts/isotope.pkgd.min.js"></script>
+    <?php } ?>
 
 </body>

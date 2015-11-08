@@ -4741,7 +4741,7 @@ pre:last-child, hr:last-child,
   border-top: 1px solid rgba(0, 0, 0, 0.15);
   border-bottom: 0;
 }
-[class*="hrule-"][class*="-stripes"], [class*="widget-"][class*="-article"]:after {
+[class*="hrule-"][class*="-stripes"] {
   height: 10px;
   background-image: url("../..//images/stripe-overlay.png");
   background-repeat: repeat;
@@ -7349,11 +7349,17 @@ progress::-moz-progress-bar {
 [class*="widget-"][class*="-article"] {
   margin-bottom: 2rem;
   overflow: hidden;
-}
-[class*="widget-"][class*="-article"]:after {
-  content: "";
-  display: block;
-  margin-top: 2rem;
+            /*
+            &:after {
+                content: "";
+                display: block;
+                margin-top: base(margin);
+			    @include extend(
+                    $parent: 'hrule', 
+                    $modifiers: 'stripes'
+                );
+            }
+            */
 }
 [class*="widget-"][class*="-article"]:last-of-type {
   margin-bottom: 0;

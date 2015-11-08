@@ -1,5 +1,5 @@
 <?php 
-	include ('../../app.php');
+	include ('../../../app.php');
 	// page config
 	$title = 'Our Blog';
 	$tagLine = 'Read about all the great work we do';
@@ -33,41 +33,59 @@
                 
                 <div id="blog-items" class="row-flow row-waffle-large-infinite">
                         
-                    <div class="span-4">
-                        <?php $type = 'image'; $size = 'small'; include (ROOT.'/includes/article-item.php'); ?>
-                    </div>
+                    <?php
+                        
+                        articleItem(array(
+                            'size'   => 'small',
+                            'span'   => 4,
+                        ));
                     
-                    <div class="span-4">
-                        <?php $type = 'carousel'; $size = 'small'; include (ROOT.'/includes/article-item.php'); ?>
-                    </div>
+                        articleItem(array(
+                            'media'  => 'carousel',
+                            'size'   => 'small',
+                            'span'   => 4,
+                        ));
                     
-                    <div class="span-4">
-                        <?php $type = 'video'; $size = 'small'; include (ROOT.'/includes/article-item.php'); ?>
-                    </div>
+                        articleItem(array(
+                            'media'  => 'carousel',
+                            'size'   => 'small',
+                            'span'   => 4,
+                        ));
                     
-                    <div class="span-4">
-                        <?php $type = 'image'; $size = 'small'; include (ROOT.'/includes/article-item.php'); ?>
-                    </div>
+                        articleItem(array(
+                            'media'  => 'video',
+                            'size'   => 'small',
+                            'span'   => 4,
+                        ));
                     
-                    <div class="span-4">
-                        <?php $type = 'video'; $size = 'small'; include (ROOT.'/includes/article-item.php'); ?>
-                    </div>
+                        articleItem(array(
+                            'size'   => 'small',
+                            'span'   => 4,
+                        ));
                     
-                    <div class="span-4">
-                        <?php $type = 'image'; $size = 'small'; include (ROOT.'/includes/article-item.php'); ?>
-                    </div>
+                        articleItem(array(
+                            'media'  => 'video',
+                            'size'   => 'small',
+                            'span'   => 4,
+                        ));
                     
-                    <div class="span-4">
-                        <?php $type = 'image'; $size = 'small'; include (ROOT.'/includes/article-item.php'); ?>
-                    </div>
+                        articleItem(array(
+                            'size'   => 'small',
+                            'span'   => 4,
+                        ));
                     
-                    <div class="span-4">
-                        <?php $type = 'image'; $size = 'small'; include (ROOT.'/includes/article-item.php'); ?>
-                    </div>
+                        articleItem(array(
+                            'size'   => 'small',
+                            'span'   => 4,
+                        ));
                     
-                    <div class="span-4">
-                        <?php $type = 'carousel'; $size = 'small'; include (ROOT.'/includes/article-item.php'); ?>
-                    </div>
+                        articleItem(array(
+                            'media'  => 'carousel',
+                            'size'   => 'small',
+                            'span'   => 4,
+                        ));
+                        
+                    ?>
                 
                 </div>
             

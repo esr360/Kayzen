@@ -1,6 +1,6 @@
 /**
  *
- * Kayzen.getSocialCount
+ * Kayzen.socialShareCount
  * @author @esr360
  * @description Get the count of shares for given page
  *

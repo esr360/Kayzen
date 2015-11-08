@@ -1,5 +1,5 @@
 <?php 
-	include ('../../app.php');
+	include ('../../../app.php');
 	// page config
 	$title = 'Our Blog';
 	$tagLine = 'Read about all the great work we do';
@@ -33,38 +33,44 @@
                 
                 <div id="blog-items" class="row-flow row-waffle-large">
                         
-                    <div class="span-3">
-                        <?php $type = 'image'; $size = 'small'; include (ROOT.'/includes/article-item.php'); ?>
-                    </div>
-                    
-                    <div class="span-3">
-                        <?php $type = 'carousel'; $size = 'small'; include (ROOT.'/includes/article-item.php'); ?>
-                    </div>
-                    
-                    <div class="span-3">
-                        <?php $type = 'video'; $size = 'small'; include (ROOT.'/includes/article-item.php'); ?>
-                    </div>
-                    
-                    <div class="span-3">
-                        <?php $type = 'image'; $size = 'small'; include (ROOT.'/includes/article-item.php'); ?>
-                    </div>
-                    
-                    <div class="span-3">
-                        <?php $type = 'video'; $size = 'small'; include (ROOT.'/includes/article-item.php'); ?>
-                    </div>
-                    
-                    <div class="span-3">
-                        <?php $type = 'image'; $size = 'small'; include (ROOT.'/includes/article-item.php'); ?>
-                    </div>
-                    
-                    <div class="span-3">
-                        <?php $type = 'carousel'; $size = 'small'; include (ROOT.'/includes/article-item.php'); ?>
-                    </div>
-                    
-                    <div class="span-3">
-                        <?php $type = 'image'; $size = 'small'; include (ROOT.'/includes/article-item.php'); ?>
-                    </div>
-                    
+                    <?php
+                        
+                        articleItem(array(
+                            'size'   => 'small',
+                            'span'   => 6,
+                        ));
+                        
+                        articleItem(array(
+                            'media'  => 'carousel',
+                            'size'   => 'small',
+                            'span'   => 6,
+                        ));
+                        
+                        articleItem(array(
+                            'media'  => 'video',
+                            'size'   => 'small',
+                            'span'   => 6,
+                        ));
+                        
+                        articleItem(array(
+                            'size'   => 'small',
+                            'span'   => 6,
+                        ));
+                        
+                        articleItem(array(
+                            'media'  => 'carousel',
+                            'size'   => 'small',
+                            'span'   => 6,
+                        ));
+                        
+                        articleItem(array(
+                            'media'  => 'video',
+                            'size'   => 'small',
+                            'span'   => 6,
+                        ));
+                        
+                    ?>
+                
                 </div>
                 
                 <ul class="pagination tabs_nav-pills object-center" id="portfolio-categories">

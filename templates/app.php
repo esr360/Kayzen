@@ -13,6 +13,8 @@ $style = '';
 $type = '';
 $container = '';
 
+include (ROOT.'/includes/article-item.php');
+
 // Debug to Console
 //-----------------------------------------------------------------
 	

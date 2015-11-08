@@ -302,6 +302,7 @@
         @include modifier('article') {
             margin-bottom: base(margin);
             overflow: hidden;
+            /*
             &:after {
                 content: "";
                 display: block;
@@ -311,7 +312,8 @@
                     $modifiers: 'stripes'
                 );
             }
-            &:last-of-type {
+            */
+            &:last-of-type,  {
                 margin-bottom: 0;
                 &:after {
                     display: none;

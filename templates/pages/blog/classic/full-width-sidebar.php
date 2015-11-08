@@ -1,5 +1,5 @@
 <?php 
-	include ('../../app.php');
+	include ('../../../app.php');
 	// page config
 	$title = 'Our Blog';
 	$tagLine = 'Read about all the great work we do';
@@ -34,16 +34,36 @@
 				<div class="row">
 					
 					<div class="span-8">
+                  
+                        <div id="blog-items">
                                 
-                        <?php $type = 'image'; include (ROOT.'/includes/article-item.php'); ?>
+                            <?php
+                                
+                                articleItem();
+                                
+                                articleItem(array(
+                                    'media' => 'video'
+                                ));
+                                
+                                articleItem(array(
+                                    'media' => 'carousel'
+                                ));
+                                
+                                articleItem(array(
+                                    'media' => 'masonry'
+                                ));
+                                
+                                articleItem(array(
+                                    'media' => 'audio'
+                                ));
+                                
+                                articleItem(array(
+                                    'media' => 'codepen'
+                                ));
+                                
+                            ?> 
                         
-                        <?php $type = 'video'; include (ROOT.'/includes/article-item.php'); ?>
-                        
-                        <?php $type = 'carousel'; include (ROOT.'/includes/article-item.php'); ?>
-                        
-                        <?php $type = 'masonry'; include (ROOT.'/includes/article-item.php'); ?>
-                        
-                        <?php $type = 'audio'; include (ROOT.'/includes/article-item.php'); ?>
+                        </div> 
                         
                         <ul class="pagination tabs_nav-pills object-center" id="portfolio-categories">
                             <small>
