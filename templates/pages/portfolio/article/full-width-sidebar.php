@@ -35,34 +35,72 @@
 					
 					<div class="span-8">
                         
-                        <?php include (ROOT.'/includes/article-item.php'); ?>
+                        <div id="portfolio-items">
+                            
+                            <?php 
+                                
+                                articleItem(array(
+                                    'type'  => 'portfolio'
+                                ));
+                                
+                                articleItem(array(
+                                    'media' => 'vimeo',
+                                    'type'  => 'portfolio'
+                                ));
+                                
+                                articleItem(array(
+                                    'media' => 'youtube',
+                                    'type'  => 'portfolio'
+                                ));
+                                
+                                articleItem(array(
+                                    'media' => 'carousel',
+                                    'type'  => 'portfolio'
+                                ));
+                                
+                                articleItem(array(
+                                    'media' => 'masonry',
+                                    'type'  => 'portfolio'
+                                ));
+                                
+                                articleItem(array(
+                                    'media' => 'audio',
+                                    'type'  => 'portfolio'
+                                ));
+                                
+                                articleItem(array(
+                                    'media' => 'codepen',
+                                    'type'  => 'portfolio'
+                                ));
+                                
+                            ?>
                         
-                        <hr class="hrule-stripes">
+                        </div>
+            
+                        <script>
+                            $(document).ready(function() {
+                                $('.article-thumbnails-carousel').each(function() {
+                                    $(this).owlCarousel({
+                                        items : 1,
+                                        nav : true,
+                                        navText : [
+                                            '<i class="fa fa-angle-left fa-3x"></i>',
+                                            '<i class="fa fa-angle-right fa-3x"></i>'
+                                        ],
+                                        loop : true
+                                    })
+                                })
+                            });
+                        </script>
                         
-                        <?php include (ROOT.'/includes/article-item.php'); ?>
-                        
-                        <hr class="hrule-stripes">
-                        
-                        <?php include (ROOT.'/includes/article-item.php'); ?>
-                        
-                        <hr class="hrule-stripes">
-                        
-                        <?php include (ROOT.'/includes/article-item.php'); ?>
-                        
-                        <hr class="hrule-stripes">
-                        
-                        <?php include (ROOT.'/includes/article-item.php'); ?>
-                        
-                        <ul class="pagination tabs_nav-pills" id="portfolio-categories">
-                            <small>
-                                <li class="button-pill-grey-1-thin"><i class="fa fa-angle-left"></i></li>
-                                <li class="button-pill-grey-1-thin">1</li>
-                                <li class="button-pill-grey-1-thin active">2</li>
-                                <li class="button-pill-grey-1-thin">3</li>
-                                <li class="button-pill-grey-1-thin">...</li>
-                                <li class="button-pill-grey-1-thin">10</li>
-                                <li class="button-pill-grey-1-thin"><i class="fa fa-angle-right"></i></li>
-                            </small>
+                        <ul class="pagination tabs_nav-pills object-center">
+                            <li class="button-pill-grey-1-thin"><i class="fa fa-angle-left"></i></li>
+                            <li class="button-pill-grey-1-thin">1</li>
+                            <li class="button-pill-grey-1-thin active">2</li>
+                            <li class="button-pill-grey-1-thin">3</li>
+                            <li class="button-pill-grey-1-thin">...</li>
+                            <li class="button-pill-grey-1-thin">10</li>
+                            <li class="button-pill-grey-1-thin"><i class="fa fa-angle-right"></i></li>
                         </ul>
                         
 					</div>

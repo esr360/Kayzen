@@ -52,7 +52,13 @@
             // Pass any callback functions to the newly loaded items
             if (callback) {
                 ias.on('rendered', function(items) {
-                    callback();
+                    if (typeof(callback) == 'object') {
+                        callback.forEach(function (func) {
+                            func();
+                        });
+                    } else if (typeof(callback) == 'function') {
+                        callback();
+                    }
                 });
             }
         

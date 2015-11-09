@@ -246,7 +246,7 @@ module.exports = function(grunt) {
                     'app/includes/*.scss',
                     'app/modules/**/*.scss'
                 ],
-                tasks: ['sass', 'postcss', 'notify:css'],
+                tasks: ['sass:dev', 'postcss', 'notify:css'],
                 options: {
                     spawn: false,
                 }

@@ -302,17 +302,17 @@
         @include modifier('article') {
             margin-bottom: base(margin);
             overflow: hidden;
-            /*
-            &:after {
-                content: "";
-                display: block;
-                margin-top: base(margin);
-			    @include extend(
-                    $parent: 'hrule', 
-                    $modifiers: 'stripes'
-                );
+            &:not([class*="span"]) {
+                &:after {
+                    content: "";
+                    display: block;
+                    margin-top: base(margin);
+                    @include extend(
+                        $parent: 'hrule', 
+                        $modifiers: 'stripes'
+                    );
+                }
             }
-            */
             &:last-of-type,  {
                 margin-bottom: 0;
                 &:after {
@@ -322,7 +322,6 @@
             + .ias-noneleft {
                position: relative;
                bottom: 0;
-               margin-top: base('margin');
             }
             > .owl-carousel {
                 @extend .object;

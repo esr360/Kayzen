@@ -9,6 +9,8 @@
          */
     
         $options = array_merge(array(
+            
+            'type'     => 'blog',
             'media'    => 'image',
             'size'     => null,
             'height'   => null,
@@ -19,6 +21,9 @@
                 rand(1, 7),
                 rand(1, 7),
             ),
+            'title'    => 'Lorem ipsum dolor sit amet',
+            'date'     => array('Sep', 23),
+            'category' => 'HTML Themes',
             'videoSrc' => 'https://player.vimeo.com/video/87701971',
             'audioSrc' => 'https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/205050090&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true'
             
@@ -26,9 +31,9 @@
         
     ?>
 
-    <article class="widget-article <?php if (!empty($options['span'])) echo 'span-'.$options['span'] ?>">
+    <article class="widget-article <?php if (!empty($options['span'])) echo 'span-'.$options['span'] ?>" <?php echo 'data-'.$options['media'] ?>>
         
-        <!-- Standard Image Article -->
+        <? // Standard Image Article ?>
         <?php if ($options['media'] === 'image') { ?>
         
             <div class="thumbnail">
@@ -49,8 +54,8 @@
                 <img src="<?php echo appDir ?>/images/wallpapers/<?php if ($options['height'] === 'tall') echo 'tall/' ?>bg-<?php echo $options['thumb'] ?>.jpg">
             </div>
             
-        <!-- Video Article -->
-        <?php } else if ($options['media'] === 'video') { ?>
+        <? // Vimeo Article ?>
+        <?php } else if ($options['media'] === 'vimeo') { ?>
         
             <div class="auto-resizable-iframe object" data-iframe-height="<?php if ($options['height'] ==='tall') { echo '100%'; } else { echo '56.25%'; } ?>">
                 <div>
@@ -58,7 +63,16 @@
                 </div>
             </div>
             
-        <!-- Carousel Article -->
+        <? // Youtube Article ?>
+        <?php } else if ($options['media'] === 'youtube') { ?>
+        
+            <div class="auto-resizable-iframe object" data-iframe-height="<?php if ($options['height'] ==='tall') { echo '100%'; } else { echo '56.25%'; } ?>">
+                <div>
+                    <iframe allowfullscreen="" src="http://www.youtube.com/embed/Q3oItpVa9fs?theme=light"></iframe>
+                </div>
+            </div>
+            
+        <? // Carousel Article ?>
         <?php } else if ($options['media'] === 'carousel') { ?>
         
             <div class="article-thumbnails-carousel carousel-cornerDots-revealNav owl-carousel">
@@ -123,7 +137,7 @@
                 </div>
             </div>
         
-        <!-- Audio Article -->
+        <? // Audio Article ?>
         <?php } else if ($options['media'] === 'audio') { ?>
         
             <iframe 
@@ -137,7 +151,7 @@
                 <?php } ?>
             ></iframe>
             
-        <!-- Codepen Article -->
+        <? // Codepen Article ?>
         <?php } else if ($options['media'] === 'codepen') { ?>
         
             <div class="object">
@@ -147,44 +161,46 @@
         
         <?php } ?>
         
-        <!-- Article Title -->
+        <? // Article Title ?>
         <header class="heading_group">
             <div class="heading_date">
-                <div>Sep</div>
-                <div>23</div>
+                <div><?php echo $options['date'][0] ?></div>
+                <div><?php echo $options['date'][1] ?></div>
             </div>
             <?php if ($options['size'] === 'small') { ?>
-                <h2 class="heading-heavy-size-4 font-2">Lorem ipsum dolor sit amet</h2>
-                <h3 class="heading-light-size-2">Posted in <a href="#">HTML Themes</a></h3>
+                <h2 class="heading-heavy-size-4 font-2"><?php echo $options['title'] ?></h2>
+                <h3 class="heading-light-size-2">Posted in <a href="#"><?php echo $options['category'] ?></a></h3>
             <?php } else { ?>
-                <h2 class="heading-heavy-size-5 font-2">Lorem ipsum dolor sit amet</h2>
-                <h3 class="heading-light">Posted in <a href="#">HTML Themes</a></h3>
+                <h2 class="heading-heavy-size-5 font-2"><?php echo $options['title'] ?></h2>
+                <h3 class="heading-light">Posted in <a href="#"><?php echo $options['category'] ?></a></h3>
             <?php } ?>
         </header>
         
-        <!-- Article Blurb -->
+        <? // Article Blurb ?>
         <?php if ($options['size'] === 'small') { ?>
             <p class="blurb">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis blandit lectus ex, id feugiat felis consequat id. Nunc vel quam luctus, maximus justo eget...</p>
         <?php } else { ?>
             <p class="blurb">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis blandit lectus ex, id feugiat felis consequat id. Nunc vel quam luctus, maximus justo eget, laoreet massa. Maecenas congue sit amet ex quis egestas. Aliquam sapien sapien, dignissim ut tellus in...</p>
         <?php } ?>
         
-        <!-- Article Meta -->
+        <? // Article Meta ?>
         <small>
             <div class="row-block">
                 <div class="span va-middle">
                     <ul class="list-reset-inline">
-                        <li><i class="fa fa-user"></i> <a href="#">John Doe</a></li>
-                        <?php if (!$options['size'] === 'small') { ?>
-                        <li><i class="fa fa-comment-o"></i> <a href="#">3 Comments</a></li>
-                        <li>
-                            <ul class="list-tags">
-                                <li class="title">Tags:</li>
-                                <li class="plain"><a href="#">Web Design</a></li>
-                                <li class="plain"><a href="#">HTML</a></li>
-                                <li class="plain"><a href="#">CSS</a></li>
-                            </ul>
-                        </li>
+                        <?php if ($options['type'] === 'blog') { ?>
+                            <li><i class="fa fa-user"></i> <a href="#">John Doe</a></li>
+                        <?php } ?>
+                        <?php if (!$options['size'] === 'small' || $options['type'] === 'portfolio') { ?>
+                            <li><i class="fa fa-comment-o"></i> <a href="#">3 Comments</a></li>
+                            <li>
+                                <ul class="list-tags">
+                                    <li class="title">Tags:</li>
+                                    <li class="plain"><a href="#">Web Design</a></li>
+                                    <li class="plain"><a href="#">HTML</a></li>
+                                    <li class="plain"><a href="#">CSS</a></li>
+                                </ul>
+                            </li>
                         <?php } ?>
                     </ul>
                 </div>

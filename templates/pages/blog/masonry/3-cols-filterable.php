@@ -27,12 +27,22 @@
 
 		<?php include (ROOT.'/modules/billboard.php'); ?>
 		
-		<section class="section-primary">
+		<section class="section-primary-mini relative text-center">	
+			<ul class="tabs_nav-pills" id="blog-types">
+				<li class="button-pill-grey-1-thin active" data-filter="*">View All</li>
+				<li class="button-pill-grey-1-thin" data-filter="[data-image]">Image</li>
+				<li class="button-pill-grey-1-thin" data-filter="[data-carousel]">Carousel</li>
+				<li class="button-pill-grey-1-thin" data-filter="[data-vimeo], [data-youtube]">Video</li>
+				<li class="button-pill-grey-1-thin" data-filter="[data-audio]">Audio</li>
+			</ul>
+		</section>
+		
+		<section class="section-primary-flush">
 				
 			<div class="container">
                 
-                <div id="blog-items" class="row-flow row-waffle">
-                    
+                <div id="blog-items" class="row-flow row-waffle-infinite-filterable">
+                        
                     <?php
                         
                         articleItem(array(
@@ -42,7 +52,7 @@
                         ));
                         
                         articleItem(array(
-                            'media'  => 'video',
+                            'media'  => 'vimeo',
                             'size'   => 'small',
                             'span'   => 4,
                         ));
@@ -62,7 +72,7 @@
                         ));
                         
                         articleItem(array(
-                            'media'  => 'video',
+                            'media'  => 'youtube',
                             'size'   => 'small',
                             'height' => 'tall',
                             'span'   => 4,
@@ -88,6 +98,12 @@
                         
                         articleItem(array(
                             'media'  => 'audio',
+                            'size'   => 'small',
+                            'span'   => 4,
+                        ));
+                        
+                        articleItem(array(
+                            'media'  => 'vimeo',
                             'size'   => 'small',
                             'span'   => 4,
                         ));
@@ -95,9 +111,21 @@
                     ?>
                 
                 </div>
+                
+                <ul class="pagination tabs_nav-pills object-center">
+                    <li class="button-pill-grey-1-thin"><i class="fa fa-angle-left"></i></li>
+                    <li class="button-pill-grey-1-thin">1</li>
+                    <li class="button-pill-grey-1-thin active">2</li>
+                    <li class="button-pill-grey-1-thin">3</li>
+                    <li class="button-pill-grey-1-thin">...</li>
+                    <li class="button-pill-grey-1-thin">10</li>
+                    <li class="button-pill-grey-1-thin"><i class="fa fa-angle-right"></i></li>
+                </ul>
             
                 <script>
                     $(document).ready(function() {
+                        
+                        $('#blog-types').KayzenClickHelper();
                         
                         $('.article-thumbnails-carousel').each(function() {
                             $(this).owlCarousel({
@@ -113,6 +141,12 @@
                         
                         $(window).load(function() {
                             $('#blog-items').isotope();
+                            $('#blog-types').on('click', 'li', function() {
+                                var filterValue = $(this).attr('data-filter');
+                                $('#blog-items').isotope({ 
+                                    filter: filterValue 
+                                });
+                            });
                         });
                         
                     });

@@ -37,67 +37,79 @@
                         
                         articleItem(array(
                             'size'   => 'small',
+                            'title'  => 'Lorem ipsum dolor',
                             'span'   => 3,
                         ));
                     
                         articleItem(array(
                             'media'  => 'carousel',
                             'size'   => 'small',
+                            'title'  => 'Lorem ipsum dolor',
                             'span'   => 3,
                         ));
                     
                         articleItem(array(
-                            'media'  => 'video',
+                            'media'  => 'vimeo',
                             'size'   => 'small',
-                            'span'   => 3,
-                        ));
-                    
-                        articleItem(array(
-                            'size'   => 'small',
-                            'span'   => 3,
-                        ));
-                    
-                        articleItem(array(
-                            'media'  => 'video',
-                            'size'   => 'small',
+                            'title'  => 'Lorem ipsum dolor',
                             'span'   => 3,
                         ));
                     
                         articleItem(array(
                             'size'   => 'small',
+                            'title'  => 'Lorem ipsum dolor',
+                            'span'   => 3,
+                        ));
+                    
+                        articleItem(array(
+                            'media'  => 'youtube',
+                            'size'   => 'small',
+                            'title'  => 'Lorem ipsum dolor',
+                            'span'   => 3,
+                        ));
+                    
+                        articleItem(array(
+                            'size'   => 'small',
+                            'title'  => 'Lorem ipsum dolor',
                             'span'   => 3,
                         ));
                     
                         articleItem(array(
                             'media'  => 'carousel',
                             'size'   => 'small',
+                            'title'  => 'Lorem ipsum dolor',
                             'span'   => 3,
                         ));
                     
                         articleItem(array(
                             'size'   => 'small',
+                            'title'  => 'Lorem ipsum dolor',
                             'span'   => 3,
                         ));
                         
                         articleItem(array(
                             'size'   => 'small',
+                            'title'  => 'Lorem ipsum dolor',
                             'span'   => 3,
                         ));
                     
                         articleItem(array(
                             'media'  => 'carousel',
                             'size'   => 'small',
+                            'title'  => 'Lorem ipsum dolor',
                             'span'   => 3,
                         ));
                     
                         articleItem(array(
-                            'media'  => 'video',
+                            'media'  => 'vimeo',
                             'size'   => 'small',
+                            'title'  => 'Lorem ipsum dolor',
                             'span'   => 3,
                         ));
                     
                         articleItem(array(
                             'size'   => 'small',
+                            'title'  => 'Lorem ipsum dolor',
                             'span'   => 3,
                         ));
                     
@@ -105,7 +117,7 @@
                     
                 </div>
                 
-                <ul class="pagination tabs_nav-pills object-center" id="portfolio-categories">
+                <ul class="pagination tabs_nav-pills object-center">
                     <li class="button-pill-grey-1-thin"><i class="fa fa-angle-left"></i></li>
                     <li class="button-pill-grey-1-thin">1</li>
                     <li class="button-pill-grey-1-thin active">2</li>

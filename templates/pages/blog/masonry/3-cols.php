@@ -31,44 +31,73 @@
 				
 			<div class="container">
                 
-                <div id="blog-items" class="row-flow row-waffle-large">
-                        
+                <div id="blog-items" class="row-flow row-waffle-infinite">
+                    
                     <?php
                         
                         articleItem(array(
                             'size'   => 'small',
-                            'span'   => 6,
-                        ));
-                        
-                        articleItem(array(
-                            'media'  => 'carousel',
-                            'size'   => 'small',
-                            'span'   => 6,
+                            'height' => 'tall',
+                            'span'   => 4,
                         ));
                         
                         articleItem(array(
                             'media'  => 'vimeo',
                             'size'   => 'small',
-                            'span'   => 6,
-                        ));
-                        
-                        articleItem(array(
-                            'size'   => 'small',
-                            'span'   => 6,
+                            'span'   => 4,
                         ));
                         
                         articleItem(array(
                             'media'  => 'carousel',
                             'size'   => 'small',
-                            'span'   => 6,
+                            'height' => 'tall',
+                            'span'   => 4,
+                        ));
+                        
+                        articleItem(array(
+                            'media'  => 'audio',
+                            'size'   => 'small',
+                            'height' => 'tall',
+                            'span'   => 4,
                         ));
                         
                         articleItem(array(
                             'media'  => 'youtube',
                             'size'   => 'small',
-                            'span'   => 6,
+                            'height' => 'tall',
+                            'span'   => 4,
                         ));
                         
+                        articleItem(array(
+                            'size'   => 'small',
+                            'span'   => 4,
+                        ));
+                        
+                        articleItem(array(
+                            'media'  => 'carousel',
+                            'size'   => 'small',
+                            'span'   => 4,
+                        ));
+                        
+                        articleItem(array(
+                            'media'  => 'carousel',
+                            'size'   => 'small',
+                            'height' => 'tall',
+                            'span'   => 4,
+                        ));
+                        
+                        articleItem(array(
+                            'media'  => 'audio',
+                            'size'   => 'small',
+                            'span'   => 4,
+                        ));
+                        
+                        articleItem(array(
+                            'media'  => 'vimeo',
+                            'size'   => 'small',
+                            'span'   => 4,
+                        ));
+                     
                     ?>
                 
                 </div>
@@ -85,6 +114,7 @@
             
                 <script>
                     $(document).ready(function() {
+                        
                         $('.article-thumbnails-carousel').each(function() {
                             $(this).owlCarousel({
                                 items : 1,
@@ -94,8 +124,13 @@
                                     '<i class="fa fa-angle-right fa-3x"></i>'
                                 ],
                                 loop : true
-                            })
-                        })
+                            });
+                        });
+                        
+                        $(window).load(function() {
+                            $('#blog-items').isotope();
+                        });
+                        
                     });
                 </script>
 				
@@ -112,5 +147,11 @@
     <?php include (ROOT.'/includes/ui-enhancements.php'); ?>
 
     <?php include (ROOT.'/includes/scripts.php'); ?>
+    
+    <?php if (env == 'dev') { ?>
+        <script src="<?php echo appDir ?>/build/scripts/isotope.pkgd.js"></script>
+    <?php } else if (env == 'prod') { ?>
+        <script src="<?php echo appDir ?>/build/scripts/isotope.pkgd.min.js"></script>
+    <?php } ?>
 
 </body>

@@ -53,7 +53,7 @@
                         ));
                     
                         articleItem(array(
-                            'media'  => 'video',
+                            'media'  => 'vimeo',
                             'size'   => 'small',
                             'span'   => 4,
                         ));
@@ -64,7 +64,7 @@
                         ));
                     
                         articleItem(array(
-                            'media'  => 'video',
+                            'media'  => 'youtube',
                             'size'   => 'small',
                             'span'   => 4,
                         ));

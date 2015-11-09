@@ -5692,6 +5692,17 @@ window['baseTransition'] = _module['base']['transition'].slice(0,-1) * 1000;
     
 //-----------------------------------------------------------------
 
+//-----------------------------------------------------------------
+// Data Background Images
+//-----------------------------------------------------------------
+
+function dataBG() {
+    $('[data-bg]').each(function() {
+        var bg = $(this).attr('data-bg');
+        $(this).prepend('<div class="bg-img" style="background-image: url(' + bg + ')"></div>')
+    });
+}
+
 $(document).ready(function() {
 
 //-----------------------------------------------------------------
@@ -5800,10 +5811,7 @@ $('.lightbox-gallery').each(function() {
 // Data Background Images
 //-----------------------------------------------------------------
 
-$('[data-bg]').each(function() {
-    var bg = $(this).attr('data-bg');
-    $(this).prepend('<div class="bg-img" style="background-image: url(' + bg + ')"></div>')
-});
+dataBG();
     
 //-----------------------------------------------------------------
 
@@ -6009,7 +6017,13 @@ $(document).ready(function() {
             // Pass any callback functions to the newly loaded items
             if (callback) {
                 ias.on('rendered', function(items) {
-                    callback();
+                    if (typeof(callback) == 'object') {
+                        callback.forEach(function (func) {
+                            func();
+                        });
+                    } else if (typeof(callback) == 'function') {
+                        callback();
+                    }
                 });
             }
         
