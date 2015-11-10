@@ -34,13 +34,50 @@
 				<div class="container">
 	
 					<div class="row-flow row-waffle-infinite">
-						
-						<?php 
-							$rows = 2; 
-							$columns = 3;
-							$widgetTitle = true;
-							include (ROOT.'/includes/portfolio-items.php'); 
-						?>
+                        
+                        <?php
+                            
+                            articleItem(array(
+                                'type'   => 'portfolio',
+                                'size'   => 'small',
+                                'span'   => 4,
+                            ));
+                            
+                            articleItem(array(
+                                'type'   => 'portfolio',
+                                'media'  => 'carousel',
+                                'size'   => 'small',
+                                'span'   => 4,
+                            ));
+                            
+                            articleItem(array(
+                                'type'   => 'portfolio',
+                                'media'  => 'youtube',
+                                'size'   => 'small',
+                                'span'   => 4,
+                            ));
+                            
+                            articleItem(array(
+                                'type'   => 'portfolio',
+                                'size'   => 'small',
+                                'span'   => 4,
+                            ));
+                            
+                            articleItem(array(
+                                'type'   => 'portfolio',
+                                'media'  => 'vimeo',
+                                'size'   => 'small',
+                                'span'   => 4,
+                            ));
+                            
+                            articleItem(array(
+                                'type'   => 'portfolio',
+                                'media'  => 'carousel',
+                                'size'   => 'small',
+                                'span'   => 4,
+                            ));
+                            
+                        ?>
 						
 					</div>
 				
@@ -49,13 +86,50 @@
 				<div class="container">
 	
 					<div class="row-flow row-waffle-infinite">
-						
-						<?php 
-							$rows = 2; 
-							$columns = 3;
-							$widgetTitle = true;
-							include (ROOT.'/includes/portfolio-items.php'); 
-						?>
+                        
+                        <?php
+                            
+                            articleItem(array(
+                                'type'   => 'portfolio',
+                                'size'   => 'small',
+                                'span'   => 4,
+                            ));
+                            
+                            articleItem(array(
+                                'type'   => 'portfolio',
+                                'media'  => 'carousel',
+                                'size'   => 'small',
+                                'span'   => 4,
+                            ));
+                            
+                            articleItem(array(
+                                'type'   => 'portfolio',
+                                'media'  => 'youtube',
+                                'size'   => 'small',
+                                'span'   => 4,
+                            ));
+                            
+                            articleItem(array(
+                                'type'   => 'portfolio',
+                                'size'   => 'small',
+                                'span'   => 4,
+                            ));
+                            
+                            articleItem(array(
+                                'type'   => 'portfolio',
+                                'media'  => 'vimeo',
+                                'size'   => 'small',
+                                'span'   => 4,
+                            ));
+                            
+                            articleItem(array(
+                                'type'   => 'portfolio',
+                                'media'  => 'carousel',
+                                'size'   => 'small',
+                                'span'   => 4,
+                            ));
+                            
+                        ?>
 						
 					</div>
 				
@@ -84,6 +158,18 @@
 					portfolioCarousel.find("+ .slide-nav .slide-prev").click(function() {
 						portfolioCarousel.trigger('prev.owl.carousel');
 					});
+					
+                    $('.article-thumbnails-carousel').each(function() {
+                        $(this).owlCarousel({
+                            items : 1,
+                            nav : true,
+                            navText : [
+                                '<i class="fa fa-angle-left fa-3x"></i>',
+                                '<i class="fa fa-angle-right fa-3x"></i>'
+                            ],
+                            loop : true
+                        })
+                    });
 					
 				});
 			</script>

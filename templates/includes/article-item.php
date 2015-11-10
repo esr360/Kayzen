@@ -10,28 +10,58 @@
     
         $options = array_merge(array(
             
-            'type'     => 'blog',
-            'media'    => 'image',
-            'size'     => null,
-            'height'   => null,
-            'span'     => null,
-            'thumb'    => rand(1, 7),
-            'thumbs'   => array(
+            'type'       => 'blog',
+            'media'      => 'image',
+            'size'       => null,
+            'height'     => null,
+            'span'       => null,
+            'thumb'      => rand(1, 7),
+            'thumbs'     => array(
                 rand(1, 7),
                 rand(1, 7),
                 rand(1, 7),
             ),
-            'title'    => 'Lorem ipsum dolor sit amet',
-            'date'     => array('Sep', 23),
-            'category' => 'HTML Themes',
-            'videoSrc' => 'https://player.vimeo.com/video/87701971',
-            'audioSrc' => 'https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/205050090&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true'
+            'title'      => 'Lorem ipsum dolor sit amet',
+            'date'       => array('Sep', 23),
+            'category'   => 'HTML Themes',
+            'categories' => array(
+                'HTML-theme',
+                'photography',
+                'logo'
+            ),
+            'videoSrc'   => 'https://player.vimeo.com/video/87701971',
+            'audioSrc'   => 'https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/205050090&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true'
             
         ), $custom);
         
+        /**
+         * Generate main class
+         */
+         
+        $class = 'widget';
+        if ($options['type'] === 'blog') {
+            $class = $class.'-article';
+        } else if ($options['type'] === 'portfolio') {
+            $class = $class.'-card';
+        }
+        if (!empty($options['span'])) {
+            $class = $class.' span-'.$options['span'];
+        }
+        
+        /**
+         * Generate item data-attribute
+         */
+         
+        $data = 'data-';
+        if ($options['type'] === 'blog') {
+            $data = $data.$options['media'];
+        } else if ($options['type'] === 'portfolio') {
+            $data = $data.$options['categories'][array_rand($options['categories'])];
+        }
+        
     ?>
 
-    <article class="widget-article <?php if (!empty($options['span'])) echo 'span-'.$options['span'] ?>" <?php echo 'data-'.$options['media'] ?>>
+    <article class="<?php echo $class ?>" <?php echo $data ?>>
         
         <? // Standard Image Article ?>
         <?php if ($options['media'] === 'image') { ?>
@@ -57,7 +87,10 @@
         <? // Vimeo Article ?>
         <?php } else if ($options['media'] === 'vimeo') { ?>
         
-            <div class="auto-resizable-iframe object" data-iframe-height="<?php if ($options['height'] ==='tall') { echo '100%'; } else { echo '56.25%'; } ?>">
+            <div
+                class="auto-resizable-iframe<?php if ($options['type'] === 'blog') echo ' object'?>" 
+                data-iframe-height="<?php if ($options['height'] ==='tall') { echo '100%'; } else { echo '56.25%'; } ?>"
+            >
                 <div>
                     <iframe src="<?php echo $options['videoSrc'] ?>" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
                 </div>
@@ -66,7 +99,9 @@
         <? // Youtube Article ?>
         <?php } else if ($options['media'] === 'youtube') { ?>
         
-            <div class="auto-resizable-iframe object" data-iframe-height="<?php if ($options['height'] ==='tall') { echo '100%'; } else { echo '56.25%'; } ?>">
+            <div 
+                class="auto-resizable-iframe<?php if ($options['type'] === 'blog') echo ' object'?>"
+                data-iframe-height="<?php if ($options['height'] ==='tall') { echo '100%'; } else { echo '56.25%'; } ?>">
                 <div>
                     <iframe allowfullscreen="" src="http://www.youtube.com/embed/Q3oItpVa9fs?theme=light"></iframe>
                 </div>
@@ -161,54 +196,72 @@
         
         <?php } ?>
         
-        <? // Article Title ?>
-        <header class="heading_group">
-            <div class="heading_date">
-                <div><?php echo $options['date'][0] ?></div>
-                <div><?php echo $options['date'][1] ?></div>
-            </div>
-            <?php if ($options['size'] === 'small') { ?>
-                <h2 class="heading-heavy-size-4 font-2"><?php echo $options['title'] ?></h2>
-                <h3 class="heading-light-size-2">Posted in <a href="#"><?php echo $options['category'] ?></a></h3>
-            <?php } else { ?>
-                <h2 class="heading-heavy-size-5 font-2"><?php echo $options['title'] ?></h2>
-                <h3 class="heading-light">Posted in <a href="#"><?php echo $options['category'] ?></a></h3>
-            <?php } ?>
-        </header>
+        <? // Article Title (Portfolio) ?>
+        <?php if ($options['type'] === 'portfolio') { ?>
         
-        <? // Article Blurb ?>
-        <?php if ($options['size'] === 'small') { ?>
-            <p class="blurb">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis blandit lectus ex, id feugiat felis consequat id. Nunc vel quam luctus, maximus justo eget...</p>
-        <?php } else { ?>
-            <p class="blurb">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis blandit lectus ex, id feugiat felis consequat id. Nunc vel quam luctus, maximus justo eget, laoreet massa. Maecenas congue sit amet ex quis egestas. Aliquam sapien sapien, dignissim ut tellus in...</p>
+            <div class="widget_content text-center">
+                <header class="heading_group">
+                    <h3 class="heading-heavy-size-3"><?php echo $options['title'] ?></h3>
+                    <h4 class="heading-light-uppercase-brand-1-size-2">Donec finibus fringer</h4>
+                </header>
+            </div>
+            
+        <?php } ?>
+        
+        <?php if ($options['type'] === 'blog') { ?>
+        
+            <? // Article Title (Blog) ?>
+            <header class="heading_group">
+                <div class="heading_date">
+                    <div><?php echo $options['date'][0] ?></div>
+                    <div><?php echo $options['date'][1] ?></div>
+                </div>
+                <?php if ($options['size'] === 'small') { ?>
+                    <h2 class="heading-heavy-size-4 font-2"><?php echo $options['title'] ?></h2>
+                    <h3 class="heading-light-size-2">Posted in <a href="#"><?php echo $options['category'] ?></a></h3>
+                <?php } else { ?>
+                    <h2 class="heading-heavy-size-5 font-2"><?php echo $options['title'] ?></h2>
+                    <h3 class="heading-light">Posted in <a href="#"><?php echo $options['category'] ?></a></h3>
+                <?php } ?>
+            </header>
+        
+            <? // Article Blurb ?>
+            <?php if ($options['size'] === 'small') { ?>
+                <p class="blurb">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis blandit lectus ex, id feugiat felis consequat id. Nunc vel quam luctus, maximus justo eget...</p>
+            <?php } else { ?>
+                <p class="blurb">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis blandit lectus ex, id feugiat felis consequat id. Nunc vel quam luctus, maximus justo eget, laoreet massa. Maecenas congue sit amet ex quis egestas. Aliquam sapien sapien, dignissim ut tellus in...</p>
+            <?php } ?>
+                
         <?php } ?>
         
         <? // Article Meta ?>
-        <small>
-            <div class="row-block">
-                <div class="span va-middle">
-                    <ul class="list-reset-inline">
-                        <?php if ($options['type'] === 'blog') { ?>
-                            <li><i class="fa fa-user"></i> <a href="#">John Doe</a></li>
-                        <?php } ?>
-                        <?php if (!$options['size'] === 'small' || $options['type'] === 'portfolio') { ?>
-                            <li><i class="fa fa-comment-o"></i> <a href="#">3 Comments</a></li>
-                            <li>
-                                <ul class="list-tags">
-                                    <li class="title">Tags:</li>
-                                    <li class="plain"><a href="#">Web Design</a></li>
-                                    <li class="plain"><a href="#">HTML</a></li>
-                                    <li class="plain"><a href="#">CSS</a></li>
-                                </ul>
-                            </li>
-                        <?php } ?>
-                    </ul>
+        <?php if (!$options['type'] === 'portfolio' && !empty($options['span'])) { ?>
+            <small>
+                <div class="row-block">
+                    <div class="span va-middle">
+                        <ul class="list-reset-inline">
+                            <?php if ($options['type'] === 'blog') { ?>
+                                <li><i class="fa fa-user"></i> <a href="#">John Doe</a></li>
+                            <?php } ?>
+                            <?php if (!$options['size'] === 'small' || $options['type'] === 'portfolio') { ?>
+                                <li><i class="fa fa-comment-o"></i> <a href="#">3 Comments</a></li>
+                                <li>
+                                    <ul class="list-tags">
+                                        <li class="title">Tags:</li>
+                                        <li class="plain"><a href="#">Web Design</a></li>
+                                        <li class="plain"><a href="#">HTML</a></li>
+                                        <li class="plain"><a href="#">CSS</a></li>
+                                    </ul>
+                                </li>
+                            <?php } ?>
+                        </ul>
+                    </div>
+                    <div class="span va-middle text-right">
+                        <a href="#" class="button-primary">Read More</a>
+                    </div>
                 </div>
-                <div class="span va-middle text-right">
-                    <a href="#" class="button-primary">Read More</a>
-                </div>
-            </div>
-        </small>
+            </small>
+        <?php } ?>
         
     </article>
 

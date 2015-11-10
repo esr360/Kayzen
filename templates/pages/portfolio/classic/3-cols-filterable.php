@@ -41,12 +41,89 @@
             <div class="container">
 
                 <div id="portfolio-items" class="row-flow row-waffle-filterable">
-                    
-                    <?php 
-                        $rows = 4; 
-                        $columns = 3;
-                        $widgetTitle = true;
-                        include (ROOT.'/includes/portfolio-items.php'); 
+                        
+                    <?php
+                        
+                        articleItem(array(
+                            'type'   => 'portfolio',
+                            'size'   => 'small',
+                            'span'   => 4,
+                        ));
+                        
+                        articleItem(array(
+                            'type'   => 'portfolio',
+                            'media'  => 'carousel',
+                            'size'   => 'small',
+                            'span'   => 4,
+                        ));
+                        
+                        articleItem(array(
+                            'type'   => 'portfolio',
+                            'media'  => 'youtube',
+                            'size'   => 'small',
+                            'span'   => 4,
+                        ));
+                        
+                        articleItem(array(
+                            'type'   => 'portfolio',
+                            'size'   => 'small',
+                            'span'   => 4,
+                        ));
+                        
+                        articleItem(array(
+                            'type'   => 'portfolio',
+                            'media'  => 'vimeo',
+                            'size'   => 'small',
+                            'span'   => 4,
+                        ));
+                        
+                        articleItem(array(
+                            'type'   => 'portfolio',
+                            'media'  => 'carousel',
+                            'size'   => 'small',
+                            'span'   => 4,
+                        ));
+                        
+                        articleItem(array(
+                            'type'   => 'portfolio',
+                            'size'   => 'small',
+                            'span'   => 4,
+                        ));
+                        
+                        articleItem(array(
+                            'type'   => 'portfolio',
+                            'media'  => 'carousel',
+                            'size'   => 'small',
+                            'span'   => 4,
+                        ));
+                        
+                        articleItem(array(
+                            'type'   => 'portfolio',
+                            'media'  => 'youtube',
+                            'size'   => 'small',
+                            'span'   => 4,
+                        ));
+                        
+                        articleItem(array(
+                            'type'   => 'portfolio',
+                            'size'   => 'small',
+                            'span'   => 4,
+                        ));
+                        
+                        articleItem(array(
+                            'type'   => 'portfolio',
+                            'media'  => 'vimeo',
+                            'size'   => 'small',
+                            'span'   => 4,
+                        ));
+                        
+                        articleItem(array(
+                            'type'   => 'portfolio',
+                            'media'  => 'carousel',
+                            'size'   => 'small',
+                            'span'   => 4,
+                        ));
+                        
                     ?>
                     
                 </div>
@@ -55,6 +132,18 @@
                     $(document).ready(function() {
                         
                         $('#portfolio-categories').KayzenClickHelper();
+					
+                        $('.article-thumbnails-carousel').each(function() {
+                            $(this).owlCarousel({
+                                items : 1,
+                                nav : true,
+                                navText : [
+                                    '<i class="fa fa-angle-left fa-3x"></i>',
+                                    '<i class="fa fa-angle-right fa-3x"></i>'
+                                ],
+                                loop : true
+                            })
+                        });
                         
                         $('#portfolio-items').isotope();
                         
