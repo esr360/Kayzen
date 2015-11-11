@@ -99,13 +99,63 @@
 				<div class="container">
 	
 					<div class="row-flow row-waffle">
-						
-						<?php 
-							$rows = 2; 
-							$columns = 4;
-							$widgetTitle = true;
-							include (ROOT.'/includes/portfolio-items.php'); 
-						?>
+                        
+                        <?php
+                            
+                            articleItem(array(
+                                'type'   => 'portfolio',
+                                'size'   => 'small',
+                                'span'   => 3,
+                            ));
+                            
+                            articleItem(array(
+                                'type'   => 'portfolio',
+                                'media'  => 'carousel',
+                                'size'   => 'small',
+                                'span'   => 3,
+                            ));
+                            
+                            articleItem(array(
+                                'type'   => 'portfolio',
+                                'media'  => 'youtube',
+                                'size'   => 'small',
+                                'span'   => 3,
+                            ));
+                            
+                            articleItem(array(
+                                'type'   => 'portfolio',
+                                'size'   => 'small',
+                                'span'   => 3,
+                            ));
+                            
+                            articleItem(array(
+                                'type'   => 'portfolio',
+                                'media'  => 'vimeo',
+                                'size'   => 'small',
+                                'span'   => 3,
+                            ));
+                            
+                            articleItem(array(
+                                'type'   => 'portfolio',
+                                'media'  => 'carousel',
+                                'size'   => 'small',
+                                'span'   => 3,
+                            ));
+                            
+                            articleItem(array(
+                                'type'   => 'portfolio',
+                                'size'   => 'small',
+                                'span'   => 3,
+                            ));
+                            
+                            articleItem(array(
+                                'type'   => 'portfolio',
+                                'media'  => 'carousel',
+                                'size'   => 'small',
+                                'span'   => 3,
+                            ));
+                            
+                        ?>
 						
 					</div>
 				

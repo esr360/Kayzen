@@ -45,44 +45,226 @@
 			<div id="portfolio-carousel" class="owl-carousel">
 	
 				<div class="row-no-gutter">
-					
-					<?php 
-						$rows = 2; 
-						$columns = 4;
-						$thumbTitle = true;
-						include (ROOT.'/includes/portfolio-items.php'); 
-					?>
+                    
+                    <?php
+                        
+                        articleItem(array(
+                            'type'   => 'portfolio',
+                            'matrix' => true,
+                            'span'   => 3,
+                        ));
+                        
+                        articleItem(array(
+                            'type'   => 'portfolio',
+                            'matrix' => true,
+                            'span'   => 3,
+                        ));
+                        
+                        articleItem(array(
+                            'type'   => 'portfolio',
+                            'matrix' => true,
+                            'span'   => 3,
+                        ));
+                        
+                        articleItem(array(
+                            'type'   => 'portfolio',
+                            'matrix' => true,
+                            'span'   => 3,
+                        ));
+                        
+                        articleItem(array(
+                            'type'   => 'portfolio',
+                            'matrix' => true,
+                            'span'   => 3,
+                        ));
+                        
+                        articleItem(array(
+                            'type'   => 'portfolio',
+                            'matrix' => true,
+                            'span'   => 3,
+                        ));
+                        
+                        articleItem(array(
+                            'type'   => 'portfolio',
+                            'matrix' => true,
+                            'span'   => 3,
+                        ));
+                        
+                        articleItem(array(
+                            'type'   => 'portfolio',
+                            'matrix' => true,
+                            'span'   => 3,
+                        ));
+                        
+                    ?>
 					
 				</div>
 
 				<div class="row-no-gutter">
-					
-					<?php 
-						$rows = 2; 
-						$columns = 4;
-						$thumbTitle = true;
-						include (ROOT.'/includes/portfolio-items.php'); 
-					?>
+                    
+                    <?php
+                        
+                        articleItem(array(
+                            'type'   => 'portfolio',
+                            'matrix' => true,
+                            'span'   => 3,
+                        ));
+                        
+                        articleItem(array(
+                            'type'   => 'portfolio',
+                            'matrix' => true,
+                            'span'   => 3,
+                        ));
+                        
+                        articleItem(array(
+                            'type'   => 'portfolio',
+                            'matrix' => true,
+                            'span'   => 3,
+                        ));
+                        
+                        articleItem(array(
+                            'type'   => 'portfolio',
+                            'matrix' => true,
+                            'span'   => 3,
+                        ));
+                        
+                        articleItem(array(
+                            'type'   => 'portfolio',
+                            'matrix' => true,
+                            'span'   => 3,
+                        ));
+                        
+                        articleItem(array(
+                            'type'   => 'portfolio',
+                            'matrix' => true,
+                            'span'   => 3,
+                        ));
+                        
+                        articleItem(array(
+                            'type'   => 'portfolio',
+                            'matrix' => true,
+                            'span'   => 3,
+                        ));
+                        
+                        articleItem(array(
+                            'type'   => 'portfolio',
+                            'matrix' => true,
+                            'span'   => 3,
+                        ));
+                        
+                    ?>
 					
 				</div>
 
 				<div class="row-no-gutter">
-					
-					<?php 
-						$rows = 2; 
-						$columns = 4;
-						include (ROOT.'/includes/portfolio-items.php'); 
-					?>
+                    
+                    <?php
+                        
+                        articleItem(array(
+                            'type'   => 'portfolio',
+                            'matrix' => true,
+                            'span'   => 3,
+                        ));
+                        
+                        articleItem(array(
+                            'type'   => 'portfolio',
+                            'matrix' => true,
+                            'span'   => 3,
+                        ));
+                        
+                        articleItem(array(
+                            'type'   => 'portfolio',
+                            'matrix' => true,
+                            'span'   => 3,
+                        ));
+                        
+                        articleItem(array(
+                            'type'   => 'portfolio',
+                            'matrix' => true,
+                            'span'   => 3,
+                        ));
+                        
+                        articleItem(array(
+                            'type'   => 'portfolio',
+                            'matrix' => true,
+                            'span'   => 3,
+                        ));
+                        
+                        articleItem(array(
+                            'type'   => 'portfolio',
+                            'matrix' => true,
+                            'span'   => 3,
+                        ));
+                        
+                        articleItem(array(
+                            'type'   => 'portfolio',
+                            'matrix' => true,
+                            'span'   => 3,
+                        ));
+                        
+                        articleItem(array(
+                            'type'   => 'portfolio',
+                            'matrix' => true,
+                            'span'   => 3,
+                        ));
+                        
+                    ?>
 					
 				</div>
 
 				<div class="row-no-gutter">
-					
-					<?php 
-						$rows = 2; 
-						$columns = 4;
-						include (ROOT.'/includes/portfolio-items.php'); 
-					?>
+                    
+                    <?php
+                        
+                        articleItem(array(
+                            'type'   => 'portfolio',
+                            'matrix' => true,
+                            'span'   => 3,
+                        ));
+                        
+                        articleItem(array(
+                            'type'   => 'portfolio',
+                            'matrix' => true,
+                            'span'   => 3,
+                        ));
+                        
+                        articleItem(array(
+                            'type'   => 'portfolio',
+                            'matrix' => true,
+                            'span'   => 3,
+                        ));
+                        
+                        articleItem(array(
+                            'type'   => 'portfolio',
+                            'matrix' => true,
+                            'span'   => 3,
+                        ));
+                        
+                        articleItem(array(
+                            'type'   => 'portfolio',
+                            'matrix' => true,
+                            'span'   => 3,
+                        ));
+                        
+                        articleItem(array(
+                            'type'   => 'portfolio',
+                            'matrix' => true,
+                            'span'   => 3,
+                        ));
+                        
+                        articleItem(array(
+                            'type'   => 'portfolio',
+                            'matrix' => true,
+                            'span'   => 3,
+                        ));
+                        
+                        articleItem(array(
+                            'type'   => 'portfolio',
+                            'matrix' => true,
+                            'span'   => 3,
+                        ));
+                        
+                    ?>
 					
 				</div>
 							

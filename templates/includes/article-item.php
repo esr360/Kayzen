@@ -36,13 +36,20 @@
         ), $custom);
         
         /**
+         * Act as article?
+         */
+         
+         $isArticle = $options['type'] === 'blog' || ($options['type'] === 'portfolio' && empty($options['span']));
+         
+        
+        /**
          * Generate main class
          */
          
         $class = 'widget';
-        if ($options['type'] === 'blog') {
+        if ($isArticle) {
             $class = $class.'-article';
-        } else if ($options['type'] === 'portfolio') {
+        } else {
             $class = $class.'-card';
         }
         if (!empty($options['span'])) {
@@ -99,7 +106,7 @@
         <?php } else if ($options['media'] === 'vimeo') { ?>
         
             <div
-                class="auto-resizable-iframe<?php if ($options['type'] === 'blog') echo ' object'?>" 
+                class="auto-resizable-iframe<?php if ($isArticle) echo ' object'?>" 
                 data-iframe-height="<?php if ($options['height'] ==='tall') { echo '100%'; } else { echo '56.25%'; } ?>"
             >
                 <div>
@@ -111,7 +118,7 @@
         <?php } else if ($options['media'] === 'youtube') { ?>
         
             <div 
-                class="auto-resizable-iframe<?php if ($options['type'] === 'blog') echo ' object'?>"
+                class="auto-resizable-iframe<?php if ($isArticle) echo ' object'?>"
                 data-iframe-height="<?php if ($options['height'] ==='tall') { echo '100%'; } else { echo '56.25%'; } ?>">
                 <div>
                     <iframe allowfullscreen="" src="http://www.youtube.com/embed/Q3oItpVa9fs?theme=light"></iframe>
@@ -209,7 +216,7 @@
         <?php } ?>
         
         <? // Article Title (Portfolio) ?>
-        <?php if ($options['type'] === 'portfolio' && !$options['matrix']) { ?>
+        <?php if ($options['type'] === 'portfolio' && !$options['matrix'] && !empty($options['span'])) { ?>
         
             <div class="widget_content text-center">
                 <header class="heading_group">
@@ -220,7 +227,7 @@
             
         <?php } ?>
         
-        <?php if ($options['type'] === 'blog') { ?>
+        <?php if ( $options['type'] === 'blog' || ($options['type'] === 'portfolio' && empty($options['span'])) ) { ?>
         
             <? // Article Title (Blog) ?>
             <header class="heading_group">
@@ -247,7 +254,7 @@
         <?php } ?>
         
         <? // Article Meta ?>
-        <?php if (!$options['type'] === 'portfolio' && !empty($options['span'])) { ?>
+        <?php if ( !$options['type'] === 'portfolio' || ($options['type'] === 'portfolio' && empty($options['span'])) ) { ?>
             <small>
                 <div class="row-block">
                     <div class="span va-middle">

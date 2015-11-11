@@ -32,19 +32,99 @@
             <div class="container">
 			
                 <div id="portfolio-items" class="row-no-gutter">
-        
-                    <?php 
-                        $rows = 3; 
-                        $columns = 3;
-                        $thumbTitle = true;
-                        include (ROOT.'/includes/portfolio-items.php'); 
+
+                    <?php
+                        
+                        articleItem(array(
+                            'type'   => 'portfolio',
+                            'matrix' => true,
+                            'span'   => 4,
+                        ));
+                        
+                        articleItem(array(
+                            'type'   => 'portfolio',
+                            'matrix' => true,
+                            'span'   => 4,
+                        ));
+                        
+                        articleItem(array(
+                            'type'   => 'portfolio',
+                            'matrix' => true,
+                            'span'   => 4,
+                        ));
+                        
+                        articleItem(array(
+                            'type'   => 'portfolio',
+                            'matrix' => true,
+                            'span'   => 4,
+                        ));
+                        
+                        articleItem(array(
+                            'type'   => 'portfolio',
+                            'matrix' => true,
+                            'span'   => 4,
+                        ));
+                        
+                        articleItem(array(
+                            'type'   => 'portfolio',
+                            'matrix' => true,
+                            'span'   => 4,
+                        ));
+                        
+                        articleItem(array(
+                            'type'   => 'portfolio',
+                            'matrix' => true,
+                            'span'   => 4,
+                        ));
+                        
+                        articleItem(array(
+                            'type'   => 'portfolio',
+                            'matrix' => true,
+                            'span'   => 4,
+                        ));
+                        
+                        articleItem(array(
+                            'type'   => 'portfolio',
+                            'matrix' => true,
+                            'span'   => 4,
+                        ));
+                        
+                        articleItem(array(
+                            'type'   => 'portfolio',
+                            'matrix' => true,
+                            'span'   => 4,
+                        ));
+                        
+                        articleItem(array(
+                            'type'   => 'portfolio',
+                            'matrix' => true,
+                            'span'   => 4,
+                        ));
+                        
+                        articleItem(array(
+                            'type'   => 'portfolio',
+                            'matrix' => true,
+                            'span'   => 4,
+                        ));
+                        
                     ?>
                                 
                 </div><!-- portfolio-items -->
                     
                 <script>
                     $(document).ready(function() {
-                        $("#portfolio-items").KayenInfiniteScroll();
+                        
+                        // Redefine the lightbox plugin to pass to infiniteScroll
+                        function articlesGallery() {
+                            $('[rel="lightbox"]').magnificPopup({
+                                type : 'image'
+                            });
+                        };
+
+                        $("#portfolio-items").KayenInfiniteScroll({
+                            isotopeGrid : false
+                        }, articlesGallery);
+                        
                     });
                 </script>
                 

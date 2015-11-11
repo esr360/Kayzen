@@ -5866,7 +5866,8 @@ $(document).ready(function() {
             owlOptions : {
                 items     : 1,
                 loop      : true,
-                dots      : false
+                dots      : false,
+                mouseDrag : false
             }
             
         }, custom);

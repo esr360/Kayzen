@@ -128,9 +128,16 @@
                             });
                         } articlesCarousel();
                         
+                        // Redefine the lightbox plugin to pass to infiniteScroll
+                        function articlesGallery() {
+                            $('[rel="lightbox"]').magnificPopup({
+                                type : 'image'
+                            });
+                        };
+                        
                         $(window).load(function() {
                             $('#portfolio-items').isotope();
-                            $("#portfolio-items").KayenInfiniteScroll({}, articlesCarousel);
+                            $("#portfolio-items").KayenInfiniteScroll({}, [articlesCarousel, articlesGallery]);
                         });
                         
                     });

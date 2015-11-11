@@ -41,12 +41,81 @@
             <div class="container">
 			
                 <div id="portfolio-items" class="row-no-gutter row-filterable">
-        
-                    <?php 
-                        $rows = 4; 
-                        $columns = 3;
-                        $thumbTitle = true;
-                        include (ROOT.'/includes/portfolio-items.php'); 
+
+                    <?php
+                        
+                        articleItem(array(
+                            'type'   => 'portfolio',
+                            'matrix' => true,
+                            'span'   => 4,
+                        ));
+                        
+                        articleItem(array(
+                            'type'   => 'portfolio',
+                            'matrix' => true,
+                            'span'   => 4,
+                        ));
+                        
+                        articleItem(array(
+                            'type'   => 'portfolio',
+                            'matrix' => true,
+                            'span'   => 4,
+                        ));
+                        
+                        articleItem(array(
+                            'type'   => 'portfolio',
+                            'matrix' => true,
+                            'span'   => 4,
+                        ));
+                        
+                        articleItem(array(
+                            'type'   => 'portfolio',
+                            'matrix' => true,
+                            'span'   => 4,
+                        ));
+                        
+                        articleItem(array(
+                            'type'   => 'portfolio',
+                            'matrix' => true,
+                            'span'   => 4,
+                        ));
+                        
+                        articleItem(array(
+                            'type'   => 'portfolio',
+                            'matrix' => true,
+                            'span'   => 4,
+                        ));
+                        
+                        articleItem(array(
+                            'type'   => 'portfolio',
+                            'matrix' => true,
+                            'span'   => 4,
+                        ));
+                        
+                        articleItem(array(
+                            'type'   => 'portfolio',
+                            'matrix' => true,
+                            'span'   => 4,
+                        ));
+                        
+                        articleItem(array(
+                            'type'   => 'portfolio',
+                            'matrix' => true,
+                            'span'   => 4,
+                        ));
+                        
+                        articleItem(array(
+                            'type'   => 'portfolio',
+                            'matrix' => true,
+                            'span'   => 4,
+                        ));
+                        
+                        articleItem(array(
+                            'type'   => 'portfolio',
+                            'matrix' => true,
+                            'span'   => 4,
+                        ));
+                        
                     ?>
                                 
                 </div><!-- portfolio-items -->
@@ -56,12 +125,13 @@
                         
                         $('#portfolio-categories').KayzenClickHelper();
                         
-                        $('#portfolio-items').isotope();
-                        
-                        $('#portfolio-categories').on('click', 'li', function() {
-                            var filterValue = $(this).attr('data-filter');
-                            $('#portfolio-items').isotope({ 
-                                filter: filterValue 
+                        $(window).load(function() {
+                            $('#portfolio-items').isotope();
+                            $('#portfolio-categories').on('click', 'li', function() {
+                                var filterValue = $(this).attr('data-filter');
+                                $('#portfolio-items').isotope({ 
+                                    filter: filterValue 
+                                });
                             });
                         });
                         

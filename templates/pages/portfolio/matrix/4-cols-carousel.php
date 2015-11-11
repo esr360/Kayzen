@@ -34,13 +34,94 @@
 				<div class="container">
 	
 					<div class="row-no-gutter">
-						
-						<?php 
-							$rows = 3; 
-							$columns = 4;
-							$thumbTitle = 'small';
-							include (ROOT.'/includes/portfolio-items.php'); 
-						?>
+    
+                        <?php
+                            
+                            articleItem(array(
+                                'type'   => 'portfolio',
+                                'matrix' => true,
+                                'size'   => 'small',
+                                'span'   => 3,
+                            ));
+                            
+                            articleItem(array(
+                                'type'   => 'portfolio',
+                                'matrix' => true,
+                                'size'   => 'small',
+                                'span'   => 3,
+                            ));
+                            
+                            articleItem(array(
+                                'type'   => 'portfolio',
+                                'matrix' => true,
+                                'size'   => 'small',
+                                'span'   => 3,
+                            ));
+                            
+                            articleItem(array(
+                                'type'   => 'portfolio',
+                                'matrix' => true,
+                                'size'   => 'small',
+                                'span'   => 3,
+                            ));
+                            
+                            articleItem(array(
+                                'type'   => 'portfolio',
+                                'matrix' => true,
+                                'size'   => 'small',
+                                'span'   => 3,
+                            ));
+                            
+                            articleItem(array(
+                                'type'   => 'portfolio',
+                                'matrix' => true,
+                                'size'   => 'small',
+                                'span'   => 3,
+                            ));
+                            
+                            articleItem(array(
+                                'type'   => 'portfolio',
+                                'matrix' => true,
+                                'size'   => 'small',
+                                'span'   => 3,
+                            ));
+                            
+                            articleItem(array(
+                                'type'   => 'portfolio',
+                                'matrix' => true,
+                                'size'   => 'small',
+                                'span'   => 3,
+                            ));
+                            
+                            articleItem(array(
+                                'type'   => 'portfolio',
+                                'matrix' => true,
+                                'size'   => 'small',
+                                'span'   => 3,
+                            ));
+                            
+                            articleItem(array(
+                                'type'   => 'portfolio',
+                                'matrix' => true,
+                                'size'   => 'small',
+                                'span'   => 3,
+                            ));
+                            
+                            articleItem(array(
+                                'type'   => 'portfolio',
+                                'matrix' => true,
+                                'size'   => 'small',
+                                'span'   => 3,
+                            ));
+                            
+                            articleItem(array(
+                                'type'   => 'portfolio',
+                                'matrix' => true,
+                                'size'   => 'small',
+                                'span'   => 3,
+                            ));
+                            
+                        ?>
 						
 					</div>
 				
@@ -49,13 +130,94 @@
 				<div class="container">
 	
 					<div class="row-no-gutter">
-						
-						<?php 
-							$rows = 3; 
-							$columns = 4;
-							$thumbTitle = 'small';
-							include (ROOT.'/includes/portfolio-items.php'); 
-						?>
+    
+                        <?php
+                            
+                            articleItem(array(
+                                'type'   => 'portfolio',
+                                'matrix' => true,
+                                'size'   => 'small',
+                                'span'   => 3,
+                            ));
+                            
+                            articleItem(array(
+                                'type'   => 'portfolio',
+                                'matrix' => true,
+                                'size'   => 'small',
+                                'span'   => 3,
+                            ));
+                            
+                            articleItem(array(
+                                'type'   => 'portfolio',
+                                'matrix' => true,
+                                'size'   => 'small',
+                                'span'   => 3,
+                            ));
+                            
+                            articleItem(array(
+                                'type'   => 'portfolio',
+                                'matrix' => true,
+                                'size'   => 'small',
+                                'span'   => 3,
+                            ));
+                            
+                            articleItem(array(
+                                'type'   => 'portfolio',
+                                'matrix' => true,
+                                'size'   => 'small',
+                                'span'   => 3,
+                            ));
+                            
+                            articleItem(array(
+                                'type'   => 'portfolio',
+                                'matrix' => true,
+                                'size'   => 'small',
+                                'span'   => 3,
+                            ));
+                            
+                            articleItem(array(
+                                'type'   => 'portfolio',
+                                'matrix' => true,
+                                'size'   => 'small',
+                                'span'   => 3,
+                            ));
+                            
+                            articleItem(array(
+                                'type'   => 'portfolio',
+                                'matrix' => true,
+                                'size'   => 'small',
+                                'span'   => 3,
+                            ));
+                            
+                            articleItem(array(
+                                'type'   => 'portfolio',
+                                'matrix' => true,
+                                'size'   => 'small',
+                                'span'   => 3,
+                            ));
+                            
+                            articleItem(array(
+                                'type'   => 'portfolio',
+                                'matrix' => true,
+                                'size'   => 'small',
+                                'span'   => 3,
+                            ));
+                            
+                            articleItem(array(
+                                'type'   => 'portfolio',
+                                'matrix' => true,
+                                'size'   => 'small',
+                                'span'   => 3,
+                            ));
+                            
+                            articleItem(array(
+                                'type'   => 'portfolio',
+                                'matrix' => true,
+                                'size'   => 'small',
+                                'span'   => 3,
+                            ));
+                            
+                        ?>
 						
 					</div>
 				
