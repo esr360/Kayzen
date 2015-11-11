@@ -254,7 +254,7 @@
         <?php } ?>
         
         <? // Article Meta ?>
-        <?php if ( !$options['type'] === 'portfolio' || ($options['type'] === 'portfolio' && empty($options['span'])) ) { ?>
+        <?php if ( $options['type'] === 'blog' || ($options['type'] === 'portfolio' && empty($options['span'])) ) { ?>
             <small>
                 <div class="row-block">
                     <div class="span va-middle">
@@ -262,7 +262,7 @@
                             <?php if ($options['type'] === 'blog') { ?>
                                 <li><i class="fa fa-user"></i> <a href="#">John Doe</a></li>
                             <?php } ?>
-                            <?php if (!$options['size'] === 'small' || $options['type'] === 'portfolio') { ?>
+                            <?php if (!$options['size'] == 'small') { ?>
                                 <li><i class="fa fa-comment-o"></i> <a href="#">3 Comments</a></li>
                                 <li>
                                     <ul class="list-tags">
