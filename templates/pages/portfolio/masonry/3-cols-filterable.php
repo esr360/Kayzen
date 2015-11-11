@@ -42,82 +42,119 @@
 
                 <div class="row-flow row-waffle-filterable" id="portfolio-items">
                     
-                    <?php 
-						$span = 4;
-                        $filterItems = 'data-HTML-theme';
-                        $img = 'wallpapers/tall/bg-7.jpg';
-						include (ROOT.'/includes/masonry-item.php'); 
-					?>
-                    
-                    <?php 
-						$span = 4;
-                        $filterItems = 'data-photography data-logo';
-                        $img = 'wallpapers/bg-5.jpg';
-						include (ROOT.'/includes/masonry-item.php'); 
-					?>
-                    
-                    <?php 
-						$span = 4;
-                        $filterItems = 'data-logo';
-                        $img = 'wallpapers/tall/bg-7.jpg';
-						include (ROOT.'/includes/masonry-item.php'); 
-					?>
-                    
-                    <?php 
-						$span = 4;
-                        $filterItems = 'data-HTML-theme data-logo';
-                        $img = 'wallpapers/tall/bg-7.jpg';
-						include (ROOT.'/includes/masonry-item.php'); 
-					?>
-                    
-                    <?php 
-						$span = 4;
-                        $filterItems = 'data-photography';
-                        $img = 'wallpapers/bg-3.jpg';
-						include (ROOT.'/includes/masonry-item.php'); 
-					?>
-                    
-                    <?php 
-						$span = 4;
-                        $filterItems = 'data-HTML-theme data-photography';
-                        $img = 'wallpapers/tall/bg-7.jpg';
-						include (ROOT.'/includes/masonry-item.php'); 
-					?>
-                    
-                    <?php 
-						$span = 4;
-                        $filterItems = 'data-photography';
-                        $img = 'wallpapers/tall/bg-7.jpg';
-						include (ROOT.'/includes/masonry-item.php'); 
-					?>
-                    
-                    <?php 
-						$span = 4;
-                        $filterItems = 'data-logo';
-                        $img = 'wallpapers/bg-6.jpg';
-						include (ROOT.'/includes/masonry-item.php'); 
-					?>
-                    
-                    <?php 
-						$span = 4;
-                        $filterItems = 'data-HTML-theme';
-                        $img = 'wallpapers/bg-4.jpg';
-						include (ROOT.'/includes/masonry-item.php'); 
-					?>
+                    <?php
+                        
+                        articleItem(array(
+                            'type'   => 'portfolio',
+                            'size'   => 'small',
+                            'height' => 'tall',
+                            'span'   => 4,
+                        ));
+                        
+                        articleItem(array(
+                            'type'   => 'portfolio',
+                            'media'  => 'vimeo',
+                            'size'   => 'small',
+                            'span'   => 4,
+                        ));
+                        
+                        articleItem(array(
+                            'type'   => 'portfolio',
+                            'media'  => 'carousel',
+                            'size'   => 'small',
+                            'height' => 'tall',
+                            'span'   => 4,
+                        ));
+                        
+                        articleItem(array(
+                            'type'   => 'portfolio',
+                            'media'  => 'audio',
+                            'size'   => 'small',
+                            'height' => 'tall',
+                            'span'   => 4,
+                        ));
+                        
+                        articleItem(array(
+                            'type'   => 'portfolio',
+                            'media'  => 'youtube',
+                            'size'   => 'small',
+                            'height' => 'tall',
+                            'span'   => 4,
+                        ));
+                        
+                        articleItem(array(
+                            'type'   => 'portfolio',
+                            'size'   => 'small',
+                            'span'   => 4,
+                        ));
+                        
+                        articleItem(array(
+                            'type'   => 'portfolio',
+                            'media'  => 'carousel',
+                            'size'   => 'small',
+                            'span'   => 4,
+                        ));
+                        
+                        articleItem(array(
+                            'type'   => 'portfolio',
+                            'media'  => 'carousel',
+                            'size'   => 'small',
+                            'height' => 'tall',
+                            'span'   => 4,
+                        ));
+                        
+                        articleItem(array(
+                            'type'   => 'portfolio',
+                            'media'  => 'audio',
+                            'size'   => 'small',
+                            'span'   => 4,
+                        ));
+                        
+                        articleItem(array(
+                            'type'   => 'portfolio',
+                            'media'  => 'vimeo',
+                            'size'   => 'small',
+                            'span'   => 4,
+                        ));
+                     
+                    ?>
                     
                 </div>
+                
+                <ul class="pagination tabs_nav-pills object-center">
+                    <li class="button-pill-grey-1-thin"><i class="fa fa-angle-left"></i></li>
+                    <li class="button-pill-grey-1-thin">1</li>
+                    <li class="button-pill-grey-1-thin active">2</li>
+                    <li class="button-pill-grey-1-thin">3</li>
+                    <li class="button-pill-grey-1-thin">...</li>
+                    <li class="button-pill-grey-1-thin">10</li>
+                    <li class="button-pill-grey-1-thin"><i class="fa fa-angle-right"></i></li>
+                </ul>
                 
                 <script>
                     $(document).ready(function() {
                         
                         $('#portfolio-categories').KayzenClickHelper();
                         
-                        $('#portfolio-items').isotope();
+                        $('.article-thumbnails-carousel').each(function() {
+                            $(this).owlCarousel({
+                                items : 1,
+                                nav : true,
+                                navText : [
+                                    '<i class="fa fa-angle-left fa-3x"></i>',
+                                    '<i class="fa fa-angle-right fa-3x"></i>'
+                                ],
+                                loop : true
+                            });
+                        });
                         
-                        $('#portfolio-categories').on('click', 'li', function() {
-                            var filterValue = $(this).attr('data-filter');
-                            $('#portfolio-items').isotope({ 
-                                filter: filterValue 
+                        $(window).load(function() {
+                            $('#portfolio-items').isotope();
+                            $('#portfolio-categories').on('click', 'li', function() {
+                                var filterValue = $(this).attr('data-filter');
+                                $('#portfolio-items').isotope({ 
+                                    filter: filterValue 
+                                });
                             });
                         });
                         

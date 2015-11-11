@@ -33,68 +33,82 @@
 
                 <div class="row-flow row-waffle" id="portfolio-items">
                     
-                    <?php 
-						$span = 4;
-                        $filterItems = 'filter-HTML-theme';
-                        $img = 'wallpapers/tall/bg-7.jpg';
-						include (ROOT.'/includes/masonry-item.php'); 
-					?>
-                    
-                    <?php 
-						$span = 4;
-                        $filterItems = 'filter-photography filter-logo';
-                        $img = 'wallpapers/bg-5.jpg';
-						include (ROOT.'/includes/masonry-item.php'); 
-					?>
-                    
-                    <?php 
-						$span = 4;
-                        $filterItems = 'filter-logo';
-                        $img = 'wallpapers/tall/bg-7.jpg';
-						include (ROOT.'/includes/masonry-item.php'); 
-					?>
-                    
-                    <?php 
-						$span = 4;
-                        $filterItems = 'filter-HTML-theme filter-logo';
-                        $img = 'wallpapers/tall/bg-7.jpg';
-						include (ROOT.'/includes/masonry-item.php'); 
-					?>
-                    
-                    <?php 
-						$span = 4;
-                        $filterItems = 'filter-photography';
-                        $img = 'wallpapers/bg-3.jpg';
-						include (ROOT.'/includes/masonry-item.php'); 
-					?>
-                    
-                    <?php 
-						$span = 4;
-                        $filterItems = 'filter-HTML-theme filter-photography';
-                        $img = 'wallpapers/tall/bg-7.jpg';
-						include (ROOT.'/includes/masonry-item.php'); 
-					?>
-                    
-                    <?php 
-						$span = 4;
-                        $filterItems = 'filter-photography';
-                        $img = 'wallpapers/tall/bg-7.jpg';
-						include (ROOT.'/includes/masonry-item.php'); 
-					?>
-                    
-                    <?php 
-						$span = 4;
-                        $filterItems = 'filter-logo';
-                        $img = 'wallpapers/bg-6.jpg';
-						include (ROOT.'/includes/masonry-item.php'); 
-					?>
-                    
-                    <?php 
-						$span = 4;
-                        $filterItems = 'filter-HTML-theme';
-                        $img = 'wallpapers/bg-4.jpg';
-						include (ROOT.'/includes/masonry-item.php'); 
-					?>
+                    <?php
+                        
+                        articleItem(array(
+                            'type'   => 'portfolio',
+                            'size'   => 'small',
+                            'height' => 'tall',
+                            'span'   => 4,
+                        ));
+                        
+                        articleItem(array(
+                            'type'   => 'portfolio',
+                            'media'  => 'vimeo',
+                            'size'   => 'small',
+                            'span'   => 4,
+                        ));
+                        
+                        articleItem(array(
+                            'type'   => 'portfolio',
+                            'media'  => 'carousel',
+                            'size'   => 'small',
+                            'height' => 'tall',
+                            'span'   => 4,
+                        ));
+                        
+                        articleItem(array(
+                            'type'   => 'portfolio',
+                            'media'  => 'audio',
+                            'size'   => 'small',
+                            'height' => 'tall',
+                            'span'   => 4,
+                        ));
+                        
+                        articleItem(array(
+                            'type'   => 'portfolio',
+                            'media'  => 'youtube',
+                            'size'   => 'small',
+                            'height' => 'tall',
+                            'span'   => 4,
+                        ));
+                        
+                        articleItem(array(
+                            'type'   => 'portfolio',
+                            'size'   => 'small',
+                            'span'   => 4,
+                        ));
+                        
+                        articleItem(array(
+                            'type'   => 'portfolio',
+                            'media'  => 'carousel',
+                            'size'   => 'small',
+                            'span'   => 4,
+                        ));
+                        
+                        articleItem(array(
+                            'type'   => 'portfolio',
+                            'media'  => 'carousel',
+                            'size'   => 'small',
+                            'height' => 'tall',
+                            'span'   => 4,
+                        ));
+                        
+                        articleItem(array(
+                            'type'   => 'portfolio',
+                            'media'  => 'audio',
+                            'size'   => 'small',
+                            'span'   => 4,
+                        ));
+                        
+                        articleItem(array(
+                            'type'   => 'portfolio',
+                            'media'  => 'vimeo',
+                            'size'   => 'small',
+                            'span'   => 4,
+                        ));
+                     
+                    ?>
                     
                 </div>
             

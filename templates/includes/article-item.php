@@ -12,6 +12,7 @@
             
             'type'       => 'blog',
             'media'      => 'image',
+            'matrix'     => false,
             'size'       => null,
             'height'     => null,
             'span'       => null,
@@ -68,7 +69,7 @@
         
             <div class="thumbnail">
                 <div class="thumbnail_mask">
-                    <div class="thumbnail_controls icon_group-small">
+                    <div class="thumbnail_controls<?php if($options['matrix']) echo '-corner' ?> icon_group-small">
                         <a 
                             href="<?php echo appDir ?>/images/wallpapers/bg-<?php echo $options['thumb'] ?>.jpg" 
                             class="icon-border-circle-size-3"
@@ -80,6 +81,16 @@
                             <i class="fa fa-link"></i>
                         </a>
                     </div>
+                    <?php if($options['matrix']) { ?>
+                        <header class="thumbnail_title heading_group">
+                            <?php if ($options['size'] === 'small') { ?>
+                                <h4 class="heading">Lorem Ipsum</h4>
+                            <?php } else { ?>
+                                <h4 class="heading-heavy-size-4 font-2">Lorem Ipsum</h4>
+                                <h5 class="heading-light">Cras dictum erat id tortor ornare.</h5>
+                            <?php } ?>
+                        </header>
+                    <?php } ?>
                 </div>
                 <img src="<?php echo appDir ?>/images/wallpapers/<?php if ($options['height'] === 'tall') echo 'tall/' ?>bg-<?php echo $options['thumb'] ?>.jpg">
             </div>
@@ -180,9 +191,10 @@
                 scrolling="no" 
                 frameborder="no"
                 src="<?php echo $options['audioSrc'] ?>"
-                class="object"
-                <?php if ($options['height'] === 'tall') { ?>
-                    height="350px""
+                <?php if ($options['type'] === 'blog') { ?>
+                    class="object"
+                <?php } if ($options['height'] === 'tall') { ?>
+                    height="350px"
                 <?php } ?>
             ></iframe>
             
@@ -197,7 +209,7 @@
         <?php } ?>
         
         <? // Article Title (Portfolio) ?>
-        <?php if ($options['type'] === 'portfolio') { ?>
+        <?php if ($options['type'] === 'portfolio' && !$options['matrix']) { ?>
         
             <div class="widget_content text-center">
                 <header class="heading_group">

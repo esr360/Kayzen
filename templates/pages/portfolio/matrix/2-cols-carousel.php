@@ -33,23 +33,69 @@
 				
 				<div class="container">
 					<div class="row-no-gutter row-has-dots">
-						<?php 
-							$rows = 2; 
-							$columns = 2;
-							$thumbTitle = true;
-							include (ROOT.'/includes/portfolio-items.php'); 
-						?>
+						
+                        <?php
+                            
+                            articleItem(array(
+                                'type'   => 'portfolio',
+                                'matrix' => true,
+                                'span'   => 6,
+                            ));
+                            
+                            articleItem(array(
+                                'type'   => 'portfolio',
+                                'matrix' => true,
+                                'span'   => 6,
+                            ));
+                            
+                            articleItem(array(
+                                'type'   => 'portfolio',
+                                'matrix' => true,
+                                'span'   => 6,
+                            ));
+                            
+                            articleItem(array(
+                                'type'   => 'portfolio',
+                                'matrix' => true,
+                                'span'   => 6,
+                            ));
+                            
+                        ?>
+                        
 					</div>
 				</div>
 				
 				<div class="container">
 					<div class="row-no-gutter row-has-dots">
-						<?php 
-							$rows = 2; 
-							$columns = 2;
-							$thumbTitle = true;
-							include (ROOT.'/includes/portfolio-items.php'); 
-						?>
+                        
+                        <?php
+                            
+                            articleItem(array(
+                                'type'   => 'portfolio',
+                                'matrix' => true,
+                                'span'   => 6,
+                            ));
+                            
+                            articleItem(array(
+                                'type'   => 'portfolio',
+                                'matrix' => true,
+                                'span'   => 6,
+                            ));
+                            
+                            articleItem(array(
+                                'type'   => 'portfolio',
+                                'matrix' => true,
+                                'span'   => 6,
+                            ));
+                            
+                            articleItem(array(
+                                'type'   => 'portfolio',
+                                'matrix' => true,
+                                'span'   => 6,
+                            ));
+                            
+                        ?>
+                        
 					</div>
 				</div>
 							
@@ -76,6 +122,18 @@
 					portfolioCarousel.find("+ .slide-nav .slide-prev").click(function() {
 						portfolioCarousel.trigger('prev.owl.carousel');
 					});
+					
+                    $('.article-thumbnails-carousel').each(function() {
+                        $(this).owlCarousel({
+                            items : 1,
+                            nav : true,
+                            navText : [
+                                '<i class="fa fa-angle-left fa-3x"></i>',
+                                '<i class="fa fa-angle-right fa-3x"></i>'
+                            ],
+                            loop : true
+                        })
+                    });
 					
 				});
 			</script>

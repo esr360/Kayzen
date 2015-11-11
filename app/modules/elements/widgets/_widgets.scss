@@ -299,9 +299,22 @@
 		// Article
 		//---------------------------------------------------------
         
+        @include modifiers(('article', 'card')) {
+            overflow: hidden;
+            .owl-dot {
+                &.active {
+                    span {
+                        background-color: color(greyscale, white);
+                    }
+                }
+            }
+            iframe {
+                display: block;
+            }
+        }
+        
         @include modifier('article') {
             margin-bottom: base(margin);
-            overflow: hidden;
             &:not([class*="span"]) {
                 &:after {
                     content: "";
@@ -325,13 +338,6 @@
             }
             > .owl-carousel {
                 @extend .object;
-            }
-            .owl-dot {
-                &.active {
-                    span {
-                        background-color: color(greyscale, white);
-                    }
-                }
             }
         }
 			

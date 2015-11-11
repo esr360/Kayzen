@@ -25,12 +25,12 @@
 				</a>
 			</div>
 			<header class="thumbnail_title heading_group">
-			<?php if ($thumbTitle === 'small') { ?>
-				<h4 class="heading">Lorem Ipsum</h4>
-			<?php } else if ($thumbTitle === true) { ?>
-				<h4 class="heading-heavy-size-4 font-2">Lorem Ipsum</h4>
-				<h5 class="heading-light">Cras dictum erat id tortor ornare.</h5>
-			<?php } ?>
+                <?php if ($thumbTitle === 'small') { ?>
+                    <h4 class="heading">Lorem Ipsum</h4>
+                <?php } else if ($thumbTitle === true) { ?>
+                    <h4 class="heading-heavy-size-4 font-2">Lorem Ipsum</h4>
+                    <h5 class="heading-light">Cras dictum erat id tortor ornare.</h5>
+                <?php } ?>
 			</header>
 		</div>
 		<img src="<?php echo appDir ?>/images/wallpapers/bg-<?php echo rand(1, 7) ?>.jpg">
