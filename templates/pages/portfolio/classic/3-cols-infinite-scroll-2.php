@@ -31,7 +31,7 @@
 				
             <div class="container">
 
-                <div class="row-flow row-waffle-infinite" id="portfolio-items">
+                <div class="row-flow row-waffle" id="portfolio-items">
                     
                     <?php 
                         $rows = 4; 

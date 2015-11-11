@@ -31,7 +31,7 @@
 				
 			<div class="container">
                 
-                <div id="blog-items" class="row-flow row-waffle-infinite">
+                <div id="blog-items" class="row-flow row-waffle">
                     
                     <?php
                         

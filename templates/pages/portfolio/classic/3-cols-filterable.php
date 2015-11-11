@@ -40,7 +40,7 @@
 				
             <div class="container">
 
-                <div id="portfolio-items" class="row-flow row-waffle-filterable">
+                <div id="portfolio-items" class="row-flow row-waffle">
                         
                     <?php
                         

@@ -32,7 +32,7 @@
 			<div id="portfolio-items" class="owl-carousel">
 				
 				<div class="container">
-					<div class="row-no-gutter row-has-dots">
+					<div class="row-no-gutter">
 						
                         <?php
                             
@@ -66,7 +66,7 @@
 				</div>
 				
 				<div class="container">
-					<div class="row-no-gutter row-has-dots">
+					<div class="row-no-gutter">
                         
                         <?php
                             

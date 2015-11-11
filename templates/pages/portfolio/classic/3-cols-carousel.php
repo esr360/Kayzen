@@ -33,7 +33,7 @@
 				
 				<div class="container">
 	
-					<div class="row-flow row-waffle-infinite">
+					<div class="row-flow row-waffle">
                         
                         <?php
                             
@@ -85,7 +85,7 @@
 				
 				<div class="container">
 	
-					<div class="row-flow row-waffle-infinite">
+					<div class="row-flow row-waffle">
                         
                         <?php
                             

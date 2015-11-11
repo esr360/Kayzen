@@ -41,7 +41,7 @@
 				
 			<div class="container">
                 
-                <div id="blog-items" class="row-flow row-waffle-infinite-filterable">
+                <div id="blog-items" class="row-flow row-waffle-filterable">
                         
                     <?php
                         
