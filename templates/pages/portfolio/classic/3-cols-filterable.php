@@ -40,7 +40,7 @@
 				
             <div class="container">
 
-                <div id="portfolio-items" class="row-flow row-waffle">
+                <div id="portfolio-items" class="row-flow row-waffle-filterable">
                         
                     <?php
                         
@@ -155,12 +155,13 @@
                             })
                         });
                         
-                        $('#portfolio-items').isotope();
-                        
-                        $('#portfolio-categories').on('click', 'li', function() {
-                            var filterValue = $(this).attr('data-filter');
-                            $('#portfolio-items').isotope({ 
-                                filter: filterValue 
+                        $(window).load(function() {
+                            $('#portfolio-items').isotope();
+                            $('#portfolio-categories').on('click', 'li', function() {
+                                var filterValue = $(this).attr('data-filter');
+                                $('#portfolio-items').isotope({ 
+                                    filter: filterValue 
+                                });
                             });
                         });
                         
