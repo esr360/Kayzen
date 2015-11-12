@@ -3416,6 +3416,9 @@ p > a:hover, .text a:hover, .list a:hover, [class*="list-"] a:hover {
 p, ul, ol {
   font-weight: lighter;
 }
+p b, p strong, ul b, ul strong, ol b, ol strong {
+  color: #232627;
+}
 
 .lede {
   font-size: 1.25em;
@@ -4479,7 +4482,8 @@ pre:last-child, hr:last-child,
 }
 
 [class*="list-"][class*="-reset"], [class*="list-"][class*="-arrow"], [class*="list-"][class*="-tags"], .price-chart ul, [class*="price-chart-"] ul, [class*="tabs_nav"], [class*="top-bar_nav"] ul, .breadcrumb ul, .side-nav nav ul, .flyout-nav nav ul, [class*="flyout-nav-"] nav ul, [class*="app-header-"][class*="-side"] nav ul, [class*="side-nav-"] nav ul, [class*="footer_nav"] ul, .navigation > ul, [class*="navigation-"] > ul, [class*="navigation"] ul ul, .tweets, .tweet-actions {
-  margin: 0;
+  margin-left: 0;
+  margin-right: 0;
   padding: 0;
   list-style: none;
 }
@@ -6392,20 +6396,27 @@ img {
   position: relative;
   z-index: 1;
 }
-.desktop-graphic div, [class*="desktop-graphic-"] div {
+[class*="desktop-graphic_image"] {
   position: absolute;
   background-size: 100%;
   background-position: center 0%;
   transition: 3s;
   height: 58.25%;
-  width: 92.2%;
+  width: 92.25%;
   top: 3.95%;
   left: 3.9%;
   z-index: 0;
 }
-[class*="desktop-graphic-"][class*="-scroll"]:hover div {
+[class*="desktop-graphic-"][class*="-scroll"]:hover [class*="desktop-graphic_image"] {
   background-position: center 100%;
   transition: 20s;
+}
+[class*="desktop-graphic"] .owl-stage-outer, [class*="desktop-graphic"] .owl-stage,
+[class*="desktop-graphic"] .owl-item, [class*="desktop-graphic"] .owl-item > div {
+  height: 100%;
+}
+.desktop-graphic .owl-carousel, [class*="desktop-graphic-"] .owl-carousel {
+  z-index: 2;
 }
 
 .mobile-graphic, [class*="mobile-graphic-"] {
@@ -8448,6 +8459,9 @@ progress::-moz-progress-bar {
 }
 [class*="section-"][class*="-secondary"] .owl-dot.active span {
   background: #ffffff;
+}
+[class*="section-"][class*="-secondary"] b, [class*="section-"][class*="-secondary"] strong {
+  color: #ffffff;
 }
 [class*="section-"][class*="-secondary"] [class*="heading_group"] {
   color: #ffffff;

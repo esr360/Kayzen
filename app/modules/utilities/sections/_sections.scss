@@ -66,6 +66,9 @@
 					}
 				} 
 			}
+            b, strong {
+                color: color(greyscale, white);
+            }
 			@include overwrite-sub(group, $parent: heading) {
 				color: color(greyscale, white);
 			}

@@ -59,26 +59,41 @@
 			z-index: 1;		
 		}
 
-		div {
+		@include sub-component('image') {
 			position: absolute;
 			background-size: 100%;
 			background-position: center 0%;
 			transition: 3s;
 			height: 58.25%;
-			width: 92.2%;
+			width: 92.25%;
 			top: 3.95%;
 			left: 3.9%;
-			z-index: 0;		
+			z-index: 0;	
 		}
 	
 		@include modifier(scroll) {
 			&:hover {
-				div {
+				@include overwrite-sub('image') {
 					background-position: center 100%;	
 					transition: 20s;		
 				}
 			}
 		}
+        
+        // owl-carousel
+        
+        // Why is this needed? >:|
+        @at-root [class*="desktop-graphic"] {
+            .owl-stage-outer, .owl-stage, 
+            .owl-item, .owl-item > div {
+                height: 100%;
+            }
+        }
+        
+        .owl-carousel {
+            z-index: 2;
+        }
+        
 	
 	} // component(desktop-graphic)
 

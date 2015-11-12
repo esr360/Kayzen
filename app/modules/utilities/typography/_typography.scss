@@ -16,7 +16,8 @@
         ),
         colors: (
             base            : color(greyscale, grey-4),
-            heading         : color(greyscale, grey-5)
+            heading         : color(greyscale, grey-5),
+            heavy           : color(greyscale, grey-5)
         ),
         sizes: (
             base            : 1em,
@@ -50,6 +51,9 @@
 	
     p, ul, ol {
         font-weight: lighter;
+        b, strong {
+            color: typography(colors, heavy);
+        }
     }
     
     .lede {
