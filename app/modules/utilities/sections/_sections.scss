@@ -16,14 +16,14 @@
 	// Component
 	//-------------------------------------------------------------
 	
-	@include component(section) {
+	@include module(section) {
 
 	// Core Styles
 	//-------------------------------------------------------------
 	
 		background-size: cover;	
 		background-position: center;
-		@include overwrite-sub(group, $parent: heading) {
+		@include overwrite-component(group, $parent: heading) {
 			color: typography(colors, heading);
 		}
 		// Carousel Tools
@@ -42,10 +42,11 @@
 		
 		@include modifiers((primary, secondary)) {
 			padding: 6em 0;
-			@include nested-modifier(mini) {
-				padding: 4em 0;
-			}
 		}
+        
+        @include modifier(mini) {
+            padding: 4em 0;
+        }
 	
 		//---------------------------------------------------------
 		// Secondary
@@ -69,8 +70,10 @@
             b, strong {
                 color: color(greyscale, white);
             }
-			@include overwrite-sub(group, $parent: heading) {
-				color: color(greyscale, white);
+			@include overwrite-component(group, $parent: heading) {
+                &, p {
+				    color: color(greyscale, white);
+                }
 			}
 		}
 		
@@ -160,6 +163,14 @@
 		}
 		
 		//---------------------------------------------------------
+		// Sink
+		//---------------------------------------------------------
+		
+		@include modifier(sink) {
+			padding-bottom: 0;
+		}
+		
+		//---------------------------------------------------------
 		// Block
 		//---------------------------------------------------------
 		
@@ -169,10 +180,10 @@
 			}
 		}
 		
-	// Sub Components
+	// Components
 	//-------------------------------------------------------------
 	
-		@include sub-component(block) {
+		@include component(block) {
 			position: relative;
 			transition: base(transition);
 			padding: 7%;
@@ -182,7 +193,7 @@
 			}
 		}
 		
-		@include sub-component(graphic) {
+		@include component(graphic) {
 			position: relative;
 			> img {
 				position: absolute;

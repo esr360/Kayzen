@@ -16,7 +16,7 @@
 	// Component
 	//-------------------------------------------------------------
 	
-	@include component {
+	@include module {
 
 	// Core Styles
 	//-------------------------------------------------------------
@@ -44,7 +44,7 @@
         }
 	
 		@include modifier(feature) {
-			@include overwrite-sub(content) {
+			@include overwrite-component(content) {
 				position: absolute;
 				bottom: 0;
 				width: 100%;
@@ -52,7 +52,7 @@
 				padding: 1.5em;
 				color: color(greyscale, white);
 			}
-			@include overwrite-sub(group, $parent: heading) {
+			@include overwrite-component(group, $parent: heading) {
 				color: color(greyscale, white);
 			}
 		}
@@ -125,10 +125,10 @@
             @extend .center-xy;
         }
 
-	// Sub-Components
+	// Components
 	//-------------------------------------------------------------
 		
-		@include sub-component(mask) {
+		@include component(mask) {
 			background: rgba(black, 0.6);
 			position: absolute;
 			z-index: 2;
@@ -150,7 +150,7 @@
 				transform: scale(1.15);		   
 				transition: base(transition);
 			}
-			@include overwrite-sub(group, $parent: heading) {
+			@include overwrite-component(group, $parent: heading) {
 				&[class*="thumbnail_title"] { 
 					color: color(greyscale, white);
 				}
@@ -164,13 +164,13 @@
 			}
 		}
 		
-		@include sub-components((controls, title)) {
+		@include components((controls, title)) {
 			position: absolute;
 			z-index: 6;
 			transition: base(transition);
 		}
 		
-		@include sub-component(controls) {
+		@include component(controls) {
 			@extend %horizontal-center;
 			top: 42.5%;
 			transform: translateY(-50%);
@@ -188,7 +188,7 @@
 			}
 		}
 		
-		@include sub-component(title) {
+		@include component(title) {
 			bottom: 1em;
 			left: 3em;
 			text-align: left;
@@ -198,12 +198,12 @@
 			$test: & !global;
 		}
 		
-		@include sub-component(excerpt) {
+		@include component(excerpt) {
 			font-weight: lighter;
 			color: color(greyscale, grey-2);
 		}
 		
-		@include sub-component(nav) {
+		@include component(nav) {
 			.slide-prev, .slide-next {
 				background: rgba(black, 0.4);
 				&:hover {
@@ -218,7 +218,7 @@
 			}
 		}
 		
-		@include sub-component(grid) {
+		@include component(grid) {
 			margin: option($grid, options, gutter) auto;
 			@include modifier(fade) {
 				img {

@@ -20,7 +20,7 @@
 	// Component
 	//-------------------------------------------------------------
 
-	@include component {	
+	@include module {	
 	
 		color: option($config, color);
 		font-size: option($config, size);

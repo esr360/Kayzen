@@ -16,17 +16,17 @@
 	// Component
 	//-------------------------------------------------------------
 
-	@include component {
+	@include module {
 
 	// Core Styles
 	//-------------------------------------------------------------
 	
 		background: color(greyscale, grey-6);
 		
-	// Sub-Components
+	// Components
 	//-------------------------------------------------------------
 	
-		@include sub-component(wrapper) {
+		@include component(wrapper) {
 			padding: 4em;
 			font-size: 0.9em;
 			background: color(greyscale, grey-5);
@@ -41,11 +41,11 @@
 			}
 		}
 		
-		@include sub-component(title) {
+		@include component(title) {
 			color: color(greyscale, white);
 		}
 	
-		@include sub-component(bar) {
+		@include component(bar) {
 			padding: 2em 0;
 			font-size: 0.9em;
 			@media (min-width: breakpoint(break-2)) {		
@@ -55,13 +55,13 @@
 			}
 		}
 		
-		@include sub-component(copyright) {
+		@include component(copyright) {
 			h4 {
 				font-weight: lighter;
 			}
 		}
 	
-		@include sub-component(nav) {
+		@include component(nav) {
 			ul {
 			    @extend %list-reset;
 			}
@@ -83,14 +83,14 @@
 			}
 		}
 		
-		@include sub-components((nav, copyright)) {
+		@include components((nav, copyright)) {
 			@media (min-width: breakpoint(break-2)) {
 				display: table-cell;
 				vertical-align: middle;
 			}
 		}
 		
-		@include sub-component {
+		@include component {
 			@include modifier(nav) {
 				position: absolute;
 				top: 0;

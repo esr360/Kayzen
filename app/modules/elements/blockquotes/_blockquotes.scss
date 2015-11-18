@@ -16,7 +16,7 @@
 	// Component
 	//-------------------------------------------------------------
 	
-	@include component {
+	@include module {
 
 	// Core Styles
 	//-------------------------------------------------------------
@@ -34,7 +34,7 @@
 			
 			padding: 0;
 			
-			@include overwrite-sub(content) {
+			@include overwrite-component(content) {
 				&:before,
 				&:after {
 					font-size: 1.5rem;
@@ -67,10 +67,10 @@
             margin-right: 0;
         }
 		
-	// Sub-Components
+	// Components
 	//-------------------------------------------------------------
 	
-		@include sub-component(bubble) {
+		@include component(bubble) {
 			padding: 1em 3em;
 			background: color(brand, primary);
 			border-radius: 0.6em;
@@ -79,7 +79,7 @@
 				position : top,
 				color    : color(brand, primary)
 			));
-            @include overwrite-sub('content') {
+            @include overwrite-component('content') {
                 position: relative;
                 &:before {
                     left: -1.35em;
@@ -93,12 +93,12 @@
 			}
 		}
 		
-		@include sub-components((avatar, cite)) {
+		@include components((avatar, cite)) {
 			display: inline-block;
 			vertical-align: middle;
 		}
 		
-		@include sub-component(content) {
+		@include component(content) {
 			&:before,
 			&:after {
 				position: absolute;
@@ -116,24 +116,24 @@
 				bottom: -0.2em;
 				right: 0;
 			}
-			@include overwrite-sub(cite, $special: 'adjacent-sibling') {
+			@include overwrite-component(cite, $special: 'adjacent-sibling') {
 				margin-top: 1.5em;
 			}
 		}
 		
-		@include sub-component(avatar) {
+		@include component(avatar) {
 			@include extend($parent: thumbnail, $modifiers: (profile, round));
-			@include overwrite-sub(content, $special: 'adjacent-sibling') {
+			@include overwrite-component(content, $special: 'adjacent-sibling') {
 				margin-top: 1.5em;
 			}
 		}
 		
-		@include sub-component(cite) {
+		@include component(cite) {
 			margin-left: 0.5em;
 			color: color(greyscale, white);
 		}
 		
-		@include sub-component(footer) {
+		@include component(footer) {
 			margin-top: 1em;			
 		}
 			

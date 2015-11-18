@@ -49,7 +49,7 @@ https://github.com/esr360/K-Tooltips
 	// Component
 	//-------------------------------------------------------------
 
-	@include component {
+	@include module {
 				
 	// Core Styles
 	//-------------------------------------------------------------
@@ -63,18 +63,18 @@ https://github.com/esr360/K-Tooltips
 			
 		}
 	
-	// Sub-Components
+	// Components
 	//-------------------------------------------------------------
 	
 		@at-root .inline-tooltip {
 			display: inline-block;
 		}
 		
-		@include sub-component(wrapper) {
+		@include component(wrapper) {
 			text-align: center;
 		}
 	
-		@include sub-component(content) {
+		@include component(content) {
 				
 			// Size & Appearance
 			max-width: tooltip(max-width);

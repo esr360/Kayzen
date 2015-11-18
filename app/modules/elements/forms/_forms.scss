@@ -16,7 +16,7 @@
 	// Component
 	//-------------------------------------------------------------
 	
-	@include component(form) {
+	@include module(form) {
 	
 	// Core Styles
 	//-------------------------------------------------------------
@@ -32,17 +32,17 @@
 	//-------------------------------------------------------------
 	
 		@include modifier(faux-placeholders) {
-			@include overwrite-sub(group) {
+			@include overwrite-component(group) {
 				margin-bottom: base(margin);
 			}
-			@include overwrite-sub(group) {
+			@include overwrite-component(group) {
 				label {
 					@include vertical-center(absolute);
 					left: 0.65em;
 					cursor: text;
 				}
 			}
-			@include overwrite-sub(input) {
+			@include overwrite-component(input) {
 				&::placeholder {
 					opacity: 0;
 				}
@@ -59,14 +59,14 @@
 					}
 				}
 			}
-			@include overwrite-sub(group) {
+			@include overwrite-component(group) {
 				textarea {
 					~ label {
 						top: 1.4em;
 					}
 				}
 			}
-			@include overwrite-sub(icon) {
+			@include overwrite-component(icon) {
 				~ label {
 					left: 2em;
 				}
@@ -74,7 +74,7 @@
 		}
 		
 		@include modifier(html5) {
-			@include overwrite-sub(input) {
+			@include overwrite-component(input) {
 				&:focus {
 					&:invalid {
 						&, ~ label, ~ .form_icon, &::placeholder {
@@ -92,10 +92,10 @@
 			}
 		}
 	
-	// Sub Components
+	// Components
 	//-------------------------------------------------------------
 	
-		@include sub-component(group) {
+		@include component(group) {
 			position: relative;
 			margin-bottom: (base(margin) / 2);
 			[type="submit"] {
@@ -103,7 +103,7 @@
 				right: 0;
 				height: 100%;
 				padding: 0 1em;
-				@include overwrite-sub(input, $special: 'general-sibling') {
+				@include overwrite-component(input, $special: 'general-sibling') {
 					padding-right: 3em;
 				}
 			}
@@ -114,19 +114,19 @@
 				margin-bottom: 0.5em;
 			}
 			@include modifier(has-icon) {
-				@include overwrite-sub(input) {
+				@include overwrite-component(input) {
 					padding-left: 2em;
 				}
 			}
 		}
 	
-		@include sub-component(icon) {
+		@include component(icon) {
 			@include vertical-center(absolute);
 			position: absolute;
 			left: 0.75em;
 		}
 	
-		@include sub-component(input) {
+		@include component(input) {
 			display: block;
 			width: 100%;
 			padding: 0.65em;

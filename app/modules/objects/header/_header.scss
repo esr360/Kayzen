@@ -45,7 +45,7 @@
 	// Component
 	//-------------------------------------------------------------
 
-	@include component {
+	@include module {
 
 	// Core Styles
 	//-------------------------------------------------------------
@@ -67,7 +67,7 @@
 		//---------------------------------------------------------
 		
 		@include option(bar) {
-			@include sub-component(wrapper) {	
+			@include component(wrapper) {	
 				display: table;
 				width: 100%;
 			}
@@ -161,7 +161,7 @@
 				z-index: 12;
 				background: option($config, sticky, bg);
 				font-size: option($config, sticky, font-size);
-				@include overwrite-sub(wrapper) {
+				@include overwrite-component(wrapper) {
 					height: option($config, sticky, height);
 				}
 				@include overwrite(logo) {
@@ -177,10 +177,10 @@
 			}
 		}
 		
-	// Sub-Components
+	// Components
 	//-------------------------------------------------------------
 
-		@include sub-component(wrapper) {
+		@include component(wrapper) {
 			height: option($config, height);
 			transition: height base(transition);
 		}

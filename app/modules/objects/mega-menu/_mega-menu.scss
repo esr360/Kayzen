@@ -19,7 +19,7 @@
 	
 	[class*="#{option($navigation, name)}"] {
 			
-		@include component { 
+		@include module { 
 		
 			width: 100%;
 			left: 0;
@@ -74,7 +74,7 @@
 				}
 			}
 			
-			@include sub-component(title) {
+			@include component(title) {
 				margin-top: 0;
 				margin-bottom: 1em;
 				padding-bottom: 0.5em;
@@ -114,13 +114,13 @@
 			}
 		}
 		
-		@include overwrite-sub(group, $parent: widget) {
+		@include overwrite-component(group, $parent: widget) {
 			&:not(:last-child) {
 				margin-bottom: 3%;
 			}
 		}
 		
-		@include overwrite-sub(group, $parent: heading) {
+		@include overwrite-component(group, $parent: heading) {
 			color: typography(colors, heading);
 		}
 		

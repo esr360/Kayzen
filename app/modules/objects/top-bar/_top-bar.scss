@@ -24,7 +24,7 @@
 	// Component
 	//-------------------------------------------------------------
 	
-	@include component {
+	@include module {
 	
 		background: option($config, background);
 		position: relative;
@@ -39,12 +39,12 @@
 			}
 		}
 		
-		@include sub-component(item) {
+		@include component(item) {
 			vertical-align: middle;
 			width: auto;
 		}
 		
-		@include sub-component(nav) {
+		@include component(nav) {
 			
 			height: option($config, height);
 			margin: 0 1em;

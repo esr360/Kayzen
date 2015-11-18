@@ -17,7 +17,7 @@
 	// Component
 	//-------------------------------------------------------------
 
-	@include component(heading) {
+	@include module(heading) {
 
 	// Core Styles
 	//-------------------------------------------------------------
@@ -62,7 +62,7 @@
 				background: color(brand, primary);
 				color: white;
 				display: inline-block;
-				font-weight: inherit;
+				font-weight: normal;
 				box-shadow: 0.3em 0 0 color(brand, primary), -0.3em 0 0 color(brand, primary);
 				text-shadow: none;    
 				&:not(:first-child) {
@@ -152,14 +152,14 @@
 //			@include extend(heavy, size-4, uppercase);
 //		}  
 
-	// Sub Components
+	// Components
 	//-------------------------------------------------------------
 	
 		//---------------------------------------------------------
 		// Heading Group
 		//---------------------------------------------------------
 	
-		@include sub-component(group) {
+		@include component(group) {
 		
 			// Core Styles
 			//-----------------------------------------------------
@@ -177,7 +177,7 @@
 				@include vertical-rhythm;
 			}
 	
-			.lede {
+			p {
 				color: color(greyscale, grey-4);
 			}
 	
@@ -225,7 +225,7 @@
 		// Heading Icon
 		//---------------------------------------------------------
 		
-		@include sub-component(icon) {
+		@include component(icon) {
 		
 			display: inline-block;
 			position: relative;
@@ -269,7 +269,7 @@
 		// Heading Date
 		//---------------------------------------------------------
 			
-			@include sub-component(date) {
+			@include component(date) {
 				float: right;
 				text-align: center;
 				width: 45px;

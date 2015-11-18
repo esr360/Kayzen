@@ -16,7 +16,7 @@
 	// Component
 	//-------------------------------------------------------------
 
-	@include component(widget) {
+	@include module(widget) {
 
 	// Core Styles
 	//-------------------------------------------------------------
@@ -27,7 +27,7 @@
 			text-decoration: none;
 		}
 
-		@include overwrite-sub(group, $parent: heading) {
+		@include overwrite-component(group, $parent: heading) {
 			margin-bottom: 0;
 		}
 
@@ -43,7 +43,7 @@
 			padding: 2.5em 1em;
 			@include nested-modifier(small) {
 				padding: 1.5em 1em;
-				@include overwrite-sub(icon) {
+				@include overwrite-component(icon) {
 					margin-bottom: base(margin) * 0.57; // magic number 1 of 1
 				}
 			}
@@ -53,7 +53,7 @@
 				@include overwrite(heading) {
 					color: color(greyscale, white);
 				}
-				@include overwrite-sub(icon) {
+				@include overwrite-component(icon) {
 					color: color(greyscale, white);
 				}
 			}
@@ -63,7 +63,7 @@
 				@include overwrite(heading) {
 					color: color(greyscale, white);
 				}
-				@include overwrite-sub(icon) {
+				@include overwrite-component(icon) {
 					color: color(greyscale, white);
 				}
 				@include nested-modifier(fill) {
@@ -118,7 +118,7 @@
 		//---------------------------------------------------------
 		
 		@include modifier(card) {
-			@include overwrite-sub(content) {
+			@include overwrite-component(content) {
 				border: 1px solid rgba(black, 0.1);
 				border-top: 0;
 				padding: base(margin);
@@ -159,7 +159,7 @@
 		
 		@include modifier(zoom) {
 			overflow: hidden;
-			@include overwrite-sub(group, $parent: heading) {
+			@include overwrite-component(group, $parent: heading) {
 				color: color(greyscale, white);
 			}
 			&:hover {
@@ -219,17 +219,17 @@
 				background: rgba(black, 0.4);
 			}
 			&:hover {
-				@include overwrite-sub(lid) {
+				@include overwrite-component(lid) {
 					transform: translateY(-100%);
 				}
-				@include overwrite-sub(content) {
+				@include overwrite-component(content) {
 					transform: scale(1) translateY(-50%);
 				}
-				@include overwrite-sub(sticker) {
+				@include overwrite-component(sticker) {
 					top: 50%;
 				}
 			}
-			@include overwrite-sub(content) {
+			@include overwrite-component(content) {
 				position: absolute;
                 top: calc(50% - 1em);
 				width: 80%;
@@ -247,12 +247,12 @@
                     font-weight: bold;
                 }
 			}
-			@include overwrite-sub('group', $parent: 'heading') {
+			@include overwrite-component('group', $parent: 'heading') {
                 color: color(greyscale, white);
             }
 		}
 		
-		@include sub-component(lid) {
+		@include component(lid) {
 			background-color: inherit;
 			position: relative;
 			transition: base(transition);
@@ -264,7 +264,7 @@
             }
 		}
         
-        @include sub-component('sticker') {
+        @include component('sticker') {
             position: absolute;
             top: calc(50% - 0.5em);
             transform: translateY(-50%);
@@ -341,10 +341,10 @@
             }
         }
 			
-	// Sub Components
+	// Components
 	//-------------------------------------------------------------
 	
-		@include sub-component {
+		@include component {
 			@include modifier(inline) {
 				display: inline-block;
 				vertical-align: middle;
@@ -359,7 +359,7 @@
 		// Group
 		//---------------------------------------------------------
 		
-		@include sub-component(group) {
+		@include component(group) {
 			@include modifier(large) {
 				margin-bottom: (base(margin) * 2);
 				@include vertical-rhythm(bottom);
@@ -376,7 +376,7 @@
 		// Icon
 		//---------------------------------------------------------
 		
-		@include sub-component(icon) {
+		@include component(icon) {
 			color: color(greyscale, grey-3);
 			margin-bottom: base(margin);
 			@include modifier(inline) {
@@ -391,8 +391,8 @@
 		// Header
 		//---------------------------------------------------------
 		
-		@include sub-component(header) {
-			@include overwrite-sub(icon, $special: adjacent-sibling) {
+		@include component(header) {
+			@include overwrite-component(icon, $special: adjacent-sibling) {
 				margin-left: 0.5rem;
 				margin-right: 0;
 			}
@@ -406,7 +406,7 @@
 		// Controls
 		//---------------------------------------------------------
 		
-		@include sub-component(controls) {
+		@include component(controls) {
 			position: absolute;
 			bottom: 0;
 		}

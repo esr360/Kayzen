@@ -48,7 +48,7 @@
 	// Component
 	//-------------------------------------------------------------
 	
-	@include component {
+	@include module {
 		
 		// Cache selector as variable
 		$side-nav-selector: & !global;
@@ -120,10 +120,10 @@
 			display: none !important;
 		}
 		
-	// Sub Components
+	// Components
 	//-------------------------------------------------------------
 	
-		@include sub-component(openClose) {
+		@include component(openClose) {
 			position: absolute;
 			top: -1px;
 			right: 0;

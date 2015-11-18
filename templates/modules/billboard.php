@@ -17,6 +17,14 @@
 	</nav>
 	<a href="#key-features" class="scroll-wheel"></a>
 </section>
+<?php } else if ($for == 'videoBg') { ?>
+<section class="billboard-videoBg-full-screen">
+    <div class="auto-resizable-iframe" data-iframe-height="56.5%">
+        <div>
+            <iframe src="https://player.vimeo.com/video/87701971?autoplay=1" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+        </div>
+    </div>
+</section>
 <?php } else { ?>
 <section class="billboard" data-stellar-background-ratio="0.5">
 	<div class="billboard_wrapper container">

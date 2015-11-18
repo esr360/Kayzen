@@ -16,7 +16,7 @@
 	// Component
 	//-------------------------------------------------------------
 
-	@include component(button) {
+	@include module(button) {
 
 	// Core Styles
 	//-------------------------------------------------------------
@@ -190,10 +190,10 @@
 //			@include extend(round, size-4, brand-1);
 //		}	
 
-	// Sub-Components
+	// Components
 	//-------------------------------------------------------------
 	
-		@include sub-component(group) {
+		@include component(group) {
 
 			@include overwrite(button) {
 				margin-left: 0.5em;

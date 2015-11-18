@@ -17,7 +17,7 @@
 	// Component
 	//-------------------------------------------------------------
 	
-	@include component {
+	@include module {
 		
 		@include vertical-center(absolute);
 		@extend %horizontal-center;
@@ -84,11 +84,11 @@
 			
 		}
 		
-		@include sub-component(content) {
+		@include component(content) {
 			padding: 2em;
 		}
 		
-		@include sub-component(close) {
+		@include component(close) {
 			position: absolute;
 			cursor: pointer;
 			top: 1em;

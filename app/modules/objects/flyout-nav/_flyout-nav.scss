@@ -29,7 +29,7 @@
 	// Component
 	//-------------------------------------------------------------
 	
-	@include component {
+	@include module {
 	
 		// Side Navigation
 		@extend #{$side-nav-selector};

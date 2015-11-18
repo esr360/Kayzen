@@ -17,7 +17,7 @@
 	// Component
 	//-------------------------------------------------------------
 	
-	@include component {
+	@include module {
 		
 		position: absolute;
 		background: color(greyscale, grey-5);
@@ -49,7 +49,7 @@
 			transform: translateY(0);
 		}
 		
-		@include sub-components((go, close)) {
+		@include components((go, close)) {
 			&, .fa {
 				cursor: pointer;
 			}
@@ -62,7 +62,7 @@
 			height: 100%;
 		}
 		
-		@include overwrite-sub(group, $parent: icon) {
+		@include overwrite-component(group, $parent: icon) {
 			@include vertical-center(absolute);
 			right: 0;
 		}

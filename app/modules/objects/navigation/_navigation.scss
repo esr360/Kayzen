@@ -65,7 +65,7 @@
 	// Component
 	//-------------------------------------------------------------
 
-	@include component {
+	@include module {
 	
 	// Core Styles
 	//-------------------------------------------------------------
@@ -83,7 +83,7 @@
 					text-decoration: none;
 				}
 				// icon
-				@include overwrite-sub(icon) {
+				@include overwrite-component(icon) {
 					margin-right: 0.5em;
 				}
 			}   
@@ -162,7 +162,7 @@
 	//-------------------------------------------------------------
 	
 		@include option(no-icons) {
-			@include overwrite-sub(icon) {
+			@include overwrite-component(icon) {
 				display: none;
 			}
 		}

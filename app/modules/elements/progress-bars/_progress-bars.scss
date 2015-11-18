@@ -15,7 +15,7 @@
 	// Component
 	//-------------------------------------------------------------
 	
-	@include component {
+	@include module {
 		display: block;
 		position: relative;
 		background: rgba(black, 0.15);
@@ -54,10 +54,10 @@
 	
 	} // progress
 	
-	// Sub-Components
+	// Components
 	//-------------------------------------------------------------
 	
-	@include sub-component(group) {
+	@include component(group) {
 		@include overwrite(heading) {
 			margin-bottom: 0.5em;
 		}

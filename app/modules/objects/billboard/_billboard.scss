@@ -27,7 +27,7 @@
 	// Component
 	//-------------------------------------------------------------
 
-	@include component {
+	@include module {
 
 	// Core Styles
 	//-------------------------------------------------------------
@@ -96,8 +96,8 @@
 		
 			// If website has "top-bar" and top-bar is "fixed" and header is "absolute"
 			@at-root {
-				@include overwrite(top-bar, $modifiers: fixed) {
-					@if option($header, absolute) {
+				@include overwrite(top-bar) {
+					@if option($header, 'absolute') and option($top-bar, 'fixed') {
 						@include overwrite($special: general-sibling) {
 							margin-top: option($top-bar, height);
 						}
@@ -183,6 +183,21 @@
 		}
 
 		//---------------------------------------------------------
+		// Video BG
+		//---------------------------------------------------------
+        
+        @include modifier('videoBg') {
+            overflow: hidden;
+            .auto-resizable-iframe {
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 100%;
+                width: 100%;
+            }
+        }
+
+		//---------------------------------------------------------
 		// Overlay
 		//---------------------------------------------------------
 		
@@ -193,10 +208,10 @@
 			));
 		}
 		
-	// Sub Components
+	// Components
 	//-------------------------------------------------------------
 
-		@include sub-component(wrapper) {
+		@include component(wrapper) {
 			color: option($config, color);
 			text-align: option($config, text-align);
 			@extend %horizontal-center;
@@ -204,7 +219,7 @@
 			@at-root {
 				@include overwrite(app-header, $is: dark) {
 					@include overwrite(billboard, $not: full-screen, $special: adjacent-sibling) {
-						@include overwrite-sub(wrapper) {
+						@include overwrite-component(wrapper) {
 							transform: translateY(-15%);
 						}
 					}

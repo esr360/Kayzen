@@ -473,9 +473,9 @@
                                 </div>
                             </div>
                     
-                        </div>
+                        </div><!-- row -->
 
-                    </div>
+                    </div><!-- main content (span-8) -->
                 
 					<aside class="sidebar span-4">
 

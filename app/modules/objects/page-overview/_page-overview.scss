@@ -18,7 +18,7 @@
 	// Component
 	//-------------------------------------------------------------
 
-	@include component {
+	@include module {
 		
 	// Core Styles
 	//-------------------------------------------------------------
@@ -26,7 +26,7 @@
 		position: fixed;
 		z-index: 9;
 			
-		@include overwrite-sub(group, $parent: heading) {
+		@include overwrite-component(group, $parent: heading) {
 			display: none;
 		}
 		
@@ -40,7 +40,7 @@
 	
 		@include modifiers((left, right)) {
 			top: 25%;
-			@include overwrite-sub(item) {	
+			@include overwrite-component(item) {	
 				&:after {
 					top: 0;
 					height: 100%;
@@ -51,7 +51,7 @@
 		
 		@include modifier(left) {
 			left: 0;
-			@include overwrite-sub(item) {
+			@include overwrite-component(item) {
 				&:after {
 					right: -0.2em;
 				}
@@ -60,7 +60,7 @@
 		
 		@include modifier(right) {
 			right: 0;
-			@include overwrite-sub(item) {
+			@include overwrite-component(item) {
 				&:after {
 					left: -0.2em;
 				}
@@ -70,7 +70,7 @@
 		@include modifiers((top, bottom)) {
 			left: 50%;
 			transform: translateX(-50%);		
-			@include overwrite-sub(item) {
+			@include overwrite-component(item) {
 				float: left;
 				&:after {
 					left: 0;
@@ -82,7 +82,7 @@
 		
 		@include modifier(top) {
 			top: 0;
-			@include overwrite-sub(item) {
+			@include overwrite-component(item) {
 				&:after {
 					bottom: -0.2em;
 				}
@@ -91,17 +91,17 @@
 		
 		@include modifier(bottom) {
 			bottom: 0;
-			@include overwrite-sub(item) {
+			@include overwrite-component(item) {
 				&:after {
 					top: -0.2em;
 				}
 			}
 		}
 		
-	// Sub-Components
+	// Components
 	//-------------------------------------------------------------
 	
-		@include sub-component(item) {
+		@include component(item) {
 			position: relative;
 			background: color(greyscale, white);
 			display: block;	

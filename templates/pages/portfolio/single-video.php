@@ -48,38 +48,14 @@
                 <div class="desktop-graphic">
                     <img src="<?php echo appDir ?>/images/demo-screen.png" alt=""/ >
                     <span class="desktop-graphic_image owl-carousel" id="portfolio-thumbs">
-                        <div style="background-image: url('<?php echo appDir ?>/images/stock-1.jpg')"></div>
-                        <div style="background-image: url('<?php echo appDir ?>/images/stock-2.jpg')"></div>
-                        <div style="background-image: url('<?php echo appDir ?>/images/stock-3.jpg')"></div>
-                        <div style="background-image: url('<?php echo appDir ?>/images/stock-4.jpg')"></div>
+                        <div class="auto-resizable-iframe" data-iframe-height="56.5%">
+                            <div>
+                                <iframe allowfullscreen="" src="http://www.youtube.com/embed/Q3oItpVa9fs?theme=light"></iframe>
+                            </div>
+                        </div>
                     </span>
                 </div>
-                <nav class="slide-nav" id="desktop-graphic_nav">
-                    <button class="slide-prev icon-border-size-4-grey-3"><i class="fa fa-angle-left"></i></button>
-                    <button class="slide-next icon-border-size-4-grey-3"><i class="fa fa-angle-right"></i></button>
-                </nav>
             </div>
-                        
-            <script>
-                $(document).ready(function() {
-                    
-                    var thumbsCarousel = $("#portfolio-thumbs");
-                    
-                    thumbsCarousel.owlCarousel({
-                        items : 1,
-                        loop  : true,
-                        dots  : false
-                    });
-                    
-                    $("#desktop-graphic_nav .slide-next").click(function() {
-                        thumbsCarousel.trigger('next.owl.carousel');
-                    });
-                    $("#desktop-graphic_nav .slide-prev").click(function() {
-                        thumbsCarousel.trigger('prev.owl.carousel');
-                    });
-                    
-                });
-            </script>
             
         </section>
         

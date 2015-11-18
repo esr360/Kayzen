@@ -26,7 +26,7 @@
     
     @include kayzen-gs($grid);
     
-    @include component(#{option($grid, 'options', 'row-namespace')}) {
+    @include module(#{option($grid, 'options', 'row-namespace')}) {
     
         // Waffle Row
         //---------------------------------------------------------

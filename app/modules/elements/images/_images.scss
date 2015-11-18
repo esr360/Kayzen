@@ -25,7 +25,7 @@
 	// Background Image
 	//-------------------------------------------------------------
 	
-	@include component(bg-img) {
+	@include module(bg-img) {
 	
 		background-image: url("#{$asset-path}/images/stock-1-bg.jpg");
 		background-size: cover;
@@ -49,7 +49,7 @@
 	// Desktop Graphic
 	//-------------------------------------------------------------
 	
-	@include component(desktop-graphic) {
+	@include module(desktop-graphic) {
 
 		position: relative;
 		cursor: pointer;
@@ -59,7 +59,7 @@
 			z-index: 1;		
 		}
 
-		@include sub-component('image') {
+		@include component('image') {
 			position: absolute;
 			background-size: 100%;
 			background-position: center 0%;
@@ -73,7 +73,7 @@
 	
 		@include modifier(scroll) {
 			&:hover {
-				@include overwrite-sub('image') {
+				@include overwrite-component('image') {
 					background-position: center 100%;	
 					transition: 20s;		
 				}
@@ -81,6 +81,12 @@
 		}
         
         // owl-carousel
+        
+        + .slide-nav {
+            .slide-next, .slide-prev {
+                top: 35%;
+            }
+        }
         
         // Why is this needed? >:|
         @at-root [class*="desktop-graphic"] {
@@ -101,7 +107,7 @@
 	// Mobile Graphic
 	//-------------------------------------------------------------
 	
-	@include component(mobile-graphic) {
+	@include module(mobile-graphic) {
 	
 		background-size: 100% 100%;
 		padding: 30% 8%;

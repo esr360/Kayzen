@@ -16,7 +16,7 @@
 	// Component
 	//-------------------------------------------------------------
 	
-	@include component {
+	@include module {
 		
 		position: relative;
 		background: color(brand, primary);
@@ -67,7 +67,7 @@
 			background: color(greyscale, grey-4);	
 		}
 		
-		@include sub-component(price) {
+		@include component(price) {
 			padding: 0.1em;
 			background: rgba(0,0,0,0.6);
 			font-size: 1.5em;

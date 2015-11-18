@@ -22,6 +22,7 @@
                 rand(1, 7),
                 rand(1, 7),
             ),
+            'maskTitle'  => true,
             'title'      => 'Lorem ipsum dolor sit amet',
             'date'       => array('Sep', 23),
             'category'   => 'HTML Themes',
@@ -76,7 +77,7 @@
         
             <div class="thumbnail">
                 <div class="thumbnail_mask">
-                    <div class="thumbnail_controls<?php if($options['matrix']) echo '-corner' ?> icon_group-small">
+                    <div class="thumbnail_controls<?php if($options['matrix'] && $options['maskTitle']) echo '-corner' ?> icon_group-small">
                         <a 
                             href="<?php echo appDir ?>/images/wallpapers/bg-<?php echo $options['thumb'] ?>.jpg" 
                             class="icon-border-circle-size-3"
@@ -88,7 +89,7 @@
                             <i class="fa fa-link"></i>
                         </a>
                     </div>
-                    <?php if($options['matrix']) { ?>
+                    <?php if($options['matrix'] && $options['maskTitle']) { ?>
                         <header class="thumbnail_title heading_group">
                             <?php if ($options['size'] === 'small') { ?>
                                 <h4 class="heading">Lorem Ipsum</h4>

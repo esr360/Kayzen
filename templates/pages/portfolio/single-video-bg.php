@@ -14,18 +14,13 @@
 
     <!-- Site Canvas -->
     <div id="site-content">
-		
-		<?php 
-			$topBarModifiers = '';
-			include (ROOT.'/modules/top-bar.php'); 
-		?>
 
 		<?php 
-			$headerModifiers = '-bar-absolute-dark-sticky'; 
+			$headerModifiers = '-bar-absolute-sticky'; 
 			include (ROOT.'/modules/header.php'); 
 		?>
 
-		<?php include (ROOT.'/modules/billboard.php'); ?>
+		<?php $for = 'videoBg'; include (ROOT.'/modules/billboard.php'); ?>
 		
 		<section class="section">
                 

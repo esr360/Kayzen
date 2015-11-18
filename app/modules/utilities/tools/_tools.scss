@@ -110,6 +110,39 @@
 			background: color(brand, primary);
 		}
 	}
+	
+	//-------------------------------------------------------------
+	// Horizontal Rules
+	//-------------------------------------------------------------
+	
+	@include module(hrule) {
+		margin: base(margin) 0;
+		@include modifier(line) {
+			border-top: 1px solid rgba(0, 0, 0, 0.15);
+			border-bottom: 0;
+		}
+		@include modifier(dotted) {
+			border-top: 1px dotted rgba(0, 0, 0, 0.15);
+			border-bottom: 0;
+		}
+		@include modifier(stripes) {
+			height: 10px;    
+			background-image: url("#{$asset-path}/images/stripe-overlay.png");
+			background-repeat: repeat;
+			opacity: 0.3;
+			border: none;
+		}
+		@include modifier(gutter) {
+			$hr-gutter: option($grid, options, gutter);
+			margin: $hr-gutter 0 ($hr-gutter * 2);
+		}
+		@include modifier(small) {
+			margin: 1.5em 0;
+		}
+		@include modifier(large) {
+			margin: (base(margin) * 1.5) 0;
+		}
+	}
     
 //-----------------------------------------------------------------
 // Infinite Ajax Scroll
