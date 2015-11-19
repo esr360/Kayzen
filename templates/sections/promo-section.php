@@ -16,8 +16,6 @@
         ), $custom);
         
     ?>
-    
-    <!-- Promo Section -->
         
     <?php if ($options['dark']) { ?>
         <section class="section-secondary-overlay-alt">
