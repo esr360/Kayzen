@@ -15,6 +15,13 @@ $container = '';
 
 include (ROOT.'/includes/article-item.php');
 
+include (ROOT.'/sections/clients.php');
+include (ROOT.'/sections/our-team.php');
+include (ROOT.'/sections/promo-banner.php');
+include (ROOT.'/sections/promo-section.php');
+include (ROOT.'/sections/skills.php');
+include (ROOT.'/sections/why-choose-us.php');
+
 // Debug to Console
 //-----------------------------------------------------------------
 	

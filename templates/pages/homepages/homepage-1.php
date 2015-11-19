@@ -31,7 +31,7 @@
 
 		<?php include (ROOT.'/sections/key-features.php'); ?>
 
-		<?php include (ROOT.'/sections/promo-banner.php'); ?>
+		<?php promoBanner(); ?>
 
 		<?php include (ROOT.'/sections/showcase.php'); ?>
 		
@@ -39,11 +39,11 @@
 
 		<?php include (ROOT.'/sections/key-features-2.php'); ?>
 
-		<?php $style = 'light'; include (ROOT.'/sections/promo-section.php'); ?>
+		<?php promoSection(); ?>
 
 		<?php include (ROOT.'/sections/responsive.php'); ?>
 		
-		<?php include (ROOT.'/sections/promo-banner.php'); ?>
+		<?php promoBanner(); ?>
 
 		<?php include (ROOT.'/sections/options.php'); ?>
 
@@ -55,11 +55,15 @@
 		
 		<?php include (ROOT.'/sections/shortcodes.php'); ?>
 
-		<?php $style = 'dark'; include (ROOT.'/sections/promo-section.php'); ?>
+		<?php promoSection(array(
+            'dark' => true
+        )); ?>
 		
 		<?php include (ROOT.'/sections/more-features.php'); ?>
 		
-		<?php $style = 'minimal'; include (ROOT.'/sections/promo-banner.php'); ?>
+		<?php promoBanner(array(
+            'minimal' => true
+        )); ?>
 		
 		<?php include (ROOT.'/sections/contact-us.php'); ?>
 
