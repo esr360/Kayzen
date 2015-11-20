@@ -79,7 +79,9 @@
             
             featureQuote();
             
-            recentWork();
+            recentWork(array(
+                'items' => 6
+            ));
             
             testimonials();
             

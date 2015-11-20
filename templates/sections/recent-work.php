@@ -10,7 +10,7 @@
     
         $options = array_merge(array(
             
-            //'option' => 'VALUE'
+            'items' => 3
             
         ), $custom);
         
@@ -31,9 +31,9 @@
         
         <div class="container">
             
-            <div class="row-no-gutter row-waffle">
+            <div class="row-no-gutter">
                             
-                <?php
+                <?php for ($i = 0; $i < $options['items']; $i++) {
                     
                     articleItem(array(
                         'type'      => 'portfolio',
@@ -43,23 +43,7 @@
                         'span'      => 4
                     ));
                     
-                    articleItem(array(
-                        'type'      => 'portfolio',
-                        'size'      => 'small',
-                        'matrix'    => true,
-                        'maskTitle' => false,
-                        'span'      => 4
-                    ));
-                    
-                    articleItem(array(
-                        'type'      => 'portfolio',
-                        'size'      => 'small',
-                        'matrix'    => true,
-                        'maskTitle' => false,
-                        'span'      => 4
-                    ));
-                    
-                ?>
+                } ?>
                 
             </div><!-- row -->
             
