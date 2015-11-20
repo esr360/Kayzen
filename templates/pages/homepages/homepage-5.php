@@ -15,13 +15,15 @@
     <div id="site-content">
 		
 		<?php 
-			$topBarModifiers = '-fixed';
-			include (ROOT.'/modules/top-bar.php'); 
-		?>
+        
+            topbar(array(
+                'modifiers' => 'fixed'
+            ));
 
-		<?php 
-			$headerModifiers = '-bar-absolute-dark'; 
-			include (ROOT.'/modules/header.php'); 
+            appHeader(array(
+                'modifiers' => 'bar-absolute-dark'
+            ));
+
 		?>
 
 		<section class="billboard-full-screen">
@@ -50,7 +52,7 @@
 				<div class="row-no-gutter">
 					<div 
 						class="widget-feature-zoom span-4"
-						data-bg="url('<?php echo appDir ?>/images/wallpapers/bg-6.jpg')"
+						data-bg="<?php echo appDir ?>/images/wallpapers/bg-6.jpg"
 					>
 						<div class="corner-ribbon-pink" data-ribbon="Hot"></div>
 						<header class="widget_header heading_group">
@@ -60,7 +62,7 @@
 					</div>
 					<div 
 						class="widget-feature-zoom span-4"
-						data-bg="url('<?php echo appDir ?>/images/wallpapers/bg-3.jpg')"
+						data-bg="<?php echo appDir ?>/images/wallpapers/bg-3.jpg"
 					>
 						<div class="corner-ribbon-green" data-ribbon="New"></div>
 						<header class="widget_header heading_group">
@@ -70,7 +72,7 @@
 					</div>
 					<div 
 						class="widget-feature-zoom span-4 col-full"
-						data-bg="url('<?php echo appDir ?>/images/wallpapers/bg-4.jpg')"
+						data-bg="<?php echo appDir ?>/images/wallpapers/bg-4.jpg"
 					>
 						<header class="widget_header heading_group">
 							<h4 class="heading-heavy-uppercase-size-4 font-2">Lorem Ipsum</h4>
@@ -81,7 +83,7 @@
 				<div class="row-no-gutter">
 					<div 
 						class="widget-feature-zoom span-8"
-						data-bg="url('<?php echo appDir ?>/images/wallpapers/bg-5.jpg')"
+						data-bg="<?php echo appDir ?>/images/wallpapers/bg-5.jpg"
 					>
 						<header class="widget_header heading_group">
 							<h4 class="heading-heavy-uppercase-size-4 font-2">Lorem Ipsum</h4>
@@ -412,59 +414,17 @@
 			</div>
 		</section>
 
-		<?php include (ROOT.'/sections/promo-banner.php'); ?>
-		
-		<section class="section-primary-dot-map">
-			
-			<header class="heading_group text-center">
-				<div class="container-small">
-					<h4 class="heading-uppercase-light-brand-1-spaced-size-4"><span>Share The Love</span></h4>
-					<h2 class="heading-uppercase-heavy-size-7 font-2"><span>We Are Social <i class="fa fa-heart fa-brand"></i></span></h2>
-					<div class="heading_icon">
-						<i class="fa fa-link"></i>
-					</div>
-					<p class="lede">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In nec velit vel turpis imperdiet tempus. Etiam venenatis maximus luctus. Curabitur eget lorem tortor.</p>
-				</div>
-			</header>
-			
-			<div class="container">
-				<div class="icon_group-small text-center">
-					<a 
-						href="#"
-						class="tooltip-top icon-size-7-border-circle-primary"
-						data-tooltip="Facebook"
-					>
-						<i class="fa fa-facebook"></i>
-					</a>
-					<a 
-						href="#"
-						class="tooltip-top icon-size-7-border-circle-primary"
-						data-tooltip="Twitter"
-					>
-						<i class="fa fa-twitter"></i>
-					</a>
-					<a 
-						href="#"
-						class="tooltip-top icon-size-7-border-circle-primary"
-						data-tooltip="Github"
-					>
-						<i class="fa fa-github-alt"></i>
-					</a>
-					<a 
-						href="#" 
-						class="tooltip-top icon-size-7-border-circle-primary"
-						data-tooltip="Dribbble"
-					>
-						<i class="fa fa-dribbble"></i>
-					</a>
-				</div>
-			</div>
-			
-		</section>
-		
-		<?php include (ROOT.'/includes/google-map.php'); ?>
-		
-		<?php include (ROOT.'/modules/footer.php'); ?>
+		<?php 
+        
+            promoBanner();
+            
+            shareTheLove();
+            
+            googleMap();
+            
+            appFooter();
+        
+        ?>
 
     </div><!-- Site Canvas -->
 

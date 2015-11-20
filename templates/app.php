@@ -42,6 +42,7 @@ include (ROOT.'/sections/recent-work.php');
 include (ROOT.'/sections/recent-articles.php');
 include (ROOT.'/sections/responsive.php');
 include (ROOT.'/sections/services.php');
+include (ROOT.'/sections/share-the-love.php');
 include (ROOT.'/sections/shortcodes.php');
 include (ROOT.'/sections/showcase.php');
 include (ROOT.'/sections/skills.php');

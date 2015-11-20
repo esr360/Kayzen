@@ -15,13 +15,13 @@
     <div id="site-content">
 		
 		<?php 
-			$topBarModifiers = '';
-			include (ROOT.'/modules/top-bar.php'); 
-		?>
+        
+            topbar();
 
-		<?php 
-			$headerModifiers = '-bar-brand';
-			include (ROOT.'/modules/header.php'); 
+            appHeader(array(
+                'modifiers' => 'bar-brand'
+            ));
+
 		?>
 
 		<section 
@@ -32,7 +32,7 @@
 				<div class="row-no-gutter">
 					<div 
 						class="widget-feature-zoom span-4"
-						data-bg="url('<?php echo appDir ?>/images/wallpapers/bg-6.jpg')"
+						data-bg="<?php echo appDir ?>/images/wallpapers/bg-6.jpg"
 					>
 						<div class="corner-ribbon-green" data-ribbon="23 Sep"></div>
 						<header class="widget_header heading_group">
@@ -42,7 +42,7 @@
 					</div>
 					<div 
 						class="widget-feature-zoom span-4"
-						data-bg="url('<?php echo appDir ?>/images/wallpapers/bg-3.jpg')"
+						data-bg="<?php echo appDir ?>/images/wallpapers/bg-3.jpg"
 					>
 						<div class="corner-ribbon-green" data-ribbon="3 Oct"></div>
 						<header class="widget_header heading_group">
@@ -52,7 +52,7 @@
 					</div>
 					<div 
 						class="widget-feature-zoom span-4 col-full"
-						data-bg="url('<?php echo appDir ?>/images/wallpapers/bg-4.jpg')"
+						data-bg="<?php echo appDir ?>/images/wallpapers/bg-4.jpg"
 					>
 						<div class="corner-ribbon-green" data-ribbon="16 Oct"></div>
 						<header class="widget_header heading_group">
@@ -64,7 +64,7 @@
 				<div class="row-no-gutter">
 					<div 
 						class="widget-feature-zoom span-8"
-						data-bg="url('<?php echo appDir ?>/images/wallpapers/bg-5.jpg')"
+						data-bg="<?php echo appDir ?>/images/wallpapers/bg-5.jpg"
 					>
 						<div class="corner-ribbon-green" data-ribbon="27 Oct"></div>
 						<header class="widget_header heading_group">
@@ -172,7 +172,7 @@
 								
 							</div>
 							
-							<nav class="thumbnail_nav slide-nav">
+							<nav class="thumbnail_nav slide-nav" id="latest-articles-nav">
 								<button class="slide-prev icon-size-5"><i class="fa fa-angle-left"></i></button>
 								<button class="slide-next icon-size-5"><i class="fa fa-angle-right"></i></button>
 							</nav>
@@ -189,33 +189,14 @@
 						
 						<script>
 							$(document).ready(function() {
+                                
+                                $("#latest-articles").kCarousel({
+                                    navId: '#latest-articles-nav',
+                                    pagerId: '#latest-articles-thumbs',
+                                    pagerSelector: 'img'
+                                });
 								
-								var $latestArticles = $('#latest-articles'),
-									$latestArticlesThumbs = $('#latest-articles-thumbs');
-								
-								$latestArticles.owlCarousel({
-									items: 1,
-									dots: false
-								}).on('next.owl.carousel', function (e) {
-									$latestArticlesThumbs.find('.active').removeClass('active').next().addClass('active');
-								}).on('prev.owl.carousel', function (e) {
-									$latestArticlesThumbs.find('.active').removeClass('active').prev().addClass('active');
-								});
-								
-								$latestArticlesThumbs.find('img').click(function() {
-									var $index = $(this).index();
-									$(this).siblings().removeClass('active').end().addClass('active');
-									$latestArticles.trigger('to.owl.carousel', [$index, 400, true]);
-								});
-								
-								$latestArticles.find("+ .slide-nav .slide-next").click(function() {
-									$latestArticles.trigger('next.owl.carousel');
-								});
-								$latestArticles.find("+ .slide-nav .slide-prev").click(function() {
-									$latestArticles.trigger('prev.owl.carousel');
-								});	
-								
-							}); // document.ready
+							});
 						</script>
 						
 						<hr class="hrule-stripes-large" />
@@ -704,9 +685,13 @@
 						
 		</section>
 		
-		<?php include (ROOT.'/includes/google-map.php'); ?>
-		
-		<?php include (ROOT.'/modules/footer.php'); ?>
+		<?php 
+        
+            googleMap();
+            
+            appFooter();
+        
+        ?>
 
     </div><!-- Site Canvas -->
 

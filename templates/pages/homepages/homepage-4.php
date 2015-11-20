@@ -15,13 +15,15 @@
     <div id="site-content">
 		
 		<?php 
-			$topBarModifiers = '-fixed';
-			include (ROOT.'/modules/top-bar.php'); 
-		?>
+        
+            topbar(array(
+                'modifiers' => 'fixed'
+            ));
 
-		<?php 
-			$headerModifiers = '-bar-absolute-dark'; 
-			include (ROOT.'/modules/header.php'); 
+            appHeader(array(
+                'modifiers' => 'bar-absolute-dark'
+            ));
+
 		?>
 
 		<section class="billboard-full-screen"
@@ -57,126 +59,62 @@
 				</div>
 			</header>
 			
-			<div class="row-no-gutter-waffle">
+			<div class="row-no-gutter">
 				
-				<div class="thumbnail span-3">
-					<div class="thumbnail_mask">
-						<div class="icon_group-small">
-							<a href="#" class="icon-border-circle-size-3">
-								<i class="fa fa-search"></i>
-							</a>
-							<a href="#" class="icon-border-circle-size-3">
-								<i class="fa fa-link"></i>
-							</a>
-						</div>
-					</div>
-					<img src="<?php echo appDir ?>/images/wallpapers/bg-3.jpg">
-				</div>
-				
-				<div class="thumbnail span-3">
-					<div class="thumbnail_mask">
-						<div class="icon_group-small">
-							<a href="#" class="icon-border-circle-size-3">
-								<i class="fa fa-search"></i>
-							</a>
-							<a href="#" class="icon-border-circle-size-3">
-								<i class="fa fa-link"></i>
-							</a>
-						</div>
-					</div>
-					<img src="<?php echo appDir ?>/images/wallpapers/bg-5.jpg">
-				</div>
-				
-				<div class="thumbnail span-3">
-					<div class="thumbnail_mask">
-						<div class="icon_group-small">
-							<a href="#" class="icon-border-circle-size-3">
-								<i class="fa fa-search"></i>
-							</a>
-							<a href="#" class="icon-border-circle-size-3">
-								<i class="fa fa-link"></i>
-							</a>
-						</div>
-					</div>
-					<img src="<?php echo appDir ?>/images/wallpapers/bg-6.jpg">
-				</div>
-				
-				<div class="thumbnail span-3">
-					<div class="thumbnail_mask">
-						<div class="icon_group-small">
-							<a href="#" class="icon-border-circle-size-3">
-								<i class="fa fa-search"></i>
-							</a>
-							<a href="#" class="icon-border-circle-size-3">
-								<i class="fa fa-link"></i>
-							</a>
-						</div>
-					</div>
-					<img src="<?php echo appDir ?>/images/wallpapers/bg-7.jpg">
-				</div>
+                <?php
+                
+				    articleItem(array(
+                        'type'   => 'portfolio',
+                        'matrix' => true,
+                        'span'   => 3,
+                    ));
+                    
+                    articleItem(array(
+                        'type'   => 'portfolio',
+                        'matrix' => true,
+                        'span'   => 3,
+                    ));
+                    
+                    articleItem(array(
+                        'type'   => 'portfolio',
+                        'matrix' => true,
+                        'span'   => 3,
+                    ));
+                    
+                    articleItem(array(
+                        'type'   => 'portfolio',
+                        'matrix' => true,
+                        'span'   => 3,
+                    ));
+                
+				    articleItem(array(
+                        'type'   => 'portfolio',
+                        'matrix' => true,
+                        'span'   => 3,
+                    ));
+                    
+                    articleItem(array(
+                        'type'   => 'portfolio',
+                        'matrix' => true,
+                        'span'   => 3,
+                    ));
+                    
+                    articleItem(array(
+                        'type'   => 'portfolio',
+                        'matrix' => true,
+                        'span'   => 3,
+                    ));
+                    
+                    articleItem(array(
+                        'type'   => 'portfolio',
+                        'matrix' => true,
+                        'span'   => 3,
+                    ));
+                    
+                 ?>
 				
 			</div>
-			
-			<div class="row-no-gutter-waffle">
-				
-				<div class="thumbnail span-3">
-					<div class="thumbnail_mask">
-						<div class="icon_group-small">
-							<a href="#" class="icon-border-circle-size-3">
-								<i class="fa fa-search"></i>
-							</a>
-							<a href="#" class="icon-border-circle-size-3">
-								<i class="fa fa-link"></i>
-							</a>
-						</div>
-					</div>
-					<img src="<?php echo appDir ?>/images/wallpapers/bg-4.jpg">
-				</div>
-				
-				<div class="thumbnail span-3">
-					<div class="thumbnail_mask">
-						<div class="icon_group-small">
-							<a href="#" class="icon-border-circle-size-3">
-								<i class="fa fa-search"></i>
-							</a>
-							<a href="#" class="icon-border-circle-size-3">
-								<i class="fa fa-link"></i>
-							</a>
-						</div>
-					</div>
-					<img src="<?php echo appDir ?>/images/wallpapers/bg-7.jpg">
-				</div>
-				
-				<div class="thumbnail span-3">
-					<div class="thumbnail_mask">
-						<div class="icon_group-small">
-							<a href="#" class="icon-border-circle-size-3">
-								<i class="fa fa-search"></i>
-							</a>
-							<a href="#" class="icon-border-circle-size-3">
-								<i class="fa fa-link"></i>
-							</a>
-						</div>
-					</div>
-					<img src="<?php echo appDir ?>/images/wallpapers/bg-2.jpg">
-				</div>
-				
-				<div class="thumbnail span-3">
-					<div class="thumbnail_mask">
-						<div class="icon_group-small">
-							<a href="#" class="icon-border-circle-size-3">
-								<i class="fa fa-search"></i>
-							</a>
-							<a href="#" class="icon-border-circle-size-3">
-								<i class="fa fa-link"></i>
-							</a>
-						</div>
-					</div>
-					<img src="<?php echo appDir ?>/images/wallpapers/bg-4.jpg">
-				</div>
-				
-			</div>
-		
+            
 		</section><!-- Key Features -->
 		
 		<section class="section" id="key-features">
@@ -232,19 +170,47 @@
 		</section>
 		
 		<section 
-			class="section-full-screen-overlay-alt"
+			class="section-secondary-full-screen-overlay-alt"
 			data-stellar-background-ratio="0.8"
-			style="background-image: url('<?php echo appDir ?>/images/polygon-bg-blue.jpg')"
+			style="background-image: url('<?php echo appDir ?>/images/wallpapers/bg-7.jpg')"
 		>
 			<div class="container v-center text-right">
-				<h3 class="heading-uppercase-heavy-highlight-dark-size-7 font-2">
-					<b>Seeing things clearly is simple when</b><br />
-					<b>you look at the bigger picture</b>
-				</h3>
-				<p class="button_group">
-					<a class="button-size-4-primary" href="#ALAN">Purchase Now</a>
-					<a class="button-size-4-border-white" href="#ALAN">Read More</a>
-				</p>
+                <div class="row">
+                    <div class="span-5 va-middle text-center">
+                        <div class="center-xy span-6">
+                            <img 
+                                class="mobile-graphic-white" 
+                                src="<?php echo appDir ?>/images/mobile-screen.png" 
+                                data-trigger="transform: translate(-45%, -50%) translateZ(0) scale(0.85)"
+                                data-hover="left: -25%"
+                                alt=""
+                            / >
+                            <img 
+                                class="mobile-graphic-blue" 
+                                src="<?php echo appDir ?>/images/mobile-screen.png" 
+                                data-trigger="transform: translate(45%, -50%) translateZ(0) scale(0.85)"
+                                data-hover="right: -25%"
+                                alt=""
+                            / >
+                            <img 
+                                class="mobile-graphic-purple" 
+                                src="<?php echo appDir ?>/images/mobile-screen.png" 
+                                data-hover="transform: scale(1.05) translateY(-47.5%) translateZ(0)"
+                                alt=""
+                            / >
+                        </div>
+                    </div>
+                    <div class="span-7 va-middle">
+                        <h3 class="heading-uppercase-heavy-highlight-dark-size-6 font-2">
+                            <b>Seeing things clearly is simple when you look at the bigger picture</b>
+                        </h3>
+                        <p class="lede">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam scelerisque, eros vel scelerisque vestibulum, neque nunc lobortis ex, a venenatis enim nisi sit amet purus. Praesent lacinia et nulla a facilisis. Sed aliquam pharetra ante non efficitur. Sed malesuada mauris quis congue porttitor.</p>
+                        <p class="button_group">
+                            <a class="button-size-4-primary" href="#ALAN">Purchase Now</a>
+                            <a class="button-size-4-border-white" href="#ALAN">Read More</a>
+                        </p>
+                    </div>
+                </div>
 			</div>
 		</section>
 
@@ -263,66 +229,74 @@
 		</section>
 			
 		<div class="row-block text-center">
-			
-			<div class="widget-spectrum-quarter-tub span-3">
+                    
+			<a href="#" class="widget-spectrum-quarter-tub span-3">
 				<div class="widget_lid">
-					<div class="widget_icon icon-plain-size-9">
-						<i class="fa fa-battery-half"></i>
+					<div class="widget_sticker">
+                        <div class="widget_icon icon-plain-size-9">
+                            <i class="fa fa-battery-half"></i>
+                        </div>
+                        <header class="heading_group">
+                            <h4 class="heading-size-3">Lorem Ipsum</h4>
+                        </header>
 					</div>
-					<header class="heading_group">
-						<h4 class="heading-size-3">Lorem Ipsum</h4>
-					</header>
 				</div>
 				<div class="widget_content">
 					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc et erat posuere suscipit. Phasellus congue scelerisque lacus...</p>
 				</div>
-				<a class="button-block-grey-5-fat relative">Read More</a>
-			</div>
+				<div class="button-block-grey-5-fat relative">Read More</div>
+			</a>
 			
-			<div class="widget-spectrum-quarter-tub span-3">
+			<a href="#" class="widget-spectrum-quarter-tub span-3">
 				<div class="widget_lid">
-					<div class="widget_icon icon-plain-size-9">
-						<i class="fa fa-bar-chart"></i>
+					<div class="widget_sticker">
+                        <div class="widget_icon icon-plain-size-9">
+						    <i class="fa fa-bar-chart"></i>
+                        </div>
+                        <header class="heading_group">
+                            <h4 class="heading-size-3">Lorem Ipsum</h4>
+                        </header>
 					</div>
-					<header class="heading_group">
-						<h4 class="heading-size-3">Lorem Ipsum</h4>
-					</header>
 				</div>
 				<div class="widget_content">
 					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc et erat posuere suscipit. Phasellus congue scelerisque lacus...</p>
 				</div>
-				<a class="button-block-grey-5-fat relative">Read More</a>
-			</div>
+				<div class="button-block-grey-5-fat relative">Read More</div>
+			</a>
 			
-			<div class="widget-spectrum-quarter-tub span-3">
+			<a href="#" class="widget-spectrum-quarter-tub span-3">
 				<div class="widget_lid">
-					<div class="widget_icon icon-plain-size-9">
-						<i class="fa fa-desktop"></i>
+					<div class="widget_sticker">
+                        <div class="widget_icon icon-plain-size-9">
+						    <i class="fa fa-desktop"></i>
+                        </div>
+                        <header class="heading_group">
+                            <h4 class="heading-size-3">Lorem Ipsum</h4>
+                        </header>
 					</div>
-					<header class="heading_group">
-						<h4 class="heading-size-3">Lorem Ipsum</h4>
-					</header>
 				</div>
 				<div class="widget_content">
 					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc et erat posuere suscipit. Phasellus congue scelerisque lacus...</p>
 				</div>
-				<a class="button-block-grey-5-fat relative">Read More</a>
-			</div>
+				<div class="button-block-grey-5-fat relative">Read More</div>
+			</a>
 			
-			<div class="widget-spectrum-quarter-tub span-3">
+			<a href="#" class="widget-spectrum-quarter-tub span-3">
 				<div class="widget_lid">
-					<div class="widget_icon icon-plain-size-9">
-						<i class="fa fa-image"></i>
+					<div class="widget_sticker">
+                        <div class="widget_icon icon-plain-size-9">
+						    <i class="fa fa-image"></i>
+                        </div>
+                        <header class="heading_group">
+                            <h4 class="heading-size-3">Lorem Ipsum</h4>
+                        </header>
 					</div>
-					<header class="heading_group">
-						<h4 class="heading-size-3">Lorem Ipsum</h4>
-					</header>
 				</div>
 				<div class="widget_content">
 					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc et erat posuere suscipit. Phasellus congue scelerisque lacus...</p>
 				</div>
-				<a class="button-block-grey-5-fat relative">Read More</a>
-			</div>
+				<div class="button-block-grey-5-fat relative">Read More</div>
+			</a>
 			
 		</div>
 		
@@ -355,56 +329,13 @@
 			</div>
 			
 		</section>
-
-		<section class="section-primary">
-			
-			<header class="heading_group-large text-center">
-				<div class="container-small">
-					<h4 class="heading-uppercase-light-brand-1-spaced-size-4"><span>Share The Love</span></h4>
-					<h2 class="heading-uppercase-heavy-size-6 font-2"><span>We Are Social <i class="fa fa-heart fa-brand"></i></span></h2>
-					<div class="heading_icon">
-						<i class="fa fa-link"></i>
-					</div>
-					<p class="lede">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In nec velit vel turpis imperdiet tempus. Etiam venenatis maximus luctus. Curabitur eget lorem tortor.</p>
-				</div>
-			</header>
-			
-			<div class="container">
-				<div class="icon_group-small text-center">
-					<a 
-						href="#"
-						class="tooltip-top icon-size-7-border-circle-primary"
-						data-tooltip="Facebook"
-					>
-						<i class="fa fa-facebook"></i>
-					</a>
-					<a 
-						href="#"
-						class="tooltip-top icon-size-7-border-circle-primary"
-						data-tooltip="Twitter"
-					>
-						<i class="fa fa-twitter"></i>
-					</a>
-					<a 
-						href="#"
-						class="tooltip-top icon-size-7-border-circle-primary"
-						data-tooltip="Github"
-					>
-						<i class="fa fa-github-alt"></i>
-					</a>
-					<a 
-						href="#" 
-						class="tooltip-top icon-size-7-border-circle-primary"
-						data-tooltip="Dribbble"
-					>
-						<i class="fa fa-dribbble"></i>
-					</a>
-				</div>
-			</div>
-			
-		</section>
 		
-		<?php include (ROOT.'/modules/footer.php'); ?>
+		<?php 
+            
+            shareTheLove();
+        
+            appFooter();
+        ?>
 
     </div><!-- Site Canvas -->
 

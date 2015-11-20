@@ -55,25 +55,26 @@
 		} 
 	
 		@include modifier(highlight) {
-			margin-left: 0.3em;
-			margin-right: 0.3em;
-			line-height: 1.45;
+            $highlight-dimensions: 0.3em;
+			margin-left: $highlight-dimensions;
+			margin-right: $highlight-dimensions;
+			line-height: 1.5;
 			> b {
 				background: color(brand, primary);
 				color: white;
-				display: inline-block;
+                padding: 0.1em 0;
 				font-weight: normal;
-				box-shadow: 0.3em 0 0 color(brand, primary), -0.3em 0 0 color(brand, primary);
+				box-shadow: $highlight-dimensions 0 0 color(brand, primary), -$highlight-dimensions 0 0 color(brand, primary);
 				text-shadow: none;    
 				&:not(:first-child) {
-					margin-top: 0.15em;
+					margin-top: ($highlight-dimensions / 2);
 				}        
 			}      
 			@-moz-document url-prefix() {
 				box-shadow: none;
 				margin-left: 0;
 				margin-right: 0;
-				padding: 0 0.3em;
+				padding: 0 $highlight-dimensions;
 				> b {                
 					box-decoration-break: clone;
 				}
@@ -81,7 +82,7 @@
 			@include nested-modifier(dark) {
 				> b {
 					background: color(greyscale, grey-6);
-					box-shadow: 0.3em 0 0 color(greyscale, grey-6), -0.3em 0 0 color(greyscale, grey-6);
+					box-shadow: $highlight-dimensions 0 0 color(greyscale, grey-6), -$highlight-dimensions 0 0 color(greyscale, grey-6);
 				}
 			}
 		}
