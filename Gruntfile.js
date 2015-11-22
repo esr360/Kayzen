@@ -311,6 +311,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.loadNpmTasks('grunt-postcss');
     grunt.loadNpmTasks('grunt-scss-lint');
+    grunt.loadNpmTasks('grunt-csscomb');
     grunt.loadNpmTasks('grunt-notify');
     grunt.loadNpmTasks('grunt-php-set-constant');
     //grunt.loadNpmTasks('grunt-sass');

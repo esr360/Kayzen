@@ -377,7 +377,7 @@
                     
                     <aside class="sidebar span-4">
     
-                        <?php include (ROOT.'/includes/sidebar.php'); ?>
+                        <?php sidebar(); ?>
                         
                     </aside><!-- sidebar -->
                     

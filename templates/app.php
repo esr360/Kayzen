@@ -18,6 +18,7 @@ $container = '';
 
 include (ROOT.'/includes/article-item.php');
 include (ROOT.'/includes/google-map.php');
+include (ROOT.'/includes/sidebar.php');
 
 include (ROOT.'/modules/billboard.php');
 include (ROOT.'/modules/earth-slider.php');

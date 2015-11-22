@@ -4715,6 +4715,20 @@ pre:last-child, hr:last-child,
   position: relative;
 }
 
+.rating {
+  margin-top: 0.5em;
+}
+
+.disabled, [class*="widget-"][class*="-greyscale"], .greyscale {
+  filter: url("data:image/svg+xml;utf8,&lt;svg xmlns='http://www.w3.org/2000/svg'&gt;&lt;filter id='grayscale'&gt;&lt;feColorMatrix type='matrix' values='0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0'/&gt;&lt;/filter&gt;&lt;/svg&gt;#grayscale");
+  filter: gray;
+  -webkit-filter: grayscale(100%);
+}
+
+.disabled {
+  opacity: 0.8;
+}
+
 .short {
   width: 75%;
 }
@@ -5654,30 +5668,48 @@ button::-moz-focus-inner {
 }
 
 .corner-ribbon, [class*="corner-ribbon-"] {
-  background-size: cover;
+  overflow: hidden;
   position: absolute;
-  pointer-events: none;
-  height: 7em;
-  width: 7em;
-  top: -0.62em;
-  left: -0.6em;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
   z-index: 3;
+  pointer-events: none;
+  text-align: center;
   font-size: 1em;
 }
 .corner-ribbon:before, [class*="corner-ribbon-"]:before {
   content: attr(data-ribbon);
-  position: absolute;
-  height: 100%;
-  width: 100%;
+  background-color: #bfc1c3;
+  color: white;
   text-align: center;
+  font-weight: bold;
+  font-size: 1em;
+  z-index: 2;
+  width: 10em;
+  line-height: 2;
   -webkit-transform: rotate(-45deg);
       -ms-transform: rotate(-45deg);
           transform: rotate(-45deg);
-  color: white;
-  font-weight: bold;
-  top: 13%;
-  left: 13%;
-  font-size: 1em;
+  position: absolute;
+  top: 1.75em;
+  left: -2.25em;
+}
+[class*="corner-ribbon-"][class*="-disabled"]:before {
+  font-weight: normal;
+}
+[class*="corner-ribbon-"][class*="-green"]:before {
+  background-color: #5bbe61;
+}
+[class*="corner-ribbon-"][class*="-pink"]:before {
+  background-color: #da4771;
+}
+[class*="corner-ribbon-"][class*="-purple"]:before {
+  background-color: #9B58B5;
+}
+[class*="corner-ribbon-"][class*="-blue"]:before {
+  background-color: #33b6ea;
 }
 [class*="corner-ribbon-"][class*="-small"] {
   font-size: 0.7em;
@@ -5685,24 +5717,9 @@ button::-moz-focus-inner {
 [class*="corner-ribbon-"][class*="-large"] {
   font-size: 1em;
 }
-[class*="corner-ribbon-"][class*="-large"] {
-  height: 10em;
-  width: 10em;
-  top: -0.8em;
-  left: -0.85em;
-}
-[class*="corner-ribbon-"][class*="-large"]:before {
-  top: 15%;
-  left: 15%;
-}
-[class*="corner-ribbon-"][class*="-green"] {
-  background-image: url("../../images/corner-ribbons/corner-ribbon-green.png");
-}
-[class*="corner-ribbon-"][class*="-pink"] {
-  background-image: url("../../images/corner-ribbons/corner-ribbon-pink.png");
-}
-[class*="corner-ribbon-"][class*="-purple"] {
-  background-image: url("../../images/corner-ribbons/corner-ribbon-purple.png");
+[class*="corner-ribbon-"][class*="-small"]:before {
+  top: 1.25em;
+  left: -2.75em;
 }
 
 .font-1 {
@@ -6507,6 +6524,9 @@ img {
   margin-right: 0.5em;
   color: #9B58B5;
 }
+[class*="list-"][class*="-tags"] {
+  margin: 0;
+}
 [class*="list-"][class*="-tags"] > li {
   display: inline-block;
   font-size: 0.83em;
@@ -7240,6 +7260,9 @@ progress::-moz-progress-bar {
 [class*="widget-"][class*="-borderLeft"][class*="-highlight"]:hover {
   border-left-color: rgba(0, 0, 0, 0.15);
 }
+[class*="widget-"][class*="-card"] {
+  position: relative;
+}
 [class*="widget-"][class*="-card"] [class*="widget_content"] {
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-top: 0;
@@ -7372,11 +7395,6 @@ progress::-moz-progress-bar {
 [class*="widget-"][class*="-feature"] {
   padding: 15% 2em 2em;
   position: relative;
-}
-[class*="widget-"][class*="-greyscale"] {
-  filter: url("data:image/svg+xml;utf8,&lt;svg xmlns='http://www.w3.org/2000/svg'&gt;&lt;filter id='grayscale'&gt;&lt;feColorMatrix type='matrix' values='0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0'/&gt;&lt;/filter&gt;&lt;/svg&gt;#grayscale");
-  filter: gray;
-  -webkit-filter: grayscale(100%);
 }
 [class*="widget-"][class*="-greyscale"]:hover {
   filter: url("data:image/svg+xml;utf8,&lt;svg xmlns='http://www.w3.org/2000/svg'&gt;&lt;filter id='grayscale'&gt;&lt;feColorMatrix type='matrix' values='1 0 0 0 0, 0 1 0 0 0, 0 0 1 0 0, 0 0 0 1 0'/&gt;&lt;/filter&gt;&lt;/svg&gt;#grayscale");

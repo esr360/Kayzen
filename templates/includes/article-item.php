@@ -16,6 +16,8 @@
             'size'       => null,
             'height'     => null,
             'span'       => null,
+            'disabled'   => false,
+            'ribbon'     => null,
             'thumb'      => rand(1, 7),
             'thumbs'     => array(
                 rand(1, 7),
@@ -32,7 +34,9 @@
                 'logo'
             ),
             'videoSrc'   => 'https://player.vimeo.com/video/87701971',
-            'audioSrc'   => 'https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/205050090&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true'
+            'audioSrc'   => 'https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/205050090&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true',
+            'price'      => '$24.99',
+            'rating'     => '4'
             
         ), $custom);
         
@@ -56,6 +60,9 @@
         if (!empty($options['span'])) {
             $class = $class.' span-'.$options['span'];
         }
+        if ($options['disabled']) {
+            $class = $class.' disabled';
+        }
         
         /**
          * Generate item data-attribute
@@ -71,6 +78,10 @@
     ?>
 
     <article class="<?php echo $class ?>" <?php echo $data ?>>
+
+        <?php if ($options['ribbon']) { ?>
+            <div class="corner-ribbon-<?php echo $options['ribbon'][0] ?>" data-ribbon="<?php echo $options['ribbon'][1] ?>"></div>
+        <?php } ?>
         
         <? // Standard Image Article ?>
         <?php if ($options['media'] === 'image') { ?>
@@ -228,7 +239,7 @@
             
         <?php } ?>
         
-        <?php if ( $options['type'] === 'blog' || ($options['type'] === 'portfolio' && empty($options['span'])) ) { ?>
+        <?php if ($isArticle) { ?>
         
             <? // Article Title (Blog) ?>
             <header class="heading_group">
@@ -255,7 +266,7 @@
         <?php } ?>
         
         <? // Article Meta ?>
-        <?php if ( $options['type'] === 'blog' || ($options['type'] === 'portfolio' && empty($options['span'])) ) { ?>
+        <?php if ($isArticle) { ?>
             <small>
                 <div class="row-block">
                     <div class="span va-middle">
@@ -281,6 +292,31 @@
                     </div>
                 </div>
             </small>
+        <?php } ?>
+        
+        <? // Shop Product ?>
+        <?php if ($options['type'] == 'shop') { ?>
+        
+            <header class="heading_group-small">
+                <h3 class="heading-heavy-size-4"><?php echo $options['title'] ?></h3>
+                <h4 class="heading-light-uppercase-size-2">Category: <a href="#"><?php echo $options['category'] ?></a></h4>
+            </header>
+            <div class="heading_group-small">
+                <?php if (is_array($options['price'])) { ?>
+                    <del><?php echo $options['price'][0] ?></del>
+                    <ins><?php echo $options['price'][1] ?></ins>
+                <?php } else { ?> 
+                    <span><?php echo $options['price'] ?></span>
+                <?php } ?>
+            </div>
+            <div class="rating">
+                <?php for ($i = 0; $i < $options['rating']; $i++) { ?>
+                    <i class="fa fa-star"></i>
+                <?php } for ($i = 0; $i < (5 - $options['rating']); $i++) {  ?>
+                    <i class="fa fa-star-o"></i>
+                <?php } ?>
+            </div>
+       
         <?php } ?>
         
     </article>
