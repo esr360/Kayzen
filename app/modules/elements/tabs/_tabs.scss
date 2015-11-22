@@ -91,6 +91,9 @@
 						background: color(brand, primary);
 					}
 				}
+                @include nested-modifier('deep') {
+                    padding: 2.5em;
+                }
 			}
 		}
 	

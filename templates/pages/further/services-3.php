@@ -1,8 +1,8 @@
 <?php 
-	include ('../app.php');
+	include ('../../app.php');
 	// page config
-	$title = 'Awesome Features';
-	$tagLine = 'Theming has never been so fast or efficient';
+	$title = 'Our Services';
+	$tagLine = 'Aenean lobortis ante nunc urabitur at enim nisi.';
 ?>
 
 <!DOCTYPE html>

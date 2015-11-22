@@ -232,6 +232,18 @@
 				}
 			}
 		}
+        
+        @include modifier('inline') {
+            display: inline-block;
+            vertical-align: top;
+        }
+        
+        @include component('aside') {
+            width: calc(100% - 100px);
+            display: inline-block;
+            vertical-align: top;
+            padding-left: 1em;
+        }
 		
 		// Nested thumbnail-profile
 		

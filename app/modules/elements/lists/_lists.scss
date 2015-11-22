@@ -73,6 +73,11 @@
 					color: color(brand, primary);
 				}
 			}
+            @include nested-modifier('adjust') {
+                > li {
+                    line-height: 1.7;
+                }
+            }
 		}
 		
 		@include modifier(tags) {

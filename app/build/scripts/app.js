@@ -6798,7 +6798,7 @@ $('#page-overview')
 	.addClass('page-overview-' + $pageOverviewPos)
 	.prependTo('body')
 	.children('a').each(function() {
-		var $title = $(this).find(heading).first().text();
+		var $title = $(this).find(_heading).first().text();
 		$(this)
 			.attr('class', 'page-overview_item tooltip-' + $tooltipPos)
 			.attr('data-tooltip', $title);

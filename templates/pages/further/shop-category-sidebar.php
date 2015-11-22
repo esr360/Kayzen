@@ -216,7 +216,9 @@
 					
 					<aside class="sidebar span-4">
     
-                        <?php sidebar(); ?>
+                        <?php sidebar(array(
+                            'type' => 'shop'
+                        )); ?>
 						
 					</aside><!-- sidebar -->
                     

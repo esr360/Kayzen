@@ -143,5 +143,20 @@
 			@extend %horizontal-center;
 		}
 	}
+    
+	//-------------------------------------------------------------
+	// Square Image
+	//-------------------------------------------------------------
+    
+    .image-square {
+        position: relative;
+        height: 0;
+        padding-top: 20%;
+        overflow: hidden;
+        > img {
+            position: absolute;
+            top: -25%;
+        }
+    }
 	
 } // @mixin images

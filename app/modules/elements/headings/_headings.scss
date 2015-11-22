@@ -145,6 +145,10 @@
 		@include modifier(flush) {
 			margin: 0 !important;
 		}
+        
+        @include modifier('sub') {
+            color: color('greyscale', grey-4);
+        }
 
 	// Styles
 	//-------------------------------------------------------------

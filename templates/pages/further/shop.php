@@ -52,4 +52,3 @@
     <?php include (ROOT.'/includes/scripts.php'); ?>
 
 </body>
-		

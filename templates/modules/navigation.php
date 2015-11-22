@@ -1,3 +1,5 @@
+<?php $pageTree = 'templates/pages/' ?>
+
 <!-- Navigation -->
 <nav class="navigation-no-icons" id="app-nav">
 	<ul>
@@ -326,12 +328,12 @@
 				<li class="span">
 					<h3 class="mega-menu_heading heading">Homepages</h3>
 					<ul class="list-overflow-arrow" data-list-height="6">
-						<li><a href="#">Homepage 1</a></li>
-						<li><a href="#">Homepage 2</a></li>
-						<li><a href="#">Homepage 3</a></li>
-						<li><a href="#">Homepage 4</a></li>
-						<li><a href="#">Homepage 5</a></li>
-						<li><a href="#">Homepage 6</a></li>
+						<li><a href="/<?php echo $pageTree.'homepages/homepage-1.php' ?>">Homepage 1</a></li>
+						<li><a href="/<?php echo $pageTree.'homepages/homepage-2.php' ?>">Homepage 2</a></li>
+						<li><a href="/<?php echo $pageTree.'homepages/homepage-3.php' ?>">Homepage 3</a></li>
+						<li><a href="/<?php echo $pageTree.'homepages/homepage-4.php' ?>">Homepage 4</a></li>
+						<li><a href="/<?php echo $pageTree.'homepages/homepage-5.php' ?>">Homepage 5</a></li>
+						<li><a href="/<?php echo $pageTree.'homepages/homepage-6.php' ?>">Homepage 6</a></li>
 					</ul>
 				</li>
 				
@@ -341,48 +343,48 @@
                         <li>
                             <h3 class="mega-menu_title heading-uppercase-size-2">Classic</h3>
                             <ul class="list-arrow">
-                                <li><a href="#">2 Columns Carousel</a></li>
-                                <li><a href="#">3 Columns Carousel</a></li>
-                                <li><a href="#">3 Columns Filterable</a></li>
-                                <li><a href="#">3 Columns Infinite Scroll</a></li>
-                                <li><a href="#">4 Columns Carousel</a></li>
+                                <li><a href="/<?php echo $pageTree.'portfolio/classic/2-cols-carousel.php' ?>">2 Columns Carousel</a></li>
+                                <li><a href="/<?php echo $pageTree.'portfolio/classic/3-cols-carousel.php' ?>">3 Columns Carousel</a></li>
+                                <li><a href="/<?php echo $pageTree.'portfolio/classic/3-cols-filterable.php' ?>">3 Columns Filterable</a></li>
+                                <li><a href="/<?php echo $pageTree.'portfolio/classic/3-cols-infinite-scroll.php' ?>">3 Columns Infinite Scroll</a></li>
+                                <li><a href="/<?php echo $pageTree.'portfolio/classic/4-cols-carousel.php' ?>">4 Columns Carousel</a></li>
                             </ul>
                         </li>
                         <li>
                             <h3 class="mega-menu_title heading-uppercase-size-2">Masonry</h3>
                             <ul class="list-arrow">
-                                <li><a href="#">2 Columns Filterable</a></li>
-                                <li><a href="#">3 Columns Infinite Scroll</a></li>
+                                <li><a href="/<?php echo $pageTree.'portfolio/masonry/2-cols-filterable.php' ?>">2 Columns Filterable</a></li>
+                                <li><a href="/<?php echo $pageTree.'portfolio/masonry/3-cols-infinite-scroll.php' ?>">3 Columns Infinite Scroll</a></li>
                             </ul>
                         </li>
                         <li>
                             <h3 class="mega-menu_title heading-uppercase-size-2">Matrix</h3>
                             <ul class="list-arrow">
-                                <li><a href="#">2 Columns Carousel</a></li>
-                                <li><a href="#">3 Columns Carousel</a></li>
-                                <li><a href="#">3 Columns Filterable</a></li>
-                                <li><a href="#">3 Columns Fullscreen Carousel</a></li>
-                                <li><a href="#">3 Columns Fullscreen Filterable</a></li>
-                                <li><a href="#">3 Columns Infinite Scroll</a></li>
-                                <li><a href="#">4 Columns Carousel</a></li>
-                                <li><a href="#">4 Columns Fullscreen Carousel</a></li>
+                                <li><a href="/<?php echo $pageTree.'portfolio/matrix/2-cols-carousel.php' ?>">2 Columns Carousel</a></li>
+                                <li><a href="/<?php echo $pageTree.'portfolio/matrix/3-cols-carousel.php' ?>">3 Columns Carousel</a></li>
+                                <li><a href="/<?php echo $pageTree.'portfolio/matrix/3-cols-filterable.php' ?>">3 Columns Filterable</a></li>
+                                <li><a href="/<?php echo $pageTree.'portfolio/matrix/3-cols-fullscreen-carousel.php' ?>">3 Columns Fullscreen Carousel</a></li>
+                                <li><a href="/<?php echo $pageTree.'portfolio/matrix/3-cols-fullscreen-filterable.php' ?>">3 Columns Fullscreen Filterable</a></li>
+                                <li><a href="/<?php echo $pageTree.'portfolio/matrix/3-cols-infinite-scroll.php' ?>">3 Columns Infinite Scroll</a></li>
+                                <li><a href="/<?php echo $pageTree.'portfolio/matrix/4-cols-carousel.php' ?>">4 Columns Carousel</a></li>
+                                <li><a href="/<?php echo $pageTree.'portfolio/matrix/4-cols-fullscreen-carousel.php' ?>">4 Columns Fullscreen Carousel</a></li>
                             </ul>
                         </li>
                         <li>
                             <h3 class="mega-menu_title heading-uppercase-size-2">Article</h3>
                             <ul class="list-arrow">
-                                <li><a href="#">Full Width</a></li>
-                                <li><a href="#">Full Width Infinite Scroll</a></li>
-                                <li><a href="#">Full Width Sidebar</a></li>
+                                <li><a href="/<?php echo $pageTree.'portfolio/article/full-width.php' ?>">Full Width</a></li>
+                                <li><a href="/<?php echo $pageTree.'portfolio/article/full-width-infinite-scroll.php' ?>">Full Width Infinite Scroll</a></li>
+                                <li><a href="/<?php echo $pageTree.'portfolio/article/full-width-sidebar.php' ?>">Full Width Sidebar</a></li>
                             </ul>
                         </li>
                         <li>
                             <h3 class="mega-menu_title heading-uppercase-size-2">Single</h3>
                             <ul class="list-arrow">
-                                <li><a href="#">Single</a></li>
-                                <li><a href="#">Single Sidebar</a></li>
-                                <li><a href="#">Single Video</a></li>
-                                <li><a href="#">Single Video-BG</a></li>
+                                <li><a href="/<?php echo $pageTree.'portfolio/single.php' ?>">Single</a></li>
+                                <li><a href="/<?php echo $pageTree.'portfolio/single-sidebar.php' ?>">Single Sidebar</a></li>
+                                <li><a href="/<?php echo $pageTree.'portfolio/single-video.php' ?>">Single Video</a></li>
+                                <li><a href="/<?php echo $pageTree.'portfolio/single-video-bg.php' ?>">Single Video-BG</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -394,27 +396,27 @@
                         <li>
                             <h3 class="mega-menu_title heading-uppercase-size-2">Classic</h3>
                             <ul class="list-arrow">
-                                <li><a href="#">2 Columns Carousel</a></li>
-                                <li><a href="#">3 Columns Carousel</a></li>
-                                <li><a href="#">3 Columns Filterable</a></li>
-                                <li><a href="#">3 Columns Infinite Scroll</a></li>
-                                <li><a href="#">4 Columns</a></li>
-                                <li><a href="#">Full Width</a></li>
-                                <li><a href="#">Full Width Sidebar</a></li>
+                                <li><a href="/<?php echo $pageTree.'blog/classic/2-cols.php' ?>">2 Columns</a></li>
+                                <li><a href="/<?php echo $pageTree.'blog/classic/3-cols.php' ?>">3 Columns</a></li>
+                                <li><a href="/<?php echo $pageTree.'blog/classic/3-cols-filterable.php' ?>">3 Columns Filterable</a></li>
+                                <li><a href="/<?php echo $pageTree.'blog/classic/3-cols-infinite-scroll.php' ?>">3 Columns Infinite Scroll</a></li>
+                                <li><a href="/<?php echo $pageTree.'blog/classic/4-cols.php' ?>">4 Columns</a></li>
+                                <li><a href="/<?php echo $pageTree.'blog/classic/full-width.php' ?>">Full Width</a></li>
+                                <li><a href="/<?php echo $pageTree.'blog/classic/full-width-sidebar.php' ?>">Full Width Sidebar</a></li>
                             </ul>
                         </li>
                         <li>
                             <h3 class="mega-menu_title heading-uppercase-size-2">Masonry</h3>
                             <ul class="list-arrow">
-                                <li><a href="#">3 Columns Carousel</a></li>
-                                <li><a href="#">3 Columns Filterable</a></li>
+                                <li><a href="/<?php echo $pageTree.'blog/masonry/3-cols.php' ?>">3 Columns Carousel</a></li>
+                                <li><a href="/<?php echo $pageTree.'blog/classic/3-cols-filterable.php' ?>">3 Columns Filterable</a></li>
                             </ul>
                         </li>
                         <li>
                             <h3 class="mega-menu_title heading-uppercase-size-2">Single</h3>
                             <ul class="list-arrow">
-                                <li><a href="#">Single</a></li>
-                                <li><a href="#">Single Sidebar</a></li>
+                                <li><a href="/<?php echo $pageTree.'blog/single.php' ?>">Single</a></li>
+                                <li><a href="/<?php echo $pageTree.'blog/single-sidebar.php' ?>">Single Sidebar</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -423,22 +425,25 @@
 				<li class="span">
 					<h3 class="mega-menu_heading heading">Further Pages</h3>
 					<ul class="list-overflow-arrow" data-list-height="6">
-						<li><a href="#">About Us</a></li>
-						<li><a href="#">About Us 2</a></li>
-						<li><a href="#">Contact Us</a></li>
-						<li><a href="#">Contact Us 2</a></li>
-						<li><a href="#">Services</a></li>
-						<li><a href="#">Services 2</a></li>
-						<li><a href="#">Shop</a></li>
-						<li><a href="#">Shop Category</a></li>
-						<li><a href="#">Shop Single</a></li>
-						<li><a href="#">404</a></li>
-						<li><a href="#">Login/Register</a></li>
-						<li><a href="#">Coming Soon</a></li>
-						<li><a href="#">Page Offline</a></li>
-						<li><a href="#">FAQ</a></li>
-						<li><a href="#">News</a></li>
-						<li><a href="#">Search Results</a></li>
+						<li><a href="/<?php echo $pageTree.'further/about-us.php' ?>">About Us</a></li>
+						<li><a href="/<?php echo $pageTree.'further/about-us-2.php' ?>">About Us 2</a></li>
+						<li><a href="/<?php echo $pageTree.'further/contact-us.php' ?>">Contact Us</a></li>
+						<li><a href="/<?php echo $pageTree.'further/contact-us-2.php' ?>">Contact Us 2</a></li>
+						<li><a href="/<?php echo $pageTree.'further/services.php' ?>">Services</a></li>
+						<li><a href="/<?php echo $pageTree.'further/services-2.php' ?>">Services 2</a></li>
+						<li><a href="/<?php echo $pageTree.'further/services-3.php' ?>">Services 3</a></li>
+						<li><a href="/<?php echo $pageTree.'further/shop.php' ?>">Shop</a></li>
+						<li><a href="/<?php echo $pageTree.'further/shop-category.php' ?>">Shop Category</a></li>
+						<li><a href="/<?php echo $pageTree.'further/shop-category-sidebar.php' ?>">Shop Category Sidebar</a></li>
+						<li><a href="/<?php echo $pageTree.'further/shop-single.php' ?>">Shop Single</a></li>
+						<li><a href="/<?php echo $pageTree.'further/shop-single.php' ?>">Shop Single Sidebar</a></li>
+						<li><a href="/<?php echo $pageTree.'further/404.php' ?>">404</a></li>
+						<li><a href="/<?php echo $pageTree.'further/login-register.php' ?>">Login/Register</a></li>
+						<li><a href="/<?php echo $pageTree.'further/coming-soon.php' ?>">Coming Soon</a></li>
+						<li><a href="/<?php echo $pageTree.'further/shop-single.php' ?>">Page Offline</a></li>
+						<li><a href="/<?php echo $pageTree.'further/faq.php' ?>">FAQ</a></li>
+						<li><a href="/<?php echo $pageTree.'further/news.php' ?>">News</a></li>
+						<li><a href="/<?php echo $pageTree.'further/search-results.php' ?>">Search Results</a></li>
 					</ul>
 				</li>
 				
