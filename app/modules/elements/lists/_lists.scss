@@ -128,6 +128,12 @@
 				max-height: (1.9em) * 6;
 			}
 		}
+        
+        @include modifier('group') {
+            > li + li {
+                margin-top: 1em;
+            }
+        }
 		
 	} // component(list)
     

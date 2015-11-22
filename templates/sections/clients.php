@@ -10,7 +10,8 @@
     
         $options = array_merge(array(
             
-            //'option'   => 'VALUE'
+            'title'     => 'Our Clients',
+            'sub-title' => 'Who We Work With'
             
         ), $custom);
         
@@ -26,8 +27,8 @@
                 
                 <div class="span-4 va-middle">
                     <header class="heading_group">
-                        <h4 class="heading-uppercase-light-brand-1-size-5">Our Clients</h4>
-                        <h2 class="heading-heavy-size-6 font-2"><span>Who We Work With</span></h2>
+                        <h4 class="heading-uppercase-light-brand-1-size-5"><?php echo $options['title'] ?></h4>
+                        <h2 class="heading-heavy-size-6 font-2"><span><?php echo $options['sub-title'] ?></span></h2>
                     </header>
                 </div>
                 <div class="span-8 va-middle">

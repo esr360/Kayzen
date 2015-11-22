@@ -16,16 +16,19 @@
     <div id="site-content">
 		
 		<?php 
-			$topBarModifiers = '';
-			include (ROOT.'/modules/top-bar.php'); 
-		?>
+        
+            topbar();
 
-		<?php 
-			$headerModifiers = '-bar-absolute-dark-sticky'; 
-			include (ROOT.'/modules/header.php'); 
-		?>
+            appHeader(array(
+                'modifiers' => 'bar-absolute-dark-sticky'
+            ));
 
-		<?php include (ROOT.'/modules/billboard.php'); ?>
+            billboard(array(
+                'title'    => $title,
+                'tag-line' => $tagLine
+            ));
+           
+       ?>
 		
 		<section class="section-primary relative">
 			
@@ -156,9 +159,13 @@
 			
 		</section>
 		
-		<?php include (ROOT.'/sections/promo-banner.php'); ?>
-		
-		<?php include (ROOT.'/modules/footer.php'); ?>
+		<?php
+        
+            promoBanner();
+            
+            appFooter(); 
+            
+        ?>
 
     </div><!-- Site Canvas -->
 

@@ -14,13 +14,18 @@
 
     <!-- Site Canvas -->
     <div id="site-content">
-
+		
 		<?php 
-			$headerModifiers = '-bar-absolute-sticky'; 
-			include (ROOT.'/modules/header.php'); 
-		?>
 
-		<?php $for = 'videoBg'; include (ROOT.'/modules/billboard.php'); ?>
+            appHeader(array(
+                'modifiers' => 'bar-absolute-sticky'
+            ));
+            
+            billboard(array(
+                'type' => 'videoBg'
+            ));
+
+		?>
 		
 		<section class="section">
                 
@@ -399,10 +404,14 @@
 			</div><!-- container -->
 			
 		</section><!-- section -->
-        
-		<?php include (ROOT.'/sections/promo-banner.php'); ?>
 		
-		<?php include (ROOT.'/modules/footer.php'); ?>
+		<?php
+        
+            promoBanner();
+            
+            appFooter(); 
+            
+        ?>
 
     </div><!-- Site Canvas -->
 

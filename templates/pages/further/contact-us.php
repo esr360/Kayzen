@@ -47,7 +47,7 @@
                     <div class="widget_content">
                         <header class="heading_group share-amount">
                             <h3 id="facebookShareCount" class="heading-size-5">0</h3>
-                            <h3 class="heading-size-2-light-uppercase">Shares</h3>
+                            <h3 class="heading-size-2-light-uppercase">Likes</h3>
                         </header>
                     </div>
                     <div class="button-block relative font-2">Facebook</div>
@@ -63,7 +63,7 @@
                     <div class="widget_content">
                         <header class="heading_group share-amount">
                             <h3 id="twitterShareCount" class="heading-size-5">0</h3>
-                            <h3 class="heading-size-2-light-uppercase">Shares</h3>
+                            <h3 class="heading-size-2-light-uppercase">Followers</h3>
                         </header>
                     </div>
                     <div class="button-block relative font-2">Twitter</div>
@@ -79,7 +79,7 @@
                     <div class="widget_content">
                         <header class="heading_group share-amount">
                             <h3 id="googlePlusShareCount" class="heading-size-5">0</h3>
-                            <h3 class="heading-size-2-light-uppercase">Shares</h3>
+                            <h3 class="heading-size-2-light-uppercase">Likes</h3>
                         </header>
                     </div>
                     <div class="button-block relative font-2">Google Plus</div>
@@ -95,7 +95,7 @@
                     <div class="widget_content">
                         <header class="heading_group share-amount">
                             <h3 id="linkedInShareCount" class="heading-size-5">0</h3>
-                            <h3 class="heading-size-2-light-uppercase">Shares</h3>
+                            <h3 class="heading-size-2-light-uppercase">Likes</h3>
                         </header>
                     </div>
                     <div class="button-block relative font-2">LinkedIn</div>
@@ -128,7 +128,7 @@
                     <div class="widget_content">
                         <header class="heading_group share-amount">
                             <h3 id="pinterestShareCount" class="heading-size-5">0</h3>
-                            <h3 class="heading-size-2-light-uppercase">Shares</h3>
+                            <h3 class="heading-size-2-light-uppercase">Likes</h3>
                         </header>
                     </div>
                     <div class="button-block relative font-2">Pinterest</div>
@@ -146,7 +146,7 @@
                     <div class="widget_content">
                         <header class="heading_group share-amount">
                             <h3 id="redditShareCount" class="heading-size-5">0</h3>
-                            <h3 class="heading-size-2-light-uppercase">Shares</h3>
+                            <h3 class="heading-size-2-light-uppercase">Likes</h3>
                         </header>
                     </div>
                     <div class="button-block relative font-2">Reddit</div>

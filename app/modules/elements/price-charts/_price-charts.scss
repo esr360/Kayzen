@@ -35,6 +35,7 @@
 		
 		ul {
 			@extend %list-reset;
+            margin: 0;
 			text-align: left;
 			background: color(greyscale, grey-1);
 			color: color(greyscale, grey-4);

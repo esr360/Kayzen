@@ -39,7 +39,7 @@
 		//---------------------------------------------------------
 		
 		@include modifier(block) {
-			background: color(greyscale, white);	
+			background: color(greyscale, white);
 			padding: 2.5em 1em;
 			@include nested-modifier(small) {
 				padding: 1.5em 1em;
@@ -183,6 +183,7 @@
 		
 		@include modifier(spectrum-quarter) {
 			padding: 2.5em 1em;
+            color: color('greyscale', white);
 			&:nth-child(1) {
 				background: darken(color(brand, primary), 6%);
 			}
@@ -203,6 +204,9 @@
 					color: color(greyscale, white);
 				}
 			}
+            @include nested-modifier('large') {
+			    padding: 4%;
+            }
 		}
 		
 		//---------------------------------------------------------

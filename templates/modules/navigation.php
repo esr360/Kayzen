@@ -324,7 +324,7 @@
 			<ul class="mega-menu row-magic">
 				
 				<li class="span">
-					<h3 class="mega-menu_title heading">Homepages</h3>
+					<h3 class="mega-menu_heading heading">Homepages</h3>
 					<ul class="list-overflow-arrow" data-list-height="6">
 						<li><a href="#">Homepage 1</a></li>
 						<li><a href="#">Homepage 2</a></li>
@@ -335,38 +335,93 @@
 					</ul>
 				</li>
 				
-				<li class="span">
-					<h3 class="mega-menu_title heading">Portfolio</h3>
-					<ul class="list-overflow-arrow" data-list-height="6">
-						<li><a href="#">Portfolio 1</a></li>
-						<li><a href="#">Portfolio 2</a></li>
-						<li><a href="#">Portfolio 3</a></li>
-						<li><a href="#">Portfolio 4</a></li>
-						<li><a href="#">Portfolio 5</a></li>
-						<li><a href="#">Portfolio 6</a></li>
-						<li><a href="#">Portfolio 7</a></li>
-						<li><a href="#">Portfolio 8</a></li>
-						<li><a href="#">Portfolio 9</a></li>
-						<li><a href="#">Portfolio 10</a></li>
-						<li><a href="#">Portfolio Single</a></li>
-						<li><a href="#">Portfolio Single 2</a></li>
-					</ul>
-				</li>
+                <li class="span">
+                    <h3 class="mega-menu_heading heading">Portfolio</h3>
+                    <ul class="list-overflow-group" data-list-height="6">
+                        <li>
+                            <h3 class="mega-menu_title heading-uppercase-size-2">Classic</h3>
+                            <ul class="list-arrow">
+                                <li><a href="#">2 Columns Carousel</a></li>
+                                <li><a href="#">3 Columns Carousel</a></li>
+                                <li><a href="#">3 Columns Filterable</a></li>
+                                <li><a href="#">3 Columns Infinite Scroll</a></li>
+                                <li><a href="#">4 Columns Carousel</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <h3 class="mega-menu_title heading-uppercase-size-2">Masonry</h3>
+                            <ul class="list-arrow">
+                                <li><a href="#">2 Columns Filterable</a></li>
+                                <li><a href="#">3 Columns Infinite Scroll</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <h3 class="mega-menu_title heading-uppercase-size-2">Matrix</h3>
+                            <ul class="list-arrow">
+                                <li><a href="#">2 Columns Carousel</a></li>
+                                <li><a href="#">3 Columns Carousel</a></li>
+                                <li><a href="#">3 Columns Filterable</a></li>
+                                <li><a href="#">3 Columns Fullscreen Carousel</a></li>
+                                <li><a href="#">3 Columns Fullscreen Filterable</a></li>
+                                <li><a href="#">3 Columns Infinite Scroll</a></li>
+                                <li><a href="#">4 Columns Carousel</a></li>
+                                <li><a href="#">4 Columns Fullscreen Carousel</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <h3 class="mega-menu_title heading-uppercase-size-2">Article</h3>
+                            <ul class="list-arrow">
+                                <li><a href="#">Full Width</a></li>
+                                <li><a href="#">Full Width Infinite Scroll</a></li>
+                                <li><a href="#">Full Width Sidebar</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <h3 class="mega-menu_title heading-uppercase-size-2">Single</h3>
+                            <ul class="list-arrow">
+                                <li><a href="#">Single</a></li>
+                                <li><a href="#">Single Sidebar</a></li>
+                                <li><a href="#">Single Video</a></li>
+                                <li><a href="#">Single Video-BG</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+				
+                <li class="span">
+                    <h3 class="mega-menu_heading heading">Blog</h3>
+                    <ul class="list-overflow-group" data-list-height="6">
+                        <li>
+                            <h3 class="mega-menu_title heading-uppercase-size-2">Classic</h3>
+                            <ul class="list-arrow">
+                                <li><a href="#">2 Columns Carousel</a></li>
+                                <li><a href="#">3 Columns Carousel</a></li>
+                                <li><a href="#">3 Columns Filterable</a></li>
+                                <li><a href="#">3 Columns Infinite Scroll</a></li>
+                                <li><a href="#">4 Columns</a></li>
+                                <li><a href="#">Full Width</a></li>
+                                <li><a href="#">Full Width Sidebar</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <h3 class="mega-menu_title heading-uppercase-size-2">Masonry</h3>
+                            <ul class="list-arrow">
+                                <li><a href="#">3 Columns Carousel</a></li>
+                                <li><a href="#">3 Columns Filterable</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <h3 class="mega-menu_title heading-uppercase-size-2">Single</h3>
+                            <ul class="list-arrow">
+                                <li><a href="#">Single</a></li>
+                                <li><a href="#">Single Sidebar</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
 				
 				<li class="span">
-					<h3 class="mega-menu_title heading">Blog</h3>
-					<ul class="list-overflow-arrow" data-list-height="6">
-						<li><a href="#">Blog 1</a></li>
-						<li><a href="#">Blog 2</a></li>
-						<li><a href="#">Blog 3</a></li>
-						<li><a href="#">Blog 4</a></li>
-						<li><a href="#">Blog Single</a></li>
-						<li><a href="#">Blog Single 2</a></li>
-					</ul>
-				</li>
-				
-				<li class="span">
-					<h3 class="mega-menu_title heading">Further Pages</h3>
+					<h3 class="mega-menu_heading heading">Further Pages</h3>
 					<ul class="list-overflow-arrow" data-list-height="6">
 						<li><a href="#">About Us</a></li>
 						<li><a href="#">About Us 2</a></li>
@@ -377,12 +432,6 @@
 						<li><a href="#">Shop</a></li>
 						<li><a href="#">Shop Category</a></li>
 						<li><a href="#">Shop Single</a></li>
-					</ul>
-				</li>
-				
-				<li class="span">
-					<h3 class="mega-menu_title heading">Utility Pages</h3>
-					<ul class="list-overflow-arrow" data-list-height="6">
 						<li><a href="#">404</a></li>
 						<li><a href="#">Login/Register</a></li>
 						<li><a href="#">Coming Soon</a></li>
@@ -401,7 +450,7 @@
 			<ul class="mega-menu row">
 				<li class="span-6">
 					
-					<h3 class="mega-menu_title heading">Elements</h3>
+					<h3 class="mega-menu_heading heading">Elements</h3>
 					
 					<div class="widget_group row-magic text-center">
 						
@@ -473,7 +522,7 @@
 				
 				<li class="span-6">
 					
-					<h3 class="mega-menu_title heading">Objects</h3>
+					<h3 class="mega-menu_heading heading">Objects</h3>
 							
 					<div class="widget_group row-flow text-center">
 						

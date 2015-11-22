@@ -143,6 +143,12 @@
 			@include modifier(plain) {
 				border-color: transparent;
 			}
+            @include modifier(bg) {
+                background-color: rgba(black, 0.025);
+                &:focus {
+                    background-color: color(greyscale, white);
+                }
+            }
 		}
 		
 	} // component(form)

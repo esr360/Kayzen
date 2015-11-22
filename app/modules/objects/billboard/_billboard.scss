@@ -190,7 +190,7 @@
             overflow: hidden;
             .auto-resizable-iframe {
                 position: absolute;
-                top: 0;
+                top: -10%;
                 left: 0;
                 height: 100%;
                 width: 100%;
@@ -206,6 +206,14 @@
 				option($config, overlay-color), 
 				option($config, overlay-opacity)
 			));
+		}
+
+		//---------------------------------------------------------
+		// Google Map
+		//---------------------------------------------------------
+		
+		@include option('map') {
+			padding: 0;
 		}
 		
 	// Components

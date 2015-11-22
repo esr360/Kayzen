@@ -16,16 +16,16 @@
     <div id="site-content">
 		
 		<?php 
-			$topBarModifiers = '';
-			include (ROOT.'/modules/top-bar.php'); 
-		?>
+        
+            topbar();
 
-		<?php 
-			$headerModifiers = '-bar-absolute-dark-sticky'; 
-			include (ROOT.'/modules/header.php'); 
-		?>
+            appHeader(array(
+                'modifiers' => 'bar-absolute-dark-sticky'
+            ));
+            
+            billboard();
 
-		<?php include (ROOT.'/modules/billboard.php'); ?>
+		?>
 		
 		<section class="section-primary-mini relative text-center">	
 			<ul class="tabs_nav-pills" id="blog-types">
@@ -132,9 +132,13 @@
 
 		</section>
 		
-		<?php include (ROOT.'/sections/promo-banner.php'); ?>
-		
-		<?php include (ROOT.'/modules/footer.php'); ?>
+		<?php
+        
+            promoBanner();
+            
+            appFooter(); 
+            
+        ?>
 
     </div><!-- Site Canvas -->
 

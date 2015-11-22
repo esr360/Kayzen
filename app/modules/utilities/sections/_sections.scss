@@ -47,6 +47,11 @@
         @include modifier(mini) {
             padding: 4em 0;
         }
+        
+        @include modifier(panel) {
+			border-top: 1px solid color(greyscale, grey-2);	
+			background: color(greyscale, white);
+        }
 	
 		//---------------------------------------------------------
 		// Secondary

@@ -74,17 +74,27 @@
 				}
 			}
 			
-			@include component(title) {
+			@include component('heading') {
 				margin-top: 0;
 				margin-bottom: 1em;
 				padding-bottom: 0.5em;
 				border-bottom: 1px solid color('greyscale', 'grey-2');
+			}
+			
+			@include component('title') {
+				margin-bottom: 0.5em;
+				padding-bottom: 0.5em;
+                padding-left: 0;
+                margin-right: 1.5em;
+                color: lighten(color('greyscale', 'grey-4'), 15%);
+				border-bottom: 1px dotted color('greyscale', 'grey-2');
 			}
 		
 		} // component
 		
 		// parent list
 		ul {
+            margin: 0;
 			li {
 				// reset pointer events
 				&:hover {

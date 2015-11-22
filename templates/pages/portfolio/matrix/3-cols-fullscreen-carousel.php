@@ -15,13 +15,12 @@
     <!-- Site Canvas -->
     <div id="site-content">
 		
-		
 		<?php 
         
             topbar();
 
             appHeader(array(
-                'modifiers' => 'bar-absolute-dark-stick'
+                'modifiers' => 'bar-absolute-dark-sticky'
             ));
             
             billboard();

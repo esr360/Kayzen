@@ -20,7 +20,7 @@
             topbar();
 
             appHeader(array(
-                'modifiers' => 'bar-absolute-dark-stick'
+                'modifiers' => 'bar-absolute-dark-sticky'
             ));
             
             billboard();
@@ -119,9 +119,13 @@
 			
 		</section>
 		
-		<?php include (ROOT.'/sections/promo-banner.php'); ?>
-		
-		<?php include (ROOT.'/modules/footer.php'); ?>
+		<?php
+        
+            promoBanner();
+            
+            appFooter(); 
+            
+        ?>
 
     </div><!-- Site Canvas -->
 

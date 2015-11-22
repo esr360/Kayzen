@@ -37,9 +37,7 @@
                     
                     articleItem(array(
                         'type'      => 'portfolio',
-                        'size'      => 'small',
                         'matrix'    => true,
-                        'maskTitle' => false,
                         'span'      => 4
                     ));
                     
