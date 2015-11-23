@@ -222,9 +222,9 @@
 						
 					</aside><!-- sidebar -->
                     
-                </div>
+                </div><!-- row -->
                 
-            </div>
+            </div><!-- container -->
             
         </section>
                

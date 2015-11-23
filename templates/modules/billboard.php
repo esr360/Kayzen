@@ -10,9 +10,11 @@
     
         $options = array_merge(array(
             
-            'type'     => 'default', // 'homepage' / 'videoBg'
-            'title'    => null,
-            'tag-line' => null
+            'type'      => 'default', // 'homepage' / 'videoBg'
+            'headline'  => 'Kayzen',
+            'modifiers' => null,
+            'title'     => null,
+            'tag-line'  => null
             
         ), $custom);
         
@@ -22,7 +24,7 @@
         <section class="billboard-full-screen" data-stellar-background-ratio="0.5">
             <div class="billboard_wrapper container-small">
                 <header class="heading_group">
-                    <h2 class="heading-uppercase-light-strikethrough-spaced-size-5"><span>Kayzen</span></h2>
+                    <h2 class="heading-uppercase-light-strikethrough-spaced-size-5"><span><?php echo $options['headline'] ?></span></h2>
                     <h3 class="heading-uppercase-heavy-size-9 font-2">What's your theme?</h3>
                 </header>
                 <p class="lede">Kayzen is a powerful themeing framework for architecting CSS for large, modular & scalable web applications. Built using only Sass (SCSS), Kayzen has the customizing power of a complete CMS theme.</p>
@@ -45,13 +47,20 @@
             </div>
         </section>
     <?php } else if ($options['type'] == 'default') { ?>
-        <section class="billboard" data-stellar-background-ratio="0.5">
+        <section class="billboard<?php echo '-'.$options['modifiers'] ?>" data-stellar-background-ratio="0.5">
             <div class="billboard_wrapper container">
                 <header class="heading_group">
-                    <h2 class="heading-uppercase-light-strikethrough-spaced-size-4"><span>Kayzen</span></h2>
+                    <h2 class="heading-uppercase-light-strikethrough-spaced-size-4"><span><?php echo $options['headline'] ?></span></h2>
                     <h3 class="heading-uppercase-heavy-size-8 font-2"><?php echo $options['title'] ?></h3>
                     <?php if ($options['tag-line']) { ?>
                         <h4 class="heading-size-2-light"><i><?php echo $options['tag-line'] ?></i></h4>
+                    <?php } if ($options['search']) { ?>
+                        <form class="form">
+                            <div class="form_group-small span-4">
+                                <button type="submit" class="icon-primary-size-4"><i class="fa fa-search"></i></button>
+                                <input type="text" class="form_input-plain" id="footer-newsletter" placeholder="Search for a page" required="">
+                            </div>
+                        </form>
                     <?php } ?>
                 </header>
             </div>

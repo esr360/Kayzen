@@ -39,6 +39,10 @@
 			color: color(greyscale, white);
 			text-decoration: none;
 		}
+        
+        &:focus {
+            outline: 0;
+        }
 
 	// Sizes
 	//-------------------------------------------------------------

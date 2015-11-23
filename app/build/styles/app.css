@@ -5162,6 +5162,9 @@ q:before, q:after {
   color: #ffffff;
   text-decoration: none;
 }
+.button:focus, [class*="button-"]:focus {
+  outline: 0;
+}
 [class*="button-"][class*="-base"] {
   font-size: 1em;
 }

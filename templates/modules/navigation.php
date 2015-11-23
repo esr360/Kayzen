@@ -436,11 +436,10 @@
 						<li><a href="/<?php echo $pageTree.'further/shop-category.php' ?>">Shop Category</a></li>
 						<li><a href="/<?php echo $pageTree.'further/shop-category-sidebar.php' ?>">Shop Category Sidebar</a></li>
 						<li><a href="/<?php echo $pageTree.'further/shop-single.php' ?>">Shop Single</a></li>
-						<li><a href="/<?php echo $pageTree.'further/shop-single.php' ?>">Shop Single Sidebar</a></li>
+						<li><a href="/<?php echo $pageTree.'further/shop-single-sidebar.php' ?>">Shop Single Sidebar</a></li>
 						<li><a href="/<?php echo $pageTree.'further/404.php' ?>">404</a></li>
 						<li><a href="/<?php echo $pageTree.'further/login-register.php' ?>">Login/Register</a></li>
 						<li><a href="/<?php echo $pageTree.'further/coming-soon.php' ?>">Coming Soon</a></li>
-						<li><a href="/<?php echo $pageTree.'further/shop-single.php' ?>">Page Offline</a></li>
 						<li><a href="/<?php echo $pageTree.'further/faq.php' ?>">FAQ</a></li>
 						<li><a href="/<?php echo $pageTree.'further/news.php' ?>">News</a></li>
 						<li><a href="/<?php echo $pageTree.'further/search-results.php' ?>">Search Results</a></li>
