@@ -61,6 +61,20 @@
                                 <input type="text" class="form_input-plain" id="footer-newsletter" placeholder="Search for a page" required="">
                             </div>
                         </form>
+                    <?php } if ($options['countdown']) { ?>
+                        <div class="countdown">
+                            <p class="countdown_days">00</p>
+                            <p class="countdown_hours">00</p>
+                            <p class="countdown_minutes">00</p>
+                            <p class="countdown_seconds">00</p>
+                        </div>
+                        <script>
+                            $(document).ready(function() {
+                                $(".countdown").countdown({
+                                    date : '1 January 2016 09:00:00'
+                                });
+                            });
+                        </script>
                     <?php } ?>
                 </header>
             </div>

@@ -7683,6 +7683,10 @@ progress::-moz-progress-bar {
   opacity: 1;
 }
 
+[class*="countdown_"] {
+  display: inline-block;
+}
+
 .earth-slider, [class*="earth-slider-"] {
   position: relative;
   overflow: hidden;

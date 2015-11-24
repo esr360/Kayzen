@@ -25,7 +25,7 @@
 
             billboard(array(
                 'modifiers' => 'full-screen',
-                'headline'  => 404,
+                'headline'  => '404',
                 'title'     => $title,
                 'search'    => true
             ));
