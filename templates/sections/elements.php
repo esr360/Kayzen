@@ -1,7 +1,6 @@
 <!-- Elements Row -->
-<div class="widget_group row-no-gutter text-center">
+<div class="widget_group-center row-no-gutter">
 	
-	<!-- Element 1 -->
 	<a class="widget-block-panel-small span-2 break-3-third break-1-half" href="#">
 		<div class="widget_icon icon-plain-size-9">
 			<i class="fa fa-chevron-circle-down"></i>
@@ -11,7 +10,6 @@
 		</header>
 	</a>
 	
-	<!-- Element 2 -->
 	<a class="widget-block-panel-small span-2 break-3-third break-1-half" href="#">
 		<div class="widget_icon icon-plain-size-9">
 			<i class="fa fa-exclamation-triangle"></i>
@@ -21,7 +19,6 @@
 		</header>
 	</a>
 	
-	<!-- Element 3 -->
 	<a class="widget-block-panel-small span-2 break-3-third break-1-half" href="#">
 		<div class="widget_icon icon-plain-size-9">
 			<i class="fa fa-quote-left"></i>
@@ -31,7 +28,6 @@
 		</header>
 	</a>
 	
-	<!-- Element 4 -->
 	<a class="widget-block-panel-small span-2 break-3-third break-1-half" href="#">
 		<div class="widget_icon icon-plain-size-9">
 			<i class="fa fa-keyboard-o"></i>
@@ -41,7 +37,6 @@
 		</header>
 	</a>
 	
-	<!-- Element 5 -->
 	<a class="widget-block-panel-small span-2 break-3-third break-1-half" href="#">
 		<div class="widget_icon icon-plain-size-9">
 			<i class="fa fa-arrows-h"></i>
@@ -51,7 +46,15 @@
 		</header>
 	</a>
 	
-	<!-- Element 6 -->
+	<a class="widget-block-panel-small span-2 break-3-third break-1-half" href="#">
+		<div class="widget_icon icon-plain-size-9">
+			<i class="fa fa-bookmark-o"></i>
+		</div>
+		<header class="widget_header heading_group">
+			<h3 class="heading-light-uppercase-brand-1">Corner Ribbons</h3>
+		</header>
+	</a>
+	
 	<a class="widget-block-panel-small span-2 break-3-third break-1-half" href="#">
 		<div class="widget_icon icon-plain-size-9">
 			<i class="fa fa-font"></i>
@@ -61,7 +64,6 @@
 		</header>
 	</a>
 	
-	<!-- Element 7 -->
 	<a class="widget-block-panel-small span-2 break-3-third break-1-half" href="#">
 		<div class="widget_icon icon-plain-size-9">
 			<i class="fa fa-file-text-o"></i>
@@ -71,7 +73,6 @@
 		</header>
 	</a>
 	
-	<!-- Element 8 -->
 	<a class="widget-block-panel-small span-2 break-3-third break-1-half" href="#">
 		<div class="widget_icon icon-plain-size-9">
 			<i class="fa fa-bold"></i>
@@ -81,7 +82,6 @@
 		</header>
 	</a>
 	
-	<!-- Element 9 -->
 	<a class="widget-block-panel-small span-2 break-3-third break-1-half" href="#">
 		<div class="widget_icon icon-plain-size-9">
 			<i class="fa fa-flag"></i>
@@ -91,7 +91,6 @@
 		</header>
 	</a>
 	
-	<!-- Element 10 -->
 	<a class="widget-block-panel-small span-2 break-3-third break-1-half" href="#">
 		<div class="widget_icon icon-plain-size-9">
 			<i class="fa fa-picture-o"></i>
@@ -101,7 +100,6 @@
 		</header>
 	</a>
 	
-	<!-- Element 11 -->
 	<a class="widget-block-panel-small span-2 break-3-third break-1-half" href="#">
 		<div class="widget_icon icon-plain-size-9">
 			<i class="fa fa-list"></i>
@@ -110,8 +108,7 @@
 			<h3 class="heading-light-uppercase-brand-1">Lists</h3>
 		</header>
 	</a>
-	
-	<!-- Element 12 -->
+    
 	<a class="widget-block-panel-small span-2 break-3-third break-1-half" href="#">
 		<div class="widget_icon icon-plain-size-9">
 			<i class="fa fa-times-circle"></i>
@@ -120,8 +117,16 @@
 			<h3 class="heading-light-uppercase-brand-1">Modals</h3>
 		</header>
 	</a>
-	
-	<!-- Element 13 -->
+    
+	<a class="widget-block-panel-small span-2 break-3-third break-1-half" href="#">
+		<div class="widget_icon icon-plain-size-9">
+			<i class="fa fa-money"></i>
+		</div>
+		<header class="widget_header heading_group">
+			<h3 class="heading-light-uppercase-brand-1">Price Charts</h3>
+		</header>
+	</a>
+    
 	<a class="widget-block-panel-small span-2 break-3-third break-1-half" href="#">
 		<div class="widget_icon icon-plain-size-9">
 			<i class="fa fa-battery-3"></i>
@@ -130,8 +135,7 @@
 			<h3 class="heading-light-uppercase-brand-1">Progress Bars</h3>
 		</header>
 	</a>
-	
-	<!-- Element 14 -->
+    
 	<a class="widget-block-panel-small span-2 break-3-third break-1-half" href="#">
 		<div class="widget_icon icon-plain-size-9">
 			<i class="fa fa-table"></i>
@@ -140,8 +144,7 @@
 			<h3 class="heading-light-uppercase-brand-1">Tables</h3>
 		</header>
 	</a>
-	
-	<!-- Element 15 -->
+    
 	<a class="widget-block-panel-small span-2 break-3-third break-1-half" href="#">
 		<div class="widget_icon icon-plain-size-9">
 			<i class="fa fa-folder-o"></i>
@@ -151,7 +154,15 @@
 		</header>
 	</a>
 	
-	<!-- Element 16 -->
+	<a class="widget-block-panel-small span-2 break-3-third break-1-half" href="#">
+		<div class="widget_icon icon-plain-size-9">
+			<i class="fa fa-picture-o"></i>
+		</div>
+		<header class="widget_header heading_group">
+			<h3 class="heading-light-uppercase-brand-1">Thumbnails</h3>
+		</header>
+	</a>
+	
 	<a class="widget-block-panel-small span-2 break-3-third break-1-half" href="#">
 		<div class="widget_icon icon-plain-size-9">
 			<i class="fa fa-comment"></i>
@@ -161,7 +172,6 @@
 		</header>
 	</a>
 	
-	<!-- Element 17 -->
 	<a class="widget-block-panel-small span-2 break-3-third break-1-half" href="#">
 		<div class="widget_icon icon-plain-size-9">
 			<i class="fa fa-square"></i>
@@ -171,7 +181,6 @@
 		</header>
 	</a>
 	
-	<!-- Element 18 -->
 	<a class="widget-block-panel-small span-2 break-3-third break-1-half" href="#">
 		<div class="widget_icon icon-plain-size-9">
 			<i class="fa fa-th-large"></i>

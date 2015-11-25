@@ -7327,6 +7327,29 @@ progress::-moz-progress-bar {
 [class*="widget-"][class*="-panel"][class*="-small"] {
   padding: 4% 2%;
 }
+[class*="widget-"][class*="-panel"]:last-child {
+  position: relative;
+}
+[class*="widget-"][class*="-panel"]:last-child:before, [class*="widget-"][class*="-panel"]:last-child:after {
+  content: "";
+  position: absolute;
+  top: -1px;
+  transition: 0.4s;
+  background: #dee0e2;
+}
+[class*="widget-"][class*="-panel"]:last-child:before {
+  height: 100%;
+  width: 1px;
+  right: -1px;
+}
+[class*="widget-"][class*="-panel"]:last-child:after {
+  height: 1px;
+  width: 1000%;
+  left: 100%;
+}
+[class*="widget-"][class*="-panel"]:last-child:hover:before {
+  background: #9B58B5;
+}
 [class*="widget-"][class*="-borderTop"] {
   border: 0;
   border-top: 0.6em solid rgba(0, 0, 0, 0.15);
@@ -7529,6 +7552,9 @@ progress::-moz-progress-bar {
 }
 [class*="widget_group"][class*="-grid"] .widget, [class*="widget_group"][class*="-grid"] [class*="widget-"] {
   margin-bottom: 3%;
+}
+[class*="widget_group"][class*="-center"] .widget, [class*="widget_group"][class*="-center"] [class*="widget-"] {
+  text-align: center;
 }
 [class*="widget_icon"] {
   color: #bfc1c3;
@@ -8709,8 +8735,12 @@ progress::-moz-progress-bar {
 [class*="section-"][class*="-sink"] {
   padding-bottom: 0;
 }
+[class*="section-"][class*="-block"] {
+  overflow: hidden;
+}
 [class*="section-"][class*="-block"] + [class*="section-"][class*="-block"] {
   border-top: 1px solid #dee0e2;
+  position: relative;
 }
 [class*="section_block"] {
   position: relative;

@@ -86,6 +86,31 @@
 			@include nested-modifier(small) {
 				padding: 4% 2%;
 			}
+            &:last-child {
+                position: relative;
+                &:before, &:after {
+                    content: "";
+                    position: absolute;
+                    top: -1px;
+                    transition: base(transition);
+			        background: color(greyscale, grey-2);
+                }
+                &:before {
+                    height: 100%;
+                    width: 1px;
+                    right: -1px;
+                }
+                &:after {
+                    height: 1px;
+                    width: 1000%;
+                    left: 100%;
+                }
+                &:hover {
+                    &:before {
+			            background: color(brand, primary);
+                    }
+                }
+            }
 		}
 		
 		//---------------------------------------------------------
@@ -374,6 +399,11 @@
 					margin-bottom: option($grid, options, gutter);
 				}
 			}
+            @include modifier('center') {
+                @include overwrite {
+                    text-align: center;
+                }
+            }
 		}
 		
 		//---------------------------------------------------------

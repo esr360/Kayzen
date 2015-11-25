@@ -14,9 +14,20 @@
     <!-- Site Canvas -->
     <div id="site-content">
 		
-		<?php include (ROOT.'/modules/objects/header/header.php'); ?>
+		<?php 
+        
+            topbar();
 
-		<?php include (ROOT.'/modules/objects/billboard/billboard.php'); ?>
+            appHeader(array(
+                'modifiers' => 'bar-absolute-dark-sticky'
+            ));
+
+            billboard(array(
+                'title'    => $title,
+                'tag-line' => $tagLine
+            ));
+            
+        ?>
 		
 		<section class="section-block">
 			
@@ -49,9 +60,13 @@
 			<?php include (ROOT.'/sections/objects.php'); ?>
 	
 		</section>
+        
+		<?php 
 
-		<?php include (ROOT.'/modules/objects/footer/footer.php'); ?>
-
+            appFooter();
+            
+        ?>
+        
     </div><!-- Site Canvas -->
 
     <?php include (ROOT.'/includes/ui-enhancements.php'); ?>

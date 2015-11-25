@@ -504,21 +504,21 @@
 							<ul class="list-arrow">
 								<li><a href="#">Accordions</a></li>	
 								<li><a href="#">Alert Bars</a></li>
-								<li><a href="#">Fonts</a></li>	
+								<li><a href="#">Blockquotes</a></li>	
 							</ul>
 						</div>
 						<div class="span-4">
 							<ul class="list-arrow">
+								<li><a href="#">Corner Ribbons</a></li>	
+								<li><a href="#">Fonts</a></li>
 								<li><a href="#">Forms</a></li>	
-								<li><a href="#">Headings</a></li>
-								<li><a href="#">Icons</a></li>	
 							</ul>
 						</div>
 						<div class="span-4">
 							<ul class="list-arrow">
-								<li><a href="#">Images</a></li>	
-								<li><a href="#">Lists</a></li>
-								<li><a href="#">Tables</a></li>			
+								<li><a href="#">Headings</a></li>	
+								<li><a href="#">Icons</a></li>
+								<li><a href="#">Images</a></li>			
 							</ul>
 						</div>
 					</div>
@@ -536,7 +536,7 @@
 								<i class="fa fa-file-o"></i>
 							</div>
 							<header class="widget_header-inline heading_group">
-								<h3 class="heading">Flexible Header</h3>
+								<h3 class="heading">Customizable Header</h3>
 								<h4 class="heading-light-uppercase-brand-1-size-1">Infinite Header Styles</h4>
 							</header>
 						</a>
@@ -552,10 +552,10 @@
 						
 						<a class="widget-block-fill-small-borderTop-greyscale span-3" href="#">
 							<div class="widget_icon icon-plain-size-7">
-								<i class="fa fa-map-o"></i>
+								<i class="fa fa-twitter"></i>
 							</div>
 							<header class="widget_header heading_group">
-								<h4 class="heading-light-uppercase-brand-1-size-1">Google Map</h4>
+								<h4 class="heading-light-uppercase-brand-1-size-1">Twitter Feed</h4>
 							</header>
 						</a>
 						
@@ -587,15 +587,15 @@
 								<div class="span-6">
 									<ul class="list-arrow">
 										<li><a href="#">Breadcrumb</a></li>
+										<li><a href="#">Countdown</a></li>	
 										<li><a href="#">Dropdown</a></li>	
-										<li><a href="#">Logo</a></li>	
 									</ul>
 								</div>
 								<div class="span-6">
 									<ul class="list-arrow">
-										<li><a href="#">Navigation</a></li>
-										<li><a href="#">Page Overview</a></li>	
-										<li><a href="#">Promo Banner</a></li>	
+										<li><a href="#">Earth Slider</a></li>
+										<li><a href="#">Flyout Navigation</a></li>	
+										<li><a href="#">Google Map</a></li>	
 									</ul>
 								</div>
 							</div>

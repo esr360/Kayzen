@@ -26,6 +26,7 @@
 		@include overwrite-component(group, $parent: heading) {
 			color: typography(colors, heading);
 		}
+        
 		// Carousel Tools
 
 		.slide-prev,
@@ -184,8 +185,10 @@
 		//---------------------------------------------------------
 		
 		@include modifier(block) {
+            overflow: hidden;
 			& + & {
 				border-top: 1px solid color(greyscale, grey-2);
+                position: relative;
 			}
 		}
 		
