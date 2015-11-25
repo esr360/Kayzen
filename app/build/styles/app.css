@@ -7241,6 +7241,9 @@ progress::-moz-progress-bar {
   background: rgba(0, 0, 0, 0.4);
   border: none;
 }
+[class*="well-"][class*="-deep"] {
+  padding: 1.5em 2em;
+}
 [class*="well-"][class*="-comment"] {
   position: relative;
   padding: 1.5em;

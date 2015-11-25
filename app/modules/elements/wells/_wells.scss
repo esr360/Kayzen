@@ -36,9 +36,13 @@
 			border: none;
 		}
         
+        @include modifier('deep') {
+            padding: 1.5em 2em;
+        }
+        
         @include modifier('comment') {
             position: relative;
-	       padding: 1.5em;
+	        padding: 1.5em;
             &:before {
                 content: "";
                 position: absolute;

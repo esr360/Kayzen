@@ -96,7 +96,7 @@
                             </section>
                             <section class="object">
                                 <header class="heading_group-small">
-                                    <h4 class="heading-size-4-dotted"><strong>Q.</strong> How do download updates?</h4>
+                                    <h4 class="heading-size-4-dotted"><strong>Q.</strong> How do I download updates?</h4>
                                 </header>
                                 <div><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sed eros congue leo tincidunt mattis. Vivamus bibendum laoreet nibh nec gravida. Phasellus a efficitur est, ac lacinia ipsum. Aliquam erat volutpat. Ut sit amet tellus mauris. Phasellus sed vehicula ligula. Donec ac congue arcu. Morbi metus felis, feugiat facilisis turpis nec, vulputate sollicitudin eros.</p></div>
                             </section>
@@ -183,7 +183,7 @@
                             </section>
                             <section class="object">
                                 <header class="heading_group-small">
-                                    <h4 class="heading-size-4-dotted"><strong>Q.</strong> How do download updates?</h4>
+                                    <h4 class="heading-size-4-dotted"><strong>Q.</strong> How do I download updates?</h4>
                                 </header>
                                 <div><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sed eros congue leo tincidunt mattis. Vivamus bibendum laoreet nibh nec gravida. Phasellus a efficitur est, ac lacinia ipsum. Aliquam erat volutpat. Ut sit amet tellus mauris. Phasellus sed vehicula ligula. Donec ac congue arcu. Morbi metus felis, feugiat facilisis turpis nec, vulputate sollicitudin eros.</p></div>
                             </section>
