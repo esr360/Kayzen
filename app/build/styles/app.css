@@ -6627,6 +6627,14 @@ img {
   color: #ffffff;
   text-decoration: none;
 }
+[class*="mega-menu"] [class*="list-"][class*="-tags"] > li span, [class*="mega-menu"] [class*="list-"][class*="-tags"] > li a {
+  padding: 0.1em 0.4em !important;
+}
+[class*="mega-menu"] [class*="list-"][class*="-tags"] > li:hover a {
+  background: #9B58B5 !important;
+  border-color: #9B58B5 !important;
+  color: #ffffff !important;
+}
 [class*="list-"][class*="-overflow"] {
   overflow: auto;
 }

@@ -3,7 +3,7 @@
 <!-- Navigation -->
 <nav class="navigation-no-icons" id="app-nav">
 	<ul>
-		<li class="active"><a href="#"><i class="navigation_icon fa fa-home"></i> Home</a></li>
+		<li class="active"><a href="/"><i class="navigation_icon fa fa-home"></i> Home</a></li>
 		<li>
 			<a href="#"><i class="navigation_icon fa fa-home"></i> Demos</a>
 			<ul class="mega-menu row">
@@ -28,9 +28,9 @@
 										</a>
 									</header>   
 									<div class="widget_controls">
-										<ul class="list-tags-links">
-											<li class="tag"><a href="#">Multi-Page</a></li>
-										</ul>
+                                        <ul class="list-tags-small">
+                                            <li class="plain"><a href="#">Multi-Page</a></li>
+                                        </ul>
 									</div>
 								</div>   
 							</div>
@@ -52,10 +52,10 @@
 										</a>
 									</header>   
 									<div class="widget_controls">
-										<ul class="list-tags-links">
-											<li class="tag"><a href="#">Multi-Page</a></li>
-											<li class="tag"><a href="#">Parallax</a></li>
-										</ul>
+                                        <ul class="list-tags-small">
+                                            <li class="plain"><a href="#">Multi-Page</a></li>
+                                            <li class="plain"><a href="#">Parallax</a></li>
+                                        </ul>
 									</div>
 								</div>   
 							</div>
@@ -76,9 +76,9 @@
 										</a>
 									</header>   
 									<div class="widget_controls">
-										<ul class="list-tags-links">
-											<li class="tag"><a href="#">One-Page</a></li>
-										</ul>
+                                        <ul class="list-tags-small">
+                                            <li class="plain"><a href="#">One-Page</a></li>
+                                        </ul>
 									</div>
 								</div>   
 							</div>
@@ -107,9 +107,9 @@
 										</a>
 									</header>   
 									<div class="widget_controls">
-										<ul class="list-tags-links">
-											<li class="tag"><a href="#">Multi-Page</a></li>
-										</ul>
+                                        <ul class="list-tags-small">
+                                            <li class="plain"><a href="#">Multi-Page</a></li>
+                                        </ul>
 									</div>
 								</div>   
 							</div>
@@ -130,10 +130,10 @@
 										</a>
 									</header>   
 									<div class="widget_controls">
-										<ul class="list-tags-links">
-											<li class="tag"><a href="#">Multi-Page</a></li>
-											<li class="tag"><a href="#">Parallax</a></li>
-										</ul>
+                                        <ul class="list-tags-small">
+                                            <li class="plain"><a href="#">Multi-Page</a></li>
+                                            <li class="plain"><a href="#">Parallax</a></li>
+                                        </ul>
 									</div>
 								</div>   
 							</div>
@@ -154,9 +154,9 @@
 										</a>
 									</header>   
 									<div class="widget_controls">
-										<ul class="list-tags-links">
-											<li class="tag"><a href="#">One-Page</a></li>
-										</ul>
+                                        <ul class="list-tags-small">
+                                            <li class="plain"><a href="#">One-Page</a></li>
+                                        </ul>
 									</div>
 								</div>   
 							</div>
@@ -185,9 +185,9 @@
 										</a>
 									</header>   
 									<div class="widget_controls">
-										<ul class="list-tags-links">
-											<li class="tag"><a href="#">Multi-Page</a></li>
-										</ul>
+                                        <ul class="list-tags-small">
+                                            <li class="plain"><a href="#">Multi-Page</a></li>
+                                        </ul>
 									</div>
 								</div>   
 							</div>
@@ -208,9 +208,9 @@
 										</a>
 									</header>   
 									<div class="widget_controls">
-										<ul class="list-tags-links">
-											<li class="tag"><a href="#">Multi-Page</a></li>
-										</ul>
+                                        <ul class="list-tags-small">
+                                            <li class="plain"><a href="#">Multi-Page</a></li>
+                                        </ul>
 									</div>
 								</div>   
 							</div>
@@ -231,10 +231,10 @@
 										</a>
 									</header>   
 									<div class="widget_controls">
-										<ul class="list-tags-links">
-											<li class="tag"><a href="#">One-Page</a></li>
-											<li class="tag"><a href="#">Parallax</a></li>
-										</ul>
+                                        <ul class="list-tags-small">
+                                            <li class="plain"><a href="#">Multi-Page</a></li>
+                                            <li class="plain"><a href="#">Parallax</a></li>
+                                        </ul>
 									</div>
 								</div>   
 							</div>
@@ -261,9 +261,9 @@
 										</a>
 									</header>   
 									<div class="widget_controls">
-										<ul class="list-tags-links">
-											<li class="tag"><a href="#">Multi-Page</a></li>
-										</ul>
+                                        <ul class="list-tags-small">
+                                            <li class="plain"><a href="#">Multi-Page</a></li>
+                                        </ul>
 									</div>
 								</div>   
 							</div>
@@ -285,9 +285,9 @@
 										</a>
 									</header>   
 									<div class="widget_controls">
-										<ul class="list-tags-links">
-											<li class="tag"><a href="#">Multi-Page</a></li>
-										</ul>
+                                        <ul class="list-tags-small">
+                                            <li class="plain"><a href="#">Multi-Page</a></li>
+                                        </ul>
 									</div>
 								</div>   
 							</div>
@@ -308,9 +308,9 @@
 										</a>
 									</header>   
 									<div class="widget_controls">
-										<ul class="list-tags-links">
-											<li class="tag"><a href="#">One-Page</a></li>
-										</ul>
+                                        <ul class="list-tags-small">
+                                            <li class="plain"><a href="#">One-Page</a></li>
+                                        </ul>
 									</div>
 								</div>   
 							</div>

@@ -81,6 +81,7 @@
 		}
 		
 		@include modifier(tags) {
+            
 			@include extend(reset);
             margin: 0;
 			> li {
@@ -124,6 +125,21 @@
 						text-decoration: none;
 					}
 				}
+            
+                // Ensure tags render correctly when inside mega-menu
+                [class*="mega-menu"] & {
+                    span, a {
+                        padding: 0.1em 0.4em !important;
+                    }
+                    &:hover {
+                        a {
+                            background: color(brand, primary) !important;
+                            border-color: color(brand, primary) !important;
+                            color: color(greyscale, white) !important;
+                        }
+                    }
+                }
+            
 			}	
 			
 		}
