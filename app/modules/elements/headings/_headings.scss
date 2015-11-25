@@ -185,6 +185,14 @@
 			p {
 				color: color(greyscale, grey-4);
 			}
+            
+            @include overwrite {
+                a {
+                    &:hover {
+                        color: color('brand', 'primary');
+                    }
+                }
+            }
 	
 			// Modifiers
 			//-----------------------------------------------------

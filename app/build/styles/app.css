@@ -6075,6 +6075,9 @@ button::-moz-focus-inner {
 [class*="heading_group"] p {
   color: #6f777b;
 }
+[class*="heading_group"] .heading a:hover, [class*="heading_group"] [class*="heading-"] a:hover {
+  color: #9B58B5;
+}
 [class*="heading_group"][class*="-dots"] {
   position: relative;
   margin-bottom: 3em;
