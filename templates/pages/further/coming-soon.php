@@ -1,7 +1,7 @@
 <?php 
 	include ('../../app.php');
 	// page config
-	$title = 'We\'ll be ready soon';
+	$title = 'Check back soon';
 	$tagLine = '';
 ?>
 

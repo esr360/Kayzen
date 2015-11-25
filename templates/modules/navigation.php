@@ -353,7 +353,7 @@
                         <li>
                             <h3 class="mega-menu_title heading-uppercase-size-2">Masonry</h3>
                             <ul class="list-arrow">
-                                <li><a href="/<?php echo $pageTree.'portfolio/masonry/2-cols-filterable.php' ?>">2 Columns Filterable</a></li>
+                                <li><a href="/<?php echo $pageTree.'portfolio/masonry/3-cols-filterable.php' ?>">3 Columns Filterable</a></li>
                                 <li><a href="/<?php echo $pageTree.'portfolio/masonry/3-cols-infinite-scroll.php' ?>">3 Columns Infinite Scroll</a></li>
                             </ul>
                         </li>
@@ -441,6 +441,7 @@
 						<li><a href="/<?php echo $pageTree.'further/login-register.php' ?>">Login/Register</a></li>
 						<li><a href="/<?php echo $pageTree.'further/coming-soon.php' ?>">Coming Soon</a></li>
 						<li><a href="/<?php echo $pageTree.'further/faq.php' ?>">FAQ</a></li>
+						<li><a href="/<?php echo $pageTree.'further/faq-2.php' ?>">FAQ 2</a></li>
 						<li><a href="/<?php echo $pageTree.'further/news.php' ?>">News</a></li>
 						<li><a href="/<?php echo $pageTree.'further/search-results.php' ?>">Search Results</a></li>
 					</ul>

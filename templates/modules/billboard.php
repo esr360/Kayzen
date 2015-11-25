@@ -49,7 +49,7 @@
     <?php } else if ($options['type'] == 'default') { ?>
         <section class="billboard<?php echo '-'.$options['modifiers'] ?>" data-stellar-background-ratio="0.5">
             <div class="billboard_wrapper container">
-                <header class="heading_group">
+                <header class="heading_group<?php if($options['countdown']) echo '-small' ?>">
                     <h2 class="heading-uppercase-light-strikethrough-spaced-size-4"><span><?php echo $options['headline'] ?></span></h2>
                     <h3 class="heading-uppercase-heavy-size-8 font-2"><?php echo $options['title'] ?></h3>
                     <?php if ($options['tag-line']) { ?>
@@ -61,22 +61,24 @@
                                 <input type="text" class="form_input-plain" id="footer-newsletter" placeholder="Search for a page" required="">
                             </div>
                         </form>
-                    <?php } if ($options['countdown']) { ?>
-                        <div class="countdown">
-                            <p class="countdown_days">00</p>
-                            <p class="countdown_hours">00</p>
-                            <p class="countdown_minutes">00</p>
-                            <p class="countdown_seconds">00</p>
-                        </div>
-                        <script>
-                            $(document).ready(function() {
-                                $(".countdown").countdown({
-                                    date : '1 January 2016 09:00:00'
-                                });
-                            });
-                        </script>
                     <?php } ?>
                 </header>
+                <?php if ($options['countdown']) { ?>
+                    <div class="countdown">
+                        <div class="countdown_days" data-timeUnit="">00</div>
+                        <div class="countdown_hours" data-timeUnit="Hours">00</div>
+                        <div class="countdown_minutes" data-timeUnit="Minutes">00</div>
+                        <div class="countdown_seconds" data-timeUnit="Seconds">00</div>
+                    </div>
+                    <script>
+                        $(document).ready(function() {
+                            $(".countdown").KayzenCountdown({
+                                date : '1 January 2016 09:00:00',
+                                format: 'on'
+                            });
+                        });
+                    </script>
+                <?php } ?>
             </div>
         </section>
     <?php } ?>
