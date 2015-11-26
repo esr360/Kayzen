@@ -295,6 +295,28 @@ module.exports = function(grunt) {
                 value       : 'prod',
                 file        : 'templates/app.php'
             }
+        },
+      
+        //---------------------------------------------------------
+        // PHP 2 HTML
+        // https://github.com/sindresorhus/grunt-sass
+        //---------------------------------------------------------
+        
+        php2html: {
+            default: {
+                options: {
+                    processLinks: true,
+                    htmlhint: {},
+                },
+                files: [
+                    {
+                        expand: true, 
+                        cwd: 'templates/pages/', 
+                        src: ['**/*.php'], 
+                        dest: 'build', 
+                        ext: '.html' }
+                ]
+            }
         }
 
     });
@@ -314,6 +336,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-csscomb');
     grunt.loadNpmTasks('grunt-notify');
     grunt.loadNpmTasks('grunt-php-set-constant');
+    grunt.loadNpmTasks('grunt-php2html');
     //grunt.loadNpmTasks('grunt-sass');
     
     //-------------------------------------------------------------
@@ -340,6 +363,7 @@ module.exports = function(grunt) {
         'postcss',
         'copy:prod',
         //'scsslint',
+        'php2html',
         'notify:app'
     ]);
 

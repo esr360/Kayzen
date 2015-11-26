@@ -39,6 +39,7 @@ Thumbs.db
 # Custom Options
 #============================================================
 *.cfg
+.vscode
 .settings
 .sass-cache
 node_modules

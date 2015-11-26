@@ -1,0 +1,1760 @@
+           
+<!DOCTYPE html>
+<html class="no-js">
+
+<head>
+	
+	<!-- Page Title -->
+    <title>Kayzen - Multi-Purpose HTML5 Theme</title>
+	
+	<!-- Meta Tags -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="description" content="Multi-Purpose HTML5 Theme.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+
+    <!-- Icons -->
+    <link rel="apple-touch-icon" href="/app/images/apple-icon-touch.png">
+    <link rel="icon" href="/app/images/favicon.png">
+    <!--[if IE]><link rel="shortcut icon" href="/app/images/favicon.ico"><![endif]-->
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="/app/build/styles/app.css">
+	
+    <!-- sudojQuery start -->
+            <script src="/app/build/scripts/sudojQuery-start.min.js"></script>
+    	
+</head>
+<body>
+
+    <!-- Site Canvas -->
+    <div id="site-content">
+		
+		
+        
+    <!-- Login Box -->
+    <div class="modal" id="modal-login">
+        <div class="modal_close"><i class="fa fa-times fa-2x"></i></div>
+        <div class="modal_content text-left">
+            <div class="row-block">
+                <div class="span-5">
+                    <h3 class="heading">Sign in to your account</h3>
+                    <form class="form-faux-placeholders-html5">
+                        <div class="form_group-compound-has-icon">
+                            <input type="text" class="form_input" id="loginUsername" placeholder="Ex: SkyUX" required="">
+                            <i class="form_icon fa fa-user"></i>
+                            <label for="loginUsername">Username</label>
+                        </div>
+                        <div class="form_group-compound-has-icon">
+                            <input type="password" class="form_input" id="loginPassword" placeholder="••••••••" required="">
+                            <i class="form_icon fa fa-key"></i>
+                            <label for="loginPassword">Password</label>
+                        </div>
+                        <div class="row">
+                            <div class="span-8 va-middle">
+                                <input id="rememberMe" type="checkbox"> 
+                                <label for="rememberMe">Remember Me?</label>
+                            </div>
+                            <div class="span-4 va-middle">
+                                <button type="submit" class="button-block-primary">Login</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="span-2 v-sep"></div>
+                <div class="span-5">
+                    <h3 class="heading">Sign in using...</h3>
+                    <a href="#" class="button-block-facebook">Facebook</a>
+                    <a href="#" class="button-block-twitter">Twitter</a>
+                    <a href="#" class="button-block-google-plus">Google Plus</a>
+                    <p><small>Don't have an account? <a href="#modal-register">Sign Up</a></small></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Register Box -->
+    <div class="modal" id="modal-register">
+        <div class="modal_close"><i class="fa fa-times fa-2x"></i></div>
+        <div class="modal_content text-left">
+            <div class="row-block">
+                <div class="span-5">
+                    <h3 class="heading">Create your free account</h3>
+                    <form class="form-faux-placeholders-html5">
+                        <div class="form_group-compound-has-icon">
+                            <input type="text" class="form_input" id="registerUsername" placeholder="Ex: SkyUX" required="">
+                            <i class="form_icon fa fa-user"></i>
+                            <label for="registerUsername">Username</label>
+                        </div>
+                        <div class="form_group-compound-has-icon">
+                            <input type="email" class="form_input" id="registerEmail" placeholder="Ex: hello@skyux.com" required="">
+                            <i class="form_icon fa fa-envelope-o"></i>
+                            <label for="registerEmail">Email</label>
+                        </div>
+                        <div class="form_group-compound-has-icon">
+                            <input type="password" class="form_input" id="registerPassword" placeholder="••••••••" required="">
+                            <i class="form_icon fa fa-key"></i>
+                            <label for="registerPassword">Password</label>
+                        </div>
+                        <button type="submit" class="button-block-primary">Sign Up</button>
+                    </form>
+                </div>
+                <div class="span-2 v-sep"></div>
+                <div class="span-5">
+                    <h3 class="heading">Sign up using...</h3>
+                    <a href="#" class="button-block-facebook">Facebook</a>
+                    <a href="#" class="button-block-twitter">Twitter</a>
+                    <a href="#" class="button-block-google-plus">Google Plus</a>
+                    <p><small>Already have an account? <a href="#modal-login">Login</a></small></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Top Bar -->
+    <div class="top-bar-">
+        <div class="container">
+            <div class="row-block">
+                
+                <div class="top-bar_item row span">
+                    <div class="icon_group-small span">
+                        <a href="#" class="icon-border-size-2 tooltip-bottom" data-tooltip="Facebook">
+                            <i class="fa fa-facebook"></i>
+                        </a>
+                        <a href="#" class="icon-border-size-2 tooltip-bottom" data-tooltip="Twitter">
+                            <i class="fa fa-twitter"></i>
+                        </a>
+                        <a href="#" class="icon-border-size-2 tooltip-bottom" data-tooltip="Dribbble">
+                            <i class="fa fa-dribbble"></i>
+                        </a>
+                        <a href="#" class="icon-border-size-2 tooltip-bottom" data-tooltip="Google Plus">
+                            <i class="fa fa-google-plus"></i>
+                        </a>
+                    </div>
+                    <div class="span">
+                        <small><a href="#"><i class="fa fa-envelope-o"></i> support@kayzen.com</a></small>
+                    </div>
+                    <div class="span">
+                        <small><a href="#"><i class="fa fa-phone"></i> (310) 276-2251</a></small>
+                    </div>
+                </div>
+                
+                <div class="span text-right">
+                    
+                    <div class="button_group span va-middle">
+                        <a class="button-size-1" href="#modal-login">
+                            <i class="fa fa-user"></i> Login
+                        </a>
+                        <a class="button-primary-size-1" href="#modal-register">
+                            <i class="fa fa-pencil-square-o"></i> Register
+                        </a>
+                    </div>
+                    
+                    <div class="top-bar_nav span va-middle">
+                        <ul>
+                            <li id="search-trigger">
+                                <a href="#">
+                                    <i class="fa fa-search"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" data-notification="3">
+                                    <i class="fa fa-shopping-cart"></i>
+                                </a>
+                                <ul>
+                                    <li>test</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <small>ENG</small> <i class="fa fa-angle-down"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                </div>
+                
+            </div><!-- row-block -->
+        </div><!-- container -->
+    </div><!-- top-bar -->
+
+
+        
+    <header 
+        class="app-header-bar-absolute-dark-sticky" 
+        id="app-header"
+    >
+                
+        <div class="container">
+            
+            <div class="app-header_wrapper">
+    
+                <!-- Logo -->
+                <div class="logo">
+                    <a href="/"><img src="/app/images/logo-white.png" alt="logo"/ ></a>
+                </div>
+    
+                
+<!-- Navigation -->
+<nav class="navigation-no-icons" id="app-nav">
+	<ul>
+		<li class="active"><a href="/"><i class="navigation_icon fa fa-home"></i> Home</a></li>
+		<li>
+			<a href="#"><i class="navigation_icon fa fa-home"></i> Demos</a>
+			<ul class="mega-menu row">
+				
+				<li class="span-3">
+					<h3 class="mega-menu_title heading">Business/Corporate</h3>
+					<ul class="list-divider">
+						
+						<li>
+							<div class="widget-media row">               
+								<div class="span-4">
+									<div class="corner-ribbon-small-pink" data-ribbon="Hot"></div>
+									<a href="#">
+										<img src="/app/images/stock-1-thumb.jpg" alt="Theme One"/ >
+									</a>
+								</div> 
+								<div class="span-8">
+									<header class="heading_group">
+										<a href="#">
+											<h3 class="heading-heavy-size-2">Nexus</h3>
+											<h4 class="heading-light-uppercase-brand-1-size-1">Digital Agency Demo</h4>
+										</a>
+									</header>   
+									<div class="widget_controls">
+                                        <ul class="list-tags-small">
+                                            <li class="plain"><a href="#">Multi-Page</a></li>
+                                        </ul>
+									</div>
+								</div>   
+							</div>
+						</li>
+						
+						<li>
+							<div class="widget-media row">               
+								<div class="span-4">
+									<div class="corner-ribbon-small-purple" data-ribbon="Featured"></div>
+									<a href="#">
+										<img src="/app/images/stock-2-thumb.jpg" alt="Theme One"/ >
+									</a>
+								</div> 
+								<div class="span-8">
+									<header class="heading_group">
+										<a href="#">
+											<h3 class="heading-heavy-size-2">Kayzen</h3>
+											<h4 class="heading-light-uppercase-brand-1-size-1">Original Demo</h4>
+										</a>
+									</header>   
+									<div class="widget_controls">
+                                        <ul class="list-tags-small">
+                                            <li class="plain"><a href="#">Multi-Page</a></li>
+                                            <li class="plain"><a href="#">Parallax</a></li>
+                                        </ul>
+									</div>
+								</div>   
+							</div>
+						</li>
+						
+						<li>
+							<div class="widget-media row">               
+								<div class="span-4">
+									<a href="#">
+										<img src="/app/images/stock-3-thumb.jpg" alt="Theme One"/ >
+									</a>
+								</div> 
+								<div class="span-8">
+									<header class="heading_group">
+										<a href="#">
+											<h3 class="heading-heavy-size-2">Agenda</h3>
+											<h4 class="heading-light-uppercase-brand-1-size-1">Digital Agency Demo</h4>
+										</a>
+									</header>   
+									<div class="widget_controls">
+                                        <ul class="list-tags-small">
+                                            <li class="plain"><a href="#">One-Page</a></li>
+                                        </ul>
+									</div>
+								</div>   
+							</div>
+						</li>
+						
+					</ul>
+				</li>
+				
+				<li class="span-3">
+					<h3 class="mega-menu_title heading">Creative/Portfolio</h3>
+					<ul class="list-divider">
+						
+						<li>
+							<div class="widget-media row">               
+								<div class="span-4">
+									<div class="corner-ribbon-small-green" data-ribbon="New"></div>
+									<a href="#">
+										<img src="/app/images/stock-4-thumb.jpg" alt="Theme One"/ >
+									</a>
+								</div> 
+								<div class="span-8">
+									<header class="heading_group">
+										<a href="#">
+											<h3 class="heading-heavy-size-2">Nexus</h3>
+											<h4 class="heading-light-uppercase-brand-1-size-1">Digital Agency Demo</h4>
+										</a>
+									</header>   
+									<div class="widget_controls">
+                                        <ul class="list-tags-small">
+                                            <li class="plain"><a href="#">Multi-Page</a></li>
+                                        </ul>
+									</div>
+								</div>   
+							</div>
+						</li>
+						
+						<li>
+							<div class="widget-media row">               
+								<div class="span-4">
+									<a href="#">
+										<img src="/app/images/stock-5-thumb.jpg" alt="Theme One"/ >
+									</a>
+								</div> 
+								<div class="span-8">
+									<header class="heading_group">
+										<a href="#">
+											<h3 class="heading-heavy-size-2">Kayzen</h3>
+											<h4 class="heading-light-uppercase-brand-1-size-1">Original Demo</h4>
+										</a>
+									</header>   
+									<div class="widget_controls">
+                                        <ul class="list-tags-small">
+                                            <li class="plain"><a href="#">Multi-Page</a></li>
+                                            <li class="plain"><a href="#">Parallax</a></li>
+                                        </ul>
+									</div>
+								</div>   
+							</div>
+						</li>
+						
+						<li>
+							<div class="widget-media row">               
+								<div class="span-4">
+									<a href="#">
+										<img src="/app/images/stock-6-thumb.jpg" alt="Theme One"/ >
+									</a>
+								</div> 
+								<div class="span-8">
+									<header class="heading_group">
+										<a href="#">
+											<h3 class="heading-heavy-size-2">Agenda</h3>
+											<h4 class="heading-light-uppercase-brand-1-size-1">Digital Agency Demo</h4>
+										</a>
+									</header>   
+									<div class="widget_controls">
+                                        <ul class="list-tags-small">
+                                            <li class="plain"><a href="#">One-Page</a></li>
+                                        </ul>
+									</div>
+								</div>   
+							</div>
+						</li>
+						
+					</ul>
+				</li>
+				
+				<li class="span-3">
+					<h3 class="mega-menu_title heading">Shop/E-Commerce</h3>
+					<ul class="list-divider">
+						
+						<li>
+							<div class="widget-media row">               
+								<div class="span-4">
+									<div class="corner-ribbon-small-pink" data-ribbon="Hot"></div>
+									<a href="#">
+										<img src="/app/images/stock-3-thumb.jpg" alt="Theme One"/ >
+									</a>
+								</div> 
+								<div class="span-8">
+									<header class="heading_group">
+										<a href="#">
+											<h3 class="heading-heavy-size-2">Nexus</h3>
+											<h4 class="heading-light-uppercase-brand-1-size-1">Digital Agency Demo</h4>
+										</a>
+									</header>   
+									<div class="widget_controls">
+                                        <ul class="list-tags-small">
+                                            <li class="plain"><a href="#">Multi-Page</a></li>
+                                        </ul>
+									</div>
+								</div>   
+							</div>
+						</li>
+						
+						<li>
+							<div class="widget-media row">               
+								<div class="span-4">
+									<a href="#">
+										<img src="/app/images/stock-1-thumb.jpg" alt="Theme One"/ >
+									</a>
+								</div> 
+								<div class="span-8">
+									<header class="heading_group">
+										<a href="#">
+											<h3 class="heading-heavy-size-2">Kayzen</h3>
+											<h4 class="heading-light-uppercase-brand-1-size-1">Original Demo</h4>
+										</a>
+									</header>   
+									<div class="widget_controls">
+                                        <ul class="list-tags-small">
+                                            <li class="plain"><a href="#">Multi-Page</a></li>
+                                        </ul>
+									</div>
+								</div>   
+							</div>
+						</li>
+						
+						<li>
+							<div class="widget-media row">               
+								<div class="span-4">
+									<a href="#">
+										<img src="/app/images/stock-2-thumb.jpg" alt="Theme One"/ >
+									</a>
+								</div> 
+								<div class="span-8">
+									<header class="heading_group">
+										<a href="#">
+											<h3 class="heading-heavy-size-2">Agenda</h3>
+											<h4 class="heading-light-uppercase-brand-1-size-1">Digital Agency Demo</h4>
+										</a>
+									</header>   
+									<div class="widget_controls">
+                                        <ul class="list-tags-small">
+                                            <li class="plain"><a href="#">Multi-Page</a></li>
+                                            <li class="plain"><a href="#">Parallax</a></li>
+                                        </ul>
+									</div>
+								</div>   
+							</div>
+						</li>
+						
+					</ul>
+				</li>
+				<li class="span-3">
+					<h3 class="mega-menu_title heading">Blog/News</h3>
+					<ul class="list-divider">
+						
+						<li>
+							<div class="widget-media row">               
+								<div class="span-4">
+									<a href="#">
+										<img src="/app/images/stock-6-thumb.jpg" alt="Theme One"/ >
+									</a>
+								</div> 
+								<div class="span-8">
+									<header class="heading_group">
+										<a href="#">
+											<h3 class="heading-heavy-size-2">Nexus</h3>
+											<h4 class="heading-light-uppercase-brand-1-size-1">Digital Agency Demo</h4>
+										</a>
+									</header>   
+									<div class="widget_controls">
+                                        <ul class="list-tags-small">
+                                            <li class="plain"><a href="#">Multi-Page</a></li>
+                                        </ul>
+									</div>
+								</div>   
+							</div>
+						</li>
+						
+						<li>
+							<div class="widget-media row">               
+								<div class="span-4">
+									<div class="corner-ribbon-small-green" data-ribbon="New"></div>
+									<a href="#">
+										<img src="/app/images/stock-4-thumb.jpg" alt="Theme One"/ >
+									</a>
+								</div> 
+								<div class="span-8">
+									<header class="heading_group">
+										<a href="#">
+											<h3 class="heading-heavy-size-2">Kayzen</h3>
+											<h4 class="heading-light-uppercase-brand-1-size-1">Original Demo</h4>
+										</a>
+									</header>   
+									<div class="widget_controls">
+                                        <ul class="list-tags-small">
+                                            <li class="plain"><a href="#">Multi-Page</a></li>
+                                        </ul>
+									</div>
+								</div>   
+							</div>
+						</li>
+						
+						<li>
+							<div class="widget-media row">               
+								<div class="span-4">
+									<a href="#">
+										<img src="/app/images/stock-5-thumb.jpg" alt="Theme One"/ >
+									</a>
+								</div> 
+								<div class="span-8">
+									<header class="heading_group">
+										<a href="#">
+											<h3 class="heading-heavy-size-2">Agenda</h3>
+											<h4 class="heading-light-uppercase-brand-1-size-1">Digital Agency Demo</h4>
+										</a>
+									</header>   
+									<div class="widget_controls">
+                                        <ul class="list-tags-small">
+                                            <li class="plain"><a href="#">One-Page</a></li>
+                                        </ul>
+									</div>
+								</div>   
+							</div>
+						</li>
+						
+					</ul>
+				</li>
+			</ul>
+		</li>
+		
+		<li>
+			<a href="#"><i class="navigation_icon fa fa-desktop"></i> Templates</a>
+			<ul class="mega-menu row-magic">
+				
+				<li class="span">
+					<h3 class="mega-menu_heading heading">Homepages</h3>
+					<ul class="list-overflow-arrow" data-list-height="6">
+						<li><a href="/templates/pages/homepages/homepage-1.html">Homepage 1</a></li>
+						<li><a href="/templates/pages/homepages/homepage-2.html">Homepage 2</a></li>
+						<li><a href="/templates/pages/homepages/homepage-3.html">Homepage 3</a></li>
+						<li><a href="/templates/pages/homepages/homepage-4.html">Homepage 4</a></li>
+						<li><a href="/templates/pages/homepages/homepage-5.html">Homepage 5</a></li>
+						<li><a href="/templates/pages/homepages/homepage-6.html">Homepage 6</a></li>
+					</ul>
+				</li>
+				
+                <li class="span">
+                    <h3 class="mega-menu_heading heading">Portfolio</h3>
+                    <ul class="list-overflow-group" data-list-height="6">
+                        <li>
+                            <h3 class="mega-menu_title heading-uppercase-size-2">Classic</h3>
+                            <ul class="list-arrow">
+                                <li><a href="/templates/pages/portfolio/classic/2-cols-carousel.html">2 Columns Carousel</a></li>
+                                <li><a href="/templates/pages/portfolio/classic/3-cols-carousel.html">3 Columns Carousel</a></li>
+                                <li><a href="/templates/pages/portfolio/classic/3-cols-filterable.html">3 Columns Filterable</a></li>
+                                <li><a href="/templates/pages/portfolio/classic/3-cols-infinite-scroll.html">3 Columns Infinite Scroll</a></li>
+                                <li><a href="/templates/pages/portfolio/classic/4-cols-carousel.html">4 Columns Carousel</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <h3 class="mega-menu_title heading-uppercase-size-2">Masonry</h3>
+                            <ul class="list-arrow">
+                                <li><a href="/templates/pages/portfolio/masonry/3-cols-filterable.html">3 Columns Filterable</a></li>
+                                <li><a href="/templates/pages/portfolio/masonry/3-cols-infinite-scroll.html">3 Columns Infinite Scroll</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <h3 class="mega-menu_title heading-uppercase-size-2">Matrix</h3>
+                            <ul class="list-arrow">
+                                <li><a href="/templates/pages/portfolio/matrix/2-cols-carousel.html">2 Columns Carousel</a></li>
+                                <li><a href="/templates/pages/portfolio/matrix/3-cols-carousel.html">3 Columns Carousel</a></li>
+                                <li><a href="/templates/pages/portfolio/matrix/3-cols-filterable.html">3 Columns Filterable</a></li>
+                                <li><a href="/templates/pages/portfolio/matrix/3-cols-fullscreen-carousel.html">3 Columns Fullscreen Carousel</a></li>
+                                <li><a href="/templates/pages/portfolio/matrix/3-cols-fullscreen-filterable.html">3 Columns Fullscreen Filterable</a></li>
+                                <li><a href="/templates/pages/portfolio/matrix/3-cols-infinite-scroll.html">3 Columns Infinite Scroll</a></li>
+                                <li><a href="/templates/pages/portfolio/matrix/4-cols-carousel.html">4 Columns Carousel</a></li>
+                                <li><a href="/templates/pages/portfolio/matrix/4-cols-fullscreen-carousel.html">4 Columns Fullscreen Carousel</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <h3 class="mega-menu_title heading-uppercase-size-2">Article</h3>
+                            <ul class="list-arrow">
+                                <li><a href="/templates/pages/portfolio/article/full-width.html">Full Width</a></li>
+                                <li><a href="/templates/pages/portfolio/article/full-width-infinite-scroll.html">Full Width Infinite Scroll</a></li>
+                                <li><a href="/templates/pages/portfolio/article/full-width-sidebar.html">Full Width Sidebar</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <h3 class="mega-menu_title heading-uppercase-size-2">Single</h3>
+                            <ul class="list-arrow">
+                                <li><a href="/templates/pages/portfolio/single.html">Single</a></li>
+                                <li><a href="/templates/pages/portfolio/single-sidebar.html">Single Sidebar</a></li>
+                                <li><a href="/templates/pages/portfolio/single-video.html">Single Video</a></li>
+                                <li><a href="/templates/pages/portfolio/single-video-bg.html">Single Video-BG</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+				
+                <li class="span">
+                    <h3 class="mega-menu_heading heading">Blog</h3>
+                    <ul class="list-overflow-group" data-list-height="6">
+                        <li>
+                            <h3 class="mega-menu_title heading-uppercase-size-2">Classic</h3>
+                            <ul class="list-arrow">
+                                <li><a href="/templates/pages/blog/classic/2-cols.html">2 Columns</a></li>
+                                <li><a href="/templates/pages/blog/classic/3-cols.html">3 Columns</a></li>
+                                <li><a href="/templates/pages/blog/classic/3-cols-filterable.html">3 Columns Filterable</a></li>
+                                <li><a href="/templates/pages/blog/classic/3-cols-infinite-scroll.html">3 Columns Infinite Scroll</a></li>
+                                <li><a href="/templates/pages/blog/classic/4-cols.html">4 Columns</a></li>
+                                <li><a href="/templates/pages/blog/classic/full-width.html">Full Width</a></li>
+                                <li><a href="/templates/pages/blog/classic/full-width-sidebar.html">Full Width Sidebar</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <h3 class="mega-menu_title heading-uppercase-size-2">Masonry</h3>
+                            <ul class="list-arrow">
+                                <li><a href="/templates/pages/blog/masonry/3-cols.html">3 Columns Carousel</a></li>
+                                <li><a href="/templates/pages/blog/classic/3-cols-filterable.html">3 Columns Filterable</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <h3 class="mega-menu_title heading-uppercase-size-2">Single</h3>
+                            <ul class="list-arrow">
+                                <li><a href="/templates/pages/blog/single.html">Single</a></li>
+                                <li><a href="/templates/pages/blog/single-sidebar.html">Single Sidebar</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+				
+				<li class="span">
+					<h3 class="mega-menu_heading heading">Further Pages</h3>
+					<ul class="list-overflow-arrow" data-list-height="6">
+						<li><a href="/templates/pages/further/about-us.html">About Us</a></li>
+						<li><a href="/templates/pages/further/about-us-2.html">About Us 2</a></li>
+						<li><a href="/templates/pages/further/contact-us.html">Contact Us</a></li>
+						<li><a href="/templates/pages/further/contact-us-2.html">Contact Us 2</a></li>
+						<li><a href="/templates/pages/further/services.html">Services</a></li>
+						<li><a href="/templates/pages/further/services-2.html">Services 2</a></li>
+						<li><a href="/templates/pages/further/services-3.html">Services 3</a></li>
+						<li><a href="/templates/pages/further/shop.html">Shop</a></li>
+						<li><a href="/templates/pages/further/shop-category.html">Shop Category</a></li>
+						<li><a href="/templates/pages/further/shop-category-sidebar.html">Shop Category Sidebar</a></li>
+						<li><a href="/templates/pages/further/shop-single.html">Shop Single</a></li>
+						<li><a href="/templates/pages/further/shop-single-sidebar.html">Shop Single Sidebar</a></li>
+						<li><a href="/templates/pages/further/404.html">404</a></li>
+						<li><a href="/templates/pages/further/login-register.html">Login/Register</a></li>
+						<li><a href="/templates/pages/further/coming-soon.html">Coming Soon</a></li>
+						<li><a href="/templates/pages/further/faq.html">FAQ</a></li>
+						<li><a href="/templates/pages/further/faq-2.html">FAQ 2</a></li>
+						<li><a href="/templates/pages/further/news.html">News</a></li>
+						<li><a href="/templates/pages/further/search-results.html">Search Results</a></li>
+					</ul>
+				</li>
+				
+			</ul>
+		</li>
+		
+		<li>
+			<a href="/templates/pages/modules.html"><i class="navigation_icon fa fa-star"></i> Modules</a>
+			<ul class="mega-menu row">
+				<li class="span-6">
+					
+					<h3 class="mega-menu_heading heading">Elements</h3>
+					
+					<div class="widget_group row-magic text-center">
+						
+						<a class="widget-block-small-borderTop span" href="#">
+							<div class="widget_icon icon-plain-size-7">
+								<i class="fa fa-keyboard-o"></i>
+							</div>
+							<header class="widget_header heading_group">
+								<h4 class="heading-light-uppercase-brand-1-size-1">Buttons</h4>
+							</header>
+						</a>
+						
+						<a class="widget-block-small-borderTop span" href="#">
+							<div class="widget_icon icon-plain-size-7">
+								<i class="fa fa-arrows-h""></i>
+							</div>
+							<header class="widget_header heading_group">
+								<h4 class="heading-light-uppercase-brand-1-size-1">Carousels</h4>
+							</header>
+						</a>
+						
+						<a class="widget-block-small-borderTop span" href="#">
+							<div class="widget_icon icon-plain-size-7">
+								<i class="fa fa-times-circle"></i>
+							</div>
+							<header class="widget_header heading_group">
+								<h4 class="heading-light-uppercase-brand-1-size-1">Modals</h4>
+							</header>
+						</a>
+						
+						<a class="widget-block-small-borderTop span" href="#">
+							<div class="widget_icon icon-plain-size-7">
+								<i class="fa fa-battery-3"></i>
+							</div>
+							<header class="widget_header heading_group">
+								<h4 class="heading-light-uppercase-brand-1-size-1">Progress Bars</h4>
+							</header>
+						</a>
+						
+					</div>
+					
+					<p>More... <small>(<a href="#" class="link">View All</a>)</small></p>
+					
+					<div class="row">
+						<div class="span-4">
+							<ul class="list-arrow">
+								<li><a href="#">Accordions</a></li>	
+								<li><a href="#">Alert Bars</a></li>
+								<li><a href="#">Blockquotes</a></li>	
+							</ul>
+						</div>
+						<div class="span-4">
+							<ul class="list-arrow">
+								<li><a href="#">Corner Ribbons</a></li>	
+								<li><a href="#">Fonts</a></li>
+								<li><a href="#">Forms</a></li>	
+							</ul>
+						</div>
+						<div class="span-4">
+							<ul class="list-arrow">
+								<li><a href="#">Headings</a></li>	
+								<li><a href="#">Icons</a></li>
+								<li><a href="#">Images</a></li>			
+							</ul>
+						</div>
+					</div>
+					
+				</li>
+				
+				<li class="span-6">
+					
+					<h3 class="mega-menu_heading heading">Objects</h3>
+							
+					<div class="widget_group row-flow text-center">
+						
+						<a class="widget-block-borderTop-highlight span-6 text-left" href="#">
+							<div class="widget_icon-inline icon-plain-size-7">
+								<i class="fa fa-file-o"></i>
+							</div>
+							<header class="widget_header-inline heading_group">
+								<h3 class="heading">Customizable Header</h3>
+								<h4 class="heading-light-uppercase-brand-1-size-1">Infinite Header Styles</h4>
+							</header>
+						</a>
+						
+						<a class="widget-block-fill-small-borderTop span-3" href="#">
+							<div class="widget_icon icon-plain-size-7">
+								<i class="fa fa-list-alt"></i>
+							</div>
+							<header class="widget_header heading_group">
+								<h4 class="heading-light-uppercase-brand-1-size-1">Mega Menu</h4>
+							</header>
+						</a>
+						
+						<a class="widget-block-fill-small-borderTop-greyscale span-3" href="#">
+							<div class="widget_icon icon-plain-size-7">
+								<i class="fa fa-twitter"></i>
+							</div>
+							<header class="widget_header heading_group">
+								<h4 class="heading-light-uppercase-brand-1-size-1">Twitter Feed</h4>
+							</header>
+						</a>
+						
+					</div><!-- widget_group -->
+					
+					<div class="widget_group row-flow text-center">
+						
+						<a class="widget-block-small-borderTop span-3" href="#">
+							<div class="widget_icon icon-plain-size-7">
+								<i class="fa fa-file-text"></i>
+							</div>
+							<header class="widget_header heading_group">
+								<h4 class="heading-light-uppercase-brand-1-size-1">Footer</h4>
+							</header>
+						</a>
+						
+						<a class="widget-block-small-borderTop span-3" href="#">
+							<div class="widget_icon icon-plain-size-7">
+								<i class="fa fa-tv"></i>
+							</div>
+							<header class="widget_header heading_group">
+								<h4 class="heading-light-uppercase-brand-1-size-1">Billboard</h4>
+							</header>
+						</a>
+						
+						<div class="span-6 text-left">					
+							<p>More... <small>(<a href="#" class="link">View All</a>)</small></p>
+							<div class="row">
+								<div class="span-6">
+									<ul class="list-arrow">
+										<li><a href="#">Breadcrumb</a></li>
+										<li><a href="#">Countdown</a></li>	
+										<li><a href="#">Dropdown</a></li>	
+									</ul>
+								</div>
+								<div class="span-6">
+									<ul class="list-arrow">
+										<li><a href="#">Earth Slider</a></li>
+										<li><a href="#">Flyout Navigation</a></li>	
+										<li><a href="#">Google Map</a></li>	
+									</ul>
+								</div>
+							</div>
+						</div>
+						
+					</div><!-- widget_group -->
+					
+				</li>
+			</ul>
+		</li>
+		<li>
+			<a href="/templates/pages/features.html"><i class="navigation_icon fa fa-star"></i> Features</a>
+			<ul>
+				<li><a href="/templates/pages/features.php#modular-ui">100% Modular UI</a></li>
+				<li><a href="/templates/pages/features.php#page-builder">Drag & Drop Page Builder</a></li>
+				<li><a href="/templates/pages/features.php#unique-configuration">Unique Configuration</a></li>
+				<li><a href="/templates/pages/features.php#custom-grid-system">Custom Grid System</a></li>
+				<li><a href="/templates/pages/features.php#intelligent-theming">Intelligent Theming</a></li>
+				<li><a href="/templates/pages/features.php#mobile-optimized">Mobile Optimized</a></li>
+			</ul>
+		</li>
+		<li>
+			<a href="/templates/pages/documentation.html"><i class="navigation_icon fa fa-files-o"></i> Documentation</a>
+			<ul>
+				<li><a href="#">Getting Started</a></li>
+				<li><a href="#">Configure</a></li>
+				<li><a href="#">Build</a></li>
+				<li><a href="#">Deploy</a></li>
+			</ul>
+		</li>
+	</ul>
+</nav>    
+            </div><!-- Header Wrapper -->
+            
+        </div><!-- Container -->
+    
+    </header><!-- Header -->
+
+
+        
+            <section class="billboard-videoBg-full-screen">
+            <div class="auto-resizable-iframe" data-iframe-height="56.5%">
+                <div>
+                    <iframe src="https://player.vimeo.com/video/87701971?autoplay=1" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                </div>
+            </div>
+        </section>
+    
+        
+		<section class="section" id="key-features">
+			
+			<!-- Key Features Header -->
+			<header class="heading_group-block has-icon text-center">
+				<div class="container-small">
+					<h4 class="heading-uppercase-light-spaced-brand-1-size-4"><span>Key Features</span></h4>
+					<h2 class="heading-uppercase-heavy-size-7 font-2"><span>Build Pro Websites</span></h2>
+					<div class="heading_icon">
+						<i class="fa fa-star-o"></i>
+					</div>
+				</div>
+			</header>
+			
+			<!-- Features Row 1 -->
+			<div class="row-block text-center">
+				
+				<div class="widget-block-panel span-3">
+					<div class="widget_icon icon-plain-size-9">
+						<i class="fa fa-desktop"></i>
+					</div>
+					<header class="widget_header heading_group">
+						<h3 class="heading-heavy-size-4">100% Responsive</h3>
+						<h4 class="heading-light-uppercase-brand-1">Optimized for all devices</h4>
+					</header>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc et erat posuere suscipit. Phasellus congue scelerisque lacus.</p>
+				</div>
+				
+				<div class="widget-block-panel span-3">
+					<div class="widget_icon icon-plain-size-9">
+						<i class="fa fa-clipboard"></i>
+					</div>
+					<header class="widget_header heading_group">
+						<h3 class="heading-heavy-size-4">Simple Page Builder</h3>
+						<h4 class="heading-light-uppercase-brand-1">Visual composer included</h4>
+					</header>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc et erat posuere suscipit. Phasellus congue scelerisque lacus.</p>
+				</div>
+				
+				<div class="section-secondary span-6 va-middle">
+					<div class="container-small">
+						<blockquote class="blockquote">
+							<div class="blockquote_content">
+								<h4 class="heading-light-size-6 font-2">We can take your awesome ideas and turn them into an <b class="heading-heavy">exciting reality</b>...</h4>
+							</div>
+						</blockquote>
+					</div>
+				</div>
+				
+			</div><!-- Features Row 1 -->
+			
+		</section>
+        
+        
+    
+    <section 
+        class="section-secondary-overlay-alt"
+        style="background-image: url('/app/images/polygon-bg-blue.jpg')"
+    >
+
+        <div class="container-small text-center owl-carousel" id="testimonials-carousel">
+            <blockquote class="blockquote">
+                <a class="blockquote_avatar-large" href="#">
+                    <img src="/app/images/team/team-2.jpg" alt="">
+                </a>
+                <div class="blockquote_content">
+                    <p class="lede">Suspendisse tempus sodales neque, eget eleifend <b>turpis tristique</b> eu. Nullam a nisl maximus, <b>ultrices est</b> ut blandit nislr, elit in lobortis mattis.</p>
+                </div>
+                <div class="blockquote_cite"> 
+                    <h4 class="heading-highlight"><b>Brendon Mack - Theme Forest</b></h4>
+                </div>
+            </blockquote>
+            <blockquote class="blockquote">
+                <a class="blockquote_avatar-large" href="#">
+                    <img src="/app/images/team/team-2.jpg" alt="">
+                </a>
+                <div class="blockquote_content">
+                    <p class="lede">Suspendisse tempus sodales neque, eget eleifend <b>turpis tristique</b> eu. Nullam a nisl maximus, <b>ultrices est</b> ut blandit nislr, elit in lobortis mattis.</p>
+                </div>
+                <div class="blockquote_cite"> 
+                    <h4 class="heading-highlight"><b>Brendon Mack - Theme Forest</b></h4>
+                </div>
+            </blockquote>
+        </div>
+        
+        <nav class="slide-nav">
+            <button class="slide-prev icon-border-size-4"><i class="fa fa-angle-left"></i></button>
+            <button class="slide-next icon-border-size-4"><i class="fa fa-angle-right"></i></button>
+        </nav>
+        
+        <script>
+            $(document).ready(function() {
+                
+                var testimonialsCarousel = $("#testimonials-carousel");
+                
+                testimonialsCarousel.owlCarousel({
+                    items: 1,
+                    loop: true,
+                    margin: 30,
+                    dots: false
+                })
+        
+                testimonialsCarousel.find("+ .slide-nav .slide-next").click(function() {
+                    testimonialsCarousel.trigger('next.owl.carousel');
+                });
+                testimonialsCarousel.find("+ .slide-nav .slide-prev").click(function() {
+                    testimonialsCarousel.trigger('prev.owl.carousel');
+                });
+                
+            });
+        </script>
+        
+    </section>
+
+
+     
+    <!-- Responsive -->
+    <section class="section-primary-dot-map" id="mobile-optimized">
+        
+        <!-- Responsive Header -->
+        <header class="heading_group-large has-icon text-center">
+            <div class="container-small">
+                <h4 class="heading-uppercase-light-spaced-brand-1-size-4"><span>Responsive</span></h4>
+                <h2 class="heading-uppercase-heavy-size-7 font-2"><span>Mobile Optimized</span></h2>
+                <div class="heading_icon">
+                    <i class="fa fa-mobile"></i>
+                </div>
+            </div>
+        </header>
+        
+        <div class="container-section">
+            
+            <div class="row">
+                
+                <!-- Responsive Features -->
+                <div class="widget_group span-3 va-middle text-right">
+                    <div class="widget-stacked">   
+                        <header class="widget_header-inline heading_group">
+                            <h3 class="heading-heavy-size-4">Fast Performance</h3>
+                            <h4 class="heading-light-uppercase-brand-1">Donec finibus fringer</h4>
+                        </header>                        
+                        <div class="widget_icon-inline icon-plain-size-8">
+                            <i class="fa fa-bar-chart"></i>
+                        </div> 
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc et erat posuere consectetur adipiscing suscipit.</p>
+                    </div>
+                    <div class="widget-stacked">
+                        <header class="widget_header-inline heading_group">
+                            <h3 class="heading-heavy-size-4">Lazy Loading</h3>
+                            <h4 class="heading-light-uppercase-brand-1">Donec finibus fringer</h4>
+                        </header>                       
+                        <div class="widget_icon-inline icon-plain-size-8">
+                            <i class="fa fa-refresh"></i>
+                        </div>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc et erat posuere consectetur adipiscing suscipit.</p>
+                    </div>
+                    <div class="widget-stacked">
+                        <header class="widget_header-inline heading_group">
+                            <h3 class="heading-heavy-size-4">Retina Ready</h3>
+                            <h4 class="heading-light-uppercase-brand-1">Donec finibus fringer</h4>
+                        </header>                        
+                        <div class="widget_icon-inline icon-plain-size-8">
+                            <i class="fa fa-eye"></i>
+                        </div> 
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc et erat posuere consectetur adipiscing suscipit.</p>
+                    </div>
+                </div>
+                
+                <!-- Responsive Graphics -->
+                <div class="span-6 va-middle text-center">
+                    <div class="center-xy span-6">
+                        <img 
+                            class="mobile-graphic-white" 
+                            src="/app/images/mobile-screen.png" 
+                            data-trigger="transform: translate(-45%, -50%) translateZ(0) scale(0.85)"
+                            data-hover="left: -25%"
+                            alt=""
+                        / >
+                        <img 
+                            class="mobile-graphic-blue" 
+                            src="/app/images/mobile-screen.png" 
+                            data-trigger="transform: translate(45%, -50%) translateZ(0) scale(0.85)"
+                            data-hover="right: -25%"
+                            alt=""
+                        / >
+                        <img 
+                            class="mobile-graphic-purple" 
+                            src="/app/images/mobile-screen.png" 
+                            data-hover="transform: scale(1.05) translateY(-47.5%) translateZ(0)"
+                            alt=""
+                        / >
+                    </div>
+                </div>
+                
+                <!-- Responsive Features -->
+                <div class="widget_group span-3 va-middle">
+                    <div class="widget-stacked">                  
+                        <div class="widget_icon-inline icon-plain-size-8">
+                            <i class="fa fa-user"></i>
+                        </div> 
+                        <header class="widget_header-inline heading_group">
+                            <h3 class="heading-heavy-size-4">User Experience</h3>
+                            <h4 class="heading-light-uppercase-brand-1">Donec finibus fringer</h4>
+                        </header>   
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc et erat posuere consectetur adipiscing suscipit.</p>
+                    </div>
+                    <div class="widget-stacked">               
+                        <div class="widget_icon-inline icon-plain-size-8">
+                            <i class="fa fa-tablet"></i>
+                        </div> 
+                        <header class="widget_header-inline heading_group">
+                            <h3 class="heading-heavy-size-4">Mobile Menu</h3>
+                            <h4 class="heading-light-uppercase-brand-1">Donec finibus fringer</h4>
+                        </header>      
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc et erat posuere consectetur adipiscing suscipit.</p>
+                    </div>
+                    <div class="widget-stacked">                  
+                        <div class="widget_icon-inline icon-plain-size-8">
+                            <i class="fa fa-th-large"></i>
+                        </div> 
+                        <header class="widget_header-inline heading_group">
+                            <h3 class="heading-heavy-size-4">User Panel</h3>
+                            <h4 class="heading-light-uppercase-brand-1">Donec finibus fringer</h4>
+                        </header>   
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc et erat posuere consectetur adipiscing suscipit.</p>
+                    </div>
+                </div>
+                
+            </div><!-- Row -->
+            
+        </div><!-- Container -->
+        
+    </section><!-- Responsive -->
+    
+
+        
+    <!-- Promo Banner -->
+            <section class="section-secondary promo-banner">	
+                            <div class="container">
+                            <div class="row">
+                    <div class="span-7 va-middle">
+                        <header class="heading_group">
+                            <h4 class="heading-size-5">
+                                Start your <b class="font-2">new project</b> with a <em>fresh</em> approach...
+                            </h4>
+                            <p class="heading">leave your visitors with an experience to remember and <a href="#" target="blank">Purchase Nexus</a> now.</p>
+                        </header>
+                    </div>
+                    <div class="span-5 va-middle text-right button_group">
+                        <a href="#" target="blank" class="button-white-border-size-3-">Purchase Theme</a>
+                        <span class="text-sep">or</span>
+                        <a href="#about">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+
+        
+    <section class="section-primary">
+    
+        <header class="heading_group-large text-center">
+            <div class="container-small">
+                <h4 class="heading-uppercase-light-brand-1-spaced-size-4"><span>Our Team</span></h4>
+                <h2 class="heading-uppercase-heavy-size-7 font-2"><span>Meet Our Crazy Team</span></h2>
+                <div class="heading_icon">
+                    <i class="fa fa-magic"></i>
+                </div>
+                <p class="lede">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In nec velit vel turpis imperdiet tempus. Etiam venenatis maximus luctus. Curabitur eget lorem tortor.</p>
+            </div>
+        </header>
+        
+        <div class="container">
+            <div class="row">
+                
+                <div class="span-4">
+                    <div class="thumbnail">
+                        <div class="thumbnail_mask">
+                            <a href="#" class="icon-border-circle-size-3">
+                                <i class="fa fa-search"></i>
+                            </a>
+                        </div>
+                        <img src="/app/images/team/team-1.jpg">
+                    </div>
+                    <header class="heading_group">
+                        <h3 class="heading-heavy-size-4">Alexander	Welch</h3>
+                        <h4 class="heading-light-uppercase-brand-1">Chief Executive Officer</h4>
+                    </header>
+                    <p>Cum socis natoque penatibus et magnis dis parturient montes, nascetur maximus ridiculus mus. Donec finibus fringilla ultrices purus.</p>		
+                    <div class="icon_group-small">
+                        <a href="#" class="icon-primary-size-3 tooltip-top" data-tooltip="Dribbble">
+                            <i class="fa fa-dribbble"></i>
+                        </a>
+                        <a href="#" class="icon-primary-size-3 tooltip-top" data-tooltip="Facebook">
+                            <i class="fa fa-facebook"></i>
+                        </a>
+                        <a href="#" class="icon-primary-size-3 tooltip-top" data-tooltip="Twitter">
+                            <i class="fa fa-twitter"></i>
+                        </a>
+                        <a href="#" class="icon-primary-size-3 tooltip-top" data-tooltip="LinkedIn">
+                            <i class="fa fa-linkedin"></i>
+                        </a>
+                        <a href="#" class="icon-primary-size-3 tooltip-top" data-tooltip="DeviantArt">
+                            <i class="fa fa-deviantart"></i>
+                        </a>
+                        <a href="#" class="icon-primary-size-3 tooltip-top" data-tooltip="Behance">
+                            <i class="fa fa-behance"></i>
+                        </a>
+                    </div>	
+                </div>
+                
+                <div class="span-4">
+                    <div class="thumbnail">
+                        <div class="thumbnail_mask">
+                            <a href="#" class="icon-border-circle-size-3">
+                                <i class="fa fa-search"></i>
+                            </a>
+                        </div>
+                        <img src="/app/images/team/team-2.jpg">
+                    </div>
+                    <header class="heading_group">
+                        <h3 class="heading-heavy-size-4">Naomi Olson</h3>
+                        <h4 class="heading-light-uppercase-brand-1">Graphic Designer</h4>
+                    </header>
+                    <p>Cum socis natoque penatibus et magnis dis parturient montes, nascetur maximus ridiculus mus. Donec finibus fringilla ultrices purus.</p>		
+                    <div class="icon_group-small">
+                        <a href="#" class="icon-primary-size-3 tooltip-top" data-tooltip="Dribbble">
+                            <i class="fa fa-dribbble"></i>
+                        </a>
+                        <a href="#" class="icon-primary-size-3 tooltip-top" data-tooltip="Twitter">
+                            <i class="fa fa-twitter"></i>
+                        </a>
+                        <a href="#" class="icon-primary-size-3 tooltip-top" data-tooltip="LinkedIn">
+                            <i class="fa fa-linkedin"></i>
+                        </a>
+                        <a href="#" class="icon-primary-size-3 tooltip-top" data-tooltip="DeviantArt">
+                            <i class="fa fa-deviantart"></i>
+                        </a>
+                        <a href="#" class="icon-primary-size-3 tooltip-top" data-tooltip="Behance">
+                            <i class="fa fa-behance"></i>
+                        </a>
+                    </div>	
+                </div>
+                
+                <div class="span-4">
+                    <div class="thumbnail">
+                        <div class="thumbnail_mask">
+                            <a href="#" class="icon-border-circle-size-3">
+                                <i class="fa fa-search"></i>
+                            </a>
+                        </div>
+                        <img src="/app/images/team/team-3.jpg">
+                    </div>
+                    <header class="heading_group">
+                        <h3 class="heading-heavy-size-4">Brendan Mack</h3>
+                        <h4 class="heading-light-uppercase-brand-1">Web Developer</h4>
+                    </header>
+                    <p>Cum socis natoque penatibus et magnis dis parturient montes, nascetur maximus ridiculus mus. Donec finibus fringilla ultrices purus.</p>		
+                    <div class="icon_group-small">
+                        <a href="#" class="icon-primary-size-3 tooltip-top" data-tooltip="Dribbble">
+                            <i class="fa fa-dribbble"></i>
+                        </a>
+                        <a href="#" class="icon-primary-size-3 tooltip-top" data-tooltip="Facebook">
+                            <i class="fa fa-facebook"></i>
+                        </a>
+                        <a href="#" class="icon-primary-size-3 tooltip-top" data-tooltip="Twitter">
+                            <i class="fa fa-twitter"></i>
+                        </a>
+                        <a href="#" class="icon-primary-size-3 tooltip-top" data-tooltip="LinkedIn">
+                            <i class="fa fa-linkedin"></i>
+                        </a>
+                    </div>	
+                </div>
+                
+            </div><!-- row -->
+        </div><!-- container -->
+        
+    </section>
+
+
+        
+    <section 
+        class="section-secondary-overlay-alt"
+        style="background-image: url('/app/images/billboard-1.jpg')"
+    >
+    
+        <div class="container">
+            <div class="row">
+                
+                <div class="span-4 va-middle">
+                    <header class="heading_group">
+                        <h4 class="heading-uppercase-light-brand-1-size-5">Our Clients</h4>
+                        <h2 class="heading-heavy-size-6 font-2"><span>Who We Work With</span></h2>
+                    </header>
+                </div>
+                <div class="span-8 va-middle">
+                    <div id="clients-slider" class="carousel-thumbnails owl-carousel">
+                        <a class="well-dark" href="#">
+                            <img src="/app/images/envato/envato-1.png">
+                        </a>
+                        <a class="well-dark" href="#">
+                            <img src="/app/images/envato/envato-2.png">
+                        </a>
+                        <a class="well-dark" href="#">
+                            <img src="/app/images/envato/envato-3.png">
+                        </a>
+                        <a class="well-dark" href="#">
+                            <img src="/app/images/envato/envato-4.png">
+                        </a>
+                        <a class="well-dark" href="#">
+                            <img src="/app/images/envato/envato-5.png">
+                        </a>
+                        <a class="well-dark" href="#">
+                            <img src="/app/images/envato/envato-6.png">
+                        </a>
+                        <a class="well-dark" href="#">
+                            <img src="/app/images/envato/envato-7.png">
+                        </a>
+                        <a class="well-dark" href="#">
+                            <img src="/app/images/envato/envato-8.png">
+                        </a>
+                    </div>
+                    <script>
+                        $(document).ready(function() {
+                            
+                            var clientsCarousel = $("#clients-slider");
+                            
+                            clientsCarousel.owlCarousel({
+                                items: 3,
+                                center: true,
+                                loop: true,
+                                margin: 30
+                            })
+                            
+                        });
+                    </script>
+                </div>
+                
+            </div>
+        </div>
+    
+    </section>
+
+
+            
+            <section 
+            class="section-primary"
+            data-stellar-background-ratio="0.5"
+            style="background-image: url('/app/images/billboard-2.jpg')"
+        >
+            <div class="container">
+            <div class="row">
+                <div class="span-6 info-video">
+                    <div class="auto-resizable-iframe">
+                        <div>
+                            <iframe allowfullscreen="" src="http://www.youtube.com/embed/Q3oItpVa9fs?theme=light"></iframe>
+                        </div>
+                    </div>
+                </div>
+                <div class="span-6">
+                    <header class="heading_group">
+                        <h2 class="heading-heavy-size-5-uppercase font-2">Kayzen is the Best</h2>
+                        <h3 class="heading-light-brand-1-light-size-4">A Modern Template For Any Project</h3>
+                    </header>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus eget porta eros. Suspendisse vehicula massa in erat mattis.</p>
+                    <ul class="list-arrow min-break-2">
+                        <li>Lorem ipsum dolor sit amet consectetur</li>
+                        <li>Donec malesuada metus non massa sodales auctor</li>
+                        <li>Sed sed iaculis arcu, eu pharetra nulla</li>
+                        <li>Etiam dapibus, nulla placerat</li>
+                    </ul>
+                    <p class="button_group">
+                                                    <a href="#" target="blank" class="button-">
+                                View Demo
+                            </a>
+                                                <a href="#" class="button-primary-">
+                            Purchase Theme
+                        </a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+        
+    <!-- Statistics -->
+    <section class="row-block text-center">
+        
+        <!-- Statistic 1 -->
+        <div class="widget-spectrum-quarter span-3">
+            <div class="widget_icon icon-plain-size-9">
+                <i class="fa fa-code"></i>
+            </div>
+            <header class="widget_header heading_group">
+                <h4 class="heading-size-7"><span id="stat-1" data-val="14266">0</span></h4>
+                <p class="heading">Lines of code</p>
+            </header>
+        </div>
+        
+        <!-- Statistic 2 -->
+        <div class="widget-spectrum-quarter span-3">
+            <div class="widget_icon icon-plain-size-9">
+                <i class="fa fa-desktop"></i>
+            </div>
+            <header class="widget_header heading_group">
+                <h4 class="heading-size-7"><span id="stat-2" data-val="136">0</span></h4>
+                <p class="heading">Completed projects</p>
+            </header>
+        </div>
+        
+        <!-- Statistic 3 -->
+        <div class="widget-spectrum-quarter span-3">
+            <div class="widget_icon icon-plain-size-9">
+                <i class="fa fa-users"></i>
+            </div>
+            <header class="widget_header heading_group">
+                <h4 class="heading-size-7"><span id="stat-4" data-val="28">0</span></h4>
+                <p class="heading">Happy clients</p>
+            </header>
+        </div>
+        
+        <!-- Statistic 4 -->
+        <div class="widget-spectrum-quarter span-3">
+            <div class="widget_icon icon-plain-size-9">
+                <i class="fa fa-desktop"></i>
+            </div>
+            <header class="widget_header heading_group">
+                <h4 class="heading-size-7"><span id="stat-3" data-val="3254">0</span></h4>
+                <p class="heading">Sales</p>
+            </header>
+        </div>
+        
+    </section><!-- Statistics -->
+
+
+    
+    <section class="section-primary">
+    
+        <header class="heading_group-large text-center">
+            <div class="container-small">
+                <h4 class="heading-uppercase-light-brand-1-spaced-size-4"><span>Our Portfolio</span></h4>
+                <h2 class="heading-uppercase-heavy-size-7 font-2"><span>Some Recent Work</span></h2>
+                <div class="heading_icon">
+                    <i class="fa fa-magic"></i>
+                </div>
+                <p class="lede">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In nec velit vel turpis imperdiet tempus. Etiam venenatis maximus luctus. Curabitur eget lorem tortor.</p>
+            </div>
+        </header>
+        
+        <div class="container">
+            
+            <div class="row-no-gutter">
+                            
+                
+    
+    <article class="widget-card span-4" data-HTML-theme>
+
+                
+        <? // Standard Image Article ?>
+                
+            <div class="thumbnail">
+                <div class="thumbnail_mask">
+                    <div class="thumbnail_controls-corner icon_group-small">
+                        <a 
+                            href="/app/images/wallpapers/bg-6.jpg" 
+                            class="icon-border-circle-size-3"
+                            rel="lightbox"
+                        >
+                            <i class="fa fa-search"></i>
+                        </a>
+                        <a href="#" class="icon-border-circle-size-3">
+                            <i class="fa fa-link"></i>
+                        </a>
+                    </div>
+                                            <header class="thumbnail_title heading_group">
+                                                            <h4 class="heading-heavy-size-4 font-2">Lorem Ipsum</h4>
+                                <h5 class="heading-light">Cras dictum erat id tortor ornare.</h5>
+                                                    </header>
+                                    </div>
+                <img src="/app/images/wallpapers/bg-6.jpg">
+            </div>
+            
+        <? // Vimeo Article ?>
+                
+        <? // Article Title (Portfolio) ?>
+                
+                
+        <? // Article Meta ?>
+                
+        <? // Shop Product ?>
+                
+    </article>
+
+
+    
+    <article class="widget-card span-4" data-logo>
+
+                
+        <? // Standard Image Article ?>
+                
+            <div class="thumbnail">
+                <div class="thumbnail_mask">
+                    <div class="thumbnail_controls-corner icon_group-small">
+                        <a 
+                            href="/app/images/wallpapers/bg-1.jpg" 
+                            class="icon-border-circle-size-3"
+                            rel="lightbox"
+                        >
+                            <i class="fa fa-search"></i>
+                        </a>
+                        <a href="#" class="icon-border-circle-size-3">
+                            <i class="fa fa-link"></i>
+                        </a>
+                    </div>
+                                            <header class="thumbnail_title heading_group">
+                                                            <h4 class="heading-heavy-size-4 font-2">Lorem Ipsum</h4>
+                                <h5 class="heading-light">Cras dictum erat id tortor ornare.</h5>
+                                                    </header>
+                                    </div>
+                <img src="/app/images/wallpapers/bg-1.jpg">
+            </div>
+            
+        <? // Vimeo Article ?>
+                
+        <? // Article Title (Portfolio) ?>
+                
+                
+        <? // Article Meta ?>
+                
+        <? // Shop Product ?>
+                
+    </article>
+
+
+    
+    <article class="widget-card span-4" data-logo>
+
+                
+        <? // Standard Image Article ?>
+                
+            <div class="thumbnail">
+                <div class="thumbnail_mask">
+                    <div class="thumbnail_controls-corner icon_group-small">
+                        <a 
+                            href="/app/images/wallpapers/bg-2.jpg" 
+                            class="icon-border-circle-size-3"
+                            rel="lightbox"
+                        >
+                            <i class="fa fa-search"></i>
+                        </a>
+                        <a href="#" class="icon-border-circle-size-3">
+                            <i class="fa fa-link"></i>
+                        </a>
+                    </div>
+                                            <header class="thumbnail_title heading_group">
+                                                            <h4 class="heading-heavy-size-4 font-2">Lorem Ipsum</h4>
+                                <h5 class="heading-light">Cras dictum erat id tortor ornare.</h5>
+                                                    </header>
+                                    </div>
+                <img src="/app/images/wallpapers/bg-2.jpg">
+            </div>
+            
+        <? // Vimeo Article ?>
+                
+        <? // Article Title (Portfolio) ?>
+                
+                
+        <? // Article Meta ?>
+                
+        <? // Shop Product ?>
+                
+    </article>
+
+                
+            </div><!-- row -->
+            
+        </div><!-- container -->
+        
+    </section><!-- section -->
+    
+
+        
+    <!-- Google Map -->
+    <div class="google-map" id="map"></div>
+    
+    <script src="/app/modules/objects/google-map/google-map.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+    
+
+        
+    <footer class="footer">
+        
+        <br />
+<b>Notice</b>:  Undefined variable: type in <b>/Users/esr360/Sites/Kayzen/source/templates/modules/footer.php</b> on line <b>21</b><br />
+        <div class="footer_wrapper">
+            <div class="container">
+                <div class="row">
+                    
+                    <!-- Meta -->
+                    <div class="span-3">
+                        <div class="logo">
+                            <a href="/"><img src="/app/images/logo-white.png" alt="logo"/ ></a>
+                        </div>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris in hendrerit neque, suscipit congue mauris.</p>
+                        <ul class="list-reset">
+                            <li><b><i class="fa fa-fw fa-brand fa-globe"></i> Location:</b> Manchester, Unted Kingdom</li>
+                            <li><b><i class="fa fa-fw fa-brand fa-phone-square"></i> Phone:</b> (0161) 123 4567</li>
+                            <li><b><i class="fa fa-fw fa-brand fa-envelope"></i> Email:</b> <a href="mailto:support@themeforest.net">support@themeforest.net</a></li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Newsletter -->
+                    <div class="span-3">
+                        
+                        <header class="heading_group-small">
+                            <h4 class="footer_title heading-heavy-uppercase-size-3 font-2">
+                                Newsletter
+                            </h4>
+                            <h5 class="heading-light-brand-1">
+                                Signup to our mailing list
+                            </h5>
+                        </header>
+                        
+                        <p>Suspendisse tempus sodales neque eget.</p>
+                        
+                        <form class="form-faux-placeholders">
+                            <div class="form_group-small">
+                                <button type="submit" class="icon-primary-size-4"><i class="fa fa-thumbs-o-up"></i></button>
+                                <input type="text" class="form_input-plain" id="footer-newsletter" placeholder="Ex: help@kayzen.com" required="">
+                                <label for="footer-newsletter">Email Address</label>
+                            </div>
+                        </form>
+                        
+                        <div class="icon_group-small">
+                            <a href="#" class="icon tooltip-top" data-tooltip="Dribbble">
+                                <i class="fa fa-dribbble"></i>
+                            </a>
+                            <a href="#" class="icon tooltip-top" data-tooltip="Facebook">
+                                <i class="fa fa-facebook"></i>
+                            </a>
+                            <a href="#" class="icon tooltip-top" data-tooltip="Twitter">
+                                <i class="fa fa-twitter"></i>
+                            </a>
+                            <a href="#" class="icon tooltip-top" data-tooltip="LinkedIn">
+                                <i class="fa fa-linkedin"></i>
+                            </a>
+                            <a href="#" class="icon tooltip-top" data-tooltip="DeviantArt">
+                                <i class="fa fa-deviantart"></i>
+                            </a>
+                            <a href="#" class="icon tooltip-top" data-tooltip="Behance">
+                                <i class="fa fa-behance"></i>
+                            </a>
+                        </div>
+                        
+                    </div>
+                    
+                    <!-- Twitter Feed -->
+                    <div class="span-3">
+                        <header class="heading_group-small">
+                            <h4 class="footer_title heading-heavy-uppercase-size-3 font-2">
+                                <i class="fa fa-twitter"></i> Twitter Feed
+                            </h4>
+                            <h5 class="heading-light-brand-1">
+                                View our latest tweets
+                            </h5>
+                            <div class="footer_tweets-nav icon_group-small">
+                                <div class="tweet-prev icon-circle-size-1">
+                                    <i class="fa fa-angle-left"></i>
+                                </div>
+                                <div class="tweet-next icon-circle-size-1">
+                                    <i class="fa fa-angle-right"></i>
+                                </div>
+                            </div>
+                        </header>
+                        <div id="footer-twitter-feed">
+                        </div>
+                    </div>
+                    
+                    <!-- Testimonials -->
+                    <div class="span-3">
+                        
+                        <header class="heading_group-small">
+                            <h4 class="footer_title heading-heavy-uppercase-size-3 font-2">
+                                Testimonials
+                            </h4>
+                            <h5 class="heading-light-brand-1">
+                                See what our clients say
+                            </h5>
+                            <div class="footer_testimonials-nav icon_group-small">
+                                <div class="tweet-prev icon-circle-size-1">
+                                    <i class="fa fa-angle-left"></i>
+                                </div>
+                                <div class="tweet-next icon-circle-size-1">
+                                    <i class="fa fa-angle-right"></i>
+                                </div>
+                            </div>
+                        </header>
+                        
+                        <div id="footer-testimonials" class="owl-carousel">
+                            
+                            <blockquote class="blockquote-testimonial">
+                                <div class="blockquote_bubble">
+                                    <div class="blockquote_content">
+                                        Aenean lobortis ante nunc. Integer justo ex. Curabitur at enim ac nisi...
+                                    </div>
+                                </div>
+                                <footer class="blockquote_footer">
+                                    <a class="blockquote_avatar-small" href="">
+                                        <img src="/app/images/team/team-2.jpg" alt="">
+                                    </a>
+                                    <div class="blockquote_cite heading_group">
+                                        <h4 class="heading-size-2 font-2">John Dough</h4>
+                                        <h5 class="heading-light-brand-1-size-2">Theme Forest</h5>
+                                    </div>
+                                </footer>
+                            </blockquote>	
+                            
+                            <blockquote class="blockquote-testimonial">
+                                <div class="blockquote_bubble">
+                                    <div class="blockquote_content">
+                                        Aenean lobortis ante nunc. Integer justo ex. Curabitur at enim ac nisi...
+                                    </div>
+                                </div>
+                                <footer class="blockquote_footer">
+                                    <a class="blockquote_avatar-small" href="">
+                                        <img src="/app/images/team/team-2.jpg" alt="">
+                                    </a>
+                                    <div class="blockquote_cite heading_group">
+                                        <h4 class="heading-size-2 font-2">John Dough</h4>
+                                        <h5 class="heading-light-brand-1-size-2">Theme Forest</h5>
+                                    </div>
+                                </footer>
+                            </blockquote>
+                        
+                        </div>
+                        
+                    </div><!-- Testimonials -->
+                    
+                </div>
+            </div>
+        </div>
+                
+        <div class="container">
+            <div class="footer_bar">
+                <!-- Copyright Section -->
+                <div class="footer_copyright">
+                    <h4>© Your Website 2015</h4>
+                </div>
+                <!-- Footer Navigation -->
+                <nav class="footer_nav">                
+                    <ul>
+                        <li><a href="#">Footer Link 1</a></li>
+                        <li><a href="#">Footer Link 2</a></li>
+                        <li><a href="#">Footer Link 3</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        
+    </footer>
+
+
+    </div><!-- Site Canvas -->
+
+    <!-- UI Enhancements -->
+
+<!-- Search Bar -->
+<div class="search-box">
+	<div class="container">
+		<input type="search" placeholder="Enter search query..." />
+		<div class="icon_group-small">
+			<button class="search-box_go icon-primary" type="submit">
+				<i class="fa fa-search"></i>
+			</button>
+			<span class="search-box_close icon">
+				<i class="fa fa-times"></i>
+			</span>
+		</div>
+	</div>
+</div>
+
+<!-- Scroll to top icon -->
+<a class="icon-border-size-4 scroll-top" href="#site-content">
+	<i class="fa fa-angle-up"></i>
+</a> 
+
+<!-- Flyout Nav Trigger -->
+<span class="icon-primary flyout-trigger" id="flyout-trigger">
+	<i class="fa fa-bars nav-open"></i>
+	<i class="fa fa-times nav-close"></i>
+</span>
+
+<!-- Flyout Nav -->
+<div id="flyout"></div>
+
+<!-- Site Overlay -->
+<div class="site-overlay" id="site-overlay"></div>
+
+<!-- Styles JSON Configuration -->
+<div id="stylesConfigJSON"></div>
+    <!-- SCRIPTS -->
+
+
+    <!-- jQuery -->
+    <script src="/app/build/scripts/jquery.min.js"></script>
+    
+    <!-- sudojQuery end -->
+    <script src="/app/build/scripts/sudojQuery-end.min.js"></script>
+    
+    <!-- App -->
+    <script src="/app/build/scripts/app.min.js"></script>
+    
+
+</body>
+		

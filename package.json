@@ -12,6 +12,7 @@
     "grunt-csscomb": "^3.1.0",
     "grunt-notify": "^0.4.1",
     "grunt-php-set-constant": "0.0.15",
+    "grunt-php2html": "^0.2.0",
     "grunt-postcss": "^0.6.0",
     "grunt-sass": "^1.1.0",
     "grunt-scss-lint": "^0.3.8",

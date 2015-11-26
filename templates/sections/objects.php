@@ -1,183 +1,192 @@
 <!-- Elements Row -->
-<div class="widget_group row-no-gutter text-center">
+<div class="widget_group-center row-no-gutter">
 	
-	<!-- Element 1 -->
+	<a class="widget-block-panel-small span-2 break-3-third break-1-half" href="#">
+		<div class="widget_icon icon-plain-size-9">
+			<i class="fa fa-television"></i>
+		</div>
+		<header class="widget_header heading_group">
+			<h3 class="heading-light-uppercase-brand-1">Billboard</h3>
+		</header>
+	</a>
+	
+	<a class="widget-block-panel-small span-2 break-3-third break-1-half" href="#">
+		<div class="widget_icon icon-plain-size-9">
+			<i class="fa fa-ellipsis-h"></i>
+		</div>
+		<header class="widget_header heading_group">
+			<h3 class="heading-light-uppercase-brand-1">Breadcrumb</h3>
+		</header>
+	</a>
+	
+	<a class="widget-block-panel-small span-2 break-3-third break-1-half" href="#">
+		<div class="widget_icon icon-plain-size-9">
+			<i class="fa fa-sort-numeric-desc"></i>
+		</div>
+		<header class="widget_header heading_group">
+			<h3 class="heading-light-uppercase-brand-1">Countdown</h3>
+		</header>
+	</a>
+	
 	<a class="widget-block-panel-small span-2 break-3-third break-1-half" href="#">
 		<div class="widget_icon icon-plain-size-9">
 			<i class="fa fa-chevron-circle-down"></i>
 		</div>
 		<header class="widget_header heading_group">
-			<h3 class="heading-light-uppercase-brand-1">Accordions</h3>
+			<h3 class="heading-light-uppercase-brand-1">Dropdown</h3>
 		</header>
 	</a>
 	
-	<!-- Element 2 -->
 	<a class="widget-block-panel-small span-2 break-3-third break-1-half" href="#">
 		<div class="widget_icon icon-plain-size-9">
-			<i class="fa fa-exclamation-triangle"></i>
+			<i class="fa fa-globe"></i>
 		</div>
 		<header class="widget_header heading_group">
-			<h3 class="heading-light-uppercase-brand-1">Alert Bars</h3>
+			<h3 class="heading-light-uppercase-brand-1">Earth Slider</h3>
 		</header>
 	</a>
 	
-	<!-- Element 3 -->
 	<a class="widget-block-panel-small span-2 break-3-third break-1-half" href="#">
 		<div class="widget_icon icon-plain-size-9">
-			<i class="fa fa-quote-left"></i>
+			<i class="fa fa-th-list"></i>
 		</div>
 		<header class="widget_header heading_group">
-			<h3 class="heading-light-uppercase-brand-1">Blockquotes</h3>
+			<h3 class="heading-light-uppercase-brand-1">Flyout Navigation</h3>
 		</header>
 	</a>
 	
-	<!-- Element 4 -->
-	<a class="widget-block-panel-small span-2 break-3-third break-1-half" href="#">
-		<div class="widget_icon icon-plain-size-9">
-			<i class="fa fa-keyboard-o"></i>
-		</div>
-		<header class="widget_header heading_group">
-			<h3 class="heading-light-uppercase-brand-1">Buttons</h3>
-		</header>
-	</a>
-	
-	<!-- Element 5 -->
-	<a class="widget-block-panel-small span-2 break-3-third break-1-half" href="#">
-		<div class="widget_icon icon-plain-size-9">
-			<i class="fa fa-arrows-h"></i>
-		</div>
-		<header class="widget_header heading_group">
-			<h3 class="heading-light-uppercase-brand-1">Carousels</h3>
-		</header>
-	</a>
-	
-	<!-- Element 6 -->
-	<a class="widget-block-panel-small span-2 break-3-third break-1-half" href="#">
-		<div class="widget_icon icon-plain-size-9">
-			<i class="fa fa-font"></i>
-		</div>
-		<header class="widget_header heading_group">
-			<h3 class="heading-light-uppercase-brand-1">Fonts</h3>
-		</header>
-	</a>
-	
-	<!-- Element 7 -->
 	<a class="widget-block-panel-small span-2 break-3-third break-1-half" href="#">
 		<div class="widget_icon icon-plain-size-9">
 			<i class="fa fa-file-text-o"></i>
 		</div>
 		<header class="widget_header heading_group">
-			<h3 class="heading-light-uppercase-brand-1">Forms</h3>
+			<h3 class="heading-light-uppercase-brand-1">Footer</h3>
 		</header>
 	</a>
 	
-	<!-- Element 8 -->
 	<a class="widget-block-panel-small span-2 break-3-third break-1-half" href="#">
 		<div class="widget_icon icon-plain-size-9">
-			<i class="fa fa-bold"></i>
+			<i class="fa fa-map-o"></i>
 		</div>
 		<header class="widget_header heading_group">
-			<h3 class="heading-light-uppercase-brand-1">Headings</h3>
+			<h3 class="heading-light-uppercase-brand-1">Google Map</h3>
 		</header>
 	</a>
 	
-	<!-- Element 9 -->
 	<a class="widget-block-panel-small span-2 break-3-third break-1-half" href="#">
 		<div class="widget_icon icon-plain-size-9">
-			<i class="fa fa-flag"></i>
+			<i class="fa fa-header"></i>
 		</div>
 		<header class="widget_header heading_group">
-			<h3 class="heading-light-uppercase-brand-1">Icons</h3>
+			<h3 class="heading-light-uppercase-brand-1">Header</h3>
 		</header>
 	</a>
 	
-	<!-- Element 10 -->
 	<a class="widget-block-panel-small span-2 break-3-third break-1-half" href="#">
 		<div class="widget_icon icon-plain-size-9">
-			<i class="fa fa-picture-o"></i>
+			<i class="fa fa-pied-piper-alt"></i>
 		</div>
 		<header class="widget_header heading_group">
-			<h3 class="heading-light-uppercase-brand-1">Images</h3>
+			<h3 class="heading-light-uppercase-brand-1">Logo</h3>
 		</header>
 	</a>
 	
-	<!-- Element 11 -->
 	<a class="widget-block-panel-small span-2 break-3-third break-1-half" href="#">
 		<div class="widget_icon icon-plain-size-9">
-			<i class="fa fa-list"></i>
+			<i class="fa fa-th"></i>
 		</div>
 		<header class="widget_header heading_group">
-			<h3 class="heading-light-uppercase-brand-1">Lists</h3>
+			<h3 class="heading-light-uppercase-brand-1">Mega Menu</h3>
 		</header>
 	</a>
 	
-	<!-- Element 12 -->
 	<a class="widget-block-panel-small span-2 break-3-third break-1-half" href="#">
 		<div class="widget_icon icon-plain-size-9">
-			<i class="fa fa-times-circle"></i>
+			<i class="fa fa-bars"></i>
 		</div>
 		<header class="widget_header heading_group">
-			<h3 class="heading-light-uppercase-brand-1">Modals</h3>
+			<h3 class="heading-light-uppercase-brand-1">Navigation</h3>
 		</header>
 	</a>
 	
-	<!-- Element 13 -->
 	<a class="widget-block-panel-small span-2 break-3-third break-1-half" href="#">
 		<div class="widget_icon icon-plain-size-9">
-			<i class="fa fa-battery-3"></i>
+			<i class="fa fa-ellipsis-v"></i>
 		</div>
 		<header class="widget_header heading_group">
-			<h3 class="heading-light-uppercase-brand-1">Progress Bars</h3>
+			<h3 class="heading-light-uppercase-brand-1">Page Overview</h3>
 		</header>
 	</a>
 	
-	<!-- Element 14 -->
 	<a class="widget-block-panel-small span-2 break-3-third break-1-half" href="#">
 		<div class="widget_icon icon-plain-size-9">
-			<i class="fa fa-table"></i>
+			<i class="fa fa-chevron-circle-up"></i>
 		</div>
 		<header class="widget_header heading_group">
-			<h3 class="heading-light-uppercase-brand-1">Tables</h3>
+			<h3 class="heading-light-uppercase-brand-1">Scroll-Top</h3>
 		</header>
 	</a>
 	
-	<!-- Element 15 -->
 	<a class="widget-block-panel-small span-2 break-3-third break-1-half" href="#">
 		<div class="widget_icon icon-plain-size-9">
-			<i class="fa fa-folder-o"></i>
+			<i class="fa fa-chevron-down"></i>
 		</div>
 		<header class="widget_header heading_group">
-			<h3 class="heading-light-uppercase-brand-1">Tabs</h3>
+			<h3 class="heading-light-uppercase-brand-1">Scroll Wheel</h3>
 		</header>
 	</a>
 	
-	<!-- Element 16 -->
 	<a class="widget-block-panel-small span-2 break-3-third break-1-half" href="#">
 		<div class="widget_icon icon-plain-size-9">
-			<i class="fa fa-comment"></i>
+			<i class="fa fa-search"></i>
 		</div>
 		<header class="widget_header heading_group">
-			<h3 class="heading-light-uppercase-brand-1">Tooltips</h3>
+			<h3 class="heading-light-uppercase-brand-1">Search</h3>
 		</header>
 	</a>
 	
-	<!-- Element 17 -->
 	<a class="widget-block-panel-small span-2 break-3-third break-1-half" href="#">
 		<div class="widget_icon icon-plain-size-9">
-			<i class="fa fa-square"></i>
+			<i class="fa fa-th-list"></i>
 		</div>
 		<header class="widget_header heading_group">
-			<h3 class="heading-light-uppercase-brand-1">Wells</h3>
+			<h3 class="heading-light-uppercase-brand-1">Side Nav</h3>
 		</header>
 	</a>
 	
-	<!-- Element 18 -->
 	<a class="widget-block-panel-small span-2 break-3-third break-1-half" href="#">
 		<div class="widget_icon icon-plain-size-9">
-			<i class="fa fa-th-large"></i>
+			<i class="fa fa-columns"></i>
 		</div>
 		<header class="widget_header heading_group">
-			<h3 class="heading-light-uppercase-brand-1">Widgets</h3>
+			<h3 class="heading-light-uppercase-brand-1">Sidebar</h3>
+		</header>
+	</a>
+	
+	<a class="widget-block-panel-small span-2 break-3-third break-1-half" href="#">
+		<div class="widget_icon icon-plain-size-9">
+			<i class="fa fa-file"></i>
+		</div>
+		<header class="widget_header heading_group">
+			<h3 class="heading-light-uppercase-brand-1">Site Overlay</h3>
+		</header>
+	</a>
+	
+	<a class="widget-block-panel-small span-2 break-3-third break-1-half" href="#">
+		<div class="widget_icon icon-plain-size-9">
+			<i class="fa fa-minus"></i>
+		</div>
+		<header class="widget_header heading_group">
+			<h3 class="heading-light-uppercase-brand-1">Top Bar</h3>
+		</header>
+	</a>
+	
+	<a class="widget-block-panel-small span-2 break-3-third break-1-half" href="#">
+		<div class="widget_icon icon-plain-size-9">
+			<i class="fa fa-twitter"></i>
+		</div>
+		<header class="widget_header heading_group">
+			<h3 class="heading-light-uppercase-brand-1">Twitter Feed</h3>
 		</header>
 	</a>
 	

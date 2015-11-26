@@ -451,7 +451,7 @@
 		</li>
 		
 		<li>
-			<a href="#"><i class="navigation_icon fa fa-star"></i> Modules</a>
+			<a href="/<?php echo $pageTree.'modules.php' ?>"><i class="navigation_icon fa fa-star"></i> Modules</a>
 			<ul class="mega-menu row">
 				<li class="span-6">
 					
@@ -607,25 +607,18 @@
 			</ul>
 		</li>
 		<li>
-			<a href="#"><i class="navigation_icon fa fa-star"></i> Features</a>
+			<a href="/<?php echo $pageTree.'features.php' ?>"><i class="navigation_icon fa fa-star"></i> Features</a>
 			<ul>
-				<li><a href="#">100% Modular UI</a></li>
-				<li>
-					<a href="#">Drag & Drop Page Builder</a>
-					<ul>
-						<li><a href="#">Lorem</a></li>
-						<li><a href="#">Ipsum</a></li>
-						<li><a href="#">Dolor Sit</a></li>
-					</ul>
-				</li>
-				<li><a href="#">Unique Configuration</a></li>
-				<li><a href="#">Custom Grid System</a></li>
-				<li><a href="#">Intelligent Theming</a></li>
-				<li><a href="#">Mobile Optimized</a></li>
+				<li><a href="/<?php echo $pageTree.'features.php' ?>#modular-ui">100% Modular UI</a></li>
+				<li><a href="/<?php echo $pageTree.'features.php' ?>#page-builder">Drag & Drop Page Builder</a></li>
+				<li><a href="/<?php echo $pageTree.'features.php' ?>#unique-configuration">Unique Configuration</a></li>
+				<li><a href="/<?php echo $pageTree.'features.php' ?>#custom-grid-system">Custom Grid System</a></li>
+				<li><a href="/<?php echo $pageTree.'features.php' ?>#intelligent-theming">Intelligent Theming</a></li>
+				<li><a href="/<?php echo $pageTree.'features.php' ?>#mobile-optimized">Mobile Optimized</a></li>
 			</ul>
 		</li>
 		<li>
-			<a href="#"><i class="navigation_icon fa fa-files-o"></i> Documentation</a>
+			<a href="/<?php echo $pageTree.'documentation.php' ?>"><i class="navigation_icon fa fa-files-o"></i> Documentation</a>
 			<ul>
 				<li><a href="#">Getting Started</a></li>
 				<li><a href="#">Configure</a></li>
