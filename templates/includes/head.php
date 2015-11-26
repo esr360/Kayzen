@@ -17,7 +17,11 @@
     <!--[if IE]><link rel="shortcut icon" href="<?php echo appDir ?>/images/favicon.ico"><![endif]-->
 
     <!-- Stylesheet -->
-    <link rel="stylesheet" href="<?php echo appDir ?>/build/styles/app.css">
+    <?php if (env == 'dev') { ?>
+        <link rel="stylesheet" href="<?php echo appDir ?>/build/styles/app.css">
+    <?php } else if (env == 'prod') { ?>
+        <link rel="stylesheet" href="<?php echo appDir ?>/build/styles/app.min.css">
+    <?php } ?>
 	
     <!-- sudojQuery start -->
     <?php if (env == 'dev') { ?>

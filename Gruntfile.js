@@ -312,9 +312,10 @@ module.exports = function(grunt) {
                     {
                         expand: true, 
                         cwd: 'templates/pages/', 
-                        src: ['**/*.php'], 
+                        src: '**/*.php', 
                         dest: 'build', 
-                        ext: '.html' }
+                        ext: '.html'     
+                    }
                 ]
             }
         }

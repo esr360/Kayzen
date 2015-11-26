@@ -8786,7 +8786,6 @@ progress::-moz-progress-bar {
 }
 [class*="section-"][class*="-overlay"], [class*="section-"][class*="-overlay"] a:not([class*="button-"]) {
   color: #ffffff;
-  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
 }
 [class*="section-"][class*="-overlay"] .wrap-section {
   position: relative;

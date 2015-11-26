@@ -26,7 +26,7 @@
             </div>
             <header class="widget_header heading_group">
                 <h4 class="heading-size-7"><span id="stat-1" data-val="14266">0</span></h4>
-                <p class="heading">Lines of code</p>
+                <h5 class="heading-light">Lines of code</h5>
             </header>
         </div>
         
@@ -37,7 +37,7 @@
             </div>
             <header class="widget_header heading_group">
                 <h4 class="heading-size-7"><span id="stat-2" data-val="136">0</span></h4>
-                <p class="heading">Completed projects</p>
+                <h5 class="heading-light">Completed projects</h5>
             </header>
         </div>
         
@@ -48,7 +48,7 @@
             </div>
             <header class="widget_header heading_group">
                 <h4 class="heading-size-7"><span id="stat-4" data-val="28">0</span></h4>
-                <p class="heading">Happy clients</p>
+                <h5 class="heading-light">Happy clients</h5>
             </header>
         </div>
         
@@ -59,7 +59,7 @@
             </div>
             <header class="widget_header heading_group">
                 <h4 class="heading-size-7"><span id="stat-3" data-val="3254">0</span></h4>
-                <p class="heading">Sales</p>
+                <h5 class="heading-light">>Sales</h5>
             </header>
         </div>
         
