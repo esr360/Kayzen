@@ -92,6 +92,7 @@
 	
 	.tweet-actions {
 		@extend %list-reset;
+        margin-top: 0;
 		font-size: 0.7em;
 		margin-left: 0.5em;
 		li {

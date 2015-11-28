@@ -17,9 +17,22 @@
 	//-------------------------------------------------------------
 	
 	@include module {
+        
 		position: relative;
 		overflow: hidden;
+        
 	}
+    
+    @include component('section') {
+        //display: none;
+        &.active {
+            //display: block;
+        }
+    }
+    
+    @include component('wrapper') {
+        
+    }
 	
 	.earth-wrapper {
 		height: 185px;
@@ -65,7 +78,7 @@
 			content: '';
 			width: 50%;
 			height: 50%;
-			background: rgba(0,0,0,0.5);
+			background: rgba(black, 0.5);
 			position: absolute;
 			margin: auto;
 			left: 0;

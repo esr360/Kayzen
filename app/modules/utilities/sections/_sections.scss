@@ -122,6 +122,9 @@
 			@include nested-modifier(deep) {
 				@include bg-overlay(rgba(color(brand, primary), 0.75));
 			}
+			@include nested-modifier(dark) {
+				@include bg-overlay(rgba(color(greyscale, grey-5), 0.75));			
+			}
 			@include nested-modifier(alt) {
 				@include bg-overlay(rgba(color(greyscale, grey-5), 0.5));			
 			}

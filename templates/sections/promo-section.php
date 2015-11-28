@@ -11,6 +11,7 @@
         $options = array_merge(array(
             
             'dark'          => false,
+            'brand'         => false,
             'cta-modifiers' => null
             
         ), $custom);
@@ -18,6 +19,8 @@
     ?>
         
     <?php if ($options['dark']) { ?>
+        <section class="section-secondary-overlay-dark" style="background-image: url('<?php echo appDir ?>/images/billboard-1.jpg')">
+    <?php } else if ($options['brand']) { ?>
         <section class="section-secondary-overlay-alt">
     <?php } else  { ?>
         <section 
@@ -31,7 +34,7 @@
                 <div class="span-6 info-video">
                     <div class="auto-resizable-iframe">
                         <div>
-                            <iframe allowfullscreen="" src="http://www.youtube.com/embed/Q3oItpVa9fs?theme=light"></iframe>
+                            <iframe src="https://player.vimeo.com/video/87701971" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
                         </div>
                     </div>
                 </div>

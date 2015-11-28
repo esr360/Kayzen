@@ -4571,7 +4571,7 @@ pre:last-child, hr:last-child,
   list-style: none;
 }
 
-[class*="widget-"][class*="-tub"]:before, [class*="section-"][class*="-overlay"]:before, [class*="section-"][class*="-overlay"][class*="-deep"]:before, [class*="section-"][class*="-overlay"][class*="-alt"]:before, [class*="billboard-"][class*="-overlay"]:before, .billboard:before, [class*="billboard-"]:before {
+[class*="widget-"][class*="-tub"]:before, [class*="section-"][class*="-overlay"]:before, [class*="section-"][class*="-overlay"][class*="-deep"]:before, [class*="section-"][class*="-overlay"][class*="-dark"]:before, [class*="section-"][class*="-overlay"][class*="-alt"]:before, [class*="billboard-"][class*="-overlay"]:before, .billboard:before, [class*="billboard-"]:before {
   position: absolute;
   height: 100%;
   width: 100%;
@@ -8655,6 +8655,7 @@ progress::-moz-progress-bar {
 }
 
 .tweet-actions {
+  margin-top: 0;
   font-size: 0.7em;
   margin-left: 0.5em;
 }
@@ -8775,6 +8776,14 @@ progress::-moz-progress-bar {
   content: "";
   z-index: 0;
   background: rgba(155, 88, 181, 0.75);
+}
+[class*="section-"][class*="-overlay"][class*="-dark"] {
+  position: relative;
+}
+[class*="section-"][class*="-overlay"][class*="-dark"]:before {
+  content: "";
+  z-index: 0;
+  background: rgba(35, 38, 39, 0.75);
 }
 [class*="section-"][class*="-overlay"][class*="-alt"] {
   position: relative;

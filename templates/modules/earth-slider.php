@@ -17,10 +17,20 @@
     ?>
     
     <section class="section earth-slider" id="s-welcome">
-        <header class="heading_group-block text-center">
+        <header class="earth-slider_section heading_group-block text-center">
             <div class="container-small">
                 <h4 class="heading-uppercase-light-brand-1-spaced-size-4"><span>This is Kayzen</span></h4>
                 <h2 class="heading-uppercase-heavy-size-7 font-2"><span>The New Experience</span></h2>
+                <div class="heading_icon">
+                    <i class="fa fa-magic"></i>
+                </div>
+                <p class="lede">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In nec velit vel turpis imperdiet tempus. Etiam venenatis maximus luctus. Curabitur eget lorem tortor.</p>
+            </div>
+        </header>
+        <header class="earth-slider_section heading_group-block text-center">
+            <div class="container-small">
+                <h4 class="heading-uppercase-light-brand-1-spaced-size-4"><span>This isn't Kayzen</span></h4>
+                <h2 class="heading-uppercase-heavy-size-7 font-2"><span>The Old Experience</span></h2>
                 <div class="heading_icon">
                     <i class="fa fa-magic"></i>
                 </div>
@@ -48,5 +58,11 @@
             <button class="slide-next icon-border-size-4"><i class="fa fa-angle-right"></i></button>
         </nav>
     </section>
+    
+    <script>
+        $(document).ready(function() {
+            $('.earth-slider').KayzenEarthSlider();
+        });
+    </script>
 
 <?php } ?>

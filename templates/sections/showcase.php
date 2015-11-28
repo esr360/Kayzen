@@ -73,7 +73,7 @@
                     <div class="block-content span-9">
                         <div class="desktop-graphic-scroll">
                             <img src="<?php echo appDir ?>/images/demo-screen.png" alt=""/ >
-                            <div style="background-image: url('<?php echo appDir ?>/images/stock-1.jpg')"></div>
+                            <div class="desktop-graphic_image" style="background-image: url('<?php echo appDir ?>/images/stock-1.jpg')"></div>
                         </div>
                     </div>
                 </div>
@@ -104,7 +104,7 @@
                     <div class="block-content span-9">
                         <div class="desktop-graphic-scroll">
                             <img src="<?php echo appDir ?>/images/demo-screen.png" alt=""/ >
-                            <div style="background-image: url('<?php echo appDir ?>/images/stock-2.jpg')"></div>
+                            <div class="desktop-graphic_image" style="background-image: url('<?php echo appDir ?>/images/stock-2.jpg')"></div>
                         </div>
                     </div>
                 </div>
@@ -135,7 +135,7 @@
                     <div class="block-content span-9">
                         <div class="desktop-graphic-scroll">
                             <img src="<?php echo appDir ?>/images/demo-screen.png" alt=""/ >
-                            <div style="background-image: url('<?php echo appDir ?>/images/stock-4.jpg')"></div>
+                            <div class="desktop-graphic_image" style="background-image: url('<?php echo appDir ?>/images/stock-4.jpg')"></div>
                         </div>
                     </div>
                 </div>
@@ -170,7 +170,7 @@
                     <div class="block-content span-9">
                         <div class="desktop-graphic-scroll">
                             <img src="<?php echo appDir ?>/images/demo-screen.png" alt=""/ >
-                            <div style="background-image: url('<?php echo appDir ?>/images/stock-5.jpg')"></div>
+                            <div class="desktop-graphic_image" style="background-image: url('<?php echo appDir ?>/images/stock-5.jpg')"></div>
                         </div>
                     </div>
                 </div>
@@ -201,7 +201,7 @@
                     <div class="block-content span-9">
                         <div class="desktop-graphic-scroll">
                             <img src="<?php echo appDir ?>/images/demo-screen.png" alt=""/ >
-                            <div style="background-image: url('<?php echo appDir ?>/images/stock-3.jpg')"></div>
+                            <div class="desktop-graphic_image" style="background-image: url('<?php echo appDir ?>/images/stock-3.jpg')"></div>
                         </div>
                     </div>
                 </div>
@@ -232,7 +232,7 @@
                     <div class="block-content span-9">
                         <div class="desktop-graphic-scroll">
                             <img src="<?php echo appDir ?>/images/demo-screen.png" alt=""/ >
-                            <div style="background-image: url('<?php echo appDir ?>/images/stock-3.jpg')"></div>
+                            <div class="desktop-graphic_image" style="background-image: url('<?php echo appDir ?>/images/stock-3.jpg')"></div>
                         </div>
                     </div>
                 </div>
@@ -263,7 +263,7 @@
                     <div class="block-content span-9">
                         <div class="desktop-graphic-scroll">
                             <img src="<?php echo appDir ?>/images/demo-screen.png" alt=""/ >
-                            <div style="background-image: url('<?php echo appDir ?>/images/stock-3.jpg')"></div>
+                            <div class="desktop-graphic_image" style="background-image: url('<?php echo appDir ?>/images/stock-3.jpg')"></div>
                         </div>
                     </div>
                 </div>
