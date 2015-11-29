@@ -7852,6 +7852,22 @@ progress::-moz-progress-bar {
   overflow: hidden;
 }
 
+[class*="earth-slider_section"] {
+  transition: 0.4s;
+  -webkit-transform: scale(0);
+      -ms-transform: scale(0);
+          transform: scale(0);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+[class*="earth-slider_section"].active {
+  position: relative;
+  -webkit-transform: scale(1);
+      -ms-transform: scale(1);
+          transform: scale(1);
+}
 .earth-wrapper {
   height: 185px;
   margin: auto;

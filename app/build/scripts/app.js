@@ -6604,7 +6604,8 @@ $(document).ready(function() {
         
         var options = $.extend({
             
-           // option : 'VALUE'
+           startingSection : 2,
+           pinWrapper : '.pin-wrapper'
             
         }, custom);
         
@@ -6614,7 +6615,8 @@ $(document).ready(function() {
         
         return this.each(function() {
             
-            var $pin = $(this).find('.pin-wrapper');
+            var $el = $(this);
+            var $pin = $(this).find(options.pinWrapper);
             var $pinCount = $pin.length;
             var $pinRange = 165;
             var $firstPin = $pin.first();
@@ -6653,7 +6655,28 @@ $(document).ready(function() {
             //
             
             $('.earth-slider_section').hide(); 
-            $('.earth-slider_section:nth-child(' + 1 + ')').show().addClass('active'); 
+            $('.earth-slider_section:nth-child(' + options.startingSection + ')').show().addClass('active');  
+    
+            //
+            // Add active class to starting pin
+            //
+            
+            $pin.removeClass('active'); 
+            $pin.filter(':nth-child(' + options.startingSection + ')').addClass('active');  
+            
+            //
+            // Change content
+            //
+            
+            function earthCycle(pinIndex) {
+                $('.earth-slider_section.active')
+                    .fadeOut(baseTransition)
+                    .removeClass('active'); 
+                console.log(pinIndex);
+                $('.earth-slider_section:nth-child('+ pinIndex +')')
+                    .fadeIn(baseTransition)
+                    .addClass('active'); 
+            }
             
             //
             // Change content on pin click
@@ -6666,23 +6689,41 @@ $(document).ready(function() {
                 $pin.removeClass('active');
                 $(this).addClass('active');
                 
-                $('.earth-slider_section.active').css({
-                    'position' : 'absolute', 
-                    'top' : 0,
-                    'left' : 0,
-                    'right' : 0
-                }).fadeOut(baseTransition).removeClass('active'); 
-                
-                setTimeout(function(){
-                    //$('.earth-slider_section.active').fadeOut(baseTransition); 
-                }, 200);
-                
-                $('.earth-slider_section:nth-child('+$pinIndex+')').css({
-                    'position' : 'relative'
-                }).fadeIn(baseTransition).addClass('active'); 
-     
+                earthCycle($pinIndex);
     
             });
+            
+            //
+            // Change content on arrows click
+            //
+            
+            function earthArrows(dir) {
+            
+                $el.find('.slide-' + dir).click(function() {
+        
+                    var $pinActive = $('.earth .pin-wrapper.active'); 
+                    var $pinIndex = $pinActive.index();
+        
+                    $pinActive.removeClass('active');
+        
+                    if ($pinActive.is(':first-child')) {
+                        $pinActive = $lastPin;
+                        $pinActive.addClass('active');
+                    } else {                
+                        $pinActive.prev().addClass('active');               
+                    }
+                    
+                    earthCycle($pinIndex);          
+                    
+                    var $pinActive = $('.earth .pin-wrapper.active');
+                    var $pinIndex = $pinActive.index() + 1;
+                    
+                });
+                
+            }
+            
+            earthArrows('prev');
+            earthArrows('next');
         
         }); // this.each
  
