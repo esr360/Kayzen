@@ -45,7 +45,7 @@
 			<!-- Features Row 1 -->
 			<div class="row-block text-center">
 				
-				<div class="widget-block-panel span-3">
+				<div class="widget-block-panel-noHover span-3">
 					<div class="widget_icon icon-plain-size-9">
 						<i class="fa fa-desktop"></i>
 					</div>
@@ -56,7 +56,7 @@
 					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc et erat posuere suscipit. Phasellus congue scelerisque lacus.</p>
 				</div>
 				
-				<div class="widget-block-panel span-3">
+				<div class="widget-block-panel-noHover span-3">
 					<div class="widget_icon icon-plain-size-9">
 						<i class="fa fa-clipboard"></i>
 					</div>
