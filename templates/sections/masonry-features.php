@@ -1,7 +1,8 @@
 <section class="section-primary">
     <div class="container">
         <div class="row-no-gutter">
-            <div 
+            <a
+                href="#" 
                 class="widget-feature-zoom span-4"
                 data-bg="<?php echo appDir ?>/images/wallpapers/bg-6.jpg"
             >
@@ -10,8 +11,9 @@
                     <h4 class="heading-heavy-uppercase-size-4 font-2">Lorem Ipsum</h4>
                     <h5 class="heading-light">Dolor Sit Amet</h4>
                 </header>
-            </div>
-            <div 
+            </a>
+            <a 
+                href="#" 
                 class="widget-feature-zoom span-4"
                 data-bg="<?php echo appDir ?>/images/wallpapers/bg-3.jpg"
             >
@@ -20,8 +22,9 @@
                     <h4 class="heading-heavy-uppercase-size-4 font-2">Lorem Ipsum</h4>
                     <h5 class="heading-light">Dolor Sit Amet</h4>
                 </header>
-            </div>
-            <div 
+            </a>
+            <a
+                href="#"  
                 class="widget-feature-zoom span-4 col-full"
                 data-bg="<?php echo appDir ?>/images/wallpapers/bg-4.jpg"
             >
@@ -29,10 +32,11 @@
                     <h4 class="heading-heavy-uppercase-size-4 font-2">Lorem Ipsum</h4>
                     <h5 class="heading-light">Dolor Sit Amet</h4>
                 </header>
-            </div>
+            </a>
         </div>
         <div class="row-no-gutter">
-            <div 
+            <a 
+                href="#" 
                 class="widget-feature-zoom span-8"
                 data-bg="<?php echo appDir ?>/images/wallpapers/bg-5.jpg"
             >
@@ -40,7 +44,7 @@
                     <h4 class="heading-heavy-uppercase-size-4 font-2">Lorem Ipsum</h4>
                     <h5 class="heading-light">Dolor Sit Amet</h4>
                 </header>
-            </div>
+            </a>
         </div>
     </div>
 </section>

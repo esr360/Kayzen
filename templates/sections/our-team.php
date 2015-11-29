@@ -35,9 +35,11 @@
                 <div class="span-4">
                     <div class="thumbnail">
                         <div class="thumbnail_mask">
-                            <a href="#" class="icon-border-circle-size-3">
-                                <i class="fa fa-search"></i>
-                            </a>
+                            <div class="thumbnail_controls">
+                                <a href="#" class="icon-border-circle-size-3">
+                                    <i class="fa fa-search"></i>
+                                </a>
+                            </div>
                         </div>
                         <img src="<?php echo appDir ?>/images/team/team-1.jpg">
                     </div>
@@ -71,9 +73,11 @@
                 <div class="span-4">
                     <div class="thumbnail">
                         <div class="thumbnail_mask">
-                            <a href="#" class="icon-border-circle-size-3">
-                                <i class="fa fa-search"></i>
-                            </a>
+                            <div class="thumbnail_controls">
+                                <a href="#" class="icon-border-circle-size-3">
+                                    <i class="fa fa-search"></i>
+                                </a>
+                            </div>
                         </div>
                         <img src="<?php echo appDir ?>/images/team/team-2.jpg">
                     </div>
@@ -104,9 +108,11 @@
                 <div class="span-4">
                     <div class="thumbnail">
                         <div class="thumbnail_mask">
-                            <a href="#" class="icon-border-circle-size-3">
-                                <i class="fa fa-search"></i>
-                            </a>
+                            <div class="thumbnail_controls">
+                                <a href="#" class="icon-border-circle-size-3">
+                                    <i class="fa fa-search"></i>
+                                </a>
+                            </div>
                         </div>
                         <img src="<?php echo appDir ?>/images/team/team-3.jpg">
                     </div>

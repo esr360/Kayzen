@@ -5211,6 +5211,9 @@ pre:last-child, hr:last-child,
   display: inline-block;
   vertical-align: middle;
 }
+[class*="blockquote_content"] {
+  position: relative;
+}
 [class*="blockquote_content"]:before, [class*="blockquote_content"]:after {
   position: absolute;
   font-family: FontAwesome;
@@ -5220,12 +5223,12 @@ pre:last-child, hr:last-child,
 [class*="blockquote_content"]:before {
   content: "\f10d";
   top: -0.2em;
-  left: 0;
+  left: -1.5em;
 }
 [class*="blockquote_content"]:after {
   content: "\f10e";
   bottom: -0.2em;
-  right: 0;
+  right: -1.5em;
 }
 [class*="blockquote_content"] + [class*="blockquote_cite"] {
   margin-top: 1.5em;
@@ -7383,20 +7386,20 @@ progress::-moz-progress-bar {
 [class*="widget-"][class*="-block"][class*="-fill"] [class*="widget_icon"] {
   color: #ffffff;
 }
-[class*="widget-"][class*="-block"]:hover {
+[class*="widget-"][class*="-block"]:not([class*="-noHover"]):hover {
   background-color: #9B58B5;
   color: #ffffff;
 }
-[class*="widget-"][class*="-block"]:hover .heading, [class*="widget-"][class*="-block"]:hover [class*="heading-"] {
+[class*="widget-"][class*="-block"]:not([class*="-noHover"]):hover .heading, [class*="widget-"][class*="-block"]:not([class*="-noHover"]):hover [class*="heading-"] {
   color: #ffffff;
 }
-[class*="widget-"][class*="-block"]:hover [class*="widget_icon"] {
+[class*="widget-"][class*="-block"]:not([class*="-noHover"]):hover [class*="widget_icon"] {
   color: #ffffff;
 }
-[class*="widget-"][class*="-block"]:hover[class*="-fill"] {
+[class*="widget-"][class*="-block"]:not([class*="-noHover"]):hover[class*="-fill"] {
   background-color: #804397;
 }
-[class*="widget-"][class*="-block"]:hover[class*="-panel"] {
+[class*="widget-"][class*="-block"]:not([class*="-noHover"]):hover[class*="-panel"] {
   border-color: #9B58B5;
 }
 [class*="widget-"][class*="-panel"] {

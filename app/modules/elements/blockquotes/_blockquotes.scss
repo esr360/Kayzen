@@ -99,6 +99,7 @@
 		}
 		
 		@include component(content) {
+            position: relative;
 			&:before,
 			&:after {
 				position: absolute;
@@ -109,12 +110,12 @@
 			&:before {
 				content: "\f10d";
 				top: -0.2em;
-				left: 0;
+				left: -1.5em;
 			}
 			&:after {
 				content: "\f10e";
 				bottom: -0.2em;
-				right: 0;
+				right: -1.5em;
 			}
 			@include overwrite-component(cite, $special: 'adjacent-sibling') {
 				margin-top: 1.5em;

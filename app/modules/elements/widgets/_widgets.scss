@@ -57,22 +57,24 @@
 					color: color(greyscale, white);
 				}
 			}
-			&:hover {
-				background-color: color(brand, primary);	
-				color: color(greyscale, white);
-				@include overwrite(heading) {
-					color: color(greyscale, white);
-				}
-				@include overwrite-component(icon) {
-					color: color(greyscale, white);
-				}
-				@include nested-modifier(fill) {
-					background-color: darken(color(brand, primary), 10%);
-				}
-				@include nested-modifier(panel) {
-					border-color: color(brand, primary);
-				}
-			}
+            @include modifier('noHover', $special: 'not') {
+                &:hover {
+                    background-color: color(brand, primary);	
+                    color: color(greyscale, white);
+                    @include overwrite(heading) {
+                        color: color(greyscale, white);
+                    }
+                    @include overwrite-component(icon) {
+                        color: color(greyscale, white);
+                    }
+                    @include nested-modifier(fill) {
+                        background-color: darken(color(brand, primary), 10%);
+                    }
+                    @include nested-modifier(panel) {
+                        border-color: color(brand, primary);
+                    }
+                }
+            }
 		}
 		
 		//---------------------------------------------------------

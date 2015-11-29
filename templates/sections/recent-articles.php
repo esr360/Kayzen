@@ -46,7 +46,7 @@
                         </div>
                         <img src="<?php echo appDir ?>/images/wallpapers/bg-7.jpg">
                     </div>
-                    <div class="thumbnail-profile">
+                    <div class="thumbnail-profile-round-badge">
                         <img src="<?php echo appDir ?>/images/team/team-2.jpg" alt="">
                     </div>
                     <header class="heading_group">
@@ -82,7 +82,7 @@
                         </div>
                         <img src="<?php echo appDir ?>/images/wallpapers/bg-5.jpg">
                     </div>
-                    <div class="thumbnail-profile">
+                    <div class="thumbnail-profile-round-badge">
                         <img src="<?php echo appDir ?>/images/team/team-2.jpg" alt="">
                     </div>
                     <header class="heading_group">
@@ -118,7 +118,7 @@
                         </div>
                         <img src="<?php echo appDir ?>/images/wallpapers/bg-3.jpg">
                     </div>
-                    <div class="thumbnail-profile">
+                    <div class="thumbnail-profile-round-badge">
                         <img src="<?php echo appDir ?>/images/team/team-2.jpg" alt="">
                     </div>
                     <header class="heading_group">

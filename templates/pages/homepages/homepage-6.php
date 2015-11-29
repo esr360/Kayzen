@@ -30,7 +30,8 @@
 		>
 			<div class="container">
 				<div class="row-no-gutter">
-					<div 
+					<a
+                        href="#"
 						class="widget-feature-zoom span-4"
 						data-bg="<?php echo appDir ?>/images/wallpapers/bg-6.jpg"
 					>
@@ -39,8 +40,9 @@
 							<h4 class="heading-heavy-uppercase-size-4 font-2">Lorem Ipsum</h4>
 							<h5 class="heading-light">Dolor Sit Amet</h4>
 						</header>
-					</div>
-					<div 
+					</a>
+					<a
+                        href="#"
 						class="widget-feature-zoom span-4"
 						data-bg="<?php echo appDir ?>/images/wallpapers/bg-3.jpg"
 					>
@@ -49,8 +51,9 @@
 							<h4 class="heading-heavy-uppercase-size-4 font-2">Lorem Ipsum</h4>
 							<h5 class="heading-light">Dolor Sit Amet</h4>
 						</header>
-					</div>
-					<div 
+					</a>
+					<a
+                        href="#"
 						class="widget-feature-zoom span-4 col-full"
 						data-bg="<?php echo appDir ?>/images/wallpapers/bg-4.jpg"
 					>
@@ -59,10 +62,11 @@
 							<h4 class="heading-heavy-uppercase-size-4 font-2">Lorem Ipsum</h4>
 							<h5 class="heading-light">Dolor Sit Amet</h4>
 						</header>
-					</div>
+					</a>
 				</div>
 				<div class="row-no-gutter">
-					<div 
+					<a
+                        href="#"
 						class="widget-feature-zoom span-8"
 						data-bg="<?php echo appDir ?>/images/wallpapers/bg-5.jpg"
 					>
@@ -71,7 +75,7 @@
 							<h4 class="heading-heavy-uppercase-size-4 font-2">Lorem Ipsum</h4>
 							<h5 class="heading-light">Dolor Sit Amet</h4>
 						</header>
-					</div>
+					</a>
 				</div>
 			</div>
 		</section>
@@ -208,8 +212,12 @@
 							<div class="span-6 relative">	
 								<div class="thumbnail-zoom">
 									<div class="thumbnail_mask">
-										<div class="icon_group-small">
-											<a href="#" class="icon-border-circle-size-3">
+										<div class="thumbnail_controls icon_group-small">
+											<a 
+                                                href="<?php echo appDir ?>/images/wallpapers/bg-7.jpg" 
+                                                class="icon-border-circle-size-3" 
+                                                rel="lightbox"
+                                            >
 												<i class="fa fa-search"></i>
 											</a>
 											<a href="#" class="icon-border-circle-size-3">
@@ -244,8 +252,12 @@
 							<div class="span-6 relative">	
 								<div class="thumbnail-zoom">
 									<div class="thumbnail_mask">
-										<div class="icon_group-small">
-											<a href="#" class="icon-border-circle-size-3">
+										<div class="thumbnail_controls icon_group-small">
+											<a 
+                                                href="<?php echo appDir ?>/images/wallpapers/bg-7.jpg" 
+                                                class="icon-border-circle-size-3" 
+                                                rel="lightbox"
+                                            >
 												<i class="fa fa-search"></i>
 											</a>
 											<a href="#" class="icon-border-circle-size-3">
@@ -381,8 +393,12 @@
 							<div class="span-4 relative">	
 								<div class="thumbnail-zoom">
 									<div class="thumbnail_mask">
-										<div class="icon_group-small">
-											<a href="#" class="icon-border-circle-size-3">
+										<div class="thumbnail_controls icon_group-small">
+											<a 
+                                                href="<?php echo appDir ?>/images/wallpapers/bg-7.jpg" 
+                                                class="icon-border-circle-size-3" 
+                                                rel="lightbox"
+                                            >
 												<i class="fa fa-search"></i>
 											</a>
 											<a href="#" class="icon-border-circle-size-3">
@@ -414,8 +430,12 @@
 							<div class="span-4 relative">	
 								<div class="thumbnail-zoom">
 									<div class="thumbnail_mask">
-										<div class="icon_group-small">
-											<a href="#" class="icon-border-circle-size-3">
+										<div class="thumbnail_controls icon_group-small">
+											<a 
+                                                href="<?php echo appDir ?>/images/wallpapers/bg-5.jpg" 
+                                                class="icon-border-circle-size-3" 
+                                                rel="lightbox"
+                                            >
 												<i class="fa fa-search"></i>
 											</a>
 											<a href="#" class="icon-border-circle-size-3">
@@ -447,8 +467,12 @@
 							<div class="span-4 relative">	
 								<div class="thumbnail-zoom">
 									<div class="thumbnail_mask">
-										<div class="icon_group-small">
-											<a href="#" class="icon-border-circle-size-3">
+										<div class="thumbnail_controls icon_group-small">
+											<a 
+                                                href="<?php echo appDir ?>/images/wallpapers/bg-3.jpg" 
+                                                class="icon-border-circle-size-3" 
+                                                rel="lightbox"
+                                            >
 												<i class="fa fa-search"></i>
 											</a>
 											<a href="#" class="icon-border-circle-size-3">
