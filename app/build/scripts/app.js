@@ -6672,7 +6672,7 @@ $(document).ready(function() {
                 $('.earth-slider_section.active')
                     .fadeOut(baseTransition)
                     .removeClass('active'); 
-                console.log(pinIndex);
+                
                 $('.earth-slider_section:nth-child('+ pinIndex +')')
                     .fadeIn(baseTransition)
                     .addClass('active'); 
@@ -6701,28 +6701,39 @@ $(document).ready(function() {
             
                 $el.find('.slide-' + dir).click(function() {
         
-                    var $pinActive = $('.earth .pin-wrapper.active'); 
-                    var $pinIndex = $pinActive.index();
-        
+                    $pinActive = $('.earth .pin-wrapper.active'); 
+                    $pinIndex = $pinActive.index() + 1;
+                            
                     $pinActive.removeClass('active');
         
-                    if ($pinActive.is(':first-child')) {
-                        $pinActive = $lastPin;
-                        $pinActive.addClass('active');
-                    } else {                
-                        $pinActive.prev().addClass('active');               
+                    if (dir === 'prev') {
+                        if ($pinActive.is(':first-child')) {
+                            $pinIndex = $pinCount;
+                            $pinActive = $lastPin;
+                            $pinActive.addClass('active');
+                        } else {                
+                            $pinActive.prev().addClass('active');  
+                            $pinIndex--;             
+                        }
+                    } else {
+                        if ($pinActive.is(':last-child')) {
+                            $pinIndex = 1;
+                            $pinActive = $firstPin;
+                            $pinActive.addClass('active');
+                        } else {                
+                            $pinActive.next().addClass('active');  
+                            $pinIndex++;        
+                        }
                     }
                     
-                    earthCycle($pinIndex);          
-                    
-                    var $pinActive = $('.earth .pin-wrapper.active');
-                    var $pinIndex = $pinActive.index() + 1;
+                    earthCycle($pinIndex);
                     
                 });
                 
             }
             
             earthArrows('prev');
+            
             earthArrows('next');
         
         }); // this.each
