@@ -6678,27 +6678,12 @@ img {
   color: inherit;
 }
 [class*="list-"][class*="-tags"] > li.plain a, [class*="list-"][class*="-tags"] > li.plain span {
+  background-color: transparent;
   border: 1px solid rgba(0, 0, 0, 0.1);
-  background: white;
   color: inherit;
 }
-[class*="list-"][class*="-tags"] > li.scss, [class*="list-"][class*="-tags"] > li.sass {
-  background: #009ED7;
-}
-[class*="list-"][class*="-tags"] > li.js {
-  background: #90BB00;
-}
-[class*="list-"][class*="-tags"] > li.html {
-  background: #D63A36;
-}
-[class*="list-"][class*="-tags"] > li.php {
-  background: #9B58B5;
-}
-[class*="list-"][class*="-tags"] > li.brand {
-  background: #9B58B5;
-}
 [class*="list-"][class*="-tags"] > li span, [class*="list-"][class*="-tags"] > li a {
-  background: #bfc1c3;
+  background: #6f777b;
   padding: 0.1em 0.4em;
   color: white;
 }

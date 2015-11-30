@@ -92,28 +92,13 @@
                 }
 				&.plain {
 					a, span {
+                        background-color: transparent;
 						border: 1px solid rgba(black, 0.1);
-						background: white;
 						color: inherit;
 					}
 				}
-				&.scss, &.sass {
-					background: #009ED7;
-				}
-				&.js {
-					background: #90BB00;
-				}
-				&.html {
-					background: #D63A36;
-				}
-				&.php {
-					background: #9B58B5;
-				}
-                &.brand {
-                    background: color('brand', 'primary');
-                }
 				span, a {
-					background: color(greyscale, grey-3);
+                    background: color(greyscale, grey-4);
 					padding: 0.1em 0.4em;
 					color: white;
 				}

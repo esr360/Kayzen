@@ -459,7 +459,7 @@
 					
 					<div class="widget_group row-magic text-center">
 						
-						<a class="widget-block-small-borderTop span" href="#">
+						<a class="widget-block-small-borderTop span" href="/<?php echo $pageTree.'modules/elements/buttons.php' ?>">
 							<div class="widget_icon icon-plain-size-7">
 								<i class="fa fa-keyboard-o"></i>
 							</div>
@@ -468,7 +468,7 @@
 							</header>
 						</a>
 						
-						<a class="widget-block-small-borderTop span" href="#">
+						<a class="widget-block-small-borderTop span" href="/<?php echo $pageTree.'modules/elements/carousels.php' ?>">
 							<div class="widget_icon icon-plain-size-7">
 								<i class="fa fa-arrows-h""></i>
 							</div>
@@ -477,7 +477,7 @@
 							</header>
 						</a>
 						
-						<a class="widget-block-small-borderTop span" href="#">
+						<a class="widget-block-small-borderTop span" href="/<?php echo $pageTree.'modules/elements/modals.php' ?>">
 							<div class="widget_icon icon-plain-size-7">
 								<i class="fa fa-times-circle"></i>
 							</div>
@@ -486,7 +486,7 @@
 							</header>
 						</a>
 						
-						<a class="widget-block-small-borderTop span" href="#">
+						<a class="widget-block-small-borderTop span" href="/<?php echo $pageTree.'modules/elements/progress-bars.php' ?>">
 							<div class="widget_icon icon-plain-size-7">
 								<i class="fa fa-battery-3"></i>
 							</div>
@@ -531,7 +531,7 @@
 							
 					<div class="widget_group row-flow text-center">
 						
-						<a class="widget-block-borderTop-highlight span-6 text-left" href="#">
+						<a class="widget-block-borderTop-highlight span-6 text-left" href="/<?php echo $pageTree.'modules/objects/header.php' ?>">
 							<div class="widget_icon-inline icon-plain-size-7">
 								<i class="fa fa-file-o"></i>
 							</div>
@@ -541,7 +541,7 @@
 							</header>
 						</a>
 						
-						<a class="widget-block-fill-small-borderTop span-3" href="#">
+						<a class="widget-block-fill-small-borderTop span-3" href="/<?php echo $pageTree.'modules/objects/mega-menu.php' ?>">
 							<div class="widget_icon icon-plain-size-7">
 								<i class="fa fa-list-alt"></i>
 							</div>
@@ -550,7 +550,7 @@
 							</header>
 						</a>
 						
-						<a class="widget-block-fill-small-borderTop-greyscale span-3" href="#">
+						<a class="widget-block-fill-small-borderTop-greyscale span-3" href="/<?php echo $pageTree.'modules/objects/twitter-feed.php' ?>">
 							<div class="widget_icon icon-plain-size-7">
 								<i class="fa fa-twitter"></i>
 							</div>
@@ -563,7 +563,7 @@
 					
 					<div class="widget_group row-flow text-center">
 						
-						<a class="widget-block-small-borderTop span-3" href="#">
+						<a class="widget-block-small-borderTop span-3" href="/<?php echo $pageTree.'modules/objects/footer.php' ?>">
 							<div class="widget_icon icon-plain-size-7">
 								<i class="fa fa-file-text"></i>
 							</div>
@@ -572,7 +572,7 @@
 							</header>
 						</a>
 						
-						<a class="widget-block-small-borderTop span-3" href="#">
+						<a class="widget-block-small-borderTop span-3" href="/<?php echo $pageTree.'modules/objects/billboard.php' ?>">
 							<div class="widget_icon icon-plain-size-7">
 								<i class="fa fa-tv"></i>
 							</div>
@@ -586,16 +586,16 @@
 							<div class="row">
 								<div class="span-6">
 									<ul class="list-arrow">
-										<li><a href="#">Breadcrumb</a></li>
-										<li><a href="#">Countdown</a></li>	
-										<li><a href="#">Dropdown</a></li>	
+										<li><a href="/<?php echo $pageTree.'modules/objects/breadcrumb.php' ?>">Breadcrumb</a></li>
+										<li><a href="/<?php echo $pageTree.'modules/objects/countdown.php' ?>">Countdown</a></li>	
+										<li><a href="/<?php echo $pageTree.'modules/objects/dropdown.php' ?>">Dropdown</a></li>	
 									</ul>
 								</div>
 								<div class="span-6">
 									<ul class="list-arrow">
-										<li><a href="#">Earth Slider</a></li>
-										<li><a href="#">Flyout Navigation</a></li>	
-										<li><a href="#">Google Map</a></li>	
+										<li><a href="/<?php echo $pageTree.'modules/objects/earth-slider.php' ?>">Earth Slider</a></li>
+										<li><a href="/<?php echo $pageTree.'modules/objects/flyout-navigation.php' ?>">Flyout Navigation</a></li>	
+										<li><a href="/<?php echo $pageTree.'modules/objects/google-map.php' ?>">Google Map</a></li>	
 									</ul>
 								</div>
 							</div>
@@ -620,10 +620,10 @@
 		<li>
 			<a href="/<?php echo $pageTree.'documentation.php' ?>"><i class="navigation_icon fa fa-files-o"></i> Documentation</a>
 			<ul>
-				<li><a href="#">Getting Started</a></li>
-				<li><a href="#">Configure</a></li>
-				<li><a href="#">Build</a></li>
-				<li><a href="#">Deploy</a></li>
+				<li><a href="/<?php echo $pageTree.'documentation.php' ?>#getting-started">Getting Started</a></li>
+				<li><a href="/<?php echo $pageTree.'documentation.php' ?>#configure">Configure</a></li>
+				<li><a href="/<?php echo $pageTree.'documentation.php' ?>#build">Build</a></li>
+				<li><a href="/<?php echo $pageTree.'documentation.php' ?>#deploy">Deploy</a></li>
 			</ul>
 		</li>
 	</ul>

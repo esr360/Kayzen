@@ -1,5 +1,5 @@
 <?php 
-	include ('../app.php');
+	include ('../../../app.php');
 	// page config
 	$title = 'Accordions';
 	$tagLine = 'app/modules/elements/accordions';
@@ -16,16 +16,19 @@
     <div id="site-content">
 		
 		<?php 
-			$topBarModifiers = '';
-			include (ROOT.'/modules/top-bar.php'); 
-		?>
+        
+            topbar();
 
-		<?php 
-			$headerModifiers = '-bar-absolute-dark-sticky'; 
-			include (ROOT.'/modules/header.php'); 
-		?>
+            appHeader(array(
+                'modifiers' => 'bar-absolute-dark-sticky'
+            ));
 
-		<?php include (ROOT.'/modules/billboard.php'); ?>
+            billboard(array(
+                'title'    => $title,
+                'tag-line' => $tagLine
+            ));
+            
+        ?>
 		
 		<section class="section-primary">
 			
@@ -34,25 +37,27 @@
 				<h2 class="heading-light-size-5">Files</h2>
 				
 				<ul class="list-tags">
-					<li class="scss">_accordions.scss</li>
-					<li class="js">accordions.js</li>	
-					<li>README.md</li>	
+					<li class="plain"><span>_accordions.scss</span></li>
+					<li class="plain"><span>accordions.js</span></li>	
+					<li class="plain"><span>README.md</span></li>	
 				</ul>
+                
+				<p><small><strong>Github Page</strong> (customers only):  <a href="https://github.com/esr360/Kayzen/tree/master/app/modules/elements/accordions" target="blank">https://github.com/esr360/Kayzen/tree/master/app/modules/elements/accordions</a></small></p>
 				
 				<h2 class="heading-light-size-5">Examples</h2>
 				
 				<div class="accordion">
-					<section>
-						<h4>Accordion Title</h4>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ultrices diam massa. Fusce pretium dui vitae elementum hendrerit. Nunc at placerat enim. Sed suscipit eros dolor, ac maximus lacus euismod non.</p>
+					<section class="accordion_section">
+						<h4 class="accordion_title">Accordion Title</h4>
+						<p class="accordion_content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ultrices diam massa. Fusce pretium dui vitae elementum hendrerit. Nunc at placerat enim. Sed suscipit eros dolor, ac maximus lacus euismod non.</p>
 					</section>
-					<section>
-						<h4>Accordion Title</h4>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ultrices diam massa. Fusce pretium dui vitae elementum hendrerit. Nunc at placerat enim. Sed suscipit eros dolor, ac maximus lacus euismod non.</p>
+					<section class="accordion_section">
+						<h4 class="accordion_title">Accordion Title</h4>
+						<p class="accordion_content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ultrices diam massa. Fusce pretium dui vitae elementum hendrerit. Nunc at placerat enim. Sed suscipit eros dolor, ac maximus lacus euismod non.</p>
 					</section>
-					<section>
-						<h4>Accordion Title</h4>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ultrices diam massa. Fusce pretium dui vitae elementum hendrerit. Nunc at placerat enim. Sed suscipit eros dolor, ac maximus lacus euismod non.</p>
+					<section class="accordion_section">
+						<h4 class="accordion_title">Accordion Title</h4>
+						<p class="accordion_content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ultrices diam massa. Fusce pretium dui vitae elementum hendrerit. Nunc at placerat enim. Sed suscipit eros dolor, ac maximus lacus euismod non.</p>
 					</section>
 				</div>
 							
@@ -91,20 +96,20 @@
 &lt;/div>
 </pre>
 
-				<h3 class="heading-size-3 font-2">Open By Default</h3>
+				<h3 class="heading-size-3">Open By Default</h3>
 
 				<div class="accordion">
-					<section>
-						<h4>Accordion Title</h4>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ultrices diam massa. Fusce pretium dui vitae elementum hendrerit. Nunc at placerat enim. Sed suscipit eros dolor, ac maximus lacus euismod non.</p>
+					<section class="accordion_section">
+						<h4 class="accordion_title">Accordion Title</h4>
+						<p class="accordion_content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ultrices diam massa. Fusce pretium dui vitae elementum hendrerit. Nunc at placerat enim. Sed suscipit eros dolor, ac maximus lacus euismod non.</p>
 					</section>
-					<section class="active">
-						<h4>Accordion Title</h4>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ultrices diam massa. Fusce pretium dui vitae elementum hendrerit. Nunc at placerat enim. Sed suscipit eros dolor, ac maximus lacus euismod non.</p>
+					<section class="accordion_section active">
+						<h4 class="accordion_title">Accordion Title</h4>
+						<p class="accordion_content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ultrices diam massa. Fusce pretium dui vitae elementum hendrerit. Nunc at placerat enim. Sed suscipit eros dolor, ac maximus lacus euismod non.</p>
 					</section>
-					<section>
-						<h4>Accordion Title</h4>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ultrices diam massa. Fusce pretium dui vitae elementum hendrerit. Nunc at placerat enim. Sed suscipit eros dolor, ac maximus lacus euismod non.</p>
+					<section class="accordion_section">
+						<h4 class="accordion_title">Accordion Title</h4>
+						<p class="accordion_content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ultrices diam massa. Fusce pretium dui vitae elementum hendrerit. Nunc at placerat enim. Sed suscipit eros dolor, ac maximus lacus euismod non.</p>
 					</section>
 				</div>
 				
@@ -122,20 +127,20 @@
 &lt;/div>
 </pre>
 				
-				<h3 class="heading-size-3 font-2">Multiple Open Items <small class="heading-light-size-2">(Hint: click more than one accordion item)</small></h3>
+				<h3 class="heading-size-3">Multiple Open Items <small class="heading-light-size-2">(Hint: click more than one accordion item)</small></h3>
 				
 				<div class="accordion-keep-open">
-					<section class="active">
-						<h4>Accordion Title</h4>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ultrices diam massa. Fusce pretium dui vitae elementum hendrerit. Nunc at placerat enim. Sed suscipit eros dolor, ac maximus lacus euismod non.</p>
+					<section class="accordion_section active">
+						<h4 class="accordion_title">Accordion Title</h4>
+						<p class="accordion_content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ultrices diam massa. Fusce pretium dui vitae elementum hendrerit. Nunc at placerat enim. Sed suscipit eros dolor, ac maximus lacus euismod non.</p>
 					</section>
-					<section>
-						<h4>Accordion Title</h4>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ultrices diam massa. Fusce pretium dui vitae elementum hendrerit. Nunc at placerat enim. Sed suscipit eros dolor, ac maximus lacus euismod non.</p>
+					<section class="accordion_section">
+						<h4 class="accordion_title">Accordion Title</h4>
+						<p class="accordion_content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ultrices diam massa. Fusce pretium dui vitae elementum hendrerit. Nunc at placerat enim. Sed suscipit eros dolor, ac maximus lacus euismod non.</p>
 					</section>
-					<section>
-						<h4>Accordion Title</h4>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ultrices diam massa. Fusce pretium dui vitae elementum hendrerit. Nunc at placerat enim. Sed suscipit eros dolor, ac maximus lacus euismod non.</p>
+					<section class="accordion_section">
+						<h4 class="accordion_title">Accordion Title</h4>
+						<p class="accordion_content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ultrices diam massa. Fusce pretium dui vitae elementum hendrerit. Nunc at placerat enim. Sed suscipit eros dolor, ac maximus lacus euismod non.</p>
 					</section>
 				</div>
 				
@@ -346,7 +351,11 @@
 			
 		</section>
 
-		<?php include (ROOT.'/modules/footer.php'); ?>
+		<?php 
+
+            appFooter();
+            
+        ?>
 
     </div><!-- Site Canvas -->
 

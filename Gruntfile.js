@@ -171,11 +171,34 @@ module.exports = function(grunt) {
         //---------------------------------------------------------
         
         copy: {
-            fontAwesome: {
+            FontAwesome: {
                 files: [{
                     cwd: 'app/vendor/Font-Awesome/fonts',
                     src: '**/*',
                     dest: 'app/build/fonts',
+                    expand: true
+                }]
+            },
+            Enlighter: {
+                files: [
+                    {
+                        cwd: 'app/vendor/Enlighter/Build',
+                        src: 'EnlighterJS.js',
+                        dest: buildScripts,
+                        expand: true
+                    }, {
+                        cwd: 'app/vendor/Enlighter/Build',
+                        src: 'EnlighterJS.css',
+                        dest: buildStyles,
+                        expand: true
+                    }
+                ]
+            },
+            MooTools: {
+                files: [{
+                    cwd: 'app/vendor/MooTools-Core/build',
+                    src: 'mootools-core.js',
+                    dest: buildScripts,
                     expand: true
                 }]
             },
@@ -347,7 +370,9 @@ module.exports = function(grunt) {
     grunt.registerTask('compile:dev', [
         'setPHPConstant:dev',
         'clean',
-        'copy:fontAwesome',
+        'copy:FontAwesome',
+        'copy:Enlighter',
+        'copy:MooTools',
         'concat',
         'sass:dev',
         'postcss',
@@ -358,7 +383,9 @@ module.exports = function(grunt) {
     grunt.registerTask('compile:prod', [
         'setPHPConstant:prod',
         'clean',
-        'copy:fontAwesome',
+        'copy:FontAwesome',
+        'copy:Enlighter',
+        'copy:MooTools',
         'uglify',
         'sass:prod',
         'postcss',
