@@ -52,3 +52,6 @@
 [submodule "app/vendor/Magnific-Popup"]
 	path = app/vendor/Magnific-Popup
 	url = https://github.com/dimsemenov/Magnific-Popup.git
+[submodule "app/vendor/MooTools-Core"]
+	path = app/vendor/MooTools-Core
+	url = https://github.com/mootools/mootools-core.git
