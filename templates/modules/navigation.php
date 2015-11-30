@@ -497,28 +497,28 @@
 						
 					</div>
 					
-					<p>More... <small>(<a href="#" class="link">View All</a>)</small></p>
+					<p>More... <small>(<a href="/<?php echo $pageTree.'modules.php#kayzenElements' ?>" class="link">View All</a>)</small></p>
 					
 					<div class="row">
 						<div class="span-4">
 							<ul class="list-arrow">
-								<li><a href="#">Accordions</a></li>	
-								<li><a href="#">Alert Bars</a></li>
-								<li><a href="#">Blockquotes</a></li>	
+								<li><a href="/<?php echo $pageTree.'modules/elements/accordions.php' ?>">Accordions</a></li>	
+								<li><a href="/<?php echo $pageTree.'modules/elements/alert-bars.php' ?>">Alert Bars</a></li>
+								<li><a href="/<?php echo $pageTree.'modules/elements/blockquotes.php' ?>">Blockquotes</a></li>	
 							</ul>
 						</div>
 						<div class="span-4">
 							<ul class="list-arrow">
-								<li><a href="#">Corner Ribbons</a></li>	
-								<li><a href="#">Fonts</a></li>
-								<li><a href="#">Forms</a></li>	
+								<li><a href="/<?php echo $pageTree.'modules/elements/corner-ribbons.php' ?>">Corner Ribbons</a></li>	
+								<li><a href="/<?php echo $pageTree.'modules/elements/fonts.php' ?>">Fonts</a></li>
+								<li><a href="/<?php echo $pageTree.'modules/elements/forms.php' ?>">Forms</a></li>	
 							</ul>
 						</div>
 						<div class="span-4">
 							<ul class="list-arrow">
-								<li><a href="#">Headings</a></li>	
-								<li><a href="#">Icons</a></li>
-								<li><a href="#">Images</a></li>			
+								<li><a href="/<?php echo $pageTree.'modules/elements/headings.php' ?>">Headings</a></li>	
+								<li><a href="/<?php echo $pageTree.'modules/elements/icons.php' ?>">Icons</a></li>
+								<li><a href="/<?php echo $pageTree.'modules/elements/images.php' ?>">Images</a></li>			
 							</ul>
 						</div>
 					</div>
@@ -582,7 +582,7 @@
 						</a>
 						
 						<div class="span-6 text-left">					
-							<p>More... <small>(<a href="#" class="link">View All</a>)</small></p>
+							<p>More... <small>(<a href="/<?php echo $pageTree.'modules.php#kayzenObjects' ?>" class="link">View All</a>)</small></p>
 							<div class="row">
 								<div class="span-6">
 									<ul class="list-arrow">

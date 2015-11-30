@@ -29,7 +29,7 @@
             
         ?>
 		
-		<section class="section-block">
+		<section id="kayzenElements" class="section-block">
 			
 			<header class="heading_group-block has-icon text-center">
 				<div class="container-small">
@@ -45,7 +45,7 @@
 			
 		</section>
 			
-		<section class="section-block">
+		<section id="kayzenObjects" class="section-block">
 			
 			<header class="heading_group-block has-icon text-center">
 				<div class="container-small">
