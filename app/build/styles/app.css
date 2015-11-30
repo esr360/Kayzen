@@ -4565,9 +4565,7 @@ pre:last-child, hr:last-child,
 }
 
 [class*="list-"][class*="-reset"], [class*="list-"][class*="-arrow"], [class*="list-"][class*="-tags"], .price-chart ul, [class*="price-chart-"] ul, [class*="tabs_nav"], [class*="top-bar_nav"] ul, .breadcrumb ul, .side-nav nav ul, .flyout-nav nav ul, [class*="flyout-nav-"] nav ul, [class*="app-header-"][class*="-side"] nav ul, [class*="side-nav-"] nav ul, [class*="footer_nav"] ul, .navigation > ul, [class*="navigation-"] > ul, [class*="navigation"] ul ul, .tweets, .tweet-actions {
-  margin-left: 0;
-  margin-right: 0;
-  padding: 0;
+  padding-left: 0;
   list-style: none;
 }
 

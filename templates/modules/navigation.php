@@ -322,7 +322,7 @@
 		</li>
 		
 		<li>
-			<a href="#"><i class="navigation_icon fa fa-desktop"></i> Templates</a>
+			<a href="/<?php echo $pageTree.'templates.php' ?>"><i class="navigation_icon fa fa-desktop"></i> Templates</a>
 			<ul class="mega-menu row-magic">
 				
 				<li class="span">
@@ -408,7 +408,7 @@
                         <li>
                             <h3 class="mega-menu_title heading-uppercase-size-2">Masonry</h3>
                             <ul class="list-arrow">
-                                <li><a href="/<?php echo $pageTree.'blog/masonry/3-cols.php' ?>">3 Columns Carousel</a></li>
+                                <li><a href="/<?php echo $pageTree.'blog/masonry/3-cols.php' ?>">3 Columns</a></li>
                                 <li><a href="/<?php echo $pageTree.'blog/classic/3-cols-filterable.php' ?>">3 Columns Filterable</a></li>
                             </ul>
                         </li>
