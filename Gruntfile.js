@@ -59,6 +59,21 @@ module.exports = function(grunt) {
     grunt.initConfig({
 		
         pkg: grunt.file.readJSON('package.json'),
+        
+        //-----------------------------------------------------
+        // Clean
+        // https://github.com/gruntjs/grunt-contrib-clean
+        //-----------------------------------------------------
+    
+        clean: {
+            build: {
+                src: 'app/build'
+            },
+            scripts: [
+                'app/build/scripts/*.js',
+                '!app/build/scripts/*.min.js'
+            ]
+        },
       
         //---------------------------------------------------------
         // Concat
@@ -73,34 +88,73 @@ module.exports = function(grunt) {
         },
       
         //---------------------------------------------------------
+        // Copy
+        // https://github.com/sindresorhus/grunt-sass
+        //---------------------------------------------------------
+        
+        copy: {
+            app: {
+                files: [
+                    {
+                        cwd: 'app/vendor/Font-Awesome/fonts',
+                        src: '**/*',
+                        dest: 'app/build/fonts',
+                        expand: true
+                    },
+                    {
+                        src: 'app/vendor/jQuery/dist/jquery.js',
+                        dest: buildScripts + 'jquery.js'
+                    },
+                    {
+                        src: 'app/vendor/sudojQuery/src/sudojQuery-start.js',
+                        dest: buildScripts + 'sudojQuery-start.js'
+                    },
+                    {
+                        src: 'app/vendor/sudojQuery/src/sudojQuery-end.js',
+                        dest: buildScripts + 'sudojQuery-end.js'
+                    },
+                    {
+                        src: 'app/vendor/Masonry/dist/masonry.pkgd.js',
+                        dest: buildScripts + 'masonry.pkgd.js'
+                    },
+                    {
+                        src: 'app/vendor/Isotope/dist/isotope.pkgd.js',
+                        dest: buildScripts + 'isotope.pkgd.js'
+                    },
+                    {
+                        src: 'app/vendor/Infinite-AJAX-Scroll/dist/jquery-ias.js',
+                        dest: buildScripts + 'jquery-ias.js'
+                    },
+                    {
+                        src: 'app/vendor/Enlighter/Build/EnlighterJS.js',
+                        dest: buildScripts + 'EnlighterJS.js'
+                    }, 
+                    {
+                        src: 'app/vendor/Enlighter/Build/EnlighterJS.css',
+                        dest: buildStyles + 'EnlighterJS.css'
+                    },
+                    {
+                        src: 'app/vendor/MooTools-Core/build/mootools-core.js',
+                        dest: buildScripts + 'mootools-core.js'
+                    }
+                ]
+            }
+        },
+      
+        //---------------------------------------------------------
         // Uglify
         // https://github.com/sindresorhus/grunt-sass
         //---------------------------------------------------------
 		
         uglify: {
             app: {
-                src: _scripts,
-                dest: buildScripts + 'app.min.js'
-            },
-            sudojQueryStart: {
-                src: 'app/vendor/sudojQuery/src/sudojQuery-start.js',
-                dest: buildScripts + 'sudojQuery-start.min.js'
-            },
-            sudojQueryEnd: {
-                src: 'app/vendor/sudojQuery/src/sudojQuery-end.js',
-                dest: buildScripts + 'sudojQuery-end.min.js'
-            },
-            Masonry: {
-                src: 'app/vendor/Masonry/dist/masonry.pkgd.js',
-                dest: buildScripts + 'masonry.pkgd.min.js'
-            },
-            Isotope: {
-                src: 'app/vendor/Isotope/dist/isotope.pkgd.js',
-                dest: buildScripts + 'isotope.pkgd.min.js'
-            },
-            infiniteScroll: {
-                src: 'app/vendor/Infinite-AJAX-Scroll/dist/jquery-ias.js',
-                dest: buildScripts + 'jquery-ias.min.js'
+                files: [{ 
+                    src: 'app/build/scripts/*.js',
+                    dest: buildScripts,
+                    expand: true,
+                    flatten: true,
+                    ext: '.min.js'
+                }]
             }
         },
       
@@ -163,92 +217,6 @@ module.exports = function(grunt) {
             options: {
                 colorizeOutput: true
             },
-        },
-      
-        //---------------------------------------------------------
-        // Copy
-        // https://github.com/sindresorhus/grunt-sass
-        //---------------------------------------------------------
-        
-        copy: {
-            FontAwesome: {
-                files: [{
-                    cwd: 'app/vendor/Font-Awesome/fonts',
-                    src: '**/*',
-                    dest: 'app/build/fonts',
-                    expand: true
-                }]
-            },
-            Enlighter: {
-                files: [
-                    {
-                        cwd: 'app/vendor/Enlighter/Build',
-                        src: 'EnlighterJS.js',
-                        dest: buildScripts,
-                        expand: true
-                    }, {
-                        cwd: 'app/vendor/Enlighter/Build',
-                        src: 'EnlighterJS.css',
-                        dest: buildStyles,
-                        expand: true
-                    }
-                ]
-            },
-            MooTools: {
-                files: [{
-                    cwd: 'app/vendor/MooTools-Core/build',
-                    src: 'mootools-core.js',
-                    dest: buildScripts,
-                    expand: true
-                }]
-            },
-            dev: {
-                files: [
-                    {
-                        src: 'app/vendor/jQuery/dist/jquery.js',
-                        dest: buildScripts + 'jquery.js'
-                    },
-                    {
-                        src: 'app/vendor/sudojQuery/src/sudojQuery-start.js',
-                        dest: buildScripts + 'sudojQuery-start.js'
-                    },
-                    {
-                        src: 'app/vendor/sudojQuery/src/sudojQuery-end.js',
-                        dest: buildScripts + 'sudojQuery-end.js'
-                    },
-                    {
-                        src: 'app/vendor/Masonry/dist/masonry.pkgd.js',
-                        dest: buildScripts + 'masonry.pkgd.js'
-                    },
-                    {
-                        src: 'app/vendor/Isotope/dist/isotope.pkgd.js',
-                        dest: buildScripts + 'isotope.pkgd.js'
-                    },
-                    {
-                        src: 'app/vendor/Infinite-AJAX-Scroll/dist/jquery-ias.js',
-                        dest: buildScripts + 'jquery-ias.js'
-                    }
-                ]
-            },
-            prod: {
-                files: [
-                    {
-                        src: 'app/vendor/jQuery/dist/jquery.min.js',
-                        dest: buildScripts + 'jquery.min.js'
-                    }
-                ]
-            }
-        },
-        
-        //-----------------------------------------------------
-        // Clean
-        // https://github.com/gruntjs/grunt-contrib-clean
-        //-----------------------------------------------------
-    
-        clean: {
-            build: {
-                src: 'app/build'
-            }
         },
       
         //---------------------------------------------------------
@@ -366,39 +334,61 @@ module.exports = function(grunt) {
     //-------------------------------------------------------------
     // Register Tasks
     //-------------------------------------------------------------
-    
-    grunt.registerTask('compile:dev', [
-        'setPHPConstant:dev',
-        'clean',
-        'copy:FontAwesome',
-        'copy:Enlighter',
-        'copy:MooTools',
-        'concat',
-        'sass:dev',
-        'postcss',
-        'copy:dev',
-        'notify:app'
-    ]);
-    
-    grunt.registerTask('compile:prod', [
-        'setPHPConstant:prod',
-        'clean',
-        'copy:FontAwesome',
-        'copy:Enlighter',
-        'copy:MooTools',
-        'uglify',
-        'sass:prod',
-        'postcss',
-        'copy:prod',
-        //'scsslint',
-        'php2html',
-        'notify:app'
-    ]);
 
+    //Default
     grunt.registerTask('default', [
         'compile:dev',
         'watch',
         'postcss:dist'
+    ]);
+    
+    // Develop Tasks
+    //-------------------------------------------------------------
+    
+    grunt.registerTask('compile:predev', [
+        'setPHPConstant:dev',
+        'clean:build',
+        'copy',
+        'concat',
+        'sass:dev',
+        'postcss',
+    ]); 
+    
+    grunt.registerTask('compile:dev', [
+        'compile:predev',
+        'notify:app'
+    ]); 
+     
+    grunt.registerTask('build:dev', [
+        'compile:predev',
+        'php2html',
+        'notify:app'
+    ]);
+    
+    // Production Tasks
+    //-------------------------------------------------------------
+    
+    grunt.registerTask('compile:preprod', [
+        'setPHPConstant:prod',
+        'clean:build',
+        'copy',
+        'concat',
+        'uglify',
+        'clean:scripts',
+        'sass:prod',
+        'postcss',
+        //'scsslint'
+    ]);
+    
+    grunt.registerTask('compile:prod', [
+        'compile:preprod',
+        'notify:app'
+    ]);
+    
+    grunt.registerTask('build:prod', [
+        'compile:preprod',
+        'php2html',
+        'notify:app'
     ]);
 
 }; // function(grunt)
