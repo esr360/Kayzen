@@ -26,7 +26,7 @@
 		
 		th, td {
 			text-align: left;
-			padding: 0.5em;
+			padding: 0.6em;
 			border-bottom: 1px solid rgba(0,0,0,0.1);
 			border-left: 1px solid rgba(0,0,0,0.1);
 			vertical-align: top;
@@ -69,6 +69,13 @@
 					width: 55%;
 				}
 			}
+            tr {
+                &:hover {
+                    td {
+                        background-color: color(greyscale, white);
+                    }
+                }
+            }
 		}
 	
 	} // component(table)

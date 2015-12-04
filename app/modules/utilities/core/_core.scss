@@ -49,6 +49,21 @@
 		color: color(brand, primary);
 		text-decoration: none;
 	}
+    
+    // code tags
+    code {
+        background: white;
+        border: 1px solid color(greyscale, grey-3);
+        border-radius: 0.2em;
+        color: #C7254F;
+        font-family: typography(typefaces, primary);
+        font-size: font-size(size-2, $rem: true);
+        font-weight: 300;
+        padding: 0.1em 0.3em;
+        &.value {
+            color: inherit;
+        }
+    }
 
 	// animate data-manipulate.js elements
 	[data-trigger],

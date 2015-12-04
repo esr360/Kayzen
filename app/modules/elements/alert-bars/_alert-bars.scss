@@ -9,7 +9,12 @@
 	//-------------------------------------------------------------
 
 	$alert-bars: config((
-		name            : alert-bar
+		'name'          : 'alert-bar',
+        'border-radius' : 0.25em,
+        'border-width'  : 1px,
+        'padding'       : 0.85em,
+        'size'          : 0.9em,
+        'weight'        : lighter
 	), $custom);
 	
 	//-------------------------------------------------------------
@@ -23,11 +28,11 @@
 	
 		padding: 0.85em;
 		border: 1px solid;
+		border-color: rgba(0,0,0,0.15);
 		font-size: 0.9em;
 		border-radius: 0.25em;
 		font-weight: lighter;
 		position: relative;
-		border: 1px solid rgba(0,0,0,0.15);
 
 		&:hover {
 			text-decoration: none;
@@ -47,38 +52,26 @@
 	// Modifiers
 	//-------------------------------------------------------------
 	
-		@include modifier(help) {		
-			background: desaturate(
-				lighten(color(alert, help), 25%)
-			, 20%) !important;
-			color: darken(
-				desaturate(color(alert, help), 25%)
-			, 25%);
-		}
-	
-		@include modifier(info) {		
-			background: lighten(color(alert, info), 25%) !important;
-			color: darken(
-				desaturate(color(alert, info), 15%)
-			, 15%);
-		}
-	
-		@include modifier(error) {		
-			background: desaturate(
-				lighten(color(alert, error), 20%)
-			, 20%) !important;
-			color: darken(
-				desaturate(color(alert, error), 10%)
-			, 10%);
-		}
-		
-		@include modifier(success) {		
-			background: lighten(color(alert, success), 20%) !important;
-			color: darken(
-				desaturate(color(alert, success), 15%)
-			, 15%);
-		}
+		@each $name, $color in palette(alert) {
+            @include modifier($name) {
+                background-color: $color;
+                color: alert-text($color);
+                border-color: alert-border($color);
+            }
+        }
 	
 	} // component(alert-bar)
 	
 } // @mixin alert-bars
+
+//-----------------------------------------------------------------
+// Utilities
+//-----------------------------------------------------------------
+
+@function alert-text($color) {
+    @return desaturate(darken($color, 50%), 25%);
+}   
+  
+@function alert-border($color) {
+    @return desaturate(darken($color, 30%), 25%);
+}
