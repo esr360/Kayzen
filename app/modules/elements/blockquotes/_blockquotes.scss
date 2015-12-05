@@ -71,6 +71,7 @@
 	//-------------------------------------------------------------
 	
 		@include component(bubble) {
+            position: relative;
 			padding: 1em 3em;
 			background: color(brand, primary);
 			border-radius: 0.6em;
@@ -100,6 +101,7 @@
 		
 		@include component(content) {
             position: relative;
+            display: inline-block;
 			&:before,
 			&:after {
 				position: absolute;
@@ -110,12 +112,12 @@
 			&:before {
 				content: "\f10d";
 				top: -0.2em;
-				left: -1.5em;
+				left: -1.25em;
 			}
 			&:after {
 				content: "\f10e";
 				bottom: -0.2em;
-				right: -1.5em;
+				right: -1em;
 			}
 			@include overwrite-component(cite, $special: 'adjacent-sibling') {
 				margin-top: 1.5em;

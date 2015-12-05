@@ -17,7 +17,7 @@
     ?>
     
     <!-- Login Box -->
-    <div class="modal" id="modal-login">
+    <div class="modal-right" id="modal-login">
         <div class="modal_close"><i class="fa fa-times fa-2x"></i></div>
         <div class="modal_content text-left">
             <div class="row-block">

@@ -94,6 +94,4 @@
 
 }(jQuery));
 
-$(_modal).modal({
-	animate: 'left'
-});
+$(_modal).modal();

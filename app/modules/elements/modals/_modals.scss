@@ -77,6 +77,7 @@
 			
 			@include nested-modifier(spin) {
 				transform: rotate(-360deg) translateY(-50%);
+                transform-origin: 50% 50%;
 				@include nested-modifier(visible) {
 					transform: rotate(0) translateY(-50%);
 				}
