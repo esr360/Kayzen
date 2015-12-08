@@ -9,7 +9,18 @@
 	//-------------------------------------------------------------
 
 	$blockquotes: config((
-		name            : blockquote
+		'name'                  : 'blockquote',
+        'font'                  : typography(typefaces, secondary),
+        'icon-size'             : 1.75rem,
+        'pull-width'            : 340px,
+        'pull-max-width'        : 50%,
+        'pull-font-style'       : italic,
+        'pull-margin'           : 1em,
+        'bubble-padding'        : 1em 3em,
+        'bubble-bg-color'       : color(brand, primary),
+        'bubble-radius'         : 0.6em,
+        'bubble-color'          : color(greyscale, white),
+        'testimonial-icon-size' : 1.5em,
 	), $custom);
 
 	//-------------------------------------------------------------

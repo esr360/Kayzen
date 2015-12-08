@@ -37,7 +37,7 @@
 	// call function on all modals
 	$.fn.extend({
 		
-		modal: function(options) {
+		KayzenModal: function(options) {
 			
 			var defaults = {  
 				overlay : true,
@@ -93,5 +93,3 @@
 	});
 
 }(jQuery));
-
-$(_modal).modal();

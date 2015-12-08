@@ -5746,7 +5746,7 @@ $(scrollTrigger);
 /**
  *
  * Tools
- * @description general JS tools & helpers for Kayzen
+ * @description general JS tools, helpers and plugin inits
  *
  */
 
@@ -5801,23 +5801,32 @@ $('a[href*=#]' + scrollExempt).click(function() {
 });
 
 //-----------------------------------------------------------------
-// Animated Numbers
+// Set Iframe Height
 //-----------------------------------------------------------------
 
-stat = $('[id^="stat-"]');
+$('.auto-resizable-iframe').each(function() {
+    var height = $(this).attr('data-iframe-height');
+    $(this).find('> div').css({
+        paddingBottom : height
+    })
+});
+
+//-----------------------------------------------------------------
+// Animated Numbers
+//-----------------------------------------------------------------
 
 var statsDone = true;
 
 $(window).on("load scroll", function(d,h) {
-    stat.each(function(i) {
+    $('[id^="stat-"]').each(function(i) {
         a = $(this).offset().top + $(this).height();
         b = $(window).scrollTop() + $(window).height();
         statSep = $.animateNumber.numberStepFactories.separator(',');
         attrStat = $(this).attr('data-val');
         if (a < b) {
             $(this).animateNumber({ 
-                    number: attrStat,
-                    numberStep: statSep
+                    number : attrStat,
+                    numberStep : statSep
                 }, 2000
             );
         }
@@ -5843,26 +5852,30 @@ $(window).bind("load resize", function() {
 });
 
 //-----------------------------------------------------------------
-// Parallax Scroll
+// Owl Carousel Init
+//-----------------------------------------------------------------
+
+$('.carousel').each(function() {
+    $(this).addClass('owl-carousel');
+    $(this).owlCarousel();
+});
+
+//-----------------------------------------------------------------
+// Modal Init
+//-----------------------------------------------------------------
+
+$(_modal).KayzenModal();
+
+//-----------------------------------------------------------------
+// Parallax Init
 //-----------------------------------------------------------------
 
 $.stellar({
-    horizontalScrolling:false
+    horizontalScrolling : false
 });
 
 //-----------------------------------------------------------------
-// Set Iframe Height
-//-----------------------------------------------------------------
-
-$('.auto-resizable-iframe').each(function() {
-    var height = $(this).attr('data-iframe-height');
-    $(this).find('> div').css({
-        paddingBottom : height
-    })
-});
-
-//-----------------------------------------------------------------
-// Magnific Popup
+// Magnific Popup Init
 //-----------------------------------------------------------------
 
 $('[rel="lightbox"]').magnificPopup({
@@ -6429,7 +6442,7 @@ $(accordion);
 	// call function on all modals
 	$.fn.extend({
 		
-		modal: function(options) {
+		KayzenModal: function(options) {
 			
 			var defaults = {  
 				overlay : true,
@@ -6485,8 +6498,6 @@ $(accordion);
 	});
 
 }(jQuery));
-
-$(_modal).modal();
 //-----------------------------------------------------------------
 // Progress Bars
 //-----------------------------------------------------------------

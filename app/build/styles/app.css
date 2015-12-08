@@ -5528,28 +5528,28 @@ q:before, q:after {
   color: #ffffff;
 }
 [class*="button-"][class*="-error"] {
-  background: #FECCCB;
+  background: #fc6a67;
 }
 [class*="button-"][class*="-error"]:hover {
-  background: #fd9b99;
+  background: #f80a05;
 }
 [class*="button-"][class*="-help"] {
-  background: #FDEAAD;
+  background: #fbd149;
 }
 [class*="button-"][class*="-help"]:hover {
-  background: #fcdd7b;
+  background: #d9a705;
 }
 [class*="button-"][class*="-info"] {
-  background: #BFE3F9;
+  background: #62baf0;
 }
 [class*="button-"][class*="-info"]:hover {
-  background: #90cff5;
+  background: #148ed8;
 }
 [class*="button-"][class*="-success"] {
-  background: #DEE3AB;
+  background: #c0ca5f;
 }
 [class*="button-"][class*="-success"]:hover {
-  background: #cfd685;
+  background: #899231;
 }
 [class*="button-"][class*="-facebook"] {
   background: #507CBD;

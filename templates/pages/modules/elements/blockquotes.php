@@ -41,7 +41,7 @@
 					<li class="plain"><span>README.md</span></li>	
 				</ul>
                 
-				<p class="alert-bar-info"><small><strong>Github Page</strong> (customers only):  <a href="https://github.com/esr360/Kayzen/tree/master/app/modules/elements/blockquotes" target="blank">https://github.com/esr360/Kayzen/tree/master/app/modules/elements/blockquotes</a></small></p>
+				<p class="alert-bar-info"><strong>Github Page</strong> (customers only):  <a href="https://github.com/esr360/Kayzen/tree/master/app/modules/elements/blockquotes" target="blank">https://github.com/esr360/Kayzen/tree/master/app/modules/elements/blockquotes</a></p>
 				
 				<h2 class="heading-light-size-5">Module Overview</h2>
                 
@@ -210,6 +210,111 @@
     &lt;/div>
 &lt;/blockquote>
 </pre>
+
+                <h2 class="heading-light-size-5">Customizing</h2>
+                
+                <p>The blockquotes can be styled using the following options:</p>
+                                
+                <p class="alert-bar-help">Read the <a href="configuration.html">Configuration</a> page to learn more about a module's configuration.</p>
+                
+                <table class="table-style-1-small">
+					<thead>
+						<tr>
+							<th>Property Name</th>
+							<th>Default Value</th>
+							<th>Description</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td><code>font</code></td>
+							<td><code class="value">typography(typefaces, secondary)</code></td>
+							<td>The font-family for blockquotes.</td>
+						</tr>
+						<tr>
+							<td><code>icon-size</code></td>
+							<td><code class="value">1.75rem</code></td>
+							<td>The size of the open/close quote icons.</td>
+						</tr>
+						<tr>
+							<td><code>pull-width</code></td>
+							<td><code class="value">340px</code></td>
+							<td>The default width for pull-quotes.</td>
+						</tr>
+						<tr>
+							<td><code>pull-max-width</code></td>
+							<td><code class="value">50%</code></td>
+							<td>The max-width for pull-quotes.</td>
+						</tr>
+						<tr>
+							<td><code>pull-font-style</code></td>
+							<td><code class="value">italic</code></td>
+							<td>The font style for pull-quotes.</td>
+						</tr>
+						<tr>
+							<td><code>pull-margin</code></td>
+							<td><code class="value">1em</code></td>
+							<td>The outer spacing for pull quotes.</td>
+						</tr>
+						<tr>
+							<td><code>bubble-padding</code></td>
+							<td><code class="value">1em 3em</code></td>
+							<td>The padding for blockquote bubbles.</td>
+						</tr>
+						<tr>
+							<td><code>bubble-bg-color</code></td>
+							<td><code class="value">color(brand, primary)</code></td>
+							<td>The background color for blockquote bubbles.</td>
+						</tr>
+						<tr>
+							<td><code>bubble-radius</code></td>
+							<td><code class="value">0.6em</code></td>
+							<td>The border radius for blockquote bubbles.</td>
+						</tr>
+						<tr>
+							<td><code>bubble-color</code></td>
+							<td><code class="value">white</code></td>
+							<td>The text color for blockquote bubbles.</td>
+						</tr>
+						<tr>
+							<td><code>testimonial-icon-size</code></td>
+							<td><code class="value">1.5em</code></td>
+							<td>The size forthe testimonial open/close quote icons.</td>
+						</tr>
+                    </tbody>
+                </table>
+                
+                <p>To change one of the above values, pass your new value(s) to the <code>blockquotes()</code> mixin in <b>_Kayzen.scss</b> <small>(app/themes/Kayzen/_kayzen.scss)</small>.</p>
+         
+<pre data-enlighter-language="css" class="EnlighterJSRAW">
+@include blockquotes((
+    'font'            : 'Times New Roman',
+	'bubble-bg-color' : #0bb2ef,
+	'bubble-radius'   : 0
+));
+</pre>	
+                
+                <div class="well object">
+                    <style>
+                        #blockquote-demo {
+                            font-family: 'Times New Roman';
+                        }
+                        #blockquote-demo .blockquote_bubble {
+                            background-color: #0bb2ef;
+                            border-radius: 0;
+                        }
+                        #blockquote-demo .blockquote_bubble:after {
+                            border-top-color: #0bb2ef;
+                        }
+                    </style>
+                    <blockquote id="blockquote-demo" class="blockquote-testimonial span-4">
+                        <div class="blockquote_bubble">
+                            <div class="blockquote_content">
+                                Aenean lobortis ante nunc. Integer justo ex. Curabitur at enim ac nisi...
+                            </div>
+                        </div>
+                    </blockquote>
+                </div>
          
 			</div><!-- container-small -->
 			

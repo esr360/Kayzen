@@ -9,7 +9,20 @@
 	//-------------------------------------------------------------
 
 	$buttons: config((
-		name            : button
+		'name'             : button,
+        'background'       : color(greyscale, grey-4),
+        'color'            : color(greyscale, white),
+        'side-padding'     : 1em,
+        'line-height'      : 2.4,
+        'weight'           : lighter,
+        'border-width'     : 1px,
+        'pill-radius'      : 0.4em,
+        'disabled-opacity' : 0.6,
+        'round-radius'     : 0.4em,
+        'fat-height'       : 2.8,
+        'thin-height'      : 2,
+        'group-spacing'    : 0.5em,
+        'group-stack'      : 'break-1'
 	), $custom);
 
 	//-------------------------------------------------------------
@@ -28,7 +41,7 @@
 		padding: 0 1em;
 		line-height: 2.4;
 		font-weight: lighter;
-		transition: 0.4s;
+		transition: base(transition);
 	    border: 1px solid;
 	    border-color: transparent;
 		cursor: pointer;
@@ -153,9 +166,9 @@
 		// Alert Colos
         @each $name, $color in palette('alert') {
             @include modifier($name) {
-                background: $color;
+                background: darken($color, 20%);
                 &:hover {
-                    background: darken($color, 10%);
+                    background: darken($color, 40%);
                 }
             }
         }

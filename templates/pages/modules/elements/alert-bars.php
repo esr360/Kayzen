@@ -41,7 +41,7 @@
 					<li class="plain"><span>README.md</span></li>	
 				</ul>
                 
-				<p class="alert-bar-info"><small><strong>Github Page</strong> (customers only):  <a href="https://github.com/esr360/Kayzen/tree/master/app/modules/elements/alert-bars" target="blank">https://github.com/esr360/Kayzen/tree/master/app/modules/elements/alert-bars</a></small></p>
+				<p class="alert-bar-info"><strong>Github Page</strong> (customers only):  <a href="https://github.com/esr360/Kayzen/tree/master/app/modules/elements/alert-bars" target="blank">https://github.com/esr360/Kayzen/tree/master/app/modules/elements/alert-bars</a></p>
 				
 				<h2 class="heading-light-size-5">Module Overview</h2>
                 
