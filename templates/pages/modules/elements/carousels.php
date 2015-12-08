@@ -51,7 +51,7 @@
                     <ul class="list-reset">
                         <li><b>Name:</b> <code>carousel</code></li>
                         <li><b>Components:</b> null</li>
-                        <li><b>Modifiers:</b> <code>scale[1, 2, 3]</code>, <code>stageBg</code>, <code>cornerDots</code>,  <code>revealNav</code>, <code>thumbnails</code></li>
+                        <li><b>Modifiers:</b> <code>scale[1, 2, 3]</code>, <code>stageBg</code>, <code>cornerDots</code>,  <code>revealNav</code></li>
                     </ul>
                 </div>
                 
@@ -300,71 +300,12 @@
 </pre>
 
                 <p>This is useful for visually seperating the carousel from other content when the carousel has less slides than it's suited for, as in the above example. Use the <code>stageBg</code> modifier on the <code>carousel</code> module: <code>carousel-stageBg</code>.</p>
-
-                <h3 class="heading-size-3">Thumbnail Carousel</h3>
-                
-                <div class="object">
-                    
-                    <div id="demo-carousel-6" class="carousel-thumbnails owl-carousel text-center">
-                        <a class="well" href="#">
-                            <h3 class="carousel_content heading-uppercase">This is a well</h3>
-                        </a>
-                        <a class="well" href="#">
-                            <h3 class="carousel_content heading-uppercase">This is a well</h3>
-                        </a>
-                        <a class="well" href="#">
-                            <h3 class="carousel_content heading-uppercase">This is a well</h3>
-                        </a>
-                        <a class="well" href="#">
-                            <h3 class="carousel_content heading-uppercase">This is a well</h3>
-                        </a>
-                        <a class="well" href="#">
-                            <h3 class="carousel_content heading-uppercase">This is a well</h3>
-                        </a>
-                        <a class="well" href="#">
-                            <h3 class="carousel_content heading-uppercase">This is a well</h3>
-                        </a>
-                    </div>
-                    <script>
-                        $(document).ready(function() {
-                            $("#demo-carousel-6").owlCarousel({
-                                items : 4,
-                                margin : 30
-                            });
-                        });
-                    </script>
-                    
-                </div>
-                
-<pre data-enlighter-language="html" class="EnlighterJSRAW">
-
-&lt;div class="carousel-thumbnails owl-carousel" id="demo-carousel-6">
-    &lt;a class="well" href="#">
-        &lt;h3 class="carousel_content heading-uppercase">This is a well&lt;/h3>
-    &lt;/a>
-    &lt;a class="well" href="#">
-        &lt;h3 class="carousel_content heading-uppercase">This is a well&lt;/h3>
-    &lt;/a>
-    &lt;a class="well" href="#">
-        &lt;h3 class="carousel_content heading-uppercase">This is a well&lt;/h3>
-    &lt;/a>
-    ...
-&lt;/div>
-
-&lt;script>
-    $("#demo-carousel-6").owlCarousel({
-        items : 4,
-        margin : 30
-    });
-&lt;/script>
-
-</pre>
                 
                 <h3 class="heading-size-3">Scaled Centered Slide</h3>
                 
                 <div class="object hide-overflow">
                     
-                    <div class="carousel-scale-2 owl-carousel" id="demo-carousel-7">
+                    <div class="carousel-scale-2 owl-carousel" id="demo-carousel-6">
                         <img src="<?php echo appDir ?>/images/wallpapers/bg-4.jpg" />
                         <img src="<?php echo appDir ?>/images/wallpapers/bg-5.jpg" />
                         <img src="<?php echo appDir ?>/images/wallpapers/bg-6.jpg" />
@@ -374,7 +315,7 @@
                     <script>
                         $(document).ready(function() {
                             
-                            var $scaleCarousel = $("#demo-carousel-7");
+                            var $scaleCarousel = $("#demo-carousel-6");
                             
                             $scaleCarousel.owlCarousel({
                                 center: true,
@@ -393,7 +334,7 @@
 
 <pre data-enlighter-language="html" class="EnlighterJSRAW">
 
-&lt;div class="carousel-scale-2 owl-carousel" id="demo-carousel-7">
+&lt;div class="carousel-scale-2 owl-carousel" id="demo-carousel-6">
     &lt;img src="/images/wallpapers/bg-4.jpg" />
     &lt;img src="/images/wallpapers/bg-5.jpg" />
     &lt;img src="/images/wallpapers/bg-6.jpg" />
@@ -411,7 +352,7 @@
 
 $(document).ready(function() {
 
-    var $scaleCarousel = $("#demo-carousel-7");
+    var $scaleCarousel = $("#demo-carousel-6");
     
     $scaleCarousel.owlCarousel({
         center: true,

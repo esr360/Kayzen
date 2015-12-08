@@ -5698,25 +5698,6 @@ button::-moz-focus-inner {
 [class*="carousel-"][class*="-revealNav"][class*="-cornerDots"] .owl-prev, [class*="carousel-"][class*="-revealNav"][class*="-cornerDots"] .owl-next {
   top: 50%;
 }
-[class*="carousel-"][class*="-thumbnails"] .owl-item {
-  height: 100%;
-}
-[class*="carousel-"][class*="-thumbnails"] .well, [class*="carousel-"][class*="-thumbnails"] [class*="well-"] {
-  height: 76px;
-  display: block;
-  transition: background-color 0.4s;
-}
-[class*="carousel-"][class*="-thumbnails"] .well:hover, [class*="carousel-"][class*="-thumbnails"] [class*="well-"]:hover {
-  background: #9B58B5;
-  color: #ffffff;
-}
-[class*="carousel-"][class*="-thumbnails"] [class*="carousel_content"] {
-  position: relative;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-      -ms-transform: translateY(-50%);
-          transform: translateY(-50%);
-}
 
 .slide-nav .slide-prev,
 .slide-nav .slide-next {
@@ -7373,6 +7354,22 @@ progress::-moz-progress-bar {
   background: white;
   border-left: 1px solid rgba(0, 0, 0, 0.15);
   border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+}
+[class*="well-"][class*="-thumb"] {
+  height: 76px;
+  display: block;
+  transition: background-color 0.4s;
+}
+[class*="well-"][class*="-thumb"]:hover {
+  background: #9B58B5;
+  color: #ffffff;
+}
+[class*="well_content"] {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
 }
 
 .widget, [class*="widget-"] {

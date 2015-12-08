@@ -127,25 +127,6 @@
                 }
             }
         }
-	    
-		@include modifier(thumbnails) {
-			.owl-item {
-				height: 100%;
-			}
-			@include overwrite(well) {
-				height: 76px;
-				display: block;
-		        transition: background-color base(transition);
-				&:hover {
-					background: color(brand, primary);
-                    color: color(greyscale, white);
-				}
-			}
-            @include overwrite-component('content') {
-		        @include vertical-center;
-            }
-		}
-	
 	
 	} // component(carousel)
 

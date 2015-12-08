@@ -56,7 +56,24 @@
 	            border-bottom: 1px solid rgba(black, 0.15);
             }
         }
+        
+        @include modifier('thumb') {
+            height: 76px;
+            display: block;
+            transition: background-color base(transition);
+            &:hover {
+                background: color(brand, primary);
+                color: color(greyscale, white);
+            }
+        }
+        
+	// Components
+	//-------------------------------------------------------------
+    
+        @include component('content') {
+		    @include vertical-center;
+        }
 		
-	} // component
+	} // module
 		
 } // @mixin wells
