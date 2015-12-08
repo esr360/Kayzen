@@ -51,13 +51,13 @@
                     <ul class="list-reset">
                         <li><b>Name:</b> <code>carousel</code></li>
                         <li><b>Components:</b> null</li>
-                        <li><b>Modifiers:</b> <code>scale[1, 2, 3]</code>, <code>stage-bg</code>, <code>cornerDots</code>,  <code>revealNav</code>, <code>thumbnails</code></li>
+                        <li><b>Modifiers:</b> <code>scale[1, 2, 3]</code>, <code>stageBg</code>, <code>cornerDots</code>,  <code>revealNav</code>, <code>thumbnails</code></li>
                     </ul>
                 </div>
                 
 				<h2 class="heading-light-size-5">Examples</h2>
                 
-                <div class="section-primary-mini-flush">
+                <div class="object">
                     
                     <div class="carousel">
                         <img src="<?php echo appDir ?>/images/wallpapers/bg-4.jpg" />
@@ -79,9 +79,9 @@
 
                 <p>Adding the <code>carousel</code> class to a container of elements wil convert them into a carousel with the default Owl-Carousel options.</p>
 
-                <h3 class="heading-size-3">Manual Inint</h3>
+                <h3 class="heading-size-3">Manual Init</h3>
                 
-                <div class="section-primary-mini-flush">
+                <div class="object">
                     
                     <div class="owl-carousel" id="demo-carousel-1">
                         <img src="<?php echo appDir ?>/images/wallpapers/bg-4.jpg" />
@@ -117,56 +117,316 @@
 
                 <p>To create a manual instance of a carousel, perhaps so you can customize the options, call the <code>owlCarousel()</code> function on your element. It is recommended to use a custom ID to target your element. The script can either be placed inline as in the above example (making sure it is inside a document.ready function), or can be placed in an external scrpit.</p>
                 
-                <h3 class="heading-size-3">Scaled Centered Slide</h3>
+                <p class="alert-bar-help">It is a requirement of Owl-Carousel to have the class 'owl-carousel' on the element on which you are calling the owlCarousel() function.</p>
                 
-                <div class="section-primary-mini-flush hide-overflow">
+                <h3 class="heading-size-3">Carousel With Corner Dots</h3>
+                
+                <div class="object">
                     
-                    <!-- Shortcodes Graphics -->
-                    <div class="carousel-scale-2 owl-carousel" id="shortcodes-carousel">
+                    <div class="carousel-cornerDots owl-carousel span-5" id="demo-carousel-2">
                         <img src="<?php echo appDir ?>/images/wallpapers/bg-4.jpg" />
                         <img src="<?php echo appDir ?>/images/wallpapers/bg-5.jpg" />
                         <img src="<?php echo appDir ?>/images/wallpapers/bg-6.jpg" />
                         <img src="<?php echo appDir ?>/images/wallpapers/bg-7.jpg" />
                     </div>
             
-                    <!-- Shortcodes Carousel -->
                     <script>
                         $(document).ready(function() {
-                            
-                            var shortcodesCarousel = $("#shortcodes-carousel");
-                            
-                            shortcodesCarousel.owlCarousel({
-                                items: 3,
-                                center: true,
-                                loop: true
-                            })
-                            .on('click', '.owl-item', function(e) {
-                                var carousel = shortcodesCarousel.data('owl.carousel');
-                                e.preventDefault();
-                                carousel.to(carousel.relative($(this).index()));
+                            $("#demo-carousel-2").owlCarousel({
+                                items: 1
                             });
-                            
-                        }); // document.ready
+                        });
+                    </script>
+                    
+                </div>
+
+<pre data-enlighter-language="html" class="EnlighterJSRAW">
+
+&lt;div class="carousel-cornerDots owl-carousel" id="demo-carousel-2">
+    &lt;img src="/images/wallpapers/bg-4.jpg" />
+    &lt;img src="/images/wallpapers/bg-5.jpg" />
+    &lt;img src="/images/wallpapers/bg-6.jpg" />
+    &lt;img src="/images/wallpapers/bg-7.jpg" />
+&lt;/div>
+
+&lt;script>
+    $(document).ready(function() {
+        $("#demo-carousel-2").owlCarousel({
+            items : 1
+        });
+    });
+&lt;/script>
+
+</pre>
+
+                <p>Manually create a carousel as shown previously, except this time your element needs to use the <code>carousel</code> module with the <code>cornerDots</code> modifier: <code>carousel-cornerDots</code></p>
+                
+                <h3 class="heading-size-3">Carousel With Revealing Next/Prev Arrows <small class="heading-light">(Hint: hover the carousel)</small></h3>
+                
+                <div class="object">
+                    
+                    <div class="carousel-revealNav owl-carousel span-5" id="demo-carousel-3">
+                        <img src="<?php echo appDir ?>/images/wallpapers/bg-4.jpg" />
+                        <img src="<?php echo appDir ?>/images/wallpapers/bg-5.jpg" />
+                        <img src="<?php echo appDir ?>/images/wallpapers/bg-6.jpg" />
+                        <img src="<?php echo appDir ?>/images/wallpapers/bg-7.jpg" />
+                    </div>
+            
+                    <script>
+                        $(document).ready(function() {
+                            $("#demo-carousel-3").owlCarousel({
+                                items : 1,
+                                nav : true,
+                                navText : [
+                                    '<i class="fa fa-angle-left fa-3x"></i>',
+                                    '<i class="fa fa-angle-right fa-3x"></i>'
+                                ]
+                            });
+                        });
+                    </script>
+                    
+                </div>
+
+<pre data-enlighter-language="html" class="EnlighterJSRAW">
+
+&lt;div class="carousel-revealNav owl-carousel" id="demo-carousel-3">
+    &lt;img src="/images/wallpapers/bg-4.jpg" />
+    &lt;img src="/images/wallpapers/bg-5.jpg" />
+    &lt;img src="/images/wallpapers/bg-6.jpg" />
+    &lt;img src="/images/wallpapers/bg-7.jpg" />
+&lt;/div>
+
+&lt;script>
+    $(document).ready(function() {
+        $("#demo-carousel-3").owlCarousel({
+            items : 1,
+            nav : true,
+            navText : [
+                '&lt;i class="fa fa-angle-left fa-3x">&lt;/i>',
+                '&lt;i class="fa fa-angle-right fa-3x">&lt;/i>'
+            ],
+        });
+    });
+&lt;/script>
+
+</pre>
+
+                <p>Where possilbe, Kayzen makes use of native plugin features to minimize the load of local resources. The above jQuery code is straight from the <a href="http://www.owlcarousel.owlgraphic.com/docs/api-options.html" target="blank">Owl-Carousel documentation</a>, using <a href="#">FontAwesome</a> icons for the previous and next arrows.</p>
+                
+                <h3 class="heading-size-3">Carousel With Corner Dots & Revealing Next/Prev Arrows</h3>
+                
+                <div class="object">
+                    
+                    <div class="carousel-cornerDots-revealNav owl-carousel span-5" id="demo-carousel-4">
+                        <img src="<?php echo appDir ?>/images/wallpapers/bg-4.jpg" />
+                        <img src="<?php echo appDir ?>/images/wallpapers/bg-5.jpg" />
+                        <img src="<?php echo appDir ?>/images/wallpapers/bg-6.jpg" />
+                        <img src="<?php echo appDir ?>/images/wallpapers/bg-7.jpg" />
+                    </div>
+            
+                    <script>
+                        $(document).ready(function() {
+                            $("#demo-carousel-4").owlCarousel({
+                                items : 1,
+                                nav : true,
+                                navText : [
+                                    '<i class="fa fa-angle-left fa-3x"></i>',
+                                    '<i class="fa fa-angle-right fa-3x"></i>'
+                                ]
+                            });
+                        });
+                    </script>
+                    
+                </div>
+
+<pre data-enlighter-language="html" class="EnlighterJSRAW">
+
+&lt;div class="carousel-cornerDots-revealNav owl-carousel" id="demo-carousel-4">
+    &lt;img src="/images/wallpapers/bg-4.jpg" />
+    &lt;img src="/images/wallpapers/bg-5.jpg" />
+    &lt;img src="/images/wallpapers/bg-6.jpg" />
+    &lt;img src="/images/wallpapers/bg-7.jpg" />
+&lt;/div>
+
+&lt;script>
+    $(document).ready(function() {
+        $("#demo-carousel-4").owlCarousel({
+            items : 1,
+            nav : true,
+            navText : [
+                '&lt;i class="fa fa-angle-left fa-3x">&lt;/i>',
+                '&lt;i class="fa fa-angle-right fa-3x">&lt;/i>'
+            ],
+        });
+    });
+&lt;/script>
+
+</pre>
+
+                <p>The same as the previous exaple except this time the <code>carousel</code> module has both the <code>cornerDots</code> and <code>revealNav</code> modifiers, resulting in the class <code>carousel-cornerDots-revealNav</code>.
+                
+                <h3 class="heading-size-3">Carousel With Colored Stage</h3>
+                
+                <div class="object">
+                    
+                    <div class="carousel-stageBg owl-carousel" id="demo-carousel-5">
+                        <img src="<?php echo appDir ?>/images/wallpapers/bg-4.jpg" />
+                        <img src="<?php echo appDir ?>/images/wallpapers/bg-5.jpg" />
+                    </div>
+            
+                    <script>
+                        $(document).ready(function() {
+                            $("#demo-carousel-5").owlCarousel();
+                        });
+                    </script>
+                    
+                </div>
+
+<pre data-enlighter-language="html" class="EnlighterJSRAW">
+
+&lt;div class="carousel-stageBg owl-carousel" id="demo-carousel-5">
+    &lt;img src="/images/wallpapers/bg-4.jpg" />
+    &lt;img src="/images/wallpapers/bg-5.jpg" />
+    &lt;img src="/images/wallpapers/bg-6.jpg" />
+    &lt;img src="/images/wallpapers/bg-7.jpg" />
+&lt;/div>
+
+&lt;script>
+    $(document).ready(function() {
+        $("#demo-carousel-5").owlCarousel();
+    });
+&lt;/script>
+
+</pre>
+
+                <p>This is useful for visually seperating the carousel from other content when the carousel has less slides than it's suited for, as in the above example. Use the <code>stageBg</code> modifier on the <code>carousel</code> module: <code>carousel-stageBg</code>.</p>
+
+                <h3 class="heading-size-3">Thumbnail Carousel</h3>
+                
+                <div class="object">
+                    
+                    <div id="demo-carousel-6" class="carousel-thumbnails owl-carousel text-center">
+                        <a class="well" href="#">
+                            <h3 class="carousel_content heading-uppercase">This is a well</h3>
+                        </a>
+                        <a class="well" href="#">
+                            <h3 class="carousel_content heading-uppercase">This is a well</h3>
+                        </a>
+                        <a class="well" href="#">
+                            <h3 class="carousel_content heading-uppercase">This is a well</h3>
+                        </a>
+                        <a class="well" href="#">
+                            <h3 class="carousel_content heading-uppercase">This is a well</h3>
+                        </a>
+                        <a class="well" href="#">
+                            <h3 class="carousel_content heading-uppercase">This is a well</h3>
+                        </a>
+                        <a class="well" href="#">
+                            <h3 class="carousel_content heading-uppercase">This is a well</h3>
+                        </a>
+                    </div>
+                    <script>
+                        $(document).ready(function() {
+                            $("#demo-carousel-6").owlCarousel({
+                                items : 4,
+                                margin : 30
+                            });
+                        });
                     </script>
                     
                 </div>
                 
-<pre data-enlighter-language="html" class="EnlighterJSRAW" style="display: none;">
-&lt;div class="accordion">
-    &lt;div>
-        &lt;div>Accordion Title&lt;/div>
-        &lt;div>...&lt;/div>
-    &lt;/div>
-    &lt;div>
-        &lt;div>Accordion Title&lt;/div>
-        &lt;div>...&lt;/div>
-    &lt;/div>
-    &lt;div>
-        &lt;div>Accordion Title&lt;/div>
-        &lt;div>...&lt;/div>
-    &lt;/div>
+<pre data-enlighter-language="html" class="EnlighterJSRAW">
+
+&lt;div class="carousel-thumbnails owl-carousel" id="demo-carousel-6">
+    &lt;a class="well" href="#">
+        &lt;h3 class="carousel_content heading-uppercase">This is a well&lt;/h3>
+    &lt;/a>
+    &lt;a class="well" href="#">
+        &lt;h3 class="carousel_content heading-uppercase">This is a well&lt;/h3>
+    &lt;/a>
+    &lt;a class="well" href="#">
+        &lt;h3 class="carousel_content heading-uppercase">This is a well&lt;/h3>
+    &lt;/a>
+    ...
 &lt;/div>
+
+&lt;script>
+    $("#demo-carousel-6").owlCarousel({
+        items : 4,
+        margin : 30
+    });
+&lt;/script>
+
 </pre>
+                
+                <h3 class="heading-size-3">Scaled Centered Slide</h3>
+                
+                <div class="object hide-overflow">
+                    
+                    <div class="carousel-scale-2 owl-carousel" id="demo-carousel-7">
+                        <img src="<?php echo appDir ?>/images/wallpapers/bg-4.jpg" />
+                        <img src="<?php echo appDir ?>/images/wallpapers/bg-5.jpg" />
+                        <img src="<?php echo appDir ?>/images/wallpapers/bg-6.jpg" />
+                        <img src="<?php echo appDir ?>/images/wallpapers/bg-7.jpg" />
+                    </div>
+                    
+                    <script>
+                        $(document).ready(function() {
+                            
+                            var $scaleCarousel = $("#demo-carousel-7");
+                            
+                            $scaleCarousel.owlCarousel({
+                                center: true,
+                                loop: true
+                            }).on('click', '.owl-item', function(e) {
+                                var carousel = $scaleCarousel.data('owl.carousel');
+                                e.preventDefault();
+                                carousel.to(carousel.relative($(this).index()));
+                            });
+                            
+                        });
+                    </script>
+                    
+                </div>
+                
+
+<pre data-enlighter-language="html" class="EnlighterJSRAW">
+
+&lt;div class="carousel-scale-2 owl-carousel" id="demo-carousel-7">
+    &lt;img src="/images/wallpapers/bg-4.jpg" />
+    &lt;img src="/images/wallpapers/bg-5.jpg" />
+    &lt;img src="/images/wallpapers/bg-6.jpg" />
+    &lt;img src="/images/wallpapers/bg-7.jpg" />
+&lt;/div>
+    
+&lt;script>
+    ...
+&lt;/script>
+</pre>
+
+                <p>The jQuery for this carousel is slightly more compilcated than the previous examples, but it's still nothing you can't simply copy/paste:</p>
+
+<pre data-enlighter-language="javascript" class="EnlighterJSRAW">
+
+$(document).ready(function() {
+
+    var $scaleCarousel = $("#demo-carousel-7");
+    
+    $scaleCarousel.owlCarousel({
+        center: true,
+        loop: true
+    }).on('click', '.owl-item', function(e) {
+        var carousel = $scaleCarousel.data('owl.carousel');
+        e.preventDefault();
+        carousel.to(carousel.relative($(this).index()));
+    });
+
+});
+
+</pre>
+
+            <p>To create a carousel with a scaled centered slide, the <code>scale-X</code> modifier is used, where <code>X</code> is an integer between 1 and 3, with each one offering a different size (with 1 being the smallest): <code>carousel-scale-2</code></p>
                 
 			</div><!-- container-small -->
 			

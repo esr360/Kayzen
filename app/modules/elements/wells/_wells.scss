@@ -25,8 +25,8 @@
 	    border: 1px solid rgba(black, 0.15);
 	    border-radius: 0.4em;
 	    padding: 1em;
+        color: typography('colors', 'base');
 	    position: relative;
-		transition: base(transition);
 		
 	// Modifiers
 	//-------------------------------------------------------------

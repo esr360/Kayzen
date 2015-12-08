@@ -333,13 +333,6 @@
         
         @include modifiers(('article', 'card')) {
             overflow: hidden;
-            .owl-dot {
-                &.active {
-                    span {
-                        background-color: color(greyscale, white);
-                    }
-                }
-            }
             iframe {
                 display: block;
             }

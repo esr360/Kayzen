@@ -32,7 +32,7 @@
         </header>
         
         <!-- Showcase Thumbnails -->
-        <section class="carousel-scale-3-greyscale-stage-bg owl-carousel" id="showcase-thumbnails">
+        <section class="carousel-scale-3-greyscale-stageBg owl-carousel" id="showcase-thumbnails">
             <div class="showcase-thumbnail">
                 <img src="<?php echo appDir ?>/images/wallpapers/bg-1.jpg">
             </div>

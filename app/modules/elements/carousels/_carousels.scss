@@ -71,7 +71,7 @@
 	        } 
 	    }
 		
-		@include modifier(stage-bg) {
+		@include modifier(stageBg) {
 			.owl-stage-outer {
 				background: color(greyscale, grey-3);
 			}
@@ -79,15 +79,26 @@
         
         @include modifier('cornerDots') {
             .owl-dots {
+                position: absolute;
                 top: 0;
                 left: auto;
                 right: 1.25em;
             }
+            .owl-dot {
+                &.active {
+                    span {
+                        background-color: color(greyscale, white);
+                    }
+                }
+            }
         }
         
         @include modifier('revealNav') {
+            overflow: hidden;
             .owl-prev, .owl-next {
-                @include vertical-center(absolute);
+                position: absolute;
+                top: calc(50% - 1em - 0.4em);
+                transform: translateY(-50%);
                 padding: 0 1em;
                 color: color(greyscale, white);
                 text-shadow: 0px 0px 1px rgba(black, 0.4);
@@ -110,6 +121,11 @@
                     right: 0.25em;
                 }
             }
+            @include nested-modifier('cornerDots') {
+                .owl-prev, .owl-next {
+                    top: 50%;
+                }
+            }
         }
 	    
 		@include modifier(thumbnails) {
@@ -119,13 +135,15 @@
 			@include overwrite(well) {
 				height: 76px;
 				display: block;
-				> img {
-					@include vertical-center;
-				}
+		        transition: background-color base(transition);
 				&:hover {
 					background: color(brand, primary);
+                    color: color(greyscale, white);
 				}
 			}
+            @include overwrite-component('content') {
+		        @include vertical-center;
+            }
 		}
 	
 	
@@ -198,9 +216,6 @@
     }
             
 	.owl-dots {
-		position: absolute;
-		left: 0;
-		right: 0;
 		text-align: center;
 		margin-top: 1em;
 		.force-dots & {
