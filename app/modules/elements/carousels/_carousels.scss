@@ -9,7 +9,12 @@
 	//-------------------------------------------------------------
 
 	$carousels: config((
-		name            : carousel
+		name            : carousel,
+        scale-1-size    : 1.1,
+        scale-2-size    : 1.25,
+        scale-3-size    : 1.4,
+        stage-bg-color  : color(greyscale, grey-3)
+        
 	), $custom);
 
 	//-------------------------------------------------------------
@@ -45,16 +50,6 @@
 	            .center {
 	                transform: scale(1.4);
 	            }            
-	        }
-	        &:before {
-	            content: "\f021";
-	            position: absolute;
-	            top: 30%;
-	            font-family: FontAwesome;
-	            font-size: font-size(size-7);
-	            color: color(greyscale, grey-2);
-	            //animation: spin 1s linear infinite;
-	            @extend %horizontal-center;
 	        }
 			.owl-stage-outer {
 				overflow: visible;

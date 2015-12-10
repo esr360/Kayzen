@@ -10,11 +10,18 @@
 
 	$corner-ribbons: config((
 		'name'        : 'corner-ribbon',
+        'text-color'  : white,
 		'sizes'       : (
 			'default' : 1em,
 			'small'   : 0.7em,
-			'large'   : 1em
-		)
+			'large'   : 1.2em
+		),
+        'colors'      : (
+            'green'   : #5bbe61,
+            'pink'    : #da4771,
+            'purple'  : #9B58B5,
+            'blue'    : #33b6ea
+        )
 	), $custom);
 
 	//-------------------------------------------------------------

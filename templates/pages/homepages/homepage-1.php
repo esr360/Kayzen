@@ -74,10 +74,6 @@
             appFooter();
             
         ?>
-        
-        <script>
-            
-            $('.earth').KayzenEarthSlider();
 
     </div><!-- Site Canvas -->
 

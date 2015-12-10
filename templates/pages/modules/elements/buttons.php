@@ -51,6 +51,8 @@
                         <li><b>Components:</b> <code>group</code></li>
                         <li>
                             <b>Modifiers:</b> 
+                            <code>[colors]</code>, 
+                            <code>[sizes]</code>, 
                             <code>block</code>, 
                             <code>border</code>, 
                             <code>pill</code>, 
@@ -362,16 +364,16 @@
 ));
 </pre>	
 
-            <div class="well object">
-                <style>
-                    #button-demo {
-                        font-weight: bold;
-                        border-width: 3px;
-                        border-radius: 0.6em;
-                    }
-                </style>
-                <a  id="button-demo" class="button-border-secondary" href="#">Button</a>
-            </div>
+                <div class="well object">
+                    <style>
+                        #button-demo {
+                            font-weight: bold;
+                            border-width: 3px;
+                            border-radius: 0.6em;
+                        }
+                    </style>
+                    <a  id="button-demo" class="button-border-secondary" href="#">Button</a>
+                </div>
      
 <pre data-enlighter-language="html" class="EnlighterJSRAW" style="display: none;">
 &lt;a class="button-border-secondary">Button&lt;/a>

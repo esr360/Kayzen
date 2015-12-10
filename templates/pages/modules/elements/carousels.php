@@ -263,7 +263,7 @@
 
 </pre>
 
-                <p>The same as the previous exaple except this time the <code>carousel</code> module has both the <code>cornerDots</code> and <code>revealNav</code> modifiers, resulting in the class <code>carousel-cornerDots-revealNav</code>.
+                <p>The same as the previous exaple except this time the <code>carousel</code> module has both the <code>cornerDots</code> and <code>revealNav</code> modifiers, resulting in the class <code>carousel-cornerDots-revealNav</code>. You can easily change the HTML for the next/previous arrows by editing the <code>navText</code> option in the above code.</p>
                 
                 <h3 class="heading-size-3">Carousel With Colored Stage</h3>
                 
@@ -346,6 +346,8 @@
 &lt;/script>
 </pre>
 
+                <p>To create a carousel with a scaled centered slide, the <code>scale-X</code> modifier is used, where <code>X</code> is an integer between 1 and 3, with each one offering a different size (with 1 being the smallest): <code>carousel-scale-2</code></p>
+            
                 <p>The jQuery for this carousel is slightly more compilcated than the previous examples, but it's still nothing you can't simply copy/paste:</p>
 
 <pre data-enlighter-language="javascript" class="EnlighterJSRAW">
@@ -366,8 +368,54 @@ $(document).ready(function() {
 });
 
 </pre>
-
-            <p>To create a carousel with a scaled centered slide, the <code>scale-X</code> modifier is used, where <code>X</code> is an integer between 1 and 3, with each one offering a different size (with 1 being the smallest): <code>carousel-scale-2</code></p>
+            
+                <h2 class="heading-light-size-5">Customizing</h2>
+            
+                <p>The carousels can be styled using the following options:</p>
+            
+                <p class="alert-bar-help">Read the <a href="configuration.html">Configuration</a> page to learn more about a module's configuration.</p>
+                            
+                <table class="table-style-1-small">
+					<thead>
+						<tr>
+							<th>Property Name</th>
+							<th>Default Value</th>
+							<th>Description</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td><code>scale-1-size</code></td>
+							<td><code class="value">1.1</code></td>
+							<td>The scale of the centered item when using the <code>scale-1</code> modifer.</td>
+						</tr>
+						<tr>
+							<td><code>scale-2-size</code></td>
+							<td><code class="value">1.25</code></td>
+							<td>The scale of the centered item when using the <code>scale-2</code> modifer.</td>
+						</tr>
+						<tr>
+							<td><code>scale-3-size</code></td>
+							<td><code class="value">1.4</code></td>
+							<td>The scale of the centered item when using the <code>scale-3</code> modifer.</td>
+						</tr>
+						<tr>
+							<td><code>stage-bg-color</code></td>
+							<td><code class="value">color(greyscale, grey-3)</code></td>
+							<td>The background color of the carousel stage when using the <code>stageBg</code> modifier.</td>
+						</tr>
+                    </tbody>
+                </table>
+                
+                <p>To change one of the above values, pass your new value(s) to the <code>carousels()</code> mixin in <b>_Kayzen.scss</b> <small>(app/themes/Kayzen/_kayzen.scss)</small>.</p>
+         
+<pre data-enlighter-language="css" class="EnlighterJSRAW">
+@include carousels((
+    'scale-1-size' : 1.2,
+    'scale-2-size' : 1.4,
+    'scale-3-size' : 1.6
+));
+</pre>	
                 
 			</div><!-- container-small -->
 			

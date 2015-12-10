@@ -1,8 +1,8 @@
 <?php 
 	include ('../../../app.php');
 	// page config
-	$title = 'Accordions';
-	$tagLine = 'app/modules/elements/accordions';
+	$title = 'Corner Ribbons';
+	$tagLine = 'app/modules/elements/corner-ribbons';
 ?>
 
 <!DOCTYPE html>
@@ -37,41 +37,128 @@
 				<h2 class="heading-light-size-5">Files</h2>
 				
 				<ul class="list-tags">
-					<li class="plain"><span>_accordions.scss</span></li>
-					<li class="plain"><span>accordions.js</span></li>	
+					<li class="plain"><span>_corner-ribbons.scss</span></li>
 					<li class="plain"><span>README.md</span></li>	
 				</ul>
                 
-				<p class="alert-bar-info"><small><strong>Github Page</strong> (customers only):  <a href="https://github.com/esr360/Kayzen/tree/master/app/modules/elements/accordions" target="blank">https://github.com/esr360/Kayzen/tree/master/app/modules/elements/accordions</a></small></p>
+				<p class="alert-bar-info"><small><strong>Github Page</strong> (customers only):  <a href="https://github.com/esr360/Kayzen/tree/master/app/modules/elements/corner-ribbons" target="blank">https://github.com/esr360/Kayzen/tree/master/app/modules/elements/corner-ribbons</a></small></p>
 				
 				<h2 class="heading-light-size-5">Module Overview</h2>
                 
                 <div class="well">
                     <ul class="list-reset">
-                        <li><b>Name:</b> <code>accordion</code></li>
-                        <li><b>Components:</b> <code>section</code>, <code>title</code>, <code>content</code></li>
-                        <li><b>Modifiers:</b> <code>minimal</code></li>
+                        <li><b>Name:</b> <code>corner-ribbon</code></li>
+                        <li><b>Components:</b> null</li>
+                        <li><b>Modifiers:</b> <code>[colors]</code>, <code>[sizes]</code></li>
                     </ul>
                 </div>
                 
 				<h2 class="heading-light-size-5">Examples</h2>
                 
-<pre data-enlighter-language="html" class="EnlighterJSRAW" style="display: none;">
-&lt;div class="accordion">
-    &lt;div>
-        &lt;div>Accordion Title&lt;/div>
-        &lt;div>...&lt;/div>
-    &lt;/div>
-    &lt;div>
-        &lt;div>Accordion Title&lt;/div>
-        &lt;div>...&lt;/div>
-    &lt;/div>
-    &lt;div>
-        &lt;div>Accordion Title&lt;/div>
-        &lt;div>...&lt;/div>
-    &lt;/div>
-&lt;/div>
+                <div class="well object" style="height: 200px;">
+                    <div class="corner-ribbon" data-ribbon="Sale"></div>
+                </div>
+                
+<pre data-enlighter-language="html" class="EnlighterJSRAW">
+&lt;div class="corner-ribbon" data-ribbon="Sale">&lt;/div>
 </pre>
+
+                <h3 class="heading-size-3">Colors</h3>
+                
+                <p class="alert-bar-help">You can choose which colors to create a ribbon for in the module's <a href="#">configuration</a>.</p>
+                
+                <div class="well object" style="height: 200px;">
+                    <div class="corner-ribbon-green" data-ribbon="Green"></div>
+                </div>
+                <div class="well object" style="height: 200px;">
+                    <div class="corner-ribbon-pink" data-ribbon="Pink"></div>
+                </div>
+                <div class="well object" style="height: 200px;">
+                    <div class="corner-ribbon-purple" data-ribbon="Purple"></div>
+                </div>
+                <div class="well object" style="height: 200px;">
+                    <div class="corner-ribbon-blue" data-ribbon="Blue"></div>
+                </div>
+                
+<pre data-enlighter-language="html" class="EnlighterJSRAW">
+&lt;div class="corner-ribbon-pink" data-ribbon="Pink">&lt;/div>
+</pre>
+
+                <h3 class="heading-size-3">Sizes</h3>
+                
+                <p class="alert-bar-help">You can choose which sizes to create a ribbon for in the module's <a href="#">configuration</a>.</p>
+                
+                <div class="well object" style="height: 100px;">
+                    <div class="corner-ribbon-small" data-ribbon="Small"></div>
+                </div>
+                <div class="well object" style="height: 150px;">
+                    <div class="corner-ribbon" data-ribbon="Default"></div>
+                </div>
+                <div class="well object" style="height: 200px;">
+                    <div class="corner-ribbon-large" data-ribbon="Large"></div>
+                </div>
+                
+<pre data-enlighter-language="html" class="EnlighterJSRAW">
+&lt;div class="corner-ribbon-large" data-ribbon="Large">&lt;/div>
+</pre>
+
+                <h2 class="heading-light-size-5">Customizing</h2>
+                
+                <p>The corner-ribbons can be styled using the following options:</p>
+                
+                <p class="alert-bar-help">Read the <a href="configuration.html">Configuration</a> page to learn more about a module's configuration.</p>
+                
+                <table class="table-style-1-small">
+					<thead>
+						<tr>
+							<th>Property Name</th>
+							<th>Default Value</th>
+							<th>Description</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td><code>text-color</code></td>
+							<td><code class="value">white</code></td>
+							<td>The color of the corner-ribbon text.</td>
+						</tr>
+						<tr>
+							<td><code>colors</code></td>
+							<td><code class="value">[green, pink, purple, blue]</code></td>
+							<td>The different colors that should be created.</td>
+						</tr>
+						<tr>
+							<td><code>sizes</code></td>
+							<td><code class="value">[default, small, large]</code></td>
+							<td>The different sizes that should be created.</td>
+						</tr>
+                    </tbody>
+                </table>
+                
+                <p>To change one of the above values, pass your new value(s) to the <code>corner-ribbons()</code> mixin in <b>_Kayzen.scss</b> <small>(app/themes/Kayzen/_kayzen.scss)</small>.</p>
+         
+<pre data-enlighter-language="css" class="EnlighterJSRAW">
+@include corner-ribbons((
+    'colors' : (
+        'orange' : #ff6600
+    ),
+    'sizes' (
+        'small' : 0.85em
+    )
+));
+</pre>	
+
+                <div class="well object" style="height: 100px;">
+                    <style>
+                        #corner-ribbon-demo {
+                            font-size: 0.85em;
+                        }
+                        #corner-ribbon-demo:before {
+                            background-color: #ff6600;
+                        }
+                    </style>
+                    <div id="corner-ribbon-demo" class="corner-ribbon-small" data-ribbon="Orange"></div>
+                </div>
                 
 			</div><!-- container-small -->
 			
