@@ -98,7 +98,7 @@
                 
                 <p>The colors for the alert bars are defined (and hence can be changed from) within the <a href="#">color-palette</a> module.</p>
                 
-                <p>The alert bars can be styled using the following options:</p>
+                <p>The alert bars can be customized using the following options:</p>
                 
                 <p class="alert-bar-help">Read the <a href="configuration.html">Configuration</a> page to learn more about a module's configuration.</p>
                 
@@ -139,7 +139,7 @@
                     </tbody>
                 </table>
                 
-                <p>To change one of the above values, pass your new value(s) to the <code>alert-bars()</code> mixin in <b>_Kayzen.scss</b> <small>(app/themes/Kayzen/_kayzen.scss)</small>.</p>
+				<p>To change one of the above values, pass your new value(s) to the <code>alert-bars()</code> mixin in your theme file (e.g. app/themes/Kayzen/_kayzen.scss).</p>
 
 <pre data-enlighter-language="css" class="EnlighterJSRAW">
 @include alert-bars((

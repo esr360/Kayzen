@@ -34,6 +34,7 @@
 		@include modifier(dark) {
 			background: rgba(black, 0.4);
 			border: none;
+            color: white;
 		}
         
         @include modifier('deep') {

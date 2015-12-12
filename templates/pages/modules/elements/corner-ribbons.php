@@ -55,7 +55,7 @@
                 
 				<h2 class="heading-light-size-5">Examples</h2>
                 
-                <div class="well object" style="height: 200px;">
+                <div class="well object" style="height: 150px;">
                     <div class="corner-ribbon" data-ribbon="Sale"></div>
                 </div>
                 
@@ -67,16 +67,16 @@
                 
                 <p class="alert-bar-help">You can choose which colors to create a ribbon for in the module's <a href="#">configuration</a>.</p>
                 
-                <div class="well object" style="height: 200px;">
+                <div class="well object" style="height: 150px;">
                     <div class="corner-ribbon-green" data-ribbon="Green"></div>
                 </div>
-                <div class="well object" style="height: 200px;">
+                <div class="well object" style="height: 150px;">
                     <div class="corner-ribbon-pink" data-ribbon="Pink"></div>
                 </div>
-                <div class="well object" style="height: 200px;">
+                <div class="well object" style="height: 150px;">
                     <div class="corner-ribbon-purple" data-ribbon="Purple"></div>
                 </div>
-                <div class="well object" style="height: 200px;">
+                <div class="well object" style="height: 150px;">
                     <div class="corner-ribbon-blue" data-ribbon="Blue"></div>
                 </div>
                 
@@ -94,7 +94,7 @@
                 <div class="well object" style="height: 150px;">
                     <div class="corner-ribbon" data-ribbon="Default"></div>
                 </div>
-                <div class="well object" style="height: 200px;">
+                <div class="well object" style="height: 175px;">
                     <div class="corner-ribbon-large" data-ribbon="Large"></div>
                 </div>
                 
@@ -104,7 +104,7 @@
 
                 <h2 class="heading-light-size-5">Customizing</h2>
                 
-                <p>The corner-ribbons can be styled using the following options:</p>
+                <p>The corner-ribbons can be customized using the following options:</p>
                 
                 <p class="alert-bar-help">Read the <a href="configuration.html">Configuration</a> page to learn more about a module's configuration.</p>
                 
@@ -135,7 +135,9 @@
                     </tbody>
                 </table>
                 
-                <p>To change one of the above values, pass your new value(s) to the <code>corner-ribbons()</code> mixin in <b>_Kayzen.scss</b> <small>(app/themes/Kayzen/_kayzen.scss)</small>.</p>
+				<p>To change one of the above values, pass your new value(s) to the <code>corner-ribbons()</code> mixin in your theme file (e.g. app/themes/Kayzen/_kayzen.scss).</p>
+                
+                <p class="alert-bar-info">The options are recursive, so you always have access to the default options which you don't overwrite. <a href="#">Learn more</a>.</p>
          
 <pre data-enlighter-language="css" class="EnlighterJSRAW">
 @include corner-ribbons((

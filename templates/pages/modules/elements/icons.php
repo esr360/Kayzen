@@ -1,8 +1,8 @@
 <?php 
 	include ('../../../app.php');
 	// page config
-	$title = 'Accordions';
-	$tagLine = 'app/modules/elements/accordions';
+	$title = 'Icons';
+	$tagLine = 'app/modules/elements/icon';
 ?>
 
 <!DOCTYPE html>

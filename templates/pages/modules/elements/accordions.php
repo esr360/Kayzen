@@ -227,7 +227,7 @@
 				
 				<h2 class="heading-light-size-5">Customizing</h2>
 				
-				<p>The accordion styles can be customized using the following options:</p>
+				<p>The accordion customized can be customized using the following options:</p>
 				
 				<p class="alert-bar-help">Read the <a href="configuration.html">Configuration</a> page to learn more about a module's configuration.</p>
 				
@@ -333,7 +333,7 @@
 					</tbody>
 				</table>
 				
-				<p>To change one of the above values, pass your new value(s) to the <code>accordions()</code> mixin in <b>_Kayzen.scss</b> <small>(app/themes/Kayzen/_kayzen.scss)</small>.</p>
+				<p>To change one of the above values, pass your new value(s) to the <code>accordions()</code> mixin in your theme file (e.g. app/themes/Kayzen/_kayzen.scss).</p>
 						
 <pre data-enlighter-language="css" class="EnlighterJSRAW">
 @include accordions((

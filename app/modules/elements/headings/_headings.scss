@@ -9,8 +9,16 @@
 	//-------------------------------------------------------------
 
 	$headings: config((
-		name            : heading,
-		output-JSON     : true
+		'name'                 : 'heading',
+		'output-JSON'          : true,
+        'highlight-color'      : color('brand', 'primary'),
+        'highlight-dark-color' : color(greyscale, grey-6),
+        'strikethrough-width'  : 75px,
+        'spaced-spacing'       : 0.35em,
+        'border'               : 1px dotted rgba(black, 0.2),
+        'group-dots-color'     : rgba(black, 0.4),
+        'group-dots-size'      : 24px,
+        'group-block-padding'  : 6em
 	), $custom);
 	
 	//-------------------------------------------------------------
@@ -102,11 +110,9 @@
 					transform: translateY(-50%) translateZ(0);
 				}
 				&:before {
-					left: -90px;
 					left: calc(-75px - 1rem);
 				}
 				&:after {
-					right: -90px;
 					right: calc(-75px - 1rem);
 				}
 			}
@@ -134,8 +140,8 @@
 			} 
 		}
 
-		@include modifier(dotted) {
-			border-bottom: 1px dotted rgba(0,0,0,0.2);
+		@include modifier(border) {
+			border-bottom: 1px dotted rgba(black, 0.2);
 			padding-bottom: 0.75rem;
 			a {
 				color: inherit;
@@ -176,10 +182,10 @@
 			background-size: cover;
 	
 			@include overwrite(heading) {
+				@include vertical-rhythm;
 				margin-top: 0.5em;
 				margin-bottom: 0.5em;
 				line-height: 0.8;
-				@include vertical-rhythm;
 			}
 	
 			p {
@@ -203,7 +209,7 @@
 				&:after {
 					content: "• • •";
 					position: absolute;
-					color: rgba(color(greyscale, black), 0.4);
+					color: rgba(black, 0.4);
 					font-size: 24px;
 					font-weight: 600;
 					bottom: -2.25em;

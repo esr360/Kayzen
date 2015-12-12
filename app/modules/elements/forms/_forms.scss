@@ -9,7 +9,17 @@
 	//-------------------------------------------------------------
 
 	$forms: config((
-		name            : form
+		'name'             : form,
+        'weight'           : lighter,
+        'input-color'      : base('text-color'),
+        'input-border'     : 1px solid color(greyscale, grey-3),
+        'inpur-padding'    : 0.65em,
+        'bg-color'         : rgba(black, 0.025),
+        'bg-focus-color'   : white,
+        'valid-color'      : color(validation, valid),
+        'invalid-color'    : color(validation, invalid),
+        'group-small-size' : font-size(size-2)
+        
 	), $custom);
 
 	//-------------------------------------------------------------
@@ -31,9 +41,10 @@
 	// Modifiers
 	//-------------------------------------------------------------
 	
-		@include modifier(faux-placeholders) {
+		@include modifier(fauxPlaceholders) {
 			@include overwrite-component(group) {
 				margin-bottom: base(margin);
+                @include vertical-rhythm(bottom);
 			}
 			@include overwrite-component(group) {
 				label {
@@ -98,6 +109,7 @@
 		@include component(group) {
 			position: relative;
 			margin-bottom: (base(margin) / 2);
+            @include vertical-rhythm(bottom);
 			[type="submit"] {
 				position: absolute;
 				right: 0;

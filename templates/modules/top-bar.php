@@ -23,7 +23,7 @@
             <div class="row-block">
                 <div class="span-5">
                     <h3 class="heading">Sign in to your account</h3>
-                    <form class="form-faux-placeholders-html5">
+                    <form class="form-fauxPlaceholders-html5">
                         <div class="form_group-compound-has-icon">
                             <input type="text" class="form_input" id="loginUsername" placeholder="Ex: SkyUX" required="">
                             <i class="form_icon fa fa-user"></i>
@@ -64,7 +64,7 @@
             <div class="row-block">
                 <div class="span-5">
                     <h3 class="heading">Create your free account</h3>
-                    <form class="form-faux-placeholders-html5">
+                    <form class="form-fauxPlaceholders-html5">
                         <div class="form_group-compound-has-icon">
                             <input type="text" class="form_input" id="registerUsername" placeholder="Ex: SkyUX" required="">
                             <i class="form_icon fa fa-user"></i>
