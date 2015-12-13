@@ -516,9 +516,9 @@
 						</div>
 						<div class="span-4">
 							<ul class="list-arrow">	
-								<li><a href="/<?php echo $pageTree.'modules/elements/icons.php' ?>">Icons</a></li>
 								<li><a href="/<?php echo $pageTree.'modules/elements/images.php' ?>">Images</a></li>
-								<li><a href="/<?php echo $pageTree.'modules/elements/lists.php' ?>">lists</a></li>			
+								<li><a href="/<?php echo $pageTree.'modules/elements/lists.php' ?>">lists</a></li>		
+								<li><a href="/<?php echo $pageTree.'modules/elements/price-charts.php' ?>">Price Charts</a></li>			
 							</ul>
 						</div>
 					</div>

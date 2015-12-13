@@ -60,7 +60,8 @@
                             <code>round</code>, 
                             <code>oval</code>, 
                             <code>fat</code>, 
-                            <code>thin</code>
+                            <code>thin</code>,
+                            <code>icon</code>
                         </li>
                     </ul>
                 </div>
@@ -161,6 +162,14 @@
 &lt;a class="button-thin">Button&lt;/a>
 </pre>
                
+                <h3 class="heading-size-3">Icon Buttons</h3>
+                
+                <div class="well object">
+                    <a class="button-icon" href="#">
+                        <i class="fa fa-apple"></i>
+                    </a>
+                </div>
+                
                 <h3 class="heading-size-3">Colors</h3>
                 
                 <p>The colors for the buttons are generated from the <a href="#">color-palette</a> module. Below shows the default colors for these palettes; if you modify the colors in the color-palette module, either by adding, removing or modifying existing values, these will be reflected in your buttons.</p>

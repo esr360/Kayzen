@@ -75,15 +75,6 @@
 	
 	<a class="widget-block-panel-small span-2 break-3-third break-1-half" href="#">
 		<div class="widget_icon icon-plain-size-9">
-			<i class="fa fa-flag"></i>
-		</div>
-		<header class="widget_header heading_group">
-			<h3 class="heading-light-uppercase-brand-1">Icons</h3>
-		</header>
-	</a>
-	
-	<a class="widget-block-panel-small span-2 break-3-third break-1-half" href="#">
-		<div class="widget_icon icon-plain-size-9">
 			<i class="fa fa-picture-o"></i>
 		</div>
 		<header class="widget_header heading_group">

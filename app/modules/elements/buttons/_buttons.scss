@@ -13,7 +13,7 @@
         'background'       : color(greyscale, grey-4),
         'color'            : color(greyscale, white),
         'side-padding'     : 1em,
-        'line-height'      : 2.4,
+        'line-height'      : 2.4em,
         'weight'           : lighter,
         'border-width'     : 1px,
         'pill-radius'      : 0.4em,
@@ -29,7 +29,7 @@
 	// Component
 	//-------------------------------------------------------------
 
-	@include module(button) {
+	@include module {
 
 	// Core Styles
 	//-------------------------------------------------------------
@@ -39,7 +39,7 @@
 		display: inline-block;
 		vertical-align: middle;
 		padding: 0 1em;
-		line-height: 2.4;
+		line-height: 2.4em;
 		font-weight: lighter;
 		transition: base(transition);
 	    border: 1px solid;
@@ -65,7 +65,7 @@
 	// Patterns
 	//-------------------------------------------------------------
 
-		@include modifier(block) {
+		@include modifier('block') {
 			width: 100%;
 			text-align: center;
 			@include overwrite($special: adjacent-sibling) {
@@ -73,7 +73,7 @@
 			}
 		} 
 	
-		@include modifier(border) {
+		@include modifier('border') {
 			background: none;
 			color: base(text-color);
 			border-color: base(text-color);
@@ -84,7 +84,7 @@
 			}
 		}
 		
-		@include modifier(pill) {
+		@include modifier('pill') {
 			&:first-child {
 				border-radius: 0.4em 0 0 0.4em;
 			}
@@ -93,26 +93,32 @@
 			}
 		}
 	
-		@include modifier(disabled) {
+		@include modifier('disabled') {
 			opacity: 0.6;
 			cursor: not-allowed;
 			transition-delay: 999s;
 		}
 	
-		@include modifier(round) {
+		@include modifier('round') {
 			border-radius: 0.4em;
 		}
 	
-		@include modifier(oval) {
+		@include modifier('oval') {
 			border-radius: 1.5em;
 		}
 		
-		@include modifier(fat) {
+		@include modifier('fat') {
 			line-height: 2.8;
 		}
 		
-		@include modifier(thin) {
+		@include modifier('thin') {
 			line-height: 2;
+		}
+		
+		@include modifier('icon') {
+			padding: 0;
+            width: option($buttons, 'line-height');
+            text-align: center;
 		}
 		
 	// Colors
