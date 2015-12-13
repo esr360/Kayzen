@@ -28,6 +28,7 @@
 		display: inline-block;
 		vertical-align: middle;
 		text-align: center;
+        cursor: pointer;
 		transition: 0.4s;
 		height: 2em;
 		width: 2em;
@@ -43,6 +44,7 @@
 			@include vertical-center(absolute);
 			@extend %horizontal-center;
 			font-size: 0.9em;
+            cursor: pointer;
 		}
 
 	// Sizes
@@ -60,7 +62,6 @@
 			color: color(greyscale, grey-3);
 			&:hover {
 				background: none;
-				color: color(greyscale, white);
 				border-color: transparent;
 			}
 		}
@@ -110,6 +111,9 @@
 		@each $greyscale, $color in palette(greyscale) {
 			@include modifier($greyscale) {
 				background: $color;
+				@if (lightness($color) > 50) {
+					color: color(greyscale, grey-5);
+				}
 				&:hover {
 					background: darken($color, 10%);
 				}

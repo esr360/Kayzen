@@ -5766,10 +5766,6 @@ button::-moz-focus-inner {
           transform: translateY(-50%);
 }
 
-.owl-nav .fa {
-  cursor: pointer;
-}
-
 .owl-prev, .owl-next {
   transition: 0.4s;
 }
@@ -6292,6 +6288,7 @@ button::-moz-focus-inner {
   display: inline-block;
   vertical-align: middle;
   text-align: center;
+  cursor: pointer;
   transition: 0.4s;
   height: 2em;
   width: 2em;
@@ -6310,6 +6307,7 @@ button::-moz-focus-inner {
       -ms-transform: translateY(-50%);
           transform: translateY(-50%);
   font-size: 0.9em;
+  cursor: pointer;
 }
 [class*="icon-"][class*="-base"] {
   font-size: 1em;
@@ -6349,7 +6347,6 @@ button::-moz-focus-inner {
 }
 [class*="icon-"][class*="-plain"]:hover {
   background: none;
-  color: #ffffff;
   border-color: transparent;
 }
 [class*="icon-"][class*="-border"] {
@@ -6415,6 +6412,7 @@ button::-moz-focus-inner {
 }
 [class*="icon-"][class*="-white"] {
   background: #ffffff;
+  color: #232627;
 }
 [class*="icon-"][class*="-white"]:hover {
   background: #e6e6e6;
@@ -6430,6 +6428,7 @@ button::-moz-focus-inner {
 }
 [class*="icon-"][class*="-grey-1"] {
   background: #f8f8f8;
+  color: #232627;
 }
 [class*="icon-"][class*="-grey-1"]:hover {
   background: #dfdfdf;
@@ -6445,6 +6444,7 @@ button::-moz-focus-inner {
 }
 [class*="icon-"][class*="-grey-2"] {
   background: #dee0e2;
+  color: #232627;
 }
 [class*="icon-"][class*="-grey-2"]:hover {
   background: #c3c7ca;
@@ -6460,6 +6460,7 @@ button::-moz-focus-inner {
 }
 [class*="icon-"][class*="-grey-3"] {
   background: #bfc1c3;
+  color: #232627;
 }
 [class*="icon-"][class*="-grey-3"]:hover {
   background: #a5a8aa;
@@ -6831,9 +6832,6 @@ img {
   right: 1em;
   transition: 0.4s;
   color: #bfc1c3;
-}
-[class*="modal_close"] .fa {
-  cursor: pointer;
 }
 [class*="modal_close"]:hover {
   color: #9B58B5;
@@ -8013,8 +8011,6 @@ progress::-moz-progress-bar {
   top: 0.85rem;
   right: 0.85rem;
   z-index: 14;
-}
-.flyout-trigger, .flyout-trigger .fa, [class*="flyout-trigger-"], [class*="flyout-trigger-"] .fa {
   cursor: pointer;
 }
 .flyout-trigger .fa, [class*="flyout-trigger-"] .fa {
@@ -8576,7 +8572,7 @@ progress::-moz-progress-bar {
       -ms-transform: translateY(0);
           transform: translateY(0);
 }
-[class*="search-box_go"], [class*="search-box_go"] .fa, [class*="search-box_close"], [class*="search-box_close"] .fa {
+[class*="search-box_go"], [class*="search-box_close"] {
   cursor: pointer;
 }
 [class*="search-box_go"]:focus, [class*="search-box_close"]:focus {
@@ -8777,7 +8773,7 @@ progress::-moz-progress-bar {
   display: none;
 }
 
-.tweet-prev, .tweet-prev .fa, .tweet-next, .tweet-next .fa {
+.tweet-prev, .tweet-next {
   cursor: pointer;
 }
 .tweet-prev:hover, .tweet-next:hover {

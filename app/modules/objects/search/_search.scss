@@ -50,9 +50,7 @@
 		}
 		
 		@include components((go, close)) {
-			&, .fa {
-				cursor: pointer;
-			}
+			cursor: pointer;
 			&:focus {
 				outline: 0;
 			}

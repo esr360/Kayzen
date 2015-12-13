@@ -27,10 +27,7 @@
 		top: 0.85rem;
 		right: 0.85rem;
 		z-index: 14;
-		
-		&, .fa {
-			cursor: pointer;
-		}
+	    cursor: pointer;
 		.fa {
 			transition: base(transition);
 			transform-origin: 50% 0;

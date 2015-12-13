@@ -96,9 +96,6 @@
 			right: 1em;
 			transition: base(transition);
 			color: color(greyscale, grey-3);
-			.fa {
-				cursor: pointer;
-			}
 			&:hover {
 				color: color(brand, primary);
 			}	

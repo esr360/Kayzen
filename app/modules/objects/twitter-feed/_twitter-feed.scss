@@ -134,9 +134,7 @@
 	}
 	
 	.tweet-prev, .tweet-next {
-		&, .fa {
-			cursor: pointer;
-		}
+		cursor: pointer;
 		&:hover {
 			background: color(brand, primary);
 		}
