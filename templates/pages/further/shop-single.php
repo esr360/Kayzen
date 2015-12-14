@@ -93,7 +93,7 @@
                             <!-- Facebook Shares Widget -->
                             <a href="#" class="widget-tub span bg-facebook">
                                 <div class="widget_lid">
-                                    <div class="widget_sticker icon-plain-size-7">
+                                    <div class="widget_sticker button-icon-plain-size-6">
                                         <i class="fa fa-facebook"></i>
                                     </div>
                                 </div>
@@ -109,7 +109,7 @@
                             <!-- Twitter Shares Widget -->
                             <a href="#" class="widget-tub span bg-twitter">
                                 <div class="widget_lid">
-                                    <div class="widget_sticker icon-plain-size-7">
+                                    <div class="widget_sticker button-icon-plain-size-6">
                                         <i class="fa fa-twitter"></i>
                                     </div>
                                 </div>
@@ -125,7 +125,7 @@
                             <!-- Google Plus Shares Widget -->
                             <a href="#" class="widget-tub span bg-google-plus">
                                 <div class="widget_lid">
-                                    <div class="widget_sticker icon-plain-size-7">
+                                    <div class="widget_sticker button-icon-plain-size-6">
                                         <i class="fa fa-google-plus"></i>
                                     </div>
                                 </div>
@@ -141,7 +141,7 @@
                             <!-- LinkedIn Shares Widget -->
                             <a href="#" class="widget-tub span bg-linkedin">
                                 <div class="widget_lid">
-                                    <div class="widget_sticker icon-plain-size-7">
+                                    <div class="widget_sticker button-icon-plain-size-6">
                                         <i class="fa fa-linkedin"></i>
                                     </div>
                                 </div>
@@ -157,7 +157,7 @@
                             <!-- StumbleUpon Shares Widget -->
                             <a href="#" class="widget-tub span bg-stumbleupon">
                                 <div class="widget_lid">
-                                    <div class="widget_sticker icon-plain-size-7">
+                                    <div class="widget_sticker button-icon-plain-size-6">
                                         <i class="fa fa-stumbleupon"></i>
                                     </div>
                                 </div>
@@ -173,7 +173,7 @@
                             <!-- Pinterest Shares Widget
                             <a href="#" class="widget-tub span bg-pinterest">
                                 <div class="widget_lid">
-                                    <div class="widget_sticker icon-plain-size-7">
+                                    <div class="widget_sticker button-icon-plain-size-6">
                                         <i class="fa fa-pinterest"></i>
                                     </div>
                                 </div>
@@ -189,7 +189,7 @@
                             <!-- Reddit Shares Widget
                             <a href="#" class="widget-tub span bg-reddit">
                                 <div class="widget_lid">
-                                    <div class="widget_sticker icon-plain-size-7">
+                                    <div class="widget_sticker button-icon-plain-size-6">
                                         <i class="fa fa-reddit"></i>
                                     </div>
                                 </div>

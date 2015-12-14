@@ -112,9 +112,9 @@
             @include vertical-rhythm(bottom);
 			[type="submit"] {
 				position: absolute;
+                line-height: 1;
 				right: 0;
 				height: 100%;
-				padding: 0 1em;
 				@include overwrite-component(input, $special: 'general-sibling') {
 					padding-right: 3em;
 				}

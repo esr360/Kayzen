@@ -55,6 +55,7 @@ https://github.com/esr360/K-Tooltips
 	//-------------------------------------------------------------
 	
 		cursor: pointer;	
+        position: relative;
 		
 	// Modifiers
 	//-------------------------------------------------------------
@@ -81,6 +82,7 @@ https://github.com/esr360/K-Tooltips
 			padding: tooltip(padding);
 			background: tooltip(background);
 			border-radius: tooltip(border-radius);
+            line-height: 1.75;
 			position: absolute;
 			display: inline-block;
 			

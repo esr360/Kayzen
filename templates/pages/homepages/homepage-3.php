@@ -41,8 +41,8 @@
 				</div>
 			</div>
 			<nav class="slide-nav">
-				<button class="slide-prev icon-border-size-4-white"><i class="fa fa-angle-left"></i></button>
-				<button class="slide-next icon-border-size-4-white"><i class="fa fa-angle-right"></i></button>
+				<button class="slide-prev button-icon-border-size-3-white"><i class="fa fa-angle-left"></i></button>
+				<button class="slide-next button-icon-border-size-3-white"><i class="fa fa-angle-right"></i></button>
 			</nav>
 			<a href="#s-welcome" class="scroll-wheel"></a>
 		</section>
@@ -84,21 +84,21 @@
 					<h3 class="heading-size-5">UI Elements</h3>
 					<div id="elements-carousel" class="owl-carousel">
 						<a href="#" class="widget">
-							<div class="icon-circle-border-white-size-8">
+							<div class="button-icon-circle-border-white-size-7">
 								<i class="fa fa-exclamation-triangle"></i>
 							</div>
 							<h3 class="heading-size-3">Alert Bars</h3>
 						</a>
 						<a href="#" class="widget">
-							<div class="icon-circle-border-white-size-8">
+							<div class="button-icon-circle-border-white-size-7">
 								<i class="fa fa-exclamation-triangle"></i>
 							</div>
 							<h3 class="heading-size-3">Alert Bars</h3>
 						</a>
 					</div>
 					<nav class="slide-nav">
-						<button class="slide-prev icon-border-circle-size-4"><i class="fa fa-angle-left"></i></button>
-						<button class="slide-next icon-border-circle-size-4"><i class="fa fa-angle-right"></i></button>
+						<button class="slide-prev button-icon-border-circle-size-3"><i class="fa fa-angle-left"></i></button>
+						<button class="slide-next button-icon-border-circle-size-3"><i class="fa fa-angle-right"></i></button>
 					</nav>
 				</div>
 				<script>
@@ -144,7 +144,7 @@
 					
 					<!-- Feature 1 -->
 					<div class="widget span">
-						<div class="widget_icon icon-plain-size-9">
+						<div class="widget_icon button-icon-plain-size-8">
 							<i class="fa fa-desktop"></i>
 						</div>
 						<header class="widget_header heading_group">
@@ -156,7 +156,7 @@
 					
 					<!-- Feature 2 -->
 					<div class="widget span">
-						<div class="widget_icon icon-plain-size-9">
+						<div class="widget_icon button-icon-plain-size-8">
 							<i class="fa fa-clipboard"></i>
 						</div>
 						<header class="widget_header heading_group">
@@ -168,7 +168,7 @@
 					
 					<!-- Feature 3 -->
 					<div class="widget span">
-						<div class="widget_icon icon-plain-size-9">
+						<div class="widget_icon button-icon-plain-size-8">
 							<i class="fa fa-photo"></i>
 						</div>
 						<header class="widget_header heading_group">
@@ -180,7 +180,7 @@
 					
 					<!-- Feature 4 -->
 					<div class="widget span">
-						<div class="widget_icon icon-plain-size-9">
+						<div class="widget_icon button-icon-plain-size-8">
 							<i class="fa fa-eyedropper"></i>
 						</div>
 						<header class="widget_header heading_group">

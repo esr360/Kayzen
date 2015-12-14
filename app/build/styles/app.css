@@ -5359,7 +5359,7 @@ q:before, q:after {
 [class*="button-"][class*="-round"] {
   border-radius: 0.4em;
 }
-[class*="button-"][class*="-oval"] {
+[class*="button-"][class*="-oval"], [class*="button-"][class*="-circle"] {
   border-radius: 1.5em;
 }
 [class*="button-"][class*="-fat"] {
@@ -5370,8 +5370,16 @@ q:before, q:after {
 }
 [class*="button-"][class*="-icon"] {
   padding: 0;
-  width: 2.4em;
+  width: 2.5em;
   text-align: center;
+}
+[class*="button-"][class*="-icon"] .fa {
+  width: 1em;
+}
+[class*="button-"][class*="-plain"] {
+  background: none;
+  line-height: 1.25em;
+  width: 1.5em;
 }
 [class*="button-"][class*="-primary"] {
   background: #9B58B5;
@@ -5954,9 +5962,9 @@ button::-moz-focus-inner {
 }
 [class*="form_group"] [type="submit"] {
   position: absolute;
+  line-height: 1;
   right: 0;
   height: 100%;
-  padding: 0 1em;
 }
 [class*="form_group"] [type="submit"] [class*="form_input"] {
   padding-right: 3em;
@@ -6957,6 +6965,7 @@ progress::-moz-progress-bar {
 
 .tooltip, [class*="tooltip-"] {
   cursor: pointer;
+  position: relative;
 }
 .inline-tooltip {
   display: inline-block;
@@ -6969,6 +6978,7 @@ progress::-moz-progress-bar {
   padding: 0.5em 0.6em;
   background: rgba(0, 0, 0, 0.75);
   border-radius: 0;
+  line-height: 1.75;
   position: absolute;
   display: inline-block;
   font-size: 0.83rem;

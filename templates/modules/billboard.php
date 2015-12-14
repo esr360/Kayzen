@@ -33,8 +33,8 @@
                 </p>
             </div>
             <nav class="slide-nav">
-                <button class="slide-prev icon-border-size-4-white"><i class="fa fa-angle-left"></i></button>
-                <button class="slide-next icon-border-size-4-white"><i class="fa fa-angle-right"></i></button>
+                <button class="slide-prev button-icon-border-size-3-white"><i class="fa fa-angle-left"></i></button>
+                <button class="slide-next button-icon-border-size-3-white"><i class="fa fa-angle-right"></i></button>
             </nav>
             <a href="#key-features" class="scroll-wheel"></a>
         </section>
@@ -57,7 +57,7 @@
                     <?php } if ($options['search']) { ?>
                         <form class="form">
                             <div class="form_group-small span-4">
-                                <button type="submit" class="icon-primary-size-4"><i class="fa fa-search"></i></button>
+                                <button type="submit" class="button-icon-primary-size-3"><i class="fa fa-search"></i></button>
                                 <input type="text" class="form_input-plain" id="footer-newsletter" placeholder="Search for a page" required="">
                             </div>
                         </form>

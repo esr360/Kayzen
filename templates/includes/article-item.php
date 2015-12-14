@@ -91,12 +91,12 @@
                     <div class="thumbnail_controls<?php if($options['matrix'] && $options['maskTitle']) echo '-corner' ?> icon_group-small">
                         <a 
                             href="<?php echo appDir ?>/images/wallpapers/bg-<?php echo $options['thumb'] ?>.jpg" 
-                            class="icon-border-circle-size-3"
+                            class="button-icon-border-circle"
                             rel="lightbox"
                         >
                             <i class="fa fa-search"></i>
                         </a>
-                        <a href="#" class="icon-border-circle-size-3">
+                        <a href="#" class="button-icon-border-circle">
                             <i class="fa fa-link"></i>
                         </a>
                     </div>

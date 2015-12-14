@@ -52,7 +52,7 @@
                         
                         <form class="form-faux-placeholders">
                             <div class="form_group-small">
-                                <button type="submit" class="icon-primary-size-4"><i class="fa fa-thumbs-o-up"></i></button>
+                                <button type="submit" class="button-icon-primary-size-3"><i class="fa fa-thumbs-o-up"></i></button>
                                 <input type="text" class="form_input-plain" id="footer-newsletter" placeholder="Ex: help@kayzen.com" required="">
                                 <label for="footer-newsletter">Email Address</label>
                             </div>
@@ -91,10 +91,10 @@
                                 View our latest tweets
                             </h5>
                             <div class="footer_tweets-nav icon_group-small">
-                                <div class="tweet-prev icon-circle-size-1">
+                                <div class="tweet-prev button-icon-circle-size-1">
                                     <i class="fa fa-angle-left"></i>
                                 </div>
-                                <div class="tweet-next icon-circle-size-1">
+                                <div class="tweet-next button-icon-circle-size-1">
                                     <i class="fa fa-angle-right"></i>
                                 </div>
                             </div>
@@ -114,10 +114,10 @@
                                 See what our clients say
                             </h5>
                             <div class="footer_testimonials-nav icon_group-small">
-                                <div class="tweet-prev icon-circle-size-1">
+                                <div class="tweet-prev button-icon-circle-size-1">
                                     <i class="fa fa-angle-left"></i>
                                 </div>
-                                <div class="tweet-next icon-circle-size-1">
+                                <div class="tweet-next button-icon-circle-size-1">
                                     <i class="fa fa-angle-right"></i>
                                 </div>
                             </div>

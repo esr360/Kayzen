@@ -46,7 +46,7 @@
 			<div class="row-block text-center">
 				
 				<div class="widget-block-panel-noHover span-3">
-					<div class="widget_icon icon-plain-size-9">
+					<div class="widget_icon button-icon-plain-size-8">
 						<i class="fa fa-desktop"></i>
 					</div>
 					<header class="widget_header heading_group">
@@ -57,7 +57,7 @@
 				</div>
 				
 				<div class="widget-block-panel-noHover span-3">
-					<div class="widget_icon icon-plain-size-9">
+					<div class="widget_icon button-icon-plain-size-8">
 						<i class="fa fa-clipboard"></i>
 					</div>
 					<header class="widget_header heading_group">

@@ -75,7 +75,7 @@
                </div>
                 
 <pre data-enlighter-language="html" class="EnlighterJSRAW" style="display: none;">
-&lt;a class="button">Button&lt;/a>
+&lt;a class="button" href="#">Button&lt;/a>
 </pre>
 
                 <h4 class="heading-size-2-uppercase">Button - Block</h4>
@@ -85,7 +85,7 @@
                </div>
                 
 <pre data-enlighter-language="html" class="EnlighterJSRAW" style="display: none;">
-&lt;a class="button-block">Button&lt;/a>
+&lt;a class="button-block" href="#">Button&lt;/a>
 </pre>
 
                 <h4 class="heading-size-2-uppercase">Button - Border</h4>
@@ -95,7 +95,7 @@
                </div>
                 
 <pre data-enlighter-language="html" class="EnlighterJSRAW" style="display: none;">
-&lt;a class="button-border">Button&lt;/a>
+&lt;a class="button-border" href="#">Button&lt;/a>
 </pre>
 
                 <h4 class="heading-size-2-uppercase">Button - Pill</h4>
@@ -107,9 +107,9 @@
                </div>
                 
 <pre data-enlighter-language="html" class="EnlighterJSRAW" style="display: none;">
-&lt;a class="button-pill">Button&lt;/a>
-&lt;a class="button-pill">Button&lt;/a>
-&lt;a class="button-pill">Button&lt;/a>
+&lt;a class="button-pill" href="#">Button&lt;/a>
+&lt;a class="button-pill" href="#">Button&lt;/a>
+&lt;a class="button-pill" href="#">Button&lt;/a>
 </pre>
 
                 <h4 class="heading-size-2-uppercase">Button - Disabled</h4>
@@ -119,7 +119,7 @@
                </div>
                 
 <pre data-enlighter-language="html" class="EnlighterJSRAW" style="display: none;">
-&lt;a class="button-disabled">Button&lt;/a>
+&lt;a class="button-disabled" href="#">Button&lt;/a>
 </pre>
 
                 <h4 class="heading-size-2-uppercase">Button - Round</h4>
@@ -129,7 +129,7 @@
                </div>
                 
 <pre data-enlighter-language="html" class="EnlighterJSRAW" style="display: none;">
-&lt;a class="button-round">Button&lt;/a>
+&lt;a class="button-round" href="#">Button&lt;/a>
 </pre>
 
                 <h4 class="heading-size-2-uppercase">Button - Oval</h4>
@@ -139,7 +139,7 @@
                </div>
                 
 <pre data-enlighter-language="html" class="EnlighterJSRAW" style="display: none;">
-&lt;a class="button-oval">Button&lt;/a>
+&lt;a class="button-oval" href="#">Button&lt;/a>
 </pre>
 
                 <h4 class="heading-size-2-uppercase">Button - Fat</h4>
@@ -148,8 +148,8 @@
                     <a class="button-fat" href="#">Button</a>
                </div>
                 
-<pre data-enlighter-language="html" class="EnlighterJSRAW" style="display: none;">
-&lt;a class="button-fat">Button&lt;/a>
+<pre data-enlighter-language="html" class="EnlighterJSRAW">
+&lt;a class="button-fat" href="#">Button&lt;/a>
 </pre>
 
                 <h4 class="heading-size-2-uppercase">Button - Thin</h4>
@@ -158,8 +158,8 @@
                     <a class="button-thin" href="#">Button</a>
                </div>
                 
-<pre data-enlighter-language="html" class="EnlighterJSRAW" style="display: none;">
-&lt;a class="button-thin">Button&lt;/a>
+<pre data-enlighter-language="html" class="EnlighterJSRAW">
+&lt;a class="button-thin" href="#">Button&lt;/a>
 </pre>
                
                 <h3 class="heading-size-3">Icon Buttons</h3>
@@ -169,6 +169,12 @@
                         <i class="fa fa-apple"></i>
                     </a>
                 </div>
+                
+<pre data-enlighter-language="html" class="EnlighterJSRAW">
+&lt;a class="button-icon" href="#">
+    &lt;i class="fa fa-apple">&lt;/i>
+&lt;/a>
+</pre>
                 
                 <h3 class="heading-size-3">Colors</h3>
                 
@@ -183,7 +189,7 @@
                 </div>
                                 
 <pre data-enlighter-language="html" class="EnlighterJSRAW" style="display: none;">
-&lt;a class="button-primary">Button&lt;/a>
+&lt;a class="button-primary" href="#">Button&lt;/a>
 </pre>
 
                 <h4 class="heading-size-2-uppercase">Palette - Greyscale</h4>
@@ -199,7 +205,7 @@
                 </div>
                                 
 <pre data-enlighter-language="html" class="EnlighterJSRAW" style="display: none;">
-&lt;a class="button-grey-3">Button&lt;/a>
+&lt;a class="button-grey-3" href="#">Button&lt;/a>
 </pre>
 
                 <h4 class="heading-size-2-uppercase">Palette - Alerts</h4>
@@ -212,7 +218,7 @@
                 </div>
                                 
 <pre data-enlighter-language="html" class="EnlighterJSRAW" style="display: none;">
-&lt;a class="button-error">Button&lt;/a>
+&lt;a class="button-error" href="#">Button&lt;/a>
 </pre>
 
                 <h4 class="heading-size-2-uppercase">Palette - Social</h4>
@@ -224,7 +230,7 @@
                 </div>
                                 
 <pre data-enlighter-language="html" class="EnlighterJSRAW" style="display: none;">
-&lt;a class="button-facebook">Button&lt;/a>
+&lt;a class="button-facebook" href="#">Button&lt;/a>
 </pre>
                
                 <h3 class="heading-size-3">Sizes</h3>
@@ -243,12 +249,12 @@
                 </div>
                                 
 <pre data-enlighter-language="html" class="EnlighterJSRAW" style="display: none;">
-&lt;a class="button-size-4">Button&lt;/a>
+&lt;a class="button-size-4" href="#">Button&lt;/a>
 </pre>
                 
                 <h3 class="heading-size-3">Mixing & Matching</h3>
                 
-                <p>You can of course mix and match any and all of the above combinations. This equates to <b>1,530</b> different button combinations.</p>
+                <p>You can of course mix and match any and all of the above combinations. This equates to  <b>1,500+</b> different button combinations.</p>
                 
                 <div class="well object">
                     <a class="button-block-border-size-3-secondary-oval" href="#">Button</a>
@@ -256,6 +262,24 @@
                                 
 <pre data-enlighter-language="html" class="EnlighterJSRAW" style="display: none;">
 &lt;a class="button-block-border-size-3-secondary-oval">Button&lt;/a>
+</pre>
+
+                <div class="well object">
+                    <a class="button-icon-size-2-twitter-oval" href="#">
+                        <i class="fa fa-twitter"></i>
+                    </a>
+                    <a class="button-icon-google-plus-round" href="#">
+                        <i class="fa fa-google-plus"></i>
+                    </a>
+                    <a class="button-icon-size-3-facebook" href="#">
+                        <i class="fa fa-facebook"></i>
+                    </a>
+                </div>
+                
+<pre data-enlighter-language="html" class="EnlighterJSRAW">
+&lt;a class="button-icon-size-2-twitter-oval" href="#">
+    &lt;i class="fa fa-twitter">&lt;/i>
+&lt;/a>
 </pre>
 
                 <h3 class="heading-size-3">Combining Styles</h3>

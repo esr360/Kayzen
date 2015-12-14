@@ -37,7 +37,7 @@
 					
 					<!-- Feature 1 -->
 					<a class="widget-block-borderTop-scale span" href="#getting-started">
-						<div class="widget_icon icon-plain-size-9">
+						<div class="widget_icon button-icon-plain-size-8">
 							<i class="fa fa-power-off"></i>
 						</div>
 						<header class="widget_header heading_group">
@@ -47,7 +47,7 @@
 					
 					<!-- Feature 2 -->
 					<a class="widget-block-borderTop-scale span" href="#configure">
-						<div class="widget_icon icon-plain-size-9">
+						<div class="widget_icon button-icon-plain-size-8">
 							<i class="fa fa-cog"></i>
 						</div>
 						<header class="widget_header heading_group">
@@ -57,7 +57,7 @@
 					
 					<!-- Feature 3 -->
 					<a class="widget-block-borderTop-scale span" href="#build">
-						<div class="widget_icon icon-plain-size-9">
+						<div class="widget_icon button-icon-plain-size-8">
 							<i class="fa fa-wrench"></i>
 						</div>
 						<header class="widget_header heading_group">
@@ -67,7 +67,7 @@
 					
 					<!-- Feature 4 -->
 					<a class="widget-block-borderTop-scale span" href="#deploy">
-						<div class="widget_icon icon-plain-size-9">
+						<div class="widget_icon button-icon-plain-size-8">
 							<i class="fa fa-rocket"></i>
 						</div>
 						<header class="widget_header heading_group">

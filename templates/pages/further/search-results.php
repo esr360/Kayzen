@@ -38,7 +38,7 @@
                     <h3 class="heading-size-4">Didn't find what you were looking for?</h3>
                     <form class="form text-center">
                         <div class="form_group span-6">
-                            <button type="submit" class="icon-primary-size-4"><i class="fa fa-search"></i></button>
+                            <button type="submit" class="button-icon-primary-size-3"><i class="fa fa-search"></i></button>
                             <input type="text" class="form_input" id="newSearch" placeholder="Search for a page" required>
                         </div>
                     </form>

@@ -64,22 +64,22 @@
                                 <li><b><i class="fa fa-fw fa-brand fa-envelope"></i> Email:</b> <a href="mailto:support@themeforest.net">support@themeforest.net</a></li>
                             </ul>
                             <div class="icon_group-small">
-                                <a href="#" class="icon-border tooltip-top" data-tooltip="Dribbble">
+                                <a href="#" class="button-icon-border-size-2 tooltip-top" data-tooltip="Dribbble">
                                     <i class="fa fa-dribbble"></i>
                                 </a>
-                                <a href="#" class="icon-border tooltip-top" data-tooltip="Facebook">
+                                <a href="#" class="button-icon-border-size-2 tooltip-top" data-tooltip="Facebook">
                                     <i class="fa fa-facebook"></i>
                                 </a>
-                                <a href="#" class="icon-border tooltip-top" data-tooltip="Twitter">
+                                <a href="#" class="button-icon-border-size-2 tooltip-top" data-tooltip="Twitter">
                                     <i class="fa fa-twitter"></i>
                                 </a>
-                                <a href="#" class="icon-border tooltip-top" data-tooltip="LinkedIn">
+                                <a href="#" class="button-icon-border-size-2 tooltip-top" data-tooltip="LinkedIn">
                                     <i class="fa fa-linkedin"></i>
                                 </a>
-                                <a href="#" class="icon-border tooltip-top" data-tooltip="DeviantArt">
+                                <a href="#" class="button-icon-border-size-2 tooltip-top" data-tooltip="DeviantArt">
                                     <i class="fa fa-deviantart"></i>
                                 </a>
-                                <a href="#" class="icon-border tooltip-top" data-tooltip="Behance">
+                                <a href="#" class="button-icon-border-size-2 tooltip-top" data-tooltip="Behance">
                                     <i class="fa fa-behance"></i>
                                 </a>
                             </div>

@@ -460,7 +460,7 @@
 					<div class="widget_group row-magic text-center">
 						
 						<a class="widget-block-small-borderTop span" href="/<?php echo $pageTree.'modules/elements/buttons.php' ?>">
-							<div class="widget_icon icon-plain-size-7">
+							<div class="widget_icon button-icon-plain-size-6">
 								<i class="fa fa-keyboard-o"></i>
 							</div>
 							<header class="widget_header heading_group">
@@ -469,7 +469,7 @@
 						</a>
 						
 						<a class="widget-block-small-borderTop span" href="/<?php echo $pageTree.'modules/elements/carousels.php' ?>">
-							<div class="widget_icon icon-plain-size-7">
+							<div class="widget_icon button-icon-plain-size-6">
 								<i class="fa fa-arrows-h""></i>
 							</div>
 							<header class="widget_header heading_group">
@@ -478,7 +478,7 @@
 						</a>
 						
 						<a class="widget-block-small-borderTop span" href="/<?php echo $pageTree.'modules/elements/modals.php' ?>">
-							<div class="widget_icon icon-plain-size-7">
+							<div class="widget_icon button-icon-plain-size-6">
 								<i class="fa fa-times-circle"></i>
 							</div>
 							<header class="widget_header heading_group">
@@ -487,7 +487,7 @@
 						</a>
 						
 						<a class="widget-block-small-borderTop span" href="/<?php echo $pageTree.'modules/elements/progress-bars.php' ?>">
-							<div class="widget_icon icon-plain-size-7">
+							<div class="widget_icon button-icon-plain-size-6">
 								<i class="fa fa-battery-3"></i>
 							</div>
 							<header class="widget_header heading_group">
@@ -532,7 +532,7 @@
 					<div class="widget_group row-flow text-center">
 						
 						<a class="widget-block-borderTop-highlight span-6 text-left" href="/<?php echo $pageTree.'modules/objects/header.php' ?>">
-							<div class="widget_icon-inline icon-plain-size-7">
+							<div class="widget_icon-inline button-icon-plain-size-6">
 								<i class="fa fa-file-o"></i>
 							</div>
 							<header class="widget_header-inline heading_group">
@@ -542,7 +542,7 @@
 						</a>
 						
 						<a class="widget-block-fill-small-borderTop span-3" href="/<?php echo $pageTree.'modules/objects/mega-menu.php' ?>">
-							<div class="widget_icon icon-plain-size-7">
+							<div class="widget_icon button-icon-plain-size-6">
 								<i class="fa fa-list-alt"></i>
 							</div>
 							<header class="widget_header heading_group">
@@ -551,7 +551,7 @@
 						</a>
 						
 						<a class="widget-block-fill-small-borderTop-greyscale span-3" href="/<?php echo $pageTree.'modules/objects/twitter-feed.php' ?>">
-							<div class="widget_icon icon-plain-size-7">
+							<div class="widget_icon button-icon-plain-size-6">
 								<i class="fa fa-twitter"></i>
 							</div>
 							<header class="widget_header heading_group">
@@ -564,7 +564,7 @@
 					<div class="widget_group row-flow text-center">
 						
 						<a class="widget-block-small-borderTop span-3" href="/<?php echo $pageTree.'modules/objects/footer.php' ?>">
-							<div class="widget_icon icon-plain-size-7">
+							<div class="widget_icon button-icon-plain-size-6">
 								<i class="fa fa-file-text"></i>
 							</div>
 							<header class="widget_header heading_group">
@@ -573,7 +573,7 @@
 						</a>
 						
 						<a class="widget-block-small-borderTop span-3" href="/<?php echo $pageTree.'modules/objects/billboard.php' ?>">
-							<div class="widget_icon icon-plain-size-7">
+							<div class="widget_icon button-icon-plain-size-6">
 								<i class="fa fa-tv"></i>
 							</div>
 							<header class="widget_header heading_group">

@@ -13,7 +13,7 @@
         'background'       : color(greyscale, grey-4),
         'color'            : color(greyscale, white),
         'side-padding'     : 1em,
-        'line-height'      : 2.4em,
+        'line-height'      : 2.4,
         'weight'           : lighter,
         'border-width'     : 1px,
         'pill-radius'      : 0.4em,
@@ -103,7 +103,7 @@
 			border-radius: 0.4em;
 		}
 	
-		@include modifier('oval') {
+		@include modifiers(('oval', 'circle')) {
 			border-radius: 1.5em;
 		}
 		
@@ -117,9 +117,18 @@
 		
 		@include modifier('icon') {
 			padding: 0;
-            width: option($buttons, 'line-height');
+            width: 2.5em;
             text-align: center;
+            .fa {
+                width: 1em;
+            }
 		}
+        
+        @include modifier('plain') {
+            background: none;
+            line-height: 1.25em;
+            width: 1.5em;
+        }
 		
 	// Colors
 	//-------------------------------------------------------------
