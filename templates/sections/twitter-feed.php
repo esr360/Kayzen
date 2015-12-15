@@ -23,10 +23,10 @@
         </a>
         <div class="container" id="twitter-feed">
             <div class="tweets-nav icon_group-small">
-                <div class="tweet-prev icon-border">
+                <div class="tweet-prev button-icon-border-size-2">
                     <i class="fa fa-angle-left"></i>
                 </div>
-                <div class="tweet-next icon-border">
+                <div class="tweet-next button-icon-border-size-2">
                     <i class="fa fa-angle-right"></i>
                 </div>
             </div>

@@ -38,7 +38,7 @@
 					
 					<!-- Feature 1 -->
 					<a class="widget-block-borderLeft span-4" href="#modular-ui">
-						<div class="widget_icon-inline icon-plain-size-7">
+						<div class="widget_icon-inline button-icon-plain-size-6">
 							<i class="fa fa-cubes"></i>
 						</div>
 						<header class="widget_header-inline heading_group">
@@ -49,7 +49,7 @@
 					
 					<!-- Feature 2 -->
 					<a class="widget-block-borderLeft span-4" href="#page-builder">
-						<div class="widget_icon-inline icon-plain-size-7">
+						<div class="widget_icon-inline button-icon-plain-size-6">
 							<i class="fa fa-arrows"></i>
 						</div>
 						<header class="widget_header-inline heading_group">
@@ -60,7 +60,7 @@
 					
 					<!-- Feature 3 -->
 					<a class="widget-block-borderLeft span-4" href="#unique-configuration">
-						<div class="widget_icon-inline icon-plain-size-7">
+						<div class="widget_icon-inline button-icon-plain-size-6">
 							<i class="fa fa-cog"></i>
 						</div>
 						<header class="widget_header-inline heading_group">
@@ -71,7 +71,7 @@
 					
 					<!-- Feature 4 -->
 					<a class="widget-block-borderLeft span-4" href="#custom-grid-system">
-						<div class="widget_icon-inline icon-plain-size-7">
+						<div class="widget_icon-inline button-icon-plain-size-6">
 							<i class="fa fa-th-large"></i>
 						</div>
 						<header class="widget_header-inline heading_group">
@@ -82,7 +82,7 @@
 					
 					<!-- Feature 5 -->
 					<a class="widget-block-borderLeft span-4" href="#intelligent-theming">
-						<div class="widget_icon-inline icon-plain-size-7">
+						<div class="widget_icon-inline button-icon-plain-size-6">
 							<i class="fa fa-eyedropper"></i>
 						</div>
 						<header class="widget_header-inline heading_group">
@@ -93,7 +93,7 @@
 					
 					<!-- Feature 6 -->
 					<a class="widget-block-borderLeft span-4" href="#mobile-optimized">
-						<div class="widget_icon-inline icon-plain-size-7">
+						<div class="widget_icon-inline button-icon-plain-size-6">
 							<i class="fa fa-tablet"></i>
 						</div>
 						<header class="widget_header-inline heading_group">

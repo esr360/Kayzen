@@ -127,8 +127,8 @@
 							</div>
 							
 							<nav class="thumbnail_nav slide-nav" id="latest-articles-nav">
-								<button class="slide-prev icon-size-5"><i class="fa fa-angle-left"></i></button>
-								<button class="slide-next icon-size-5"><i class="fa fa-angle-right"></i></button>
+								<button class="slide-prev button-icon-size-4"><i class="fa fa-angle-left"></i></button>
+								<button class="slide-next button-icon-size-4"><i class="fa fa-angle-right"></i></button>
 							</nav>
 						
 						</div>
@@ -163,10 +163,10 @@
 								<div class="thumbnail-zoom">
 									<div class="thumbnail_mask">
 										<div class="icon_group-small">
-											<a href="#" class="icon-border-circle-size-3">
+											<a href="#" class="button-icon-border-circle-size-2">
 												<i class="fa fa-search"></i>
 											</a>
-											<a href="#" class="icon-border-circle-size-3">
+											<a href="#" class="button-icon-border-circle-size-2">
 												<i class="fa fa-link"></i>
 											</a>
 										</div>
@@ -199,10 +199,10 @@
 								<div class="thumbnail-zoom">
 									<div class="thumbnail_mask">
 										<div class="icon_group-small">
-											<a href="#" class="icon-border-circle-size-3">
+											<a href="#" class="button-icon-border-circle-size-2">
 												<i class="fa fa-search"></i>
 											</a>
-											<a href="#" class="icon-border-circle-size-3">
+											<a href="#" class="button-icon-border-circle-size-2">
 												<i class="fa fa-link"></i>
 											</a>
 										</div>
@@ -240,7 +240,7 @@
 						<div class="widget_group row-magic text-center">
 							
 							<div class="widget-borderTop-highlight-block-scale span">
-								<div class="widget_icon icon-plain-size-9">
+								<div class="widget_icon button-icon-plain-size-8">
 									<i class="fa fa-desktop"></i>
 								</div>
 								<header class="widget_header heading_group">
@@ -251,7 +251,7 @@
 							</div>
 							
 							<div class="widget-borderTop-highlight-block-scale span">
-								<div class="widget_icon icon-plain-size-9">
+								<div class="widget_icon button-icon-plain-size-8">
 									<i class="fa fa-desktop"></i>
 								</div>
 								<header class="widget_header heading_group">
@@ -262,7 +262,7 @@
 							</div>
 							
 							<div class="widget-borderTop-highlight-block-scale span">
-								<div class="widget_icon icon-plain-size-9">
+								<div class="widget_icon button-icon-plain-size-8">
 									<i class="fa fa-desktop"></i>
 								</div>
 								<header class="widget_header heading_group">
@@ -336,10 +336,10 @@
 								<div class="thumbnail-zoom">
 									<div class="thumbnail_mask">
 										<div class="icon_group-small">
-											<a href="#" class="icon-border-circle-size-3">
+											<a href="#" class="button-icon-border-circle-size-2">
 												<i class="fa fa-search"></i>
 											</a>
-											<a href="#" class="icon-border-circle-size-3">
+											<a href="#" class="button-icon-border-circle-size-2">
 												<i class="fa fa-link"></i>
 											</a>
 										</div>
@@ -369,10 +369,10 @@
 								<div class="thumbnail-zoom">
 									<div class="thumbnail_mask">
 										<div class="icon_group-small">
-											<a href="#" class="icon-border-circle-size-3">
+											<a href="#" class="button-icon-border-circle-size-2">
 												<i class="fa fa-search"></i>
 											</a>
-											<a href="#" class="icon-border-circle-size-3">
+											<a href="#" class="button-icon-border-circle-size-2">
 												<i class="fa fa-link"></i>
 											</a>
 										</div>
@@ -402,10 +402,10 @@
 								<div class="thumbnail-zoom">
 									<div class="thumbnail_mask">
 										<div class="icon_group-small">
-											<a href="#" class="icon-border-circle-size-3">
+											<a href="#" class="button-icon-border-circle-size-2">
 												<i class="fa fa-search"></i>
 											</a>
-											<a href="#" class="icon-border-circle-size-3">
+											<a href="#" class="button-icon-border-circle-size-2">
 												<i class="fa fa-link"></i>
 											</a>
 										</div>

@@ -2,7 +2,7 @@
 <div class="widget_group-center row-no-gutter">
 	
 	<a class="widget-block-panel-small span-2 break-3-third break-1-half" href="#">
-		<div class="widget_icon icon-plain-size-9">
+		<div class="widget_icon button-icon-plain-size-8">
 			<i class="fa fa-television"></i>
 		</div>
 		<header class="widget_header heading_group">
@@ -11,7 +11,7 @@
 	</a>
 	
 	<a class="widget-block-panel-small span-2 break-3-third break-1-half" href="#">
-		<div class="widget_icon icon-plain-size-9">
+		<div class="widget_icon button-icon-plain-size-8">
 			<i class="fa fa-ellipsis-h"></i>
 		</div>
 		<header class="widget_header heading_group">
@@ -20,7 +20,7 @@
 	</a>
 	
 	<a class="widget-block-panel-small span-2 break-3-third break-1-half" href="#">
-		<div class="widget_icon icon-plain-size-9">
+		<div class="widget_icon button-icon-plain-size-8">
 			<i class="fa fa-sort-numeric-desc"></i>
 		</div>
 		<header class="widget_header heading_group">
@@ -29,7 +29,7 @@
 	</a>
 	
 	<a class="widget-block-panel-small span-2 break-3-third break-1-half" href="#">
-		<div class="widget_icon icon-plain-size-9">
+		<div class="widget_icon button-icon-plain-size-8">
 			<i class="fa fa-chevron-circle-down"></i>
 		</div>
 		<header class="widget_header heading_group">
@@ -38,7 +38,7 @@
 	</a>
 	
 	<a class="widget-block-panel-small span-2 break-3-third break-1-half" href="#">
-		<div class="widget_icon icon-plain-size-9">
+		<div class="widget_icon button-icon-plain-size-8">
 			<i class="fa fa-globe"></i>
 		</div>
 		<header class="widget_header heading_group">
@@ -47,7 +47,7 @@
 	</a>
 	
 	<a class="widget-block-panel-small span-2 break-3-third break-1-half" href="#">
-		<div class="widget_icon icon-plain-size-9">
+		<div class="widget_icon button-icon-plain-size-8">
 			<i class="fa fa-th-list"></i>
 		</div>
 		<header class="widget_header heading_group">
@@ -56,7 +56,7 @@
 	</a>
 	
 	<a class="widget-block-panel-small span-2 break-3-third break-1-half" href="#">
-		<div class="widget_icon icon-plain-size-9">
+		<div class="widget_icon button-icon-plain-size-8">
 			<i class="fa fa-file-text-o"></i>
 		</div>
 		<header class="widget_header heading_group">
@@ -65,7 +65,7 @@
 	</a>
 	
 	<a class="widget-block-panel-small span-2 break-3-third break-1-half" href="#">
-		<div class="widget_icon icon-plain-size-9">
+		<div class="widget_icon button-icon-plain-size-8">
 			<i class="fa fa-map-o"></i>
 		</div>
 		<header class="widget_header heading_group">
@@ -74,7 +74,7 @@
 	</a>
 	
 	<a class="widget-block-panel-small span-2 break-3-third break-1-half" href="#">
-		<div class="widget_icon icon-plain-size-9">
+		<div class="widget_icon button-icon-plain-size-8">
 			<i class="fa fa-header"></i>
 		</div>
 		<header class="widget_header heading_group">
@@ -83,7 +83,7 @@
 	</a>
 	
 	<a class="widget-block-panel-small span-2 break-3-third break-1-half" href="#">
-		<div class="widget_icon icon-plain-size-9">
+		<div class="widget_icon button-icon-plain-size-8">
 			<i class="fa fa-pied-piper-alt"></i>
 		</div>
 		<header class="widget_header heading_group">
@@ -92,7 +92,7 @@
 	</a>
 	
 	<a class="widget-block-panel-small span-2 break-3-third break-1-half" href="#">
-		<div class="widget_icon icon-plain-size-9">
+		<div class="widget_icon button-icon-plain-size-8">
 			<i class="fa fa-th"></i>
 		</div>
 		<header class="widget_header heading_group">
@@ -101,7 +101,7 @@
 	</a>
 	
 	<a class="widget-block-panel-small span-2 break-3-third break-1-half" href="#">
-		<div class="widget_icon icon-plain-size-9">
+		<div class="widget_icon button-icon-plain-size-8">
 			<i class="fa fa-bars"></i>
 		</div>
 		<header class="widget_header heading_group">
@@ -110,7 +110,7 @@
 	</a>
 	
 	<a class="widget-block-panel-small span-2 break-3-third break-1-half" href="#">
-		<div class="widget_icon icon-plain-size-9">
+		<div class="widget_icon button-icon-plain-size-8">
 			<i class="fa fa-ellipsis-v"></i>
 		</div>
 		<header class="widget_header heading_group">
@@ -119,7 +119,7 @@
 	</a>
 	
 	<a class="widget-block-panel-small span-2 break-3-third break-1-half" href="#">
-		<div class="widget_icon icon-plain-size-9">
+		<div class="widget_icon button-icon-plain-size-8">
 			<i class="fa fa-chevron-circle-up"></i>
 		</div>
 		<header class="widget_header heading_group">
@@ -128,7 +128,7 @@
 	</a>
 	
 	<a class="widget-block-panel-small span-2 break-3-third break-1-half" href="#">
-		<div class="widget_icon icon-plain-size-9">
+		<div class="widget_icon button-icon-plain-size-8">
 			<i class="fa fa-chevron-down"></i>
 		</div>
 		<header class="widget_header heading_group">
@@ -137,7 +137,7 @@
 	</a>
 	
 	<a class="widget-block-panel-small span-2 break-3-third break-1-half" href="#">
-		<div class="widget_icon icon-plain-size-9">
+		<div class="widget_icon button-icon-plain-size-8">
 			<i class="fa fa-search"></i>
 		</div>
 		<header class="widget_header heading_group">
@@ -146,7 +146,7 @@
 	</a>
 	
 	<a class="widget-block-panel-small span-2 break-3-third break-1-half" href="#">
-		<div class="widget_icon icon-plain-size-9">
+		<div class="widget_icon button-icon-plain-size-8">
 			<i class="fa fa-th-list"></i>
 		</div>
 		<header class="widget_header heading_group">
@@ -155,7 +155,7 @@
 	</a>
 	
 	<a class="widget-block-panel-small span-2 break-3-third break-1-half" href="#">
-		<div class="widget_icon icon-plain-size-9">
+		<div class="widget_icon button-icon-plain-size-8">
 			<i class="fa fa-columns"></i>
 		</div>
 		<header class="widget_header heading_group">
@@ -164,7 +164,7 @@
 	</a>
 	
 	<a class="widget-block-panel-small span-2 break-3-third break-1-half" href="#">
-		<div class="widget_icon icon-plain-size-9">
+		<div class="widget_icon button-icon-plain-size-8">
 			<i class="fa fa-file"></i>
 		</div>
 		<header class="widget_header heading_group">
@@ -173,7 +173,7 @@
 	</a>
 	
 	<a class="widget-block-panel-small span-2 break-3-third break-1-half" href="#">
-		<div class="widget_icon icon-plain-size-9">
+		<div class="widget_icon button-icon-plain-size-8">
 			<i class="fa fa-minus"></i>
 		</div>
 		<header class="widget_header heading_group">
@@ -182,7 +182,7 @@
 	</a>
 	
 	<a class="widget-block-panel-small span-2 break-3-third break-1-half" href="#">
-		<div class="widget_icon icon-plain-size-9">
+		<div class="widget_icon button-icon-plain-size-8">
 			<i class="fa fa-twitter"></i>
 		</div>
 		<header class="widget_header heading_group">

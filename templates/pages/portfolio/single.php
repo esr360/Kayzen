@@ -55,8 +55,8 @@
                     </span>
                 </div>
                 <nav class="slide-nav" id="desktop-graphic_nav">
-                    <button class="slide-prev icon-border-size-4-grey-3"><i class="fa fa-angle-left"></i></button>
-                    <button class="slide-next icon-border-size-4-grey-3"><i class="fa fa-angle-right"></i></button>
+                    <button class="slide-prev button-icon-border-size-3-grey-3"><i class="fa fa-angle-left"></i></button>
+                    <button class="slide-next button-icon-border-size-3-grey-3"><i class="fa fa-angle-right"></i></button>
                 </nav>
             </div>
                         
@@ -99,7 +99,7 @@
                 
                 <!-- Feature 1 -->
                 <div class="widget-borderTop-highlight-block-scale span">
-                    <div class="widget_icon icon-plain-size-9">
+                    <div class="widget_icon button-icon-plain-size-8">
                         <i class="fa fa-desktop"></i>
                     </div>
                     <header class="widget_header heading_group">
@@ -111,7 +111,7 @@
                 
                 <!-- Feature 2 -->
                 <div class="widget-borderTop-highlight-block-scale span">
-                    <div class="widget_icon icon-plain-size-9">
+                    <div class="widget_icon button-icon-plain-size-8">
                         <i class="fa fa-clipboard"></i>
                     </div>
                     <header class="widget_header heading_group">
@@ -123,7 +123,7 @@
                 
                 <!-- Feature 3 -->
                 <div class="widget-borderTop-highlight-block-scale span">
-                    <div class="widget_icon icon-plain-size-9">
+                    <div class="widget_icon button-icon-plain-size-8">
                         <i class="fa fa-photo"></i>
                     </div>
                     <header class="widget_header heading_group">
@@ -135,7 +135,7 @@
                 
                 <!-- Feature 4 -->
                 <div class="widget-borderTop-highlight-block-scale span">
-                    <div class="widget_icon icon-plain-size-9">
+                    <div class="widget_icon button-icon-plain-size-8">
                         <i class="fa fa-eyedropper"></i>
                     </div>
                     <header class="widget_header heading_group">
@@ -208,7 +208,7 @@
                 <!-- Facebook Shares Widget -->
                 <a href="#" class="widget-tub span bg-facebook">
                     <div class="widget_lid">
-                        <div class="widget_sticker icon-plain-size-7">
+                        <div class="widget_sticker button-icon-plain-size-6">
                             <i class="fa fa-facebook"></i>
                         </div>
                     </div>
@@ -224,7 +224,7 @@
                 <!-- Twitter Shares Widget -->
                 <a href="#" class="widget-tub span bg-twitter">
                     <div class="widget_lid">
-                        <div class="widget_sticker icon-plain-size-7">
+                        <div class="widget_sticker button-icon-plain-size-6">
                             <i class="fa fa-twitter"></i>
                         </div>
                     </div>
@@ -240,7 +240,7 @@
                 <!-- Google Plus Shares Widget -->
                 <a href="#" class="widget-tub span bg-google-plus">
                     <div class="widget_lid">
-                        <div class="widget_sticker icon-plain-size-7">
+                        <div class="widget_sticker button-icon-plain-size-6">
                             <i class="fa fa-google-plus"></i>
                         </div>
                     </div>
@@ -256,7 +256,7 @@
                 <!-- LinkedIn Shares Widget -->
                 <a href="#" class="widget-tub span bg-linkedin">
                     <div class="widget_lid">
-                        <div class="widget_sticker icon-plain-size-7">
+                        <div class="widget_sticker button-icon-plain-size-6">
                             <i class="fa fa-linkedin"></i>
                         </div>
                     </div>
@@ -272,7 +272,7 @@
                 <!-- StumbleUpon Shares Widget -->
                 <a href="#" class="widget-tub span bg-stumbleupon">
                     <div class="widget_lid">
-                        <div class="widget_sticker icon-plain-size-7">
+                        <div class="widget_sticker button-icon-plain-size-6">
                             <i class="fa fa-stumbleupon"></i>
                         </div>
                     </div>
@@ -289,7 +289,7 @@
                 <!--
                 <a href="#" class="widget-tub span bg-pinterest">
                     <div class="widget_lid">
-                        <div class="widget_sticker icon-plain-size-7">
+                        <div class="widget_sticker button-icon-plain-size-6">
                             <i class="fa fa-pinterest"></i>
                         </div>
                     </div>
@@ -307,7 +307,7 @@
                 <!--
                 <a href="#" class="widget-tub span bg-reddit">
                     <div class="widget_lid">
-                        <div class="widget_sticker icon-plain-size-7">
+                        <div class="widget_sticker button-icon-plain-size-6">
                             <i class="fa fa-reddit"></i>
                         </div>
                     </div>

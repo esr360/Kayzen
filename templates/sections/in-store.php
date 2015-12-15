@@ -33,10 +33,10 @@
                         <div class="thumbnail">
                             <div class="thumbnail_mask">
                                 <div class="thumbnail_controls icon_group-small">
-                                    <a href="#" class="icon-border-circle-size-3 tooltip-top" data-tooltip="Quick Look">
+                                    <a href="#" class="button-icon-border-circle tooltip-top" data-tooltip="Quick Look">
                                         <i class="fa fa-search-plus"></i>
                                     </a>
-                                    <a href="#" class="icon-border-circle-size-3 tooltip-top" data-tooltip="Add To Cart">
+                                    <a href="#" class="button-icon-border-circle tooltip-top" data-tooltip="Add To Cart">
                                         <i class="fa fa-shopping-cart"></i>
                                     </a>
                                 </div>
@@ -64,10 +64,10 @@
                             <div class="corner-ribbon-pink" data-ribbon="Sale"></div>
                             <div class="thumbnail_mask">
                                 <div class="thumbnail_controls icon_group-small">
-                                    <a href="#" class="icon-border-circle-size-3 tooltip-top" data-tooltip="Quick Look">
+                                    <a href="#" class="button-icon-border-circle tooltip-top" data-tooltip="Quick Look">
                                         <i class="fa fa-search-plus"></i>
                                     </a>
-                                    <a href="#" class="icon-border-circle-size-3 tooltip-top" data-tooltip="Add To Cart">
+                                    <a href="#" class="button-icon-border-circle tooltip-top" data-tooltip="Add To Cart">
                                         <i class="fa fa-shopping-cart"></i>
                                     </a>
                                 </div>
@@ -95,10 +95,10 @@
                         <div class="thumbnail">
                             <div class="thumbnail_mask">
                                 <div class="thumbnail_controls icon_group-small">
-                                    <a href="#" class="icon-border-circle-size-3 tooltip-top" data-tooltip="Quick Look">
+                                    <a href="#" class="button-icon-border-circle tooltip-top" data-tooltip="Quick Look">
                                         <i class="fa fa-search-plus"></i>
                                     </a>
-                                    <a href="#" class="icon-border-circle-size-3 tooltip-top" data-tooltip="Add To Cart">
+                                    <a href="#" class="button-icon-border-circle tooltip-top" data-tooltip="Add To Cart">
                                         <i class="fa fa-shopping-cart"></i>
                                     </a>
                                 </div>
@@ -125,10 +125,10 @@
                         <div class="thumbnail">
                             <div class="thumbnail_mask">
                                 <div class="thumbnail_controls icon_group-small">
-                                    <a href="#" class="icon-border-circle-size-3 tooltip-top" data-tooltip="Quick Look">
+                                    <a href="#" class="button-icon-border-circle tooltip-top" data-tooltip="Quick Look">
                                         <i class="fa fa-search-plus"></i>
                                     </a>
-                                    <a href="#" class="icon-border-circle-size-3 tooltip-top" data-tooltip="Add To Cart">
+                                    <a href="#" class="button-icon-border-circle tooltip-top" data-tooltip="Add To Cart">
                                         <i class="fa fa-shopping-cart"></i>
                                     </a>
                                 </div>
@@ -163,10 +163,10 @@
                         <div class="thumbnail">
                             <div class="thumbnail_mask">
                                 <div class="thumbnail_controls icon_group-small">
-                                    <a href="#" class="icon-border-circle-size-3 tooltip-top" data-tooltip="Quick Look">
+                                    <a href="#" class="button-icon-border-circle tooltip-top" data-tooltip="Quick Look">
                                         <i class="fa fa-search-plus"></i>
                                     </a>
-                                    <a href="#" class="icon-border-circle-size-3 tooltip-top" data-tooltip="Add To Cart">
+                                    <a href="#" class="button-icon-border-circle tooltip-top" data-tooltip="Add To Cart">
                                         <i class="fa fa-shopping-cart"></i>
                                     </a>
                                 </div>
@@ -194,10 +194,10 @@
                             <div class="corner-ribbon-pink" data-ribbon="Sale"></div>
                             <div class="thumbnail_mask">
                                 <div class="thumbnail_controls icon_group-small">
-                                    <a href="#" class="icon-border-circle-size-3 tooltip-top" data-tooltip="Quick Look">
+                                    <a href="#" class="button-icon-border-circle tooltip-top" data-tooltip="Quick Look">
                                         <i class="fa fa-search-plus"></i>
                                     </a>
-                                    <a href="#" class="icon-border-circle-size-3 tooltip-top" data-tooltip="Add To Cart">
+                                    <a href="#" class="button-icon-border-circle tooltip-top" data-tooltip="Add To Cart">
                                         <i class="fa fa-shopping-cart"></i>
                                     </a>
                                 </div>
@@ -225,10 +225,10 @@
                         <div class="thumbnail">
                             <div class="thumbnail_mask">
                                 <div class="thumbnail_controls icon_group-small">
-                                    <a href="#" class="icon-border-circle-size-3 tooltip-top" data-tooltip="Quick Look">
+                                    <a href="#" class="button-icon-border-circle tooltip-top" data-tooltip="Quick Look">
                                         <i class="fa fa-search-plus"></i>
                                     </a>
-                                    <a href="#" class="icon-border-circle-size-3 tooltip-top" data-tooltip="Add To Cart">
+                                    <a href="#" class="button-icon-border-circle tooltip-top" data-tooltip="Add To Cart">
                                         <i class="fa fa-shopping-cart"></i>
                                     </a>
                                 </div>
@@ -255,10 +255,10 @@
                         <div class="thumbnail">
                             <div class="thumbnail_mask">
                                 <div class="thumbnail_controls icon_group-small">
-                                    <a href="#" class="icon-border-circle-size-3 tooltip-top" data-tooltip="Quick Look">
+                                    <a href="#" class="button-icon-border-circle tooltip-top" data-tooltip="Quick Look">
                                         <i class="fa fa-search-plus"></i>
                                     </a>
-                                    <a href="#" class="icon-border-circle-size-3 tooltip-top" data-tooltip="Add To Cart">
+                                    <a href="#" class="button-icon-border-circle tooltip-top" data-tooltip="Add To Cart">
                                         <i class="fa fa-shopping-cart"></i>
                                     </a>
                                 </div>
@@ -293,10 +293,10 @@
                         <div class="thumbnail">
                             <div class="thumbnail_mask">
                                 <div class="thumbnail_controls icon_group-small">
-                                    <a href="#" class="icon-border-circle-size-3 tooltip-top" data-tooltip="Quick Look">
+                                    <a href="#" class="button-icon-border-circle tooltip-top" data-tooltip="Quick Look">
                                         <i class="fa fa-search-plus"></i>
                                     </a>
-                                    <a href="#" class="icon-border-circle-size-3 tooltip-top" data-tooltip="Add To Cart">
+                                    <a href="#" class="button-icon-border-circle tooltip-top" data-tooltip="Add To Cart">
                                         <i class="fa fa-shopping-cart"></i>
                                     </a>
                                 </div>
@@ -324,10 +324,10 @@
                             <div class="corner-ribbon-pink" data-ribbon="Sale"></div>
                             <div class="thumbnail_mask">
                                 <div class="thumbnail_controls icon_group-small">
-                                    <a href="#" class="icon-border-circle-size-3 tooltip-top" data-tooltip="Quick Look">
+                                    <a href="#" class="button-icon-border-circle tooltip-top" data-tooltip="Quick Look">
                                         <i class="fa fa-search-plus"></i>
                                     </a>
-                                    <a href="#" class="icon-border-circle-size-3 tooltip-top" data-tooltip="Add To Cart">
+                                    <a href="#" class="button-icon-border-circle tooltip-top" data-tooltip="Add To Cart">
                                         <i class="fa fa-shopping-cart"></i>
                                     </a>
                                 </div>
@@ -355,10 +355,10 @@
                         <div class="thumbnail">
                             <div class="thumbnail_mask">
                                 <div class="thumbnail_controls icon_group-small">
-                                    <a href="#" class="icon-border-circle-size-3 tooltip-top" data-tooltip="Quick Look">
+                                    <a href="#" class="button-icon-border-circle tooltip-top" data-tooltip="Quick Look">
                                         <i class="fa fa-search-plus"></i>
                                     </a>
-                                    <a href="#" class="icon-border-circle-size-3 tooltip-top" data-tooltip="Add To Cart">
+                                    <a href="#" class="button-icon-border-circle tooltip-top" data-tooltip="Add To Cart">
                                         <i class="fa fa-shopping-cart"></i>
                                     </a>
                                 </div>
@@ -385,10 +385,10 @@
                         <div class="thumbnail">
                             <div class="thumbnail_mask">
                                 <div class="thumbnail_controls icon_group-small">
-                                    <a href="#" class="icon-border-circle-size-3 tooltip-top" data-tooltip="Quick Look">
+                                    <a href="#" class="button-icon-border-circle tooltip-top" data-tooltip="Quick Look">
                                         <i class="fa fa-search-plus"></i>
                                     </a>
-                                    <a href="#" class="icon-border-circle-size-3 tooltip-top" data-tooltip="Add To Cart">
+                                    <a href="#" class="button-icon-border-circle tooltip-top" data-tooltip="Add To Cart">
                                         <i class="fa fa-shopping-cart"></i>
                                     </a>
                                 </div>

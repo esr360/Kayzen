@@ -59,8 +59,8 @@
         <!-- Showcase Slide Arrows -->
         <div class="wrap-slide-arrows container-full text-center">               
             <nav class="slide-nav twin-nav strikethrough">
-                <button class="slide-prev icon-border-size-4-white"><i class="fa fa-angle-left"></i></button>
-                <button class="slide-next icon-border-size-4-white"><i class="fa fa-angle-right"></i></button>
+                <button class="slide-prev button-icon-border-size-3-white"><i class="fa fa-angle-left"></i></button>
+                <button class="slide-next button-icon-border-size-3-white"><i class="fa fa-angle-right"></i></button>
             </nav>
         </div>
         

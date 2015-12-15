@@ -35,7 +35,7 @@
             
             <!-- Feature 1 -->
             <div class="widget-block-panel span">
-                <div class="widget_icon icon-plain-size-9">
+                <div class="widget_icon button-icon-plain-size-8">
                     <i class="fa fa-desktop"></i>
                 </div>
                 <header class="widget_header heading_group">
@@ -47,7 +47,7 @@
             
             <!-- Feature 2 -->
             <div class="widget-block-panel span">
-                <div class="widget_icon icon-plain-size-9">
+                <div class="widget_icon button-icon-plain-size-8">
                     <i class="fa fa-clipboard"></i>
                 </div>
                 <header class="widget_header heading_group">
@@ -59,7 +59,7 @@
             
             <!-- Feature 3 -->
             <div class="widget-block-panel span">
-                <div class="widget_icon icon-plain-size-9">
+                <div class="widget_icon button-icon-plain-size-8">
                     <i class="fa fa-photo"></i>
                 </div>
                 <header class="widget_header heading_group">
@@ -71,7 +71,7 @@
             
             <!-- Feature 4 -->
             <div class="widget-block-panel span">
-                <div class="widget_icon icon-plain-size-9">
+                <div class="widget_icon button-icon-plain-size-8">
                     <i class="fa fa-eyedropper"></i>
                 </div>
                 <header class="widget_header heading_group">
@@ -88,7 +88,7 @@
             
             <!-- Feature 5 -->
             <div class="widget-block-panel span">
-                <div class="widget_icon icon-plain-size-9">
+                <div class="widget_icon button-icon-plain-size-8">
                     <i class="fa fa-hand-o-down"></i>
                 </div>
                 <header class="widget_header heading_group">
@@ -100,7 +100,7 @@
             
             <!-- Feature 6 -->
             <div class="widget-block-panel span">
-                <div class="widget_icon icon-plain-size-9">
+                <div class="widget_icon button-icon-plain-size-8">
                     <i class="fa fa-cubes"></i>
                 </div>
                 <header class="widget_header heading_group">
@@ -112,7 +112,7 @@
             
             <!-- Feature 7 -->
             <div class="widget-block-panel span">
-                <div class="widget_icon icon-plain-size-9">
+                <div class="widget_icon button-icon-plain-size-8">
                     <i class="fa fa-cog"></i>
                 </div>
                 <header class="widget_header heading_group">
@@ -124,7 +124,7 @@
             
             <!-- Feature 8 -->
             <div class="widget-block-panel span">
-                <div class="widget_icon icon-plain-size-9">
+                <div class="widget_icon button-icon-plain-size-8">
                     <i class="fa fa-google"></i>
                 </div>
                 <header class="widget_header heading_group">

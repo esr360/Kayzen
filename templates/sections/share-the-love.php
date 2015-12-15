@@ -33,28 +33,28 @@
             <div class="icon_group-small text-center">
                 <a 
                     href="#"
-                    class="tooltip-top icon-size-7-border-circle-primary"
+                    class="tooltip-top button-icon-size-6-border-circle-primary"
                     data-tooltip="Facebook"
                 >
                     <i class="fa fa-facebook"></i>
                 </a>
                 <a 
                     href="#"
-                    class="tooltip-top icon-size-7-border-circle-primary"
+                    class="tooltip-top button-icon-size-6-border-circle-primary"
                     data-tooltip="Twitter"
                 >
                     <i class="fa fa-twitter"></i>
                 </a>
                 <a 
                     href="#"
-                    class="tooltip-top icon-size-7-border-circle-primary"
+                    class="tooltip-top button-icon-size-6-border-circle-primary"
                     data-tooltip="Github"
                 >
                     <i class="fa fa-github-alt"></i>
                 </a>
                 <a 
                     href="#" 
-                    class="tooltip-top icon-size-7-border-circle-primary"
+                    class="tooltip-top button-icon-size-6-border-circle-primary"
                     data-tooltip="Dribbble"
                 >
                     <i class="fa fa-dribbble"></i>

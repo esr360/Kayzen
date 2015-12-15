@@ -133,8 +133,8 @@
 			</div><!-- portfolio-carousel -->
 			
 			<nav class="slide-nav">
-				<button class="slide-prev icon-border-size-4"><i class="fa fa-angle-left"></i></button>
-				<button class="slide-next icon-border-size-4"><i class="fa fa-angle-right"></i></button>
+				<button class="slide-prev button-icon-border-size-3"><i class="fa fa-angle-left"></i></button>
+				<button class="slide-next button-icon-border-size-3"><i class="fa fa-angle-right"></i></button>
 			</nav>
 			
 			<script>

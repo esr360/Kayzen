@@ -38,7 +38,7 @@
 					
 					<!-- Feature 1 -->
 					<a class="widget-block-borderTop-scale span" href="#homepages">
-						<div class="widget_icon icon-plain-size-9">
+						<div class="widget_icon button-icon-plain-size-8">
 							<i class="fa fa-home"></i>
 						</div>
 						<header class="widget_header heading_group">
@@ -48,7 +48,7 @@
 					
 					<!-- Feature 2 -->
 					<a class="widget-block-borderTop-scale span" href="#portfolio">
-						<div class="widget_icon icon-plain-size-9">
+						<div class="widget_icon button-icon-plain-size-8">
 							<i class="fa fa-image"></i>
 						</div>
 						<header class="widget_header heading_group">
@@ -58,7 +58,7 @@
 					
 					<!-- Feature 3 -->
 					<a class="widget-block-borderTop-scale span" href="#blog">
-						<div class="widget_icon icon-plain-size-9">
+						<div class="widget_icon button-icon-plain-size-8">
 							<i class="fa fa-commenting"></i>
 						</div>
 						<header class="widget_header heading_group">
@@ -68,7 +68,7 @@
 					
 					<!-- Feature 4 -->
 					<a class="widget-block-borderTop-scale span" href="#further-pages">
-						<div class="widget_icon icon-plain-size-9">
+						<div class="widget_icon button-icon-plain-size-8">
 							<i class="fa fa-clone"></i>
 						</div>
 						<header class="widget_header heading_group">

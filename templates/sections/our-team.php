@@ -36,7 +36,7 @@
                     <div class="thumbnail">
                         <div class="thumbnail_mask">
                             <div class="thumbnail_controls">
-                                <a href="#" class="icon-border-circle-size-3">
+                                <a href="#" class="button-icon-border-circle">
                                     <i class="fa fa-search"></i>
                                 </a>
                             </div>
@@ -49,22 +49,22 @@
                     </header>
                     <p>Cum socis natoque penatibus et magnis dis parturient montes, nascetur maximus ridiculus mus. Donec finibus fringilla ultrices purus.</p>		
                     <div class="icon_group-small">
-                        <a href="#" class="icon-primary-size-3 tooltip-top" data-tooltip="Dribbble">
+                        <a href="#" class="button-icon-primary tooltip-top" data-tooltip="Dribbble">
                             <i class="fa fa-dribbble"></i>
                         </a>
-                        <a href="#" class="icon-primary-size-3 tooltip-top" data-tooltip="Facebook">
+                        <a href="#" class="button-icon-primary tooltip-top" data-tooltip="Facebook">
                             <i class="fa fa-facebook"></i>
                         </a>
-                        <a href="#" class="icon-primary-size-3 tooltip-top" data-tooltip="Twitter">
+                        <a href="#" class="button-icon-primary tooltip-top" data-tooltip="Twitter">
                             <i class="fa fa-twitter"></i>
                         </a>
-                        <a href="#" class="icon-primary-size-3 tooltip-top" data-tooltip="LinkedIn">
+                        <a href="#" class="button-icon-primary tooltip-top" data-tooltip="LinkedIn">
                             <i class="fa fa-linkedin"></i>
                         </a>
-                        <a href="#" class="icon-primary-size-3 tooltip-top" data-tooltip="DeviantArt">
+                        <a href="#" class="button-icon-primary tooltip-top" data-tooltip="DeviantArt">
                             <i class="fa fa-deviantart"></i>
                         </a>
-                        <a href="#" class="icon-primary-size-3 tooltip-top" data-tooltip="Behance">
+                        <a href="#" class="button-icon-primary tooltip-top" data-tooltip="Behance">
                             <i class="fa fa-behance"></i>
                         </a>
                     </div>	
@@ -74,7 +74,7 @@
                     <div class="thumbnail">
                         <div class="thumbnail_mask">
                             <div class="thumbnail_controls">
-                                <a href="#" class="icon-border-circle-size-3">
+                                <a href="#" class="button-icon-border-circle">
                                     <i class="fa fa-search"></i>
                                 </a>
                             </div>
@@ -87,19 +87,19 @@
                     </header>
                     <p>Cum socis natoque penatibus et magnis dis parturient montes, nascetur maximus ridiculus mus. Donec finibus fringilla ultrices purus.</p>		
                     <div class="icon_group-small">
-                        <a href="#" class="icon-primary-size-3 tooltip-top" data-tooltip="Dribbble">
+                        <a href="#" class="button-icon-primary tooltip-top" data-tooltip="Dribbble">
                             <i class="fa fa-dribbble"></i>
                         </a>
-                        <a href="#" class="icon-primary-size-3 tooltip-top" data-tooltip="Twitter">
+                        <a href="#" class="button-icon-primary tooltip-top" data-tooltip="Twitter">
                             <i class="fa fa-twitter"></i>
                         </a>
-                        <a href="#" class="icon-primary-size-3 tooltip-top" data-tooltip="LinkedIn">
+                        <a href="#" class="button-icon-primary tooltip-top" data-tooltip="LinkedIn">
                             <i class="fa fa-linkedin"></i>
                         </a>
-                        <a href="#" class="icon-primary-size-3 tooltip-top" data-tooltip="DeviantArt">
+                        <a href="#" class="button-icon-primary tooltip-top" data-tooltip="DeviantArt">
                             <i class="fa fa-deviantart"></i>
                         </a>
-                        <a href="#" class="icon-primary-size-3 tooltip-top" data-tooltip="Behance">
+                        <a href="#" class="button-icon-primary tooltip-top" data-tooltip="Behance">
                             <i class="fa fa-behance"></i>
                         </a>
                     </div>	
@@ -109,7 +109,7 @@
                     <div class="thumbnail">
                         <div class="thumbnail_mask">
                             <div class="thumbnail_controls">
-                                <a href="#" class="icon-border-circle-size-3">
+                                <a href="#" class="button-icon-border-circle">
                                     <i class="fa fa-search"></i>
                                 </a>
                             </div>
@@ -122,16 +122,16 @@
                     </header>
                     <p>Cum socis natoque penatibus et magnis dis parturient montes, nascetur maximus ridiculus mus. Donec finibus fringilla ultrices purus.</p>		
                     <div class="icon_group-small">
-                        <a href="#" class="icon-primary-size-3 tooltip-top" data-tooltip="Dribbble">
+                        <a href="#" class="button-icon-primary tooltip-top" data-tooltip="Dribbble">
                             <i class="fa fa-dribbble"></i>
                         </a>
-                        <a href="#" class="icon-primary-size-3 tooltip-top" data-tooltip="Facebook">
+                        <a href="#" class="button-icon-primary tooltip-top" data-tooltip="Facebook">
                             <i class="fa fa-facebook"></i>
                         </a>
-                        <a href="#" class="icon-primary-size-3 tooltip-top" data-tooltip="Twitter">
+                        <a href="#" class="button-icon-primary tooltip-top" data-tooltip="Twitter">
                             <i class="fa fa-twitter"></i>
                         </a>
-                        <a href="#" class="icon-primary-size-3 tooltip-top" data-tooltip="LinkedIn">
+                        <a href="#" class="button-icon-primary tooltip-top" data-tooltip="LinkedIn">
                             <i class="fa fa-linkedin"></i>
                         </a>
                     </div>	

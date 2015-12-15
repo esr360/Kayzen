@@ -21,7 +21,7 @@
         
         <!-- Statistic 1 -->
         <div class="widget-spectrum-quarter span-3">
-            <div class="widget_icon icon-plain-size-9">
+            <div class="widget_icon button-icon-plain-size-8">
                 <i class="fa fa-code"></i>
             </div>
             <header class="widget_header heading_group">
@@ -32,7 +32,7 @@
         
         <!-- Statistic 2 -->
         <div class="widget-spectrum-quarter span-3">
-            <div class="widget_icon icon-plain-size-9">
+            <div class="widget_icon button-icon-plain-size-8">
                 <i class="fa fa-desktop"></i>
             </div>
             <header class="widget_header heading_group">
@@ -43,7 +43,7 @@
         
         <!-- Statistic 3 -->
         <div class="widget-spectrum-quarter span-3">
-            <div class="widget_icon icon-plain-size-9">
+            <div class="widget_icon button-icon-plain-size-8">
                 <i class="fa fa-users"></i>
             </div>
             <header class="widget_header heading_group">
@@ -54,7 +54,7 @@
         
         <!-- Statistic 4 -->
         <div class="widget-spectrum-quarter span-3">
-            <div class="widget_icon icon-plain-size-9">
+            <div class="widget_icon button-icon-plain-size-8">
                 <i class="fa fa-desktop"></i>
             </div>
             <header class="widget_header heading_group">

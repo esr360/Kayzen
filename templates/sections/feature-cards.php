@@ -6,10 +6,10 @@
                 <div class="thumbnail-zoom">
                     <div class="thumbnail_mask">
                         <div class="thumbnail_controls icon_group-small">
-                            <a href="#" class="icon-border-circle-size-3">
+                            <a href="#" class="button-icon-border-circle">
                                 <i class="fa fa-search"></i>
                             </a>
-                            <a href="#" class="icon-border-circle-size-3">
+                            <a href="#" class="button-icon-border-circle">
                                 <i class="fa fa-link"></i>
                             </a>
                         </div>
@@ -31,10 +31,10 @@
                 <div class="thumbnail-zoom">
                     <div class="thumbnail_mask">
                         <div class="thumbnail_controls icon_group-small">
-                            <a href="#" class="icon-border-circle-size-3">
+                            <a href="#" class="button-icon-border-circle">
                                 <i class="fa fa-search"></i>
                             </a>
-                            <a href="#" class="icon-border-circle-size-3">
+                            <a href="#" class="button-icon-border-circle">
                                 <i class="fa fa-link"></i>
                             </a>
                         </div>
@@ -56,10 +56,10 @@
                 <div class="thumbnail-zoom">
                     <div class="thumbnail_mask">
                         <div class="thumbnail_controls icon_group-small">
-                            <a href="#" class="icon-border-circle-size-3">
+                            <a href="#" class="button-icon-border-circle">
                                 <i class="fa fa-search"></i>
                             </a>
-                            <a href="#" class="icon-border-circle-size-3">
+                            <a href="#" class="button-icon-border-circle">
                                 <i class="fa fa-link"></i>
                             </a>
                         </div>

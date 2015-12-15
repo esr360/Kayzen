@@ -177,8 +177,8 @@
 							</div>
 							
 							<nav class="thumbnail_nav slide-nav" id="latest-articles-nav">
-								<button class="slide-prev icon-size-5"><i class="fa fa-angle-left"></i></button>
-								<button class="slide-next icon-size-5"><i class="fa fa-angle-right"></i></button>
+								<button class="slide-prev button-icon-size-4"><i class="fa fa-angle-left"></i></button>
+								<button class="slide-next button-icon-size-4"><i class="fa fa-angle-right"></i></button>
 							</nav>
 						
 						</div>
@@ -215,12 +215,12 @@
 										<div class="thumbnail_controls icon_group-small">
 											<a 
                                                 href="<?php echo appDir ?>/images/wallpapers/bg-7.jpg" 
-                                                class="icon-border-circle-size-3" 
+                                                class="button-icon-border-circle" 
                                                 rel="lightbox"
                                             >
 												<i class="fa fa-search"></i>
 											</a>
-											<a href="#" class="icon-border-circle-size-3">
+											<a href="#" class="button-icon-border-circle">
 												<i class="fa fa-link"></i>
 											</a>
 										</div>
@@ -255,12 +255,12 @@
 										<div class="thumbnail_controls icon_group-small">
 											<a 
                                                 href="<?php echo appDir ?>/images/wallpapers/bg-7.jpg" 
-                                                class="icon-border-circle-size-3" 
+                                                class="button-icon-border-circle" 
                                                 rel="lightbox"
                                             >
 												<i class="fa fa-search"></i>
 											</a>
-											<a href="#" class="icon-border-circle-size-3">
+											<a href="#" class="button-icon-border-circle">
 												<i class="fa fa-link"></i>
 											</a>
 										</div>
@@ -298,7 +298,7 @@
 						<div class="widget_group row-magic text-center">
 							
 							<div class="widget-borderTop-highlight-block-scale span">
-								<div class="widget_icon icon-plain-size-9">
+								<div class="widget_icon button-icon-plain-size-8">
 									<i class="fa fa-desktop"></i>
 								</div>
 								<header class="widget_header heading_group">
@@ -309,7 +309,7 @@
 							</div>
 							
 							<div class="widget-borderTop-highlight-block-scale span">
-								<div class="widget_icon icon-plain-size-9">
+								<div class="widget_icon button-icon-plain-size-8">
 									<i class="fa fa-desktop"></i>
 								</div>
 								<header class="widget_header heading_group">
@@ -320,7 +320,7 @@
 							</div>
 							
 							<div class="widget-borderTop-highlight-block-scale span">
-								<div class="widget_icon icon-plain-size-9">
+								<div class="widget_icon button-icon-plain-size-8">
 									<i class="fa fa-desktop"></i>
 								</div>
 								<header class="widget_header heading_group">
@@ -396,12 +396,12 @@
 										<div class="thumbnail_controls icon_group-small">
 											<a 
                                                 href="<?php echo appDir ?>/images/wallpapers/bg-7.jpg" 
-                                                class="icon-border-circle-size-3" 
+                                                class="button-icon-border-circle" 
                                                 rel="lightbox"
                                             >
 												<i class="fa fa-search"></i>
 											</a>
-											<a href="#" class="icon-border-circle-size-3">
+											<a href="#" class="button-icon-border-circle">
 												<i class="fa fa-link"></i>
 											</a>
 										</div>
@@ -433,12 +433,12 @@
 										<div class="thumbnail_controls icon_group-small">
 											<a 
                                                 href="<?php echo appDir ?>/images/wallpapers/bg-5.jpg" 
-                                                class="icon-border-circle-size-3" 
+                                                class="button-icon-border-circle" 
                                                 rel="lightbox"
                                             >
 												<i class="fa fa-search"></i>
 											</a>
-											<a href="#" class="icon-border-circle-size-3">
+											<a href="#" class="button-icon-border-circle">
 												<i class="fa fa-link"></i>
 											</a>
 										</div>
@@ -470,12 +470,12 @@
 										<div class="thumbnail_controls icon_group-small">
 											<a 
                                                 href="<?php echo appDir ?>/images/wallpapers/bg-3.jpg" 
-                                                class="icon-border-circle-size-3" 
+                                                class="button-icon-border-circle" 
                                                 rel="lightbox"
                                             >
 												<i class="fa fa-search"></i>
 											</a>
-											<a href="#" class="icon-border-circle-size-3">
+											<a href="#" class="button-icon-border-circle">
 												<i class="fa fa-link"></i>
 											</a>
 										</div>

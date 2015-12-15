@@ -41,8 +41,8 @@
 				</div>
 			</div>
 			<nav class="slide-nav">
-				<button class="slide-prev icon-border-size-4-white"><i class="fa fa-angle-left"></i></button>
-				<button class="slide-next icon-border-size-4-white"><i class="fa fa-angle-right"></i></button>
+				<button class="slide-prev button-icon-border-size-3-white"><i class="fa fa-angle-left"></i></button>
+				<button class="slide-next button-icon-border-size-3-white"><i class="fa fa-angle-right"></i></button>
 			</nav>
 			<a href="#s-welcome" class="scroll-wheel"></a>
 		</section>
@@ -134,7 +134,7 @@
 			<div class="row-block text-center">
 				
 				<div class="widget-block-panel-noHover span-3">
-					<div class="widget_icon icon-plain-size-9">
+					<div class="widget_icon button-icon-plain-size-8">
 						<i class="fa fa-desktop"></i>
 					</div>
 					<header class="widget_header heading_group">
@@ -145,7 +145,7 @@
 				</div>
 				
 				<div class="widget-block-panel-noHover span-3">
-					<div class="widget_icon icon-plain-size-9">
+					<div class="widget_icon button-icon-plain-size-8">
 						<i class="fa fa-clipboard"></i>
 					</div>
 					<header class="widget_header heading_group">
@@ -233,7 +233,7 @@
 			<a href="#" class="widget-spectrum-quarter-tub span-3">
 				<div class="widget_lid">
 					<div class="widget_sticker">
-                        <div class="widget_icon icon-plain-size-9">
+                        <div class="widget_icon button-icon-plain-size-8">
                             <i class="fa fa-battery-half"></i>
                         </div>
                         <header class="heading_group">
@@ -250,7 +250,7 @@
 			<a href="#" class="widget-spectrum-quarter-tub span-3">
 				<div class="widget_lid">
 					<div class="widget_sticker">
-                        <div class="widget_icon icon-plain-size-9">
+                        <div class="widget_icon button-icon-plain-size-8">
 						    <i class="fa fa-bar-chart"></i>
                         </div>
                         <header class="heading_group">
@@ -267,7 +267,7 @@
 			<a href="#" class="widget-spectrum-quarter-tub span-3">
 				<div class="widget_lid">
 					<div class="widget_sticker">
-                        <div class="widget_icon icon-plain-size-9">
+                        <div class="widget_icon button-icon-plain-size-8">
 						    <i class="fa fa-desktop"></i>
                         </div>
                         <header class="heading_group">
@@ -284,7 +284,7 @@
 			<a href="#" class="widget-spectrum-quarter-tub span-3">
 				<div class="widget_lid">
 					<div class="widget_sticker">
-                        <div class="widget_icon icon-plain-size-9">
+                        <div class="widget_icon button-icon-plain-size-8">
 						    <i class="fa fa-image"></i>
                         </div>
                         <header class="heading_group">

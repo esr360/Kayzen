@@ -37,7 +37,7 @@
                 
                 <!-- Feature 1 -->
                 <div class="widget-borderTop-highlight-block-scale span">
-                    <div class="widget_icon icon-plain-size-9">
+                    <div class="widget_icon button-icon-plain-size-8">
                         <i class="fa fa-desktop"></i>
                     </div>
                     <header class="widget_header heading_group">
@@ -49,7 +49,7 @@
                 
                 <!-- Feature 2 -->
                 <div class="widget-borderTop-highlight-block-scale span">
-                    <div class="widget_icon icon-plain-size-9">
+                    <div class="widget_icon button-icon-plain-size-8">
                         <i class="fa fa-clipboard"></i>
                     </div>
                     <header class="widget_header heading_group">
@@ -61,7 +61,7 @@
                 
                 <!-- Feature 3 -->
                 <div class="widget-borderTop-highlight-block-scale span">
-                    <div class="widget_icon icon-plain-size-9">
+                    <div class="widget_icon button-icon-plain-size-8">
                         <i class="fa fa-photo"></i>
                     </div>
                     <header class="widget_header heading_group">
@@ -73,7 +73,7 @@
                 
                 <!-- Feature 4 -->
                 <div class="widget-borderTop-highlight-block-scale span">
-                    <div class="widget_icon icon-plain-size-9">
+                    <div class="widget_icon button-icon-plain-size-8">
                         <i class="fa fa-eyedropper"></i>
                     </div>
                     <header class="widget_header heading_group">
