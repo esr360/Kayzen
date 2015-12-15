@@ -8,7 +8,7 @@
 			<button class="search-box_go button-icon-primary" type="submit">
 				<i class="fa fa-search"></i>
 			</button>
-			<span class="search-box_close icon">
+			<span class="search-box_close button-icon">
 				<i class="fa fa-times"></i>
 			</span>
 		</div>

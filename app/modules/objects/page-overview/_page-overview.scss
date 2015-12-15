@@ -30,7 +30,7 @@
 			display: none;
 		}
 		
-		@include overwrite(icon) {
+		@include overwrite(button) {
 			margin: 0;
 			font-size: 1.5rem;
 		}

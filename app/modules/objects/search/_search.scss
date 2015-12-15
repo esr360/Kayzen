@@ -60,7 +60,7 @@
 			height: 100%;
 		}
 		
-		@include overwrite-component(group, $parent: icon) {
+		@include overwrite-component(group, $parent: button) {
 			@include vertical-center(absolute);
 			right: 0;
 		}

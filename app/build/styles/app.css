@@ -6837,7 +6837,7 @@ progress::-moz-progress-bar {
   box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);
   display: block;
 }
-.thumbnail .icon, .thumbnail [class*="icon-"], [class*="thumbnail-"] .icon, [class*="thumbnail-"] [class*="icon-"] {
+.thumbnail .button, .thumbnail [class*="button-"], [class*="thumbnail-"] .button, [class*="thumbnail-"] [class*="button-"] {
   color: #ffffff;
 }
 [class*="thumbnail-"][class*="-zoom"]:hover img {
@@ -7280,10 +7280,10 @@ progress::-moz-progress-bar {
 [class*="widget-"][class*="-spectrum-quarter"]:nth-child(4) {
   background: #a86dbe;
 }
-[class*="widget-"][class*="-spectrum-quarter"] .icon, [class*="widget-"][class*="-spectrum-quarter"] [class*="icon-"] {
+[class*="widget-"][class*="-spectrum-quarter"] .button, [class*="widget-"][class*="-spectrum-quarter"] [class*="button-"] {
   color: rgba(255, 255, 255, 0.5);
 }
-[class*="widget-"][class*="-spectrum-quarter"]:hover .icon, [class*="widget-"][class*="-spectrum-quarter"]:hover [class*="icon-"] {
+[class*="widget-"][class*="-spectrum-quarter"]:hover .button, [class*="widget-"][class*="-spectrum-quarter"]:hover [class*="button-"] {
   color: #ffffff;
 }
 [class*="widget-"][class*="-spectrum-quarter"][class*="-large"] {
@@ -8171,7 +8171,7 @@ progress::-moz-progress-bar {
 .page-overview [class*="heading_group"], [class*="page-overview-"] [class*="heading_group"] {
   display: none;
 }
-.page-overview .icon, .page-overview [class*="icon-"], [class*="page-overview-"] .icon, [class*="page-overview-"] [class*="icon-"] {
+.page-overview .button, .page-overview [class*="button-"], [class*="page-overview-"] .button, [class*="page-overview-"] [class*="button-"] {
   margin: 0;
   font-size: 1.5rem;
 }
@@ -8301,7 +8301,7 @@ progress::-moz-progress-bar {
 .search-box .container, .search-box [class*="container-"], [class*="search-box-"] .container, [class*="search-box-"] [class*="container-"] {
   height: 100%;
 }
-.search-box [class*="icon_group"], [class*="search-box-"] [class*="icon_group"] {
+.search-box [class*="button_group"], [class*="search-box-"] [class*="button_group"] {
   position: absolute;
   top: 50%;
   -webkit-transform: translateY(-50%);

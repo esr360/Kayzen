@@ -225,11 +225,11 @@
 			&:nth-child(4) {
 				background: lighten(color(brand, primary), 6%);
 			}
-			@include overwrite(icon) {
+			@include overwrite(button) {
 				color: rgba(white, 0.5);
 			}
 			&:hover {
-				@include overwrite(icon) {
+				@include overwrite(button) {
 					color: color(greyscale, white);
 				}
 			}

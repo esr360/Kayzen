@@ -108,7 +108,7 @@
 			display: block;
 		}
 		
-		@include overwrite(icon) {
+		@include overwrite(button) {
 			color: color(greyscale, white);
 		}
 	
