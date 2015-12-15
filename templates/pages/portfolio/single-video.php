@@ -46,7 +46,7 @@
                 
             <div class="span-7">
                 <div class="desktop-graphic">
-                    <img src="<?php echo appDir ?>/images/demo-screen.png" alt=""/ >
+                    <img src="<?php echo appDir ?>/images/demo-screen.png" alt="" />
                     <span class="desktop-graphic_image owl-carousel" id="portfolio-thumbs">
                         <div class="auto-resizable-iframe" data-iframe-height="56.5%">
                             <div>
@@ -171,7 +171,7 @@
                     </div>
                 </div>
                 <div class="span-4 va-middle text-center">
-                    <img class="span-10" src="<?php echo appDir ?>/images/layouts/layout-header-alt.png" alt=""/ >
+                    <img class="span-10" src="<?php echo appDir ?>/images/layouts/layout-header-alt.png" alt="" />
                 </div>
             </div>
             

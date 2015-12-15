@@ -46,7 +46,7 @@
                 
             <div class="span-7">
                 <div class="desktop-graphic">
-                    <img src="<?php echo appDir ?>/images/demo-screen.png" alt=""/ >
+                    <img src="<?php echo appDir ?>/images/demo-screen.png" alt="" />
                     <span class="desktop-graphic_image owl-carousel" id="portfolio-thumbs">
                         <div style="background-image: url('<?php echo appDir ?>/images/stock-1.jpg')"></div>
                         <div style="background-image: url('<?php echo appDir ?>/images/stock-2.jpg')"></div>
@@ -195,7 +195,7 @@
                     </div>
                 </div>
                 <div class="span-4 va-middle text-center">
-                    <img class="span-10" src="<?php echo appDir ?>/images/layouts/layout-header-alt.png" alt=""/ >
+                    <img class="span-10" src="<?php echo appDir ?>/images/layouts/layout-header-alt.png" alt="" />
                 </div>
             </div>
             

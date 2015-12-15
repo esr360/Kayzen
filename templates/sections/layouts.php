@@ -36,48 +36,48 @@
             <!-- Layouts Row 1 -->
             <div class="widget_group-large row-magic">
                 <div class="span">
-                    <img src="<?php echo appDir ?>/images/layouts/layout-header-top.png" alt=""/ >
+                    <img src="<?php echo appDir ?>/images/layouts/layout-header-top.png" alt="" />
                 </div>
                 <div class="span">
-                    <img src="<?php echo appDir ?>/images/layouts/layout-header-alt-topbar.png" alt=""/ >
+                    <img src="<?php echo appDir ?>/images/layouts/layout-header-alt-topbar.png" alt="" />
                 </div>
                 <div class="span">
-                    <img src="<?php echo appDir ?>/images/layouts/layout-right-sidebar.png" alt=""/ >
+                    <img src="<?php echo appDir ?>/images/layouts/layout-right-sidebar.png" alt="" />
                 </div>
                 <div class="span">
-                    <img src="<?php echo appDir ?>/images/layouts/layout-left-header.png" alt=""/ >
+                    <img src="<?php echo appDir ?>/images/layouts/layout-left-header.png" alt="" />
                 </div>
             </div>
             
             <!-- Layouts Row 2 -->
             <div class="widget_group-large row-magic">
                 <div class="span">
-                    <img src="<?php echo appDir ?>/images/layouts/layout-right-header-topbar.png" alt=""/ >
+                    <img src="<?php echo appDir ?>/images/layouts/layout-right-header-topbar.png" alt="" />
                 </div>
                 <div class="span">
-                    <img src="<?php echo appDir ?>/images/layouts/layout-topbar.png" alt=""/ >
+                    <img src="<?php echo appDir ?>/images/layouts/layout-topbar.png" alt="" />
                 </div>
                 <div class="span">
-                    <img src="<?php echo appDir ?>/images/layouts/layout-header-alt.png" alt=""/ >
+                    <img src="<?php echo appDir ?>/images/layouts/layout-header-alt.png" alt="" />
                 </div>
                 <div class="span">
-                    <img src="<?php echo appDir ?>/images/layouts/layout-header-no-bar-topbar.png" alt=""/ >
+                    <img src="<?php echo appDir ?>/images/layouts/layout-header-no-bar-topbar.png" alt="" />
                 </div>
             </div>
             
             <!-- Layouts Row 3 -->
             <div class="widget_group-large row-magic">
                 <div class="span">
-                    <img src="<?php echo appDir ?>/images/layouts/layout-left-sidebar.png" alt=""/ >
+                    <img src="<?php echo appDir ?>/images/layouts/layout-left-sidebar.png" alt="" />
                 </div>
                 <div class="span">
-                    <img src="<?php echo appDir ?>/images/layouts/layout-right-header.png" alt=""/ >
+                    <img src="<?php echo appDir ?>/images/layouts/layout-right-header.png" alt="" />
                 </div>
                 <div class="span">
-                    <img src="<?php echo appDir ?>/images/layouts/layout-menu-alt.png" alt=""/ >
+                    <img src="<?php echo appDir ?>/images/layouts/layout-menu-alt.png" alt="" />
                 </div>
                 <div class="span">
-                    <img src="<?php echo appDir ?>/images/layouts/layout-left-header-topbar.png" alt=""/ >
+                    <img src="<?php echo appDir ?>/images/layouts/layout-left-header-topbar.png" alt="" />
                 </div>
             </div>
             

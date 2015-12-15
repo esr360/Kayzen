@@ -27,7 +27,7 @@
     
                 <!-- Logo -->
                 <div class="logo">
-                    <a href="/"><img src="<?php echo appDir ?>/images/logo-white.png" alt="logo"/ ></a>
+                    <a href="/"><img src="<?php echo appDir ?>/images/logo-white.png" alt="logo" /></a>
                 </div>
     
                 <?php include ('navigation.php'); ?>

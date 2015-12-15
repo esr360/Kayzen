@@ -36,19 +36,19 @@
             <!-- Shortcodes Graphics -->
             <div class="carousel-scale-2 owl-carousel" id="shortcodes-carousel">
                 <div class="desktop-graphic-scroll">
-                    <img src="<?php echo appDir ?>/images/demo-screen.png" alt=""/ >
+                    <img src="<?php echo appDir ?>/images/demo-screen.png" alt="" />
                     <div class="desktop-graphic_image" style="background-image: url('<?php echo appDir ?>/images/stock-1.jpg')"></div>
                 </div>
                 <div class="desktop-graphic-scroll">
-                    <img src="<?php echo appDir ?>/images/demo-screen.png" alt=""/ >
+                    <img src="<?php echo appDir ?>/images/demo-screen.png" alt="" />
                     <div class="desktop-graphic_image" style="background-image: url('<?php echo appDir ?>/images/stock-2.jpg')"></div>
                 </div>
                 <div class="desktop-graphic-scroll">
-                    <img src="<?php echo appDir ?>/images/demo-screen.png" alt=""/ >
+                    <img src="<?php echo appDir ?>/images/demo-screen.png" alt="" />
                     <div class="desktop-graphic_image" style="background-image: url('<?php echo appDir ?>/images/stock-3.jpg')"></div>
                 </div>
                 <div class="desktop-graphic-scroll">
-                    <img src="<?php echo appDir ?>/images/demo-screen.png" alt=""/ >
+                    <img src="<?php echo appDir ?>/images/demo-screen.png" alt="" />
                     <div class="desktop-graphic_image" style="background-image: url('<?php echo appDir ?>/images/stock-4.jpg')"></div>
                 </div>
             </div>

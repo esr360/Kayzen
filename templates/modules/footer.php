@@ -26,7 +26,7 @@
                     <!-- Meta -->
                     <div class="span-3">
                         <div class="logo">
-                            <a href="/"><img src="<?php echo appDir ?>/images/logo-white.png" alt="logo"/ ></a>
+                            <a href="/"><img src="<?php echo appDir ?>/images/logo-white.png" alt="logo" /></a>
                         </div>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris in hendrerit neque, suscipit congue mauris.</p>
                         <ul class="list-reset">
