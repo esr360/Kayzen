@@ -1,7 +1,7 @@
 <?php 
 	include ('../../../app.php');
 	// page config
-	$title = 'Images';
+	$title = 'Images & Graphics';
 	$tagLine = 'app/modules/elements/images';
 ?>
 
@@ -57,7 +57,7 @@
                 
 				<h2 class="heading-light-size-5">Examples</h2>
                 
-                <h3 class="heading-size-3"><code>desktop-graphic()</code> module</h3>
+                <h3 class="heading-size-3">Desktop Graphic Module</h3>
                 
                 <div class="well object">
                     <div class="desktop-graphic span-5">
@@ -70,18 +70,89 @@
                     </div>                    
                 </div>
                 
-<pre data-enlighter-language="html" class="EnlighterJSRAW" style="display: none;">
-&lt;div class="accordion">
-
-<div class="desktop-graphic span-5">
-    <img src="/images/demo-screen.png" alt="" />
-    <div class="desktop-graphic_image" style="background-image: url('/images/stock-1.jpg')"></div>
-</div>  
-<div class="desktop-graphic-scroll span-5">
-    <img src="/images/demo-screen.png" alt="" />
-    <div class="desktop-graphic_image" style="background-image: url('/images/stock-2.jpg')"></div>
-</div> 
+<pre data-enlighter-language="html" class="EnlighterJSRAW">
+&lt;div class="desktop-graphic">
+    &lt;img src="/images/demo-screen.png" alt="" />
+    &lt;div class="desktop-graphic_image" style="background-image: url('/images/stock-1.jpg')">&lt;/div>
+&lt;/div>  
 </pre>
+
+                <h4 class="heading-size-2-uppercase">Scroll On Hover</h4>
+                
+<pre data-enlighter-language="html" class="EnlighterJSRAW">
+&lt;div class="desktop-graphic-scroll">
+    &lt;img src="/images/demo-screen.png" alt="" />
+    &lt;div class="desktop-graphic_image" style="background-image: url('/images/stock-2.jpg')">&lt;/div>
+&lt;/div> 
+</pre>
+                
+                <h3 class="heading-size-3">Mobile Graphic Module</h3>
+                
+                <div class="well object">
+                    <div class="span-3">
+                        <img class="mobile-graphic" src="<?php echo appDir ?>/images/mobile-screen.png" />
+                    </div>
+                </div>
+                
+<pre data-enlighter-language="html" class="EnlighterJSRAW">
+&lt;img class="mobile-graphic" src="/images/mobile-screen.png" />
+</pre>
+                
+                <h4 class="heading-size-2-uppercase">Color Options</h4>
+                
+                <div class="well object">
+                    <div class="row">
+                        <div class="span-2">
+                            <img class="mobile-graphic-blue" src="<?php echo appDir ?>/images/mobile-screen.png" />
+                        </div>
+                        <div class="span-2">
+                            <img class="mobile-graphic-green" src="<?php echo appDir ?>/images/mobile-screen.png" />
+                        </div>
+                        <div class="span-2">
+                            <img class="mobile-graphic-purple" src="<?php echo appDir ?>/images/mobile-screen.png" />
+                        </div>
+                        <div class="span-2">
+                            <img class="mobile-graphic-red" src="<?php echo appDir ?>/images/mobile-screen.png" />
+                        </div>
+                        <div class="span-2">
+                            <img class="mobile-graphic-yellow" src="<?php echo appDir ?>/images/mobile-screen.png" />
+                        </div>
+                        <div class="span-2">
+                            <img class="mobile-graphic-white" src="<?php echo appDir ?>/images/mobile-screen.png" />
+                        </div>
+                    </div>
+                </div>
+
+                <p><strong>Available colors:</strong></p>
+                
+                <ul class="list-clear">
+                    <li>blue</li>
+                    <li>green</li>
+                    <li>purple</li>
+                    <li>red</li>
+                    <li>yellow</li>
+                    <li>white</li>
+                </ul>
+                
+<pre data-enlighter-language="html" class="EnlighterJSRAW">
+&lt;img class="mobile-graphic-purple" src="/images/mobile-screen.png" />
+</pre>
+                
+                <h3 class="heading-size-3">Horizontal/Vertical Centering</h3>
+                
+                <p>The class <code>center-xy</code> will horizontally and vertically center an image in a container. Alone this doesn't have much practical use, but can be used in different creative ways.</p>
+                
+                <div class="well object">
+                    <div class="center-xy hide-overflow" style="height: 88px; width: 180px;">
+                        <img src="<?php echo appDir ?>/images/team/team-1.jpg">
+                    </div>
+                </div>    
+                
+<pre data-enlighter-language="html" class="EnlighterJSRAW">
+&lt;div class="center-xy hide-overflow" style="height: 88px; width: 180px;">
+    &lt;img src="/images/team/team-1.jpg">
+&lt;/div>
+</pre>            
                 
 			</div><!-- container-small -->
 			
