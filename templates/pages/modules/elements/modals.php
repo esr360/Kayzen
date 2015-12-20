@@ -42,7 +42,7 @@
 					<li class="plain"><span>README.md</span></li>	
 				</ul>
                 
-				<p class="alert-bar-info"><small><strong>Github Page</strong> (customers only):  <a href="https://github.com/esr360/Kayzen/tree/master/app/modules/elements/modals" target="blank">https://github.com/esr360/Kayzen/tree/master/app/modules/elements/modals</a></small></p>
+				<p class="alert-bar-info"><strong>Github Page</strong> (customers only):  <a href="https://github.com/esr360/Kayzen/tree/master/app/modules/elements/modals" target="blank">https://github.com/esr360/Kayzen/tree/master/app/modules/elements/modals</a></p>
 				
 				<h2 class="heading-light-size-5">Module Overview</h2>
                 
@@ -256,6 +256,11 @@
 					</thead>
 					<tbody>
 						<tr>
+							<td><code>default-animation</code></td>
+							<td><code class="value">left</code></td>
+							<td>The default animation style modals should use (top, bottom, left, right, spin, zoom).</td>
+						</tr>
+						<tr>
 							<td><code>background-color</code></td>
 							<td><code class="value">color(greyscale, grey-1)</code></td>
 							<td>The background color of modal boxes.</td>
@@ -264,6 +269,11 @@
 							<td><code>text-color</code></td>
 							<td><code class="value">base(text-color)</code></td>
 							<td>The text color of modal boxes.</td>
+						</tr>
+						<tr>
+							<td><code>radius</code></td>
+							<td><code class="value">0</code></td>
+							<td>The border radius of modal boxes.</td>
 						</tr>
 						<tr>
 							<td><code>z-index</code></td>
@@ -303,6 +313,7 @@
 <pre data-enlighter-language="css" class="EnlighterJSRAW">
 @include modals((
 	'background-color'  : rgba(white, 0.8),
+    'radius'            : 0.4em,
 	'close-icon-size'   : 2em
 ));
 </pre>
@@ -310,6 +321,7 @@
                 <style>
                     #modal-demo-11 {
                         background-color: rgba(255, 255, 255, 0.8);
+                        border-radius: 0.4em;
                     }
                     #modal-demo-11 .modal_close {
                         font-size: 2em;
@@ -317,7 +329,7 @@
                 </style>
                 <div class="well object">
                     <a href="#modal-demo-11">Click Me</a>
-                    <div class="modal-animate-bottom" id="modal-demo-11">
+                    <div class="modal" id="modal-demo-11">
                         <div class="modal_close"><i class="fa fa-times"></i></div>
                         <div class="modal_content">
                             <p>Lorem ipsum dolor sit amet.</p>

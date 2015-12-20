@@ -44,7 +44,7 @@
 			
 			var defaults = {  
 				overlay : true,
-				animate : 'top'
+				animate : _module['modal']['dafault-animation']
 			};
 			
 			var options = $.extend(defaults, options);	
@@ -74,10 +74,10 @@
 					id = el.attr('id');
 				
 				if (el.is('[class*="-animate"]')) {
-					options.animate = false;
+					var $animate = true;
 				}
 				
-				if (options.animate !== false) {
+				if (!$animate) {
 					el.addClass('modal-animate-' + animateStyle);
 				}
 				
