@@ -395,7 +395,7 @@
                     </tbody>
                 </table>
 
-				<p>To change one of the above values, pass your new value(s) to the <code>headings()</code> mixin in your theme file (e.g. app/themes/Kayzen/_kayzen.scss).</p>   
+				<p>To change one of the above values, pass your new value(s) to the <code>headings()</code> mixin in your theme file (e.g. app/themes/Kayzen/_kayzen.scss).</p>
                              		
 <pre data-enlighter-language="css" class="EnlighterJSRAW">
 @include headings((

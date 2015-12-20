@@ -6431,7 +6431,10 @@ $(accordion);
 				
 			$('body').append(
 				'<div class="modal' + style + '" id="' + id + '">' +
-					content +
+                    '<div class="modal_close"><i class="fa fa-times"></i></div>' +
+                    '<div class="modal_content">' +
+					   content +
+                    '</div>' +
 				'</div>'
 			);
 		

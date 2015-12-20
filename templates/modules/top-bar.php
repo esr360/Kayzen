@@ -18,8 +18,8 @@
     
     <!-- Login Box -->
     <div class="modal" id="modal-login">
-        <div class="modal_close"><i class="fa fa-times fa-2x"></i></div>
-        <div class="modal_content text-left">
+        <div class="modal_close"><i class="fa fa-times"></i></div>
+        <div class="modal_content">
             <div class="row-block">
                 <div class="span-5">
                     <h3 class="heading">Sign in to your account</h3>
@@ -59,7 +59,7 @@
     
     <!-- Register Box -->
     <div class="modal" id="modal-register">
-        <div class="modal_close"><i class="fa fa-times fa-2x"></i></div>
+        <div class="modal_close"><i class="fa fa-times"></i></div>
         <div class="modal_content text-left">
             <div class="row-block">
                 <div class="span-5">
