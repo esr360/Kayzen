@@ -71,7 +71,7 @@
 			
 			@include modifier('pills') {
 				display: inline-block;
-				@include nested-modifier('large') {
+				@include modifier('large') {
 					margin-bottom: (base('margin') * 2);
 				}
 			}
@@ -86,7 +86,7 @@
 				padding: 1.5em;
 				position: relative;
 				top: -1px;
-				@include nested-modifier('glue') {
+				@include modifier('glue') {
 					$tabs-glue: 6px;
 					margin-top: $tabs-glue;
 					top: -2px;
@@ -102,7 +102,7 @@
 						background: color('brand', 'primary');
 					}
 				}
-                @include nested-modifier('deep') {
+                @include modifier('deep') {
                     padding: 2.5em;
                 }
 			}

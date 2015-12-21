@@ -36,7 +36,7 @@
             > [class*="#{option($grid, 'options', 'col-namespace')}"] {
                 margin-bottom: option($grid, 'options', 'gutter');
             }
-            @include nested-modifier('large') {
+            @include modifier('large') {
                 margin-bottom: - (option($grid, 'options', 'gutter') * 2);
                 > [class*="#{option($grid, 'options', 'col-namespace')}"] {
                     margin-bottom: (option($grid, 'options', 'gutter') * 2);

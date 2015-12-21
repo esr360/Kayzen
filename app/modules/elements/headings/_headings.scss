@@ -87,7 +87,7 @@
 					box-decoration-break: clone;
 				}
 			}
-			@include nested-modifier(dark) {
+			@include modifier(dark) {
 				> b {
 					background: color(greyscale, grey-6);
 					box-shadow: $highlight-dimensions 0 0 color(greyscale, grey-6), -$highlight-dimensions 0 0 color(greyscale, grey-6);
@@ -116,7 +116,7 @@
 					right: calc(-75px - 1rem);
 				}
 			}
-            @include nested-modifier('dots') {
+            @include modifier('dots') {
                 > span {
                     &:before, &:after {
                         border-bottom-style: dotted;

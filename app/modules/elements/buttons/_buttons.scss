@@ -140,7 +140,7 @@
 				&:hover {
 					background: darken($color, 10%);
 				}
-				@include nested-modifier(border) {
+				@include modifier(border) {
 					background: transparent;
 					border-color: $color;
 					color: $color;
@@ -162,7 +162,7 @@
 				&:hover {
 					background: darken($color, 10%);
 				}
-				@include nested-modifier(border) {
+				@include modifier(border) {
 					background: transparent;
 					border-color: $color;
 					color: $color;

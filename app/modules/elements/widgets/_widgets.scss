@@ -41,13 +41,13 @@
 		@include modifier(block) {
 			background: color(greyscale, white);
 			padding: 2.5em 1em;
-			@include nested-modifier(small) {
+			@include modifier(small) {
 				padding: 1.5em 1em;
 				@include overwrite-component(icon) {
 					margin-bottom: base(margin) * 0.57; // magic number 1 of 1
 				}
 			}
-			@include nested-modifier(fill) {
+			@include modifier(fill) {
 				background-color: color(brand, primary);	
 				color: color(greyscale, white);
 				@include overwrite(heading) {
@@ -67,10 +67,10 @@
                     @include overwrite-component(icon) {
                         color: color(greyscale, white);
                     }
-                    @include nested-modifier(fill) {
+                    @include modifier(fill) {
                         background-color: darken(color(brand, primary), 10%);
                     }
-                    @include nested-modifier(panel) {
+                    @include modifier(panel) {
                         border-color: color(brand, primary);
                     }
                 }
@@ -85,7 +85,7 @@
 			padding: 4%;
 			border-top: 1px solid color(greyscale, grey-2);	
 			border-left: 1px solid color(greyscale, grey-2);
-			@include nested-modifier(small) {
+			@include modifier(small) {
 				padding: 4% 2%;
 			}
             &:last-child {
@@ -123,7 +123,7 @@
 		@include modifier(borderTop) {
 			border: 0; // reset border
 			border-top: 0.6em solid rgba(black, 0.15);
-			@include nested-modifier(highlight) {
+			@include modifier(highlight) {
 				border-top-color: color(brand, primary);
 				&:hover {
 					border-top-color: rgba(black, 0.15);
@@ -133,7 +133,7 @@
 	
 		@include modifier(borderLeft) {
 			border-left: 0.6em solid rgba(black, 0.15);
-			@include nested-modifier(highlight) {
+			@include modifier(highlight) {
 				border-left-color: color(brand, primary);
 				&:hover {
 					border-left-color: rgba(black, 0.15);
@@ -233,7 +233,7 @@
 					color: color(greyscale, white);
 				}
 			}
-            @include nested-modifier('large') {
+            @include modifier('large') {
 			    padding: 4%;
             }
 		}

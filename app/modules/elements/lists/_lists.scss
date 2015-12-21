@@ -83,7 +83,7 @@
 					color: color(brand, primary);
 				}
 			}
-            @include nested-modifier('adjust') {
+            @include modifier('adjust') {
                 > li {
                     line-height: 1.7;
                 }

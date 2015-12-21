@@ -33,12 +33,12 @@
 
 	    @include modifier(scale) {
 	        margin-top: base(margin);
-	        @include nested-modifier(1) {
+	        @include modifier(1) {
 	            .center {
 	                transform: scale(1.1);
 	            }            
 	        }
-	        @include nested-modifier(2) {
+	        @include modifier(2) {
 	            .center {
 	                transform: scale(1.25);
 	            }      
@@ -46,7 +46,7 @@
 					padding-bottom: 3em;
 				}      
 	        }
-	        @include nested-modifier(3) {
+	        @include modifier(3) {
 	            .center {
 	                transform: scale(1.4);
 	            }            
@@ -116,7 +116,7 @@
                     right: 0.25em;
                 }
             }
-            @include nested-modifier('cornerDots') {
+            @include modifier('cornerDots') {
                 .owl-prev, .owl-next {
                     top: 50%;
                 }

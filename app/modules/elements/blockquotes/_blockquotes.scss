@@ -60,10 +60,10 @@
             max-width: 50%;
             text-align: left;
             font-style: italic;
-            @include nested-modifier('top') {
+            @include modifier('top') {
                 margin-top: 0;
             }
-            @include nested-modifier('bottom') {
+            @include modifier('bottom') {
                 margin-bottom: 0;
             }
         }
