@@ -9,7 +9,7 @@
 	//-------------------------------------------------------------
 
 	$forms: config((
-		name            : thumbnail
+		'name'            : 'thumbnail'
 	), $custom);
 
 	//-------------------------------------------------------------
@@ -23,7 +23,7 @@
 	
 		position: relative;
 		overflow: hidden;
-		margin-bottom: base(margin);
+		margin-bottom: base('margin');
 		@include vertical-rhythm;
         .text-center > & {
             margin-left: auto;
@@ -35,6 +35,10 @@
 			min-width: 100%;
 			display: block;
 		}
+		
+		@include overwrite('button') {
+			color: color('greyscale', 'white');
+		}
 
 	// Modifiers
 	//-------------------------------------------------------------
@@ -43,21 +47,21 @@
             margin-bottom: 1em;
         }
 	
-		@include modifier(feature) {
-			@include overwrite-component(content) {
+		@include modifier('feature') {
+			@include overwrite-component('content') {
 				position: absolute;
 				bottom: 0;
 				width: 100%;
 				background: rgba(black, 0.5);
 				padding: 1.5em;
-				color: color(greyscale, white);
+				color: color('greyscale', 'white');
 			}
-			@include overwrite-component(group, $parent: heading) {
-				color: color(greyscale, white);
+			@include overwrite-component('group', $parent: 'heading') {
+				color: color('greyscale', 'white');
 			}
 		}
 	
-		@include modifier(profile) {
+		@include modifier('profile') {
 			height: 50px;
 			width: 50px;
 			img {
@@ -66,7 +70,7 @@
 				height: 101%;
 				margin-left: -25%;
 			}
-			@include nested-modifier(fill) {
+			@include modifier('fill') {
 				height: 0;
 				width: 100%;
 				padding-top: 100%;
@@ -76,43 +80,39 @@
 					top: 0;
 				}
 			}
-			@include modifier(badge) {
+			@include modifier('badge') {
 				border: 0.25em solid white;
 				box-shadow: 0 0 0 0.4em rgba(black, 0.2);
 			}
-			@include nested-modifier(round) {
+			@include modifier('round') {
 				overflow: hidden;
 				border-radius: 50%;
 			}
-			@include modifier(xlarge) {
+			@include modifier('xlarge') {
 				height: 95px;
 				width: 95px;
 			}
-			@include modifier(large) {
+			@include modifier('large') {
 				height: 75px;
 				width: 75px;
 			}
-			@include nested-modifier(small) {
+			@include modifier('small') {
 				height: 44px;
 				width: 44px;
 			}
-			@include nested-modifier(xsmall) {
+			@include modifier('xsmall') {
 				height: 24px;
 				width: 24px;
 			}
 		}
 		
-		@include modifier(styled) {
+		@include modifier('styled') {
 			border: 5px solid white;
-			box-shadow: 0px 0px 1px rgba(0,0,0,0.2);
+			box-shadow: 0px 0px 1px rgba(black, 0.2);
 			display: block;
 		}
-		
-		@include overwrite(button) {
-			color: color(greyscale, white);
-		}
 	
-		@include modifier(zoom) {
+		@include modifier('zoom') {
 			&:hover {
 				img {
 					transform: scale(1.25);
@@ -124,11 +124,16 @@
             height: 200px;
             @extend .center-xy;
         }
+        
+        @include modifier('inline') {
+            display: inline-block;
+            vertical-align: top;
+        }
 
 	// Components
 	//-------------------------------------------------------------
 		
-		@include component(mask) {
+		@include component('mask') {
 			background: rgba(black, 0.6);
 			position: absolute;
 			z-index: 2;
@@ -136,11 +141,11 @@
 			width: 100%;
 			text-align: center;
 			opacity: 0;
-			transition: base(transition);
+			transition: base('transition');
 			&:before {
 				content: "";
 				position: absolute;
-				border: 2px solid color(brand, primary);
+				border: 2px solid color('brand', 'primary');
 				top: 1.25rem;
 				bottom: 1.25rem;
 				left: 1.25rem;
@@ -148,14 +153,14 @@
 				z-index: 4;
 				opacity: 0;
 				transform: scale(1.15);		   
-				transition: base(transition);
+				transition: base('transition');
 			}
-			@include overwrite-component(group, $parent: heading) {
+			@include overwrite-component('group', $parent: 'heading') {
 				&[class*="thumbnail_title"] { 
-					color: color(greyscale, white);
+					color: color('greyscale', 'white');
 				}
 			}
-			@include context(parent-hovered) {
+			@include context('parent-hovered') {
 				opacity: 1;
 				&:before {
 					opacity: 1;
@@ -164,50 +169,50 @@
 			}
 		}
 		
-		@include components((controls, title)) {
+		@include components(('controls', 'title')) {
 			position: absolute;
 			z-index: 6;
 			transition: base(transition);
 		}
 		
-		@include component(controls) {
+		@include component('controls') {
 			@extend %horizontal-center;
 			top: 42.5%;
 			transform: translateY(-50%);
 			display: inline-block;
-			@include context(parent-hovered) {
+			@include context('parent-hovered') {
 				top: 50%;
 			}
-			@include modifier(corner) {
+			@include modifier('corner') {
 				top: 2em;
 				left: auto;
 				right: 3em;
-				@include context(parent-hovered) {
+				@include context('parent-hovered') {
 					top: 4em;
 				}
 			}
 		}
 		
-		@include component(title) {
+		@include component('title') {
 			bottom: 1em;
 			left: 3em;
 			text-align: left;
-			@include context(parent-hovered) {
+			@include context('parent-hovered') {
 				bottom: 3em;
 			}
 			$test: & !global;
 		}
 		
-		@include component(excerpt) {
+		@include component('excerpt') {
 			font-weight: lighter;
-			color: color(greyscale, grey-2);
+			color: color('greyscale', 'grey-2');
 		}
 		
-		@include component(nav) {
+		@include component('nav') {
 			.slide-prev, .slide-next {
 				background: rgba(black, 0.4);
 				&:hover {
-					background: color(brand, primary);
+					background: color('brand', 'primary');
 				}
 			}
 			.slide-prev {
@@ -218,13 +223,13 @@
 			}
 		}
 		
-		@include component(grid) {
-			margin: option($grid, options, gutter) auto;
+		@include component('grid') {
+			margin: option($grid, 'options', 'gutter') auto;
 			@include modifier(fade) {
 				img {
 					opacity: 0.65;
 					cursor: pointer;
-					transition: base(transition);
+					transition: base('transition');
 					transform: translateZ(0);
 					&:hover, &.active {
 						opacity: 1;
@@ -232,11 +237,6 @@
 				}
 			}
 		}
-        
-        @include modifier('inline') {
-            display: inline-block;
-            vertical-align: top;
-        }
         
         @include component('aside') {
             width: calc(100% - 100px);
@@ -247,14 +247,14 @@
 		
 		// Nested thumbnail-profile
 		
-		@include overwrite($is: profile, $special: adjacent-sibling) {
+		@include overwrite($is: 'profile', $special: 'adjacent-sibling') {
 			position: absolute;
 			z-index: 3;
 			top: 8%;
 			left: -0.5em;
-			transition: base(transition);
+			transition: base('transition');
 		}
 		
-	} // component
+	} // module
 	
 } // @mixin thumbnails

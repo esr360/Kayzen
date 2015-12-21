@@ -13,8 +13,21 @@
 	//-------------------------------------------------------------
 
 	$tabs: config((
-		name            : tabs,
-		output-JSON     : true
+		'name'                       : 'tabs',
+		'output-JSON'                : true,
+        'navItem-padding'            : 0 1em,
+        'navItem-lineHeight'         : 2.4,
+        'navItem-borderColor'        : color('greyscale', 'grey-3'),
+        'navItem-active-color'       : color('greyscale', 'white'),
+        'navItem-active-borderColor' : color('brand', 'primary'),
+        'navItem-active-background'  : color('brand', 'primary'),
+        'contentBlock-background'    : color('greyscale', 'white'),
+        'contentBlock-color'         : base('text-color'),
+        'contentBlock-borderColor'   : color('greyscale', 'grey-2'),
+        'contentBlock-padding'       : 1.5em,
+        'contentBlock-glueHeight'    : 6px,
+        'contentBlock-glueColor'     : color('brand', 'primary'),
+        'contentBlock-deepPadding'   : 2.5em
 	), $custom);
 
 	//-------------------------------------------------------------
@@ -38,16 +51,17 @@
 			
 			li {
 				cursor: pointer;
-				transition: base(transition);
+				transition: base('transition');
 				float: left;
-				padding: 0.5em 1em;
-				border: 1px solid color(greyscale, grey-3);
+				padding: 0 1em;
+                line-height: 2.4;
+				border: 1px solid color('greyscale', 'grey-3');
 				&.active {
-					color: color(greyscale, white);
-					border-color: color(brand, primary);
-					background: color(brand, primary);
+					color: color('greyscale', 'white');
+					border-color: color('brand', 'primary');
+					background: color('brand', 'primary');
 					+ li {
-						border-left-color: color(brand, primary);
+						border-left-color: color('brand', 'primary');
 					}
 				}
 				&:not(:last-child) {
@@ -55,23 +69,24 @@
 				}
 			}
 			
-			@include modifier(pills) {
+			@include modifier('pills') {
 				display: inline-block;
-				@include nested-modifier(large) {
-					margin-bottom: (base(margin) * 2);
+				@include nested-modifier('large') {
+					margin-bottom: (base('margin') * 2);
 				}
 			}
 			
-		} // sub-component(nav)
+		} // component(nav)
 		
-		@include component(content) {
-			@include modifier(block) {
-				background: color(greyscale, white);
-				border: 1px solid color(greyscale, grey-2);
+		@include component('content') {
+			@include modifier('block') {
+				background: color('greyscale', 'white');
+                color: base('text-color');
+				border: 1px solid color('greyscale', 'grey-2');
 				padding: 1.5em;
 				position: relative;
 				top: -1px;
-				@include nested-modifier(glue) {
+				@include nested-modifier('glue') {
 					$tabs-glue: 6px;
 					margin-top: $tabs-glue;
 					top: -2px;
@@ -83,8 +98,8 @@
 						top: -$tabs-glue;
 						height: $tabs-glue;
 						width: calc(100% + 2px);
-						border: 1px solid color(brand, primary);
-						background: color(brand, primary);
+						border: 1px solid color('brand', 'primary');
+						background: color('brand', 'primary');
 					}
 				}
                 @include nested-modifier('deep') {
@@ -93,13 +108,13 @@
 			}
 		}
         
-        @include component(item) {
+        @include component('item') {
 			display: none;
 			&.active {
 				display: block;
 			}
         }
 	
-	} // component
+	} // module
 	
 } // @mixin tabs

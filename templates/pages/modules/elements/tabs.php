@@ -206,6 +206,192 @@
 &lt;/div>
 </pre>
                 
+                <h3 class="heading-size-3">Tabs With Pill Navigation</h3>
+                
+                <div class="well-deep object">
+    
+                    <div class="tabs">
+                    
+                        <ul class="tabs_nav-pills object-center">
+                            <li class="button-pill-grey-1 active">New Arrivals</li>
+                            <li class="button-pill-grey-1">Best Sellers</li>
+                            <li class="button-pill-grey-1">On Offer</li>
+                        </ul>
+                        
+                        <div class="tabs_content object">
+                            
+                            <section class="tabs_item active">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus suscipit risus eget dignissim varius. Vivamus tellus sem, egestas at hendrerit ultrices, pulvinar nec ipsum. </p>
+                            </section>
+                            
+                            <section class="tabs_item">
+                                <p>Aenean finibus blandit ex ut pretium. Etiam efficitur sapien nec mauris efficitur ultrices. In eget volutpat turpis. Morbi velit ex, malesuada at tellus vel, lacinia feugiat dolor. Nullam ultrices pharetra laoreet. Nunc ut lectus arcu. Nunc sed faucibus sapien, quis facilisis tellus.</p>
+                            </section>
+                            
+                            <section class="tabs_item">
+                                <p>Ut egestas, sapien et porta bibendum, erat tortor rutrum libero, non hendrerit odio mi eu ex. Nulla justo sapien, ultricies nec consectetur id, hendrerit cursus lectus.</p>
+                            </section>
+                        
+                        </div>
+                        
+                    </div>
+            
+                </div>
+                 
+<pre data-enlighter-language="html" class="EnlighterJSRAW">
+&lt;div class="tabs">
+
+    &lt;ul class="tabs_nav-pills object-center">
+        &lt;li class="button-pill-grey-1 active">New Arrivals&lt;/li>
+        &lt;li class="button-pill-grey-1">Best Sellers&lt;/li>
+        &lt;li class="button-pill-grey-1">On Offer&lt;/li>
+    &lt;/ul>
+    
+    &lt;div class="tabs_content object">
+        ...  
+    &lt;/div>
+    
+&lt;/div>
+</pre>
+                
+</pre>
+
+                <h2 class="heading-light-size-5">Customizing</h2>
+                
+                <p>The tabs can be customized using the following options:</p>
+                
+                <p class="alert-bar-help">Read the <a href="configuration.html">Configuration</a> page to learn more about a module's configuration.</p>
+                
+                <table class="table-style-1-small">
+					<thead>
+						<tr>
+							<th>Property Name</th>
+							<th>Default Value</th>
+							<th>Description</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td><code>navItem-padding</code></td>
+							<td><code class="value">0.5em 1em</code></td>
+							<td>The padding of the tabs navigation items.</td>
+						</tr>
+						<tr>
+							<td><code>navItem-lineHeight</code></td>
+							<td><code class="value">1.4</code></td>
+							<td>The line height of the tabs navigation items.</td>
+						</tr>
+						<tr>
+							<td><code>navItem-borderColor</code></td>
+							<td><code class="value">rgba(black, 0.15)</code></td>
+							<td>The border color of the tabs navigation items.</td>
+						</tr>
+						<tr>
+							<td><code>navItem-active-color</code></td>
+							<td><code class="value">color('greyscale', 'grey-3')</code></td>
+							<td>The text color of the active tabs navigation item.</td>
+						</tr>
+						<tr>
+							<td><code>navItem-active-borderColor</code></td>
+							<td><code class="value">color('greyscale', 'white')</code></td>
+							<td>The border color of the active tabs navigation item.</td>
+						</tr>
+						<tr>
+							<td><code>navItem-active-background</code></td>
+							<td><code class="value">color('brand', 'primary')</code></td>
+							<td>The background color of the active tabs navigation item.</td>
+						</tr>
+						<tr>
+							<td><code>contentBlock-background</code></td>
+							<td><code class="value">color('greyscale', 'white')</code></td>
+							<td>The background color of the content block.</td>
+						</tr>
+						<tr>
+							<td><code>contentBlock-color</code></td>
+							<td><code class="value">base('text-color')</code></td>
+							<td>The text color of the content block.</td>
+						</tr>
+						<tr>
+							<td><code>contentBlock-borderColor</code></td>
+							<td><code class="value">color('greyscale', 'grey-2')</code></td>
+							<td>The border color of the content block.</td>
+						</tr>
+						<tr>
+							<td><code>contentBlock-padding</code></td>
+							<td><code class="value">1.5em</code></td>
+							<td>The padding of the content block.</td>
+						</tr>
+						<tr>
+							<td><code>contentBlock-glueHeight</code></td>
+							<td><code class="value">6px</code></td>
+							<td>The height of the content block glue.</td>
+						</tr>
+						<tr>
+							<td><code>contentBlock-glueColor</code></td>
+							<td><code class="value">color('brand', 'primary')</code></td>
+							<td>The color of the content block glue.</td>
+						</tr>
+						<tr>
+							<td><code>contentBlock-deepPadding</code></td>
+							<td><code class="value">2.5em</code></td>
+							<td>The padding of the content block when using the <code>deep</code> modifier.</td>
+						</tr>
+                    </tbody>
+                </table>
+
+				<p>To change one of the above values, pass your new value(s) to the <code>tabs()</code> mixin in your theme file (e.g. app/themes/Kayzen/_kayzen.scss).</p>   
+                
+<pre data-enlighter-language="css" class="EnlighterJSRAW">
+@include tabs((
+    'contentBlock-background'  : #9B58B5,
+    'contentBlock-borderColor' : #9B58B5,
+    'contentBlock-color'       : white
+));
+</pre>
+                
+                <div class="well object">
+                    
+                    <style>
+                        #tabs-demo [class*="tabs_content"] {
+                            background: #9B58B5;
+                            border-color: #9B58B5;
+                            color: white;
+                        }
+                        #tabs-demo li {
+                            border-bottom-color: #9B58B5;
+                        }
+                    </style>
+    
+                    <div id="tabs-demo" class="tabs">
+                    
+                        <ul class="tabs_nav">
+                            <li class="active">Latest</li>
+                            <li>Popular</li>
+                            <li>Comments</li>
+                        </ul>
+                        
+                        <div class="tabs_content-block">
+                            
+                            <section class="tabs_item active">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus suscipit risus eget dignissim varius. Vivamus tellus sem, egestas at hendrerit ultrices, pulvinar nec ipsum. </p>
+                            </section>
+                            
+                            <section class="tabs_item">
+                                <p>Aenean finibus blandit ex ut pretium. Etiam efficitur sapien nec mauris efficitur ultrices. In eget volutpat turpis. Morbi velit ex, malesuada at tellus vel, lacinia feugiat dolor. Nullam ultrices pharetra laoreet. Nunc ut lectus arcu. Nunc sed faucibus sapien, quis facilisis tellus.</p>
+                            </section>
+                            
+                            <section class="tabs_item">
+                                <p>Ut egestas, sapien et porta bibendum, erat tortor rutrum libero, non hendrerit odio mi eu ex. Nulla justo sapien, ultricies nec consectetur id, hendrerit cursus lectus.</p>
+                            </section>
+                        
+                        </div>
+                        
+                    </div>
+            
+                </div>
+            
+                </div>
+                        
 			</div><!-- container-small -->
 			
 		</section>

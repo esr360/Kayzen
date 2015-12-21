@@ -131,7 +131,7 @@
 			&, span {            
 				letter-spacing: 0.35em;
 			}
-			@include nested-modifier(strikethrough) {
+			@include modifier(strikethrough) {
 				span {
 					&:after {
 						right: calc(-75px - 1rem + 0.35em);

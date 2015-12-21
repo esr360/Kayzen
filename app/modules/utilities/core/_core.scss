@@ -54,8 +54,8 @@
     code {
         background: white;
         border: 1px solid color(greyscale, grey-3);
-        border-radius: 0.2em;
-        color: #C7254F;
+        border-radius: 0.3em;
+        //color: #C7254F;
         font-family: typography(typefaces, primary);
         font-size: font-size(size-2, $rem: true);
         font-weight: 300;
@@ -78,22 +78,22 @@
 	
 	@include module(container) {
 	
-        width: option($grid, options, base-width);
-        max-width: option($grid, options, max-width);
+        width: option($grid, 'options', 'base-width');
+        max-width: option($grid, 'options', 'max-width');
         margin: 0 auto;
 		position: relative;
 	
-	    @include modifier(small) {
-	        width: option($grid, options, small-width);
-			max-width: (option($grid, options, max-width) * 0.85);
+	    @include modifier('small') {
+	        width: option($grid, 'options', 'small-width');
+			max-width: (option($grid, 'options', 'max-width') * 0.85);
 	    }
 	
-	    @include modifier(full) {
-	        width: option($grid, options, full-width);
-	        max-width: option($grid, options, full-width);
+	    @include modifier('full') {
+	        width: option($grid, 'options', 'full-width');
+	        max-width: option($grid, 'options', 'full-width');
 	    }
 		
-		@include modifier(section) {
+		@include modifier('section') {
 			padding: 4em 0;
 		}
         
@@ -104,7 +104,7 @@
 	} // component(container)
 
 	.wrapper {
-	    padding: 0 option($grid, options, gutter);
+	    padding: 0 option($grid, 'options', 'gutter');
 	}
 
 	//-------------------------------------------------------------
@@ -122,23 +122,23 @@
 	form, fieldset, legend, figure, table, 
 	pre, hr,
 	.object {
-	    margin: base(margin) 0;
+	    margin: base('margin') 0;
 	    @include vertical-rhythm;
 	}
     
     .object-small {
-	    margin: (base(margin) / 2) 0;
+	    margin: (base('margin') / 2) 0;
 	    @include vertical-rhythm;
     }
     
     .object-large {
-	    margin: (base(margin) * 2) 0;
+	    margin: (base('margin') * 2) 0;
 	    @include vertical-rhythm;
     }
 	
 	::selection {
-		background-color: color(brand, primary);
-		color: color(greyscale, white);
+		background-color: color('brand', 'primary');
+		color: color('greyscale', 'white');
 		text-shadow: none;
 	}
 
