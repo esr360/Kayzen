@@ -5867,6 +5867,18 @@ $('.carousel').each(function() {
 $(_modal).KayzenModal();
 
 //-----------------------------------------------------------------
+// Tabs Init
+//-----------------------------------------------------------------
+
+$(_tabs).KayenTabs();
+
+//-----------------------------------------------------------------
+// Data Background Images
+//-----------------------------------------------------------------
+
+dataBG();
+
+//-----------------------------------------------------------------
 // Parallax Init
 //-----------------------------------------------------------------
 
@@ -5891,12 +5903,6 @@ $('.lightbox-gallery').each(function() {
         }
     });
 });
-
-//-----------------------------------------------------------------
-// Data Background Images
-//-----------------------------------------------------------------
-
-dataBG();
     
 //-----------------------------------------------------------------
 
@@ -6528,7 +6534,7 @@ $("progress.progress-bar").each(function() {
             
             navParent   : '[class*="tabs_nav"]',
             navItem     : 'li',
-            content     : '.tabs_content',
+            item        : '[class*="tabs_item"]',
             activeClass : 'active',
             transition  : baseTransition/2
             
@@ -6537,28 +6543,35 @@ $("progress.progress-bar").each(function() {
         // Run the code on each occurance of the element
         return this.each(function() {
             
-            // Cache parent's selector
-            var parent = $(this);
+            // Cache the tabs' parent container
+            var tabsParent = $(this);
+            
+            // Get the navigation container
+            var tabsNav = $(this).find(options.navParent);
+            
+            // Get individual navigation item
+            var tabsNavItem = tabsNav.find(options.navItem);
+            
+            // Get individual tabs item
+            var tabsItem = tabsParent.find(options.item);
             
             // Add active class to appropriate nav item
-            $(options.navParent).KayzenClickHelper({
+            $(tabsNav).KayzenClickHelper({
                 targetClass : options.activeClass
             });
             
             // Execute the code when a tab navigation item is clicked 
-            $(this).find(options.navParent).find(options.navItem).click(function() {
+            tabsNavItem.click(function() {
         
                 // Cache the current index of clicked item
                 var index = $(this).index();
-                // Get the tab content sections
-                var content = $(this).parents(parent).find(options.content);
                 
-                // Hide previously selected content
-                content.fadeOut(options.transition);
+                // Hide previously selected item
+                tabsItem.fadeOut(options.transition);
                 
-                // Show the new content
+                // Show the new item
 		        setTimeout(function(){
-                    content.eq(index).fadeIn(options.transition);
+                    tabsItem.eq(index).fadeIn(options.transition);
                 }, options.transition);
                 
                 return false;
@@ -6570,8 +6583,6 @@ $("progress.progress-bar").each(function() {
     }; // KayenTabs()
  
 }(jQuery));
-
-$(_tabs).KayenTabs();
 //=================================================================
 // Tooltips
 //=================================================================

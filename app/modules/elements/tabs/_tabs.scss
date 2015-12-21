@@ -65,10 +65,6 @@
 		} // sub-component(nav)
 		
 		@include component(content) {
-			display: none;
-			&.active {
-				display: block;
-			}
 			@include modifier(block) {
 				background: color(greyscale, white);
 				border: 1px solid color(greyscale, grey-2);
@@ -96,6 +92,13 @@
                 }
 			}
 		}
+        
+        @include component(item) {
+			display: none;
+			&.active {
+				display: block;
+			}
+        }
 	
 	} // component
 	

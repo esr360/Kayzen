@@ -6630,6 +6630,10 @@ img {
   font-size: 0.83em;
 }
 
+.progress {
+  background-color: #9B58B5;
+}
+
 progress::-webkit-progress-bar {
   background: rgba(0, 0, 0, 0.15);
   height: 1.5em;
@@ -6713,12 +6717,6 @@ progress::-moz-progress-bar {
 [class*="tabs_nav"][class*="-pills"][class*="-large"] {
   margin-bottom: 4rem;
 }
-[class*="tabs_content"] {
-  display: none;
-}
-[class*="tabs_content"].active {
-  display: block;
-}
 [class*="tabs_content"][class*="-block"] {
   background: #ffffff;
   border: 1px solid #dee0e2;
@@ -6743,6 +6741,12 @@ progress::-moz-progress-bar {
 }
 [class*="tabs_content"][class*="-block"][class*="-deep"] {
   padding: 2.5em;
+}
+[class*="tabs_item"] {
+  display: none;
+}
+[class*="tabs_item"].active {
+  display: block;
 }
 
 .thumbnail, [class*="thumbnail-"] {

@@ -225,18 +225,18 @@
                     <a href="#modal-demo-9" data-modal data-modal-content="Lorem ipsum dolor sit amet.">Click Me</a>
                 </div>
                 
-                <h4 class="heading-size-2-uppercase">Custom Animation Style</h4>
-                
 <pre data-enlighter-language="html" class="EnlighterJSRAW">
 &lt;a href="#modal-demo-9" data-modal data-modal-content="Lorem ipsum dolor sit amet.">Click Me&lt;/a>
 </pre>
-
+                
+                <h4 class="heading-size-2-uppercase">Custom Animation Style</h4>
+                
                 <div class="well object">
-                    <a href="#modal-demo-10" data-modal data-modal-content="Lorem ipsum dolor sit amet." data-modal-style="left">Click Me</a>
+                    <a href="#modal-demo-10" data-modal data-modal-content="Lorem ipsum dolor sit amet." data-modal-style="zoom">Click Me</a>
                 </div>
                 
 <pre data-enlighter-language="html" class="EnlighterJSRAW">
-&lt;a href="#modal-demo-10" data-modal data-modal-content="Lorem ipsum dolor sit amet." data-modal-style="left">Click Me&lt;/a>
+&lt;a href="#modal-demo-10" data-modal data-modal-content="Lorem ipsum dolor sit amet." data-modal-style="zoom">Click Me&lt;/a>
 </pre>
                 
 

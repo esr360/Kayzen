@@ -9,7 +9,14 @@
 	//-------------------------------------------------------------
 
 	$progress-bars: config((
-		name            : progress-bar
+		'name'             : 'progress-bar',
+        'background-color' : rgba(black, 0.15),
+        'fill-color'       : color(brand, primary),
+        'bar-height'       : 1.5em,
+        'bar-radius'       : 0.25em,
+        'value-color'      : color(greyscale, white),
+        'value-size'       : font-size(size-2),
+        'group-spacing'    : 0.5em
 	), $custom);
 	
 	// Component
@@ -32,6 +39,10 @@
 			font-size: font-size(size-2);
 		}
 	}
+    
+    .progress {
+        background-color: color(brand, primary);
+    }
 
 	// HTML5 Progress
 	//-------------------------------------------------------------
