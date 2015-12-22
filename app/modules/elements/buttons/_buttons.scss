@@ -10,13 +10,12 @@
 
 	$buttons: config((
 		'name'             : button,
-        'background'       : color(greyscale, grey-4),
-        'color'            : color(greyscale, white),
+        'background'       : color('greyscale', 'grey-4'),
+        'color'            : color('greyscale', 'white'),
         'side-padding'     : 1em,
         'line-height'      : 2.4,
         'weight'           : lighter,
         'border-width'     : 1px,
-        'pill-radius'      : 0.4em,
         'disabled-opacity' : 0.6,
         'round-radius'     : 0.4em,
         'fat-height'       : 2.8,
@@ -34,22 +33,22 @@
 	// Core Styles
 	//-------------------------------------------------------------
 	
-		background: color(greyscale, grey-4);
-		color: color(greyscale, white);
+		background: color('greyscale', 'grey-4');
+		color: color('greyscale', 'white');
 		display: inline-block;
 		vertical-align: middle;
 		padding: 0 1em;
 		line-height: 2.4em;
 		font-weight: lighter;
-		transition: base(transition);
+		transition: base('transition');
 	    border: 1px solid;
 	    border-color: transparent;
 		cursor: pointer;
 		text-decoration: none;
 
 		&:hover {
-			background: darken(color(greyscale, grey-4), 10%);
-			color: color(greyscale, white);
+			background: darken(color('greyscale', 'grey-4'), 10%);
+			color: color('greyscale', 'white');
 			text-decoration: none;
 		}
         
@@ -62,35 +61,39 @@
 
     	@include font-sizes;
 
-	// Patterns
+	// Modifiers
 	//-------------------------------------------------------------
 
 		@include modifier('block') {
 			width: 100%;
 			text-align: center;
-			@include overwrite($special: adjacent-sibling) {
-				margin-top: (base(margin) / 2);
+			@include overwrite($special: 'adjacent-sibling') {
+				margin-top: (base('margin') / 2);
 			}
 		} 
 	
 		@include modifier('border') {
 			background: none;
-			color: base(text-color);
-			border-color: base(text-color);
+			color: base('text-color');
+			border-color: base('text-color');
 			&:hover {
-				color: color(greyscale, white);
-				background: color(brand, primary);
-				border-color: color(brand, primary);
+				color: color('greyscale', 'white');
+				background: color('brand', 'primary');
+				border-color: color('brand', 'primary');
 			}
 		}
 		
 		@include modifier('pill') {
-			&:first-child {
-				border-radius: 0.4em 0 0 0.4em;
-			}
-			&:last-child {
-				border-radius: 0 0.4em 0.4em 0;
-			}
+            display: table-cell;
+            @include modifier('round') {
+                border-radius: 0;
+                &:first-child {
+                    border-radius: 0.4em 0 0 0.4em;
+                }
+                &:last-child {
+                    border-radius: 0 0.4em 0.4em 0;
+                }
+            }
 		}
 	
 		@include modifier('disabled') {
@@ -134,44 +137,44 @@
 	//-------------------------------------------------------------
 	
 		// Brand Colors
-		@each $brand, $color in palette(brand) {
+		@each $brand, $color in palette('brand') {
 			@include modifier($brand) {
 				background: $color;
 				&:hover {
 					background: darken($color, 10%);
 				}
-				@include modifier(border) {
+				@include modifier('border') {
 					background: transparent;
 					border-color: $color;
 					color: $color;
 					&:hover {
 						background: $color;
-						color: color(greyscale, white);
+						color: color('greyscale', 'white');
 					}
 				}
 			}
 		}
 	
 		// Greyscale Colors
-		@each $greyscale, $color in palette(greyscale) {
+		@each $greyscale, $color in palette('greyscale') {
 			@include modifier($greyscale) {
 				background: $color;
 				@if (lightness($color) > 50) {
-					color: color(greyscale, grey-5);
+					color: color('greyscale', 'grey-5');
 				}
 				&:hover {
 					background: darken($color, 10%);
 				}
-				@include modifier(border) {
+				@include modifier('border') {
 					background: transparent;
 					border-color: $color;
 					color: $color;
 					&:hover {
 						background: $color;
 						@if (lightness($color) > 80) {
-							color: color(brand, primary);
+							color: color('brand', 'primary');
 						} @else {
-							color: color(greyscale, white);
+							color: color('greyscale', 'white');
 						}
 					}
 				}
@@ -191,9 +194,9 @@
 		// Social Colors
 		
 		$social-colors: (
-			facebook    : option($palettes, social, facebook),
-			twitter     : option($palettes, social, twitter),
-			google-plus : option($palettes, social, google-plus),
+			'facebook'    : option($palettes, 'social', 'facebook'),
+			'twitter'     : option($palettes, 'social', 'twitter'),
+			'google-plus' : option($palettes, 'social', 'google-plus'),
 		);
 		
 		@each $social, $color in $social-colors {
@@ -208,26 +211,26 @@
 		// Active Button
 
 		&.active {
-			background: color(brand, primary);
-			color: color(greyscale, white);
+			background: color('brand', 'primary');
+			color: color('greyscale', 'white');
 			&:hover {
-				background: color(brand, primary);;
+				background: color('brand', 'primary');;
 			}
 		}
 
 	// Styles
 	//-------------------------------------------------------------
 
-//		@include modifier(primary) {
-//			@include extend(round, size-4, brand-1);
+//		@include modifier('primary') {
+//			@include extend('round', 'size-4', 'brand-1');
 //		}	
 
 	// Components
 	//-------------------------------------------------------------
 	
-		@include component(group) {
+		@include component('group') {
 
-			@include overwrite(button) {
+			@include overwrite('button') {
 				margin-left: 0.5em;
 				&:first-child {
 					margin-left: 0;
@@ -241,8 +244,8 @@
 				}
 			}
 	
-			@media (max-width: breakpoint(break-1)) {
-				@include overwrite(button) {
+			@media (max-width: breakpoint('break-1')) {
+				@include overwrite('button') {
 					margin-left: 0;
 					display: block;
 					width: 100%;
@@ -255,7 +258,7 @@
 			}
 		}
 
-	} // component(button)
+	} // module
 
 	//-------------------------------------------------------------
 	// Browser Hacks

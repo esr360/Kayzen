@@ -98,6 +98,7 @@
 &lt;a class="button-border" href="#">Button&lt;/a>
 </pre>
 
+
                 <h4 class="heading-size-2-uppercase">Button - Pill</h4>
                
                 <div class="well object">
@@ -110,6 +111,20 @@
 &lt;a class="button-pill" href="#">Button&lt;/a>
 &lt;a class="button-pill" href="#">Button&lt;/a>
 &lt;a class="button-pill" href="#">Button&lt;/a>
+</pre>
+
+                <h4 class="heading-size-2-uppercase">Button - Round Pill</h4>
+               
+                <div class="well object">
+                    <a class="button-round-pill" href="#">Button</a>
+                    <a class="button-round-pill" href="#">Button</a>
+                    <a class="button-round-pill" href="#">Button</a>
+               </div>
+                
+<pre data-enlighter-language="html" class="EnlighterJSRAW" style="display: none;">
+&lt;a class="button-round-pill" href="#">Button&lt;/a>
+&lt;a class="button-round-pill" href="#">Button&lt;/a>
+&lt;a class="button-round-pill" href="#">Button&lt;/a>
 </pre>
 
                 <h4 class="heading-size-2-uppercase">Button - Disabled</h4>
@@ -348,11 +363,6 @@
 							<td><code>border-width</code></td>
 							<td><code class="value">1px</code></td>
 							<td>The width of the border for the 'border' modifier.</td>
-						</tr>
-						<tr>
-							<td><code>pill-radius</code></td>
-							<td><code class="value">0.4em</code></td>
-							<td>The radius of first/last pill buttons.</td>
 						</tr>
 						<tr>
 							<td><code>disabled-opacity</code></td>

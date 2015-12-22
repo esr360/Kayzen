@@ -135,9 +135,9 @@
 			}
 		}
 		
-		@include component(avatar) {
-			@include extend($parent: thumbnail, $modifiers: (profile, round));
-			@include overwrite-component(content, $special: 'adjacent-sibling') {
+		@include component('avatar') {
+			@include extend($parent: 'thumbnail', $modifiers: ('profile', 'round'));
+			@include overwrite-component('content', $special: 'adjacent-sibling') {
 				margin-top: 1.5em;
 			}
 		}

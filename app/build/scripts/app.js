@@ -5860,6 +5860,47 @@ $('.carousel').each(function() {
     $(this).owlCarousel();
 });
 
+
+//-----------------------------------------------------------------
+// Tooltips
+//-----------------------------------------------------------------
+
+$(_tooltip).each(function() {
+    
+    if ($(this).is('[class*="-top"]')) {
+        
+        $(this).tooltip({
+            position : "top"
+        });
+        
+    } else if ($(this).is('[class*="-bottom"]')) {
+        
+        $(this).tooltip({
+            position : "bottom"
+        });
+        
+    } else if ($(this).is('[class*="-left"]')) {
+        
+        $(this).tooltip({
+            position : "left"
+        });
+        
+    } else if ($(this).is('[class*="-right"]')) {
+        
+        $(this).tooltip({
+            position : "right"
+        });
+        
+    } else {
+        
+        $(this).tooltip({
+            position : "top"
+        });
+        
+    }
+    
+});
+
 //-----------------------------------------------------------------
 // Modal Init
 //-----------------------------------------------------------------
@@ -6617,44 +6658,6 @@ $("progress.progress-bar").each(function() {
 	});
 
 }(jQuery));
-
-//-----------------------------------------------------------------
-// Tooltips
-//-----------------------------------------------------------------
-
-$(window).load(function(){
-	
-	$(_tooltip).each(function() {
-		
-		if ($(this).is('[class*="-top"]')) {
-			
-			$(this).tooltip({
-				position : "top"
-			});
-			
-		} else if ($(this).is('[class*="-bottom"]')) {
-			
-			$(this).tooltip({
-				position : "bottom"
-			});
-			
-		} else if ($(this).is('[class*="-left"]')) {
-			
-			$(this).tooltip({
-				position : "left"
-			});
-			
-		} else if ($(this).is('[class*="-right"]')) {
-			
-			$(this).tooltip({
-				position : "right"
-			});
-			
-		}
-		
-	});
-
-});
 //=================================================================
 // Billboard
 //=================================================================

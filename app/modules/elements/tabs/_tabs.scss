@@ -15,14 +15,14 @@
 	$tabs: config((
 		'name'                       : 'tabs',
 		'output-JSON'                : true,
-        'navItem-padding'            : 0 1em,
-        'navItem-lineHeight'         : 2.4,
+        'navItem-color'              : base('text-color'),
+        'navItem-background'         : transparent,
         'navItem-borderColor'        : color('greyscale', 'grey-3'),
         'navItem-active-color'       : color('greyscale', 'white'),
-        'navItem-active-borderColor' : color('brand', 'primary'),
         'navItem-active-background'  : color('brand', 'primary'),
-        'contentBlock-background'    : color('greyscale', 'white'),
+        'navItem-active-borderColor' : color('brand', 'primary'),
         'contentBlock-color'         : base('text-color'),
+        'contentBlock-background'    : color('greyscale', 'white'),
         'contentBlock-borderColor'   : color('greyscale', 'grey-2'),
         'contentBlock-padding'       : 1.5em,
         'contentBlock-glueHeight'    : 6px,
@@ -42,19 +42,15 @@
 		@include component(nav) {
 			
 			@extend %list-reset;
-			@extend .clearfix;
-			margin-left: auto;
-			margin-right: auto;
+            display: table;
             margin-bottom: 0;
 			position: relative;
 			z-index: 2;
 			
 			li {
-				cursor: pointer;
-				transition: base('transition');
-				float: left;
-				padding: 0 1em;
-                line-height: 2.4;
+				display: table-cell;
+                color: base('text-color');
+                background: transparent;
 				border: 1px solid color('greyscale', 'grey-3');
 				&.active {
 					color: color('greyscale', 'white');
@@ -63,18 +59,39 @@
 					+ li {
 						border-left-color: color('brand', 'primary');
 					}
+                    &:hover {
+                        color: color('greyscale', 'white');
+                    }
 				}
+                &:hover {
+                    background: darken(color('greyscale', 'grey-1'), 5%);
+                    color: base('text-color');
+                }
 				&:not(:last-child) {
 					border-right: none;
 				}
 			}
 			
-			@include modifier('pills') {
-				display: inline-block;
-				@include modifier('large') {
-					margin-bottom: (base('margin') * 2);
-				}
+			@include modifier('center') {
+                margin-left: auto;
+                margin-right: auto;
 			}
+            
+			@include modifier('left') {
+                margin-right: auto;
+			}
+            
+			@include modifier('right') {
+                margin-left: auto;
+			}
+            
+			@include modifier('full') {
+                width: 100%;
+			}
+			
+            @include modifier('large') {
+                margin-bottom: (base('margin') * 2);
+            }
 			
 		} // component(nav)
 		

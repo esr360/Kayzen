@@ -17,24 +17,24 @@ https://github.com/esr360/K-Tooltips
 	//-------------------------------------------------------------
 	
 	$tooltips: config((
-		name           : tooltip,
-		output-JSON    : true,
+		'name'           : 'tooltip',
+		'output-JSON'    : true,
 		// Size & Appearance
-		max-width      : 500px,
-		padding        : 0.5em 0.6em,
-		distance       : -1em,
-		background     : rgba(black, 0.75),
-		border-radius  : 0,
-		arrow-size     : 0.5em,
-		arrow-color    : rgba(black, 0.75),
+		'max-width'      : 500px,
+		'padding'        : 0.5em 0.6em,
+		'distance'       : -1em,
+		'background'     : rgba(black, 0.75),
+		'border-radius'  : 0,
+		'arrow-size'     : 0.5em,
+		'arrow-color'    : rgba(black, 0.75),
 		// Typography
-		font-size      : font-size(size-2, $rem: true),
-		color          : white,
-		text-transform : none,
-		font-weight    : normal,
+		'font-size'      : font-size(size-2, $rem: true),
+		'color'          : white,
+		'text-transform' : none,
+		'font-weight'    : normal,
 		// Other
-		transition     : 0.4s,
-		z-index        : 9999
+		'transition'     : base('transition'),
+		'z-index'        : 9999
 	), $custom) !global;
 
 	//-------------------------------------------------------------
@@ -78,23 +78,23 @@ https://github.com/esr360/K-Tooltips
 		@include component(content) {
 				
 			// Size & Appearance
-			max-width: tooltip(max-width);
-			padding: tooltip(padding);
-			background: tooltip(background);
-			border-radius: tooltip(border-radius);
+			max-width: tooltip('max-width');
+			padding: tooltip('padding');
+			background: tooltip('background');
+			border-radius: tooltip('border-radius');
             line-height: 1.75;
 			position: absolute;
 			display: inline-block;
 			
 			// Typography
-			font-size: tooltip(font-size);
-			color: tooltip(color);
-			text-transform: tooltip(text-transform);
-			font-weight: tooltip(font-weight);
+			font-size: tooltip('font-size');
+			color: tooltip('color');
+			text-transform: tooltip('text-transform');
+			font-weight: tooltip('font-weight');
 			
 			// Other
-			transition: tooltip(transition);
-			z-index: tooltip(z-index);
+			transition: tooltip('transition');
+			z-index: tooltip('z-index');
 			white-space: nowrap;
 			
 			// Hide by default

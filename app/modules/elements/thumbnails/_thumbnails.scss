@@ -9,7 +9,19 @@
 	//-------------------------------------------------------------
 
 	$forms: config((
-		'name'            : 'thumbnail'
+		'name'                         : 'thumbnail',
+        'default-profile-size'         : 50px,
+        'xsmall-profile-size'          : 24px,
+        'small-profile-size'           : 44px,
+        'large-profile-size'           : 75px,
+        'xlarge-profile-size'          : 95px,
+        'mask-background'              : rgba(black, 0.6),
+        'mask-title-color'             : color('greyscale', 'white'),
+        'mask-border-color'            : color('brand', 'primary'),
+        'featureContent-background'    : rgba(black, 0.5),
+        'featureContent-color'         : color('greyscale', 'white'),
+        'featureContent-padding'       : 1.5em,
+        'featureContent-heading-color' : color('greyscale', 'white')
 	), $custom);
 
 	//-------------------------------------------------------------
@@ -31,7 +43,7 @@
         }
 		
 		img {
-			transition: 0.4s;
+			transition: base('transition');
 			min-width: 100%;
 			display: block;
 		}
@@ -107,7 +119,7 @@
 		}
 		
 		@include modifier('styled') {
-			border: 5px solid white;
+			border: 0.3em solid white;
 			box-shadow: 0px 0px 1px rgba(black, 0.2);
 			display: block;
 		}
@@ -172,7 +184,7 @@
 		@include components(('controls', 'title')) {
 			position: absolute;
 			z-index: 6;
-			transition: base(transition);
+			transition: base('transition');
 		}
 		
 		@include component('controls') {

@@ -244,20 +244,20 @@
 		// Heading Icon
 		//---------------------------------------------------------
 		
-		@include component(icon) {
+		@include component('icon') {
 		
 			display: inline-block;
 			position: relative;
-			font-size: font-size(size-5);
+			font-size: font-size('size-5');
 		
 			.fa {
 				position: relative;
 				width: 0.85em;
 				height: 0.85em;
 				line-height: 0.85em;
-				font-size: font-size(size-4);
-				color: color(greyscale, grey-5);
-				border: 1px solid color(brand, primary);
+				font-size: font-size('size-4');
+				color: color('greyscale', 'grey-5');
+				border: 1px solid color('brand', 'primary');
 				border-radius: 50%;
 				&:before {
 					position: absolute;
@@ -270,7 +270,7 @@
 			&:after {
 				content: "";
 				width: 2em;
-				border-bottom: 1px solid color(brand, primary);
+				border-bottom: 1px solid color('brand', 'primary');
 				@include vertical-center(absolute);
 			}
 		
@@ -288,20 +288,20 @@
 		// Heading Date
 		//---------------------------------------------------------
 			
-			@include component(date) {
+			@include component('date') {
 				float: right;
 				text-align: center;
 				width: 45px;
 				div {
 					&:first-child {
-						background: color(brand, primary);
+						background: color('brand', 'primary');
 						color: white;
-						font-size: font-size(size-2);
+						font-size: font-size('size-2');
 					}
 					&:last-child {
-						background: color(greyscale, white);
+						background: color('greyscale', 'white');
 						font-weight: lighter;
-						color: color(greyscale, grey-4);
+						color: color('greyscale', 'grey-4');
 						border: 1px solid rgba(black, 0.1);
 						line-height: 2;
 					}

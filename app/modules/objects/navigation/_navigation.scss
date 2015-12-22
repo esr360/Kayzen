@@ -10,54 +10,42 @@
 
 	$navigation: config((
 		
-		name                     : navigation,
-		output-JSON              : true,
+		'name'                     : 'navigation',
+		'output-JSON'              : true,
 		
 	// Options
 	//-------------------------------------------------------------
 	
-		text-align               : right,
-		font-size                : 1em,
-		dropdown-icon            : "\f107",
+		'text-align'               : right,
+		'font-size'                : 1em,
+		'dropdown-icon'            : "\f107",
 		//list-item
-		item-gutter              : 0.5em,
-		item-padding             : 0.5rem 0.75rem,
-		item-color               : color(greyscale, white),
-		item-bg                  : transparent,
-		item-border              : 1px solid transparent,
+		'item-gutter'              : 0.5em,
+		'item-padding'             : 0.5rem 0.75rem,
+		'item-color'               : color('greyscale', 'white'),
+		'item-bg'                  : transparent,
+		'item-border'              : 1px solid transparent,
 		// list-item:hover
-		item-hover-color         : null,
-		item-hover-bg            : transparent,
-		item-hover-border        : 1px solid color(greyscale, white),
+		'item-hover-color'         : null,
+		'item-hover-bg'            : transparent,
+		'item-hover-border'        : 1px solid color('greyscale', 'white'),
 		// list-item.active
-		item-active-color        : null,
-		item-active-bg           : null,
-		item-active-border       : null,
+		'item-active-color'        : null,
+		'item-active-bg'           : null,
+		'item-active-border'       : null,
 		// list-item.active:hover
-		item-active-hover-color  : null,
-		item-active-hover-bg     : null,
-		item-active-hover-border : null,
+		'item-active-hover-color'  : null,
+		'item-active-hover-bg'     : null,
+		'item-active-hover-border' : null,
 		// list-item:has-child
-		has-child-hover-color    : color(brand, primary),
-		has-child-hover-bg       : color(greyscale, grey-1),
-		has-child-hover-border   : 1px solid transparent,
-		// when inside optional header-dark modifier
-		header-dark              : (
-			default              : false,
-			// list-item
-			item-color           : base(text-color),
-			item-border          : 1px solid color(greyscale, white),
-			item-bg-color        : transparent,
-			// list-item:hover
-			item-hover-color     : null,
-			item-hover-border    : 1px solid color(greyscale, white),
-			item-hover-bg-color  : color(brand, primary),
-		),// header-dark
+		'has-child-hover-color'    : color('brand', 'primary'),
+		'has-child-hover-bg'       : color('greyscale', 'grey-1'),
+		'has-child-hover-border'   : 1px solid transparent,
 		
 	// Settings
 	//-------------------------------------------------------------
 	
-		no-icons                : false
+		'no-icons'                : false
 		
 	), $custom) !global;
 
