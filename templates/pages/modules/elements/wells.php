@@ -1,8 +1,8 @@
 <?php 
 	include ('../../../app.php');
 	// page config
-	$title = 'Accordions';
-	$tagLine = 'app/modules/elements/accordions';
+	$title = 'Wells/Boxes';
+	$tagLine = 'app/modules/elements/wells';
 ?>
 
 <!DOCTYPE html>
@@ -37,41 +37,175 @@
 				<h2 class="heading-light-size-5">Files</h2>
 				
 				<ul class="list-tags">
-					<li class="plain"><span>_accordions.scss</span></li>
-					<li class="plain"><span>accordions.js</span></li>	
+					<li class="plain"><span>_wells.scss</span></li>
 					<li class="plain"><span>README.md</span></li>	
 				</ul>
                 
-				<p class="alert-bar-info"><small><strong>Github Page</strong> (customers only):  <a href="https://github.com/esr360/Kayzen/tree/master/app/modules/elements/accordions" target="blank">https://github.com/esr360/Kayzen/tree/master/app/modules/elements/accordions</a></small></p>
+				<p class="alert-bar-info"><strong>Github Page</strong> (customers only):  <a href="https://github.com/esr360/Kayzen/tree/master/app/modules/elements/wells" target="blank">https://github.com/esr360/Kayzen/tree/master/app/modules/elements/wells</a></p>
 				
 				<h2 class="heading-light-size-5">Module Overview</h2>
                 
                 <div class="well">
                     <ul class="list-reset">
-                        <li><b>Name:</b> <code>accordion</code></li>
-                        <li><b>Components:</b> <code>section</code>, <code>title</code>, <code>content</code></li>
-                        <li><b>Modifiers:</b> <code>minimal</code></li>
+                        <li><b>Name:</b> <code>well</code></li>
+                        <li><b>Components:</b> <code>content</code></li>
+                        <li><b>Modifiers:</b> <code>dark</code>, <code>deep</code>, <code>comment</code>, <code>thumb</code></li>
                     </ul>
                 </div>
                 
 				<h2 class="heading-light-size-5">Examples</h2>
                 
-<pre data-enlighter-language="html" class="EnlighterJSRAW" style="display: none;">
-&lt;div class="accordion">
-    &lt;div>
-        &lt;div>Accordion Title&lt;/div>
-        &lt;div>...&lt;/div>
+                <div class="well object">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed scelerisque efficitur sem et porta. </p>
+                </div>
+                
+<pre data-enlighter-language="html" class="EnlighterJSRAW">
+&lt;div class="well">
+    &lt;p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed scelerisque efficitur sem et porta.&lt;/p>
+&lt;/div>
+</pre>
+
+                <h4 class="heading-size-2-uppercase">Well - Dark</h4>
+
+                <div class="well-dark object">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed scelerisque efficitur sem et porta. </p>
+                </div>
+                
+<pre data-enlighter-language="html" class="EnlighterJSRAW">
+&lt;div class="well-dark">
+    &lt;p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed scelerisque efficitur sem et porta.&lt;/p>
+&lt;/div>
+</pre>
+
+                <h4 class="heading-size-2-uppercase">Well - Deep</h4>
+
+                <div class="well-deep object">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed scelerisque efficitur sem et porta. </p>
+                </div>
+                
+<pre data-enlighter-language="html" class="EnlighterJSRAW">
+&lt;div class="well-deep">
+    &lt;p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed scelerisque efficitur sem et porta.&lt;/p>
+&lt;/div>
+</pre>
+
+                <h4 class="heading-size-2-uppercase">Well - Comment</h4>
+                
+                <div class="well-comment object">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed scelerisque efficitur sem et porta. </p>
+                </div>
+                
+<pre data-enlighter-language="html" class="EnlighterJSRAW">
+&lt;div class="well-comment">
+    &lt;p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed scelerisque efficitur sem et porta.&lt;/p>
+&lt;/div>
+</pre>
+                
+                <h4 class="heading-size-2-uppercase">Well - Thumb</h4>
+
+                <div class="well object">
+                    <div class="span-3">
+                        <div class="well-thumb">
+                            <img class="well_content" src="<?php echo appDir ?>/images/envato/envato-1.png">
+                        </div>
+                    </div>
+                    <div class="span-3">
+                        <div class="well-dark-thumb">
+                            <img class="well_content" src="<?php echo appDir ?>/images/envato/envato-1.png">
+                        </div>
+                    </div>
+                </div>
+                
+<pre data-enlighter-language="html" class="EnlighterJSRAW">
+&lt;div class="span-3">
+    &lt;div class="well-thumb">
+        &lt;img class="well_content" src="/images/envato/envato-1.png">
     &lt;/div>
-    &lt;div>
-        &lt;div>Accordion Title&lt;/div>
-        &lt;div>...&lt;/div>
-    &lt;/div>
-    &lt;div>
-        &lt;div>Accordion Title&lt;/div>
-        &lt;div>...&lt;/div>
+&lt;/div>
+&lt;div class="span-3">
+    &lt;div class="well-dark-thumb">
+        &lt;img class="well_content" src="/images/envato/envato-1.png">
     &lt;/div>
 &lt;/div>
 </pre>
+
+                <h2 class="heading-light-size-5">Customizing</h2>
+                
+                <p>The wells can be customized using the following options:</p>
+                
+                <p class="alert-bar-help">Read the <a href="configuration.html">Configuration</a> page to learn more about a module's configuration.</p>
+                
+                <table class="table-style-1-small">
+					<thead>
+						<tr>
+							<th>Property Name</th>
+							<th>Default Value</th>
+							<th>Description</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td><code>background</code></td>
+							<td><code class="value">white</code></td>
+							<td>The maximum width for tooltips before text starts to wrap.</td>
+						</tr>
+						<tr>
+							<td><code>border</code></td>
+							<td><code class="value">1px solid rgba(black, 0.15)</code></td>
+							<td>The maximum width for tooltips before text starts to wrap.</td>
+						</tr>
+						<tr>
+							<td><code>radius</code></td>
+							<td><code class="value">0.4em</code></td>
+							<td>The maximum width for tooltips before text starts to wrap.</td>
+						</tr>
+						<tr>
+							<td><code>color</code></td>
+							<td><code class="value">typography('colors', 'base')</code></td>
+							<td>The maximum width for tooltips before text starts to wrap.</td>
+						</tr>
+						<tr>
+							<td><code>dark-background</code></td>
+							<td><code class="value">rgba(black, 0.4)</code></td>
+							<td>The maximum width for tooltips before text starts to wrap.</td>
+						</tr>
+						<tr>
+							<td><code>dark-border</code></td>
+							<td><code class="value">none</code></td>
+							<td>The maximum width for tooltips before text starts to wrap.</td>
+						</tr>
+						<tr>
+							<td><code>dark-color</code></td>
+							<td><code class="value">white</code></td>
+							<td>The maximum width for tooltips before text starts to wrap.</td>
+						</tr>
+						<tr>
+							<td><code>deep-padding</code></td>
+							<td><code class="value">1.5em 2em</code></td>
+							<td>The maximum width for tooltips before text starts to wrap.</td>
+						</tr>
+						<tr>
+							<td><code>comment-padding</code></td>
+							<td><code class="value">1.5em</code></td>
+							<td>The maximum width for tooltips before text starts to wrap.</td>
+						</tr>
+						<tr>
+							<td><code>thumb-height</code></td>
+							<td><code class="value">76px</code></td>
+							<td>The maximum width for tooltips before text starts to wrap.</td>
+						</tr>
+						<tr>
+							<td><code>hover-background</code></td>
+							<td><code class="value">color('brand', 'primary')</code></td>
+							<td>The maximum width for tooltips before text starts to wrap.</td>
+						</tr>
+						<tr>
+							<td><code>hover-color</code></td>
+							<td><code class="value">color('greyscale', 'white')</code></td>
+							<td>The maximum width for tooltips before text starts to wrap.</td>
+						</tr>
+                    </tbody>
+                </table>
                 
 			</div><!-- container-small -->
 			

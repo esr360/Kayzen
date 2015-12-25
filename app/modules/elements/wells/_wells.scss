@@ -9,7 +9,19 @@
 	//-------------------------------------------------------------
 
 	$wells: config((
-		name            : well
+		'name'             : 'well',
+        'background'       : white,
+        'border'           : 1px solid rgba(black, 0.15),
+        'radius'           : 0.4em,
+        'color'            : typography('colors', 'base'),
+        'dark-background'  : rgba(black, 0.4),
+        'dark-border'      : none,
+        'dark-color'       : white,
+        'deep-padding'     : 1.5em 2em,
+        'comment-padding'  : 1.5em,
+        'thumb-height'     : 76px,
+        'hover-background' : color('brand', 'primary'),
+        'hover-color'      : color('greyscale', 'white')
 	), $custom);
 
 	//-------------------------------------------------------------
@@ -21,7 +33,7 @@
 	// Core Styles
 	//-------------------------------------------------------------
 	
-	    background: lighten(color(greyscale, grey-1), 5%);
+	    background: white;
 	    border: 1px solid rgba(black, 0.15);
 	    border-radius: 0.4em;
 	    padding: 1em;
@@ -31,7 +43,7 @@
 	// Modifiers
 	//-------------------------------------------------------------
 		
-		@include modifier(dark) {
+		@include modifier('dark') {
 			background: rgba(black, 0.4);
 			border: none;
             color: white;
@@ -52,7 +64,7 @@
                 height: 14px;
                 width: 14px;
                 transform: rotate(45deg) translate(-50%, -50%);
-                background: lighten(color(greyscale, grey-1), 5%);
+                background: lighten(color('greyscale', 'grey-1'), 5%);
 	            border-left: 1px solid rgba(black, 0.15);
 	            border-bottom: 1px solid rgba(black, 0.15);
             }
@@ -63,8 +75,8 @@
             display: block;
             transition: background-color base(transition);
             &:hover {
-                background: color(brand, primary);
-                color: color(greyscale, white);
+                background: color('brand', 'primary');
+                color: color('greyscale', 'white');
             }
         }
         

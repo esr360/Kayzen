@@ -1,7 +1,7 @@
 <?php 
 	include ('../../../app.php');
 	// page config
-	$title = 'Accordions';
+	$title = 'Widgets/Cards';
 	$tagLine = 'app/modules/elements/accordions';
 ?>
 
@@ -42,7 +42,7 @@
 					<li class="plain"><span>README.md</span></li>	
 				</ul>
                 
-				<p class="alert-bar-info"><small><strong>Github Page</strong> (customers only):  <a href="https://github.com/esr360/Kayzen/tree/master/app/modules/elements/accordions" target="blank">https://github.com/esr360/Kayzen/tree/master/app/modules/elements/accordions</a></small></p>
+				<p class="alert-bar-info"><strong>Github Page</strong> (customers only):  <a href="https://github.com/esr360/Kayzen/tree/master/app/modules/elements/accordions" target="blank">https://github.com/esr360/Kayzen/tree/master/app/modules/elements/accordions</a></p>
 				
 				<h2 class="heading-light-size-5">Module Overview</h2>
                 
