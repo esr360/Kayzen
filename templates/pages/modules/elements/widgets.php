@@ -2,7 +2,7 @@
 	include ('../../../app.php');
 	// page config
 	$title = 'Widgets/Cards';
-	$tagLine = 'app/modules/elements/accordions';
+	$tagLine = 'app/modules/elements/widgets';
 ?>
 
 <!DOCTYPE html>
@@ -37,18 +37,17 @@
 				<h2 class="heading-light-size-5">Files</h2>
 				
 				<ul class="list-tags">
-					<li class="plain"><span>_accordions.scss</span></li>
-					<li class="plain"><span>accordions.js</span></li>	
+					<li class="plain"><span>_widgets.scss</span></li>
 					<li class="plain"><span>README.md</span></li>	
 				</ul>
                 
-				<p class="alert-bar-info"><strong>Github Page</strong> (customers only):  <a href="https://github.com/esr360/Kayzen/tree/master/app/modules/elements/accordions" target="blank">https://github.com/esr360/Kayzen/tree/master/app/modules/elements/accordions</a></p>
+				<p class="alert-bar-info"><strong>Github Page</strong> (customers only):  <a href="https://github.com/esr360/Kayzen/tree/master/app/modules/elements/widgets" target="blank">https://github.com/esr360/Kayzen/tree/master/app/modules/elements/widgets</a></p>
 				
 				<h2 class="heading-light-size-5">Module Overview</h2>
                 
                 <div class="well">
                     <ul class="list-reset">
-                        <li><b>Name:</b> <code>accordion</code></li>
+                        <li><b>Name:</b> <code>widget</code></li>
                         <li><b>Components:</b> <code>section</code>, <code>title</code>, <code>content</code></li>
                         <li><b>Modifiers:</b> <code>minimal</code></li>
                     </ul>
@@ -56,7 +55,7 @@
                 
 				<h2 class="heading-light-size-5">Examples</h2>
                 
-<pre data-enlighter-language="html" class="EnlighterJSRAW" style="display: none;">
+<pre data-enlighter-language="html" class="EnlighterJSRAW">
 &lt;div class="accordion">
     &lt;div>
         &lt;div>Accordion Title&lt;/div>
