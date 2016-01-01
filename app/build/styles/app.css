@@ -3384,6 +3384,10 @@ Made by @esr360
 http://github.com/esr360/Modular/
 	
 -----------------------------------------------------------------*/
+span.enlighterEnlighterJS {
+  white-space: nowrap;
+}
+
 .owl-carousel .owl-item img {
   -webkit-transform-style: flat;
           transform-style: flat;
@@ -6358,6 +6362,16 @@ img {
   top: -25%;
 }
 
+.bg-img {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-size: cover;
+  transition: 0.4s;
+}
+
 [class*="list-"][class*="-small"] {
   font-size: 0.67em;
 }
@@ -7343,6 +7357,7 @@ progress::-moz-progress-bar {
 }
 [class*="widget_sticker"] {
   position: absolute;
+  transition: 0.4s;
   top: calc(50% - 0.5em);
   -webkit-transform: translateY(-50%);
       -ms-transform: translateY(-50%);

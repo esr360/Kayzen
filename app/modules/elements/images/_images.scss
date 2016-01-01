@@ -9,7 +9,7 @@
 	//-------------------------------------------------------------
 
 	$images: config((
-		name            : image
+		'name'            : 'image'
 	), $custom);
 
 	//-------------------------------------------------------------
@@ -25,7 +25,7 @@
 	// Desktop Graphic
 	//-------------------------------------------------------------
 	
-	@include module(desktop-graphic) {
+	@include module('desktop-graphic') {
 
 		position: relative;
 		cursor: pointer;
@@ -47,7 +47,7 @@
 			z-index: 0;	
 		}
 	
-		@include modifier(scroll) {
+		@include modifier('scroll') {
 			&:hover {
 				@include overwrite-component('image') {
 					background-position: center 100%;	
@@ -82,7 +82,7 @@
 	// Mobile Graphic
 	//-------------------------------------------------------------
 	
-	@include module(mobile-graphic) {
+	@include module('mobile-graphic') {
 	
 		background-size: 100% 100%;
 		padding: 30% 8%;
@@ -132,6 +132,20 @@
             position: absolute;
             top: -25%;
         }
+    }
+    
+	//-------------------------------------------------------------
+	// Background Image
+	//-------------------------------------------------------------
+    
+    .bg-img {
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-size: cover;
+        transition: base('transition');
     }
 	
 } // @mixin images

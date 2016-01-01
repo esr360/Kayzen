@@ -147,65 +147,93 @@
 						<tr>
 							<td><code>background</code></td>
 							<td><code class="value">white</code></td>
-							<td>The maximum width for tooltips before text starts to wrap.</td>
+							<td>The background color for wells.</td>
 						</tr>
 						<tr>
 							<td><code>border</code></td>
 							<td><code class="value">1px solid rgba(black, 0.15)</code></td>
-							<td>The maximum width for tooltips before text starts to wrap.</td>
+							<td>The well border.</td>
 						</tr>
 						<tr>
 							<td><code>radius</code></td>
 							<td><code class="value">0.4em</code></td>
-							<td>The maximum width for tooltips before text starts to wrap.</td>
+							<td>The radius for the wells' corners.</td>
+						</tr>
+						<tr>
+							<td><code>padding</code></td>
+							<td><code class="value">1em</code></td>
+							<td>The well padding.</td>
 						</tr>
 						<tr>
 							<td><code>color</code></td>
 							<td><code class="value">typography('colors', 'base')</code></td>
-							<td>The maximum width for tooltips before text starts to wrap.</td>
+							<td>The text color for wells.</td>
 						</tr>
 						<tr>
 							<td><code>dark-background</code></td>
 							<td><code class="value">rgba(black, 0.4)</code></td>
-							<td>The maximum width for tooltips before text starts to wrap.</td>
+							<td>The background for wells when using the <code>dark</code> modifier.</td>
 						</tr>
 						<tr>
 							<td><code>dark-border</code></td>
 							<td><code class="value">none</code></td>
-							<td>The maximum width for tooltips before text starts to wrap.</td>
+							<td>The border for wells when using the <code>dark</code> modifier.</td>
 						</tr>
 						<tr>
 							<td><code>dark-color</code></td>
 							<td><code class="value">white</code></td>
-							<td>The maximum width for tooltips before text starts to wrap.</td>
+							<td>The text color for wells when using the <code>dark</code> modifier.</td>
 						</tr>
 						<tr>
 							<td><code>deep-padding</code></td>
 							<td><code class="value">1.5em 2em</code></td>
-							<td>The maximum width for tooltips before text starts to wrap.</td>
+							<td>The padding for wells when using the <code>deep</code> modifier.</td>
 						</tr>
 						<tr>
 							<td><code>comment-padding</code></td>
 							<td><code class="value">1.5em</code></td>
-							<td>The maximum width for tooltips before text starts to wrap.</td>
+							<td>The padding for wells when using the <code>comment</code> modifier.</td>
 						</tr>
 						<tr>
 							<td><code>thumb-height</code></td>
 							<td><code class="value">76px</code></td>
-							<td>The maximum width for tooltips before text starts to wrap.</td>
+							<td>The height for wells when using the <code>thumb</code> modifier.</td>
 						</tr>
 						<tr>
 							<td><code>hover-background</code></td>
 							<td><code class="value">color('brand', 'primary')</code></td>
-							<td>The maximum width for tooltips before text starts to wrap.</td>
+							<td>The background for wells when hovered when using the <code>dark</code> modifier.</td>
 						</tr>
 						<tr>
 							<td><code>hover-color</code></td>
 							<td><code class="value">color('greyscale', 'white')</code></td>
-							<td>The maximum width for tooltips before text starts to wrap.</td>
+							<td>The text-color for wells when hovered when using the <code>dark</code> modifier.</td>
 						</tr>
                     </tbody>
                 </table>
+
+				<p>To change one of the above values, pass your new value(s) to the <code>wells()</code> mixin in your theme file (e.g. app/themes/Kayzen/_kayzen.scss).</p>   
+                
+<pre data-enlighter-language="css" class="EnlighterJSRAW">
+@include wells((
+    'background' : #9B58B5,
+    'border'     : none,
+    'radius'     : 0,
+    'color'      : white
+));
+</pre>  
+
+                <style>
+                    #well-demo {
+                        background: #9B58B5;
+                        border: none;
+                        border-radius: 0;
+                        color: white;
+                    }
+                </style>
+                <div id="well-demo" class="well object">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed scelerisque efficitur sem et porta. </p>
+                </div>
                 
 			</div><!-- container-small -->
 			

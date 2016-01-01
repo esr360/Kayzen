@@ -59,7 +59,7 @@
             </div>
             <header class="widget_header heading_group">
                 <h4 class="heading-size-7"><span id="stat-3" data-val="3254">0</span></h4>
-                <h5 class="heading-light">>Sales</h5>
+                <h5 class="heading-light">Sales</h5>
             </header>
         </div>
         
