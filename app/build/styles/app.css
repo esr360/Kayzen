@@ -7418,6 +7418,9 @@ progress::-moz-progress-bar {
 [class*="widget_group"][class*="-grid"] .widget, [class*="widget_group"][class*="-grid"] [class*="widget-"] {
   margin-bottom: 3%;
 }
+[class*="widget_group"][class*="-panels"] .widget, [class*="widget_group"][class*="-panels"] [class*="widget-"] {
+  border-bottom: 1px solid #dee0e2;
+}
 [class*="widget_group"][class*="-center"] .widget, [class*="widget_group"][class*="-center"] [class*="widget-"] {
   text-align: center;
 }
@@ -7774,6 +7777,12 @@ progress::-moz-progress-bar {
 [class*="footer_wrapper"] .logo img, [class*="footer_wrapper"] [class*="logo-"] img {
   height: 34px;
 }
+[class*="footer_wrapper"] b {
+  color: #ffffff;
+}
+[class*="footer_title"] {
+  color: #ffffff;
+}
 [class*="footer_bar"] {
   padding: 2em 0;
   font-size: 0.9em;
@@ -7799,6 +7808,7 @@ progress::-moz-progress-bar {
 }
 [class*="footer_nav"] a:hover {
   text-decoration: none;
+  color: #ffffff;
 }
 @media (min-width: 720px) {
   [class*="footer_nav"] {

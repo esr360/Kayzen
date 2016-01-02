@@ -1006,7 +1006,7 @@
  
         <section class="section-primary-mini">
                 
-            <div class="widget_group row-block text-center">
+            <div class="widget_group-panels row-block text-center">
                 
                 <!-- Feature 1 -->
                 <div class="widget-block-panel span">
@@ -1057,6 +1057,10 @@
                 </div>
                 
             </div><!-- Features Row 1 -->
+        
+        </section>
+            
+        <div class="container-small">
              
 <pre data-enlighter-language="html" class="EnlighterJSRAW">
 &lt;div class="widget_group row-block text-center">
@@ -1076,12 +1080,12 @@
     
 &lt;/div>
 </pre>
-        
-        </section>
+
+        </div>
  
-        <section class="section-primary-mini-flush">
+        <section class="section-primary-mini">
                 
-            <div class="widget_group-center row-no-gutter">
+            <div class="widget_group-center-panels row-no-gutter">
                 
                 <a class="widget-block-panel-small span-2 break-3-third break-1-half" href="#">
                     <div class="widget_icon button-icon-plain-size-8">
@@ -1138,6 +1142,10 @@
                 </a>
                 
             </div>
+            
+        </section>
+            
+        <div class="container-small">
              
 <pre data-enlighter-language="html" class="EnlighterJSRAW">
 &lt;div class="widget_group-center row-no-gutter">
@@ -1155,52 +1163,58 @@
     
 &lt;/div>
 </pre>
+
+        </div>
+ 
+        <section class="section-primary-mini">
+            
+            <div class="row-block text-center">
+                
+                <div class="widget-spectrum-quarter span-3">
+                    <div class="widget_icon button-icon-plain-size-8">
+                        <i class="fa fa-code"></i>
+                    </div>
+                    <header class="widget_header heading_group">
+                        <h4 class="heading-size-7"><span>14266</span></h4>
+                        <h5 class="heading-light">Lines of code</h5>
+                    </header>
+                </div>
+                
+                <div class="widget-spectrum-quarter span-3">
+                    <div class="widget_icon button-icon-plain-size-8">
+                        <i class="fa fa-desktop"></i>
+                    </div>
+                    <header class="widget_header heading_group">
+                        <h4 class="heading-size-7"><span>136</span></h4>
+                        <h5 class="heading-light">Completed projects</h5>
+                    </header>
+                </div>
+                
+                <div class="widget-spectrum-quarter span-3">
+                    <div class="widget_icon button-icon-plain-size-8">
+                        <i class="fa fa-users"></i>
+                    </div>
+                    <header class="widget_header heading_group">
+                        <h4 class="heading-size-7"><span>28</span></h4>
+                        <h5 class="heading-light">Happy clients</h5>
+                    </header>
+                </div>
+                
+                <div class="widget-spectrum-quarter span-3">
+                    <div class="widget_icon button-icon-plain-size-8">
+                        <i class="fa fa-desktop"></i>
+                    </div>
+                    <header class="widget_header heading_group">
+                        <h4 class="heading-size-7"><span>3254</span></h4>
+                        <h5 class="heading-light">Sales</h5>
+                    </header>
+                </div>
+                
+            </div>
             
         </section>
-        
-        <div class="row-block text-center">
             
-            <div class="widget-spectrum-quarter span-3">
-                <div class="widget_icon button-icon-plain-size-8">
-                    <i class="fa fa-code"></i>
-                </div>
-                <header class="widget_header heading_group">
-                    <h4 class="heading-size-7"><span>14266</span></h4>
-                    <h5 class="heading-light">Lines of code</h5>
-                </header>
-            </div>
-            
-            <div class="widget-spectrum-quarter span-3">
-                <div class="widget_icon button-icon-plain-size-8">
-                    <i class="fa fa-desktop"></i>
-                </div>
-                <header class="widget_header heading_group">
-                    <h4 class="heading-size-7"><span>136</span></h4>
-                    <h5 class="heading-light">Completed projects</h5>
-                </header>
-            </div>
-            
-            <div class="widget-spectrum-quarter span-3">
-                <div class="widget_icon button-icon-plain-size-8">
-                    <i class="fa fa-users"></i>
-                </div>
-                <header class="widget_header heading_group">
-                    <h4 class="heading-size-7"><span>28</span></h4>
-                    <h5 class="heading-light">Happy clients</h5>
-                </header>
-            </div>
-            
-            <div class="widget-spectrum-quarter span-3">
-                <div class="widget_icon button-icon-plain-size-8">
-                    <i class="fa fa-desktop"></i>
-                </div>
-                <header class="widget_header heading_group">
-                    <h4 class="heading-size-7"><span>3254</span></h4>
-                    <h5 class="heading-light">Sales</h5>
-                </header>
-            </div>
-            
-        </div>
+        <div class="container-small">
              
 <pre data-enlighter-language="html" class="EnlighterJSRAW">
 &lt;div class="row-block text-center">
@@ -1219,6 +1233,8 @@
     
 &lt;/div>
 </pre>
+
+        </div>
 
         <section class="section-primary-mini">
             
@@ -1240,12 +1256,131 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td><code>background</code></td>
-                            <td><code class="value">white</code></td>
-                            <td>The background color for wells.</td>
+                            <td><code>block-background</code></td>
+                            <td><code class="value">color('greyscale', 'white')</code></td>
+                            <td>The background for a widget with the <code>block</code> modifier.</td>
+                        </tr>
+                        <tr>
+                            <td><code>block-padding</code></td>
+                            <td><code class="value">2.5em 1em</code></td>
+                            <td>The padding for a widget with the <code>block</code> modifier.</td>
+                        </tr>
+                        <tr>
+                            <td><code>block-small-padding</code></td>
+                            <td><code class="value">1.5em 1em</code></td>
+                            <td>The padding for a widget with <code>block</code> and <code>small</code> modifiers.</td>
+                        </tr>
+                        <tr>
+                            <td><code>block-fill-background</code></td>
+                            <td><code class="value">color('brand', 'primary')</code></td>
+                            <td>The background for a widget with  <code>block</code> and <code>fill</code> modifiers.</td>
+                        </tr>
+                        <tr>
+                            <td><code>block-fill-color</code></td>
+                            <td><code class="value">color('greyscale', 'white')</code></td>
+                            <td>The text color for a widget with  <code>block</code> and <code>fill</code> modifiers.</td>
+                        </tr>
+                        <tr>
+                            <td><code>block-hover-background</code></td>
+                            <td><code class="value">color('brand', 'primary')</code></td>
+                            <td>The background for a widget with the <code>block</code> modifier when hovered.</td>
+                        </tr>
+                        <tr>
+                            <td><code>block-hover-color</code></td>
+                            <td><code class="value">color('greyscale', 'white')</code></td>
+                            <td>The text color for a widget with the <code>block</code> modifier when hovered.</td>
+                        </tr>
+                        <tr>
+                            <td><code>block-hover-fill-background</code></td>
+                            <td><code class="value">darken(color('brand', 'primary'), 10%)</code></td>
+                            <td>The background for a widget with <code>block</code> and <code>fill</code> modifiers when hovered.</td>
+                        </tr>
+                        <tr>
+                            <td><code>block-hover-panel-border-color</code></td>
+                            <td><code class="value">color('brand', 'primary')</code></td>
+                            <td>The border-color for a widget with <code>block</code> and <code>panel</code> modifiers when hovered.</td>
+                        </tr>
+                        <tr>
+                            <td><code>panel-padding</code></td>
+                            <td><code class="value">4%</code></td>
+                            <td>The padding for a widget with the <code>panel</code> modifier.</td>
+                        </tr>
+                        <tr>
+                            <td><code>panel-border</code></td>
+                            <td><code class="value">1px solid color('greyscale', 'grey-2')</code></td>
+                            <td>The border for a widget with the <code>panel</code> modifier.</td>
+                        </tr>
+                        <tr>
+                            <td><code>panel-small-padding</code></td>
+                            <td><code class="value">4% 2%</code></td>
+                            <td>The padding for a widget with <code>panel</code> and <code>small</code> modifiers.</td>
+                        </tr>
+                        <tr>
+                            <td><code>border</code></td>
+                            <td><code class="value">0.6em solid rgba(black, 0.15)</code></td>
+                            <td>The border for a widget using either the <code>borderTop</code> or <code>borderLeft</code> modifiers.</td>
+                        </tr>
+                        <tr>
+                            <td><code>border-highlight-color</code></td>
+                            <td><code class="value">color('brand', 'primary')</code></td>
+                            <td>The border color for a widget using either the <code>borderTop</code> or <code>borderLeft</code> and <code>highlight</code> modifiers.</td>
+                        </tr>
+                        <tr>
+                            <td><code>border-highlight-hover-color</code></td>
+                            <td><code class="value">rgba(black, 0.15)</code></td>
+                            <td>The border color for a widget using either the <code>borderTop</code> or <code>borderLeft</code> and <code>highlight</code> modifiers when hovered.</td>
+                        </tr>
+                        <tr>
+                            <td><code>scale</code></td>
+                            <td><code class="value">1.1</code></td>
+                            <td>The size which a widget using the <code>scale</code> modifier should scale to when hovered.</td>
+                        </tr>
+                        <tr>
+                            <td><code>zoom-bg-scale</code></td>
+                            <td><code class="value">1.3</code></td>
+                            <td>The size which the background image in a widget using the <code>zoom</code> modifier should scale to when hovered.</td>
+                        </tr>
+                        <tr>
+                            <td><code>spectrum-quarter-padding</code></td>
+                            <td><code class="value">2.5em 1em</code></td>
+                            <td>The padding for widgets using the <code>spectrumQuarter</code> modifier.</td>
+                        </tr>
+                        <tr>
+                            <td><code>spectrum-quarter-large-padding</code></td>
+                            <td><code class="value">4%</code></td>
+                            <td>The padding for widgets using <code>spectrumQuarter</code> and <code>large</code> modifiers.</td>
+                        </tr>
+                        <tr>
+                            <td><code>tub-color</code></td>
+                            <td><code class="value">color('greyscale', 'white')</code></td>
+                            <td>The text color for the <code>tub</code> component.</td>
+                        </tr>
+                        <tr>
+                            <td><code>tub-background</code></td>
+                            <td><code class="value">rgba(black, 0.4)</code></td>
+                            <td>The background for the widget <code>tub</code> component.</td>
+                        </tr>
+                        <tr>
+                            <td><code>feature-padding</code></td>
+                            <td><code class="value">15% 2em 2em</code></td>
+                            <td>The padding for widgets using the <code>feature</code> modifier.</td>
+                        </tr>
+                        <tr>
+                            <td><code>icon-color</code></td>
+                            <td><code class="value">color('greyscale', 'grey-3')</code></td>
+                            <td>The color for the widget <code>icon</code> component.</td>
                         </tr>
                     </tbody>
                 </table>
+
+				<p>To change one of the above values, pass your new value(s) to the <code>widgets()</code> mixin in your theme file (e.g. app/themes/Kayzen/_kayzen.scss).</p>   
+                
+<pre data-enlighter-language="css" class="EnlighterJSRAW">
+@include widgets((
+    'block-padding' : 2em,
+    'zoom-bg-scale' : 1.5
+));
+</pre>  
             
             </div>
                 

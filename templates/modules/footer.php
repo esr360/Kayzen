@@ -48,35 +48,39 @@
                             </h5>
                         </header>
                         
-                        <p>Suspendisse tempus sodales neque eget.</p>
-                        
-                        <form class="form-faux-placeholders">
-                            <div class="form_group-small">
-                                <button type="submit" class="button-icon-primary-size-3"><i class="fa fa-thumbs-o-up"></i></button>
-                                <input type="text" class="form_input-plain" id="footer-newsletter" placeholder="Ex: help@kayzen.com" required="">
-                                <label for="footer-newsletter">Email Address</label>
+                        <div class="footer_content">
+                            
+                            <p>Suspendisse tempus sodales neque eget.</p>
+                            
+                            <form class="form-fauxPlaceholders">
+                                <div class="form_group-small">
+                                    <button type="submit" class="button-icon-primary-size-3"><i class="fa fa-thumbs-o-up"></i></button>
+                                    <input type="text" class="form_input-plain" id="footer-newsletter" placeholder="Ex: help@kayzen.com" required="">
+                                    <label for="footer-newsletter">Email Address</label>
+                                </div>
+                            </form>
+                            
+                            <div class="button_group-small">
+                                <a href="#" class="button-icon-size-2 tooltip-top" data-tooltip="Dribbble">
+                                    <i class="fa fa-dribbble"></i>
+                                </a>
+                                <a href="#" class="button-icon-size-2 tooltip-top" data-tooltip="Facebook">
+                                    <i class="fa fa-facebook"></i>
+                                </a>
+                                <a href="#" class="button-icon-size-2 tooltip-top" data-tooltip="Twitter">
+                                    <i class="fa fa-twitter"></i>
+                                </a>
+                                <a href="#" class="button-icon-size-2 tooltip-top" data-tooltip="LinkedIn">
+                                    <i class="fa fa-linkedin"></i>
+                                </a>
+                                <a href="#" class="button-icon-size-2 tooltip-top" data-tooltip="DeviantArt">
+                                    <i class="fa fa-deviantart"></i>
+                                </a>
+                                <a href="#" class="button-icon-size-2 tooltip-top" data-tooltip="Behance">
+                                    <i class="fa fa-behance"></i>
+                                </a>
                             </div>
-                        </form>
                         
-                        <div class="icon_group-small">
-                            <a href="#" class="icon tooltip-top" data-tooltip="Dribbble">
-                                <i class="fa fa-dribbble"></i>
-                            </a>
-                            <a href="#" class="icon tooltip-top" data-tooltip="Facebook">
-                                <i class="fa fa-facebook"></i>
-                            </a>
-                            <a href="#" class="icon tooltip-top" data-tooltip="Twitter">
-                                <i class="fa fa-twitter"></i>
-                            </a>
-                            <a href="#" class="icon tooltip-top" data-tooltip="LinkedIn">
-                                <i class="fa fa-linkedin"></i>
-                            </a>
-                            <a href="#" class="icon tooltip-top" data-tooltip="DeviantArt">
-                                <i class="fa fa-deviantart"></i>
-                            </a>
-                            <a href="#" class="icon tooltip-top" data-tooltip="Behance">
-                                <i class="fa fa-behance"></i>
-                            </a>
                         </div>
                         
                     </div>

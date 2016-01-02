@@ -9,7 +9,7 @@
 	//-------------------------------------------------------------
 
 	$footer: config((
-		name            : footer
+		'name'            : 'footer'
 	), $custom);
 	
 	//-------------------------------------------------------------
@@ -21,47 +21,47 @@
 	// Core Styles
 	//-------------------------------------------------------------
 	
-		background: color(greyscale, grey-6);
+		background: color('greyscale', 'grey-6');
 		
 	// Components
 	//-------------------------------------------------------------
 	
-		@include component(wrapper) {
+		@include component('wrapper') {
 			padding: 4em;
 			font-size: 0.9em;
-			background: color(greyscale, grey-5);
-			color: color(greyscale, grey-3);
-			@include overwrite(logo) {
+			background: color('greyscale', 'grey-5');
+			color: color('greyscale', 'grey-3');
+			@include overwrite('logo') {
 				img {
 					height: 34px;
 				}
 			}
 			b {
-				color: color(greyscale, white);
+				color: color('greyscale', 'white');
 			}
 		}
 		
-		@include component(title) {
-			color: color(greyscale, white);
+		@include component('title') {
+			color: color('greyscale', 'white');
 		}
 	
-		@include component(bar) {
+		@include component('bar') {
 			padding: 2em 0;
 			font-size: 0.9em;
-			@media (min-width: breakpoint(break-2)) {		
+			@media (min-width: breakpoint('break-2')) {		
 				display: table;
 				width: 100%;
 				text-align: left;
 			}
 		}
 		
-		@include component(copyright) {
+		@include component('copyright') {
 			h4 {
 				font-weight: lighter;
 			}
 		}
 	
-		@include component(nav) {
+		@include component('nav') {
 			ul {
 			    @extend %list-reset;
 			}
@@ -72,26 +72,26 @@
 			    }
 		    }
 			a {
-				color: color(greyscale, grey-3);
+				color: color('greyscale', 'grey-3');
 				&:hover {
 					text-decoration: none;
-					color: color(greyscale, white);
+					color: color('greyscale', 'white');
 				}
 			}
-			@media (min-width: breakpoint(break-2)) {
+			@media (min-width: breakpoint('break-2')) {
 				text-align: right;
 			}
 		}
 		
-		@include components((nav, copyright)) {
-			@media (min-width: breakpoint(break-2)) {
+		@include components(('nav', 'copyright')) {
+			@media (min-width: breakpoint('break-2')) {
 				display: table-cell;
 				vertical-align: middle;
 			}
 		}
 		
 		@include component {
-			@include modifier(nav) {
+			@include modifier('nav') {
 				position: absolute;
 				top: 0;
 				right: 0;
