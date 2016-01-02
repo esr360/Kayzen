@@ -289,8 +289,8 @@
 <pre data-enlighter-language="css" class="EnlighterJSRAW">
 @include blockquotes((
     'font'            : 'Times New Roman',
-	'bubble-bg-color' : #0bb2ef,
-	'bubble-radius'   : 0
+    'bubble-bg-color' : #0bb2ef,
+    'bubble-radius'   : 0
 ));
 </pre>	
                 

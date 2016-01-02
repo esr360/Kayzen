@@ -12,7 +12,7 @@
 		'name'                 : 'heading',
 		'output-JSON'          : true,
         'highlight-color'      : color('brand', 'primary'),
-        'highlight-dark-color' : color(greyscale, grey-6),
+        'highlight-dark-color' : color('greyscale', 'grey-6'),
         'strikethrough-width'  : 75px,
         'spaced-spacing'       : 0.35em,
         'border'               : 1px dotted rgba(black, 0.2),
@@ -25,14 +25,14 @@
 	// Component
 	//-------------------------------------------------------------
 
-	@include module(heading) {
+	@include module {
 
 	// Core Styles
 	//-------------------------------------------------------------
 
 		line-height: 1;
-		font-size: font-size(base);
-		transition: base(transition);
+		font-size: font-size('base');
+		transition: base('transition');
 
 	// Sizes
 	//-------------------------------------------------------------
@@ -42,37 +42,37 @@
 	// Patterns
 	//-------------------------------------------------------------
 
-		@include modifier(heavy) {
+		@include modifier('heavy') {
 			font-weight: bolder;
 			font-weight: 900;
 		}
 	
-		@include modifier(brand-1) {
+		@include modifier('brand-1') {
 			font-style: normal;
-			color: color(brand, primary);
+			color: color('brand', 'primary');
 		}
 	
-		@include modifier(uppercase) {
+		@include modifier('uppercase') {
 			text-transform: uppercase;
 		}
 	
-		@include modifier(light) {
+		@include modifier('light') {
 			font-weight: lighter;
 			font-weight: 100;
 			font-style: normal;
 		} 
 	
-		@include modifier(highlight) {
+		@include modifier('highlight') {
             $highlight-dimensions: 0.3em;
 			margin-left: $highlight-dimensions;
 			margin-right: $highlight-dimensions;
 			line-height: 1.5;
 			> b {
-				background: color(brand, primary);
+				background: color('brand', 'primary');
 				color: white;
                 padding: 0.1em 0;
 				font-weight: normal;
-				box-shadow: $highlight-dimensions 0 0 color(brand, primary), -$highlight-dimensions 0 0 color(brand, primary);
+				box-shadow: $highlight-dimensions 0 0 color('brand', 'primary'), -$highlight-dimensions 0 0 color('brand', 'primary');
 				text-shadow: none;    
 				&:not(:first-child) {
 					margin-top: ($highlight-dimensions / 2);
@@ -87,15 +87,15 @@
 					box-decoration-break: clone;
 				}
 			}
-			@include modifier(dark) {
+			@include modifier('dark') {
 				> b {
-					background: color(greyscale, grey-6);
-					box-shadow: $highlight-dimensions 0 0 color(greyscale, grey-6), -$highlight-dimensions 0 0 color(greyscale, grey-6);
+					background: color('greyscale', 'grey-6');
+					box-shadow: $highlight-dimensions 0 0 color('greyscale', 'grey-6'), -$highlight-dimensions 0 0 color('greyscale', 'grey-6');
 				}
 			}
 		}
 	
-		@include modifier(strikethrough) {
+		@include modifier('strikethrough') {
             > span {
 				position: relative;
 				&:before,
@@ -126,12 +126,12 @@
             }
 		}
 	
-		@include modifier(spaced) {
+		@include modifier('spaced') {
 			text-indent: 0.3em;
 			&, span {            
 				letter-spacing: 0.35em;
 			}
-			@include modifier(strikethrough) {
+			@include modifier('strikethrough') {
 				span {
 					&:after {
 						right: calc(-75px - 1rem + 0.35em);
@@ -140,7 +140,7 @@
 			} 
 		}
 
-		@include modifier(border) {
+		@include modifier('border') {
 			border-bottom: 1px dotted rgba(black, 0.2);
 			padding-bottom: 0.75rem;
 			a {
@@ -148,19 +148,19 @@
 			}
 		}
 		
-		@include modifier(flush) {
+		@include modifier('flush') {
 			margin: 0 !important;
 		}
         
         @include modifier('sub') {
-            color: color('greyscale', grey-4);
+            color: color('greyscale', 'grey-4');
         }
 
 	// Styles
 	//-------------------------------------------------------------
 
-//		@include modifier(primary) {
-//			@include extend(heavy, size-4, uppercase);
+//		@include modifier('primary') {
+//			@include extend('heavy', 'size-4', 'uppercase');
 //		}  
 
 	// Components
@@ -170,18 +170,18 @@
 		// Heading Group
 		//---------------------------------------------------------
 	
-		@include component(group) {
+		@include component('group') {
 		
 			// Core Styles
 			//-----------------------------------------------------
 		
-			@include vertical-rhythm(bottom);
-			margin-bottom: base(margin);
+			@include vertical-rhythm('bottom');
+			margin-bottom: base('margin');
 			font-size: 1rem;
 			position: relative;
 			background-size: cover;
 	
-			@include overwrite(heading) {
+			@include overwrite('heading') {
 				@include vertical-rhythm;
 				margin-top: 0.5em;
 				margin-bottom: 0.5em;
@@ -189,7 +189,7 @@
 			}
 	
 			p {
-				color: color(greyscale, grey-4);
+				color: color('greyscale', 'grey-4');
 			}
             
             @include overwrite {
@@ -203,7 +203,7 @@
 			// Modifiers
 			//-----------------------------------------------------
 		
-			@include modifier(dots) {
+			@include modifier('dots') {
 				position: relative;
 				margin-bottom: 3em;
 				&:after {
@@ -219,7 +219,7 @@
 				}
 			}
 		
-			@include modifier(block) {
+			@include modifier('block') {
 				padding: 6em 0;
 				margin-bottom: 0;
 				&.has-icon {
@@ -227,15 +227,15 @@
 				}
 			}
 			
-			@include modifier(small) {
+			@include modifier('small') {
 				@include vertical-rhythm;
-				margin-top: (base(margin) / 2);
-				margin-bottom: (base(margin) / 2);
+				margin-top: (base('margin') / 2);
+				margin-bottom: (base('margin') / 2);
 			}
 		
-			@include modifier(large) {
-				margin-bottom: (base(margin) * 2);
-				@include vertical-rhythm(bottom);
+			@include modifier('large') {
+				margin-bottom: (base('margin') * 2);
+				@include vertical-rhythm('bottom');
 			}
 		
 		} // sub-component(group)

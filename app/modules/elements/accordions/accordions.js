@@ -21,5 +21,3 @@ function accordion() {
 	});
   
 } // accordion
-
-$(accordion);

@@ -16,7 +16,7 @@
 </div>
 
 <!-- Scroll to top icon -->
-<a class="button-icon-border-size-3 scroll-top" href="#site-content">
+<a class="button-icon-border scroll-top" href="#site-content">
 	<i class="fa fa-angle-up"></i>
 </a> 
 

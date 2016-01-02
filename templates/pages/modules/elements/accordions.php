@@ -71,20 +71,20 @@
 					</section>
 				</div>
 							
-<pre data-enlighter-language="html" class="EnlighterJSRAW" style="display: none;">
+<pre data-enlighter-language="html" class="EnlighterJSRAW">
 &lt;div class="accordion">
-	&lt;section class="accordion_section">
-		&lt;h4 class="accordion_title">...&lt;/h4>
-		&lt;p class="accordion_content">...&lt;/p>
-	&lt;/section>
-	&lt;section class="accordion_section">
-		&lt;h4 class="accordion_title">...&lt;/h4>
-		&lt;p class="accordion_content">...&lt;/p>
-	&lt;/section>
-	&lt;section class="accordion_section">
-		&lt;h4 class="accordion_title">...&lt;/h4>
-		&lt;p class="accordion_content">...&lt;/p>
-	&lt;/section>
+    &lt;section class="accordion_section">
+        &lt;h4 class="accordion_title">...&lt;/h4>
+        &lt;p class="accordion_content">...&lt;/p>
+    &lt;/section>
+    &lt;section class="accordion_section">
+        &lt;h4 class="accordion_title">...&lt;/h4>
+        &lt;p class="accordion_content">...&lt;/p>
+    &lt;/section>
+    &lt;section class="accordion_section">
+        &lt;h4 class="accordion_title">...&lt;/h4>
+        &lt;p class="accordion_content">...&lt;/p>
+    &lt;/section>
 &lt;/div>
 </pre>
 
@@ -105,17 +105,17 @@
 					</section>
 				</div>
 				
-<pre data-enlighter-language="html" class="EnlighterJSRAW" style="display: none;">
+<pre data-enlighter-language="html" class="EnlighterJSRAW">
 &lt;div class="accordion">
-	&lt;section>
-		...
-	&lt;/section>
-	&lt;section class="active">
-		...
-	&lt;/section>
-	&lt;section>
-		...
-	&lt;/section>
+    &lt;section>
+        ...
+    &lt;/section>
+    &lt;section class="active">
+        ...
+    &lt;/section>
+    &lt;section>
+        ...
+    &lt;/section>
 &lt;/div>
 </pre>
 				
@@ -136,9 +136,9 @@
 					</section>
 				</div>
 				
-<pre data-enlighter-language="html" class="EnlighterJSRAW" style="display: none;">
+<pre data-enlighter-language="html" class="EnlighterJSRAW">
 &lt;div class="accordion-keep-open">
-	...
+    ...
 &lt;/div>
 </pre>
 				<h3 class="heading-size-3">Minimal (+ Multiple Open Items)</h3>
@@ -146,41 +146,41 @@
                 <div class="accordion-minimal-keep-open">
 					<section class="object active">
                         <header class="heading_group-small">
-                            <h4 class="heading-size-4-dotted">Accordion Title</h4>
+                            <h4 class="heading-size-4-border">Accordion Title</h4>
                         </header>
 						<div><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ultrices diam massa. Fusce pretium dui vitae elementum hendrerit. Nunc at placerat enim. Sed suscipit eros dolor, ac maximus lacus euismod non.</p></div>
 					</section>
 					<section class="object">
                         <header class="heading_group-small">
-                            <h4 class="heading-size-4-dotted">Accordion Title</h4>
+                            <h4 class="heading-size-4-border">Accordion Title</h4>
                         </header>
 						<div><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ultrices diam massa. Fusce pretium dui vitae elementum hendrerit. Nunc at placerat enim. Sed suscipit eros dolor, ac maximus lacus euismod non.</p></div>
 					</section>
 					<section class="object">
                         <header class="heading_group-small">
-                            <h4 class="heading-size-4-dotted">Accordion Title</h4>
+                            <h4 class="heading-size-4-border">Accordion Title</h4>
                         </header>
 						<div><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ultrices diam massa. Fusce pretium dui vitae elementum hendrerit. Nunc at placerat enim. Sed suscipit eros dolor, ac maximus lacus euismod non.</p></div>
 					</section>
 				</div>
                 
-<pre data-enlighter-language="html" class="EnlighterJSRAW" style="display: none;">
+<pre data-enlighter-language="html" class="EnlighterJSRAW">
 &lt;div class="accordion-minimal-keep-open">
-	&lt;section class="object active">
+    &lt;section class="object active">
         &lt;header class="heading_group-small">
-            &lt;h4 class="heading-size-4-dotted">Accordion Title&lt;/h4>
+            &lt;h4 class="heading-size-4-border">Accordion Title&lt;/h4>
         &lt;/header>
     &lt;/section>
     &lt;div>&lt;p>...&lt;/p>&lt;/div>
-	&lt;section class="object">
+    &lt;section class="object">
         &lt;header class="heading_group-small">
-            &lt;h4 class="heading-size-4-dotted">Accordion Title&lt;/h4>
+            &lt;h4 class="heading-size-4-border">Accordion Title&lt;/h4>
         &lt;/header>
     &lt;/section>
     &lt;div>&lt;p>...&lt;/p>&lt;/div>
-	&lt;section class="object">
+    &lt;section class="object">
         &lt;header class="heading_group-small">
-            &lt;h4 class="heading-size-4-dotted">Accordion Title&lt;/h4>
+            &lt;h4 class="heading-size-4-border">Accordion Title&lt;/h4>
         &lt;/header>
     &lt;/section>
     &lt;div>&lt;p>...&lt;/p>&lt;/div>
@@ -208,7 +208,7 @@
 					</div>
 				</div>
                 
-<pre data-enlighter-language="html" class="EnlighterJSRAW" style="display: none;">
+<pre data-enlighter-language="html" class="EnlighterJSRAW">
 &lt;div class="accordion">
     &lt;div>
         &lt;div>Accordion Title&lt;/div>
@@ -337,10 +337,10 @@
 						
 <pre data-enlighter-language="css" class="EnlighterJSRAW">
 @include accordions((
-	icon-color      : rgba(white, 0.6),
-	title-bg        : color(brand, primary),
-	title-color     : white,
-	title-active-bg : darken(color(brand, primary), 10%)
+    icon-color      : rgba(white, 0.6),
+    title-bg        : color(brand, primary),
+    title-color     : white,
+    title-active-bg : darken(color(brand, primary), 10%)
 ));
 </pre>				
 
@@ -382,10 +382,10 @@
 
 <pre data-enlighter-language="css" class="EnlighterJSRAW" style="display: none;">
 @include accordions((
-	section-margin      : 1.4em,
-	title-radius        : 0.4em,
-	title-active-radius : 0.4em 0.4em 0 0,
-	content-radius      : 0 0 0.4em 0.4em
+    section-margin      : 1.4em,
+    title-radius        : 0.4em,
+    title-active-radius : 0.4em 0.4em 0 0,
+    content-radius      : 0 0 0.4em 0.4em
 ));
 </pre>				
 

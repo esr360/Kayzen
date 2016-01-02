@@ -9,31 +9,31 @@
 	//-------------------------------------------------------------
 
 	$accordions: config((
-		name                  : accordion,
-		output-JSON           : true,
+		'name'                  : 'accordion',
+		'output-JSON'           : true,
 		// icon (open/close)
-		icon                  : '\f138', // FontAwesome value
-		icon-color            : rgba(color(greyscale, grey-3), 0.6),
-		icon-active-color     : color(greyscale, white),
+		'icon'                  : '\f138', // FontAwesome value
+		'icon-color'            : rgba(color('greyscale', 'grey-3'), 0.6),
+		'icon-active-color'     : color('greyscale', 'white'),
 		// each section
-		section-margin        : 0,
+		'section-margin'        : 0,
 		// title (clickable part)
-		title-bg              : transparent,
-		title-color           : base(text-color),
-		title-border          : 1px solid rgba(black, 0.15),
-		title-radius          : 0,
-		title-padding         : 1em,
+		'title-bg'              : transparent,
+		'title-color'           : base('text-color'),
+		'title-border'          : 1px solid rgba(black, 0.15),
+		'title-radius'          : 0,
+		'title-padding'         : 1em,
 		// title.active
-		title-active-bg       : color(brand, primary),
-		title-active-color    : color(greyscale, white),
-		title-active-border   : transparent,
-		title-active-radius   : 0,
+		'title-active-bg'       : color('brand', 'primary'),
+		'title-active-color'    : color('greyscale', 'white'),
+		'title-active-border'   : transparent,
+		'title-active-radius'   : 0,
 		// content
-		content-bg            : color(greyscale, white),
-		content-color         : base(text-color),
-		content-border        : 1px solid rgba(black, 0.15),
-		content-radius        : 0,
-		content-padding       : 1.5em
+		'content-bg'            : color('greyscale', 'white'),
+		'content-color'         : base('text-color'),
+		'content-border'        : 1px solid rgba(black, 0.15),
+		'content-radius'        : 0,
+		'content-padding'       : 1.5em
 	), $custom);
 	
 	//-------------------------------------------------------------
@@ -45,8 +45,8 @@
 	// Core Styles
 	//-------------------------------------------------------------
 	
-		margin-bottom: base(margin);
-		@include vertical-rhythm(bottom);
+		margin-bottom: base('margin');
+		@include vertical-rhythm('bottom');
 
 	// Components
 	//-------------------------------------------------------------
@@ -54,9 +54,9 @@
         @include component('section') {
 			margin: 0;
 			&:not(:last-child) {
-				margin-bottom: option($config, section-margin);
+				margin-bottom: this('section-margin');
 			}
-			@if (option($config, section-margin) == 0) {
+			@if (this('section-margin') == 0) {
 				&:not(:last-child) {
 					> *:first-child, > *:last-child {
 						border-bottom: 0 !important;
@@ -66,17 +66,17 @@
             &:hover,
             &.active {
                 @include overwrite-component('title') {
-                    background: option($config, title-active-bg);
-                    color: option($config, title-active-color);
+                    background: this('title-active-bg');
+                    color: this('title-active-color');
                     &:after { // open/close icon
-                        color: option($config, icon-active-color);
+                        color: this('icon-active-color');
                     }
                 }
             }
             &.active {
                 @include overwrite-component('title') {
-					border-color: option($config, title-active-border);
-					border-radius: option($config, title-active-radius);
+					border-color: this('title-active-border');
+					border-radius: this('title-active-radius');
 					&:after { // open/close icon		
 						transform: rotate(90deg) translateZ(0);
 					}
@@ -88,31 +88,31 @@
             display: block;
             padding: 1em;
             margin: 0;
-            background: option($config, title-bg);
-            color: option($config, title-color);
-            border: option($config, title-border);
-            border-radius: option($config, title-radius);
+            background: this('title-bg');
+            color: this('title-color');
+            border: this('title-border');
+            border-radius: this('title-radius');
             font-weight: normal;	
             line-height: 1;		
-            transition: base(transition);
+            transition: base('transition');
             backface-visibility: hidden;
             &:after { // open/close icon
-                content: option($config, icon);
+                content: this('icon');
                 font-family: FontAwesome;
                 float: right;
-                color: option($config, icon-color);
-                transition: base(transition);
+                color: this('icon-color');
+                transition: base('transition');
             }
         }
         
         @include component('content') {
-            border: option($config, content-border);
-            border-radius: option($config, content-radius);
-            padding: option($config, content-padding);
+            border: this('content-border');
+            border-radius: this('content-radius');
+            padding: this('content-padding');
             margin: 0;
             margin-top: -1px;	
             font-weight: lighter;
-            background: option($config, content-bg);
+            background: this('content-bg');
         }
         
 		> * {
@@ -138,11 +138,11 @@
                         content: '\f105';
                         font-family: FontAwesome;
                         position: absolute;
-                        font-size: font-size(size-4);
+                        font-size: font-size('size-4');
                         right: 0;
                         top: -0.25em;
-                        color: option($config, icon-color);
-                        transition: base(transition);
+                        color: this('icon-color');
+                        transition: base('transition');
                     }			
                 }
                 &.active {

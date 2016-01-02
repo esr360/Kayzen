@@ -127,12 +127,12 @@
 							<td>The inner padding of the alert bar.</td>
 						</tr>
 						<tr>
-							<td><code>size</code></td>
+							<td><code>font-size</code></td>
 							<td><code class="value">0.9em</code></td>
 							<td>The alert bar's font size.</td>
 						</tr>
 						<tr>
-							<td><code>weight</code></td>
+							<td><code>font-weight</code></td>
 							<td><code class="value">lighter</code></td>
 							<td>The alert bar's font weight.</td>
 						</tr>
@@ -143,11 +143,11 @@
 
 <pre data-enlighter-language="css" class="EnlighterJSRAW">
 @include alert-bars((
-	'border-radius' : 0,
-	'border-width'  : 3px,
-	'padding'       : 1em,
-	'size'          : 1em,
-    'weight'        : normal
+    'border-radius' : 0,
+    'border-width'  : 3px,
+    'padding'       : 1em,
+    'font-size'     : 1em,
+    'font-weight'   : normal
 ));
 </pre>	
 

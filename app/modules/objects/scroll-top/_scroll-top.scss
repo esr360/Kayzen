@@ -9,7 +9,7 @@
 	//-------------------------------------------------------------
 
 	$scroll-top: config((
-		name            : scroll-top
+		'name'            : 'scroll-top'
 	), $custom);
 	
 	//-------------------------------------------------------------
@@ -25,7 +25,7 @@
 		bottom: 2rem;
 		right: 2rem;
 		transform: translateZ(0);
-		&.active {
+		&.visible {
 			opacity: 1;
 			visibility: visible;
 		}
@@ -34,7 +34,7 @@
 			opacity: 1;
 		}
 	
-		@media (min-width: breakpoint(break-5)) {
+		@media (min-width: breakpoint('break-5')) {
 			display: block;
 		}
 	

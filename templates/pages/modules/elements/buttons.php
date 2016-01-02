@@ -74,7 +74,7 @@
                     <a class="button" href="#">Button</a>
                </div>
                 
-<pre data-enlighter-language="html" class="EnlighterJSRAW" style="display: none;">
+<pre data-enlighter-language="html" class="EnlighterJSRAW">
 &lt;a class="button" href="#">Button&lt;/a>
 </pre>
 
@@ -84,7 +84,7 @@
                     <a class="button-block" href="#">Button</a>
                </div>
                 
-<pre data-enlighter-language="html" class="EnlighterJSRAW" style="display: none;">
+<pre data-enlighter-language="html" class="EnlighterJSRAW">
 &lt;a class="button-block" href="#">Button&lt;/a>
 </pre>
 
@@ -94,7 +94,7 @@
                     <a class="button-border" href="#">Button</a>
                </div>
                 
-<pre data-enlighter-language="html" class="EnlighterJSRAW" style="display: none;">
+<pre data-enlighter-language="html" class="EnlighterJSRAW">
 &lt;a class="button-border" href="#">Button&lt;/a>
 </pre>
 
@@ -107,7 +107,7 @@
                     <a class="button-pill" href="#">Button</a>
                </div>
                 
-<pre data-enlighter-language="html" class="EnlighterJSRAW" style="display: none;">
+<pre data-enlighter-language="html" class="EnlighterJSRAW">
 &lt;a class="button-pill" href="#">Button&lt;/a>
 &lt;a class="button-pill" href="#">Button&lt;/a>
 &lt;a class="button-pill" href="#">Button&lt;/a>
@@ -121,7 +121,7 @@
                     <a class="button-round-pill" href="#">Button</a>
                </div>
                 
-<pre data-enlighter-language="html" class="EnlighterJSRAW" style="display: none;">
+<pre data-enlighter-language="html" class="EnlighterJSRAW">
 &lt;a class="button-round-pill" href="#">Button&lt;/a>
 &lt;a class="button-round-pill" href="#">Button&lt;/a>
 &lt;a class="button-round-pill" href="#">Button&lt;/a>
@@ -133,7 +133,7 @@
                     <a class="button-disabled" href="#">Button</a>
                </div>
                 
-<pre data-enlighter-language="html" class="EnlighterJSRAW" style="display: none;">
+<pre data-enlighter-language="html" class="EnlighterJSRAW">
 &lt;a class="button-disabled" href="#">Button&lt;/a>
 </pre>
 
@@ -143,7 +143,7 @@
                     <a class="button-round" href="#">Button</a>
                </div>
                 
-<pre data-enlighter-language="html" class="EnlighterJSRAW" style="display: none;">
+<pre data-enlighter-language="html" class="EnlighterJSRAW">
 &lt;a class="button-round" href="#">Button&lt;/a>
 </pre>
 
@@ -153,7 +153,7 @@
                     <a class="button-oval" href="#">Button</a>
                </div>
                 
-<pre data-enlighter-language="html" class="EnlighterJSRAW" style="display: none;">
+<pre data-enlighter-language="html" class="EnlighterJSRAW">
 &lt;a class="button-oval" href="#">Button&lt;/a>
 </pre>
 
@@ -203,7 +203,7 @@
                     <a class="button-brand-3" href="#">Button</a>
                 </div>
                                 
-<pre data-enlighter-language="html" class="EnlighterJSRAW" style="display: none;">
+<pre data-enlighter-language="html" class="EnlighterJSRAW">
 &lt;a class="button-primary" href="#">Button&lt;/a>
 </pre>
 
@@ -219,7 +219,7 @@
                     <a class="button-black" href="#">Button</a>
                 </div>
                                 
-<pre data-enlighter-language="html" class="EnlighterJSRAW" style="display: none;">
+<pre data-enlighter-language="html" class="EnlighterJSRAW">
 &lt;a class="button-grey-3" href="#">Button&lt;/a>
 </pre>
 
@@ -232,7 +232,7 @@
                     <a class="button-success" href="#">Button</a>
                 </div>
                                 
-<pre data-enlighter-language="html" class="EnlighterJSRAW" style="display: none;">
+<pre data-enlighter-language="html" class="EnlighterJSRAW">
 &lt;a class="button-error" href="#">Button&lt;/a>
 </pre>
 
@@ -244,7 +244,7 @@
                     <a class="button-google-plus" href="#">Button</a>
                 </div>
                                 
-<pre data-enlighter-language="html" class="EnlighterJSRAW" style="display: none;">
+<pre data-enlighter-language="html" class="EnlighterJSRAW">
 &lt;a class="button-facebook" href="#">Button&lt;/a>
 </pre>
                
@@ -263,7 +263,7 @@
                     <a class="button-size-7" href="#">Button</a>
                 </div>
                                 
-<pre data-enlighter-language="html" class="EnlighterJSRAW" style="display: none;">
+<pre data-enlighter-language="html" class="EnlighterJSRAW">
 &lt;a class="button-size-4" href="#">Button&lt;/a>
 </pre>
                 
@@ -275,7 +275,7 @@
                     <a class="button-block-border-size-3-secondary-oval" href="#">Button</a>
                 </div>
                                 
-<pre data-enlighter-language="html" class="EnlighterJSRAW" style="display: none;">
+<pre data-enlighter-language="html" class="EnlighterJSRAW">
 &lt;a class="button-block-border-size-3-secondary-oval">Button&lt;/a>
 </pre>
 
@@ -311,7 +311,7 @@
                     </div>
                 </div>
                 
-<pre data-enlighter-language="html" class="EnlighterJSRAW" style="display: none;">
+<pre data-enlighter-language="html" class="EnlighterJSRAW">
 &lt;div class="button_group">
     &lt;a class="button">Button&lt;/a>
     &lt;a class="button">Button&lt;/a>
@@ -402,8 +402,8 @@
 <pre data-enlighter-language="css" class="EnlighterJSRAW">
 @include buttons((
     'weight'       : 'bold',
-	'border-width' : 3px,
-	'round-radius' : 0.6em
+    'border-width' : 3px,
+    'round-radius' : 0.6em
 ));
 </pre>	
 
@@ -418,7 +418,7 @@
                     <a  id="button-demo" class="button-border-secondary" href="#">Button</a>
                 </div>
      
-<pre data-enlighter-language="html" class="EnlighterJSRAW" style="display: none;">
+<pre data-enlighter-language="html" class="EnlighterJSRAW">
 &lt;a class="button-border-secondary">Button&lt;/a>
 </pre>           
                 

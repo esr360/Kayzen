@@ -13,25 +13,26 @@
         'border-radius' : 0.25em,
         'border-width'  : 1px,
         'padding'       : 0.85em,
-        'size'          : 0.9em,
-        'weight'        : lighter
+        'font-size'     : 0.9em,
+        'font-weight'   : lighter
 	), $custom);
 	
 	//-------------------------------------------------------------
 	// Component
 	//-------------------------------------------------------------
 	
-	@include module(alert-bar) {
+	@include module {
 
 	// Core Styles
 	//-------------------------------------------------------------
 	
-		padding: 0.85em;
-		border: 1px solid;
-		border-color: rgba(0,0,0,0.15);
-		font-size: 0.9em;
-		border-radius: 0.25em;
-		font-weight: lighter;
+		padding: this('padding');
+		border: this('border-width') solid;
+		font-size: this('font-size');
+		border-radius: this('border-radius');
+		font-weight: this('font-weight');
+        
+		border-color: rgba(black, 0.15);
 		position: relative;
 
 		&:hover {
@@ -52,7 +53,7 @@
 	// Modifiers
 	//-------------------------------------------------------------
 	
-		@each $name, $color in palette(alert) {
+		@each $name, $color in palette('alert') {
             @include modifier($name) {
                 background-color: $color;
                 color: alert-text($color);

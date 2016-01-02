@@ -33,22 +33,22 @@
 	// Core Styles
 	//-------------------------------------------------------------
 	
-		background: color('greyscale', 'grey-4');
-		color: color('greyscale', 'white');
+		background: this('background');
+		color: this('color');
 		display: inline-block;
 		vertical-align: middle;
-		padding: 0 1em;
-		line-height: 2.4em;
-		font-weight: lighter;
+		padding: 0 this('side-padding');
+		line-height: this('line-height');
+		font-weight: this('weight');
 		transition: base('transition');
-	    border: 1px solid;
+	    border: this('border-width') solid;
 	    border-color: transparent;
 		cursor: pointer;
 		text-decoration: none;
 
 		&:hover {
-			background: darken(color('greyscale', 'grey-4'), 10%);
-			color: color('greyscale', 'white');
+			background: darken(this('background'), 10%);
+			color: this('color');
 			text-decoration: none;
 		}
         
@@ -88,22 +88,22 @@
             @include modifier('round') {
                 border-radius: 0;
                 &:first-child {
-                    border-radius: 0.4em 0 0 0.4em;
+                    border-radius: this('round-radius') 0 0 this('round-radius');
                 }
                 &:last-child {
-                    border-radius: 0 0.4em 0.4em 0;
+                    border-radius: 0 this('round-radius') this('round-radius') 0;
                 }
             }
 		}
 	
 		@include modifier('disabled') {
-			opacity: 0.6;
+			opacity: this('disabled-opacity');
 			cursor: not-allowed;
 			transition-delay: 999s;
 		}
 	
 		@include modifier('round') {
-			border-radius: 0.4em;
+			border-radius: this('round-radius');
 		}
 	
 		@include modifiers(('oval', 'circle')) {
@@ -111,11 +111,11 @@
 		}
 		
 		@include modifier('fat') {
-			line-height: 2.8;
+			line-height: this('fat-height');
 		}
 		
 		@include modifier('thin') {
-			line-height: 2;
+			line-height: this('thin-height');
 		}
 		
 		@include modifier('icon') {
@@ -231,20 +231,20 @@
 		@include component('group') {
 
 			@include overwrite('button') {
-				margin-left: 0.5em;
+				margin-left: this('group-spacing');
 				&:first-child {
 					margin-left: 0;
 				}
 			}
 	
 			> a, .text-sep {
-				margin-left: 0.5em;
+				margin-left: this('group-spacing');
 				&:first-child {
 					margin-left: 0;
 				}
 			}
 	
-			@media (max-width: breakpoint('break-1')) {
+			@media (max-width: breakpoint(this('group-stack'))) {
 				@include overwrite('button') {
 					margin-left: 0;
 					display: block;
