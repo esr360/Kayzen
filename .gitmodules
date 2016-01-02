@@ -31,9 +31,6 @@
 [submodule "app/vendor/Kayzen-GS"]
 	path = app/vendor/Kayzen-GS
 	url = https://github.com/esr360/Kayzen-GS.git
-[submodule "app/vendor/Normalize"]
-	path = app/vendor/Normalize
-	url = https://github.com/necolas/normalize.css.git
 [submodule "app/vendor/Kayzen.ScrollSpy"]
 	path = app/vendor/Kayzen.ScrollSpy
 	url = https://github.com/esr360/Kayzen.ScrollSpy.git
@@ -55,3 +52,9 @@
 [submodule "app/vendor/MooTools-Core"]
 	path = app/vendor/MooTools-Core
 	url = https://github.com/mootools/mootools-core.git
+[submodule "normalize-scss"]
+	path = normalize-scss
+	url = https://github.com/JohnAlbin/normalize-scss.git
+[submodule "app/vendor/normalize-scss"]
+	path = app/vendor/normalize-scss
+	url = https://github.com/JohnAlbin/normalize-scss.git
