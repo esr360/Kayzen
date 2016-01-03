@@ -7145,7 +7145,6 @@ progress::-moz-progress-bar {
 }
 [class*="tabs_nav"] li:hover {
   background: #ebebeb;
-  color: #6f777b;
 }
 [class*="tabs_nav"] li:not(:last-child) {
   border-right: none;

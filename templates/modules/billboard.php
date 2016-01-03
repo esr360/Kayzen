@@ -73,7 +73,7 @@
                     <script>
                         $(document).ready(function() {
                             $(".countdown").KayzenCountdown({
-                                date : '1 January 2016 09:00:00',
+                                date : '1 February 2016 09:00:00',
                                 format: 'on'
                             });
                         });

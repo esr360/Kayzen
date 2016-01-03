@@ -31,11 +31,11 @@
        ?>
 		
 		<section class="section-primary-mini relative text-center">	
-			<ul class="tabs_nav-pills" id="portfolio-categories">
-				<li class="button-pill-grey-1-thin active">View All</li>
-				<li class="button-pill-grey-1-thin">HTML Themes</li>
-				<li class="button-pill-grey-1-thin">Photography</li>
-				<li class="button-pill-grey-1-thin">Logos</li>
+			<ul class="tabs_nav-pills-center" id="portfolio-categories">
+				<li class="button-pill-grey-1-round active">View All</li>
+				<li class="button-pill-grey-1-round">HTML Themes</li>
+				<li class="button-pill-grey-1-round">Photography</li>
+				<li class="button-pill-grey-1-round">Logos</li>
 			</ul>
 			<nav class="slide-nav" id="portfolio-carousel-nav">
 				<button class="slide-prev button-icon-border-size-3"><i class="fa fa-angle-left"></i></button>
