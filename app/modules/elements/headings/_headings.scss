@@ -221,7 +221,6 @@
             @include modifier('block') {
                 padding: this('group-block-padding') 0;
                 margin-bottom: 0;
-                color: typography('colors', 'heading');
                 &.has-icon {
                     padding-bottom: 5em;
                 }

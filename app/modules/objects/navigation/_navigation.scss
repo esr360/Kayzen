@@ -58,20 +58,20 @@
 	// Core Styles
 	//-------------------------------------------------------------
 		
-		font-size: option($config, font-size);
+		font-size: option($config, 'font-size');
 		
 		// all levels
 		li {    
 			a {
 				display: block;
-				padding: option($navigation, item-padding);
-				color: option($navigation, item-color);
-				border: option($navigation, item-border);
+				padding: option($navigation, 'item-padding');
+				color: option($navigation, 'item-color');
+				border: option($navigation, 'item-border');
 				&:hover {
 					text-decoration: none;
 				}
 				// icon
-				@include overwrite-component(icon) {
+				@include overwrite-component('icon') {
 					margin-right: 0.5em;
 				}
 			}   
@@ -87,18 +87,18 @@
 			> li {
 	
 				// add gap between items
-				margin-left: option($navigation, item-gutter);
+				margin-left: option($navigation, 'item-gutter');
 				&:first-child {
 					margin-left: 0;
 				}
 	
 				> a {
-					background: option($navigation, item-bg);
+					background: option($navigation, 'item-bg');
 					// if item has child menu
 					&:not(:only-child) {
 						border-bottom-color: transparent;
 						&:after {
-							content: option($navigation, dropdown-icon);
+							content: option($navigation, 'dropdown-icon');
 							font-family: FontAwesome;
 							margin-left: 0.5em;
 						}
@@ -107,14 +107,14 @@
 	
 				&:hover {
 					> a {
-						color: option($config, link-hover-color);
-						background: option($config, item-hover-bg);
-						border: option($config, item-hover-border);
+						color: option($config, 'link-hover-color');
+						background: option($config, 'item-hover-bg');
+						border: option($config, 'item-hover-border');
 						// if item has child menu
 						&:not(:only-child) {
-							color: option($config, has-child-hover-color);
-							background: option($config, has-child-hover-bg);
-							border: option($config, has-child-hover-border);
+							color: option($config, 'has-child-hover-color');
+							background: option($config, 'has-child-hover-bg');
+							border: option($config, 'has-child-hover-border');
 							border-bottom-color: transparent;
 						}
 					}
@@ -122,7 +122,7 @@
 	
 				&.active {
 					> a {
-						color: option($config, link-active-color);
+						color: option($config, 'link-active-color');
 					}
 					&:hover {
 						// if item is active and hovered
@@ -135,8 +135,8 @@
 		} // > ul
 
 		// Larger Resolutions
-		@media (min-width: breakpoint(break-3)) {
-			text-align: option($config, text-align);
+		@media (min-width: breakpoint('break-3')) {
+			text-align: option($config, 'text-align');
 			> ul {
 				display: inline-block;
 				> li {
@@ -149,8 +149,8 @@
 	// Settings
 	//-------------------------------------------------------------
 	
-		@include option(no-icons) {
-			@include overwrite-component(icon) {
+		@include option('no-icons') {
+			@include overwrite-component('icon') {
 				display: none;
 			}
 		}

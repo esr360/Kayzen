@@ -9,14 +9,14 @@
 	//-------------------------------------------------------------
 
 	$sections: config((
-		name            : section
+		'name'            : 'section'
 	), $custom);
 
 	//-------------------------------------------------------------
 	// Component
 	//-------------------------------------------------------------
 	
-	@include module(section) {
+	@include module('section') {
 
 	// Core Styles
 	//-------------------------------------------------------------
@@ -30,6 +30,10 @@
 		.slide-next {
 			@include vertical-center(absolute);
 		}
+        
+        @include overwrite-component('group', $parent: 'heading') {
+            color: typography('colors', 'heading');
+        }
 
 	// Modifiers
 	//-------------------------------------------------------------
@@ -38,44 +42,44 @@
 		// Primary/Secondary
 		//---------------------------------------------------------
 		
-		@include modifiers((primary, secondary)) {
+		@include modifiers(('primary', 'secondary')) {
 			padding: 6em 0;
 		}
         
-        @include modifier(mini) {
+        @include modifier('mini') {
             padding: 4em 0;
         }
         
-        @include modifier(panel) {
-			border-top: 1px solid color(greyscale, grey-2);	
-			background: color(greyscale, white);
+        @include modifier('panel') {
+			border-top: 1px solid color('greyscale', 'grey-2');	
+			background: color('greyscale', 'white');
         }
 	
 		//---------------------------------------------------------
 		// Secondary
 		//---------------------------------------------------------
 		
-		@include modifier(secondary) {
-			background-color: color(brand, primary);
+		@include modifier('secondary') {
+			background-color: color('brand', 'primary');
 			> .container {
 				position: relative;
 			}
 			&, a:not([class*="button-"]) {
-				color: color(greyscale, white);
+				color: color('greyscale', 'white');
 			}
 			.owl-dot {
 				&.active {
 					span {
-						background: color(greyscale, white);
+						background: color('greyscale', 'white');
 					}
 				} 
 			}
             b, strong {
-                color: color(greyscale, white);
+                color: color('greyscale', 'white');
             }
-			@include overwrite-component(group, $parent: heading) {
+			@include overwrite-component('group', $parent: 'heading') {
                 &, p {
-				    color: color(greyscale, white);
+				    color: color('greyscale', 'white');
                 }
 			}
 		}
@@ -84,27 +88,27 @@
 		// Full Screen
 		//---------------------------------------------------------
 		
-		@include modifier(full-screen) {
+		@include modifier('full-screen') {
 			height: 100vh;
-			@if option($top-bar, fixed) {
-				height: calc(100vh - #{option($top-bar, height)});
+			@if option($top-bar, 'fixed') {
+				height: calc(100vh - #{option($top-bar, 'height')});
 			}
-			@if option($header, sticky) {
-				height: calc(100vh - #{option($header, height)});
+			@if option($header, 'sticky') {
+				height: calc(100vh - #{option($header, 'height')});
 			}
 		}
 		
 		@at-root {
-			@include overwrite(top-bar, $is: fixed) {
-				@include overwrite($special: general-sibling, $is: full-screen) {
-					height: calc(100vh - #{option($top-bar, height)});
+			@include overwrite('top-bar', $is: 'fixed') {
+				@include overwrite($special: 'general-sibling', $is: 'full-screen') {
+					height: calc(100vh - #{option($top-bar, 'height')});
 				}
 			}
 		}
 		
 		@at-root {
-			@include overwrite(app-header, $is: sticky) {
-				@include overwrite($special: general-sibling, $is: full-screen) {
+			@include overwrite('app-header', $is: 'sticky') {
+				@include overwrite($special: 'general-sibling', $is: 'full-screen') {
 					height: calc(100vh - #{option($header, height)});
 				}
 			}
@@ -114,19 +118,19 @@
 		// Overlay
 		//---------------------------------------------------------
 		
-		@include modifier(overlay) {
-			@include bg-overlay(rgba(color(brand, primary), 0.4));
-			@include modifier(deep) {
-				@include bg-overlay(rgba(color(brand, primary), 0.75));
+		@include modifier('overlay') {
+			@include bg-overlay(rgba(color('brand', 'primary'), 0.4));
+			@include modifier('deep') {
+				@include bg-overlay(rgba(color('brand', 'primary'), 0.75));
 			}
-			@include modifier(dark) {
-				@include bg-overlay(rgba(color(greyscale, grey-5), 0.75));			
+			@include modifier('dark') {
+				@include bg-overlay(rgba(color('greyscale', 'grey-5'), 0.75));			
 			}
-			@include modifier(alt) {
-				@include bg-overlay(rgba(color(greyscale, grey-5), 0.5));			
+			@include modifier('alt') {
+				@include bg-overlay(rgba(color('greyscale', 'grey-5'), 0.5));			
 			}
 			&, a:not([class*="button-"]) {
-				color: color(greyscale, white);
+				color: color('greyscale', 'white');
                 //text-shadow: 1px 1px 1px rgba(black, 0.5);
 			}
 			.wrap-section {
@@ -138,7 +142,7 @@
 		// Dot Map
 		//---------------------------------------------------------
 		
-		@include modifier(dot-map) {
+		@include modifier('dot-map') {
 			position: relative;
 			padding-bottom: 12em;
 			&:before {
@@ -150,8 +154,8 @@
 				position: absolute;
 				bottom: 0;
 				height: 9em;
-				width: grid-option(base-width);
-				max-width: grid-option(max-width);
+				width: grid-option('base-width');
+				max-width: grid-option('max-width');
 				@extend %horizontal-center;
 			}
 		}
@@ -160,7 +164,7 @@
 		// Banner
 		//---------------------------------------------------------
 		
-		@include modifier(banner) {
+		@include modifier('banner') {
 			padding: 5em 0;
 		}
 		
@@ -168,7 +172,7 @@
 		// Flush
 		//---------------------------------------------------------
 		
-		@include modifier(flush) {
+		@include modifier('flush') {
 			padding-top: 0;
 		}
 		
@@ -176,7 +180,7 @@
 		// Sink
 		//---------------------------------------------------------
 		
-		@include modifier(sink) {
+		@include modifier('sink') {
 			padding-bottom: 0;
 		}
 		
@@ -184,10 +188,10 @@
 		// Block
 		//---------------------------------------------------------
 		
-		@include modifier(block) {
+		@include modifier('block') {
             overflow: hidden;
 			& + & {
-				border-top: 1px solid color(greyscale, grey-2);
+				border-top: 1px solid color('greyscale', 'grey-2');
                 position: relative;
 			}
 		}
@@ -195,17 +199,17 @@
 	// Components
 	//-------------------------------------------------------------
 	
-		@include component(block) {
+		@include component('block') {
 			position: relative;
-			transition: base(transition);
+			transition: base('transition');
 			padding: 7%;
 			background-size: cover;
-			@include modifier(opaque) {
+			@include modifier('opaque') {
 				background: rgba(white, 0.95);
 			}
 		}
 		
-		@include component(graphic) {
+		@include component('graphic') {
 			position: relative;
 			> img {
 				position: absolute;

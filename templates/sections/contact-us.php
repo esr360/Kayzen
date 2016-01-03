@@ -32,7 +32,7 @@
         </header>
         
         <!-- Contact Form -->
-        <form class="form-faux-placeholders-html5">
+        <form class="form-fauxPlaceholders-html5">
             <div class="container-small">
                 <div class="row-flow">
                     <div class="form_group span-6">

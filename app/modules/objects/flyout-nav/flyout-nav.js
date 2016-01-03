@@ -32,6 +32,7 @@ $(document).ready(function() {
                 
             $(_flyoutNav).on('click', '.side-nav_openClose', function(e){
                 $(this).parent().find('+ ul').slideToggle(baseTransition);
+                return false;
             });
                 
         } else {

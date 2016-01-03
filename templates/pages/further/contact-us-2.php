@@ -49,7 +49,7 @@
         <section class="section-primary-panel-dot-map">
             
             <!-- Contact Form -->
-            <form class="form-faux-placeholders-html5">
+            <form class="form-fauxPlaceholders-html5">
                 <div class="container">
                     <div class="row">
                         <div class="span-4">

@@ -343,7 +343,7 @@
                     </header>
         
                     <!-- Contact Form -->
-                    <form class="form-faux-placeholders-html5">
+                    <form class="form-fauxPlaceholders-html5">
                         <div class="row-flow">
                             <div class="form_group span-4">
                                 <input type="text" class="form_input" id="name" placeholder="Ex: John Doe" required="">

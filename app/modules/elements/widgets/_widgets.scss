@@ -88,7 +88,7 @@
             @include modifier('noHover', $special: 'not') {
                 &:hover {
                     background: this('block-hover-background');	
-                    color: this('block-hover-background');
+                    color: this('block-hover-color');
                     @include overwrite('heading') {
                         color: color('greyscale', 'white');
                     }

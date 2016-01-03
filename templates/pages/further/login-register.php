@@ -41,7 +41,7 @@
                             <h3 class="heading-size-5-light">Create an Account</h3>
                         </header>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vel consectetur erat, eget vehicula justo. Nam dui erat, malesuada eget scelerisque et, accumsan non elit.</p>
-                        <form class="form-faux-placeholders-html5">
+                        <form class="form-fauxPlaceholders-html5">
                             <div class="form_group-compound-has-icon">
                                 <input type="text" class="form_input" id="fullName" placeholder="Ex: John Doe" required="">
                                 <i class="form_icon fa fa-pencil"></i>
@@ -72,7 +72,7 @@
                         <header class="heading_group">
                             <h3 class="heading-size-5-light">Already have an account?</h3>
                         </header>
-                        <form class="form-faux-placeholders-html5">
+                        <form class="form-fauxPlaceholders-html5">
                             <div class="form_group-compound-has-icon">
                                 <input type="text" class="form_input" id="loginUsername" placeholder="Ex: SkyUX" required="">
                                 <i class="form_icon fa fa-user"></i>

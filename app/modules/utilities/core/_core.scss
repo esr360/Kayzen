@@ -160,6 +160,11 @@
 // Hacks - if this gets big move to seperate file
 //-----------------------------------------------------------------
 
+#showcase-carousel .owl-dots,
+#showcase-thumbnails .owl-dots {
+    display: none;
+}
+
 span.enlighterEnlighterJS {
     white-space: nowrap;
 }

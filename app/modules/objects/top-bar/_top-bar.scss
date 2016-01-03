@@ -58,6 +58,7 @@
 			
 			ul {
 				@extend %list-reset;
+                margin-top: 0;
 			}
 			
 			> ul {

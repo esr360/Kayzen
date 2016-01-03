@@ -9,8 +9,8 @@
 	//-------------------------------------------------------------
 
 	$twitter-feed: config((
-		name            : twitter-feed,
-		dark            : false
+		'name'            : 'twitter-feed',
+		'dark'            : false
 	), $custom);
 	
 	//-------------------------------------------------------------
@@ -23,7 +23,7 @@
 	//-------------------------------------------------------------
 	
 		padding: 3em 0;
-		background: darken(color(greyscale, grey-1), 3%);
+		background: darken(color('greyscale', 'grey-1'), 3%);
 		position: relative;
 	
 		.tweet-content {
@@ -44,15 +44,16 @@
 	// Modifiers
 	//-------------------------------------------------------------
 	
-		@include option(dark) {
-			background: color(greyscale, grey-5);
-			color: color(greyscale, white);
+		@include option('dark') {
+			background: color('greyscale', 'grey-5');
+			color: color('greyscale', 'white');
 		}
 		
 	} // component()
 			
 	.tweets {
 		@extend %list-reset;
+        margin-top: 0;
 	}
 	
 	.tweet-avatar, .tweet-content,
@@ -99,8 +100,8 @@
 			margin-left: 0.5em;
 			&:hover {
 				a {
-					background: color(brand, primary);
-					color: color(greyscale, white);
+					background: color('brand', 'primary');
+					color: color('greyscale', 'white');
 					text-decoration: none;
 				}
 			}
@@ -108,8 +109,8 @@
 		a {
 			display: block;
 			position: relative;
-			background: color(greyscale, grey-2);
-			color: color(greyscale, grey-4);
+			background: color('greyscale', 'grey-2');
+			color: color('greyscale', 'grey-4');
 			padding: 0 0.5em;
 			line-height: 1.9;
 			border-radius: 0.3em;
@@ -136,7 +137,7 @@
 	.tweet-prev, .tweet-next {
 		cursor: pointer;
 		&:hover {
-			background: color(brand, primary);
+			background: color('brand', 'primary');
 		}
 	}
 			
