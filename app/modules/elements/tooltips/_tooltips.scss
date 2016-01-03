@@ -21,14 +21,14 @@ https://github.com/esr360/K-Tooltips
 		'output-JSON'    : true,
 		// Size & Appearance
 		'max-width'      : 500px,
-		'padding'        : 0.5em 0.6em,
+		'padding'        : 0.5em 0.75em,
 		'distance'       : -1em,
 		'background'     : rgba(black, 0.75),
 		'border-radius'  : 0,
 		'arrow-size'     : 0.5em,
 		'arrow-color'    : rgba(black, 0.75),
 		// Typography
-		'font-size'      : font-size(size-2, $rem: true),
+		'font-size'      : font-size('size-2', $rem: true),
 		'color'          : white,
 		'text-transform' : none,
 		'font-weight'    : normal,
@@ -42,7 +42,7 @@ https://github.com/esr360/K-Tooltips
 	//-------------------------------------------------------------
 
 	$tooltip-positions: (
-		top, bottom, left, right
+		'top', 'bottom', 'left', 'right'
 	);
 	
 	//-------------------------------------------------------------
@@ -60,9 +60,7 @@ https://github.com/esr360/K-Tooltips
 	// Modifiers
 	//-------------------------------------------------------------
 	
-		@include modifier(light) {
-			
-		}
+		@include modifier('light') {}
 	
 	// Components
 	//-------------------------------------------------------------
@@ -71,30 +69,30 @@ https://github.com/esr360/K-Tooltips
 			display: inline-block;
 		}
 		
-		@include component(wrapper) {
+		@include component('wrapper') {
 			text-align: center;
 		}
 	
-		@include component(content) {
+		@include component('content') {
 				
 			// Size & Appearance
-			max-width: tooltip('max-width');
-			padding: tooltip('padding');
-			background: tooltip('background');
-			border-radius: tooltip('border-radius');
+			max-width: this('max-width');
+			padding: this('padding');
+			background: this('background');
+			border-radius: this('border-radius');
             line-height: 1.75;
 			position: absolute;
 			display: inline-block;
 			
 			// Typography
-			font-size: tooltip('font-size');
-			color: tooltip('color');
-			text-transform: tooltip('text-transform');
-			font-weight: tooltip('font-weight');
+			font-size: this('font-size');
+			color: this('color');
+			text-transform: this('text-transform');
+			font-weight: this('font-weight');
 			
 			// Other
-			transition: tooltip('transition');
-			z-index: tooltip('z-index');
+			transition: this('transition');
+			z-index: this('z-index');
 			white-space: nowrap;
 			
 			// Hide by default
@@ -124,12 +122,12 @@ https://github.com/esr360/K-Tooltips
 			// Positions
 			@each $tooltip-position in $tooltip-positions {
 				[class*="tooltip_wrapper"][class*="-#{$tooltip-position}"] & {
-					#{$tooltip-position}: tooltip(distance);
+					#{$tooltip-position}: this('distance');
 					@include triangle((
-						core     : false, 
-						position : #{$tooltip-position}, 
-						color    : tooltip(arrow-color),
-						size     : tooltip(arrow-size)
+						'core'     : false, 
+						'position' : #{$tooltip-position}, 
+						'color'    : this('arrow-color'),
+						'size'     : this('arrow-size')
 					));
 					@if $tooltip-position == top {
 						transform: translateX(-50%) translateY(-100%);
@@ -150,14 +148,3 @@ https://github.com/esr360/K-Tooltips
 	} // component(tooltip)
 	
 } // @mixin tooltips
- 
-// Utilities
-//-----------------------------------------------------------------
-
-@function tooltip($tooltip-option) {
-    @return map-get($tooltips, $tooltip-option);
-}
-
-@function tooltip-custom($custom-key) {
-	@return map-get(map-get($tooltip-styles, $custom-style), $custom-key);
-}

@@ -504,6 +504,11 @@
 							<td>The border color of the active tabs navigation item.</td>
 						</tr>
 						<tr>
+							<td><code>navItem-hover-background</code></td>
+							<td><code class="value">darken(color('greyscale', 'grey-1'), 5%)</code></td>
+							<td>The background of a hovered navigation item.</td>
+						</tr>
+						<tr>
 							<td><code>contentBlock-color</code></td>
 							<td><code class="value">base('text-color')</code></td>
 							<td>The text color of the content block.</td>

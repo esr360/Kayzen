@@ -4,87 +4,87 @@
 
 @mixin tables($custom: ()) {
 
-	//-------------------------------------------------------------
-	// Config
-	//-------------------------------------------------------------
+    //-------------------------------------------------------------
+    // Config
+    //-------------------------------------------------------------
 
-	$tables: config((
-		'name'            : 'table',
+    $tables: config((
+        'name'            : 'table',
         'weight'          : lighter,
         'cell-padding'    : 0.6em,
         'small-font-size' : 0.85em
-	), $custom);
+    ), $custom);
 
-	//-------------------------------------------------------------
-	// Component
-	//-------------------------------------------------------------
-	
-	@include module(table) {
+    //-------------------------------------------------------------
+    // Component
+    //-------------------------------------------------------------
 
-	// Core Styles
-	//-------------------------------------------------------------
-	
-		width: 100%;
-		font-weight: lighter;
-		
-		th, td {
-			text-align: left;
-			padding: 0.6em;
-			border-bottom: 1px solid rgba(0,0,0,0.1);
-			border-left: 1px solid rgba(0,0,0,0.1);
-			vertical-align: top;
-			&:first-child {
-				border-left: none;
-				padding-left: 0;
-			}
-		}
+    @include module {
 
-		tbody {
-			tr {
-				&:last-child {
-					td {
-						border-bottom: none;
-					}
-				}
-			}
-		}
+    // Core Styles
+    //-------------------------------------------------------------
+
+        width: 100%;
+        font-weight: this('weight');
+        
+        th, td {
+            padding: this('cell-padding');
+            text-align: left;
+            border-bottom: 1px solid rgba(black, 0.1);
+            border-left: 1px solid rgba(black, 0.1);
+            vertical-align: top;
+            &:first-child {
+                border-left: none;
+                padding-left: 0;
+            }
+        }
+
+        tbody {
+            tr {
+                &:last-child {
+                    td {
+                        border-bottom: none;
+                    }
+                }
+            }
+        }
         
         code {
             white-space: nowrap;
         }
 
-	// Modifiers
-	//-------------------------------------------------------------
+    // Modifiers
+    //-------------------------------------------------------------
 
-		@include modifier(fixed) {		
-			table-layout: fixed;
-		}
-		
-		@include modifier(small) {
-			font-size: 0.85em;
-		}
-		
-		@include modifier(style-1) {
-			td {
-				&:nth-child(1) {
-					width: 20%;
-				}
-				&:nth-child(2) {
-					width: 25%;
-				}
-				&:nth-child(3) {
-					width: 55%;
-				}
-			}
+        @include modifier('fixed') {		
+            table-layout: fixed;
+        }
+        
+        @include modifier('small') {
+            font-size: this('small-font-size');
+        }
+        
+        @include modifier('style-1') {
+            td {
+                &:nth-child(1) {
+                    width: 20%;
+                }
+                &:nth-child(2) {
+                    width: 25%;
+                }
+                &:nth-child(3) {
+                    width: 55%;
+                }
+            }
             tr {
                 &:hover {
                     td {
-                        background-color: color(greyscale, white);
+                        background-color: color('greyscale', 'white');
                     }
                 }
             }
-		}
-	
-	} // component(table)
-	
+        }
+
+    } // component(table)
+
 } // @mixin tables

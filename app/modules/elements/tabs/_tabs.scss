@@ -8,19 +8,20 @@
 
 @mixin tabs($custom: ()) {
 
-	//-------------------------------------------------------------
-	// Config
-	//-------------------------------------------------------------
+    //-------------------------------------------------------------
+    // Config
+    //-------------------------------------------------------------
 
-	$tabs: config((
-		'name'                       : 'tabs',
-		'output-JSON'                : true,
+    $tabs: config((
+        'name'                       : 'tabs',
+        'output-JSON'                : true,
         'navItem-color'              : base('text-color'),
         'navItem-background'         : transparent,
         'navItem-borderColor'        : color('greyscale', 'grey-3'),
         'navItem-active-color'       : color('greyscale', 'white'),
         'navItem-active-background'  : color('brand', 'primary'),
         'navItem-active-borderColor' : color('brand', 'primary'),
+        'navItem-hover-background'   : darken(color('greyscale', 'grey-1'), 5%),
         'contentBlock-color'         : base('text-color'),
         'contentBlock-background'    : color('greyscale', 'white'),
         'contentBlock-borderColor'   : color('greyscale', 'grey-2'),
@@ -28,110 +29,110 @@
         'contentBlock-glueHeight'    : 6px,
         'contentBlock-glueColor'     : color('brand', 'primary'),
         'contentBlock-deepPadding'   : 2.5em
-	), $custom);
+    ), $custom);
 
-	//-------------------------------------------------------------
-	// Component
-	//-------------------------------------------------------------
-	
-	@include module {
-			
-	// Child Components
-	//-------------------------------------------------------------
+    //-------------------------------------------------------------
+    // Component
+    //-------------------------------------------------------------
 
-		@include component(nav) {
-			
-			@extend %list-reset;
+    @include module {
+            
+    // Child Components
+    //-------------------------------------------------------------
+
+        @include component(nav) {
+            
+            @extend %list-reset;
             display: table;
             margin-bottom: 0;
-			position: relative;
-			z-index: 2;
-			
-			li {
-				display: table-cell;
-                color: base('text-color');
-                background: transparent;
-				border: 1px solid color('greyscale', 'grey-3');
-				&.active {
-					color: color('greyscale', 'white');
-					border-color: color('brand', 'primary');
-					background: color('brand', 'primary');
-					+ li {
-						border-left-color: color('brand', 'primary');
-					}
-                    &:hover {
-                        color: color('greyscale', 'white');
+            position: relative;
+            z-index: 2;
+            
+            li {
+                color: this('navItem-color');
+                background: this('navItem-background');
+                border: 1px solid this('navItem-borderColor');
+                display: table-cell;
+                &.active {
+                    color: this('navItem-active-color');
+                    border-color: this('navItem-active-borderColor');
+                    background: this('navItem-active-background');
+                    + li {
+                        border-left-color: this('navItem-active-borderColor');
                     }
-				}
-                &:hover {
-                    background: darken(color('greyscale', 'grey-1'), 5%);
-                    color: base('text-color');
+                    &:hover {
+                        color: this('navItem-active-color');
+                    }
                 }
-				&:not(:last-child) {
-					border-right: none;
-				}
-			}
-			
-			@include modifier('center') {
+                &:hover {
+                    background: this('navItem-hover-background');
+                    color: this('navItem-color');
+                }
+                &:not(:last-child) {
+                    border-right: none;
+                }
+            }
+            
+            @include modifier('center') {
                 margin-left: auto;
                 margin-right: auto;
-			}
+            }
             
-			@include modifier('left') {
+            @include modifier('left') {
                 margin-right: auto;
-			}
+            }
             
-			@include modifier('right') {
+            @include modifier('right') {
                 margin-left: auto;
-			}
+            }
             
-			@include modifier('full') {
+            @include modifier('full') {
                 width: 100%;
-			}
-			
+            }
+            
             @include modifier('large') {
                 margin-bottom: (base('margin') * 2);
             }
-			
-		} // component(nav)
-		
-		@include component('content') {
-			@include modifier('block') {
-				background: color('greyscale', 'white');
-                color: base('text-color');
-				border: 1px solid color('greyscale', 'grey-2');
-				padding: 1.5em;
-				position: relative;
-				top: -1px;
-				@include modifier('glue') {
-					$tabs-glue: 6px;
-					margin-top: $tabs-glue;
-					top: -2px;
-					z-index: 2;
-					&:before {
-						content: "";
-						position: absolute;
-						left: -1px;
-						top: -$tabs-glue;
-						height: $tabs-glue;
-						width: calc(100% + 2px);
-						border: 1px solid color('brand', 'primary');
-						background: color('brand', 'primary');
-					}
-				}
-                @include modifier('deep') {
-                    padding: 2.5em;
+            
+        } // component(nav)
+        
+        @include component('content') {
+            @include modifier('block') {
+                background: this('contentBlock-background');
+                color: this('contentBlock-color');
+                padding: this('contentBlock-padding');
+                border: 1px solid this('contentBlock-borderColor');
+                position: relative;
+                top: -1px;
+                @include modifier('glue') {
+                    $tabs-glue: this('contentBlock-glueHeight');
+                    margin-top: $tabs-glue;
+                    top: -2px;
+                    z-index: 2;
+                    &:before {
+                        content: "";
+                        position: absolute;
+                        left: -1px;
+                        top: -$tabs-glue;
+                        height: $tabs-glue;
+                        width: calc(100% + 2px);
+                        border: 1px solid this('contentBlock-glueColor');
+                        background: this('contentBlock-glueColor');
+                    }
                 }
-			}
-		}
+                @include modifier('deep') {
+                    padding: this('contentBlock-deepPadding');
+                }
+            }
+        }
         
         @include component('item') {
-			display: none;
-			&.active {
-				display: block;
-			}
+            display: none;
+            &.active {
+                display: block;
+            }
         }
-	
-	} // module
-	
+
+    } // module
+
 } // @mixin tabs

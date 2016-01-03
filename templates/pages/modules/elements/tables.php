@@ -72,7 +72,7 @@
                             </tr>
                             <tr>
                                 <td><code>fill-color</code></td>
-                                <td><code class="value">color(brand, primary)</code></td>
+                                <td><code class="value">color('brand', 'primary')</code></td>
                                 <td>The fill color of the progress bar.</td>
                             </tr>
                             <tr>
@@ -128,7 +128,7 @@
                             </tr>
                             <tr>
                                 <td><code>fill-color</code></td>
-                                <td><code class="value">color(brand, primary)</code></td>
+                                <td><code class="value">color('brand', 'primary')</code></td>
                                 <td>The fill color of the progress bar.</td>
                             </tr>
                             <tr>
@@ -170,7 +170,7 @@
                             </tr>
                             <tr>
                                 <td><code>fill-color</code></td>
-                                <td><code class="value">color(brand, primary)</code></td>
+                                <td><code class="value">color('brand', 'primary')</code></td>
                                 <td>The fill color of the progress bar.</td>
                             </tr>
                             <tr>
@@ -231,7 +231,7 @@
                 
 <pre data-enlighter-language="css" class="EnlighterJSRAW">
 @include tables((
-	'weight'       : bold,
+    'weight'       : bold,
     'cell-padding' : 1em
 ));
 </pre>

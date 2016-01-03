@@ -146,7 +146,7 @@
 						</tr>
 						<tr>
 							<td><code>padding</code></td>
-							<td><code class="value">0.5em 0.6em</code></td>
+							<td><code class="value">0.5em 0.75em</code></td>
 							<td>The tooltip padding.</td>
 						</tr>
 						<tr>
@@ -176,7 +176,7 @@
 						</tr>
 						<tr>
 							<td><code>font-size</code></td>
-							<td><code class="value">font-size(size-2, $rem: true)</code></td>
+							<td><code class="value">font-size('size-2', $rem: true)</code></td>
 							<td>The tooltip font size.</td>
 						</tr>
 						<tr>
