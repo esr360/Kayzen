@@ -6,7 +6,7 @@
                 <div class="thumbnail-zoom">
                     <div class="thumbnail_mask">
                         <div class="thumbnail_controls icon_group-small">
-                            <a href="#" class="button-icon-border-circle">
+                            <a href="<?php echo appDir ?>/images/wallpapers/bg-7.jpg" class="button-icon-border-circle" rel="lightbox">
                                 <i class="fa fa-search"></i>
                             </a>
                             <a href="#" class="button-icon-border-circle">
@@ -31,7 +31,7 @@
                 <div class="thumbnail-zoom">
                     <div class="thumbnail_mask">
                         <div class="thumbnail_controls icon_group-small">
-                            <a href="#" class="button-icon-border-circle">
+                            <a href="<?php echo appDir ?>/images/wallpapers/bg-3.jpg" class="button-icon-border-circle" rel="lightbox">
                                 <i class="fa fa-search"></i>
                             </a>
                             <a href="#" class="button-icon-border-circle">
@@ -56,7 +56,7 @@
                 <div class="thumbnail-zoom">
                     <div class="thumbnail_mask">
                         <div class="thumbnail_controls icon_group-small">
-                            <a href="#" class="button-icon-border-circle">
+                            <a href="<?php echo appDir ?>/images/wallpapers/bg-6.jpg" class="button-icon-border-circle" rel="lightbox">
                                 <i class="fa fa-search"></i>
                             </a>
                             <a href="#" class="button-icon-border-circle">

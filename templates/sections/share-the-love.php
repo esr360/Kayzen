@@ -21,7 +21,7 @@
         <header class="heading_group-large text-center">
             <div class="container-small">
                 <h4 class="heading-uppercase-light-brand-1-spaced-size-4"><span>Share The Love</span></h4>
-                <h2 class="heading-uppercase-heavy-size-6 font-2"><span>We Are Social <i class="fa fa-heart fa-brand"></i></span></h2>
+                <h2 class="heading-uppercase-heavy-size-6 font-2"><span>We Are Social <i class="fa fa-heart heading-brand-1"></i></span></h2>
                 <div class="heading_icon">
                     <i class="fa fa-link"></i>
                 </div>

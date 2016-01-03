@@ -2,8 +2,8 @@
 
 <!-- Search Bar -->
 <div class="search-box">
-	<div class="container">
-		<input type="search" placeholder="Enter search query..." />
+	<form class="container">
+		<input required type="search" placeholder="Enter search query..." />
 		<div class="button_group-small">
 			<button class="search-box_go button-icon-primary" type="submit">
 				<i class="fa fa-search"></i>
@@ -12,7 +12,7 @@
 				<i class="fa fa-times"></i>
 			</span>
 		</div>
-	</div>
+	</form>
 </div>
 
 <!-- Scroll to top icon -->

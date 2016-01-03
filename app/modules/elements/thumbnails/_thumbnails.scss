@@ -51,6 +51,7 @@
         
         @include overwrite('button') {
             color: color('greyscale', 'white');
+            border-color: color('greyscale', 'white');
         }
 
     // Modifiers

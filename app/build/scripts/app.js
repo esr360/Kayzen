@@ -7101,12 +7101,12 @@ $(window).bind("scroll", function() {
 // Search
 //=================================================================
 
-$('#search-trigger').click(function(e) {
+$('#search-trigger').click(function() {
 	$(_searchBox)
 		.addClass('search-box-visible')
 		.find('[type="search"]')
 		.focus();
-	e.preventDefault();
+    return false;
 });
 
 $('.search-box_close').click(function() {

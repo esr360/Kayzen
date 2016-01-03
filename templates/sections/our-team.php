@@ -36,7 +36,7 @@
                     <div class="thumbnail">
                         <div class="thumbnail_mask">
                             <div class="thumbnail_controls">
-                                <a href="#" class="button-icon-border-circle">
+                                <a href="<?php echo appDir ?>/images/team/team-1.jpg" class="button-icon-border-circle" rel="lightbox">
                                     <i class="fa fa-search"></i>
                                 </a>
                             </div>
@@ -74,7 +74,7 @@
                     <div class="thumbnail">
                         <div class="thumbnail_mask">
                             <div class="thumbnail_controls">
-                                <a href="#" class="button-icon-border-circle">
+                                <a href="<?php echo appDir ?>/images/team/team-2.jpg" class="button-icon-border-circle" rel="lightbox">
                                     <i class="fa fa-search"></i>
                                 </a>
                             </div>
@@ -109,7 +109,7 @@
                     <div class="thumbnail">
                         <div class="thumbnail_mask">
                             <div class="thumbnail_controls">
-                                <a href="#" class="button-icon-border-circle">
+                                <a href="<?php echo appDir ?>/images/team/team-3.jpg" class="button-icon-border-circle" rel="lightbox">
                                     <i class="fa fa-search"></i>
                                 </a>
                             </div>

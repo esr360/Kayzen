@@ -9,8 +9,8 @@
 	//-------------------------------------------------------------
 
 	$site-overlay: config((
-		name            : search-box,
-		output-JSON     : true
+		'name'            : 'search-box',
+		'output-JSON'     : true
 	), $custom);
 	
 	//-------------------------------------------------------------
@@ -19,19 +19,19 @@
 	
 	@include module {
 		
-		position: absolute;
-		background: color(greyscale, grey-5);
-		height: option($top-bar, height);
+		position: fixed;
+		background: color('greyscale', 'grey-5');
+		height: option($top-bar, 'height');
 		width: 100%;
 		top: 0;
 		z-index: 9;
 		text-align: center;
 		transform: translateY(-100%);
-		transition: base(transition);
+		transition: base('transition');
 		
 		[type="search"] {
-			background: color(greyscale, grey-5);
-			color: color(greyscale, white);
+			background: color('greyscale', 'grey-5');
+			color: color('greyscale', 'white');
 			font-weight: lighter;
 			height: 100%;
 			width: 100%;
@@ -45,11 +45,11 @@
 			}
 		}
 				
-		@include modifier(visible) {
+		@include modifier('visible') {
 			transform: translateY(0);
 		}
 		
-		@include components((go, close)) {
+		@include components(('go', 'close')) {
 			cursor: pointer;
 			&:focus {
 				outline: 0;
@@ -60,15 +60,15 @@
 			height: 100%;
 		}
 		
-		@include overwrite-component(group, $parent: button) {
+		@include overwrite-component('group', $parent: 'button') {
 			@include vertical-center(absolute);
 			right: 0;
 		}
 		
 		::placeholder {
 			font-weight: lighter;
-			transition: base(transition);
-			color: base(text-color);
+			transition: base('transition');
+			color: base('text-color');
 		}
 		
 	} // component()

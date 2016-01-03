@@ -64,7 +64,7 @@
 		
 		<div class="row-block text-center">
 			<section 
-				class="section-secondary-overlay-deep bg-cover span-6"
+				class="section-secondary-overlay-deep bg-cover span-6 va-middle"
 				style="background-image: url('<?php echo appDir ?>/images/stock-8.jpg')"
 			>
 				<div class="container-small">
@@ -77,7 +77,7 @@
 				</div>
 			</section>
 			<section 
-				class="section-secondary-overlay-alt span-6"
+				class="section-secondary-overlay-alt span-6 va-middle"
 				style="background-image: url('<?php echo appDir ?>/images/polygon-bg-blue.jpg')"
 			>
 				<div class="container">

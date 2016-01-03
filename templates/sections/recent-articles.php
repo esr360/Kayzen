@@ -29,14 +29,14 @@
             </div>
         </header>
         
-        <div class="container">		
+        <div class="container">
             <div class="row">	
                 
                 <div class="span-4 relative">	
                     <div class="thumbnail-zoom">
                         <div class="thumbnail_mask">
-                            <div class="icon_group-small">
-                                <a href="#" class="button-icon-border-circle">
+                            <div class="thumbnail_controls icon_group-small">
+                                <a href="<?php echo appDir ?>/images/wallpapers/bg-7.jpg" class="button-icon-border-circle" rel="lightbox">
                                     <i class="fa fa-search"></i>
                                 </a>
                                 <a href="#" class="button-icon-border-circle">
@@ -71,8 +71,8 @@
                 <div class="span-4 relative">	
                     <div class="thumbnail-zoom">
                         <div class="thumbnail_mask">
-                            <div class="icon_group-small">
-                                <a href="#" class="button-icon-border-circle">
+                            <div class="thumbnail_controls icon_group-small">
+                                <a href="<?php echo appDir ?>/images/wallpapers/bg-5.jpg" class="button-icon-border-circle" rel="lightbox">
                                     <i class="fa fa-search"></i>
                                 </a>
                                 <a href="#" class="button-icon-border-circle">
@@ -107,8 +107,8 @@
                 <div class="span-4 relative">	
                     <div class="thumbnail-zoom">
                         <div class="thumbnail_mask">
-                            <div class="icon_group-small">
-                                <a href="#" class="button-icon-border-circle">
+                            <div class="thumbnail_controls icon_group-small">
+                                <a href="<?php echo appDir ?>/images/wallpapers/bg-3.jpg" class="button-icon-border-circle" rel="lightbox">
                                     <i class="fa fa-search"></i>
                                 </a>
                                 <a href="#" class="button-icon-border-circle">

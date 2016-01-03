@@ -136,8 +136,8 @@
                     
                     <div class="top-bar_nav span va-middle">
                         <ul>
-                            <li id="search-trigger">
-                                <a href="#">
+                            <li>
+                                <a id="search-trigger" href="#">
                                     <i class="fa fa-search"></i>
                                 </a>
                             </li>

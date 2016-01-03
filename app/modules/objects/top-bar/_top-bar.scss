@@ -9,15 +9,15 @@
 	//-------------------------------------------------------------
 
 	$top-bar: config((
-		name             : top-bar,
-		output-JSON      : true,
-		height           : 60px,
-		background       : color(greyscale, grey-6),
-		padding          : 1em 0,
-		link-color       : color(greyscale, grey-3),
-		link-hover-color : color(greyscale, white),
-		z-index          : 6,
-		fixed            : false
+		'name'             : 'top-bar',
+		'output-JSON'      : true,
+		'height'           : 60px,
+		'background'       : color('greyscale', 'grey-6'),
+		'padding'          : 1em 0,
+		'link-color'       : color('greyscale', 'grey-3'),
+		'link-hover-color' : color('greyscale', 'white'),
+		'z-index'          : 6,
+		'fixed'            : false
 	), $custom) !global;
 
 	//-------------------------------------------------------------
@@ -26,27 +26,27 @@
 	
 	@include module {
 	
-		background: option($config, background);
+		background: option($config, 'background');
 		position: relative;
 		font-weight: lighter;
-		z-index: option($config, z-index);
+		z-index: option($config, 'z-index');
 		
 		a:not([class*="button"]) {
-			color: option($config, link-color);
+			color: option($config, 'link-color');
 			&:hover {
-				color: option($config, link-hover-color);
+				color: option($config, 'link-hover-color');
 				text-decoration: none;
 			}
 		}
 		
-		@include component(item) {
+		@include component('item') {
 			vertical-align: middle;
 			width: auto;
 		}
 		
-		@include component(nav) {
+		@include component('nav') {
 			
-			height: option($config, height);
+			height: option($config, 'height');
 			margin: 0 1em;
 			
 			&:first-child {
@@ -76,6 +76,7 @@
 						padding: 0 1em;
 						display: table-cell;
 						vertical-align: middle;
+                        cursor: pointer;
 					}	
 					[data-notification] {
 						&:after {
@@ -96,14 +97,14 @@
 				// Dropdown nav
 				ul {
 					@include triangle((
-						position : bottom,
-						color    : color(greyscale, grey-1)
+						'position' : 'bottom',
+						'color'    : color('greyscale', 'grey-1')
 					));
-					font-size: font-size(size-2);
+					font-size: font-size('size-2');
 					text-align: left;
 					position: absolute;
-					background: color(greyscale, grey-1);
-					transition: base(transition);
+					background: color('greyscale', 'grey-1');
+					transition: base('transition');
 					opacity: 0;
 					visibility: hidden;
 					padding: 0.5em;
@@ -114,7 +115,7 @@
 				}
 			}
 			
-		} // sub-component(nav)
+		} // component(nav)
 		
 	// Settings
 	//-------------------------------------------------------------
@@ -122,13 +123,13 @@
 		// Fixed Bar
 		//---------------------------------------------------------
 		
-		@include option(fixed) {
+		@include option('fixed') {
 			position: fixed;
 			top: 0;
 			width: 100%;
 			z-index: 9;
 		}
 		
-	} // component
+	} // module
 	
 } // @mixin top-bar
