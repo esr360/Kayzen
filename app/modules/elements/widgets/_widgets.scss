@@ -52,6 +52,7 @@
 
         @include overwrite-component('group', $parent: 'heading') {
             margin-bottom: 0;
+            color: typography('colors', 'heading');
         }
 
     // Modifiers

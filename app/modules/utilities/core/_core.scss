@@ -50,6 +50,10 @@
 		text-decoration: none;
 	}
     
+    h1, h2, h3, h4, h5, h6 {
+        font-size: base('font-size');
+    }
+    
     // code tags
     code {
         background: white;

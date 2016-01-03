@@ -4,15 +4,15 @@
 
 @mixin modals($custom: ()) {
 
-	//-------------------------------------------------------------
-	// Config
-	//-------------------------------------------------------------
+    //-------------------------------------------------------------
+    // Config
+    //-------------------------------------------------------------
 
-	$modals: config((
-		'name'                   : 'modal',
-		'output-JSON'            : true,
+    $modals: config((
+        'name'                   : 'modal',
+        'output-JSON'            : true,
         'dafault-animation'      : left,
-        'background-color'       : color('greyscale', 'grey-1'),
+        'background'             : color('greyscale', 'grey-1'),
         'text-color'             : base('text-color'),
         'radius'                 : 0,
         'z-index'                : 9,
@@ -21,101 +21,102 @@
         'close-icon-color'       : color('greyscale', 'grey-3'),
         'close-icon-hover-color' : color('brand', 'primary'),
         'close-icon-position'    : (1rem, 1rem)
-	), $custom);
-	
-	//-------------------------------------------------------------
-	// Component
-	//-------------------------------------------------------------
-	
-	@include module {
-		
-		@include vertical-center(absolute);
-		@extend %horizontal-center;
-		width: 650px;
-		max-width: 90%;
-		background: color('greyscale', 'grey-1');
-        color: base('text-color');
-		position: fixed;
-		z-index: 9;
-		transition: base('transition');
-		// hide by default
-		opacity: 0;
-		visibility: hidden;
-		
-		@include modifier('visible') {
-			opacity: 1;
-			visibility: visible;
-		}
-		
-		@include modifier('animate') {
-			
-			transition: base('transition');
-			
-			@include modifiers(('top', 'bottom')) {
-				@include modifier('visible') {
-					top: 50%;
-				}
-			}
-			
-			@include modifier('top') {
-				top: 45%;
-			}
-			
-			@include modifier('bottom') {
-				top: 55%;
-			}
-			
-			@include modifiers(('left', 'right')) {
-				@include modifier('visible') {
-					transform: translateX(0) translateY(-50%);
-				}
-			}
-			
-			@include modifier('left') {
-				transform: translateX(-15%) translateY(-50%);
-			}
-			
-			@include modifier('right') {
-				transform: translateX(15%) translateY(-50%);
-			}
-			
-			@include modifier('zoom') {
-				transform: scale(0.5) translateY(-75%);
-				@include modifier('visible') {
-					transform: scale(1) translateY(-50%);
-				}
-			}
-			
-			@include modifier('spin') {
-				transform: scale(1) rotate(-360deg) translateY(-50%);
+    ), $custom);
+
+    //-------------------------------------------------------------
+    // Component
+    //-------------------------------------------------------------
+
+    @include module {
+        
+        @include vertical-center(absolute);
+        @extend %horizontal-center;
+        width: 650px;
+        max-width: 90%;
+        background: this('background');
+        color: this('text-color');
+        position: fixed;
+        z-index: this('z-index');
+        transition: base('transition');
+        border-radius: this('radius');
+        // hide by default
+        opacity: 0;
+        visibility: hidden;
+        
+        @include modifier('visible') {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        @include modifier('animate') {
+            
+            transition: base('transition');
+            
+            @include modifiers(('top', 'bottom')) {
+                @include modifier('visible') {
+                    top: 50%;
+                }
+            }
+            
+            @include modifier('top') {
+                top: 45%;
+            }
+            
+            @include modifier('bottom') {
+                top: 55%;
+            }
+            
+            @include modifiers(('left', 'right')) {
+                @include modifier('visible') {
+                    transform: translateX(0) translateY(-50%);
+                }
+            }
+            
+            @include modifier('left') {
+                transform: translateX(-15%) translateY(-50%);
+            }
+            
+            @include modifier('right') {
+                transform: translateX(15%) translateY(-50%);
+            }
+            
+            @include modifier('zoom') {
+                transform: scale(0.5) translateY(-75%);
+                @include modifier('visible') {
+                    transform: scale(1) translateY(-50%);
+                }
+            }
+            
+            @include modifier('spin') {
+                transform: scale(1) rotate(-360deg) translateY(-50%);
                 transform-origin: 50% 50%;
-				@include modifier('zoom') {
-					transform: scale(0.5) rotate(-360deg) translateY(-50%);
-				}
-				@include modifier('visible') {
-					transform: scale(1) rotate(0) translateY(-50%);
-				}
-			}
-			
-		}
-		
-		@include component('content') {
-			padding: 2em;
-		}
-		
-		@include component('close') {
-			position: absolute;
-			cursor: pointer;
-			top: 1rem;
-			right: 1rem;
-			transition: base('transition');
-			color: color('greyscale', 'grey-3');
-            font-size: font-size('size-5');
-			&:hover {
-				color: color('brand', 'primary');
-			}	
-		}
-		
-	}
+                @include modifier('zoom') {
+                    transform: scale(0.5) rotate(-360deg) translateY(-50%);
+                }
+                @include modifier('visible') {
+                    transform: scale(1) rotate(0) translateY(-50%);
+                }
+            }
+            
+        }
+        
+        @include component('content') {
+            padding: this('content-padding');
+        }
+        
+        @include component('close') {
+            position: absolute;
+            cursor: pointer;
+            top: nth(this('close-icon-position'), 1);
+            right: nth(this('close-icon-position'), 2);
+            transition: base('transition');
+            color: this('close-icon-color');
+            font-size: this('close-icon-size');
+            &:hover {
+                color: this('close-icon-hover-color');
+            }	
+        }
+        
+    }
 
 } // @mixin modals

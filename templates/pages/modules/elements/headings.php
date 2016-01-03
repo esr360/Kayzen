@@ -354,12 +354,12 @@
 					<tbody>
 						<tr>
 							<td><code>highlight-color</code></td>
-							<td><code class="value">color(brand, primary)</code></td>
+							<td><code class="value">color('brand', 'primary')</code></td>
 							<td>The background color of text when using the 'highlight' modifier.</td>
 						</tr>
 						<tr>
 							<td><code>highlight-dark-color</code></td>
-							<td><code class="value">color(greyscale, grey-6)</code></td>
+							<td><code class="value">color('greyscale', 'grey-6')</code></td>
 							<td>The background color of text when using the <code>highlight</code> and <code>dark</code> modifiers.</td>
 						</tr>
 						<tr>
@@ -399,8 +399,8 @@
                              		
 <pre data-enlighter-language="css" class="EnlighterJSRAW">
 @include headings((
-	'group-dots-color' : #9B58B5,
-	'group-dots-size'  : 12px
+    'group-dots-color' : #9B58B5,
+    'group-dots-size'  : 12px
 ));
 </pre>
 

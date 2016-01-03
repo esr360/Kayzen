@@ -23,9 +23,6 @@
 	
 		background-size: cover;	
 		background-position: center;
-		@include overwrite-component(group, $parent: heading) {
-			color: typography(colors, heading);
-		}
         
 		// Carousel Tools
 

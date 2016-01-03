@@ -198,7 +198,7 @@
 					<tbody>
 						<tr>
 							<td><code>small-size</code></td>
-							<td><code class="value">font-size(size-1)</code></td>
+							<td><code class="value">font-size('size-1')</code></td>
 							<td>The font-size for lists when using the <code>small</code> modifier.</td>
 						</tr>
 						<tr>
@@ -213,17 +213,17 @@
 						</tr>
 						<tr>
 							<td><code>arrow-color</code></td>
-							<td><code class="value">color(brand, primary)</code></td>
+							<td><code class="value">color('brand', 'primary')</code></td>
 							<td>The color of the arrow bullet point.</td>
 						</tr>
 						<tr>
 							<td><code>tag-bg-color</code></td>
-							<td><code class="value">color(greyscale, grey-4)</code></td>
+							<td><code class="value">color('greyscale', 'grey-4')</code></td>
 							<td>The background color of list items when using the <code>tags</code> modifier.</td>
 						</tr>
 						<tr>
 							<td><code>tag-border-color</code></td>
-							<td><code class="value">color(greyscale, grey-4)</code></td>
+							<td><code class="value">color('greyscale', 'grey-4')</code></td>
 							<td>The border color of tags.</td>
 						</tr>
 						<tr>
@@ -238,7 +238,7 @@
 						</tr>
 						<tr>
 							<td><code>tag-hover-bg-color</code></td>
-							<td><code class="value">color(brand, primary)</code></td>
+							<td><code class="value">color('brand', 'primary')</code></td>
 							<td>The background color of tags when hovered.</td>
 						</tr>
 						<tr>
@@ -252,8 +252,8 @@
 				<p>To change one of the above values, pass your new value(s) to the <code>lists()</code> mixin in your theme file (e.g. app/themes/Kayzen/_kayzen.scss).</p>   
 <pre data-enlighter-language="css" class="EnlighterJSRAW">
 @include lists((
-	'arrow-icon'  : "\f0a4",
-	'arrow-color' : #2cd68f
+    'arrow-icon'  : "\f0a4",
+    'arrow-color' : #2cd68f
 ));
 </pre>
                 
@@ -273,9 +273,9 @@
                   
 <pre data-enlighter-language="css" class="EnlighterJSRAW">
 @include lists((
-	'tag-bg-color'     : transparent,
+    'tag-bg-color'     : transparent,
     'tag-border-color' : #9B58B5,
-	'tag-color'        : #9B58B5,
+    'tag-color'        : #9B58B5,
     'tag-radius'       : 0.3em
 ));
 </pre>

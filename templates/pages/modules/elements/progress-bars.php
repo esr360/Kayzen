@@ -154,7 +154,7 @@
 						</tr>
 						<tr>
 							<td><code>fill-color</code></td>
-							<td><code class="value">color(brand, primary)</code></td>
+							<td><code class="value">color('brand', 'primary')</code></td>
 							<td>The fill color of the progress bar.</td>
 						</tr>
 						<tr>
@@ -169,12 +169,12 @@
 						</tr>
 						<tr>
 							<td><code>value-color</code></td>
-							<td><code class="value">color(greyscale, white)</code></td>
+							<td><code class="value">color('greyscale', 'white')</code></td>
 							<td>The color of the progress value text.</td>
 						</tr>
 						<tr>
 							<td><code>value-size</code></td>
-							<td><code class="value">font-size(size-2)</code></td>
+							<td><code class="value">font-size('size-2')</code></td>
 							<td>The font size of the progress value text.</td>
 						</tr>
 						<tr>
@@ -189,9 +189,9 @@
                 
 <pre data-enlighter-language="css" class="EnlighterJSRAW">
 @include progress-bars((
-	'background-color'  : #F8F8F8,
+    'background-color'  : #F8F8F8,
     'fill-color'        : #008de5,
-	'bar-radius'        : 0
+    'bar-radius'        : 0
 ));
 </pre>
 

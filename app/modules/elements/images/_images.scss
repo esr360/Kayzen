@@ -4,57 +4,57 @@
 
 @mixin images($custom: ()) {
 
-	//-------------------------------------------------------------
-	// Config
-	//-------------------------------------------------------------
+    //-------------------------------------------------------------
+    // Config
+    //-------------------------------------------------------------
 
-	$images: config((
-		'name'            : 'image'
-	), $custom);
+    $images: config((
+        'name'            : 'image'
+    ), $custom);
 
-	//-------------------------------------------------------------
-	// Responsive Images
-	//-------------------------------------------------------------
+    //-------------------------------------------------------------
+    // Responsive Images
+    //-------------------------------------------------------------
 
-	img {
-		max-width: 100%;
-		display: block;
-	} 
+    img {
+        max-width: 100%;
+        display: block;
+    } 
 
-	//-------------------------------------------------------------
-	// Desktop Graphic
-	//-------------------------------------------------------------
-	
-	@include module('desktop-graphic') {
+    //-------------------------------------------------------------
+    // Desktop Graphic
+    //-------------------------------------------------------------
 
-		position: relative;
-		cursor: pointer;
+    @include module('desktop-graphic') {
 
-		img {
-			position: relative;
-			z-index: 1;		
-		}
+        position: relative;
+        cursor: pointer;
 
-		@include component('image') {
-			position: absolute;
-			background-size: 100%;
-			background-position: center 0%;
-			transition: 3s;
-			height: 58.25%;
-			width: 92.25%;
-			top: 3.95%;
-			left: 3.9%;
-			z-index: 0;	
-		}
-	
-		@include modifier('scroll') {
-			&:hover {
-				@include overwrite-component('image') {
-					background-position: center 100%;	
-					transition: 20s;		
-				}
-			}
-		}
+        img {
+            position: relative;
+            z-index: 1;		
+        }
+
+        @include component('image') {
+            position: absolute;
+            background-size: 100%;
+            background-position: center 0%;
+            transition: 3s;
+            height: 58.25%;
+            width: 92.25%;
+            top: 3.95%;
+            left: 3.9%;
+            z-index: 0;	
+        }
+
+        @include modifier('scroll') {
+            &:hover {
+                @include overwrite-component('image') {
+                    background-position: center 100%;	
+                    transition: 20s;		
+                }
+            }
+        }
         
         // owl-carousel
         
@@ -75,54 +75,54 @@
         .owl-carousel {
             z-index: 2;
         }
-	
-	} // module(desktop-graphic)
 
-	//-------------------------------------------------------------
-	// Mobile Graphic
-	//-------------------------------------------------------------
-	
-	@include module('mobile-graphic') {
-	
-		background-size: 100% 100%;
-		padding: 30% 8%;
-		// fix for animations
-		transform: translateZ(0);
-	
-	// Mobile Colors
-	//-------------------------------------------------------------
-	
-		$phone-colors: (
-			blue, green, purple, red, white, yellow
-		);
-	
-		@each $color in $phone-colors {
-			@include modifier(#{$color}) {
-				background-image: url("#{$asset-path}/images/mobile-base-#{$color}.png");
-			}
-		}
-		
-		//Default
-		background-image: url("#{$asset-path}/images/mobile-base-blue.png");
-	
-	} // module(mobile-graphic)
-		
-	//-------------------------------------------------------------
-	// Horizontal & Vertical Centered Images
-	//-------------------------------------------------------------
-	
-	.center-xy {
-		position: relative;
-		> img {
-			@include vertical-center(absolute);
-			@extend %horizontal-center;
-		}
-	}
-    
-	//-------------------------------------------------------------
-	// Square Image
-	//-------------------------------------------------------------
-    
+    } // module(desktop-graphic)
+
+    //-------------------------------------------------------------
+    // Mobile Graphic
+    //-------------------------------------------------------------
+
+    @include module('mobile-graphic') {
+
+        background-size: 100% 100%;
+        padding: 30% 8%;
+        // fix for animations
+        transform: translateZ(0);
+
+    // Mobile Colors
+    //-------------------------------------------------------------
+
+        $phone-colors: (
+            blue, green, purple, red, white, yellow
+        );
+
+        @each $color in $phone-colors {
+            @include modifier(#{$color}) {
+                background-image: url("#{$asset-path}/images/mobile-base-#{$color}.png");
+            }
+        }
+        
+        //Default
+        background-image: url("#{$asset-path}/images/mobile-base-blue.png");
+
+    } // module(mobile-graphic)
+        
+    //-------------------------------------------------------------
+    // Horizontal & Vertical Centered Images
+    //-------------------------------------------------------------
+
+    .center-xy {
+        position: relative;
+        > img {
+            @include vertical-center(absolute);
+            @extend %horizontal-center;
+        }
+    }
+
+    //-------------------------------------------------------------
+    // Square Image
+    //-------------------------------------------------------------
+
     .image-square {
         position: relative;
         height: 0;
@@ -133,11 +133,11 @@
             top: -25%;
         }
     }
-    
-	//-------------------------------------------------------------
-	// Background Image
-	//-------------------------------------------------------------
-    
+
+    //-------------------------------------------------------------
+    // Background Image
+    //-------------------------------------------------------------
+
     .bg-img {
         height: 100%;
         width: 100%;
@@ -147,5 +147,5 @@
         background-size: cover;
         transition: base('transition');
     }
-	
+
 } // @mixin images

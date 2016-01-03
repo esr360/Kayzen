@@ -261,13 +261,13 @@
 							<td>The default animation style modals should use (top, bottom, left, right, spin, zoom).</td>
 						</tr>
 						<tr>
-							<td><code>background-color</code></td>
-							<td><code class="value">color(greyscale, grey-1)</code></td>
-							<td>The background color of modal boxes.</td>
+							<td><code>background</code></td>
+							<td><code class="value">color('greyscale', 'grey-1')</code></td>
+							<td>The background of modal boxes.</td>
 						</tr>
 						<tr>
 							<td><code>text-color</code></td>
-							<td><code class="value">base(text-color)</code></td>
+							<td><code class="value">base('text-color')</code></td>
 							<td>The text color of modal boxes.</td>
 						</tr>
 						<tr>
@@ -292,12 +292,12 @@
 						</tr>
 						<tr>
 							<td><code>close-icon-color</code></td>
-							<td><code class="value">color(greyscale, grey-3)</code></td>
+							<td><code class="value">color('greyscale', 'grey-3')</code></td>
 							<td>The color for the close icon.</td>
 						</tr>
 						<tr>
 							<td><code>close-icon-hover-color</code></td>
-							<td><code class="value">color(brand, primary)</code></td>
+							<td><code class="value">color('brand', 'primary')</code></td>
 							<td>The hover color for the close icon.</td>
 						</tr>
 						<tr>
@@ -312,9 +312,9 @@
                 
 <pre data-enlighter-language="css" class="EnlighterJSRAW">
 @include modals((
-	'background-color'  : rgba(white, 0.8),
+    'background-color'  : rgba(white, 0.8),
     'radius'            : 0.4em,
-	'close-icon-size'   : 2em
+    'close-icon-size'   : 2em
 ));
 </pre>
 

@@ -4,74 +4,74 @@
 
 @mixin progress-bars($custom: ()) {
 
-	//-------------------------------------------------------------
-	// Config
-	//-------------------------------------------------------------
+    //-------------------------------------------------------------
+    // Config
+    //-------------------------------------------------------------
 
-	$progress-bars: config((
-		'name'             : 'progress-bar',
-        'background-color' : rgba(black, 0.15),
-        'fill-color'       : color(brand, primary),
-        'bar-height'       : 1.5em,
-        'bar-radius'       : 0.25em,
-        'value-color'      : color(greyscale, white),
-        'value-size'       : font-size(size-2),
-        'group-spacing'    : 0.5em
-	), $custom);
-	
-	// Component
-	//-------------------------------------------------------------
-	
-	@include module {
-		display: block;
-		position: relative;
-		background: rgba(black, 0.15);
-		width: 100%;
-		height: 1.5em;
-		border: none;
-		border-radius: 0.25em;
-		overflow: hidden;
-		&:before {
-			@include vertical-center(absolute);
-			left: 0.5em;
-			content: attr(data-progress);
-			color: color(greyscale, white);
-			font-size: font-size(size-2);
-		}
-	}
-    
-    .progress {
-        background-color: color(brand, primary);
+    $progress-bars: config((
+        'name'            : 'progress-bar',
+        'background'      : rgba(black, 0.15),
+        'fill-background' : color('brand', 'primary'),
+        'bar-height'      : 1.5em,
+        'bar-radius'      : 0.25em,
+        'value-color'     : color('greyscale', 'white'),
+        'value-size'      : font-size('size-2'),
+        'group-spacing'   : 0.5em
+    ), $custom);
+
+    // Component
+    //-------------------------------------------------------------
+
+    @include module {
+        height: this('bar-height');
+        border-radius: this('bar-radius');
+        background: this('background');
+        display: block;
+        position: relative;
+        width: 100%;
+        border: none;
+        overflow: hidden;
+        &:before {
+            @include vertical-center(absolute);
+            left: 0.5em;
+            content: attr(data-progress);
+            color: this('value-color');
+            font-size: this('value-size');
+        }
     }
 
-	// HTML5 Progress
-	//-------------------------------------------------------------
-	
-	progress {
-	
-		&::-webkit-progress-bar {
-			background: rgba(black, 0.15);
-			height: 1.5em;
-		}
-	
-		&::-webkit-progress-value {
-			background: color(brand, primary);
-			height: 1.5em;
-		}
-		
-		&::-moz-progress-bar {	
-			background: color(brand, primary);
-		}
-	
-	} // progress
-	
-	// Components
-	//-------------------------------------------------------------
-	
-	@include component(group) {
-		@include overwrite(heading) {
-			margin-bottom: 0.5em;
-		}
-	}
-	
+    .progress {
+        background: this('fill-background');
+    }
+
+    // HTML5 Progress
+    //-------------------------------------------------------------
+
+    progress {
+
+        &::-webkit-progress-bar {
+            background: this('background');
+            height: this('bar-height');
+        }
+
+        &::-webkit-progress-value {
+            background: this('fill-background');
+            height: this('bar-height');
+        }
+        
+        &::-moz-progress-bar {	
+            background: this('fill-background');
+        }
+
+    } // progress
+
+    // Components
+    //-------------------------------------------------------------
+
+    @include component('group') {
+        @include overwrite('heading') {
+            margin-bottom: this('group-spacing');
+        }
+    }
+
 } // @mixin progress-bars
