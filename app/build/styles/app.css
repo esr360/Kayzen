@@ -7585,7 +7585,7 @@ progress::-moz-progress-bar {
   margin-bottom: 1.14rem;
 }
 [class*="widget-"][class*="-block"][class*="-fill"] {
-  background-color: #9B58B5;
+  background: #9B58B5;
   color: #ffffff;
 }
 [class*="widget-"][class*="-block"][class*="-fill"] .heading, [class*="widget-"][class*="-block"][class*="-fill"] [class*="heading-"] {
@@ -7595,8 +7595,8 @@ progress::-moz-progress-bar {
   color: #ffffff;
 }
 [class*="widget-"][class*="-block"]:not([class*="-noHover"]):hover {
-  background-color: #9B58B5;
-  color: #ffffff;
+  background: #9B58B5;
+  color: #9B58B5;
 }
 [class*="widget-"][class*="-block"]:not([class*="-noHover"]):hover .heading, [class*="widget-"][class*="-block"]:not([class*="-noHover"]):hover [class*="heading-"] {
   color: #ffffff;
@@ -7605,7 +7605,7 @@ progress::-moz-progress-bar {
   color: #ffffff;
 }
 [class*="widget-"][class*="-block"]:not([class*="-noHover"]):hover[class*="-fill"] {
-  background-color: #804397;
+  background: #804397;
 }
 [class*="widget-"][class*="-block"]:not([class*="-noHover"]):hover[class*="-panel"] {
   border-color: #9B58B5;
@@ -7723,6 +7723,9 @@ progress::-moz-progress-bar {
 }
 [class*="widget-"][class*="-spectrum-quarter"] .button, [class*="widget-"][class*="-spectrum-quarter"] [class*="button-"] {
   color: rgba(255, 255, 255, 0.5);
+}
+[class*="widget-"][class*="-spectrum-quarter"] [class*="heading_group"] {
+  color: #ffffff;
 }
 [class*="widget-"][class*="-spectrum-quarter"]:hover .button, [class*="widget-"][class*="-spectrum-quarter"]:hover [class*="button-"] {
   color: #ffffff;
