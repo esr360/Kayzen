@@ -228,7 +228,7 @@
 					<tbody>
 						<tr>
 							<td><code>font</code></td>
-							<td><code class="value">typography(typefaces, secondary)</code></td>
+							<td><code class="value">typography('typefaces', 'secondary')</code></td>
 							<td>The font-family for blockquotes.</td>
 						</tr>
 						<tr>
@@ -263,7 +263,7 @@
 						</tr>
 						<tr>
 							<td><code>bubble-bg-color</code></td>
-							<td><code class="value">color(brand, primary)</code></td>
+							<td><code class="value">color('brand', 'primary')</code></td>
 							<td>The background color for blockquote bubbles.</td>
 						</tr>
 						<tr>

@@ -4,12 +4,12 @@
 
 @mixin blockquotes($custom: ()) {
 
-	//-------------------------------------------------------------
-	// Config
-	//-------------------------------------------------------------
+    //-------------------------------------------------------------
+    // Config
+    //-------------------------------------------------------------
 
-	$blockquotes: config((
-		'name'                  : 'blockquote',
+    $blockquotes: config((
+        'name'                  : 'blockquote',
         'font'                  : typography('typefaces', 'secondary'),
         'icon-size'             : 1.75rem,
         'pull-width'            : 340px,
@@ -21,38 +21,38 @@
         'bubble-radius'         : 0.6em,
         'bubble-color'          : color('greyscale', 'white'),
         'testimonial-icon-size' : 1.5rem,
-	), $custom);
+    ), $custom);
 
-	//-------------------------------------------------------------
-	// Component
-	//-------------------------------------------------------------
-	
-	@include module {
+    //-------------------------------------------------------------
+    // Component
+    //-------------------------------------------------------------
 
-	// Core Styles
-	//-------------------------------------------------------------
-			
-		margin: 0;
-		border: 0;
-		padding: 0 2.5em;
+    @include module {
+
+    // Core Styles
+    //-------------------------------------------------------------
+            
+        margin: 0;
+        border: 0;
+        padding: 0 2.5em;
         position: relative;
-		font-family: this('font');
-		
-	// Modifiers
-	//-------------------------------------------------------------
-	
-		@include modifier('testimonial') {
-			
-			padding: 0;
-			
-			@include overwrite-component('content') {
-				&:before,
-				&:after {
-					font-size: this('testimonial-icon-size');
-				}
-			}
-			
-		}
+        font-family: this('font');
+        
+    // Modifiers
+    //-------------------------------------------------------------
+
+        @include modifier('testimonial') {
+            
+            padding: 0;
+            
+            @include overwrite-component('content') {
+                &:before,
+                &:after {
+                    font-size: this('testimonial-icon-size');
+                }
+            }
+            
+        }
         
         @include modifiers(('pull-left', 'pull-right')) {
             margin: this('pull-margin');
@@ -77,23 +77,23 @@
             float: right;
             margin-right: 0;
         }
-		
-	// Components
-	//-------------------------------------------------------------
-	
-		@include component('bubble') {
+        
+    // Components
+    //-------------------------------------------------------------
+
+        @include component('bubble') {
             
-			padding: this('bubble-padding');
-			background: this('bubble-background');
-			border-radius: this('bubble-radius');
-			color: this('bubble-color');
+            padding: this('bubble-padding');
+            background: this('bubble-background');
+            border-radius: this('bubble-radius');
+            color: this('bubble-color');
             
             position: relative;
             
-			@include triangle((
-				'position' : top,
-				'color'    : this('bubble-background')
-			));
+            @include triangle((
+                'position' : top,
+                'color'    : this('bubble-background')
+            ));
             
             @include overwrite-component('content') {
                 position: relative;
@@ -105,64 +105,64 @@
                 }
             }
             
-			&:after {
-				left: 20%;
-			}
+            &:after {
+                left: 20%;
+            }
             
-		} // bubble
-		
-		@include components(('avatar', 'cite')) {
-			display: inline-block;
-			vertical-align: middle;
-		}
-		
-		@include component('content') {
+        } // bubble
+        
+        @include components(('avatar', 'cite')) {
+            display: inline-block;
+            vertical-align: middle;
+        }
+        
+        @include component('content') {
             position: relative;
             display: inline-block;
-			&:before,
-			&:after {
-				position: absolute;
-				font-family: FontAwesome;
-				font-size: this('icon-size');
-				color: rgba(black, 0.3);
-			}
-			&:before {
-				content: "\f10d";
-				top: -0.2em;
-				left: -1.25em;
-			}
-			&:after {
-				content: "\f10e";
-				bottom: -0.2em;
-				right: -1em;
-			}
-			@include overwrite-component('cite', $special: 'adjacent-sibling') {
-				margin-top: 1.5em;
-			}
-		}
-		
-		@include component('avatar') {
-			@include extend($parent: 'thumbnail', $modifiers: ('profile', 'round'));
-			@include overwrite-component('content', $special: 'adjacent-sibling') {
-				margin-top: 1.5em;
-			}
-		}
-		
-		@include component('cite') {
-			margin-left: 0.5em;
-			color: color('greyscale', 'white');
-		}
-		
-		@include component('footer') {
-			margin-top: 1em;			
-		}
-			
-	} // component
-    
+            &:before,
+            &:after {
+                position: absolute;
+                font-family: FontAwesome;
+                font-size: this('icon-size');
+                color: rgba(black, 0.3);
+            }
+            &:before {
+                content: "\f10d";
+                top: -0.2em;
+                left: -1.25em;
+            }
+            &:after {
+                content: "\f10e";
+                bottom: -0.2em;
+                right: -1em;
+            }
+            @include overwrite-component('cite', $special: 'adjacent-sibling') {
+                margin-top: 1.5em;
+            }
+        }
+        
+        @include component('avatar') {
+            @include extend($parent: 'thumbnail', $modifiers: ('profile', 'round'));
+            @include overwrite-component('content', $special: 'adjacent-sibling') {
+                margin-top: 1.5em;
+            }
+        }
+        
+        @include component('cite') {
+            margin-left: 0.5em;
+            color: color('greyscale', 'white');
+        }
+        
+        @include component('footer') {
+            margin-top: 1em;			
+        }
+            
+    } // module
+
     q {
         &:before, &:after {
             content: "";
         }
     }
-	
+
 } // @mixin blockquotes

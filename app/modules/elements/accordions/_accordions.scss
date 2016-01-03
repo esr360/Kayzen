@@ -4,65 +4,65 @@
 
 @mixin accordions($custom: ()) {
 
-	//-------------------------------------------------------------
-	// Config
-	//-------------------------------------------------------------
+    //-------------------------------------------------------------
+    // Config
+    //-------------------------------------------------------------
 
-	$accordions: config((
-		'name'                  : 'accordion',
-		'output-JSON'           : true,
-		// icon (open/close)
-		'icon'                  : '\f138', // FontAwesome value
-		'icon-color'            : rgba(color('greyscale', 'grey-3'), 0.6),
-		'icon-active-color'     : color('greyscale', 'white'),
-		// each section
-		'section-margin'        : 0,
-		// title (clickable part)
-		'title-bg'              : transparent,
-		'title-color'           : base('text-color'),
-		'title-border'          : 1px solid rgba(black, 0.15),
-		'title-radius'          : 0,
-		'title-padding'         : 1em,
-		// title.active
-		'title-active-bg'       : color('brand', 'primary'),
-		'title-active-color'    : color('greyscale', 'white'),
-		'title-active-border'   : transparent,
-		'title-active-radius'   : 0,
-		// content
-		'content-bg'            : color('greyscale', 'white'),
-		'content-color'         : base('text-color'),
-		'content-border'        : 1px solid rgba(black, 0.15),
-		'content-radius'        : 0,
-		'content-padding'       : 1.5em
-	), $custom);
-	
-	//-------------------------------------------------------------
-	// Component
-	//-------------------------------------------------------------
-	
-	@include module {
+    $accordions: config((
+        'name'                  : 'accordion',
+        'output-JSON'           : true,
+        // icon (open/close)
+        'icon'                  : '\f138', // FontAwesome value
+        'icon-color'            : rgba(color('greyscale', 'grey-3'), 0.6),
+        'icon-active-color'     : color('greyscale', 'white'),
+        // each section
+        'section-margin'        : 0,
+        // title (clickable part)
+        'title-bg'              : transparent,
+        'title-color'           : base('text-color'),
+        'title-border'          : 1px solid rgba(black, 0.15),
+        'title-radius'          : 0,
+        'title-padding'         : 1em,
+        // title.active
+        'title-active-bg'       : color('brand', 'primary'),
+        'title-active-color'    : color('greyscale', 'white'),
+        'title-active-border'   : transparent,
+        'title-active-radius'   : 0,
+        // content
+        'content-bg'            : color('greyscale', 'white'),
+        'content-color'         : base('text-color'),
+        'content-border'        : 1px solid rgba(black, 0.15),
+        'content-radius'        : 0,
+        'content-padding'       : 1.5em
+    ), $custom);
 
-	// Core Styles
-	//-------------------------------------------------------------
-	
-		margin-bottom: base('margin');
-		@include vertical-rhythm('bottom');
+    //-------------------------------------------------------------
+    // Component
+    //-------------------------------------------------------------
 
-	// Components
-	//-------------------------------------------------------------
-	
+    @include module {
+
+    // Core Styles
+    //-------------------------------------------------------------
+
+        margin-bottom: base('margin');
+        @include vertical-rhythm('bottom');
+
+    // Components
+    //-------------------------------------------------------------
+
         @include component('section') {
-			margin: 0;
-			&:not(:last-child) {
-				margin-bottom: this('section-margin');
-			}
-			@if (this('section-margin') == 0) {
-				&:not(:last-child) {
-					> *:first-child, > *:last-child {
-						border-bottom: 0 !important;
-					}
-				}
-			}
+            margin: 0;
+            &:not(:last-child) {
+                margin-bottom: this('section-margin');
+            }
+            @if (this('section-margin') == 0) {
+                &:not(:last-child) {
+                    > *:first-child, > *:last-child {
+                        border-bottom: 0 !important;
+                    }
+                }
+            }
             &:hover,
             &.active {
                 @include overwrite-component('title') {
@@ -75,11 +75,11 @@
             }
             &.active {
                 @include overwrite-component('title') {
-					border-color: this('title-active-border');
-					border-radius: this('title-active-radius');
-					&:after { // open/close icon		
-						transform: rotate(90deg) translateZ(0);
-					}
+                    border-color: this('title-active-border');
+                    border-radius: this('title-active-radius');
+                    &:after { // open/close icon		
+                        transform: rotate(90deg) translateZ(0);
+                    }
                 }
             }
         }
@@ -115,21 +115,21 @@
             background: this('content-bg');
         }
         
-		> * {
-			> *:first-child { 
+        > * {
+            > *:first-child { 
                 cursor: pointer;			
-			}
-			> *:last-child { 
+            }
+            > *:last-child { 
                 display: none;	
                 &.active {
                     display: block;
                 }			
-			}
-		}
+            }
+        }
         
-	// Modifiers
-	//-------------------------------------------------------------
-	
+    // Modifiers
+    //-------------------------------------------------------------
+
         @include modifier('minimal') {
             > * {
                 > *:first-child { 
@@ -154,7 +154,7 @@
                 }
             }
         }
-	
-	} // module(accordion)
-	
+
+    } // module
+
 } // @mixin accordions

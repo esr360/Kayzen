@@ -247,12 +247,12 @@
 						</tr>
 						<tr>
 							<td><code>icon-color</code></td>
-							<td><code class="value">rgba(color(greyscale, grey-3), 0.6)</code></td>
+							<td><code class="value">rgba(color('greyscale', 'grey-3'), 0.6)</code></td>
 							<td>The color for the open/close icon.</td>
 						</tr>
 						<tr>
 							<td><code>icon-active-color</code></td>
-							<td><code class="value">color(greyscale, white)</code></td>
+							<td><code class="value">color('greyscale', 'white')</code></td>
 							<td>The color for the open/close icon when the corresponding section is open.</td>
 						</tr>
 						<tr>
@@ -267,7 +267,7 @@
 						</tr>
 						<tr>
 							<td><code>title-color</code></td>
-							<td><code class="value">typograhy(colors, base)</code></td>
+							<td><code class="value">typograhy('colors', 'base')</code></td>
 							<td>The text color for the accordion title (the clickable part).</td>
 						</tr>
 						<tr>
@@ -287,12 +287,12 @@
 						</tr>
 						<tr>
 							<td><code>title-active-bg</code></td>
-							<td><code class="value">color(brand, primary)</code></td>
+							<td><code class="value">color('brand', 'primary')</code></td>
 							<td>The background color for the accordion title when the corresponding section is open.</td>
 						</tr>
 						<tr>
 							<td><code>title-active-color</code></td>
-							<td><code class="value">color(greyscale, white)</code></td>
+							<td><code class="value">color('greyscale', 'white')</code></td>
 							<td>The text color for the accordion title when the corresponding section is open.</td>
 						</tr>
 						<tr>
@@ -307,12 +307,12 @@
 						</tr>
 						<tr>
 							<td><code>content-bg</code></td>
-							<td><code class="value">color(greyscale, white)</code></td>
+							<td><code class="value">color('greyscale', 'white')</code></td>
 							<td>The backgound for the accordion content.</td>
 						</tr>
 						<tr>
 							<td><code>content-color</code></td>
-							<td><code class="value">typograhy(colors, base)</code></td>
+							<td><code class="value">typograhy('colors', 'base')</code></td>
 							<td>The text color for the accordion content.</td>
 						</tr>
 						<tr>

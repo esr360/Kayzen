@@ -4,31 +4,31 @@
 
 @mixin corner-ribbons($custom: ()) {
 
-	//-------------------------------------------------------------
-	// Config
-	//-------------------------------------------------------------
+    //-------------------------------------------------------------
+    // Config
+    //-------------------------------------------------------------
 
-	$corner-ribbons: config((
-		'name'        : 'corner-ribbon',
+    $corner-ribbons: config((
+        'name'        : 'corner-ribbon',
         'text-color'  : white,
-		'sizes'       : (
-			'default' : 1em,
-			'small'   : 0.7em,
-			'large'   : 1.2em
-		),
+        'sizes'       : (
+            'default' : 1em,
+            'small'   : 0.7em,
+            'large'   : 1.2em
+        ),
         'colors'      : (
             'green'   : #5bbe61,
             'pink'    : #da4771,
             'purple'  : #9B58B5,
             'blue'    : #33b6ea
         )
-	), $custom);
+    ), $custom);
 
-	//-------------------------------------------------------------
-	// Component
-	//-------------------------------------------------------------
-	
-	@include module {
+    //-------------------------------------------------------------
+    // Component
+    //-------------------------------------------------------------
+
+    @include module {
         
         overflow: hidden;
         position: absolute;
@@ -39,7 +39,7 @@
         z-index: 3;
         pointer-events: none;
         text-align: center;
-        font-size: option($config, sizes, default);
+        font-size: this('sizes', 'default');
         &:before {
             content: attr(data-ribbon);
             background-color: color('greyscale', 'grey-3');
@@ -61,53 +61,38 @@
                 font-weight: normal;
             }
         }
-		
-	//-------------------------------------------------------------
-	// Colors
-	//-------------------------------------------------------------
-    
-        @include modifier('green') {
-            &:before {
-                background-color: #5bbe61;
-            }
-        }
-        @include modifier('pink') {
-            &:before {
-                background-color: #da4771;
-            }
-        }
-        @include modifier('purple') {
-            &:before {
-                background-color: #9B58B5;
-            }
-        }
-        @include modifier('blue') {
-            &:before {
-                background-color: #33b6ea;
-            }
-        }
-	
-	//-------------------------------------------------------------
-	// Sizes
-	//-------------------------------------------------------------
-	
-		@each $size in option($config, sizes) {
-			$key: nth($size, 1); $value: nth($size, 2);
-			@if $key != 'default' {
-				@include modifier($key) {
-					font-size: #{$value};
-				}
-			}
-		}
         
-        @include modifier(small) {
+    //-------------------------------------------------------------
+    // Colors
+    //-------------------------------------------------------------
+
+        @each $color, $value in this('colors') {
+            @include modifier($color) {
+                &:before {
+                    background-color: $value;
+                }
+            } 
+        }
+
+    //-------------------------------------------------------------
+    // Sizes
+    //-------------------------------------------------------------
+
+        @each $size, $value in this('sizes') {
+            @if $size != 'default' {
+                @include modifier($size) {
+                    font-size: #{$value};
+                }
+            }
+        }
+        
+        @include modifier('small') {
             &:before {
                 top: 1.25em;
                 left: -2.75em;
             }
         }
-		
-	} // component
-	
-	
+        
+    } // module
+
 } // @mixin corner-ribbons

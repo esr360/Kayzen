@@ -336,7 +336,7 @@
 					<tbody>
 						<tr>
 							<td><code>background</code></td>
-							<td><code class="value">color(greyscale, grey-4)</code></td>
+							<td><code class="value">color('greyscale', 'grey-4')</code></td>
 							<td>The default background color for regular buttons.</td>
 						</tr>
 						<tr>

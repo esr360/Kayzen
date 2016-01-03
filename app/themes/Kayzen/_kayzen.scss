@@ -3,6 +3,8 @@
 //=================================================================
 
 @if $theme == Kayzen {
+    
+    @include normalize();
 
 //-----------------------------------------------------------------
 // Skeleton
@@ -60,10 +62,10 @@
 	@include google-map;
 	
 	@include header((
-		bg        : transparent,
-		font-size : 0.9em,
-		dark      : (
-			bg    : rgba(black, 0.3),
+		'bg'        : transparent,
+		'font-size' : 0.9em,
+		'dark'      : (
+			'bg'    : rgba(black, 0.3),
 		)
 	));
 	

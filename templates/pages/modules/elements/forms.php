@@ -443,7 +443,7 @@
 						</tr>
 						<tr>
 							<td><code>input-border</code></td>
-							<td><code class="value">1px solid color(greyscale, grey-3)</code></td>
+							<td><code class="value">1px solid color('greyscale', 'grey-3')</code></td>
 							<td>The border of form input components.</td>
 						</tr>
 						<tr>
@@ -463,17 +463,17 @@
 						</tr>
 						<tr>
 							<td><code>valid-color</code></td>
-							<td><code class="value">color(validation, valid)</code></td>
+							<td><code class="value">color('validation', 'valid')</code></td>
 							<td>The color for when an HTML5 form group is valid.</td>
 						</tr>
 						<tr>
 							<td><code>invalid-color</code></td>
-							<td><code class="value">color(validation, invalid)</code></td>
+							<td><code class="value">color('validation', 'invalid')</code></td>
 							<td>The color for when an HTML5 form group is invalid.</td>
 						</tr>
 						<tr>
 							<td><code>group-small-size</code></td>
-							<td><code class="value">font-size(size-2)</code></td>
+							<td><code class="value">font-size('size-2')</code></td>
 							<td>The font-size of form group components with the <code>small</code> modifier.</td>
 						</tr>
                     </tbody>

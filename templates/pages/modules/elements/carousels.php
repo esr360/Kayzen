@@ -400,8 +400,8 @@ $(document).ready(function() {
 							<td>The scale of the centered item when using the <code>scale-3</code> modifer.</td>
 						</tr>
 						<tr>
-							<td><code>stage-bg-color</code></td>
-							<td><code class="value">color(greyscale, grey-3)</code></td>
+							<td><code>stage-background</code></td>
+							<td><code class="value">color('greyscale', 'grey-3')</code></td>
 							<td>The background color of the carousel stage when using the <code>stageBg</code> modifier.</td>
 						</tr>
                     </tbody>
