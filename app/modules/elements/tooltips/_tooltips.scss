@@ -143,8 +143,8 @@ https://github.com/esr360/K-Tooltips
 				}	
 			}
 			
-		} // sub-component(content)
+		} // component('content')
 	
-	} // component(tooltip)
+	} // module
 	
 } // @mixin tooltips

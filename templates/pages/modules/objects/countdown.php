@@ -1,0 +1,119 @@
+<?php 
+	include ('../../../app.php');
+	// page config
+	$title = 'Breadcrumb';
+	$tagLine = 'app/modules/objects/breadcrumb';
+?>
+
+<!DOCTYPE html>
+<html class="no-js">
+
+<?php include (ROOT.'/includes/head.php'); ?>
+
+<body>
+
+    <!-- Site Canvas -->
+    <div id="site-content">
+		
+		<?php 
+        
+            topbar();
+
+            appHeader(array(
+                'modifiers' => 'bar-absolute-dark-sticky'
+            ));
+
+            billboard(array(
+                'title'    => $title,
+                'tag-line' => $tagLine
+            ));
+            
+        ?>
+		
+		<section class="section-primary">
+			
+			<div class="container-small">
+				
+				<h2 class="heading-light-size-5">Files</h2>
+				
+				<ul class="list-tags">
+					<li class="plain"><span>_breadcrumb.scss</span></li>
+					<li class="plain"><span>README.md</span></li>	
+				</ul>
+                
+				<p class="alert-bar-info"><strong>Github Page</strong> (customers only):  <a href="https://github.com/esr360/Kayzen/tree/master/app/modules/objects/breadcrumb" target="blank">https://github.com/esr360/Kayzen/tree/master/app/modules/objects/breadcrumb</a></p>
+				
+				<h2 class="heading-light-size-5">Module Overview</h2>
+                
+                <p>The billboard is the top section of the theme which contains the page title, background image and other information about the current page. This may also be known as the 'hero' section.</p>
+                
+                <div class="well">
+                    <ul class="list-reset">
+                        <li><b>Name:</b> <code>breadcrumb</code></li>
+                        <li><b>Modifiers:</b> <code>full-screen</code>, <code>videoBg</code></li>
+                        <li><b>Components:</b> <code>wrapper</code>, <code>videoBg</code></li>
+                    </ul>
+                </div>
+                
+				<h2 class="heading-light-size-5">Examples</h2>
+							
+<pre data-enlighter-language="html" class="EnlighterJSRAW">
+&lt;div class="billboard">
+    &lt;div class="billboard_wrapper container">
+        ...
+    &lt;/div>
+&lt;/div>
+</pre>
+				
+				<h2 class="heading-light-size-5">Customizing</h2>
+				
+				<p>The breadcrumb can be customized using the following options:</p>
+				
+				<p class="alert-bar-help">Read the <a href="configuration.html">Configuration</a> page to learn more about a module's configuration.</p>
+				
+				<table class="table-style-1-small">
+					<thead>
+						<tr>
+							<th>Property Name</th>
+							<th>Default Value</th>
+							<th>Description</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td><code>full-screen</code></td>
+							<td><code class="value">false</code></td>
+							<td>Set whether the billboard should be full-screen without any modifiers.</td>
+						</tr>
+                    </tbody>
+                </table>
+				
+				<p>To change one of the above values, pass your new value(s) to the <code>billboard()</code> mixin in your theme file (e.g. app/themes/Kayzen/_kayzen.scss).</p>
+						
+<pre data-enlighter-language="css" class="EnlighterJSRAW">
+@include breadcrumb((
+    icon-color      : rgba(white, 0.6),
+    title-bg        : color('brand', 'primary')
+));
+</pre>
+
+			</div><!-- container-small -->
+			
+		</section>
+
+		<?php 
+
+            appFooter();
+            
+        ?>
+
+    </div><!-- Site Canvas -->
+
+    <?php include (ROOT.'/includes/ui-enhancements.php'); ?>
+
+    <?php include (ROOT.'/includes/scripts.php'); ?>
+		
+    <?php include (ROOT.'/includes/syntax-highlighter.php'); ?>
+
+</body>
+</html>

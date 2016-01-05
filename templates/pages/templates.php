@@ -83,7 +83,7 @@
                 </header>
 				
                 <div class="">
-                    <ul class="list-arrow row-flow">
+                    <ul class="list-arrow-blocks row-flow">
                         <li class="span-4"><a href="/templates/pages/homepages/homepage-1.php">Homepage 1</a></li>
                         <li class="span-4"><a href="/templates/pages/homepages/homepage-2.php">Homepage 2</a></li>
                         <li class="span-4"><a href="/templates/pages/homepages/homepage-3.php">Homepage 3</a></li>
@@ -102,7 +102,7 @@
                 <h3 class="heading-uppercase-size-2">Classic</h3>
     
                 <div class="">
-                    <ul class="list-arrow row-flow">
+                    <ul class="list-arrow-blocks row-flow">
                         <li class="span-4"><a href="/templates/pages/portfolio/classic/2-cols-carousel.php">2 Columns Carousel</a></li>
                         <li class="span-4"><a href="/templates/pages/portfolio/classic/3-cols-carousel.php">3 Columns Carousel</a></li>
                         <li class="span-4"><a href="/templates/pages/portfolio/classic/3-cols-filterable.php">3 Columns Filterable</a></li>
@@ -114,7 +114,7 @@
                 <h3 class="heading-uppercase-size-2">Masonry</h3>
     
                 <div class="">
-                    <ul class="list-arrow row-flow">
+                    <ul class="list-arrow-blocks row-flow">
                         <li class="span-4"><a href="/templates/pages/portfolio/masonry/3-cols-filterable.php">3 Columns Filterable</a></li>
                         <li class="span-4"><a href="/templates/pages/portfolio/masonry/3-cols-infinite-scroll.php">3 Columns Infinite Scroll</a></li>
                     </ul>
@@ -123,7 +123,7 @@
                 <h3 class="heading-uppercase-size-2">Matrix</h3>
     
                 <div class="">
-                    <ul class="list-arrow row-flow">
+                    <ul class="list-arrow-blocks row-flow">
                         <li class="span-4"><a href="/templates/pages/portfolio/matrix/2-cols-carousel.php">2 Columns Carousel</a></li>
                         <li class="span-4"><a href="/templates/pages/portfolio/matrix/3-cols-carousel.php">3 Columns Carousel</a></li>
                         <li class="span-4"><a href="/templates/pages/portfolio/matrix/3-cols-filterable.php">3 Columns Filterable</a></li>
@@ -138,7 +138,7 @@
                 <h3 class="heading-uppercase-size-2">Article</h3>
     
                 <div class="">
-                    <ul class="list-arrow row-flow">
+                    <ul class="list-arrow-blocks row-flow">
                         <li class="span-4"><a href="/templates/pages/portfolio/article/full-width.php">Full Width</a></li>
                         <li class="span-4"><a href="/templates/pages/portfolio/article/full-width-infinite-scroll.php">Full Width Infinite Scroll</a></li>
                         <li class="span-4"><a href="/templates/pages/portfolio/article/full-width-sidebar.php">Full Width Sidebar</a></li>
@@ -148,7 +148,7 @@
                 <h3 class="heading-uppercase-size-2">Single</h3>
     
                 <div class="">
-                    <ul class="list-arrow row-flow">
+                    <ul class="list-arrow-blocks row-flow">
                         <li class="span-4"><a href="/templates/pages/portfolio/single.php">Single</a></li>
                         <li class="span-4"><a href="/templates/pages/portfolio/single-sidebar.php">Single Sidebar</a></li>
                         <li class="span-4"><a href="/templates/pages/portfolio/single-video.php">Single Video</a></li>
@@ -165,7 +165,7 @@
                 <h3 class="heading-uppercase-size-2">Classic</h3>
                 
                 <div class="">
-                    <ul class="list-arrow row-flow">
+                    <ul class="list-arrow-blocks row-flow">
                         <li class="span-4"><a href="/templates/pages/blog/classic/2-cols.php">2 Columns</a></li>
                         <li class="span-4"><a href="/templates/pages/blog/classic/3-cols.php">3 Columns</a></li>
                         <li class="span-4"><a href="/templates/pages/blog/classic/3-cols-filterable.php">3 Columns Filterable</a></li>
@@ -179,7 +179,7 @@
                 <h3 class="heading-uppercase-size-2">Masonry</h3>
                 
                 <div class="">
-                    <ul class="list-arrow row-flow">
+                    <ul class="list-arrow-blocks row-flow">
                         <li class="span-4"><a href="/templates/pages/blog/masonry/3-cols.php">3 Columns</a></li>
                         <li class="span-4"><a href="/templates/pages/blog/masonry/3-cols-filterable.php">3 Columns Filterable</a></li>
                     </ul>
@@ -188,7 +188,7 @@
                 <h3 class="heading-uppercase-size-2">Single</h3>
                 
                 <div class="">
-                    <ul class="list-arrow row-flow">
+                    <ul class="list-arrow-blocks row-flow">
                         <li class="span-4"><a href="/templates/pages/blog/single.php">Single</a></li>
                         <li class="span-4"><a href="/templates/pages/blog/single-sidebar.php">Single Sidebar</a></li>
                     </ul>
@@ -201,7 +201,7 @@
                 </header>
                 
                 <div class="">
-                    <ul class="list-arrow row-flow">
+                    <ul class="list-arrow-blocks row-flow">
                         <li class="span-4"><a href="/templates/pages/further/about-us.php">About Us</a></li>
                         <li class="span-4"><a href="/templates/pages/further/abiut-us-2.php">About Us 2</a></li>
                         <li class="span-4"><a href="/templates/pages/further/contact-us.php">Contact Us</a></li>

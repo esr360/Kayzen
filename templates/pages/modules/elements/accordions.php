@@ -227,7 +227,7 @@
 				
 				<h2 class="heading-light-size-5">Customizing</h2>
 				
-				<p>The accordion customized can be customized using the following options:</p>
+				<p>The accordion can be customized using the following options:</p>
 				
 				<p class="alert-bar-help">Read the <a href="configuration.html">Configuration</a> page to learn more about a module's configuration.</p>
 				
@@ -338,9 +338,9 @@
 <pre data-enlighter-language="css" class="EnlighterJSRAW">
 @include accordions((
     icon-color      : rgba(white, 0.6),
-    title-bg        : color(brand, primary),
+    title-bg        : color('brand', 'primary'),
     title-color     : white,
-    title-active-bg : darken(color(brand, primary), 10%)
+    title-active-bg : darken(color('brand', 'primary'), 10%)
 ));
 </pre>				
 

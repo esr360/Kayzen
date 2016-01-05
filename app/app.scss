@@ -100,8 +100,8 @@ $theme: Kayzen;
 @import "themes/default/default";
 @import "themes/Kayzen/kayzen";
 
-// Output all configuration data to JSON only if setting exists 
-// and setting is "true"
+// Output all configuration data to JSON only if setting exists and 
+// setting is "true"
 @if variable-exists(to-JSON) and $to-JSON {
 	@include json-encode($config-JSON);
 }

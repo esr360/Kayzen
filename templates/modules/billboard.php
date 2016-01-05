@@ -21,7 +21,7 @@
     ?>
     
     <?php if ($options['type'] == 'homepage') { ?>
-        <section class="billboard-full-screen" data-stellar-background-ratio="0.5">
+        <section class="billboard-overlay-full-screen" data-stellar-background-ratio="0.5">
             <div class="billboard_wrapper container-small">
                 <header class="heading_group">
                     <h2 class="heading-uppercase-light-strikethrough-spaced-size-5"><span><?php echo $options['headline'] ?></span></h2>
@@ -47,7 +47,7 @@
             </div>
         </section>
     <?php } else if ($options['type'] == 'default') { ?>
-        <section class="billboard<?php echo '-'.$options['modifiers'] ?>" data-stellar-background-ratio="0.5">
+        <section class="billboard-overlay<?php echo '-'.$options['modifiers'] ?>" data-stellar-background-ratio="0.5">
             <div class="billboard_wrapper container">
                 <header class="heading_group<?php if($options['countdown']) echo '-small' ?>">
                     <h2 class="heading-uppercase-light-strikethrough-spaced-size-4"><span><?php echo $options['headline'] ?></span></h2>

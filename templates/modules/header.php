@@ -30,7 +30,7 @@
                     <a href="/"><img src="<?php echo appDir ?>/images/logo-white.png" alt="logo" /></a>
                 </div>
     
-                <?php include ('navigation.php'); ?>
+                <?php include (ROOT.'/modules/navigation.php'); ?>
     
             </div><!-- Header Wrapper -->
             

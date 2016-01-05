@@ -11,8 +11,8 @@
 //-----------------------------------------------------------------
 
 	@include palettes((
-		brand: (
-			primary : #9B58B5
+		'brand': (
+			'primary' : #9B58B5
 		)
 	));
 	
@@ -72,7 +72,7 @@
 	@include logo;
 	
 	@include navigation((
-		link-color : color(greyscale, white)
+		'link-color' : color('greyscale', 'white')
 	));
 	
 	@include mega-menu;
@@ -92,9 +92,7 @@
 	@include sections;
 	
 	@include billboard((
-		overlay       : true,
-		bg-image      : "#{$asset-path}/images/billboard-1.jpg",
-		wrapper-width : breakpoint(break-3)
+		'bg-image'      : "#{$asset-path}/images/billboard-1.jpg"
 	));
 
 } // Kayzen
