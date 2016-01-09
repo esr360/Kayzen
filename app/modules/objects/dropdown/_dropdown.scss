@@ -10,32 +10,28 @@
 
 	$dropdown: config((
 		
-		name                  : dropdown,
-		
-	// Options
-	//-------------------------------------------------------------
-	
-		text-align            : left,
-		width                 : 175px,
-		top-position          : 0,
-		dropdown-icon         : "\f105",
-		low-level-icon        : "\f105",
-		font-size             : font-size(size-2, true),
-		link-color            : color(greyscale, grey-4),
-		link-bg-color         : color(greyscale, grey-1),
-		link-padding          : 0.6rem,
-		link-hover-color      : color(greyscale, white),
-		link-hover-bg-color   : color(brand, primary),
-		link-active-color     : navigation(a-has-child-color),
-		link-active-bg-color  : navigation(a-has-child-color)
+		'name'                 : 'dropdown',
+		'text-align'           : left,
+		'width'                : 175px,
+		'top-position'         : 0,
+		'dropdown-icon'        : "\f105",
+		'low-level-icon'       : "\f105",
+		'font-size'            : font-size('size-2', true),
+		'link-color'           : color('greyscale', 'grey-4'),
+		'link-bg-color'        : color('greyscale', 'grey-1'),
+		'link-padding'         : 0.6rem,
+		'link-hover-color'     : color('greyscale', 'white'),
+		'link-hover-bg-color'  : color('brand', 'primary'),
+		'link-active-color'    : option($navigation, 'a-has-child-color'),
+		'link-active-bg-color' : option($navigation, 'a-has-child-color')
 		
 	), $custom) !global;
 	
 	//-------------------------------------------------------------
-	// Component
+	// Module
 	//-------------------------------------------------------------
-		
-	[class*="#{option($navigation, name)}"] {
+	
+    @include module(#{option($navigation, 'name')}) {
 
 		// parent list
 		ul {
@@ -55,13 +51,13 @@
 			ul {
 			
 				@extend %list-reset;
-				min-width: option($config, width);
-				text-align: option($config, text-align);
-				transition: base(transition);
-				font-size: option($config, font-size);
+				min-width: this('width');
+				text-align: this('text-align');
+				transition: base('transition');
+				font-size: this('font-size');
 				position: absolute;
 				z-index: 5;
-				// hide and remove pointer events until required
+				// hide until required
 				opacity: 0;
 				visibility: hidden;
 			
@@ -70,18 +66,18 @@
 					position: relative;
 			
 					a {
-						background: option($config, link-bg-color);
-						color: option($config, link-color);
-						padding: option($config, link-padding);
-						border-top: 1px solid color(greyscale, grey-2); 
+						background: this('link-bg-color');
+						color: this('link-color');
+						padding: this('link-padding');
+						border-top: 1px solid color('greyscale', 'grey-2'); 
 						&:before, 
 						&:after {
 							font-family: FontAwesome;		
 						}
 						&:not(:only-child) {
-							padding-right: option($config, link-padding) + 1rem;
+							padding-right: this('link-padding') + 1rem;
 							&:after {
-								content: option($config, dropdown-icon);
+								content: this('dropdown-icon');
 								right: 0.75em;
 								@include vertical-center(absolute);
 							}
@@ -104,21 +100,21 @@
 			
 					&:hover {
 						> a {
-							color: option($config, link-hover-color);
-							background: option($config, link-hover-bg-color);
-							border-color: color(brand, primary);
+							color: this('link-hover-color');
+							background: this('link-hover-bg-color');
+							border-color: color('brand', 'primary');
 						}
 						+ li {
 							> a {
-								border-top-color: color(greyscale, grey-1);
+								border-top-color: color('greyscale', 'grey-1');
 							}
 						}
 					}
 			
 					&.active {
 						> a {
-							color: option($config, link-active-color);
-							background: option($config, link-active-bg-color);
+							color: this('link-active-color');
+							background: this('link-active-bg-color');
 						}
 					}
 			
@@ -127,7 +123,7 @@
 						top: 0;
 						li {
 							a {
-								border-left: 1px solid color(greyscale, grey-2);
+								border-left: 1px solid color('greyscale', 'grey-2');
 							}
 						}
 					}
@@ -138,11 +134,11 @@
 			
 			// first level only
 			> ul {
-				padding-top: option($config, top-position);
+				padding-top: this('top-position');
 			}
 		
 		} // ul (parent)
 		
-	} // component
+	} // module
 	
 } // @mixin dropdown

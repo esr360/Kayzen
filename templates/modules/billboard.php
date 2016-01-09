@@ -65,14 +65,14 @@
                 </header>
                 <?php if ($options['countdown']) { ?>
                     <div class="countdown">
-                        <div class="countdown_days" data-timeUnit="">00</div>
+                        <div class="countdown_days" data-timeUnit="Days">00</div>
                         <div class="countdown_hours" data-timeUnit="Hours">00</div>
                         <div class="countdown_minutes" data-timeUnit="Minutes">00</div>
                         <div class="countdown_seconds" data-timeUnit="Seconds">00</div>
                     </div>
                     <script>
                         $(document).ready(function() {
-                            $(".countdown").KayzenCountdown({
+                            $(".countdown").countdown({
                                 date : '1 February 2016 09:00:00',
                                 format: 'on'
                             });

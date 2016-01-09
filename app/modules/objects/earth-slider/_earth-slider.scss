@@ -9,7 +9,11 @@
 	//-------------------------------------------------------------
 
 	$earth-slider: config((
-		name            : earth-slider
+		'name'                : 'earth-slider',
+        'globe-spin-duration' : 35s,
+        'pin-active-color'    : color('brand', 'primary'),
+        'respond-at'          : breakpoint('break-3'),
+        'pin-size'            : 55px
 	), $custom);
 	
 	//-------------------------------------------------------------
@@ -17,10 +21,8 @@
 	//-------------------------------------------------------------
 	
 	@include module {
-        
 		position: relative;
 		overflow: hidden;
-        
 	}
     
     @include component('section') {
@@ -34,10 +36,6 @@
             position: relative;
             transform: scale(1);
         }
-    }
-    
-    @include component('wrapper') {
-        
     }
 	
 	.earth-wrapper {
@@ -63,10 +61,10 @@
 		@include vertical-center(absolute);
 		&.active {
 			.pin {
-				background: color(brand, primary);
+				background: color('brand', 'primary');
 			}
 		}
-		@media (min-width: breakpoint(break-3)) { 
+		@media (min-width: breakpoint('break-3')) { 
 			transform-origin: center;
 			width: 100%;
 		}
@@ -76,9 +74,9 @@
 		width: 55px;
 		height: 55px;
 		border-radius: 50% 50% 50% 0;
-		background: color(greyscale, grey-4);
+		background: color('greyscale', 'grey-4');
 		cursor: pointer;
-		transition: 0.4s;
+		transition: base('transition');
 		position: relative;
 		&:after {
 			content: '';
@@ -93,7 +91,7 @@
 			bottom: 0;
 			border-radius: 50%;
 		}
-		@media (min-width: breakpoint(break-3)) { 
+		@media (min-width: breakpoint('break-3')) { 
 			transform: translateX(-30%) rotate(-135deg);
 		}
 	}

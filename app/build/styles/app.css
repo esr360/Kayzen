@@ -5001,7 +5001,7 @@ pre:last-child, hr:last-child,
   margin: auto;
 }
 
-[class*="list-"][class*="-reset"], [class*="list-"][class*="-arrow"], [class*="list-"][class*="-tags"], .price-chart ul, [class*="price-chart-"] ul, [class*="tabs_nav"], [class*="top-bar_nav"] ul, .breadcrumb ul, .side-nav nav ul, .flyout-nav nav ul, [class*="flyout-nav-"] nav ul, [class*="app-header-"][class*="-side"] nav ul, [class*="side-nav-"] nav ul, [class*="footer_nav"] ul, .navigation > ul, [class*="navigation-"] > ul, [class*="navigation"] ul ul, .tweets, .tweet-actions {
+[class*="list-"][class*="-reset"], [class*="list-"][class*="-arrow"], [class*="list-"][class*="-tags"], .price-chart ul, [class*="price-chart-"] ul, [class*="tabs_nav"], [class*="top-bar_nav"] ul, .breadcrumb ul, .side-nav nav ul, .flyout-nav nav ul, [class*="flyout-nav-"] nav ul, [class*="app-header-"][class*="-side"] nav ul, [class*="side-nav-"] nav ul, [class*="footer_nav"] ul, .navigation > ul, [class*="navigation-"] > ul, .navigation ul ul, [class*="navigation-"] ul ul, .tweets, .tweet-actions {
   padding-left: 0;
   list-style: none;
 }
@@ -8024,6 +8024,7 @@ progress::-moz-progress-bar {
   content: "\f105";
   font-family: FontAwesome;
   margin-left: 0.4em;
+  color: #6f777b;
 }
 
 .side-nav, .flyout-nav, [class*="flyout-nav-"], [class*="app-header-"][class*="-side"], [class*="side-nav-"], .flyout-nav, [class*="flyout-nav-"], [class*="app-header-"][class*="-side"] {
@@ -8090,19 +8091,22 @@ progress::-moz-progress-bar {
 }
 
 [class*="countdown_"] {
-  display: inline-block;
   font-size: 3em;
-  margin-left: 1rem;
+  color: #ffffff;
   font-weight: lighter;
+  display: inline-block;
+  margin-left: 1rem;
   position: relative;
 }
 [class*="countdown_"]:first-child {
   margin-left: 0;
 }
 [class*="countdown_"]:after {
-  content: attr(data-timeUnit);
   font-size: 0.7rem;
+  color: inherit;
+  font-weight: inherit;
   text-transform: uppercase;
+  content: attr(data-timeUnit);
   position: absolute;
   left: 0;
   right: 0;
@@ -8588,12 +8592,12 @@ progress::-moz-progress-bar {
   padding: 0;
 }
 
-[class*="navigation"] ul li:hover > ul {
+.navigation ul li:hover > ul, [class*="navigation-"] ul li:hover > ul {
   opacity: 1;
   visibility: visible;
   z-index: 6;
 }
-[class*="navigation"] ul ul {
+.navigation ul ul, [class*="navigation-"] ul ul {
   min-width: 175px;
   text-align: left;
   transition: 0.4s;
@@ -8603,22 +8607,22 @@ progress::-moz-progress-bar {
   opacity: 0;
   visibility: hidden;
 }
-[class*="navigation"] ul ul li {
+.navigation ul ul li, [class*="navigation-"] ul ul li {
   position: relative;
 }
-[class*="navigation"] ul ul li a {
+.navigation ul ul li a, [class*="navigation-"] ul ul li a {
   background: #f8f8f8;
   color: #6f777b;
   padding: 0.6rem;
   border-top: 1px solid #dee0e2;
 }
-[class*="navigation"] ul ul li a:before, [class*="navigation"] ul ul li a:after {
+.navigation ul ul li a:before, .navigation ul ul li a:after, [class*="navigation-"] ul ul li a:before, [class*="navigation-"] ul ul li a:after {
   font-family: FontAwesome;
 }
-[class*="navigation"] ul ul li a:not(:only-child) {
+.navigation ul ul li a:not(:only-child), [class*="navigation-"] ul ul li a:not(:only-child) {
   padding-right: 1.6rem;
 }
-[class*="navigation"] ul ul li a:not(:only-child):after {
+.navigation ul ul li a:not(:only-child):after, [class*="navigation-"] ul ul li a:not(:only-child):after {
   content: "";
   right: 0.75em;
   position: absolute;
@@ -8627,28 +8631,25 @@ progress::-moz-progress-bar {
       -ms-transform: translateY(-50%);
           transform: translateY(-50%);
 }
-[class*="navigation"] ul ul li:first-child > a {
+.navigation ul ul li:first-child > a, [class*="navigation-"] ul ul li:first-child > a {
   border-top-color: transparent;
 }
-[class*="navigation"] ul ul li:hover > a {
+.navigation ul ul li:hover > a, [class*="navigation-"] ul ul li:hover > a {
+  color: #ffffff;
   background: #9B58B5;
   border-color: #9B58B5;
 }
-[class*="navigation"] ul ul li:hover + li > a {
+.navigation ul ul li:hover + li > a, [class*="navigation-"] ul ul li:hover + li > a {
   border-top-color: #f8f8f8;
 }
-[class*="navigation"] ul ul li.active > a {
-  color: navigation(a-has-child-color);
-  background: navigation(a-has-child-color);
-}
-[class*="navigation"] ul ul li ul {
+.navigation ul ul li ul, [class*="navigation-"] ul ul li ul {
   left: 100%;
   top: 0;
 }
-[class*="navigation"] ul ul li ul li a {
+.navigation ul ul li ul li a, [class*="navigation-"] ul ul li ul li a {
   border-left: 1px solid #dee0e2;
 }
-[class*="navigation"] ul > ul {
+.navigation ul > ul, [class*="navigation-"] ul > ul {
   padding-top: 0;
 }
 

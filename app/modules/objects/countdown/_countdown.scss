@@ -4,43 +4,57 @@
 
 @mixin countdown($custom: ()) {
 
-	//-------------------------------------------------------------
-	// Config
-	//-------------------------------------------------------------
+    //-------------------------------------------------------------
+    // Config
+    //-------------------------------------------------------------
 
-	$dropdown: config((
-		
-		'name' : 'countdown',
-		
-	), $custom);
-	
-	//-------------------------------------------------------------
-	// Component
-	//-------------------------------------------------------------
-		
+    $dropdown: config((
+        
+        'name'           : 'countdown',
+        'number-size'    : font-size('size-8'),
+        'number-color'   : color('greyscale', 'white'),
+        'number-weight'  : lighter,
+        'unit-size'      : 0.7rem,
+        'unit-color'     : inherit,
+        'unit-weight'    : inherit,
+        'unit-transform' : uppercase 
+        
+    ), $custom);
+
+    //-------------------------------------------------------------
+    // Component
+    //-------------------------------------------------------------
+        
     @include module {
         
         @include component {
+            
+            font-size: this('number-size');
+            color: this('number-color');
+            font-weight: this('number-weight');
+            
             display: inline-block;
-            font-size: font-size('size-8');
-            color: color(greyscale, white);
             margin-left: 1rem;
-            font-weight: lighter;
             position: relative;
+            
             &:first-child {
                 margin-left: 0;
             }
+            
             &:after {
+                font-size: this('unit-size');
+                color: this('unit-color');
+                font-weight: this('unit-weight');
+                text-transform: this('unit-transform');
                 content: attr(data-timeUnit);
-                font-size: 0.7rem;
-                text-transform: uppercase;
                 position: absolute;
                 left: 0;
                 right: 0;
                 bottom: -1em;
             }
+            
         }
-		
-	} // component
-	
+        
+    } // component
+
 } // @mixin dropdown

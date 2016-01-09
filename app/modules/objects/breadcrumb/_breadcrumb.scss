@@ -12,6 +12,7 @@
         'name'         : 'breadcrumb',
         'font-size'    : 0.9em,
         'divider-icon' : "\f105",
+        'icon-color'   : base('text-color')
     ), $custom);
 
     //-------------------------------------------------------------
@@ -35,6 +36,7 @@
                     content: "\f105";
                     font-family: FontAwesome;
                     margin-left: 0.4em;
+                    color: base('text-color');
                 }
             }
         }

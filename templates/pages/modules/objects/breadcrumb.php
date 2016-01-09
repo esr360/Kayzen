@@ -89,21 +89,46 @@
 					</thead>
 					<tbody>
 						<tr>
-							<td><code>full-screen</code></td>
-							<td><code class="value">false</code></td>
-							<td>Set whether the billboard should be full-screen without any modifiers.</td>
+							<td><code>font-size</code></td>
+							<td><code class="value">0.9em</code></td>
+							<td>The breadcrumb font size.</td>
+						</tr>
+						<tr>
+							<td><code>divider-icon</code></td>
+							<td><code class="value">"\f105"</code></td>
+							<td>The code for any FontAwesome icon to act as the crumb separator.</td>
+						</tr>
+						<tr>
+							<td><code>icon-color</code></td>
+							<td><code class="value">base('text-color')</code></td>
+							<td>The color of the divider icon.</td>
 						</tr>
                     </tbody>
                 </table>
 				
-				<p>To change one of the above values, pass your new value(s) to the <code>billboard()</code> mixin in your theme file (e.g. app/themes/Kayzen/_kayzen.scss).</p>
+				<p>To change one of the above values, pass your new value(s) to the <code>breadcrumb()</code> mixin in your theme file (e.g. app/themes/Kayzen/_kayzen.scss).</p>
 						
 <pre data-enlighter-language="css" class="EnlighterJSRAW">
 @include breadcrumb((
-    icon-color      : rgba(white, 0.6),
-    title-bg        : color('brand', 'primary')
+    'divider-icon' : "\f138",
+    'icon-color'   : rgba(black, 0.25)
 ));
 </pre>
+                
+                <style>
+                    #breadcrumb-demo li:not(:last-child):after {
+                        content: "\f138";
+                        color: rgba(0,0,0,0.25);
+                    }
+                </style>
+                <div class="well object">
+                    <nav id="breadcrumb-demo" class="breadcrumb">
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="further-page.html">Further Page</a></li>
+                        </ul>
+                    </nav>
+                </div>
 
 			</div><!-- container-small -->
 			

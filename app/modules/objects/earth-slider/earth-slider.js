@@ -1,6 +1,6 @@
 /**
  *
- * Kayzen.earthSlider
+ * earth-slider.js
  * @author @esr360
  *
  */

@@ -1,3 +1,33 @@
+/**
+ * 
+ * Kayzen.Tabs
+ * @version 1.0.0
+ * @author @esr360
+ * @license The MIT License (MIT)
+ * 
+ */
+
+(function ($) {
+ 
+    $.fn.flyoutNav = function(custom) {
+        
+        // Options
+        var options = $.extend({
+            
+            wrapper   : '#flyout'
+            
+        }, custom);
+        
+        // Run the code on each occurance of the element
+        return this.each(function() {
+
+            
+        }); // this.each
+ 
+    }; // flyoutNav()
+ 
+}(jQuery));
+
 //=================================================================
 // Flyout Navigation
 //=================================================================
@@ -80,6 +110,7 @@ $(window).load(function(){
     // toggle the flyout nav
     $('#flyout-trigger').click(function() {
         toggleFlyout();
+        Kayzen.eventEmitter.emit('flyout:active');
     });
 
     $('#flyout-nav a, .site-overlay').click(function() {

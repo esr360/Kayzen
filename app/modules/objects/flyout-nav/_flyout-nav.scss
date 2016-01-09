@@ -11,18 +11,18 @@
 	//-------------------------------------------------------------
 
 	$flyout-nav: config((
-		name                : flyout-nav,
-		output-JSON         : true,
+		'name'                : 'flyout-nav',
+		'output-JSON'         : true,
 		// Options
-		width               : 300px,
-		font-size           : font-size(base),
-		box-shadow          : 1px 0 25px 0px rgba(0, 0, 0, 0.4),
+		'width'               : 300px,
+		'font-size'           : font-size('base'),
+		'box-shadow'          : 1px 0 25px 0px rgba(black, 0.4),
 		// Settings
-		collapsible         : (
-			default         : true,
-			open-by-default : true
+		'collapsible'         : (
+			'default'         : true,
+			'open-by-default' : true
 		),
-		show-y-scrollbar    : false
+		'show-y-scrollbar'    : false
 	), $custom);
 	
 	//-------------------------------------------------------------
@@ -34,16 +34,16 @@
 		// Side Navigation
 		@extend #{$side-nav-selector};
 		
-		font-size: option($config, font-size);
+		font-size: option($config, 'font-size');
 	    left: -#{option($config, width)};
-	    box-shadow: option($config, box-shadow);
+	    box-shadow: option($config, 'box-shadow');
 		
 		// Reveal the flyout navigation
 	    .flyout-active & {
 	    	left: 0;
 	    }
 		
-		@include option(show-y-scrollbar) {
+		@include option('show-y-scrollbar') {
 			> nav {
 				overflow-y: scroll;
 			}

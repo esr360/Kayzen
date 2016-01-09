@@ -29,7 +29,7 @@
 		z-index: 14;
 	    cursor: pointer;
 		.fa {
-			transition: base(transition);
+			transition: base('transition');
 			transform-origin: 50% 0;
 		}
 		.nav-close {

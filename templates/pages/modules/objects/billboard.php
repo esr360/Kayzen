@@ -190,8 +190,8 @@
 						
 <pre data-enlighter-language="css" class="EnlighterJSRAW">
 @include billboard((
-    icon-color      : rgba(white, 0.6),
-    title-bg        : color('brand', 'primary')
+    'icon-color' : rgba(white, 0.6),
+    'title-bg'   : color('brand', 'primary')
 ));
 </pre>
 

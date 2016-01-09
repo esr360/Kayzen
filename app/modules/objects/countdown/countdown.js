@@ -1,14 +1,14 @@
 /**
  *
- * Kayzen.countdown
- * @author @esr360, @mrwigster
- * @description Countdown to a specific date and time
+ * countdown.js
+ * @author: @esr360, @mrwigster
+ * @description: Countdown to a specific date and time
  *
  */
 
 (function (e) {
  
-    $.fn.KayzenCountdown = function(custom) {
+    $.fn.countdown = function(custom) {
         
         // Options
         var options = $.extend({
