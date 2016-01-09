@@ -9,7 +9,7 @@
 	//-------------------------------------------------------------
 
 	$site-overlay: config((
-		name            : site-overlay
+		'name'            : 'site-overlay'
 	), $custom);
 	
 	//-------------------------------------------------------------
@@ -25,16 +25,16 @@
 	    left: 0;
 	    cursor: pointer;
 		z-index: 6;
-	    background: rgba(0,0,0,0.4);
+	    background: rgba(black, 0.4);
 	    transform: translateZ(0);
-	    transition: base(transition);
+	    transition: base('transition');
 	    visibility: hidden;
 	    opacity: 0;
-		
-	    &[class*="visible"] {
+        
+        @include modifier('visible') {
 	        visibility: visible;
 	        opacity: 1;
-	    }
+        }
 		
 	} // component()
 		

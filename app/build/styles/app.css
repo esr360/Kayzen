@@ -8878,7 +8878,7 @@ progress::-moz-progress-bar {
   visibility: hidden;
   opacity: 0;
 }
-.site-overlay[class*="visible"], [class*="site-overlay-"][class*="visible"] {
+[class*="site-overlay-"][class*="-visible"] {
   visibility: visible;
   opacity: 1;
 }

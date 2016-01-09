@@ -36,19 +36,15 @@ $(document).ready(function() {
 // Smooth Scroll
 //-----------------------------------------------------------------
 
-// set which elements should be exempt from the smooth scroll effect
-var scrollExempt = [
-    ':not([href*="modal"])'
-]
-
-$('a[href*=#]' + scrollExempt).click(function() {
+$('a[href*=#]:not([href*="modal"])').click(function() {
     if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') 
         || location.hostname == this.hostname) {
         var target = $(this.hash);
         target = target.length ? target : $('[name="' + this.hash.slice(1) +'"]');
            if (target.length) {
              $('html,body').animate({
-                 scrollTop: target.offset().top - 80 // <- change this number as desired
+                 // change this number as desired
+                 scrollTop: target.offset().top - 80
             }, 1200);
             return false;
         }
@@ -105,6 +101,12 @@ $(window).bind("load resize", function() {
     });
 
 });
+
+//-----------------------------------------------------------------
+// Flyout Navigation
+//-----------------------------------------------------------------
+
+$('#flyout').flyoutNav();
 
 //-----------------------------------------------------------------
 // Owl Carousel Init
