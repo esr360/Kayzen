@@ -9,7 +9,21 @@
 	//-------------------------------------------------------------
 
 	$footer: config((
-		'name'            : 'footer'
+		'name'                 : 'footer',
+		'output-JSON'          : true,
+        'background'           : color('greyscale', 'grey-6'),
+        'wrapper-padding'      : 4em,
+        'wrapper-font-size'    : 0.9em,
+        'wrapper-background'   : color('greyscale', 'grey-5'),
+        'wrapper-color'        : color('greyscale', 'grey-3'),
+        'wrapper-strong-color' : color('greyscale', 'white'),
+        'logo-height'          : 34px,
+        'title-color'          : color('greyscale', 'white'),
+        'bar-padding'          : 2em 0,
+        'bar-font-size'        : 0.9em,
+        'bar-responsive'       : breakpoint('break-2'),
+        'nav-link-color'       : color('greyscale', 'grey-3'),
+        'nav-link-hover-color' : color('greyscale', 'white')
 	), $custom);
 	
 	//-------------------------------------------------------------
@@ -21,34 +35,34 @@
 	// Core Styles
 	//-------------------------------------------------------------
 	
-		background: color('greyscale', 'grey-6');
+		background: this('background');
 		
 	// Components
 	//-------------------------------------------------------------
 	
 		@include component('wrapper') {
-			padding: 4em;
-			font-size: 0.9em;
-			background: color('greyscale', 'grey-5');
-			color: color('greyscale', 'grey-3');
+			padding: this('wrapper-padding');
+			font-size: this('wrapper-font-size');
+			background: this('wrapper-background');
+			color: this('wrapper-color');
 			@include overwrite('logo') {
 				img {
-					height: 34px;
+					height: this('logo-height');
 				}
 			}
 			b {
-				color: color('greyscale', 'white');
+				color: this('wrapper-strong-color');
 			}
 		}
 		
 		@include component('title') {
-			color: color('greyscale', 'white');
+			color: this('title-color');
 		}
 	
 		@include component('bar') {
-			padding: 2em 0;
-			font-size: 0.9em;
-			@media (min-width: breakpoint('break-2')) {		
+			padding: this('bar-padding');
+			font-size: this('bar-font-size');
+			@media (min-width: this('bar-responsive')) {		
 				display: table;
 				width: 100%;
 				text-align: left;
@@ -72,19 +86,19 @@
 			    }
 		    }
 			a {
-				color: color('greyscale', 'grey-3');
+				color: this('nav-link-color');
 				&:hover {
 					text-decoration: none;
-					color: color('greyscale', 'white');
+					color: this('nav-link-hover-color');
 				}
 			}
-			@media (min-width: breakpoint('break-2')) {
+			@media (min-width: this('bar-responsive')) {
 				text-align: right;
 			}
 		}
 		
 		@include components(('nav', 'copyright')) {
-			@media (min-width: breakpoint('break-2')) {
+			@media (min-width: this('bar-responsive')) {
 				display: table-cell;
 				vertical-align: middle;
 			}
@@ -124,6 +138,6 @@
 			margin-bottom: 1em;
 		}
 	
-	} // component(footer)
+	} // module
 	
 } // @mixin footer

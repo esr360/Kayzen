@@ -9,7 +9,7 @@
 
 (function ($) {
  
-    $.fn.KayenTabs = function(custom) {
+    $.fn.tabs = function(custom) {
         
         // Options
         var options = $.extend({
@@ -62,6 +62,6 @@
             
         }); // this.each
  
-    }; // KayenTabs()
+    }; // tabs()
  
 }(jQuery));

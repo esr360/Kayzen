@@ -5848,14 +5848,6 @@ $(window).bind("load resize", function() {
 });
 
 //-----------------------------------------------------------------
-// Flyout Navigation
-//-----------------------------------------------------------------
-
-$('#flyout').flyoutNav({
-    trigger : '#flyout-trigger, #demo-flyout-trigger'
-});
-
-//-----------------------------------------------------------------
 // Owl Carousel Init
 //-----------------------------------------------------------------
 
@@ -5863,64 +5855,6 @@ $('.carousel').each(function() {
     $(this).addClass('owl-carousel');
     $(this).owlCarousel();
 });
-
-//-----------------------------------------------------------------
-// Accordions
-//-----------------------------------------------------------------
-
-$(accordion);
-
-//-----------------------------------------------------------------
-// Tooltips
-//-----------------------------------------------------------------
-
-$(_tooltip).each(function() {
-    
-    if ($(this).is('[class*="-top"]')) {
-        
-        $(this).tooltip({
-            position : "top"
-        });
-        
-    } else if ($(this).is('[class*="-bottom"]')) {
-        
-        $(this).tooltip({
-            position : "bottom"
-        });
-        
-    } else if ($(this).is('[class*="-left"]')) {
-        
-        $(this).tooltip({
-            position : "left"
-        });
-        
-    } else if ($(this).is('[class*="-right"]')) {
-        
-        $(this).tooltip({
-            position : "right"
-        });
-        
-    } else {
-        
-        $(this).tooltip({
-            position : "top"
-        });
-        
-    }
-    
-});
-
-//-----------------------------------------------------------------
-// Modal Init
-//-----------------------------------------------------------------
-
-$(_modal).KayzenModal();
-
-//-----------------------------------------------------------------
-// Tabs Init
-//-----------------------------------------------------------------
-
-$(_tabs).KayenTabs();
 
 //-----------------------------------------------------------------
 // Data Background Images
@@ -6454,29 +6388,53 @@ Kayzen.logger = (function(document, $, undefined) {
     }; // KayzenSocialShareCount()
  
 }(jQuery));
-//=================================================================
-// Accordions
-//=================================================================
+(function ($) {
 
-function accordion() {
+    /**
+     * 
+     * KAYZEN
+     * @module: 'accordion'
+     * @author: @esr360
+     * 
+     */
 
-	$(_accordion).find('> *.active > *:first-child + *').addClass('active');
+    $.fn.accordion = function(custom) {
+        
+        // Options
+        var options = $.extend({
+            
+            activeClass      : 'active',
+            animationSpeed   : baseTransition,
+            keepOpenSelector : '[class*="-keep-open"]'
+            
+        }, custom);
+        
+        // Run the code on each occurance of the element
+        return this.each(function() {
+            
+            // Add active class to the target content section
+            $(this).find('> *.' + options.activeClass + ' > *:first-child + *').addClass(options.activeClass);
 
-	$(_accordion).find('> * > *:first-child').click(function () {
+            // When an accordion title is clicked
+            $(this).find('> * > *:first-child').click(function () {
 
-		var $parent = $(this).parent();
+                var $parent = $(this).parent();
 
-		if ($(this).parents().eq(1).is(':not([class*="-keep-open"])')) {
-			$parent.siblings().removeClass('active');
-			$parent.siblings().find('> *:first-child + *').slideUp(baseTransition);
-		}
-		
-		$parent.toggleClass('active');
-		$(this).find('~ *').slideToggle(baseTransition);
+                if ($(this).parents().eq(1).is(':not(' + options.keepOpenSelector + ')')) {
+                    $parent.siblings().removeClass(options.activeClass);
+                    $parent.siblings().find('> *:first-child + *').slideUp(options.animationSpeed);
+                }
+                
+                $parent.toggleClass(options.activeClass);
+                $(this).find('~ *').slideToggle(options.animationSpeed);
 
-	});
-  
-} // accordion
+            });
+            
+        }); // this.each
+
+    }; // accordion()
+
+}(jQuery));
 
 (function ($) {
 		
@@ -6524,7 +6482,7 @@ function accordion() {
 	// call function on all modals
 	$.fn.extend({
 		
-		KayzenModal: function(options) {
+		modal: function(options) {
 			
 			var defaults = {  
 				overlay : true,
@@ -6600,7 +6558,7 @@ $("progress.progress-bar").each(function() {
 
 (function ($) {
  
-    $.fn.KayenTabs = function(custom) {
+    $.fn.tabs = function(custom) {
         
         // Options
         var options = $.extend({
@@ -6653,7 +6611,7 @@ $("progress.progress-bar").each(function() {
             
         }); // this.each
  
-    }; // KayenTabs()
+    }; // tabs()
  
 }(jQuery));
 //=================================================================
@@ -7118,77 +7076,105 @@ function e() {
     }; // flyoutNav()
  
 }(jQuery));
-//=================================================================
-// Footer
-//=================================================================
-
-//-----------------------------------------------------------------
-// Footer Twitter Feed
-//-----------------------------------------------------------------
-
-var tweetCount = 8;
-
-$('#footer-twitter-feed')
-    .tweecool({
-        username     : 'esr360', 
-        limit        : tweetCount,
-        show_actions : true,
-        action_reply_icon : '<i class="fa fa-reply"></i>',
-        action_retweet_icon : '<i class="fa fa-retweet"></i>',
-        action_favorite_icon : '<i class="fa fa-star"></i>'
-    })
-    .find('.tweets')
-    .addClass('owl-carousel');
-
-$('body').on('DOMNodeInserted', '#footer-twitter-feed .tweet:nth-child(' + tweetCount + ')', function () {
+(function ($) {
     
-    $(document).ready(function() { 
+    /**
+     * 
+     * KAYZEN
+     * @module: 'footer'
+     * @dependencies: 'twitter-feed', OwlCarousel, TweeCool
+     * @author: @esr360
+     * 
+     */
+ 
+    $.fn.footer = function(custom) {
         
-        var tweetCarousel = $('#footer-twitter-feed .tweets');
+        // Options
+        var options = $.extend({
+            
+            twitterFeedSelector  : '#footer-twitter-feed',
+            twitterFeedCount     : 8,
+            twitterFeedUser      : 'esr360',
+            testimonialsSelector : '#footer-testimonials'
+            
+        }, custom);
         
-        tweetCarousel.owlCarousel({
-            items: 1,
-            dots: false,
-            loop: true,
-            margin: 20
-        });
+        // Footer Twitter Feed
+        function twitterFeed() {
+            
+            // Call the twitter feed plugin
+            $(options.twitterFeedSelector).tweecool({
+                username     : options.twitterFeedUser, 
+                limit        : options.twitterFeedCount,
+                show_actions : true,
+                action_reply_icon : '<i class="fa fa-reply"></i>',
+                action_retweet_icon : '<i class="fa fa-retweet"></i>',
+                action_favorite_icon : '<i class="fa fa-star"></i>'
+            });
+            
+            // Prepare the twitter feed to receive owl-carousel function
+            $(options.twitterFeedSelector).find('.tweets').addClass('owl-carousel');
+            
+            // Get the last loaded tweet
+            var lastTweet = options.twitterFeedSelector + ' .tweet:nth-child(' + options.twitterFeedCount + ')';
+            
+            // When the last tweet item has loaded, call the owl-carousel plugin
+            $('body').on('DOMNodeInserted', lastTweet, function () {
+                    
+                var tweetCarousel = $(options.twitterFeedSelector + ' .tweets');
+                
+                tweetCarousel.owlCarousel({
+                    items: 1,
+                    dots: false,
+                    loop: true,
+                    margin: 20
+                });
+                
+                $('.footer_tweets-nav .tweet-prev').click(function() {
+                    tweetCarousel.trigger('prev.owl.carousel');
+                });
+                
+                $('.footer_tweets-nav .tweet-next').click(function() {
+                    tweetCarousel.trigger('next.owl.carousel');
+                });
+                
+            });
+            
+        } // twitterFeed()
         
-        $('.footer_tweets-nav .tweet-prev').click(function() {
-            tweetCarousel.trigger('prev.owl.carousel');
-        });
+        // Footer Testimonials
+        function testimonials() {
+            
+            var footerTestimonials = $(options.testimonialsSelector);
+            
+            footerTestimonials.owlCarousel({
+                items: 1,
+                dots: false,
+                loop: true,
+                margin: 20
+            });
+                
+            $('.footer_testimonials-nav .tweet-prev').click(function() {
+                footerTestimonials.trigger('prev.owl.carousel');
+            });
+            
+            $('.footer_testimonials-nav .tweet-next').click(function() {
+                footerTestimonials.trigger('next.owl.carousel');
+            });
+            
+        } // testimonials()
         
-        $('.footer_tweets-nav .tweet-next').click(function() {
-            tweetCarousel.trigger('next.owl.carousel');
-        });
-        
-    });
-    
-});
-
-//-----------------------------------------------------------------
-// Footer Testimonials
-//-----------------------------------------------------------------
-
-$(document).ready(function() { 
-        
-    var footerTestimonials = $('#footer-testimonials');
-    
-    footerTestimonials.owlCarousel({
-        items: 1,
-        dots: false,
-        loop: true,
-        margin: 20
-    });
-        
-    $('.footer_testimonials-nav .tweet-prev').click(function() {
-        footerTestimonials.trigger('prev.owl.carousel');
-    });
-    
-    $('.footer_testimonials-nav .tweet-next').click(function() {
-        footerTestimonials.trigger('next.owl.carousel');
-    });
-
-});
+        // Run the code on each occurance of the element
+        return this.each(function() {
+            
+            twitterFeed();
+            testimonials();
+            
+        }); // this.each
+ 
+    }; // footer()
+ 
+}(jQuery));
 //=================================================================
 // Header
 //=================================================================
@@ -7454,10 +7440,62 @@ $('body').on('DOMNodeInserted', '#twitter-feed .tweet:nth-child(' + tweetCount +
     });
     
 });
-//=================================================================
-// Kayzen
-//=================================================================
-
 $(document).ready(function() {
-	
+    
+//-----------------------------------------------------------------
+// Elements
+//-----------------------------------------------------------------
+
+    $(_accordion).accordion();
+
+    $(_modal).modal();
+
+    $(_tabs).tabs();
+
+    $(_tooltip).each(function() {
+        
+        if ($(this).is('[class*="-top"]')) {
+            
+            $(this).tooltip({
+                position : "top"
+            });
+            
+        } else if ($(this).is('[class*="-bottom"]')) {
+            
+            $(this).tooltip({
+                position : "bottom"
+            });
+            
+        } else if ($(this).is('[class*="-left"]')) {
+            
+            $(this).tooltip({
+                position : "left"
+            });
+            
+        } else if ($(this).is('[class*="-right"]')) {
+            
+            $(this).tooltip({
+                position : "right"
+            });
+            
+        } else {
+            
+            $(this).tooltip({
+                position : "top"
+            });
+            
+        }
+        
+    });
+
+//-----------------------------------------------------------------
+// Modules
+//-----------------------------------------------------------------
+
+    $(_footer).footer();
+
+    $('#flyout').flyoutNav({
+        trigger : '#flyout-trigger, #demo-flyout-trigger'
+    });
+
 }); // document.ready

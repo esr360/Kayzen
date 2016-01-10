@@ -1,23 +1,47 @@
-//=================================================================
-// Accordions
-//=================================================================
+(function ($) {
 
-function accordion() {
+    /**
+     * 
+     * KAYZEN
+     * @module: 'accordion'
+     * @author: @esr360
+     * 
+     */
 
-	$(_accordion).find('> *.active > *:first-child + *').addClass('active');
+    $.fn.accordion = function(custom) {
+        
+        // Options
+        var options = $.extend({
+            
+            activeClass      : 'active',
+            animationSpeed   : baseTransition,
+            keepOpenSelector : '[class*="-keep-open"]'
+            
+        }, custom);
+        
+        // Run the code on each occurance of the element
+        return this.each(function() {
+            
+            // Add active class to the target content section
+            $(this).find('> *.' + options.activeClass + ' > *:first-child + *').addClass(options.activeClass);
 
-	$(_accordion).find('> * > *:first-child').click(function () {
+            // When an accordion title is clicked
+            $(this).find('> * > *:first-child').click(function () {
 
-		var $parent = $(this).parent();
+                var $parent = $(this).parent();
 
-		if ($(this).parents().eq(1).is(':not([class*="-keep-open"])')) {
-			$parent.siblings().removeClass('active');
-			$parent.siblings().find('> *:first-child + *').slideUp(baseTransition);
-		}
-		
-		$parent.toggleClass('active');
-		$(this).find('~ *').slideToggle(baseTransition);
+                if ($(this).parents().eq(1).is(':not(' + options.keepOpenSelector + ')')) {
+                    $parent.siblings().removeClass(options.activeClass);
+                    $parent.siblings().find('> *:first-child + *').slideUp(options.animationSpeed);
+                }
+                
+                $parent.toggleClass(options.activeClass);
+                $(this).find('~ *').slideToggle(options.animationSpeed);
 
-	});
-  
-} // accordion
+            });
+            
+        }); // this.each
+
+    }; // accordion()
+
+}(jQuery));
