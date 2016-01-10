@@ -1,12 +1,13 @@
-/**
- *
- * countdown.js
- * @author: @esr360, @mrwigster
- * @description: Countdown to a specific date and time
- *
- */
-
 (function (e) {
+ 
+    /**
+     * 
+     * KAYZEN
+     * @module: 'countdown'
+     * @author: @esr360, @mrwigster
+     * @description: Countdown to a specific date and time
+     * 
+     */
  
     $.fn.countdown = function(custom) {
         

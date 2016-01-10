@@ -6437,7 +6437,7 @@ Kayzen.logger = (function(document, $, undefined) {
 }(jQuery));
 
 (function ($) {
-		
+        
     /**
      * 
      * KAYZEN
@@ -6445,97 +6445,94 @@ Kayzen.logger = (function(document, $, undefined) {
      * @author: @esr360
      * 
      */
- 
-	// create any dynamic modals
-	$('[data-modal]').each(function() {
-		
-		if($(this).attr('data-modal') == '') {
-		
-			var id = $(this).attr('href');
-			var id = 'modal-' + id.substr(id.lastIndexOf("/") + 1).replace(/\.[^/.]+$/, "");
-			var style = '';
-			var content = $(this).html();
-				
-			$(this).attr('href', '#' + id);
-			
-			if ($(this).attr('data-modal-style')) {
-				var style = '-animate-' + $(this).attr('data-modal-style');
-			}
-			
-			if ($(this).attr('data-modal-content')) {
-				var content = $(this).attr('data-modal-content');
-			}
-				
-			$('body').append(
-				'<div class="modal' + style + '" id="' + id + '">' +
+
+    // create any dynamic modals
+    $('[data-modal]').each(function() {
+        
+        if($(this).attr('data-modal') == '') {
+        
+            var id = $(this).attr('href');
+            var id = 'modal-' + id.substr(id.lastIndexOf("/") + 1).replace(/\.[^/.]+$/, "");
+            var style = '';
+            var content = $(this).html();
+                
+            $(this).attr('href', '#' + id);
+            
+            if ($(this).attr('data-modal-style')) {
+                var style = '-animate-' + $(this).attr('data-modal-style');
+            }
+            
+            if ($(this).attr('data-modal-content')) {
+                var content = $(this).attr('data-modal-content');
+            }
+                
+            $('body').append(
+                '<div class="modal' + style + '" id="' + id + '">' +
                     '<div class="modal_close"><i class="fa fa-times"></i></div>' +
                     '<div class="modal_content">' +
-					   content +
+                        content +
                     '</div>' +
-				'</div>'
-			);
-		
-		}
-		
-	});
-	
-	// call function on all modals
-	$.fn.extend({
-		
-		modal: function(options) {
-			
-			var defaults = {  
-				overlay : true,
-				animate : _module['modal']['dafault-animation']
-			};
-			
-			var options = $.extend(defaults, options);	
-			
-			var animateStyle = options.animate;
-			
-			function openModal(el) {
-				// close any pre-exisintg visible modals
-				$(_modal).removeClass('modal-visible');
-				// show the target modal
-				el.addClass('modal-visible');
-				if (options.overlay) {
-					$('#site-overlay').addClass('modal_visible');
-				}
-			}
-			
-			function closeModal(el) {
-				el.removeClass('modal-visible');
-				if (options.overlay) {
-					$('#site-overlay').removeClass('modal_visible');
-				}
-			}
-			
-			return this.each(function() {
-				
-				var el = $(this);
-				var id = el.attr('id');
-				
-				if (el.is('[class*="-animate"]')) {
-					var $animate = true;
-				}
-				
-				if (!$animate) {
-					el.addClass('modal-animate-' + animateStyle);
-				}
-				
-				$('[data-modal="' + id + '"], [href*="' + id + '"]').click(function(e) {
-					openModal(el);
-					e.preventDefault();
-					$('.modal_visible, .modal_close').click(function() {
-						closeModal(el);
-					});
-				});
-				
-			});
-			
-		} // modal
-		
-	});
+                '</div>'
+            );
+        
+        }
+        
+    });
+
+    // Call the function on each modal
+    $.fn.modal = function(custom) {
+        
+        // Options
+        var options = $.extend({
+            
+            overlay : true,
+            animate : _module['modal']['dafault-animation']
+            
+        }, custom);
+            
+        var animateStyle = options.animate;
+        
+        function openModal(el) {
+            // close any pre-exisintg visible modals
+            $(_modal).removeClass('modal-visible');
+            // show the target modal
+            el.addClass('modal-visible');
+            if (options.overlay) {
+                $('#site-overlay').addClass('modal_visible');
+            }
+        }
+        
+        function closeModal(el) {
+            el.removeClass('modal-visible');
+            if (options.overlay) {
+                $('#site-overlay').removeClass('modal_visible');
+            }
+        }
+        
+        return this.each(function() {
+            
+            var el = $(this);
+            var id = el.attr('id');
+            
+            if (el.is('[class*="-animate"]')) {
+                var $animate = true;
+            }
+            
+            if (!$animate) {
+                el.addClass('modal-animate-' + animateStyle);
+            }
+            
+            $('[data-modal="' + id + '"], [href*="' + id + '"]').click(function(e) {
+                openModal(el);
+                e.preventDefault();
+                $('.modal_visible, .modal_close').click(function() {
+                    closeModal(el);
+                });
+            });
+            
+        });
+            
+    } // modal
 
 }(jQuery));
 //-----------------------------------------------------------------
@@ -6547,17 +6544,16 @@ $("progress.progress-bar").each(function() {
     $(this).attr('value', attrProgress.replace(/[^-\d\.]/g, ''));
     $(this).find('.progress').css({ width : attrProgress }); 
 });
-/**
- * 
- * Kayzen.Tabs
- * @version 1.0.0
- * @author @esr360
- * @license The MIT License (MIT)
- * 
- */
-
 (function ($) {
  
+    /**
+     * 
+     * KAYZEN
+     * @module: 'tabs'
+     * @author: @esr360
+     * 
+     */
+    
     $.fn.tabs = function(custom) {
         
         // Options
@@ -6614,73 +6610,91 @@ $("progress.progress-bar").each(function() {
     }; // tabs()
  
 }(jQuery));
-//=================================================================
-// Tooltips
-//=================================================================
-
 (function ($) {
-		
-	$.fn.extend({
-		
-		tooltip: function(options) {
+    
+    /**
+     * 
+     * KAYZEN
+     * @module: 'tooltip'
+     * @author: @esr360
+     * 
+     */
+    
+    $.fn.tooltip = function(custom) {
+        
+        // Options
+        var options = $.extend({
+            
+			position : "top"
+            
+        }, custom);
+        
+        return this.each(function() {
+            
+            var $content = $(this).attr("data-tooltip");			
+            var $position = options.position;
+            
+            $(this).attr("ontouchstart", "");
+            
+            $(this).append(
+                $("<div class='tooltip_wrapper-" + $position + "'><div class='tooltip_content'>"+ $content +"</div></div>")
+            );
+            
+        });
 			
-			var defaults = {  
-				position : "top"
-			};
-			
-			var options = $.extend(defaults, options);	
-			
-			return this.each(function() {
-				
-				var $content = $(this).attr("data-tooltip");			
-				var $position = options.position;
-				
-				$(this).attr("ontouchstart", "");
-				
-				$(this).append(
-					$("<div class='tooltip_wrapper-" + $position + "'><div class='tooltip_content'>"+ $content +"</div></div>")
-				);
-				
-			});
-			
-		} // tooltip
-		
-	});
+	} // tooltip
 
 }(jQuery));
-//=================================================================
-// Billboard
-//=================================================================
-
-//-----------------------------------------------------------------
-// Fade/Parralax Effect
-//-----------------------------------------------------------------
+(function ($) {
+ 
+    /**
+     * 
+     * KAYZEN
+     * @module: 'billboard'
+     * @author: @esr360
+     * 
+     */
+    
+    $.fn.billboard = function(custom) {
+        
+        // Options
+        var options = $.extend({
+            
+            navParent   : '[class*="tabs_nav"]'
+            
+        }, custom);
+        
+        // Run the code on each occurance of the element
+        return this.each(function() {
 	
-$(document).ready(function() {
-	
-	var heroTitle = $('#billboard-fade-parallax');
+            var heroTitle = $('#billboard-fade-parallax');
 
-	$(window).on('scroll', function() {
+            $(window).on('scroll', function() {
 
-		var st = $(this).scrollTop();
+                var st = $(this).scrollTop();
 
-		heroTitle.css({ 
-			'transform' : "translate3d(0px,"+(st/2.5)+"px, 0px)",
-			'opacity' : 1 - st/600
-		}); 
+                heroTitle.css({ 
+                    'transform' : "translate3d(0px,"+(st/2.5)+"px, 0px)",
+                    'opacity' : 1 - st/600
+                }); 
 
-	});
-	
-});
-/**
- *
- * countdown.js
- * @author: @esr360, @mrwigster
- * @description: Countdown to a specific date and time
- *
- */
-
+            });
+            
+        }); // this.each
+ 
+    }; // billboard()
+ 
+}(jQuery));
 (function (e) {
+ 
+    /**
+     * 
+     * KAYZEN
+     * @module: 'countdown'
+     * @author: @esr360, @mrwigster
+     * @description: Countdown to a specific date and time
+     * 
+     */
  
     $.fn.countdown = function(custom) {
         
@@ -6814,21 +6828,19 @@ function e() {
     var futureFormattedDate = mm + "/" + dd + "/" + y;
     return futureFormattedDate
 }
-/**
- *
- * earth-slider.js
- * @author @esr360
- *
- */
-
 (function ($) {
- 
+    
+    /**
+     * 
+     * KAYZEN
+     * @module: 'earth-slider'
+     * @author: @esr360
+     * 
+     */
+    
     $.fn.KayzenEarthSlider = function(custom) {
         
-        //
         // Options
-        //
-        
         var options = $.extend({
             
            startingSection : 2,
@@ -6836,10 +6848,7 @@ function e() {
             
         }, custom);
         
-        //
         // Run the code on each occurance of the element
-        //
-        
         return this.each(function() {
             
             var $el = $(this);
@@ -6851,10 +6860,7 @@ function e() {
             var $pinActive = $pin.filter('active');
             var $pinIndex = $pinActive.index() + 1;
     
-            //
             // Position the pins
-            //
-    
             function pinRotate(pinAngle, pinNo) {
     
                 var pinAngle = pinAngle / (pinNo + 1) + ((180 - $pinRange) / 2);
@@ -6877,24 +6883,15 @@ function e() {
     
             pinRotate($pinRange, $pinCount);
     
-            //
-            // Hide all sections except the starting one
-            //
-            
+            // Hide all sections except the starting one            
             $('.earth-slider_section').hide(); 
             $('.earth-slider_section:nth-child(' + options.startingSection + ')').show().addClass('active');  
     
-            //
-            // Add active class to starting pin
-            //
-            
+            // Add active class to starting pin            
             $pin.removeClass('active'); 
             $pin.filter(':nth-child(' + options.startingSection + ')').addClass('active');  
             
-            //
             // Change content
-            //
-            
             function earthCycle(pinIndex) {
                 $('.earth-slider_section.active')
                     .fadeOut(baseTransition)
@@ -6905,10 +6902,7 @@ function e() {
                     .addClass('active'); 
             }
             
-            //
             // Change content on pin click
-            //
-    
             $pin.click(function() {
             
                 var $pinIndex = $(this).index() + 1;
@@ -6920,10 +6914,7 @@ function e() {
     
             });
             
-            //
             // Change content on arrows click
-            //
-            
             function earthArrows(dir) {
             
                 $el.find('.slide-' + dir).click(function() {
@@ -7491,6 +7482,8 @@ $(document).ready(function() {
 //-----------------------------------------------------------------
 // Modules
 //-----------------------------------------------------------------
+
+    $(_billboard).billboard();
 
     $(_footer).footer();
 

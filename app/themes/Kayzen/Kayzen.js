@@ -50,6 +50,8 @@ $(document).ready(function() {
 // Modules
 //-----------------------------------------------------------------
 
+    $(_billboard).billboard();
+
     $(_footer).footer();
 
     $('#flyout').flyoutNav({

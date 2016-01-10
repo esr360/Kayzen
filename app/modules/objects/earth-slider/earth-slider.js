@@ -1,18 +1,16 @@
-/**
- *
- * earth-slider.js
- * @author @esr360
- *
- */
-
 (function ($) {
- 
+    
+    /**
+     * 
+     * KAYZEN
+     * @module: 'earth-slider'
+     * @author: @esr360
+     * 
+     */
+    
     $.fn.KayzenEarthSlider = function(custom) {
         
-        //
         // Options
-        //
-        
         var options = $.extend({
             
            startingSection : 2,
@@ -20,10 +18,7 @@
             
         }, custom);
         
-        //
         // Run the code on each occurance of the element
-        //
-        
         return this.each(function() {
             
             var $el = $(this);
@@ -35,10 +30,7 @@
             var $pinActive = $pin.filter('active');
             var $pinIndex = $pinActive.index() + 1;
     
-            //
             // Position the pins
-            //
-    
             function pinRotate(pinAngle, pinNo) {
     
                 var pinAngle = pinAngle / (pinNo + 1) + ((180 - $pinRange) / 2);
@@ -61,24 +53,15 @@
     
             pinRotate($pinRange, $pinCount);
     
-            //
-            // Hide all sections except the starting one
-            //
-            
+            // Hide all sections except the starting one            
             $('.earth-slider_section').hide(); 
             $('.earth-slider_section:nth-child(' + options.startingSection + ')').show().addClass('active');  
     
-            //
-            // Add active class to starting pin
-            //
-            
+            // Add active class to starting pin            
             $pin.removeClass('active'); 
             $pin.filter(':nth-child(' + options.startingSection + ')').addClass('active');  
             
-            //
             // Change content
-            //
-            
             function earthCycle(pinIndex) {
                 $('.earth-slider_section.active')
                     .fadeOut(baseTransition)
@@ -89,10 +72,7 @@
                     .addClass('active'); 
             }
             
-            //
             // Change content on pin click
-            //
-    
             $pin.click(function() {
             
                 var $pinIndex = $(this).index() + 1;
@@ -104,10 +84,7 @@
     
             });
             
-            //
             // Change content on arrows click
-            //
-            
             function earthArrows(dir) {
             
                 $el.find('.slide-' + dir).click(function() {

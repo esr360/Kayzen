@@ -1,14 +1,13 @@
-/**
- * 
- * Kayzen.Tabs
- * @version 1.0.0
- * @author @esr360
- * @license The MIT License (MIT)
- * 
- */
-
 (function ($) {
  
+    /**
+     * 
+     * KAYZEN
+     * @module: 'tabs'
+     * @author: @esr360
+     * 
+     */
+    
     $.fn.tabs = function(custom) {
         
         // Options

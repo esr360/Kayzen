@@ -10,6 +10,7 @@
 
     $billboard: config((
         'name'            : 'billboard',
+        'output-JSON'     : true,
         // Settings
         'full-screen'     : false,
         'overlay'         : false,
