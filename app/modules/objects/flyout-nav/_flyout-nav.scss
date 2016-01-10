@@ -14,7 +14,7 @@
 		'name'                : 'flyout-nav',
 		'output-JSON'         : true,
 		// Options
-		'width'               : 300px,
+        'width'               : option($side-nav, 'width'),
 		'font-size'           : font-size('base'),
 		'box-shadow'          : 1px 0 25px 0px rgba(black, 0.4),
 		// Settings

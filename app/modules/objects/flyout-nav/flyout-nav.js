@@ -14,9 +14,9 @@
         // Options
         var options = $.extend({
             
-            menu    : '#app-nav > ul',
-            trigger : '#flyout-trigger',
-            overlay : '#site-overlay'
+            menu            : '#app-nav > ul',
+            trigger         : '#flyout-trigger',
+            overlay         : '#site-overlay'
             
         }, custom);
         
@@ -32,9 +32,6 @@
             
             // Function to create the flyout-nav based off existing elements
             function createFlyoutNav() {
-        
-                // Relocate the flyout-trigger in the DOM
-                $(options.trigger).detach().prependTo('body');
         
                 // Clone the main nav into the flyout nav container
                 $(options.menu).clone().appendTo(flyoutSideNav);
@@ -98,6 +95,7 @@
                         selfClose : true
                     });
                 }
+                return false;
             });
             
             // Close the flyout nav when the overlay is clicked

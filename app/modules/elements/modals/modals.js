@@ -1,18 +1,22 @@
-//=================================================================
-// Modals
-//=================================================================
-
 (function ($) {
 		
+    /**
+     * 
+     * KAYZEN
+     * @module: 'modal'
+     * @author: @esr360
+     * 
+     */
+ 
 	// create any dynamic modals
 	$('[data-modal]').each(function() {
 		
 		if($(this).attr('data-modal') == '') {
 		
-			var id = $(this).attr('href'),
-				id = 'modal-' + id.substr(id.lastIndexOf("/") + 1).replace(/\.[^/.]+$/, ""),
-				style = '',
-				content = $(this).html();
+			var id = $(this).attr('href');
+			var id = 'modal-' + id.substr(id.lastIndexOf("/") + 1).replace(/\.[^/.]+$/, "");
+			var style = '';
+			var content = $(this).html();
 				
 			$(this).attr('href', '#' + id);
 			
@@ -70,8 +74,8 @@
 			
 			return this.each(function() {
 				
-				var el = $(this),
-					id = el.attr('id');
+				var el = $(this);
+				var id = el.attr('id');
 				
 				if (el.is('[class*="-animate"]')) {
 					var $animate = true;

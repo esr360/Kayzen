@@ -5851,7 +5851,9 @@ $(window).bind("load resize", function() {
 // Flyout Navigation
 //-----------------------------------------------------------------
 
-$('#flyout').flyoutNav();
+$('#flyout').flyoutNav({
+    trigger : '#flyout-trigger, #demo-flyout-trigger'
+});
 
 //-----------------------------------------------------------------
 // Owl Carousel Init
@@ -6476,21 +6478,25 @@ function accordion() {
   
 } // accordion
 
-//=================================================================
-// Modals
-//=================================================================
-
 (function ($) {
 		
+    /**
+     * 
+     * KAYZEN
+     * @module: 'modal'
+     * @author: @esr360
+     * 
+     */
+ 
 	// create any dynamic modals
 	$('[data-modal]').each(function() {
 		
 		if($(this).attr('data-modal') == '') {
 		
-			var id = $(this).attr('href'),
-				id = 'modal-' + id.substr(id.lastIndexOf("/") + 1).replace(/\.[^/.]+$/, ""),
-				style = '',
-				content = $(this).html();
+			var id = $(this).attr('href');
+			var id = 'modal-' + id.substr(id.lastIndexOf("/") + 1).replace(/\.[^/.]+$/, "");
+			var style = '';
+			var content = $(this).html();
 				
 			$(this).attr('href', '#' + id);
 			
@@ -6548,8 +6554,8 @@ function accordion() {
 			
 			return this.each(function() {
 				
-				var el = $(this),
-					id = el.attr('id');
+				var el = $(this);
+				var id = el.attr('id');
 				
 				if (el.is('[class*="-animate"]')) {
 					var $animate = true;
@@ -7020,9 +7026,9 @@ function e() {
         // Options
         var options = $.extend({
             
-            menu    : '#app-nav > ul',
-            trigger : '#flyout-trigger',
-            overlay : '#site-overlay'
+            menu            : '#app-nav > ul',
+            trigger         : '#flyout-trigger',
+            overlay         : '#site-overlay'
             
         }, custom);
         
@@ -7038,9 +7044,6 @@ function e() {
             
             // Function to create the flyout-nav based off existing elements
             function createFlyoutNav() {
-        
-                // Relocate the flyout-trigger in the DOM
-                $(options.trigger).detach().prependTo('body');
         
                 // Clone the main nav into the flyout nav container
                 $(options.menu).clone().appendTo(flyoutSideNav);
@@ -7104,6 +7107,7 @@ function e() {
                         selfClose : true
                     });
                 }
+                return false;
             });
             
             // Close the flyout nav when the overlay is clicked

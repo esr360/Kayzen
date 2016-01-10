@@ -20,12 +20,6 @@
 	<i class="fa fa-angle-up"></i>
 </a> 
 
-<!-- Flyout Nav Trigger -->
-<span class="button-icon-primary flyout-trigger" id="flyout-trigger">
-	<i class="fa fa-bars nav-open"></i>
-	<i class="fa fa-times nav-close"></i>
-</span>
-
 <!-- Flyout Nav -->
 <div id="flyout"></div>
 

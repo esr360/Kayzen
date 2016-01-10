@@ -8220,32 +8220,13 @@ progress::-moz-progress-bar {
 }
 
 .flyout-trigger, [class*="flyout-trigger-"] {
-  position: absolute;
   top: 0.85rem;
+  bottom: auto;
+  left: auto;
   right: 0.85rem;
   z-index: 14;
+  position: absolute;
   cursor: pointer;
-}
-.flyout-trigger .fa, [class*="flyout-trigger-"] .fa {
-  transition: 0.4s;
-  -webkit-transform-origin: 50% 0;
-      -ms-transform-origin: 50% 0;
-          transform-origin: 50% 0;
-}
-.flyout-trigger .nav-close, [class*="flyout-trigger-"] .nav-close {
-  -webkit-transform: scale(0) translateY(-50%);
-      -ms-transform: scale(0) translateY(-50%);
-          transform: scale(0) translateY(-50%);
-}
-.flyout-trigger.active .nav-open, [class*="flyout-trigger-"].active .nav-open {
-  -webkit-transform: scale(0) translateY(-50%);
-      -ms-transform: scale(0) translateY(-50%);
-          transform: scale(0) translateY(-50%);
-}
-.flyout-trigger.active .nav-close, [class*="flyout-trigger-"].active .nav-close {
-  -webkit-transform: scale(1) translateY(-50%);
-      -ms-transform: scale(1) translateY(-50%);
-          transform: scale(1) translateY(-50%);
 }
 
 .footer, [class*="footer-"] {

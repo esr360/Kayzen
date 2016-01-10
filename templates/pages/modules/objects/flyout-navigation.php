@@ -54,57 +54,55 @@
                         <li><b>Components:</b> null</li>
                     </ul>
                 </div>
+
+                <h3 class="heading-size-3">Requirements</h3>
+                
+                <ul class="list-clear">
+                    <li>A pre-existing navigation menu</li>
+                    <li>The <a href="#">side-nav</a> module</li>
+                    <li>[Optional] The <a href="#">site-overlay</a> module</li>
+                </ul>
                 
 				<h2 class="heading-light-size-5">Examples</h2>
 							
 <pre data-enlighter-language="html" class="EnlighterJSRAW">
-&lt;section class="section earth-slider">
-    &lt;header class="earth-slider_section heading_group-block text-center">
-        &lt;div class="container-small">
-            ...
-        &lt;/div>
-    &lt;/header>
-    ...
-    &lt;div class="earth-wrapper">
-        &lt;div class="earth">               
-            &lt;img class="globe" src="/app/images/earth.png" alt="" />
-            &lt;div class="pins">
-                &lt;div class="pin-wrapper">
-                    &lt;div class='pin'>&lt;/div>
-                &lt;/div>
-                &lt;div class="pin-wrapper">
-                    &lt;div class='pin'>&lt;/div>
-                &lt;/div>
-                &lt;div class="pin-wrapper">
-                    &lt;div class='pin'>&lt;/div>
-                &lt;/div>
-            &lt;/div>
-        &lt;/div>
-    &lt;/div>
-    &lt;nav class="slide-nav">
-        &lt;button class="slide-prev icon-border-size-4">&lt;i class="fa fa-angle-left">&lt;/i>&lt;/button>
-        &lt;button class="slide-next icon-border-size-4">&lt;i class="fa fa-angle-right">&lt;/i>&lt;/button>
-    &lt;/nav>
-&lt;/section>
+&lt;nav id="app-nav">
+    &lt;ul>
+        ...
+    &lt;/ul>
+&lt;/nav>
+
+&lt;!-- Flyout Nav Trigger -->
+&lt;span class="button-icon-primary flyout-trigger" id="flyout-trigger">
+    &lt;i class="fa fa-bars">&lt;/i>
+&lt;/span>
+
+&lt;!-- Flyout Nav Container -->
+&lt;div id="flyout">&lt;/div>
+
+&lt;!-- Site Overlay -->
+&lt;div class="site-overlay" id="site-overlay">&lt;/div>
 </pre>
 <br />
 <pre data-enlighter-language="javascript" class="EnlighterJSRAW">
-$('.earth-slider').KayzenEarthSlider();
+$('#flyout').flyoutNav();
 </pre>
 
-                <p><a href="#">View Demo</a></p>
-
-                <h3 class="heading-size-3">Custom Starting Section</h3>
-
+                <h3 class="heading-size-3">Options</h3>
+                
 <pre data-enlighter-language="javascript" class="EnlighterJSRAW">
-$('.earth-slider').KayzenEarthSlider({
-    startingSection : 1
+$('#flyout').flyoutNav({
+    menu    : '#app-nav > ul',
+    trigger : '#flyout-trigger',
+    overlay : '#site-overlay'
 });
 </pre>
+
+                <p><a href="#" id="demo-flyout-trigger">View Demo</a></p>
 				
 				<h2 class="heading-light-size-5">Customizing</h2>
 				
-				<p>The Earth Slider can be customized using the following options:</p>
+				<p>The Flyout Navigation can be customized using the following options:</p>
 				
 				<p class="alert-bar-help">Read the <a href="configuration.html">Configuration</a> page to learn more about a module's configuration.</p>
 				
@@ -118,34 +116,97 @@ $('.earth-slider').KayzenEarthSlider({
 					</thead>
 					<tbody>
 						<tr>
-							<td><code>globe-spin-duration</code></td>
-							<td><code class="value">35s</code></td>
-							<td>The amount of time it should take for the earth image to rotate 360 degrees.</td>
+							<td><code>width</code></td>
+							<td><code class="value">option($side-nav, 'width')</code></td>
+							<td>This value should be the same width as the side-nav module.</td>
 						</tr>
 						<tr>
-							<td><code>pin-active-color</code></td>
-							<td><code class="value">color('brand', 'primary')</code></td>
-							<td>The color for the active pin.</td>
+							<td><code>font-size</code></td>
+							<td><code class="value">font-size('base')</code></td>
+							<td>The font size for the flyout nav.</td>
 						</tr>
 						<tr>
-							<td><code>respond-at</code></td>
-							<td><code class="value">breakpoint('break-3')</code></td>
-							<td>The width at which the earth slider should respond for mobile devices.</td>
+							<td><code>box-shadow</code></td>
+							<td><code class="value">1px 0 25px 0px rgba(black, 0.4)</code></td>
+							<td>The flyout nav's box shadow.</td>
 						</tr>
 						<tr>
-							<td><code>pin-size</code></td>
-							<td><code class="value">55px</code></td>
-							<td>The size of the pins.</td>
+							<td><code>collapsible[enabled]</code></td>
+							<td><code class="value">true</code></td>
+							<td>Set whether child menus should be collapsible.</td>
+						</tr>
+						<tr>
+							<td><code>collapsible[open-by-default]</code></td>
+							<td><code class="value">true</code></td>
+							<td>Set whether child menus should be open by default (if collapsible is enabled).</td>
+						</tr>
+						<tr>
+							<td><code>show-y-scrollbar</code></td>
+							<td><code class="value">false</code></td>
+							<td>Force the Y scrollbar to always be visible.</td>
 						</tr>
                     </tbody>
                 </table>
 				
-				<p>To change one of the above values, pass your new value(s) to the <code>earth-slider()</code> mixin in your theme file (e.g. app/themes/Kayzen/_kayzen.scss).</p>
+				<p>To change one of the above values, pass your new value(s) to the <code>flyout-nav()</code> mixin in your theme file (e.g. app/themes/Kayzen/_kayzen.scss).</p>
 						
 <pre data-enlighter-language="css" class="EnlighterJSRAW">
-@include earth-slider((
-    'globe-spin-duration' : 45s,
-    'pin-size'            : 40px
+@include flyout-nav((
+    'collapsible'      : (
+        'enabled'      : false
+    ),
+    'show-y-scrollbar' : true
+));
+</pre>
+
+                <h3 class="heading-size-3">Flyout Trigger <span class="heading-light">(_flyout-trigger.scss)</span></h3>
+				
+				<p>The Flyout Trigger can be customized using the following options:</p>
+				
+				<table class="table-style-1-small">
+					<thead>
+						<tr>
+							<th>Property Name</th>
+							<th>Default Value</th>
+							<th>Description</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td><code>top</code></td>
+							<td><code class="value">0.85rem</code></td>
+							<td>The <code>top</code> position of the flyout-trigger.</td>
+						</tr>
+						<tr>
+							<td><code>bottom</code></td>
+							<td><code class="value">auto</code></td>
+							<td>The <code>bottom</code> position of the flyout-trigger.</td>
+						</tr>
+						<tr>
+							<td><code>left</code></td>
+							<td><code class="value">auto</code></td>
+							<td>The <code>left</code> position of the flyout-trigger.</td>
+						</tr>
+						<tr>
+							<td><code>right</code></td>
+							<td><code class="value">0.85rem</code></td>
+							<td>The <code>right</code> position of the flyout-trigger.</td>
+						</tr>
+						<tr>
+							<td><code>z-index</code></td>
+							<td><code class="value">14</code></td>
+							<td>The <code>z-index</code> of the flyout-trigger.</td>
+						</tr>
+                    </tbody>
+                </table>
+				
+				<p>To change one of the above values, pass your new value(s) to the <code>flyout-nav()</code> mixin in your theme file (e.g. app/themes/Kayzen/_kayzen.scss).</p>
+						
+<pre data-enlighter-language="css" class="EnlighterJSRAW">
+@include flyout-trigger((
+    'left'    : 0.85rem,
+    'right'   : auto,
+    'z-index' : 99
 ));
 </pre>
 

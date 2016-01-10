@@ -106,7 +106,9 @@ $(window).bind("load resize", function() {
 // Flyout Navigation
 //-----------------------------------------------------------------
 
-$('#flyout').flyoutNav();
+$('#flyout').flyoutNav({
+    trigger : '#flyout-trigger, #demo-flyout-trigger'
+});
 
 //-----------------------------------------------------------------
 // Owl Carousel Init
