@@ -48,7 +48,7 @@ module.exports = function(grunt) {
         'app/modules/utilities/core/core.js',
         'app/includes/*.js',
         'app/modules/elements/**/*.js',
-        ['app/modules/objects/**/*.js', '!app/modules/objects/google-map/google-map.js'],
+        'app/modules/objects/**/*.js',
         'app/themes/**/*.js'
     ];
 

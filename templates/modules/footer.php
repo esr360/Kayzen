@@ -16,7 +16,7 @@
         
     ?>
     
-    <footer class="footer">
+    <footer class="footer" id="footer">
         
         <?php if (!$type == 'bar') { ?>
         <div class="footer_wrapper">
@@ -103,8 +103,7 @@
                                 </div>
                             </div>
                         </header>
-                        <div id="footer-twitter-feed">
-                        </div>
+                        <div id="footer-twitter-feed"></div>
                     </div>
                     
                     <!-- Testimonials -->

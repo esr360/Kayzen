@@ -12,7 +12,7 @@
 		'name'                 : 'footer',
 		'output-JSON'          : true,
         'background'           : color('greyscale', 'grey-6'),
-        'wrapper-padding'      : 4em,
+        'wrapper-padding'      : 4em 0,
         'wrapper-font-size'    : 0.9em,
         'wrapper-background'   : color('greyscale', 'grey-5'),
         'wrapper-color'        : color('greyscale', 'grey-3'),
@@ -27,7 +27,7 @@
 	), $custom);
 	
 	//-------------------------------------------------------------
-	// Component
+	// Module
 	//-------------------------------------------------------------
 
 	@include module {

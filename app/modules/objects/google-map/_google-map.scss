@@ -66,18 +66,20 @@
 	), $custom);
 	
 	//-------------------------------------------------------------
-	// Component
+	// Module
 	//-------------------------------------------------------------
 
-	.google-map {
-		background: rgba(0,0,0,0.2);
+	@include module {
+        
+		background: rgba(black,0.2);
 	    width: 100%;
 	    height: 375px;
 		display: block;
-	}
     
-    .map-large {
-        height: 100%;
-    }
+        @include modifier('large') {
+            height: 100%;
+        }
+        
+	}// module
 	
 } // @mixin google-map

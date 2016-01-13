@@ -51,6 +51,8 @@ $(document).ready(function() {
 //-----------------------------------------------------------------
 
     $(_billboard).billboard();
+    
+    $(_googleMap).googleMap();
 
     $(_footer).footer();
 
