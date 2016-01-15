@@ -11,16 +11,12 @@
     $.fn.billboard = function(custom) {
         
         // Options
-        var options = $.extend({
-            
-            navParent   : '[class*="tabs_nav"]'
-            
-        }, custom);
+        var options = $.extend({}, custom);
         
         // Run the code on each occurance of the element
         return this.each(function() {
 	
-            var heroTitle = $('#billboard-fade-parallax');
+            var heroTitle = $(this);
 
             $(window).on('scroll', function() {
 

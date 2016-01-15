@@ -83,7 +83,9 @@
 &lt;!-- Site Overlay -->
 &lt;div class="site-overlay" id="site-overlay">&lt;/div>
 </pre>
-<br />
+
+                <p>Then in your theme's JS file (e.g. app/themes/Kayzen/kayzen.js), call the <code>flyoutNav()</code> function on your flyout-nav container:</p>
+                
 <pre data-enlighter-language="javascript" class="EnlighterJSRAW">
 $('#flyout').flyoutNav();
 </pre>

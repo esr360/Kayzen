@@ -62,31 +62,77 @@
 &lt;script src="https://maps.googleapis.com/maps/api/js?sensor=false">&lt;/script>
 </pre>
 
-                <p><a href="#footer">View Demo</a></p>
-
-                <h3 class="heading-size-3">Twitter Feed</h3>
-							
-<pre data-enlighter-language="html" class="EnlighterJSRAW">
-&lt;footer class="footer">
-&lt;/footer>&lt;!-- .footer -->
-</pre>
-
-                <p>Then in your theme's JS file (e.g. app/themes/Kayzen/kayzen.js), pass any desired options to the <code>footer()</code> function:</p>
+                <p>Then in your theme's JS file (e.g. app/themes/Kayzen/kayzen.js), call the <code>googleMap()</code> function on your Google Map container:</p>
 
 <pre data-enlighter-language="javascript" class="EnlighterJSRAW">
-$('.footer').footer({
-    twitterFeedSelector : '#footer-twitter-feed',
-    twitterFeedCount    : 8,
-    twitterFeedUser     : 'esr360'
+$('#google-map').googleMap();
+</pre>
+
+                <div class="google-map object" id="google-map"></div>
+                
+                <h3 class="heading-size-3">Custom Colors</h3>
+                
+                <p>Whilst the map colors can be controlled in the module's Sass configuration, they are primerily controlled by the JavaScript. By default, the Sass colors get passed to the Google Map's JavaScript, but this can be overwritten via the <code>colors</code> option when calling the plugin:</p>
+				
+<pre data-enlighter-language="javascript" class="EnlighterJSRAW">
+$('#google-map').googleMap({
+    colors : {
+        'water'          : '#aee2e0',
+        'landscape'      : '#abce83',
+        'road'           : '#5B5B3F',
+        'highway'        : '#EBF4A4',
+        'poi'            : '#769E72',
+        'transit'        : '#5B5B3F',
+        'stroke'         : '#8da010',
+        'administrative' : '#87ae79',
+        'park'           : '#8dab68'
+    }
 });
 </pre>
-				
+
+                <div class="google-map object" id="google-map-2"></div>
+                
+                <script>
+                    $(document).ready(function() {
+                        $('#google-map-2').googleMap({
+                            colors : {
+                                'water'          : '#aee2e0',
+                                'landscape'      : '#abce83',
+                                'road'           : '#5B5B3F',
+                                'highway'        : '#EBF4A4',
+                                'poi'            : '#769E72',
+                                'transit'        : '#5B5B3F',
+                                'stroke'         : '#8da010',
+                                'administrative' : '#87ae79',
+                                'park'           : '#8dab68'
+                            }
+                        });
+                    });                    
+                </script>
+                
 				<h2 class="heading-light-size-5">Customizing</h2>
 				
-				<p>The Footer can be customized using the following options:</p>
+				<p>The Google Map can be customized using the following options:</p>
 				
 				<p class="alert-bar-help">Read the <a href="configuration.html">Configuration</a> page to learn more about a module's configuration.</p>
-				
+                				
+				<table class="table-style-1-small">
+					<thead>
+						<tr>
+							<th>Property Name</th>
+							<th>Default Value</th>
+							<th>Description</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td><code>$baseMapColor</code></td>
+							<td><code class="value">color('brand', 'primary');</code></td>
+							<td>This is the base color that the default palette creates its colors from.</td>
+						</tr>
+                    </tbody>
+                </table>
+                
 				<table class="table-style-1-small">
 					<thead>
 						<tr>
@@ -101,17 +147,29 @@ $('.footer').footer({
 							<td><code class="value">true</code></td>
 							<td>This allows the config to be accessed in the JavaScript.</td>
 						</tr>
+						<tr>
+							<td><code>colors</code></td>
+							<td><code class="value">[...]</code></td>
+							<td>Each default color is a Sass-adjusted <code>$baseMapColor</code> color, but you can overwrite any as desired.</td>
+						</tr>
                     </tbody>
                 </table>
 				
 				<p>To change one of the above values, pass your new value(s) to the <code>footer()</code> mixin in your theme file (e.g. app/themes/Kayzen/_kayzen.scss).</p>
 						
 <pre data-enlighter-language="css" class="EnlighterJSRAW">
-@include footer((
-    'wrapper-padding' : 6em 0,
-    'logo-height'     : 40px,
-    'bar-responsive'  : 720px,
-    'bar-font-size'   : 1em
+@include google-map((
+    'colors'             : (
+        'water'          : #aee2e0,
+        'landscape'      : #abce83,
+        'road'           : #5B5B3F,
+        'highway'        : #EBF4A4,
+        'poi'            : #769E72,
+        'transit'        : #5B5B3F,
+        'stroke'         : #123abc,
+        'administrative' : #87ae79,
+        'park'           : #8dab68
+    )
 ));
 </pre>
 
@@ -132,6 +190,8 @@ $('.footer').footer({
     <?php include (ROOT.'/includes/scripts.php'); ?>
 		
     <?php include (ROOT.'/includes/syntax-highlighter.php'); ?>
+    
+    <script src="https://maps.googleapis.com/maps/api/js"></script>
 
 </body>
 </html>

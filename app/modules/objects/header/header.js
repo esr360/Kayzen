@@ -1,49 +1,68 @@
-//=================================================================
-// Header
-//=================================================================
-
-//-----------------------------------------------------------------
-// Sticky Header
-//-----------------------------------------------------------------
-
-if (_option('app-header', 'sticky'))  {
+(function ($) {
+    
+    /**
+     * 
+     * KAYZEN
+     * @module: 'app-header'
+     * @requires: 'navigation'
+     * @author: @esr360
+     * 
+     */
+ 
+    $.fn.header = function(custom) {
+        
+        // Options
+        
+        var options = $.extend({
+            navigation : _navigation,
+            overlay    : '#site-overlay'
+        }, custom);
+        
+        // Run the code on each occurance of the element
+        return this.each(function() {
+            
+            var header = $(this);
+            
+            if (_option('app-header', 'sticky'))  {
+                    
+                var stickyOffset = header.offset().top;
+                var navDropdown  = $(options.navigation).find("> ul > li > a:not(:only-child)").parent();
+                
+                function stickHeader() {
+                    header.addClass('fixed');
+                    navDropdown.hover(
+                        function(){ 
+                            $(options.overlay).siteOverlay('show');
+                        },
+                        function(){ 
+                            $(options.overlay).siteOverlay('hide');
+                        }
+                    );
+                }
 	
-	var stickyOffset = $(_appHeader).offset().top,
-		navDropdown  = $(_navigation).find("> ul > li > a:not(:only-child)").parent();
+                function unStickHeader() {
+                    header.removeClass('fixed');
+                    navDropdown.unbind('mouseenter mouseleave');
+                    $(options.overlay).siteOverlay('hide');
+                }
 	
-	function stickHeader() {
-		$(_appHeader).addClass('fixed');
-		navDropdown.hover(
-			function(){ 
-				$("#site-overlay").addClass('header_visible');
-			},
-			function(){ 
-				$("#site-overlay").removeClass('header_visible');
-			}
-		);
-	}
-	
-	function unStickHeader() {
-		$(_appHeader).removeClass('fixed');
-		navDropdown.unbind('mouseenter mouseleave');
-		$("#site-overlay").removeClass('header_visible');
-	}
-	
-	$(window).on("load scroll", function(e) {
-		var scroll = $(window).scrollTop();
-		if (scroll > stickyOffset) {
-			stickHeader();
-		} else {
-			unStickHeader();
-		}
-	});
+                $(window).on("load scroll", function(e) {
+                    var scroll = $(window).scrollTop();
+                    if (scroll > stickyOffset) {
+                        stickHeader();
+                    } else {
+                        unStickHeader();
+                    }
+                });
+                
+            }
+            
+            if (_option('app-header', 'side')) {
+                header.prependTo('body');	
+            }
 
-}
-
-//-----------------------------------------------------------------
-// Side Header
-//-----------------------------------------------------------------
-
-if (_option('app-header', 'side')) {
-	$(_appHeader).prependTo('body');	
-}
+        }); // this.each
+ 
+    }; // header()
+ 
+}(jQuery));

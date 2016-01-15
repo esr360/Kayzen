@@ -21,6 +21,7 @@
                 'water'          : _mapColor['water'],
                 'landscape'      : _mapColor['landscape'],
                 'road'           : _mapColor['road'],
+                'highway'        : _mapColor['highway'],
                 'poi'            : _mapColor['poi'],
                 'transit'        : _mapColor['transit'],
                 'stroke'         : _mapColor['stroke'],
@@ -121,6 +122,15 @@
                                 },
                                 {
                                     "gamma" : 0.84
+                                }
+                            ]
+                        },
+                        {
+                            "featureType": "road.highway",
+                            "elementType": "geometry",
+                            "stylers": [
+                                {
+                                    "color": mapColors['highway']
                                 }
                             ]
                         },

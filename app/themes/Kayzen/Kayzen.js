@@ -50,14 +50,16 @@ $(document).ready(function() {
 // Modules
 //-----------------------------------------------------------------
 
-    $(_billboard).billboard();
+    $('#billboard-fade-parallax').billboard();
     
-    $(_googleMap).googleMap();
+    $('#google-map').googleMap();
 
     $(_footer).footer();
 
     $('#flyout').flyoutNav({
         trigger : '#flyout-trigger, #demo-flyout-trigger'
     });
+    
+    $(_appHeader).header();
 
 }); // document.ready

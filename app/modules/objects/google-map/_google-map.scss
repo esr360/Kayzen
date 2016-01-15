@@ -32,6 +32,12 @@
                 $saturation  : -1.58%, 
                 $lightness   : -2.55%
             ),
+            'highway'        : adjust-color(
+                $baseMapColor,
+                $hue         : 5.95deg, 
+                $saturation  : -5.97%, 
+                $lightness   : -22.08%
+            ),
             'poi'            : adjust-color(
                 $baseMapColor,
                 $hue         : -0.03deg, 
@@ -64,6 +70,8 @@
             )
         )
 	), $custom);
+    
+    @debug $google-map;
 	
 	//-------------------------------------------------------------
 	// Module

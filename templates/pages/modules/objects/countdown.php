@@ -74,6 +74,8 @@ $(".countdown").countdown({
 });
 </pre>
 
+                <p><a href="#">View Demo</a></p>
+
                 <h3 class="heading-size-3">Custom Selectors</h3>
 							
 <pre data-enlighter-language="html" class="EnlighterJSRAW">
@@ -97,8 +99,6 @@ $(".countdown").countdown({
     secondsSelector : '.seconds'
 });
 </pre>
-
-                <p><a href="#">View Demo</a></p>
 				
 				<h2 class="heading-light-size-5">Customizing</h2>
 				

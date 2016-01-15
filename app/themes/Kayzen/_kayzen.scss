@@ -62,10 +62,10 @@
 	@include google-map;
 	
 	@include header((
-		'bg'        : transparent,
-		'font-size' : 0.9em,
-		'dark'      : (
-			'bg'    : rgba(black, 0.3),
+		'background'     : transparent,
+		'font-size'      : 0.9em,
+		'dark'           : (
+			'background' : rgba(black, 0.3),
 		)
 	));
 	
@@ -92,7 +92,7 @@
 	@include sections;
 	
 	@include billboard((
-		'bg-image'      : "#{$asset-path}/images/billboard-1.jpg"
+		'bg-image': "#{$asset-path}/images/billboard-1.jpg"
 	));
 
 } // Kayzen

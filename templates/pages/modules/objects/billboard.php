@@ -122,6 +122,25 @@
 </pre>
 
                 <p><a href="#">View Demo</a></p>
+                
+                <h3 class="heading-size-3">Parallax Content</h3>
+                 
+<pre data-enlighter-language="html" class="EnlighterJSRAW">
+&lt;div class="billboard-full-screen">
+    &lt;div class="billboard_wrapper">
+        &lt;div id="billboard-fade-parallax">
+            ...
+        &lt;/div>
+    &lt;/div>
+&lt;/div>
+</pre>
+                <p>Then in your theme's JS file (e.g. app/themes/Kayzen/kayzen.js), call the <code>billboard()</code> function on the content container:</p>
+               
+<pre data-enlighter-language="javascript" class="EnlighterJSRAW">
+$('#billboard-fade-parallax').billboard();
+</pre>
+
+                <p><a href="#">View Demo</a></p>
 				
 				<h2 class="heading-light-size-5">Customizing</h2>
 				
