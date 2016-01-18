@@ -83,6 +83,8 @@
     &lt;/ul>
 &lt;/nav>
 </pre>
+
+                <p class="alert-bar-success">To view a demo, hover over one of the appropriate menu items in the navigation on this page.</p>
                 
 				<h2 class="heading-light-size-5">Customizing</h2>
 				

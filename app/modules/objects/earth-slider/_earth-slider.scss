@@ -4,27 +4,27 @@
 
 @mixin earth-slider($custom: ()) {
 
-	//-------------------------------------------------------------
-	// Config
-	//-------------------------------------------------------------
+    //-------------------------------------------------------------
+    // Config
+    //-------------------------------------------------------------
 
-	$earth-slider: config((
-		'name'                : 'earth-slider',
+    $earth-slider: config((
+        'name'                : 'earth-slider',
         'globe-spin-duration' : 35s,
         'pin-active-color'    : color('brand', 'primary'),
         'respond-at'          : breakpoint('break-3'),
         'pin-size'            : 55px
-	), $custom);
-	
-	//-------------------------------------------------------------
-	// Component
-	//-------------------------------------------------------------
-	
-	@include module {
-		position: relative;
-		overflow: hidden;
-	}
-    
+    ), $custom);
+
+    //-------------------------------------------------------------
+    // Component
+    //-------------------------------------------------------------
+
+    @include module {
+        position: relative;
+        overflow: hidden;
+    }
+
     @include component('section') {
         transition: base('transition');
         transform: scale(0);
@@ -37,63 +37,63 @@
             transform: scale(1);
         }
     }
-	
-	.earth-wrapper {
-		height: 185px;
-		margin: auto;
-		width: 55%;
-	}
-	
-	.earth {
-		position: relative;
-	}
-	
-	.globe {
-		@extend %horizontal-center;
-		//animation-name: spin;
-		animation-duration: 35s;
-		animation-iteration-count: infinite;
-		animation-timing-function: linear;
-		width: 92%;
-	}
-	
-	.pin-wrapper {
-		@include vertical-center(absolute);
-		&.active {
-			.pin {
-				background: color('brand', 'primary');
-			}
-		}
-		@media (min-width: breakpoint('break-3')) { 
-			transform-origin: center;
-			width: 100%;
-		}
-	}
 
-	.pin {
-		width: 55px;
-		height: 55px;
-		border-radius: 50% 50% 50% 0;
-		background: color('greyscale', 'grey-4');
-		cursor: pointer;
-		transition: base('transition');
-		position: relative;
-		&:after {
-			content: '';
-			width: 50%;
-			height: 50%;
-			background: rgba(black, 0.5);
-			position: absolute;
-			margin: auto;
-			left: 0;
-			right: 0;
-			top: 0;
-			bottom: 0;
-			border-radius: 50%;
-		}
-		@media (min-width: breakpoint('break-3')) { 
-			transform: translateX(-30%) rotate(-135deg);
-		}
-	}
-	
+    .earth-wrapper {
+        height: 185px;
+        margin: auto;
+        width: 55%;
+    }
+
+    .earth {
+        position: relative;
+    }
+
+    .globe {
+        @extend %horizontal-center;
+        //animation-name: spin;
+        animation-duration: 35s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+        width: 92%;
+    }
+
+    .pin-wrapper {
+        @include vertical-center(absolute);
+        &.active {
+            .pin {
+                background: color('brand', 'primary');
+            }
+        }
+        @media (min-width: breakpoint('break-3')) { 
+            transform-origin: center;
+            width: 100%;
+        }
+    }
+
+    .pin {
+        width: 55px;
+        height: 55px;
+        border-radius: 50% 50% 50% 0;
+        background: color('greyscale', 'grey-4');
+        cursor: pointer;
+        transition: base('transition');
+        position: relative;
+        &:after {
+            content: '';
+            width: 50%;
+            height: 50%;
+            background: rgba(black, 0.5);
+            position: absolute;
+            margin: auto;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            border-radius: 50%;
+        }
+        @media (min-width: breakpoint('break-3')) { 
+            transform: translateX(-30%) rotate(-135deg);
+        }
+    }
+
 }

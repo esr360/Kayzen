@@ -6,54 +6,54 @@
 
 @mixin flyout-nav($custom: ()) {
 
-	//-------------------------------------------------------------
-	// Config
-	//-------------------------------------------------------------
+    //-------------------------------------------------------------
+    // Config
+    //-------------------------------------------------------------
 
-	$flyout-nav: config((
-		'name'                : 'flyout-nav',
-		'output-JSON'         : true,
-		// Options
+    $flyout-nav: config((
+        'name'                : 'flyout-nav',
+        'output-JSON'         : true,
+        // Options
         'width'               : option($side-nav, 'width'),
-		'font-size'           : font-size('base'),
-		'box-shadow'          : 1px 0 25px 0px rgba(black, 0.4),
-		// Settings
-		'collapsible'         : (
-			'default'         : true,
-			'open-by-default' : true
-		),
-		'show-y-scrollbar'    : false
-	), $custom);
-	
-	//-------------------------------------------------------------
-	// Component
-	//-------------------------------------------------------------
-	
-	@include module {
-	
-		// Side Navigation
-		@extend #{$side-nav-selector};
-		
-		font-size: option($config, 'font-size');
-	    left: -#{option($config, width)};
-	    box-shadow: option($config, 'box-shadow');
-		
-		// Reveal the flyout navigation
-	    .flyout-active & {
-	    	left: 0;
-	    }
-		
-		@include option('show-y-scrollbar') {
-			> nav {
-				overflow-y: scroll;
-			}
-		}
-		
-	}
-	
-	// site-overlay
-	.flyout_visible {
-		z-index: 13 !important;
-	}
-	
+        'font-size'           : font-size('base'),
+        'box-shadow'          : 1px 0 25px 0px rgba(black, 0.4),
+        // Settings
+        'collapsible'         : (
+            'default'         : true,
+            'open-by-default' : true
+        ),
+        'show-y-scrollbar'    : false
+    ), $custom);
+
+    //-------------------------------------------------------------
+    // Component
+    //-------------------------------------------------------------
+
+    @include module {
+
+        // Side Navigation
+        @extend #{$side-nav-selector};
+        
+        font-size: option($config, 'font-size');
+        left: -#{option($config, width)};
+        box-shadow: option($config, 'box-shadow');
+        
+        // Reveal the flyout navigation
+        .flyout-active & {
+            left: 0;
+        }
+        
+        @include option('show-y-scrollbar') {
+            > nav {
+                overflow-y: scroll;
+            }
+        }
+        
+    }
+
+    // site-overlay
+    .flyout_visible {
+        z-index: 13 !important;
+    }
+
 } // mixin flyout-nav()

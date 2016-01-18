@@ -4,34 +4,34 @@
 
 @mixin flyout-trigger($custom: ()) {
 
-	//-------------------------------------------------------------
-	// Config
-	//-------------------------------------------------------------
+    //-------------------------------------------------------------
+    // Config
+    //-------------------------------------------------------------
 
-	$site-overlay: config((
-		'name'            : 'flyout-trigger',
-		'top'             : 0.85rem,
-		'bottom'          : auto,
-		'left'            : auto,
-		'right'           : 0.85rem,
-		'z-index'         : 14
-	), $custom);
-	
-	//-------------------------------------------------------------
-	// Component
-	//-------------------------------------------------------------
-	
-	@include module {
+    $site-overlay: config((
+        'name'            : 'flyout-trigger',
+        'top'             : 0.85rem,
+        'bottom'          : auto,
+        'left'            : auto,
+        'right'           : 0.85rem,
+        'z-index'         : 14
+    ), $custom);
+
+    //-------------------------------------------------------------
+    // Component
+    //-------------------------------------------------------------
+
+    @include module {
         
-		top: this('top');
-		bottom: this('bottom');
-		left: this('left');
-		right: this('right');
-		z-index: this('z-index');
-		
-		position: absolute;
-	    cursor: pointer;
-		
-	} // module
-		
+        top: this('top');
+        bottom: this('bottom');
+        left: this('left');
+        right: this('right');
+        z-index: this('z-index');
+        
+        position: absolute;
+        cursor: pointer;
+        
+    } // module
+        
 } // @mixin flyout-trigger

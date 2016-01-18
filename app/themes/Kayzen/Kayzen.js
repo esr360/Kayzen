@@ -61,5 +61,7 @@ $(document).ready(function() {
     });
     
     $(_appHeader).header();
+    
+    $('#page-overview').pageOverview();
 
 }); // document.ready

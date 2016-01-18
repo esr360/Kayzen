@@ -3,188 +3,188 @@
 //=================================================================
 
 @mixin header($custom: ()) {
-	
-	//-------------------------------------------------------------
-	// Config
-	//-------------------------------------------------------------
 
-	$header: config((
-		'name'                 : 'app-header',
-		'output-JSON'          : true,
-		// Options
-		'background'           : base('background'),
-		'height'               : 100px,
-		'font-size'            : 1em,
-		'z-index'              : 5,
-		// Settings
-		'bar'                  : false,
-		'absolute'             : (
-			'default'          : false,
-			'top-position'     : 0
-		),
-		'dark'                 : (
-			'default'          : false,
-			'background'       : color('greyscale', 'grey-6')
-		),
-		'side'                 : (
-			'default'          : false,
-			'width'            : 350px,
-			'container-width'  : 100%,
-			'show-y-scrollbar' : false
-		),
-		'sticky'               : (
-			'default'          : false,
-			'background'       : color('greyscale', 'grey-6'),
-			'height'           : 70px,
-			'logo-height'      : 28px,
-			'font-size'        : font-size('size-2')
-		)
-	), $custom) !global;
-	
-	//-------------------------------------------------------------
-	// Module
-	//-------------------------------------------------------------
+    //-------------------------------------------------------------
+    // Config
+    //-------------------------------------------------------------
 
-	@include module {
+    $header: config((
+        'name'                 : 'app-header',
+        'output-JSON'          : true,
+        // Options
+        'background'           : base('background'),
+        'height'               : 100px,
+        'font-size'            : 1em,
+        'z-index'              : 5,
+        // Settings
+        'bar'                  : false,
+        'absolute'             : (
+            'default'          : false,
+            'top-position'     : 0
+        ),
+        'dark'                 : (
+            'default'          : false,
+            'background'       : color('greyscale', 'grey-6')
+        ),
+        'side'                 : (
+            'default'          : false,
+            'width'            : 350px,
+            'container-width'  : 100%,
+            'show-y-scrollbar' : false
+        ),
+        'sticky'               : (
+            'default'          : false,
+            'background'       : color('greyscale', 'grey-6'),
+            'height'           : 70px,
+            'logo-height'      : 28px,
+            'font-size'        : font-size('size-2')
+        )
+    ), $custom) !global;
 
-	// Core Styles
-	//-------------------------------------------------------------
-	
-		font-size: this('font-size');
-		
-		@if not this('side') {
-			background:this('background');
-		}
-		
-		@if this('fixed') {
-			margin-top: this('height');
-		}
+    //-------------------------------------------------------------
+    // Module
+    //-------------------------------------------------------------
 
-	// Settings
-	//-------------------------------------------------------------
-	
-		// Header Bar
-		//---------------------------------------------------------
-		
-		@include option('bar') {
-			@include component('wrapper') {	
-				display: table;
-				width: 100%;
-			}
-			@include overwrite(('logo', 'navigation')) {
-				display: table-cell;
-				vertical-align: middle;
-			}
-		}
-		
-		// Absolute Position Header
-		//---------------------------------------------------------
-		
-		@include option('absolute') {
-			position: absolute;
-			margin-top: this('absolute', 'top-position');
-			z-index: this('z-index');
-			width: 100%;
-		}
+    @include module {
 
-		// Side Header
-		//---------------------------------------------------------
-	
-		@include option('side') {
-			
-			// Side Navigation
-			@extend #{$side-nav-selector};
-			
-			width: this('side', 'width');
-			
-			@include overwrite('container') {
-				max-width: this('side', 'container-width');
-			}
-			
-			@include overwrite(('logo', 'navigation')) {
-				display: block;
-			}
-			
-			@include overwrite('logo') {
-				padding: 1em;
-				img {
-					height: this('sticky', 'logo-height');
-				}
-			}
-			
-			@include value($value: 'left') {
-				left: 0;
-				right: auto;
-				+ #site-content {
-					margin-left: this('side', 'width');
-				}
-			}
-			
-			@include value($value: 'right') {
-				right: 0;
-				left: auto;
-				+ #site-content {
-					margin-right: this('side', 'width');
-				}
-			}
-			
-			// Always show vertical scrollbars
-			@include value($setting: 'show-y-scrollbar') {
-				overflow-y: scroll;
-			}
-			
-		} // setting('side')
-		
-		// Dark Header
-		//---------------------------------------------------------
-	
-		@include option('dark') {
-			background-color: this('dark', 'background');
-		}
-		
-		// Brand Header
-		//---------------------------------------------------------
+    // Core Styles
+    //-------------------------------------------------------------
+
+        font-size: this('font-size');
         
-		@include modifier('brand') {
-			background-color: color('brand', 'primary');
-		}
-		
-		// Sticky Header
-		//---------------------------------------------------------
-		
-		@include option('sticky') {
-			&.fixed {
-				position: fixed;
-				margin-top: 0;
-				top: 0;
-				width: 100%;
-				z-index: 12;
-				background: this('sticky', 'background');
-				font-size: this('sticky', 'font-size');
-				@include overwrite-component('wrapper') {
-					height: this('sticky', 'height');
-				}
-				@include overwrite('logo') {
-					img {
-						height: this('sticky', 'logo-height');
-					}
-				}
-				@include modifier('absolute', 'not') {
-					@include overwrite('billboard', $special: 'adjacent-sibling') {
-						margin-top: this('sticky', 'height');
-					}
-				}
-			}
-		}
-		
-	// Components
-	//-------------------------------------------------------------
+        @if not this('side') {
+            background:this('background');
+        }
+        
+        @if this('fixed') {
+            margin-top: this('height');
+        }
 
-		@include component('wrapper') {
-			height: this('height');
-			transition: height base('transition');
-		}
-		
-	} // module
+    // Settings
+    //-------------------------------------------------------------
+
+        // Header Bar
+        //---------------------------------------------------------
+        
+        @include option('bar') {
+            @include component('wrapper') {	
+                display: table;
+                width: 100%;
+            }
+            @include overwrite(('logo', 'navigation')) {
+                display: table-cell;
+                vertical-align: middle;
+            }
+        }
+        
+        // Absolute Position Header
+        //---------------------------------------------------------
+        
+        @include option('absolute') {
+            position: absolute;
+            margin-top: this('absolute', 'top-position');
+            z-index: this('z-index');
+            width: 100%;
+        }
+
+        // Side Header
+        //---------------------------------------------------------
+
+        @include option('side') {
+            
+            // Side Navigation
+            @extend #{$side-nav-selector};
+            
+            width: this('side', 'width');
+            
+            @include overwrite('container') {
+                max-width: this('side', 'container-width');
+            }
+            
+            @include overwrite(('logo', 'navigation')) {
+                display: block;
+            }
+            
+            @include overwrite('logo') {
+                padding: 1em;
+                img {
+                    height: this('sticky', 'logo-height');
+                }
+            }
+            
+            @include value($value: 'left') {
+                left: 0;
+                right: auto;
+                + #site-content {
+                    margin-left: this('side', 'width');
+                }
+            }
+            
+            @include value($value: 'right') {
+                right: 0;
+                left: auto;
+                + #site-content {
+                    margin-right: this('side', 'width');
+                }
+            }
+            
+            // Always show vertical scrollbars
+            @include value($setting: 'show-y-scrollbar') {
+                overflow-y: scroll;
+            }
+            
+        } // setting('side')
+        
+        // Dark Header
+        //---------------------------------------------------------
+
+        @include option('dark') {
+            background-color: this('dark', 'background');
+        }
+        
+        // Brand Header
+        //---------------------------------------------------------
+        
+        @include modifier('brand') {
+            background-color: color('brand', 'primary');
+        }
+        
+        // Sticky Header
+        //---------------------------------------------------------
+        
+        @include option('sticky') {
+            &.fixed {
+                position: fixed;
+                margin-top: 0;
+                top: 0;
+                width: 100%;
+                z-index: 12;
+                background: this('sticky', 'background');
+                font-size: this('sticky', 'font-size');
+                @include overwrite-component('wrapper') {
+                    height: this('sticky', 'height');
+                }
+                @include overwrite('logo') {
+                    img {
+                        height: this('sticky', 'logo-height');
+                    }
+                }
+                @include modifier('absolute', 'not') {
+                    @include overwrite('billboard', $special: 'adjacent-sibling') {
+                        margin-top: this('sticky', 'height');
+                    }
+                }
+            }
+        }
+        
+    // Components
+    //-------------------------------------------------------------
+
+        @include component('wrapper') {
+            height: this('height');
+            transition: height base('transition');
+        }
+        
+    } // module
 
 } // @mixin header
