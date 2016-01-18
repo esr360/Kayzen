@@ -7357,7 +7357,9 @@ function e() {
         
         var options = $.extend({
             navigation : _navigation,
-            overlay    : '#site-overlay'
+            overlay    : '#site-overlay',
+            sticky     : _option('app-header', 'sticky'),
+            side       : _option('app-header', 'side')
         }, custom);
         
         // Run the code on each occurance of the element
@@ -7365,7 +7367,7 @@ function e() {
             
             var header = $(this);
             
-            if (_option('app-header', 'sticky'))  {
+            if (options.sticky)  {
                     
                 var stickyOffset = header.offset().top;
                 var navDropdown  = $(options.navigation).find("> ul > li > a:not(:only-child)").parent();
@@ -7399,7 +7401,7 @@ function e() {
                 
             }
             
-            if (_option('app-header', 'side')) {
+            if (options.side) {
                 header.prependTo('body');	
             }
 

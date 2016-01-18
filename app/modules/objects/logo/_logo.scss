@@ -9,11 +9,12 @@
 	//-------------------------------------------------------------
 
 	$logo: config((
-		name       : logo,
-		text-align : left,
-		color      : white,
-		size       : font-size(size-5),
-		padding    : 0
+		'name'         : 'logo',
+		'text-align'   : left,
+		'color'        : white,
+		'size'         : font-size('size-5'),
+		'padding'      : 0,
+        'image-height' : 38px
 	), $custom);
 	
 	//-------------------------------------------------------------
@@ -22,24 +23,26 @@
 
 	@include module {	
 	
-		color: option($config, color);
-		font-size: option($config, size);
-		text-align: option($config, text-align);
-		padding: option($config, padding);
+		color: this('color');
+		font-size: this('size');
+		text-align: this('text-align');
+		padding: this('padding');
+        
 		// for plain text logos
 		a {
-			color: option($config, color);
+			color: this('color');
 			display: inline-block;
 			&:hover {
 				text-decoration: none;
 			}
 		}
+        
 		// for image logos
 		img {
-			height: 38px;
+			height: this('image-height');
 			display: inline-block;
 			vertical-align: middle;
-			transition: base(transition);
+			transition: base('transition');
 		}
 	
 	} // component
