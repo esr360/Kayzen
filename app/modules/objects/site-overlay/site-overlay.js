@@ -19,12 +19,10 @@
         
         function showOverlay() {
             overlay.addClass('site-overlay-visible');
-            Kayzen.eventEmitter.emit('overlay:show'); 
         }
         
         function hideOverlay() {
             overlay.removeClass('site-overlay-visible');
-            Kayzen.eventEmitter.emit('overlay:hide'); 
         }
         
         if (state == 'show') {

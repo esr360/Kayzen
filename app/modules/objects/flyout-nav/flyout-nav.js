@@ -4,7 +4,7 @@
      * 
      * KAYZEN
      * @module: 'flyout-nav'
-     * @dependencies: 'side-nav'
+     * @dependencies: 'side-nav', ('site-overlay')
      * @author: @esr360
      * 
      */
@@ -14,9 +14,9 @@
         // Options
         var options = $.extend({
             
-            menu            : '#app-nav > ul',
-            trigger         : '#flyout-trigger',
-            overlay         : '#site-overlay'
+            menu    : '#app-nav > ul',
+            trigger : '#flyout-trigger',
+            overlay : '#site-overlay'
             
         }, custom);
         
@@ -71,14 +71,12 @@
             function openFlyoutNav() {
                 $('body').addClass('flyout-active');
                 $(options.trigger).addClass('active');
-                Kayzen.eventEmitter.emit('flyout:open'); 
             }
             
             // Close the flyout nav
             function closeFlyoutNav() {
                 $('body').removeClass('flyout-active');
                 $(options.trigger).removeClass('active');
-                Kayzen.eventEmitter.emit('flyout:close'); 
             }
             
             // Create the flyout nav

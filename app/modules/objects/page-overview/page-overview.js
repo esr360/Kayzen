@@ -53,7 +53,7 @@
                 var $item = $(this);
                 
                 // Get item title
-                var $title = $(this).find(_heading).first().text();
+                var $title = $item.find(_heading).first().text();
                 
                 // Set appropriate tooltip class
                 $item.attr('class', 'page-overview_item tooltip-' + $tooltipPos);

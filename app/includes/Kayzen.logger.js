@@ -6,8 +6,6 @@ var Kayzen = Kayzen || {};
 
 Kayzen.logger = (function(document, $, undefined) {
 
-    "use strict";
-
     var console = window.console;
     var exports = {};
     var levels = {

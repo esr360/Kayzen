@@ -58,17 +58,11 @@
                 
 <pre data-enlighter-language="html" class="EnlighterJSRAW">
 &lt;nav class="navigation">
-    &lt;ul>
-        &lt;li>&lt;a>Link 1&lt;/a>&lt;/li>
-        &lt;li>&lt;a>Link 2&lt;/a>&lt;/li>
-        &lt;li>&lt;a>Link 3&lt;/a>&lt;/li>
-    &lt;/ul>
-&lt;/nav>
 </pre>
                 
 				<h2 class="heading-light-size-5">Customizing</h2>
 				
-				<p>The Navigation can be customized using the following options:</p>
+				<p>The Page Overview can be customized using the following options:</p>
 				
 				<p class="alert-bar-help">Read the <a href="configuration.html">Configuration</a> page to learn more about a module's configuration.</p>
                 				
@@ -89,10 +83,10 @@
                     </tbody>
                 </table>
 				
-				<p>To change one of the above values, pass your new value(s) to the <code>navigation()</code> mixin in your theme file (e.g. app/themes/Kayzen/_kayzen.scss).</p>
+				<p>To change one of the above values, pass your new value(s) to the <code>page-overview()</code> mixin in your theme file (e.g. app/themes/Kayzen/_kayzen.scss).</p>
 						
 <pre data-enlighter-language="css" class="EnlighterJSRAW">
-@include navigation((
+@include page-overview((
     'bottom-border' : none,
     'title-color'   : black
 ));

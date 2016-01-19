@@ -9,8 +9,6 @@ var Kayzen = Kayzen || {};
 
 Kayzen.eventEmitter = (function(document, $, undefined) {
 
-    "use strict";
-
     var handlerId = 0;
 
     var exports = {

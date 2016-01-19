@@ -5999,15 +5999,15 @@ $(document).ready(function() {
     }; // KayenInfiniteScroll()
  
 }(jQuery));
-/**
- *
- * Kayzen.clckHelper
- * @author @esr360
- * @description Add class to element & remove from siblings
- *
- */
-
 (function ($) {
+    
+    /**
+     *
+     * Kayzen.clckHelper
+     * @author @esr360
+     * @description Add class to element & remove from siblings
+     *
+     */
  
     $.fn.KayzenClickHelper = function(custom) {
         
@@ -6047,8 +6047,6 @@ var Kayzen = Kayzen || {};
  */
 
 Kayzen.eventEmitter = (function(document, $, undefined) {
-
-    "use strict";
 
     var handlerId = 0;
 
@@ -6218,8 +6216,6 @@ var Kayzen = Kayzen || {};
 
 Kayzen.logger = (function(document, $, undefined) {
 
-    "use strict";
-
     var console = window.console;
     var exports = {};
     var levels = {
@@ -6293,6 +6289,33 @@ Kayzen.logger = (function(document, $, undefined) {
   return exports;
 
 }(document, window.jQuery));
+(function ($) {
+    
+    /**
+     * 
+     * KAYZEN
+     * Kayzen.scrollSpy
+     * @author: @esr360
+     * 
+     */
+ 
+    $.fn.scrollSpy = function(custom) {
+        
+        // Options
+        
+        var options = $.extend({
+            position     : _module['page-overview']['position'],
+            itemSelector : 'a'
+        }, custom);
+        
+        // Run the code on each occurance of the element
+        return this.each(function() {
+            
+        }); // this.each
+ 
+    }; // pageOverview()
+ 
+}(jQuery));
 /**
  *
  * Kayzen.socialShareCount
@@ -6959,7 +6982,7 @@ function e() {
      * 
      * KAYZEN
      * @module: 'flyout-nav'
-     * @dependencies: 'side-nav'
+     * @dependencies: 'side-nav', ('site-overlay')
      * @author: @esr360
      * 
      */
@@ -6969,9 +6992,9 @@ function e() {
         // Options
         var options = $.extend({
             
-            menu            : '#app-nav > ul',
-            trigger         : '#flyout-trigger',
-            overlay         : '#site-overlay'
+            menu    : '#app-nav > ul',
+            trigger : '#flyout-trigger',
+            overlay : '#site-overlay'
             
         }, custom);
         
@@ -7026,14 +7049,12 @@ function e() {
             function openFlyoutNav() {
                 $('body').addClass('flyout-active');
                 $(options.trigger).addClass('active');
-                Kayzen.eventEmitter.emit('flyout:open'); 
             }
             
             // Close the flyout nav
             function closeFlyoutNav() {
                 $('body').removeClass('flyout-active');
                 $(options.trigger).removeClass('active');
-                Kayzen.eventEmitter.emit('flyout:close'); 
             }
             
             // Create the flyout nav
@@ -7465,7 +7486,7 @@ function e() {
                 var $item = $(this);
                 
                 // Get item title
-                var $title = $(this).find(_heading).first().text();
+                var $title = $item.find(_heading).first().text();
                 
                 // Set appropriate tooltip class
                 $item.attr('class', 'page-overview_item tooltip-' + $tooltipPos);
@@ -7573,12 +7594,10 @@ if (_option('app-header', 'side')) {
         
         function showOverlay() {
             overlay.addClass('site-overlay-visible');
-            Kayzen.eventEmitter.emit('overlay:show'); 
         }
         
         function hideOverlay() {
             overlay.removeClass('site-overlay-visible');
-            Kayzen.eventEmitter.emit('overlay:hide'); 
         }
         
         if (state == 'show') {
