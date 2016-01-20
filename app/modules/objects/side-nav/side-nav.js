@@ -1,3 +1,31 @@
+(function ($) {
+    
+    /**
+     * 
+     * KAYZEN
+     * @module: 'side-nav'
+     * @author: @esr360
+     * 
+     */
+
+    $.fn.sideNav = function(custom) {
+        
+        // Options
+        var options = $.extend({
+            
+            container    : _searchBox
+            
+        }, custom);
+        
+        // Run the code on each occurance of the element
+        return this.each(function() {
+            
+        }); // this.each
+
+    }; // sideNav()
+
+}(jQuery));
+
 //=================================================================
 // Side-Header Navigation
 //=================================================================

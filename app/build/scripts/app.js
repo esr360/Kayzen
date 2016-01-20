@@ -7556,6 +7556,7 @@ function e() {
         var options = $.extend({
             
             container    : _searchBox,
+            input        : '[type="search"]',
             closeTrigger : '.search-box_close',
             visibleClass : 'search-box-visible'
             
@@ -7566,7 +7567,7 @@ function e() {
             
             $(this).click(function() {
                 $(options.container).addClass(options.visibleClass);
-                $(options.container).find('[type="search"]').focus();
+                $(options.container).find(options.input).focus();
                 return false;
             });
                         
@@ -7579,6 +7580,34 @@ function e() {
     }; // searchBox()
 
 }(jQuery));
+(function ($) {
+    
+    /**
+     * 
+     * KAYZEN
+     * @module: 'side-nav'
+     * @author: @esr360
+     * 
+     */
+
+    $.fn.sideNav = function(custom) {
+        
+        // Options
+        var options = $.extend({
+            
+            container    : _searchBox
+            
+        }, custom);
+        
+        // Run the code on each occurance of the element
+        return this.each(function() {
+            
+        }); // this.each
+
+    }; // sideNav()
+
+}(jQuery));
+
 //=================================================================
 // Side-Header Navigation
 //=================================================================

@@ -14,6 +14,7 @@
         var options = $.extend({
             
             container    : _searchBox,
+            input        : '[type="search"]',
             closeTrigger : '.search-box_close',
             visibleClass : 'search-box-visible'
             
@@ -24,7 +25,7 @@
             
             $(this).click(function() {
                 $(options.container).addClass(options.visibleClass);
-                $(options.container).find('[type="search"]').focus();
+                $(options.container).find(options.input).focus();
                 return false;
             });
                         

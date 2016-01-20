@@ -42,7 +42,7 @@
 					<li class="plain"><span>README.md</span></li>	
 				</ul>
                 
-				<p class="alert-bar-info"><strong>Github Page</strong> (customers only):  <a href="https://github.com/esr360/Kayzen/tree/master/app/modules/objects/scroll-wheel" target="blank">https://github.com/esr360/Kayzen/tree/master/app/modules/objects/scroll-wheel</a></p>
+				<p class="alert-bar-info"><strong>Github Page</strong> (customers only):  <a href="https://github.com/esr360/Kayzen/tree/master/app/modules/objects/search" target="blank">https://github.com/esr360/Kayzen/tree/master/app/modules/objects/search</a></p>
 				
 				<h2 class="heading-light-size-5">Module Overview</h2>
                 
@@ -57,12 +57,49 @@
 				<h2 class="heading-light-size-5">Examples</h2>
                 
 <pre data-enlighter-language="html" class="EnlighterJSRAW">
-&lt;a class="scroll-wheel" href="#key-features">&lt;/a>
+&lt;div class="search-box">
+    &lt;form class="container">
+        &lt;input required type="search" placeholder="Enter search query..." />
+        &lt;div class="button_group-small">
+            &lt;button class="search-box_go button-icon-primary" type="submit">
+                &lt;i class="fa fa-search">&lt;/i>
+            &lt;/button>
+            &lt;span class="search-box_close button-icon">
+                &lt;i class="fa fa-times">&lt;/i>
+            &lt;/span>
+        &lt;/div>
+    <&lt;form>
+&lt;/div>
+</pre>
+
+<br />
+
+<pre data-enlighter-language="html" class="EnlighterJSRAW">
+&lt;a id="search-trigger" href="#">
+    &lt;i class="fa fa-search">&lt;/i>
+&lt;/a>
+</pre>
+
+                <p>Then in your theme's JS file (e.g. app/themes/Kayzen/kayzen.js), call the <code>searchBox()</code> function on your desired trigger:</p>
+         
+<pre data-enlighter-language="javascript" class="EnlighterJSRAW">
+$('#search-trigger').searchBox();
+</pre>
+
+                <h3 class="heading-size-3">Options</h3>
+                
+<pre data-enlighter-language="javascript" class="EnlighterJSRAW">
+$('#search-trigger').searchBox({
+    container    : '.search-box',
+    input        : '[type="search"]',
+    closeTrigger : '.search-box_close',
+    visibleClass : 'search-box-visible'
+});
 </pre>
 
 				<h2 class="heading-light-size-5">Customizing</h2>
 				
-				<p>The Scroll Wheel can be customized using the following options:</p>
+				<p>The Search module can be customized using the following options:</p>
 				
 				<p class="alert-bar-help">Read the <a href="configuration.html">Configuration</a> page to learn more about a module's configuration.</p>
                 				
@@ -76,35 +113,54 @@
 					</thead>
 					<tbody>
 						<tr>
-							<td><code>size</code></td>
-							<td><code class="value">font-size('size-5')</code></td>
+							<td><code>output-JSON</code></td>
+							<td><code class="value">true</code></td>
 							<td>This allows the config to be accessed in the JavaScript.</td>
 						</tr>
 						<tr>
-							<td><code>color</code></td>
-							<td><code class="value">color('greyscale', 'white')</code></td>
-							<td>The position on the screen for the scroll-top icon (top, right, bottom, left).</td>
+							<td><code>background</code></td>
+							<td><code class="value">color('greyscale', 'grey-5')</code></td>
+							<td>The background color for the main search module.</td>
 						</tr>
 						<tr>
-							<td><code>outline-width</code></td>
-							<td><code class="value">0.075em</code></td>
-							<td>The width at which the icon should be hidden.</td>
+							<td><code>height</code></td>
+							<td><code class="value">option($top-bar, 'height')</code></td>
+							<td>The height of the module.</td>
 						</tr>
 						<tr>
-							<td><code>animate</code></td>
-							<td><code class="value">true</code></td>
-							<td>If enabled the Scroll Wheel icon will be animated.</td>
+							<td><code>input-background</code></td>
+							<td><code class="value">color('greyscale', 'grey-5')</code></td>
+							<td>The background of the input element.</td>
+						</tr>
+						<tr>
+							<td><code>input-color</code></td>
+							<td><code class="value">color('greyscale', 'grey-5')</code></td>
+							<td>The text color of the input element.</td>
+						</tr>
+						<tr>
+							<td><code>input-weight</code></td>
+							<td><code class="value">lighter</code></td>
+							<td>The font weight of the input element.</td>
+						</tr>
+						<tr>
+							<td><code>placeholder-color</code></td>
+							<td><code class="value">base('text-color')</code></td>
+							<td>The color of the input placeholder.</td>
+						</tr>
+						<tr>
+							<td><code>placeholder-weight</code></td>
+							<td><code class="value">lighter</code></td>
+							<td>The font weight of the input placeholder.</td>
 						</tr>
                     </tbody>
                 </table>
 				
-				<p>To change one of the above values, pass your new value(s) to the <code>scroll-wheel()</code> mixin in your theme file (e.g. app/themes/Kayzen/_kayzen.scss).</p>
+				<p>To change one of the above values, pass your new value(s) to the <code>search-box()</code> mixin in your theme file (e.g. app/themes/Kayzen/_kayzen.scss).</p>
 						
 <pre data-enlighter-language="css" class="EnlighterJSRAW">
-@include scroll-wheel((
-    'size'          : 30px,
-    'outline-width' : 2px,
-    'animate'       : false
+@include search-box((
+    'background'  : white,
+    'input-color' : #222222
 ));
 </pre>
 

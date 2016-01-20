@@ -9,8 +9,15 @@
     //-------------------------------------------------------------
 
     $site-overlay: config((
-        'name'            : 'search-box',
-        'output-JSON'     : true
+        'name'               : 'search-box',
+        'output-JSON'        : true,
+        'background'         : color('greyscale', 'grey-5'),
+        'height'             : option($top-bar, 'height'),
+        'input-background'   : color('greyscale', 'grey-5'),
+        'input-color'        : color('greyscale', 'white'),
+        'input-weight'       : lighter,
+        'placeholder-color'  : base('text-color'),
+        'placeholder-weight' : lighter
     ), $custom);
 
     //-------------------------------------------------------------
@@ -20,8 +27,8 @@
     @include module {
         
         position: fixed;
-        background: color('greyscale', 'grey-5');
-        height: option($top-bar, 'height');
+        background: this('background');
+        height: this('height');
         width: 100%;
         top: 0;
         z-index: 9;
@@ -30,9 +37,9 @@
         transition: base('transition');
         
         [type="search"] {
-            background: color('greyscale', 'grey-5');
-            color: color('greyscale', 'white');
-            font-weight: lighter;
+            background: this('input-background');
+            color: this('input-color');
+            font-weight: this('input-weight');
             height: 100%;
             width: 100%;
             border: none;
@@ -56,7 +63,7 @@
             }
         }
         
-        @include overwrite(container) {
+        @include overwrite('container') {
             height: 100%;
         }
         
@@ -66,9 +73,9 @@
         }
         
         ::placeholder {
-            font-weight: lighter;
+            font-weight: this('placeholder-weight');
+            color: this('placeholder-color');
             transition: base('transition');
-            color: base('text-color');
         }
         
     } // module
