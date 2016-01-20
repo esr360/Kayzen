@@ -4737,78 +4737,6 @@ function _option(component, option) {
 
 }(jQuery));
 
-//=================================================================
-// Scroll Spy
-//=================================================================
-
-(function ($) {
-    
-    $.fn.extend({
-    
-        scrollSpy: function(options) {
-            
-            var defaults = {  
-                selector : 'li'
-            };
-            
-            var options = $.extend(defaults, options);
-            
-            return this.each(function() {
-                
-                var $parent   = this,
-                    $selector = options.selector;
-                
-                // Cache selectors
-                var lastId,
-                    topMenuHeight = $($parent).outerHeight()+15,
-                    // All items
-                    items = $($parent).find($selector),
-                    // Anchors corresponding to menu items
-                    scrollItems = items.map(function() {
-                        if ($(this).prop('tagName') == 'A') {
-                            var item = $($(this).attr("href"));
-                        } else {
-                            var item = $($(this).find('a').attr("href"));
-                        }
-                        if (item.length) { return item; }
-                    });
-            
-                // Bind to scroll
-                $(window).scroll(function() {
-                    
-                    // Get container scroll position
-                    var fromTop = $(this).scrollTop()+topMenuHeight;
-                    
-                    // Get id of current scroll item
-                    var cur = scrollItems.map(function(){
-                    if ($(this).offset().top < fromTop)
-                        return this;
-                    });
-                    
-                    // Get the id of the current element
-                    cur = cur[cur.length-1];
-                    var id = cur && cur.length ? cur[0].id : "";
-                    
-                    if (lastId !== id) {
-                        lastId = id;
-                        // Set/remove active class
-                        items.removeClass("active");
-                        if ($($selector).prop('tagName') == 'A') {
-                            items.filter("[href=#"+id+"]").addClass("active");
-                        } else {
-                            items.find('a').filter("[href=#"+id+"]").end().addClass("active");
-                        }
-                    }   
-                                    
-                });
-            
-            });
-        
-        } // scrollSpy
-    
-    });
-
-}(jQuery));
 /*-----------------------------------------------------------------
 
 ScrollTrigger
@@ -6304,16 +6232,74 @@ Kayzen.logger = (function(document, $, undefined) {
         // Options
         
         var options = $.extend({
-            position     : _module['page-overview']['position'],
-            itemSelector : 'a'
+            itemSelector : 'li'
         }, custom);
         
         // Run the code on each occurance of the element
         return this.each(function() {
             
+            // Cache the parent container
+            var $parent = $(this);
+            
+            // Cache lastId
+            var lastId;
+            
+            // Get the height of the parent container
+            var parentHeight = $($parent).outerHeight()+15;
+            
+            // Get all items
+            var items = $($parent).find(options.itemSelector);
+                
+            // Anchors corresponding to menu items
+            var scrollItems = items.map(function() {
+                if ($(this).prop('tagName') == 'A') {
+                    var item = $($(this).attr('href'));
+                } else {
+                    var item = $($(this).find('a').attr('href'));
+                }
+                if (item.length) { 
+                    return item; 
+                }
+            });
+        
+            // Bind to scroll
+            $(window).scroll(function() {
+                
+                // Get container scroll position
+                var fromTop = $(this).scrollTop()+parentHeight;
+                
+                // Get id of current scroll item
+                var current = scrollItems.map(function() {
+                if ($(this).offset().top < fromTop)
+                    return this;
+                });
+                
+                // Get the id of the current element
+                current = current[current.length-1];
+                
+                var id = current && current.length ? current[0].id : '';
+                
+                if (lastId !== id) {
+                    
+                    lastId = id;
+                    
+                    // Remove active class from old item
+                    items.removeClass('active');
+                    
+                    // Add active class to appropriate item
+                    if ($(options.itemSelector).prop('tagName') == 'A') {
+                        items.filter('[href=#'+id+']').addClass('active');
+                    } else {
+                        items.find('a').filter('[href=#'+id+']').end().addClass('active');
+                    }
+                    
+                }   
+                                
+            });
+                
         }); // this.each
  
-    }; // pageOverview()
+    }; // scrollSpy()
  
 }(jQuery));
 /**
@@ -7447,8 +7433,9 @@ function e() {
         // Options
         
         var options = $.extend({
-            position     : _module['page-overview']['position'],
-            itemSelector : 'a'
+            position      : _module['page-overview']['position'],
+            itemSelector  : 'a',
+            titleSelector : _heading
         }, custom);
         
         // Run the code on each occurance of the element
@@ -7468,7 +7455,7 @@ function e() {
             }
             
             // Create the overview navigation
-            $container.clone();
+            $container = $container.clone();
             
             // Clean attributes
             $container.removeAttr('class id');
@@ -7486,7 +7473,7 @@ function e() {
                 var $item = $(this);
                 
                 // Get item title
-                var $title = $item.find(_heading).first().text();
+                var $title = $item.find(options.titleSelector).first().text();
                 
                 // Set appropriate tooltip class
                 $item.attr('class', 'page-overview_item tooltip-' + $tooltipPos);
@@ -7501,7 +7488,7 @@ function e() {
                 
                 // Call scrollSpy plugin on parent
                 $('.page-overview-' + options.position).scrollSpy({
-                    selector : 'a'
+                    itemSelector : 'a'
                 });
                 
             });
@@ -7511,32 +7498,87 @@ function e() {
     }; // pageOverview()
  
 }(jQuery));
-//-----------------------------------------------------------------
-// Scroll to Top
-//-----------------------------------------------------------------
+(function ($) {
+    
+    /**
+     * 
+     * KAYZEN
+     * @module: 'scroll-top'
+     * @author: @esr360
+     * 
+     */
 
-$(window).bind("scroll", function() {
-    if ($(this).scrollTop() > 350) {
-        $(".scroll-top").addClass('visible');
-    } else {
-        $(".scroll-top").stop().removeClass('visible');
-    }
-});
-//=================================================================
-// Search
-//=================================================================
+    // Because .scrollTop() is already defined by jQuery, we must
+    // call our plugin something else, i.e. scrollToTop();
+    $.fn.scrollToTop = function(custom) {
+        
+        // Options
+        
+        var options = $.extend({
+            
+            activePosition : 350,
+            activeClass    : 'visible'
+            
+        }, custom);
+        
+        // Run the code on each occurance of the element
+        return this.each(function() {
+            
+            var scrollTopIcon = $(this);
+            
+            $(window).bind("scroll", function() {
+                if ($(this).scrollTop() > options.activePosition) {
+                console.log('test');
+                    $(scrollTopIcon).addClass(options.activeClass);
+                } else {
+                    $(scrollTopIcon).stop().removeClass(options.activeClass);
+                }
+            });
+            
+        }); // this.each
 
-$('#search-trigger').click(function() {
-	$(_searchBox)
-		.addClass('search-box-visible')
-		.find('[type="search"]')
-		.focus();
-    return false;
-});
+    }; // scrollToTop()
 
-$('.search-box_close').click(function() {
-	$(_searchBox).removeClass('search-box-visible');
-});
+}(jQuery));
+(function ($) {
+    
+    /**
+     * 
+     * KAYZEN
+     * @module: 'search-box'
+     * @author: @esr360
+     * 
+     */
+
+    $.fn.searchBox = function(custom) {
+        
+        // Options
+        var options = $.extend({
+            
+            container    : _searchBox,
+            closeTrigger : '.search-box_close',
+            visibleClass : 'search-box-visible'
+            
+        }, custom);
+        
+        // Run the code on each occurance of the element
+        return this.each(function() {
+            
+            $(this).click(function() {
+                $(options.container).addClass(options.visibleClass);
+                $(options.container).find('[type="search"]').focus();
+                return false;
+            });
+                        
+            $(options.closeTrigger).click(function() {
+                $(options.container).removeClass(options.visibleClass);
+            });
+            
+        }); // this.each
+
+    }; // searchBox()
+
+}(jQuery));
 //=================================================================
 // Side-Header Navigation
 //=================================================================
@@ -7755,5 +7797,9 @@ $(document).ready(function() {
     $(_appHeader).header();
     
     $('#page-overview').pageOverview();
+    
+    $(_scrollTop).scrollToTop();
+    
+    $('#search-trigger').searchBox();
 
 }); // document.ready

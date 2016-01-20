@@ -9,46 +9,53 @@
 	//-------------------------------------------------------------
 
 	$scroll-wheel: config((
-		'name'            : 'scroll-wheel'
+		'name'            : 'scroll-wheel',
+        'size'            : font-size('size-5'),
+        'color'           : color('greyscale', 'white'),
+        'outline-width'   : 0.075em,
+        'animate'         : true
 	), $custom);
 	
 	//-------------------------------------------------------------
 	// Component
 	//-------------------------------------------------------------
 	
-	.scroll-wheel {
+	@include module {
 	
+		@extend %horizontal-center;
 		position: absolute;
-		font-size: font-size('size-5');
-		color: color('greyscale', 'white');
-		border: 0.075em solid;
+		font-size: this('size');
+		color: this('color');
+		border: this('outline-width') solid;
 		border-radius: 1em;
 		width: 1.5em;
 		height: 2.4em;
 		bottom: 2rem;
-		@extend %horizontal-center;
+        
 		&:before {
+			@extend %horizontal-center;
 			content: "";
 			height: 0.25em;
 			width: 0.25em;
 			border-radius: 50%;
-			background: color('greyscale', 'white');
+			background: this('color');
 			position: absolute;
 			top: 0.5em;
-			// animation: scroll-down 1.2s infinite;
 			transform: translateZ(0);
-			@extend %horizontal-center;
+            @if this('animate') {
+			    animation: scroll-down 1.2s infinite;
+            }
 		}
 	
-		@keyframes scroll-down{
-			0%{
+		@keyframes scroll-down {
+			0% {
 				top: 0.5em;
 			}
-			100%{
+			100% {
 				top: 1.2em;
 			}
 		}
 	
-	} // .scroll-wheel
+	} // module
 	
 } // @mixin scroll-wheel

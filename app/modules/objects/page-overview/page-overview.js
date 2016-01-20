@@ -14,8 +14,9 @@
         // Options
         
         var options = $.extend({
-            position     : _module['page-overview']['position'],
-            itemSelector : 'a'
+            position      : _module['page-overview']['position'],
+            itemSelector  : 'a',
+            titleSelector : _heading
         }, custom);
         
         // Run the code on each occurance of the element
@@ -35,7 +36,7 @@
             }
             
             // Create the overview navigation
-            $container.clone();
+            $container = $container.clone();
             
             // Clean attributes
             $container.removeAttr('class id');
@@ -53,7 +54,7 @@
                 var $item = $(this);
                 
                 // Get item title
-                var $title = $item.find(_heading).first().text();
+                var $title = $item.find(options.titleSelector).first().text();
                 
                 // Set appropriate tooltip class
                 $item.attr('class', 'page-overview_item tooltip-' + $tooltipPos);
@@ -68,7 +69,7 @@
                 
                 // Call scrollSpy plugin on parent
                 $('.page-overview-' + options.position).scrollSpy({
-                    selector : 'a'
+                    itemSelector : 'a'
                 });
                 
             });

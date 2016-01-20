@@ -63,5 +63,9 @@ $(document).ready(function() {
     $(_appHeader).header();
     
     $('#page-overview').pageOverview();
+    
+    $(_scrollTop).scrollToTop();
+    
+    $('#search-trigger').searchBox();
 
 }); // document.ready

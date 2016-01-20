@@ -56,9 +56,50 @@
                 
 				<h2 class="heading-light-size-5">Examples</h2>
                 
+                <p>This module requires a base set of elements to act as the main page overview navigation. The fixed side navigation menu is created dynamically based of these items.</p>
+                
 <pre data-enlighter-language="html" class="EnlighterJSRAW">
-&lt;nav class="navigation">
+&lt;div id="pageoverview">
+    &lt;a href="#anchor1">
+        &lt;div class=" button-icon-plain-size-6">
+            &lt;i class="fa fa-tablet">&lt;/i>
+        &lt;/div>
+        &lt;h3 class="heading">Mobile Optimized&lt;/h3>
+    &lt;/a>
+    &lt;a href="#anchor2">
+        &lt;div class=" button-icon-plain-size-6">
+            &lt;i class="fa fa-facebook">&lt;/i>
+        &lt;/div>
+        &lt;h3 class="heading">Social Media&lt;/h3>
+    &lt;/a>
+&lt;/div>
 </pre>
+
+                <p>Then in your theme's JS file (e.g. app/themes/Kayzen/kayzen.js), call the <code>pageOverview()</code> function on your element wrapper:</p>
+                
+<pre data-enlighter-language="javascript" class="EnlighterJSRAW">
+$('#page-overview').pageOverview();
+</pre>
+                
+                <p class="alert-bar-success">The above example is only the bare minimum amount of code to create a fixed page overview menu. For some real examples see the following:</p>
+                
+                <ul class="list-clear">
+                    <li><a href="#">Example 1</a></li>
+                    <li><a href="#">Example 2</a></li>
+                    <li><a href="#">Example 3</a></li>
+                </ul>
+
+                <p>The parent navigation sections should have a <code>button-icon</code> and some text to act as the tooltip content, generally the item's title. By default, the plugin uses the first <code>heading</code> element of the item for the tooltip. You can change the selectors and the default fixed menu position by passing the appropriate option when calling the plugin:</p>  
+                     
+<pre data-enlighter-language="javascript" class="EnlighterJSRAW">
+$('#page-overview').pageOverview({
+    position      : 'bottom',
+    itemSelector  : '.item',
+    titleSelector : '.title'
+});
+</pre>
+
+                <p class="alert-bar-error">Note that passing a custom <b>position</b> value here will override the below <b>position</b> value in the Sass config.</p>
                 
 				<h2 class="heading-light-size-5">Customizing</h2>
 				
@@ -80,6 +121,11 @@
 							<td><code class="value">true</code></td>
 							<td>This allows the config to be accessed in the JavaScript.</td>
 						</tr>
+						<tr>
+							<td><code>position</code></td>
+							<td><code class="value">left</code></td>
+							<td>The default position on the screen the fixed menu should appear.</td>
+						</tr>
                     </tbody>
                 </table>
 				
@@ -87,8 +133,7 @@
 						
 <pre data-enlighter-language="css" class="EnlighterJSRAW">
 @include page-overview((
-    'bottom-border' : none,
-    'title-color'   : black
+    'position' : 'right'
 ));
 </pre>
 

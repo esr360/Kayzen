@@ -1,15 +1,39 @@
-//=================================================================
-// Search
-//=================================================================
+(function ($) {
+    
+    /**
+     * 
+     * KAYZEN
+     * @module: 'search-box'
+     * @author: @esr360
+     * 
+     */
 
-$('#search-trigger').click(function() {
-	$(_searchBox)
-		.addClass('search-box-visible')
-		.find('[type="search"]')
-		.focus();
-    return false;
-});
+    $.fn.searchBox = function(custom) {
+        
+        // Options
+        var options = $.extend({
+            
+            container    : _searchBox,
+            closeTrigger : '.search-box_close',
+            visibleClass : 'search-box-visible'
+            
+        }, custom);
+        
+        // Run the code on each occurance of the element
+        return this.each(function() {
+            
+            $(this).click(function() {
+                $(options.container).addClass(options.visibleClass);
+                $(options.container).find('[type="search"]').focus();
+                return false;
+            });
+                        
+            $(options.closeTrigger).click(function() {
+                $(options.container).removeClass(options.visibleClass);
+            });
+            
+        }); // this.each
 
-$('.search-box_close').click(function() {
-	$(_searchBox).removeClass('search-box-visible');
-});
+    }; // searchBox()
+
+}(jQuery));
