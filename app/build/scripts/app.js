@@ -5864,7 +5864,7 @@ $(document).ready(function() {
             navId         : '',
             pagerId       : '',
             pagerSelector : 'li',
-            owlOptions : {
+            owlOptions    : {
                 items     : 1,
                 loop      : true,
                 dots      : false,
@@ -5873,9 +5873,9 @@ $(document).ready(function() {
             
         }, custom);
 			
-		var navId = options.navId,
-			pagerId = options.pagerId,
-			pagerSelector = options.pagerSelector;
+		var navId = options.navId;
+		var pagerId = options.pagerId;
+		var pagerSelector = options.pagerSelector;
             
         // Run the code on each occurance of the element
         return this.each(function() {
@@ -7353,7 +7353,7 @@ function e() {
      * 
      * KAYZEN
      * @module: 'app-header'
-     * @requires: 'navigation'
+     * @requires: 'navigation', 'side-nav', 'site-overlay'
      * @author: @esr360
      * 
      */
@@ -7361,12 +7361,14 @@ function e() {
     $.fn.header = function(custom) {
         
         // Options
-        
         var options = $.extend({
-            navigation : _navigation,
-            overlay    : '#site-overlay',
-            sticky     : _option('app-header', 'sticky'),
-            side       : _option('app-header', 'side')
+            
+            navigation    : _navigation,
+            overlay       : '#site-overlay',
+            sticky        : _option('app-header', 'sticky'),
+            side          : _option('app-header', 'side'),
+            openCloseIcon : _module['side-nav']['collapsible']['icon']
+            
         }, custom);
         
         // Run the code on each occurance of the element
@@ -7374,8 +7376,8 @@ function e() {
             
             var header = $(this);
             
-            if (options.sticky)  {
-                    
+            function stickyHeader() {
+                        
                 var stickyOffset = header.offset().top;
                 var navDropdown  = $(options.navigation).find("> ul > li > a:not(:only-child)").parent();
                 
@@ -7390,13 +7392,13 @@ function e() {
                         }
                     );
                 }
-	
+    
                 function unStickHeader() {
                     header.removeClass('fixed');
                     navDropdown.unbind('mouseenter mouseleave');
                     $(options.overlay).siteOverlay('hide');
                 }
-	
+    
                 $(window).on("load scroll", function(e) {
                     var scroll = $(window).scrollTop();
                     if (scroll > stickyOffset) {
@@ -7405,11 +7407,52 @@ function e() {
                         unStickHeader();
                     }
                 });
-                
+            
             }
             
-            if (options.side) {
-                header.prependTo('body');	
+            function sideHeader() {
+                
+                header.prependTo('body');
+                
+                // replace navigation class
+                $(_navigation).removeClass (function (index, css) {
+                    return (css.match (/(^|\s)navigation\S+/g) || []).join(' ');
+                }).addClass('app-header_side-nav');
+                
+                // add collapsible functionality
+                if (_option('side-nav', 'collapsible')) {
+                    
+                    // create open/close icon
+                    var openClose = '<i class="side-nav_openClose fa ' + options.openCloseIcon + '"></i>';
+                    
+                    $('.app-header_side-nav').find('a:not(:only-child)').prepend(openClose);
+                    
+                    var hasChildMegaMenu = $('.app-header_side-nav').find('li > [class*="mega-menu"]').parent();
+                    
+                    hasChildMegaMenu.find('.side-nav_openClose').remove();
+                        
+                    $('.app-header_side-nav').on('click', '.side-nav_openClose', function(){
+                        $(this).parent().find('+ ul').slideToggle(baseTransition);
+                        return false;
+                    });
+                        
+                }
+
+                // collapse by default
+                var openDefault = _module['side-nav']['collapsible']['open-by-default'];
+                
+                if ($('.app-header_side-nav').is('[class*="-collapse"]') == true || openDefault == false) {
+                    $('.app-header_side-nav').find('a:not(:only-child) ~ ul').hide();
+                }
+                
+            }
+                
+            if (options.sticky)  {
+                stickyHeader();
+            }
+                
+            if (options.side) {	
+                sideHeader();
             }
 
         }); // this.each
@@ -7528,7 +7571,6 @@ function e() {
             
             $(window).bind("scroll", function() {
                 if ($(this).scrollTop() > options.activePosition) {
-                console.log('test');
                     $(scrollTopIcon).addClass(options.activeClass);
                 } else {
                     $(scrollTopIcon).stop().removeClass(options.activeClass);
@@ -7580,70 +7622,6 @@ function e() {
     }; // searchBox()
 
 }(jQuery));
-(function ($) {
-    
-    /**
-     * 
-     * KAYZEN
-     * @module: 'side-nav'
-     * @author: @esr360
-     * 
-     */
-
-    $.fn.sideNav = function(custom) {
-        
-        // Options
-        var options = $.extend({
-            
-            container    : _searchBox
-            
-        }, custom);
-        
-        // Run the code on each occurance of the element
-        return this.each(function() {
-            
-        }); // this.each
-
-    }; // sideNav()
-
-}(jQuery));
-
-//=================================================================
-// Side-Header Navigation
-//=================================================================
-
-if (_option('app-header', 'side')) {
-	
-	// replace navigation class
-	$(_navigation).removeClass (function (index, css) {
-		return (css.match (/(^|\s)navigation\S+/g) || []).join(' ');
-	}).addClass('app-header_side-nav');
-	
-	// add collapsible functionality
-	if (_option('side-nav', 'collapsible')) {
-		
-		// create open/close icon
-		var openClose = '<i class="side-nav_openClose fa ' + _module['side-nav']['collapsible']['icon'] + '"></i>'
-		$('.app-header_side-nav').find('a:not(:only-child)').prepend(openClose);
-		
-		$('.app-header_side-nav')
-			.find('li > [class*="mega-menu"]').parent()
-			.find('.side-nav_openClose').remove();
-			
-		$('.app-header_side-nav').on('click', '.side-nav_openClose', function(e){
-			$(this).parent().find('+ ul').slideToggle(baseTransition);
-		});
-			
-	}
-
-	// collapse by default
-	var openDefault = _module['side-nav']['collapsible']['open-by-default'];
-	
-	if ($('.app-header_side-nav').is('[class*="-collapse"]') == true || openDefault == false) {
-		$('.app-header_side-nav').find('a:not(:only-child) ~ ul').hide();
-	}
-	
-}
 (function ($) {
     
     /**

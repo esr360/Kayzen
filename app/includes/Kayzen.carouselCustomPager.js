@@ -16,7 +16,7 @@
             navId         : '',
             pagerId       : '',
             pagerSelector : 'li',
-            owlOptions : {
+            owlOptions    : {
                 items     : 1,
                 loop      : true,
                 dots      : false,
@@ -25,9 +25,9 @@
             
         }, custom);
 			
-		var navId = options.navId,
-			pagerId = options.pagerId,
-			pagerSelector = options.pagerSelector;
+		var navId = options.navId;
+		var pagerId = options.pagerId;
+		var pagerSelector = options.pagerSelector;
             
         // Run the code on each occurance of the element
         return this.each(function() {

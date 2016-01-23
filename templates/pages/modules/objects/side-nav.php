@@ -1,8 +1,8 @@
 <?php 
 	include ('../../../app.php');
 	// page config
-	$title = 'Search Box';
-	$tagLine = 'app/modules/objects/search';
+	$title = 'Side Nav';
+	$tagLine = 'app/modules/objects/side-nav';
 ?>
 
 <!DOCTYPE html>
@@ -37,8 +37,7 @@
 				<h2 class="heading-light-size-5">Files</h2>
 				
 				<ul class="list-tags">
-					<li class="plain"><span>_search.scss</span></li>
-					<li class="plain"><span>search.js</span></li>
+					<li class="plain"><span>_side-nav.scss</span></li>
 					<li class="plain"><span>README.md</span></li>	
 				</ul>
                 
@@ -46,24 +45,26 @@
 				
 				<h2 class="heading-light-size-5">Module Overview</h2>
                 
+                <p>The <code>side-nav</code> module is used when the <code>header</code> module has the <code>side</code> option set, and is also used for the <code>flyout-nav</code> module.</p>
+                
                 <div class="well">
                     <ul class="list-reset">
-                        <li><b>Name:</b> <code>search-box</code></li>
-                        <li><b>Modifiers:</b> <code>visible</code></li>
-                        <li><b>Components:</b> <code>go</code>, <code>close</code></li>
+                        <li><b>Name:</b> <code>side-nav</code></li>
+                        <li><b>Modifiers:</b> null</li>
+                        <li><b>Components:</b> <code>openClose</code></li>
                     </ul>
                 </div>
                 
 				<h2 class="heading-light-size-5">Examples</h2>
                 
 <pre data-enlighter-language="html" class="EnlighterJSRAW">
-&lt;div class="search-box">
+&lt;div class="side-nav">
 &lt;/div>
 </pre>
 
 				<h2 class="heading-light-size-5">Customizing</h2>
 				
-				<p>The Search module can be customized using the following options:</p>
+				<p>The Side-Nav module can be customized using the following options:</p>
 				
 				<p class="alert-bar-help">Read the <a href="configuration.html">Configuration</a> page to learn more about a module's configuration.</p>
                 				
@@ -81,48 +82,13 @@
 							<td><code class="value">true</code></td>
 							<td>This allows the config to be accessed in the JavaScript.</td>
 						</tr>
-						<tr>
-							<td><code>background</code></td>
-							<td><code class="value">color('greyscale', 'grey-5')</code></td>
-							<td>The background color for the main search module.</td>
-						</tr>
-						<tr>
-							<td><code>height</code></td>
-							<td><code class="value">option($top-bar, 'height')</code></td>
-							<td>The height of the module.</td>
-						</tr>
-						<tr>
-							<td><code>input-background</code></td>
-							<td><code class="value">color('greyscale', 'grey-5')</code></td>
-							<td>The background of the input element.</td>
-						</tr>
-						<tr>
-							<td><code>input-color</code></td>
-							<td><code class="value">color('greyscale', 'grey-5')</code></td>
-							<td>The text color of the input element.</td>
-						</tr>
-						<tr>
-							<td><code>input-weight</code></td>
-							<td><code class="value">lighter</code></td>
-							<td>The font weight of the input element.</td>
-						</tr>
-						<tr>
-							<td><code>placeholder-color</code></td>
-							<td><code class="value">base('text-color')</code></td>
-							<td>The color of the input placeholder.</td>
-						</tr>
-						<tr>
-							<td><code>placeholder-weight</code></td>
-							<td><code class="value">lighter</code></td>
-							<td>The font weight of the input placeholder.</td>
-						</tr>
                     </tbody>
                 </table>
 				
-				<p>To change one of the above values, pass your new value(s) to the <code>search-box()</code> mixin in your theme file (e.g. app/themes/Kayzen/_kayzen.scss).</p>
+				<p>To change one of the above values, pass your new value(s) to the <code>side-nav()</code> mixin in your theme file (e.g. app/themes/Kayzen/_kayzen.scss).</p>
 						
 <pre data-enlighter-language="css" class="EnlighterJSRAW">
-@include search-box((
+@include side-nav((
     'background'  : white,
     'input-color' : #222222
 ));

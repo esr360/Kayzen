@@ -28,7 +28,6 @@
             
             $(window).bind("scroll", function() {
                 if ($(this).scrollTop() > options.activePosition) {
-                console.log('test');
                     $(scrollTopIcon).addClass(options.activeClass);
                 } else {
                     $(scrollTopIcon).stop().removeClass(options.activeClass);

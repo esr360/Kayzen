@@ -8782,23 +8782,23 @@ progress::-moz-progress-bar {
 }
 .search-box ::-webkit-input-placeholder, [class*="search-box-"] ::-webkit-input-placeholder {
   font-weight: lighter;
-  transition: 0.4s;
   color: #6f777b;
+  transition: 0.4s;
 }
 .search-box ::-moz-placeholder, [class*="search-box-"] ::-moz-placeholder {
   font-weight: lighter;
-  transition: 0.4s;
   color: #6f777b;
+  transition: 0.4s;
 }
 .search-box :-ms-input-placeholder, [class*="search-box-"] :-ms-input-placeholder {
   font-weight: lighter;
-  transition: 0.4s;
   color: #6f777b;
+  transition: 0.4s;
 }
 .search-box ::placeholder, [class*="search-box-"] ::placeholder {
   font-weight: lighter;
-  transition: 0.4s;
   color: #6f777b;
+  transition: 0.4s;
 }
 
 .scroll-wheel, [class*="scroll-wheel-"] {
