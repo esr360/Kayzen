@@ -9,7 +9,10 @@
 	//-------------------------------------------------------------
 
 	$site-overlay: config((
-		'name'            : 'site-overlay'
+		'name'            : 'site-overlay',
+        'background'      : rgba(black, 0.4),
+        'z-index'         : 6,
+        'transition'      : base('transition')
 	), $custom);
 	
 	//-------------------------------------------------------------

@@ -8840,10 +8840,10 @@ progress::-moz-progress-bar {
     top: 1.2em;
   }
 }
-.sidebar ul {
+.sidebar ul, [class*="sidebar-"] ul {
   margin: 0;
 }
-.sidebar .rating {
+.sidebar .rating, [class*="sidebar-"] .rating {
   color: #6f777b;
 }
 

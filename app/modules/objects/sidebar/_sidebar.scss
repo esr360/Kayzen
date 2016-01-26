@@ -8,24 +8,25 @@
 	// Config
 	//-------------------------------------------------------------
 
-	$scroll-wheel: config((
-		name            : sidebar
+	$sidebar: config((
+		'name'         : 'sidebar',
+        'rating-color' : color('greyscale', 'grey-4')
 	), $custom);
 	
 	//-------------------------------------------------------------
-	// Component
+	// Module
 	//-------------------------------------------------------------
 	
-	.sidebar {
+	@include module {
 	
 		ul {
             margin: 0;
         }
         
         .rating {
-            color: color('greyscale', 'grey-4');
+            color: this('rating-color');
         }
 	
-	} // .sidebar
+	} // module
 	
 } // @mixin sidebar

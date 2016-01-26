@@ -7669,6 +7669,35 @@ function e() {
     }; // Kayzen.siteOverlay
  
 }(jQuery));
+(function ($) {
+    
+    /**
+     * 
+     * KAYZEN
+     * @module: 'top-bar'
+     * @requires: 'site-overlay'
+     * @author: @esr360
+     * 
+     */
+ 
+    $.fn.topBar = function(custom) {
+        
+        // Options
+        var options = $.extend({
+            
+            navigation    : _navigation
+            
+        }, custom);
+        
+        // Run the code on each occurance of the element
+        return this.each(function() {
+
+        }); // this.each
+ 
+    }; // topBar()
+ 
+}(jQuery));
+
 //=================================================================
 // Top Bar
 //=================================================================
@@ -7683,10 +7712,10 @@ $(window).on("load scroll", function(e) {
 	if (scroll > topBarHeight) {
 		topBarDropdown.hover(
 			function(){ 
-				$("#site-overlay").addClass('top-bar_visible');
+				$("#site-overlay").siteOverlay('show');
 			},
 			function(){ 
-				$("#site-overlay").removeClass('top-bar_visible');
+				$("#site-overlay").siteOverlay('hide');
 			}
 		);
 	} else {

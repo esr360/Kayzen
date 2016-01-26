@@ -26,15 +26,15 @@
 	
 	@include module {
 	
-		background: option($config, 'background');
+		background: this('background');
 		position: relative;
 		font-weight: lighter;
-		z-index: option($config, 'z-index');
+		z-index: this('z-index');
 		
 		a:not([class*="button"]) {
-			color: option($config, 'link-color');
+			color: this('link-color');
 			&:hover {
-				color: option($config, 'link-hover-color');
+				color: this('link-hover-color');
 				text-decoration: none;
 			}
 		}
@@ -46,7 +46,7 @@
 		
 		@include component('nav') {
 			
-			height: option($config, 'height');
+			height: this('height');
 			margin: 0 1em;
 			
 			&:first-child {
