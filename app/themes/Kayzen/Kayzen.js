@@ -67,5 +67,9 @@ $(document).ready(function() {
     $(_scrollTop).scrollToTop();
     
     $('#search-trigger').searchBox();
+    
+    $(_topBar).topBar();
+    
+    $(_twitterFeed).twitterFeed();
 
 }); // document.ready

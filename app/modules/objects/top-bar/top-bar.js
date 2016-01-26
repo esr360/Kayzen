@@ -14,42 +14,40 @@
         // Options
         var options = $.extend({
             
-            navigation    : _navigation
+            overlay       : $('#site-overlay')
             
         }, custom);
         
         // Run the code on each occurance of the element
         return this.each(function() {
+            
+            var topBar = $(this);
+            var topBarDropdown = $('[class*="top-bar_nav"]').find("> ul > li > a:not(:only-child)").parent();
+
+            $(window).on("load scroll", function(e) {
+                
+                var scroll = $(window).scrollTop();
+                
+                var topBarHeight = topBar.height();
+                    
+                if (scroll > topBarHeight) {
+                    topBarDropdown.hover(
+                        function(){ 
+                            options.overlay.siteOverlay('show');
+                        },
+                        function(){ 
+                            options.overlay.siteOverlay('hide');
+                        }
+                    );
+                } else {
+                    topBarDropdown.unbind('mouseenter mouseleave');
+                    options.overlay.siteOverlay('hide');
+                }
+                
+            });
 
         }); // this.each
  
     }; // topBar()
  
 }(jQuery));
-
-//=================================================================
-// Top Bar
-//=================================================================
-
-var topBarDropdown = $('[class*="top-bar_nav"]').find("> ul > li > a:not(:only-child)").parent();
-
-$(window).on("load scroll", function(e) {
-	
-	var scroll = $(window).scrollTop(),
-		topBarHeight = $(_topBar).height();
-		
-	if (scroll > topBarHeight) {
-		topBarDropdown.hover(
-			function(){ 
-				$("#site-overlay").siteOverlay('show');
-			},
-			function(){ 
-				$("#site-overlay").siteOverlay('hide');
-			}
-		);
-	} else {
-		topBarDropdown.unbind('mouseenter mouseleave');
-		$("#site-overlay").removeClass('top-bar_visible');
-	}
-	
-});

@@ -299,15 +299,13 @@ module.exports = function(grunt) {
                     processLinks: true,
                     htmlhint: {},
                 },
-                files: [
-                    {
-                        expand: true, 
-                        cwd: 'templates/pages/', 
-                        src: '**/*.php', 
-                        dest: 'build', 
-                        ext: '.html'     
-                    }
-                ]
+                files: [{
+                    expand: true, 
+                    cwd: 'templates/pages/', 
+                    src: '**/*.php', 
+                    dest: 'build', 
+                    ext: '.html'     
+                }]
             }
         }
 

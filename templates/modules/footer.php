@@ -86,7 +86,7 @@
                     </div>
                     
                     <!-- Twitter Feed -->
-                    <div class="span-3">
+                    <div class="span-3" id="footer-twitter-feed">
                         <header class="heading_group-small">
                             <h4 class="footer_title heading-heavy-uppercase-size-3 font-2">
                                 <i class="fa fa-twitter"></i> Twitter Feed
@@ -103,7 +103,7 @@
                                 </div>
                             </div>
                         </header>
-                        <div id="footer-twitter-feed"></div>
+                        <div class="twitter-feed_content"></div>
                     </div>
                     
                     <!-- Testimonials -->

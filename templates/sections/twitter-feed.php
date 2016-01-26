@@ -21,7 +21,7 @@
         <a class="loading-tweets" href="http://twitter.com/esr360" target="blank">
             <i class="fa fa-twitter"></i>
         </a>
-        <div class="container" id="twitter-feed">
+        <div class="twitter-feed_content container">
             <div class="tweets-nav icon_group-small">
                 <div class="tweet-prev button-icon-border-size-2">
                     <i class="fa fa-angle-left"></i>

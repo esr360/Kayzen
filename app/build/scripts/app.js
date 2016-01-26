@@ -7085,54 +7085,14 @@ function e() {
         var options = $.extend({
             
             twitterFeedSelector  : '#footer-twitter-feed',
-            twitterFeedCount     : 8,
-            twitterFeedUser      : 'esr360',
+            twitterFeed          : {
+                username  : 'esr360',
+                tweets    : 8,
+                container : '.twitter-feed_content'
+            },
             testimonialsSelector : '#footer-testimonials'
             
         }, custom);
-        
-        // Footer Twitter Feed
-        function twitterFeed() {
-            
-            // Call the twitter feed plugin
-            $(options.twitterFeedSelector).tweecool({
-                username     : options.twitterFeedUser, 
-                limit        : options.twitterFeedCount,
-                show_actions : true,
-                action_reply_icon : '<i class="fa fa-reply"></i>',
-                action_retweet_icon : '<i class="fa fa-retweet"></i>',
-                action_favorite_icon : '<i class="fa fa-star"></i>'
-            });
-            
-            // Prepare the twitter feed to receive owl-carousel function
-            $(options.twitterFeedSelector).find('.tweets').addClass('owl-carousel');
-            
-            // Get the last loaded tweet
-            var lastTweet = options.twitterFeedSelector + ' .tweet:nth-child(' + options.twitterFeedCount + ')';
-            
-            // When the last tweet item has loaded, call the owl-carousel plugin
-            $('body').on('DOMNodeInserted', lastTweet, function () {
-                    
-                var tweetCarousel = $(options.twitterFeedSelector + ' .tweets');
-                
-                tweetCarousel.owlCarousel({
-                    items: 1,
-                    dots: false,
-                    loop: true,
-                    margin: 20
-                });
-                
-                $('.footer_tweets-nav .tweet-prev').click(function() {
-                    tweetCarousel.trigger('prev.owl.carousel');
-                });
-                
-                $('.footer_tweets-nav .tweet-next').click(function() {
-                    tweetCarousel.trigger('next.owl.carousel');
-                });
-                
-            });
-            
-        } // twitterFeed()
         
         // Footer Testimonials
         function testimonials() {
@@ -7159,7 +7119,10 @@ function e() {
         // Run the code on each occurance of the element
         return this.each(function() {
             
-            twitterFeed();
+            $(options.twitterFeedSelector).twitterFeed(
+                options.twitterFeed
+            );
+            
             testimonials();
             
         }); // this.each
@@ -7685,89 +7648,140 @@ function e() {
         // Options
         var options = $.extend({
             
-            navigation    : _navigation
+            overlay       : $('#site-overlay')
             
         }, custom);
         
         // Run the code on each occurance of the element
         return this.each(function() {
+            
+            var topBar = $(this);
+            var topBarDropdown = $('[class*="top-bar_nav"]').find("> ul > li > a:not(:only-child)").parent();
+
+            $(window).on("load scroll", function(e) {
+                
+                var scroll = $(window).scrollTop();
+                
+                var topBarHeight = topBar.height();
+                    
+                if (scroll > topBarHeight) {
+                    topBarDropdown.hover(
+                        function(){ 
+                            options.overlay.siteOverlay('show');
+                        },
+                        function(){ 
+                            options.overlay.siteOverlay('hide');
+                        }
+                    );
+                } else {
+                    topBarDropdown.unbind('mouseenter mouseleave');
+                    options.overlay.siteOverlay('hide');
+                }
+                
+            });
 
         }); // this.each
  
     }; // topBar()
  
 }(jQuery));
-
-//=================================================================
-// Top Bar
-//=================================================================
-
-var topBarDropdown = $('[class*="top-bar_nav"]').find("> ul > li > a:not(:only-child)").parent();
-
-$(window).on("load scroll", function(e) {
-	
-	var scroll = $(window).scrollTop(),
-		topBarHeight = $(_topBar).height();
-		
-	if (scroll > topBarHeight) {
-		topBarDropdown.hover(
-			function(){ 
-				$("#site-overlay").siteOverlay('show');
-			},
-			function(){ 
-				$("#site-overlay").siteOverlay('hide');
-			}
-		);
-	} else {
-		topBarDropdown.unbind('mouseenter mouseleave');
-		$("#site-overlay").removeClass('top-bar_visible');
-	}
-	
-});
-//=================================================================
-// Twitter Feed
-//=================================================================
-
-var tweetCount = 8;
-
-$('#twitter-feed')
-    .tweecool({
-        username     : 'esr360', 
-        limit        : tweetCount,
-        show_actions : true,
-        action_reply_icon : '<i class="fa fa-reply"></i>',
-        action_retweet_icon : '<i class="fa fa-retweet"></i>',
-        action_favorite_icon : '<i class="fa fa-star"></i>'
-    })
-    .find('.tweets')
-    .addClass('owl-carousel');
-
-$('body').on('DOMNodeInserted', '#twitter-feed .tweet:nth-child(' + tweetCount + ')', function () {
+(function ($) {
     
-    $(document).ready(function() { 
+    /**
+     * 
+     * KAYZEN
+     * @module: 'twitter-feed'
+     * @dependencies: OwlCarousel, TweeCool
+     * @author: @esr360
+     * 
+     */
+ 
+    $.fn.twitterFeed = function(custom) {
         
-        $('.loading-tweets').hide();
-        $('.tweets-nav').show();
+        // Options
+        var options = $.extend({
+            
+            username     : 'esr360',
+            tweets       : 8,
+            container    : '.twitter-feed_content'
+            
+        }, custom);
         
-        var tweetCarousel = $('#twitter-feed .tweets');
+        // Used to generate unique IDs
+        var i = 1;
         
-        tweetCarousel.owlCarousel({
-            items: 1,
-            loop: true,
-            dots: false
-        });
-        
-        $('#twitter-feed .tweet-prev').click(function() {
-            tweetCarousel.trigger('prev.owl.carousel');
-        });
-        
-        $('#twitter-feed .tweet-next').click(function() {
-            tweetCarousel.trigger('next.owl.carousel');
-        });
-        
-    });
-    
-});
+        // Run the code on each occurance of the element
+        return this.each(function() {
+            
+            // Get the feed wrapper
+            var feed = $(this);
+            
+            // Get the tweets wrapper
+            var tweets = feed.find(options.container);
+            
+            // If the feed doesn't have an ID, add one
+            if (!feed.attr('id')) {
+                feed.attr('id', 'KayzenTwitterFeed' + i);
+            }
+            
+            // Get the ID of the feed
+            var containerID = '#' + feed.attr('id');
+            
+            // Call the Tweecool plugin on the feed
+            tweets.tweecool({
+                username     : options.username, 
+                limit        : options.tweets,
+                show_actions : true,
+                action_reply_icon : '<i class="fa fa-reply"></i>',
+                action_retweet_icon : '<i class="fa fa-retweet"></i>',
+                action_favorite_icon : '<i class="fa fa-star"></i>'
+            });
+            
+            // Get the last tweet
+            var lastTweet = containerID + ' .tweet:nth-child(' + options.tweets + ')';
+            
+            // Prepare the tweets for OwlCarousel
+            tweets.find('.tweets').addClass('owl-carousel');
+                        
+            // when all tweets are loaded...
+            $('body').on('DOMNodeInserted', lastTweet, function () {
+                    
+                // Hide the loader
+                $('.loading-tweets').hide();
+                
+                // Show the next/prev buttons
+                $('.tweets-nav').show();
+                
+                // Get the carousel selector
+                var tweetCarousel = $(containerID + ' .tweets');
+                
+                // Call OwlCarousel on the tweets
+                tweetCarousel.owlCarousel({
+                    items: 1,
+                    loop: true,
+                    dots: false
+                });
+                
+                // Trigger the previous tweet
+                $(containerID + ' .tweet-prev').click(function() {
+                    tweetCarousel.trigger('prev.owl.carousel');
+                });
+                
+                // Trigger the next tweet
+                $(containerID + ' .tweet-next').click(function() {
+                    tweetCarousel.trigger('next.owl.carousel');
+                });
+                
+            });
+            
+            // Increment i for the IDs
+            i++
+
+        }); // this.each
+ 
+    }; // twitterFeed()
+ 
+}(jQuery));
 $(document).ready(function() {
     
 //-----------------------------------------------------------------
@@ -7837,5 +7851,9 @@ $(document).ready(function() {
     $(_scrollTop).scrollToTop();
     
     $('#search-trigger').searchBox();
+    
+    $(_topBar).topBar();
+    
+    $(_twitterFeed).twitterFeed();
 
 }); // document.ready
