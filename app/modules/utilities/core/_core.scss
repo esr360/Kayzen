@@ -9,17 +9,17 @@
 	//-------------------------------------------------------------
 
 	$base: config((
-		name             : base,
-		output-JSON      : true,
-		background       : color(greyscale, grey-1),
-		font-family      : typography(typefaces, primary),
-		text-color       : typography(colors, base),
-		font-size        : typography(sizes, base),
-		margin           : 2rem,
-		line-height      : 1.4,
-		radius           : 0.4em,
-		oval-radius      : 1.5em,
-		transition       : 0.4s
+		'name'             : 'base',
+		'output-JSON'      : true,
+		'background'       : color('greyscale', 'grey-1'),
+		'font-family'      : typography('typefaces', 'primary'),
+		'text-color'       : typography('colors', 'base'),
+		'font-size'        : typography('sizes', 'base'),
+		'margin'           : 2rem,
+		'line-height'      : 1.4,
+		'radius'           : 0.4em,
+		'oval-radius'      : 1.5em,
+		'transition'       : 0.4s
 	), $custom) !global;
 
 	//-------------------------------------------------------------
@@ -37,16 +37,16 @@
 	}
 	
 	body {
-		background: base(background);
-	    font-family: base(font-family);
-	    color: base(text-color);
-	    font-size: base(font-size);
-	    line-height: base(line-height);
+		background: base('background');
+	    font-family: base('font-family');
+	    color: base('text-color');
+	    font-size: base('font-size');
+	    line-height: base('line-height');
 	}
 	
 	ins {
 		font-weight: bold;
-		color: color(brand, primary);
+		color: color('brand', 'primary');
 		text-decoration: none;
 	}
     
@@ -57,11 +57,11 @@
     // code tags
     code {
         background: white;
-        border: 1px solid color(greyscale, grey-2);
+        border: 1px solid color('greyscale', 'grey-2');
         border-radius: 0.3em;
         //color: #C7254F;
-        font-family: typography(typefaces, primary);
-        font-size: font-size(size-2, $rem: true);
+        font-family: typography('typefaces', 'primary');
+        font-size: font-size('size-2', $rem: true);
         font-weight: 300;
         padding: 0.1em 0.3em;
         &.value {
@@ -73,7 +73,7 @@
 	[data-trigger],
 	[data-trigger-reverse],
 	[data-hover] {
-		transition: base(transition);
+		transition: base('transition');
 	}
 
 	//-------------------------------------------------------------
@@ -105,7 +105,7 @@
             max-width: none;
         }
 	
-	} // component(container)
+	} // module(container)
 
 	.wrapper {
 	    padding: 0 option($grid, 'options', 'gutter');

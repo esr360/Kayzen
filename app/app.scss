@@ -11,6 +11,9 @@ $asset-path : "../../";
 // Output configuration data to JSON
 $to-JSON    : true;
 
+// Theme
+$theme      : Kayzen;
+
 //-----------------------------------------------------------------
 // Vendor Files
 //-----------------------------------------------------------------
@@ -94,8 +97,6 @@ $to-JSON    : true;
 //-----------------------------------------------------------------
 // Themes
 //-----------------------------------------------------------------
-
-$theme: Kayzen;
 
 @import "themes/default/default";
 @import "themes/Kayzen/kayzen";

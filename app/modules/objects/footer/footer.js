@@ -4,7 +4,7 @@
      * 
      * KAYZEN
      * @module: 'footer'
-     * @dependencies: 'twitter-feed', OwlCarousel, TweeCool
+     * @dependencies: 'twitter-feed', OwlCarousel
      * @author: @esr360
      * 
      */

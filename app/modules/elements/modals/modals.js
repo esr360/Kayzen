@@ -47,8 +47,9 @@
         // Options
         var options = $.extend({
             
-            overlay : true,
-            animate : _module['modal']['dafault-animation']
+            overlay         : true,
+            overlaySelector : '#site-overlay',
+            animate         : _module['modal']['dafault-animation']
             
         }, custom);
             
@@ -60,14 +61,14 @@
             // show the target modal
             el.addClass('modal-visible');
             if (options.overlay) {
-                $('#site-overlay').addClass('modal_visible');
+                $(options.overlaySelector).siteOverlay('show');
             }
         }
         
         function closeModal(el) {
             el.removeClass('modal-visible');
             if (options.overlay) {
-                $('#site-overlay').removeClass('modal_visible');
+                $(options.overlaySelector).siteOverlay('hide');
             }
         }
         
@@ -87,7 +88,7 @@
             $('[data-modal="' + id + '"], [href*="' + id + '"]').click(function(e) {
                 openModal(el);
                 e.preventDefault();
-                $('.modal_visible, .modal_close').click(function() {
+                $(options.overlaySelector + ', .modal_close').click(function() {
                     closeModal(el);
                 });
             });

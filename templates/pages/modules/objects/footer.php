@@ -91,9 +91,9 @@
             
                 ...
                 
-                &lt;div class="span-3">
-                
-                    &lt;!-- Twitter Feed -->
+                &lt;!-- Twitter Feed -->
+                    
+                &lt;div class="span-3" id="footer-twitter-feed">
                 
                     &lt;header class="heading_group-small">
                         &lt;h4 class="footer_title heading-heavy-uppercase-size-3 font-2">
@@ -111,7 +111,7 @@
                             &lt;/div>
                         &lt;/div>
                     &lt;/header>
-                    &lt;div id="footer-twitter-feed">&lt;/div>
+                    &lt;div class="twitter-feed_content">&lt;/div>
                     
                 &lt;/div>
                 
@@ -135,8 +135,11 @@
 <pre data-enlighter-language="javascript" class="EnlighterJSRAW">
 $('.footer').footer({
     twitterFeedSelector : '#footer-twitter-feed',
-    twitterFeedCount    : 8,
-    twitterFeedUser     : 'esr360'
+    twitterFeed   : {
+        username  : 'esr360',
+        tweets    : 8,
+        container : '.twitter-feed_content'
+    }
 });
 </pre>
 

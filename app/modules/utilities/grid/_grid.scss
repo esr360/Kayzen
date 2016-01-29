@@ -9,16 +9,16 @@
 	//-------------------------------------------------------------
 	
     $grid: map-merge-deep((
-		name                : grid,
-		output-JSON         : true,
-		options: (
-			base-width      : 1200px,
-			max-width       : 90%,
-			small-width     : 940px,
-			full-width      : 100%
+		'name'                : 'grid',
+		'output-JSON'         : true,
+		'options': (
+			'base-width'      : 1200px,
+			'max-width'       : 90%,
+			'small-width'     : 940px,
+			'full-width'      : 100%
         ),
-        breakpoints: (
-            break-5         : 1400px
+        'breakpoints': (
+            'break-5'         : 1400px
         )
     ), $kayzenGS);
     

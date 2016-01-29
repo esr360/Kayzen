@@ -208,7 +208,7 @@
 //-----------------------------------------------------------------
 
 @mixin font-sizes {
-	@each $size, $value in typography-config(sizes) {
+	@each $size, $value in typography-config('sizes') {
 		@include modifier($size) {
 			font-size: $value;
 		}
@@ -245,44 +245,44 @@
 @mixin triangle($config: ()) {
 	
 	$config: map-merge((
-		core     : true, 
-		position : top, 
-		color    : rgba(black, 0.8),
-		size     : 0.5em
+		'core'     : true, 
+		'position' : top, 
+		'color'    : rgba(black, 0.8),
+		'size'     : 0.5em
 	), $config);
 	
-	@if map-get($config, core) {
+	@if map-get($config, 'core') {
 		@include triangle-core;
 	}
 		
 	&:after {
 		margin-left: -#{map-get($config, size)};
-		@if map-get($config, position) == top {
+		@if map-get($config, 'position') == top {
 			top: 100%;
 			left: 50%;
-			border-left: solid map-get($config, size) transparent;
-			border-right: solid map-get($config, size) transparent;
-			border-top: solid map-get($config, size) map-get($config, color);
-		} @else if map-get($config, position) == bottom {
+			border-left: solid map-get($config, 'size') transparent;
+			border-right: solid map-get($config, 'size') transparent;
+			border-top: solid map-get($config, 'size') map-get($config, 'color');
+		} @else if map-get($config, 'position') == bottom {
 			bottom: 100%;
 			left: 50%;
-			border-left: solid map-get($config, size) transparent;
-			border-right: solid map-get($config, size) transparent;
-			border-bottom: solid map-get($config, size) map-get($config, color);
-		} @else if map-get($config, position) == left {
+			border-left: solid map-get($config, 'size') transparent;
+			border-right: solid map-get($config, 'size') transparent;
+			border-bottom: solid map-get($config, 'size') map-get($config, 'color');
+		} @else if map-get($config, 'position') == left {
 			top: 50%;
 			right: -#{map-get($config, size)};
 			transform: translateY(-50%);
-			border-top: solid map-get($config, size) transparent;
-			border-bottom: solid map-get($config, size) transparent;
-			border-left: solid map-get($config, size) map-get($config, color);
-		} @else if map-get($config, position) == right {
+			border-top: solid map-get($config, 'size') transparent;
+			border-bottom: solid map-get($config, 'size') transparent;
+			border-left: solid map-get($config, 'size') map-get($config, 'color');
+		} @else if map-get($config, 'position') == right {
 			top: 50%;
 			right: 100%;
 			transform: translateY(-50%);
-			border-top: solid map-get($config, size) transparent;
-			border-bottom: solid map-get($config, size) transparent;
-			border-right: solid map-get($config, size) map-get($config, color);
+			border-top: solid map-get($config, 'size') transparent;
+			border-bottom: solid map-get($config, 'size') transparent;
+			border-right: solid map-get($config, 'size') map-get($config, 'color');
 		}
 	}
 	

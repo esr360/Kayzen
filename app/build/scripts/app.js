@@ -6492,8 +6492,9 @@ Kayzen.logger = (function(document, $, undefined) {
         // Options
         var options = $.extend({
             
-            overlay : true,
-            animate : _module['modal']['dafault-animation']
+            overlay         : true,
+            overlaySelector : '#site-overlay',
+            animate         : _module['modal']['dafault-animation']
             
         }, custom);
             
@@ -6505,14 +6506,14 @@ Kayzen.logger = (function(document, $, undefined) {
             // show the target modal
             el.addClass('modal-visible');
             if (options.overlay) {
-                $('#site-overlay').addClass('modal_visible');
+                $(options.overlaySelector).siteOverlay('show');
             }
         }
         
         function closeModal(el) {
             el.removeClass('modal-visible');
             if (options.overlay) {
-                $('#site-overlay').removeClass('modal_visible');
+                $(options.overlaySelector).siteOverlay('hide');
             }
         }
         
@@ -6532,7 +6533,7 @@ Kayzen.logger = (function(document, $, undefined) {
             $('[data-modal="' + id + '"], [href*="' + id + '"]').click(function(e) {
                 openModal(el);
                 e.preventDefault();
-                $('.modal_visible, .modal_close').click(function() {
+                $(options.overlaySelector + ', .modal_close').click(function() {
                     closeModal(el);
                 });
             });
@@ -6542,6 +6543,35 @@ Kayzen.logger = (function(document, $, undefined) {
     } // modal
 
 }(jQuery));
+(function ($) {
+    
+    /**
+     * 
+     * KAYZEN
+     * @module: 'progress-bar'
+     * @requires: 'site-overlay'
+     * @author: @esr360
+     * 
+     */
+ 
+    $.fn.progressBar = function(custom) {
+        
+        // Options
+        var options = $.extend({
+            
+            overlay       : $('#site-overlay')
+            
+        }, custom);
+        
+        // Run the code on each occurance of the element
+        return this.each(function() {
+
+        }); // this.each
+ 
+    }; // progressBar()
+ 
+}(jQuery));
+
 //-----------------------------------------------------------------
 // Progress Bars
 //-----------------------------------------------------------------
@@ -7074,7 +7104,7 @@ function e() {
      * 
      * KAYZEN
      * @module: 'footer'
-     * @dependencies: 'twitter-feed', OwlCarousel, TweeCool
+     * @dependencies: 'twitter-feed', OwlCarousel
      * @author: @esr360
      * 
      */
