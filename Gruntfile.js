@@ -74,7 +74,10 @@ module.exports = function(grunt) {
             scripts: [
                 'app/build/scripts/*.js',
                 '!app/build/scripts/*.min.js'
-            ]
+            ],
+            normalizeSupportFor: {
+                src: 'app/vendor/normalize-scss/sass/_support-for.scss'
+            }
         },
       
         //---------------------------------------------------------
@@ -356,6 +359,7 @@ module.exports = function(grunt) {
         'concat',
         'sass:dev',
         'postcss',
+        'clean:normalizeSupportFor'
     ]); 
     
     grunt.registerTask('compile:dev', [
