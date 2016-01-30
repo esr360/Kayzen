@@ -138,6 +138,10 @@ module.exports = function(grunt) {
                     {
                         src: 'app/vendor/MooTools-Core/build/mootools-core.js',
                         dest: buildScripts + 'mootools-core.js'
+                    },
+                    {
+                        src: 'app/vendor/support-for/sass/_support-for.scss',
+                        dest: 'app/vendor/normalize-scss/sass/_support-for.scss'
                     }
                 ]
             }
