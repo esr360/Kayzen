@@ -99,7 +99,9 @@
                 
                 <p>At this stage, it is not essential to know about JavaScript concatenation. As long as you are comfortable using Sass you will gain most of the benefits Kayzen has to offer. Having said that, if you are comfortable combining JavaScript files, then continue reading.</p>
                 
-                <p class="alert-bar-error">The following section is only relevant if your workflow involves an automated build process involving JavaScript concatenation.</p>
+				<h3 class="heading-light-size-3-uppercase" id="building-kayzen">Building Kayzen</h2>                
+                
+                <p class="alert-bar-error">The following section is only relevant if your workflow involves building Kayzen yourself from the source files form Github.</p>
                 
                 <p>Both the default provided <code>app.js</code> and <code>app.css</code> contain code from several third party libraries and plugins. The files for these libraries and plugins reside in the <b>app/vendor</b> folder, and include the following:</p>
                 
@@ -148,6 +150,8 @@
                     <li>app/vendor/TweeCool/src/tweecool.js</li>
                 </ul>
                 
+                <p>The other files which are includes in <b>app.js</b> are:</p>
+                
                 <ul class="list-clear">
                     <li>app/modules/utilities/core/core.js</li>
                     <li>app/includes/*.js</li>
@@ -157,7 +161,17 @@
                 </ul>
                 
                 <p>You will notice that all of the used third party resources exist on Github, and as such are included as <a href="https://git-scm.com/book/en/v2/Git-Tools-Submodules" target="blank">Git Submodules</a>. If you have purchased a license for Kayzen, you are entitled to access to the private Github repository <a href="https://github.com/esr360/Kayzen" target="blank">located here</a>. If you do not already have access, <a href="#">get in touch with us</a> to gain access.</p>
+                
+                <p>To clone Kayzen from the official repository and all of its submodules, run the following code on your command line in the directory you wish Kayzen to be cloned into:</p>
+                
+<pre data-enlighter-language="css" class="EnlighterJSRAW">
+git clone https://github.com/esr360/Kayzen.git --recursive
+</pre>
 			
+                <p class="alert-bar-info">The <b>--recursive</b> flag is required to install all the git submodules.</p>
+                
+                <p>If you are using Node, you can run <code>npm install</code> to allow you to use Grunt to build Kayzen from the source files. You can then run <code>grunt</code> to run the default Grunt tasks. If you are using another build tool, here are the key things it should encompass to successfully build Kayzen:</p>
+            
 				<h2 class="heading-light-size-5" id="configure">Configure</h2>
 				
 				<p>Kayzen is structured in a modular way, which makes things easier for everyone. As well as global configuration each module can be individually configured, giving you complete control and flexibility when customizing it for your project.</p>
