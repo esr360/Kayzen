@@ -2,7 +2,7 @@
 	include ('../../../app.php');
 	// page config
 	$title = 'Site Overlay';
-	$tagLine = 'app/modules/objects/site-overlay';
+	$tagLine = 'assets/modules/objects/site-overlay';
 ?>
 
 <!DOCTYPE html>
@@ -42,7 +42,7 @@
 					<li class="plain"><span>README.md</span></li>	
 				</ul>
                 
-				<p class="alert-bar-info"><strong>Github Page</strong> (customers only):  <a href="https://github.com/esr360/Kayzen/tree/master/app/modules/objects/site-overlay" target="blank">https://github.com/esr360/Kayzen/tree/master/app/modules/objects/site-overlay</a></p>
+				<p class="alert-bar-info"><strong>Github Page</strong> (customers only):  <a href="https://github.com/esr360/Kayzen/tree/master/assets/modules/objects/site-overlay" target="blank">https://github.com/esr360/Kayzen/tree/master/assets/modules/objects/site-overlay</a></p>
 				
 				<h2 class="heading-light-size-5">Module Overview</h2>
                 
@@ -135,7 +135,7 @@ $('#site-overlay').siteOverlay('show', {
                     </tbody>
                 </table>
 				
-				<p>To change one of the above values, pass your new value(s) to the <code>site-overlay()</code> mixin in your theme file (e.g. app/themes/Kayzen/_kayzen.scss).</p>
+				<p>To change one of the above values, pass your new value(s) to the <code>site-overlay()</code> mixin in your theme file (e.g. assets/themes/Kayzen/_kayzen.scss).</p>
 						
 <pre data-enlighter-language="css" class="EnlighterJSRAW">
 @include site-overlay((

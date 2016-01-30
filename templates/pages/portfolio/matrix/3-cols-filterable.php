@@ -160,9 +160,9 @@
     <?php include (ROOT.'/includes/scripts.php'); ?>
     
     <?php if (env == 'dev') { ?>
-        <script src="<?php echo appDir ?>/build/scripts/isotope.pkgd.js"></script>
+        <script src="<?php echo appDir ?>/scripts/isotope.pkgd.js"></script>
     <?php } else if (env == 'prod') { ?>
-        <script src="<?php echo appDir ?>/build/scripts/isotope.pkgd.min.js"></script>
+        <script src="<?php echo appDir ?>/scripts/isotope.pkgd.min.js"></script>
     <?php } ?>
 
 </body>

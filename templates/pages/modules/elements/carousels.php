@@ -2,7 +2,7 @@
 	include ('../../../app.php');
 	// page config
 	$title = 'Sliders/Carousels';
-	$tagLine = 'app/modules/elements/carousels';
+	$tagLine = 'assets/modules/elements/carousels';
 ?>
 
 <!DOCTYPE html>
@@ -43,7 +43,7 @@
                 
                 <p class="alert-bar-success">The 'carousels' module makes use of the <a href="#">owl-carousel</a> plugin which is built into <a href="#"><b>app.js</b></a>.</p>
                 
-				<p class="alert-bar-info"><strong>Github Page</strong> (customers only):  <a href="https://github.com/esr360/Kayzen/tree/master/app/modules/elements/carousels" target="blank">https://github.com/esr360/Kayzen/tree/master/app/modules/elements/carousels</a></p>
+				<p class="alert-bar-info"><strong>Github Page</strong> (customers only):  <a href="https://github.com/esr360/Kayzen/tree/master/assets/modules/elements/carousels" target="blank">https://github.com/esr360/Kayzen/tree/master/assets/modules/elements/carousels</a></p>
 				
 				<h2 class="heading-light-size-5">Module Overview</h2>
                 
@@ -407,7 +407,7 @@ $(document).ready(function() {
                     </tbody>
                 </table>
                 
-				<p>To change one of the above values, pass your new value(s) to the <code>carousels()</code> mixin in your theme file (e.g. app/themes/Kayzen/_kayzen.scss).</p>
+				<p>To change one of the above values, pass your new value(s) to the <code>carousels()</code> mixin in your theme file (e.g. assets/themes/Kayzen/_kayzen.scss).</p>
          
 <pre data-enlighter-language="css" class="EnlighterJSRAW">
 @include carousels((

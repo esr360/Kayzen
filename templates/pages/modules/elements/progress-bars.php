@@ -2,7 +2,7 @@
 	include ('../../../app.php');
 	// page config
 	$title = 'Progress Bars';
-	$tagLine = 'app/modules/elements/progress-bars';
+	$tagLine = 'assets/modules/elements/progress-bars';
 ?>
 
 <!DOCTYPE html>
@@ -42,7 +42,7 @@
 					<li class="plain"><span>README.md</span></li>	
 				</ul>
                 
-				<p class="alert-bar-info"><strong>Github Page</strong> (customers only):  <a href="https://github.com/esr360/Kayzen/tree/master/app/modules/elements/progress-bars" target="blank">https://github.com/esr360/Kayzen/tree/master/app/modules/elements/progress-bars</a></p>
+				<p class="alert-bar-info"><strong>Github Page</strong> (customers only):  <a href="https://github.com/esr360/Kayzen/tree/master/assets/modules/elements/progress-bars" target="blank">https://github.com/esr360/Kayzen/tree/master/assets/modules/elements/progress-bars</a></p>
 				
 				<h2 class="heading-light-size-5">Module Overview</h2>
                 
@@ -185,7 +185,7 @@
                     </tbody>
                 </table>
 
-				<p>To change one of the above values, pass your new value(s) to the <code>progress-bars()</code> mixin in your theme file (e.g. app/themes/Kayzen/_kayzen.scss).</p>   
+				<p>To change one of the above values, pass your new value(s) to the <code>progress-bars()</code> mixin in your theme file (e.g. assets/themes/Kayzen/_kayzen.scss).</p>   
                 
 <pre data-enlighter-language="css" class="EnlighterJSRAW">
 @include progress-bars((

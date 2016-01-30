@@ -139,9 +139,9 @@
     <?php include (ROOT.'/includes/scripts.php'); ?>
     
     <?php if (env == 'dev') { ?>
-        <script src="<?php echo appDir ?>/build/scripts/jquery-ias.js"></script>
+        <script src="<?php echo appDir ?>/scripts/jquery-ias.js"></script>
     <?php } else if (env == 'prod') { ?>
-        <script src="<?php echo appDir ?>/build/scripts/jquery-ias.min.js"></script>
+        <script src="<?php echo appDir ?>/scripts/jquery-ias.min.js"></script>
     <?php } ?>
 
 </body>

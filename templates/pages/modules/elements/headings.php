@@ -2,7 +2,7 @@
 	include ('../../../app.php');
 	// page config
 	$title = 'Headings';
-	$tagLine = 'app/modules/elements/headings';
+	$tagLine = 'assets/modules/elements/headings';
 ?>
 
 <!DOCTYPE html>
@@ -41,7 +41,7 @@
 					<li class="plain"><span>README.md</span></li>	
 				</ul>
                 
-				<p class="alert-bar-info"><strong>Github Page</strong> (customers only):  <a href="https://github.com/esr360/Kayzen/tree/master/app/modules/elements/headings" target="blank">https://github.com/esr360/Kayzen/tree/master/app/modules/elements/headings</a></p>
+				<p class="alert-bar-info"><strong>Github Page</strong> (customers only):  <a href="https://github.com/esr360/Kayzen/tree/master/assets/modules/elements/headings" target="blank">https://github.com/esr360/Kayzen/tree/master/assets/modules/elements/headings</a></p>
 				
 				<h2 class="heading-light-size-5">Module Overview</h2>
                 
@@ -395,7 +395,7 @@
                     </tbody>
                 </table>
 
-				<p>To change one of the above values, pass your new value(s) to the <code>headings()</code> mixin in your theme file (e.g. app/themes/Kayzen/_kayzen.scss).</p>
+				<p>To change one of the above values, pass your new value(s) to the <code>headings()</code> mixin in your theme file (e.g. assets/themes/Kayzen/_kayzen.scss).</p>
                              		
 <pre data-enlighter-language="css" class="EnlighterJSRAW">
 @include headings((

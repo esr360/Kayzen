@@ -345,7 +345,7 @@
 								
 								<blockquote class="blockquote">
 									<a class="blockquote_avatar-large" href="#">
-										<img src="/app/images/team/team-2.jpg" alt="">
+										<img src="/assets/images/team/team-2.jpg" alt="">
 									</a>
 									<div class="blockquote_content">
 										<p>Suspendisse tempus sodales neque, eget eleifend <b>turpis tristique</b> eu. Nullam a nisl maximus, <b>ultrices est</b> ut blandit nislr, elit in lobortis mattis.</p>
@@ -357,7 +357,7 @@
 								
 								<blockquote class="blockquote">
 									<a class="blockquote_avatar-large" href="#">
-										<img src="/app/images/team/team-2.jpg" alt="">
+										<img src="/assets/images/team/team-2.jpg" alt="">
 									</a>
 									<div class="blockquote_content">
 										<p>Suspendisse tempus sodales neque, eget eleifend <b>turpis tristique</b> eu. Nullam a nisl maximus, <b>ultrices est</b> ut blandit nislr, elit in lobortis mattis.</p>

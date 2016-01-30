@@ -2,7 +2,7 @@
 	include ('../../../app.php');
 	// page config
 	$title = 'Blockquotes';
-	$tagLine = 'app/modules/elements/blockquotes';
+	$tagLine = 'assets/modules/elements/blockquotes';
 ?>
 
 <!DOCTYPE html>
@@ -41,7 +41,7 @@
 					<li class="plain"><span>README.md</span></li>	
 				</ul>
                 
-				<p class="alert-bar-info"><strong>Github Page</strong> (customers only):  <a href="https://github.com/esr360/Kayzen/tree/master/app/modules/elements/blockquotes" target="blank">https://github.com/esr360/Kayzen/tree/master/app/modules/elements/blockquotes</a></p>
+				<p class="alert-bar-info"><strong>Github Page</strong> (customers only):  <a href="https://github.com/esr360/Kayzen/tree/master/assets/modules/elements/blockquotes" target="blank">https://github.com/esr360/Kayzen/tree/master/assets/modules/elements/blockquotes</a></p>
 				
 				<h2 class="heading-light-size-5">Module Overview</h2>
                 
@@ -152,7 +152,7 @@
                         </div>
                         <footer class="blockquote_footer">
                             <a class="blockquote_avatar-small" href="">
-                                <img src="/app/images/team/team-2.jpg" alt="">
+                                <img src="/assets/images/team/team-2.jpg" alt="">
                             </a>
                             <div class="blockquote_cite heading_group">
                                 <h4 class="heading-size-2 font-2">John Dough</h4>
@@ -171,7 +171,7 @@
     &lt;/div>
     &lt;footer class="blockquote_footer">
         &lt;a class="blockquote_avatar-small" href="#">
-            &lt;img src="/app/images/team/team-2.jpg" alt="">
+            &lt;img src="/assets/images/team/team-2.jpg" alt="">
         &lt;/a>
         &lt;div class="blockquote_cite heading_group">
             &lt;h4 class="heading-size-2 font-2">John Dough&lt;/h4>
@@ -186,7 +186,7 @@
                 <div class="well-deep object text-center">
                     <blockquote class="blockquote span-10">
                         <a class="blockquote_avatar-large" href="#">
-                            <img src="/app/images/team/team-2.jpg" alt="">
+                            <img src="/assets/images/team/team-2.jpg" alt="">
                         </a>
                         <div class="blockquote_content">
                             <p>Suspendisse tempus sodales neque, eget eleifend <b>turpis tristique</b> eu. Nullam a nisl maximus, <b>ultrices est</b> ut blandit nislr, elit in lobortis mattis.</p>
@@ -200,7 +200,7 @@
  <pre data-enlighter-language="html" class="EnlighterJSRAW">
 &lt;blockquote class="blockquote">
     &lt;a class="blockquote_avatar-large" href="#">
-        &lt;img src="/app/images/team/team-2.jpg" alt="#">
+        &lt;img src="/assets/images/team/team-2.jpg" alt="#">
     &lt;/a>
     &lt;div class="blockquote_content">
         &lt;p>Aenean lobortis ante nunc. Integer justo ex. Curabitur at enim ac nisi...&lt;/p>
@@ -284,7 +284,7 @@
                     </tbody>
                 </table>
                 
-				<p>To change one of the above values, pass your new value(s) to the <code>blockquotes()</code> mixin in your theme file (e.g. app/themes/Kayzen/_kayzen.scss).</p>
+				<p>To change one of the above values, pass your new value(s) to the <code>blockquotes()</code> mixin in your theme file (e.g. assets/themes/Kayzen/_kayzen.scss).</p>
          
 <pre data-enlighter-language="css" class="EnlighterJSRAW">
 @include blockquotes((

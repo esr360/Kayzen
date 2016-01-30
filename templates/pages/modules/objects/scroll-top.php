@@ -2,7 +2,7 @@
 	include ('../../../app.php');
 	// page config
 	$title = 'Scroll-Top';
-	$tagLine = 'app/modules/objects/scroll-top';
+	$tagLine = 'assets/modules/objects/scroll-top';
 ?>
 
 <!DOCTYPE html>
@@ -42,7 +42,7 @@
 					<li class="plain"><span>README.md</span></li>	
 				</ul>
                 
-				<p class="alert-bar-info"><strong>Github Page</strong> (customers only):  <a href="https://github.com/esr360/Kayzen/tree/master/app/modules/objects/scroll-top" target="blank">https://github.com/esr360/Kayzen/tree/master/app/modules/objects/scroll-top</a></p>
+				<p class="alert-bar-info"><strong>Github Page</strong> (customers only):  <a href="https://github.com/esr360/Kayzen/tree/master/assets/modules/objects/scroll-top" target="blank">https://github.com/esr360/Kayzen/tree/master/assets/modules/objects/scroll-top</a></p>
 				
 				<h2 class="heading-light-size-5">Module Overview</h2>
                 
@@ -68,7 +68,7 @@
                     </a>
                 </div>
 
-                <p>By default the icon is hidden until the user has scrolled a certain amount down the page. This value can be controlled when calling the plugin in your theme's JS file (e.g. app/themes/Kayzen/kayzen.js).</p>
+                <p>By default the icon is hidden until the user has scrolled a certain amount down the page. This value can be controlled when calling the plugin in your theme's JS file (e.g. assets/themes/Kayzen/kayzen.js).</p>
                                
 <pre data-enlighter-language="javascript" class="EnlighterJSRAW">
 $('.scroll-top').scrollToTop({
@@ -109,7 +109,7 @@ $('.scroll-top').scrollToTop({
                     </tbody>
                 </table>
 				
-				<p>To change one of the above values, pass your new value(s) to the <code>scroll-top()</code> mixin in your theme file (e.g. app/themes/Kayzen/_kayzen.scss).</p>
+				<p>To change one of the above values, pass your new value(s) to the <code>scroll-top()</code> mixin in your theme file (e.g. assets/themes/Kayzen/_kayzen.scss).</p>
 						
 <pre data-enlighter-language="css" class="EnlighterJSRAW">
 @include scroll-top((

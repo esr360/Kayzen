@@ -2,7 +2,7 @@
 	include ('../../../app.php');
 	// page config
 	$title = 'Page Overview';
-	$tagLine = 'app/modules/objects/page-overview';
+	$tagLine = 'assets/modules/objects/page-overview';
 ?>
 
 <!DOCTYPE html>
@@ -42,7 +42,7 @@
 					<li class="plain"><span>README.md</span></li>	
 				</ul>
                 
-				<p class="alert-bar-info"><strong>Github Page</strong> (customers only):  <a href="https://github.com/esr360/Kayzen/tree/master/app/modules/objects/page-overview" target="blank">https://github.com/esr360/Kayzen/tree/master/app/modules/objects/page-overview</a></p>
+				<p class="alert-bar-info"><strong>Github Page</strong> (customers only):  <a href="https://github.com/esr360/Kayzen/tree/master/assets/modules/objects/page-overview" target="blank">https://github.com/esr360/Kayzen/tree/master/assets/modules/objects/page-overview</a></p>
 				
 				<h2 class="heading-light-size-5">Module Overview</h2>
                 
@@ -75,7 +75,7 @@
 &lt;/div>
 </pre>
 
-                <p>Then in your theme's JS file (e.g. app/themes/Kayzen/kayzen.js), call the <code>pageOverview()</code> function on your element wrapper:</p>
+                <p>Then in your theme's JS file (e.g. assets/themes/Kayzen/kayzen.js), call the <code>pageOverview()</code> function on your element wrapper:</p>
                 
 <pre data-enlighter-language="javascript" class="EnlighterJSRAW">
 $('#page-overview').pageOverview();
@@ -129,7 +129,7 @@ $('#page-overview').pageOverview({
                     </tbody>
                 </table>
 				
-				<p>To change one of the above values, pass your new value(s) to the <code>page-overview()</code> mixin in your theme file (e.g. app/themes/Kayzen/_kayzen.scss).</p>
+				<p>To change one of the above values, pass your new value(s) to the <code>page-overview()</code> mixin in your theme file (e.g. assets/themes/Kayzen/_kayzen.scss).</p>
 						
 <pre data-enlighter-language="css" class="EnlighterJSRAW">
 @include page-overview((

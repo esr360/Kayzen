@@ -2,7 +2,7 @@
 	include ('../../../app.php');
 	// page config
 	$title = 'Price Charts';
-	$tagLine = 'app/modules/elements/price-charts';
+	$tagLine = 'assets/modules/elements/price-charts';
 ?>
 
 <!DOCTYPE html>
@@ -41,7 +41,7 @@
 					<li class="plain"><span>README.md</span></li>	
 				</ul>
                 
-				<p class="alert-bar-info"><strong>Github Page</strong> (customers only):  <a href="https://github.com/esr360/Kayzen/tree/master/app/modules/elements/price-charts" target="blank">https://github.com/esr360/Kayzen/tree/master/app/modules/elements/price-charts</a></p>
+				<p class="alert-bar-info"><strong>Github Page</strong> (customers only):  <a href="https://github.com/esr360/Kayzen/tree/master/assets/modules/elements/price-charts" target="blank">https://github.com/esr360/Kayzen/tree/master/assets/modules/elements/price-charts</a></p>
 				
 				<h2 class="heading-light-size-5">Module Overview</h2>
                 

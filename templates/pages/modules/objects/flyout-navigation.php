@@ -2,7 +2,7 @@
 	include ('../../../app.php');
 	// page config
 	$title = 'Flyout Navigation';
-	$tagLine = 'app/modules/objects/flyout-nav';
+	$tagLine = 'assets/modules/objects/flyout-nav';
 ?>
 
 <!DOCTYPE html>
@@ -43,7 +43,7 @@
 					<li class="plain"><span>README.md</span></li>	
 				</ul>
                 
-				<p class="alert-bar-info"><strong>Github Page</strong> (customers only):  <a href="https://github.com/esr360/Kayzen/tree/master/app/modules/objects/flyout-nav" target="blank">https://github.com/esr360/Kayzen/tree/master/app/modules/objects/flyout-nav</a></p>
+				<p class="alert-bar-info"><strong>Github Page</strong> (customers only):  <a href="https://github.com/esr360/Kayzen/tree/master/assets/modules/objects/flyout-nav" target="blank">https://github.com/esr360/Kayzen/tree/master/assets/modules/objects/flyout-nav</a></p>
 				
 				<h2 class="heading-light-size-5">Module Overview</h2>
                 
@@ -84,7 +84,7 @@
 &lt;div class="site-overlay" id="site-overlay">&lt;/div>
 </pre>
 
-                <p>Then in your theme's JS file (e.g. app/themes/Kayzen/kayzen.js), call the <code>flyoutNav()</code> function on your flyout-nav container:</p>
+                <p>Then in your theme's JS file (e.g. assets/themes/Kayzen/kayzen.js), call the <code>flyoutNav()</code> function on your flyout-nav container:</p>
                 
 <pre data-enlighter-language="javascript" class="EnlighterJSRAW">
 $('#flyout').flyoutNav();
@@ -150,7 +150,7 @@ $('#flyout').flyoutNav({
                     </tbody>
                 </table>
 				
-				<p>To change one of the above values, pass your new value(s) to the <code>flyout-nav()</code> mixin in your theme file (e.g. app/themes/Kayzen/_kayzen.scss).</p>
+				<p>To change one of the above values, pass your new value(s) to the <code>flyout-nav()</code> mixin in your theme file (e.g. assets/themes/Kayzen/_kayzen.scss).</p>
 						
 <pre data-enlighter-language="css" class="EnlighterJSRAW">
 @include flyout-nav((
@@ -202,7 +202,7 @@ $('#flyout').flyoutNav({
                     </tbody>
                 </table>
 				
-				<p>To change one of the above values, pass your new value(s) to the <code>flyout-nav()</code> mixin in your theme file (e.g. app/themes/Kayzen/_kayzen.scss).</p>
+				<p>To change one of the above values, pass your new value(s) to the <code>flyout-nav()</code> mixin in your theme file (e.g. assets/themes/Kayzen/_kayzen.scss).</p>
 						
 <pre data-enlighter-language="css" class="EnlighterJSRAW">
 @include flyout-trigger((

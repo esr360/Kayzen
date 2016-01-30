@@ -1,60 +1,60 @@
-[submodule "app/vendor/Font-Awesome"]
-	path = app/vendor/Font-Awesome
+[submodule "assets/vendor/Font-Awesome"]
+	path = assets/vendor/Font-Awesome
 	url = https://github.com/FortAwesome/Font-Awesome.git
-[submodule "app/vendor/Owl-Carousel"]
-	path = app/vendor/Owl-Carousel
+[submodule "assets/vendor/Owl-Carousel"]
+	path = assets/vendor/Owl-Carousel
 	url = https://github.com/smashingboxes/OwlCarousel2.git
-[submodule "app/vendor/SassyJSON"]
-	path = app/vendor/SassyJSON
+[submodule "assets/vendor/SassyJSON"]
+	path = assets/vendor/SassyJSON
 	url = https://github.com/esr360/SassyJSON.git
-[submodule "app/vendor/sudojQuery"]
-	path = app/vendor/sudojQuery
+[submodule "assets/vendor/sudojQuery"]
+	path = assets/vendor/sudojQuery
 	url = https://github.com/esr360/sudojQuery.git
-[submodule "app/vendor/jQuery"]
-	path = app/vendor/jQuery
+[submodule "assets/vendor/jQuery"]
+	path = assets/vendor/jQuery
 	url = https://github.com/jquery/jquery.git
-[submodule "app/vendor/Modular"]
-	path = app/vendor/Modular
+[submodule "assets/vendor/Modular"]
+	path = assets/vendor/Modular
 	url = https://github.com/esr360/Modular.git
-[submodule "app/vendor/Enlighter"]
-	path = app/vendor/Enlighter
+[submodule "assets/vendor/Enlighter"]
+	path = assets/vendor/Enlighter
 	url = https://github.com/AndiDittrich/EnlighterJS.git
-[submodule "app/vendor/jquery-animateNumber"]
-	path = app/vendor/jquery-animateNumber
+[submodule "assets/vendor/jquery-animateNumber"]
+	path = assets/vendor/jquery-animateNumber
 	url = https://github.com/aishek/jquery-animateNumber.git
-[submodule "app/vendor/Stellar"]
-	path = app/vendor/Stellar
+[submodule "assets/vendor/Stellar"]
+	path = assets/vendor/Stellar
 	url = https://github.com/markdalgleish/stellar.js.git
-[submodule "app/vendor/TweeCool"]
-	path = app/vendor/TweeCool
+[submodule "assets/vendor/TweeCool"]
+	path = assets/vendor/TweeCool
 	url = https://github.com/esr360/tweecool-jquery-plugin.git
-[submodule "app/vendor/Kayzen-GS"]
-	path = app/vendor/Kayzen-GS
+[submodule "assets/vendor/Kayzen-GS"]
+	path = assets/vendor/Kayzen-GS
 	url = https://github.com/esr360/Kayzen-GS.git
-[submodule "app/vendor/ScrollTrigger"]
-	path = app/vendor/ScrollTrigger
+[submodule "assets/vendor/ScrollTrigger"]
+	path = assets/vendor/ScrollTrigger
 	url = https://github.com/esr360/ScrollTrigger.git
-[submodule "app/vendor/Masonry"]
-	path = app/vendor/Masonry
+[submodule "assets/vendor/Masonry"]
+	path = assets/vendor/Masonry
 	url = https://github.com/desandro/masonry.git
-[submodule "app/vendor/Infinite-AJAX-Scroll"]
-	path = app/vendor/Infinite-AJAX-Scroll
+[submodule "assets/vendor/Infinite-AJAX-Scroll"]
+	path = assets/vendor/Infinite-AJAX-Scroll
 	url = https://github.com/webcreate/infinite-ajax-scroll.git
-[submodule "app/vendor/Isotope"]
-	path = app/vendor/Isotope
+[submodule "assets/vendor/Isotope"]
+	path = assets/vendor/Isotope
 	url = https://github.com/metafizzy/isotope.git
-[submodule "app/vendor/Magnific-Popup"]
-	path = app/vendor/Magnific-Popup
+[submodule "assets/vendor/Magnific-Popup"]
+	path = assets/vendor/Magnific-Popup
 	url = https://github.com/dimsemenov/Magnific-Popup.git
-[submodule "app/vendor/MooTools-Core"]
-	path = app/vendor/MooTools-Core
+[submodule "assets/vendor/MooTools-Core"]
+	path = assets/vendor/MooTools-Core
 	url = https://github.com/mootools/mootools-core.git
 [submodule "normalize-scss"]
 	path = normalize-scss
 	url = https://github.com/JohnAlbin/normalize-scss.git
-[submodule "app/vendor/normalize-scss"]
-	path = app/vendor/normalize-scss
+[submodule "assets/vendor/normalize-scss"]
+	path = assets/vendor/normalize-scss
 	url = https://github.com/JohnAlbin/normalize-scss.git
-[submodule "app/vendor/support-for"]
-	path = app/vendor/support-for
+[submodule "assets/vendor/support-for"]
+	path = assets/vendor/support-for
 	url = https://github.com/JohnAlbin/support-for.git

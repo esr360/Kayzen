@@ -1,13 +1,13 @@
 <!-- Syntax Highlighter -->
 
 <?php if (env == 'dev') { ?>
-    <link rel="stylesheet" href="<?php echo appDir ?>/build/styles/EnlighterJS.css">
-    <script src="<?php echo appDir ?>/build/scripts/mootools-core.js"></script>    
-    <script src="<?php echo appDir ?>/build/scripts/EnlighterJS.js"></script>
+    <link rel="stylesheet" href="<?php echo appDir ?>/styles/EnlighterJS.css">
+    <script src="<?php echo appDir ?>/scripts/mootools-core.js"></script>    
+    <script src="<?php echo appDir ?>/scripts/EnlighterJS.js"></script>
 <?php } else if (env == 'prod') { ?>
-    <link rel="stylesheet" href="<?php echo appDir ?>/build/styles/EnlighterJS.min.css">
-    <script src="<?php echo appDir ?>/build/scripts/mootools-core.min.js"></script>    
-    <script src="<?php echo appDir ?>/build/scripts/EnlighterJS.min.js"></script>
+    <link rel="stylesheet" href="<?php echo appDir ?>/styles/EnlighterJS.min.css">
+    <script src="<?php echo appDir ?>/scripts/mootools-core.min.js"></script>    
+    <script src="<?php echo appDir ?>/scripts/EnlighterJS.min.js"></script>
 <?php } ?>
 
 <script type="text/javascript">

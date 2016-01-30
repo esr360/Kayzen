@@ -2,7 +2,7 @@
 	include ('../../../app.php');
 	// page config
 	$title = 'Google Map';
-	$tagLine = 'app/modules/objects/google-map';
+	$tagLine = 'assets/modules/objects/google-map';
 ?>
 
 <!DOCTYPE html>
@@ -42,7 +42,7 @@
 					<li class="plain"><span>README.md</span></li>	
 				</ul>
                 
-				<p class="alert-bar-info"><strong>Github Page</strong> (customers only):  <a href="https://github.com/esr360/Kayzen/tree/master/app/modules/objects/google-map" target="blank">https://github.com/esr360/Kayzen/tree/master/app/modules/objects/google-map</a></p>
+				<p class="alert-bar-info"><strong>Github Page</strong> (customers only):  <a href="https://github.com/esr360/Kayzen/tree/master/assets/modules/objects/google-map" target="blank">https://github.com/esr360/Kayzen/tree/master/assets/modules/objects/google-map</a></p>
 				
 				<h2 class="heading-light-size-5">Module Overview</h2>
                 
@@ -62,7 +62,7 @@
 &lt;script src="https://maps.googleapis.com/maps/api/js?sensor=false">&lt;/script>
 </pre>
 
-                <p>Then in your theme's JS file (e.g. app/themes/Kayzen/kayzen.js), call the <code>googleMap()</code> function on your Google Map container:</p>
+                <p>Then in your theme's JS file (e.g. assets/themes/Kayzen/kayzen.js), call the <code>googleMap()</code> function on your Google Map container:</p>
 
 <pre data-enlighter-language="javascript" class="EnlighterJSRAW">
 $('#google-map').googleMap();
@@ -155,7 +155,7 @@ $('#google-map').googleMap({
                     </tbody>
                 </table>
 				
-				<p>To change one of the above values, pass your new value(s) to the <code>google-map()</code> mixin in your theme file (e.g. app/themes/Kayzen/_kayzen.scss).</p>
+				<p>To change one of the above values, pass your new value(s) to the <code>google-map()</code> mixin in your theme file (e.g. assets/themes/Kayzen/_kayzen.scss).</p>
 						
 <pre data-enlighter-language="css" class="EnlighterJSRAW">
 @include google-map((

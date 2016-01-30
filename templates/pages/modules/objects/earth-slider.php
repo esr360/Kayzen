@@ -2,7 +2,7 @@
 	include ('../../../app.php');
 	// page config
 	$title = 'Earth Slider';
-	$tagLine = 'app/modules/objects/earth-slider';
+	$tagLine = 'assets/modules/objects/earth-slider';
 ?>
 
 <!DOCTYPE html>
@@ -42,7 +42,7 @@
 					<li class="plain"><span>README.md</span></li>	
 				</ul>
                 
-				<p class="alert-bar-info"><strong>Github Page</strong> (customers only):  <a href="https://github.com/esr360/Kayzen/tree/master/app/modules/objects/earth-slider" target="blank">https://github.com/esr360/Kayzen/tree/master/app/modules/objects/earth-slider</a></p>
+				<p class="alert-bar-info"><strong>Github Page</strong> (customers only):  <a href="https://github.com/esr360/Kayzen/tree/master/assets/modules/objects/earth-slider" target="blank">https://github.com/esr360/Kayzen/tree/master/assets/modules/objects/earth-slider</a></p>
 				
 				<h2 class="heading-light-size-5">Module Overview</h2>
                 
@@ -66,7 +66,7 @@
     ...
     &lt;div class="earth-wrapper">
         &lt;div class="earth">               
-            &lt;img class="globe" src="/app/images/earth.png" alt="" />
+            &lt;img class="globe" src="/assets/images/earth.png" alt="" />
             &lt;div class="pins">
                 &lt;div class="pin-wrapper">
                     &lt;div class='pin'>&lt;/div>
@@ -139,7 +139,7 @@ $('.earth-slider').KayzenEarthSlider({
                     </tbody>
                 </table>
 				
-				<p>To change one of the above values, pass your new value(s) to the <code>earth-slider()</code> mixin in your theme file (e.g. app/themes/Kayzen/_kayzen.scss).</p>
+				<p>To change one of the above values, pass your new value(s) to the <code>earth-slider()</code> mixin in your theme file (e.g. assets/themes/Kayzen/_kayzen.scss).</p>
 						
 <pre data-enlighter-language="css" class="EnlighterJSRAW">
 @include earth-slider((

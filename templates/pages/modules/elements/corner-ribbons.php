@@ -2,7 +2,7 @@
 	include ('../../../app.php');
 	// page config
 	$title = 'Corner Ribbons';
-	$tagLine = 'app/modules/elements/corner-ribbons';
+	$tagLine = 'assets/modules/elements/corner-ribbons';
 ?>
 
 <!DOCTYPE html>
@@ -41,7 +41,7 @@
 					<li class="plain"><span>README.md</span></li>	
 				</ul>
                 
-				<p class="alert-bar-info"><small><strong>Github Page</strong> (customers only):  <a href="https://github.com/esr360/Kayzen/tree/master/app/modules/elements/corner-ribbons" target="blank">https://github.com/esr360/Kayzen/tree/master/app/modules/elements/corner-ribbons</a></small></p>
+				<p class="alert-bar-info"><small><strong>Github Page</strong> (customers only):  <a href="https://github.com/esr360/Kayzen/tree/master/assets/modules/elements/corner-ribbons" target="blank">https://github.com/esr360/Kayzen/tree/master/assets/modules/elements/corner-ribbons</a></small></p>
 				
 				<h2 class="heading-light-size-5">Module Overview</h2>
                 
@@ -135,7 +135,7 @@
                     </tbody>
                 </table>
                 
-				<p>To change one of the above values, pass your new value(s) to the <code>corner-ribbons()</code> mixin in your theme file (e.g. app/themes/Kayzen/_kayzen.scss).</p>
+				<p>To change one of the above values, pass your new value(s) to the <code>corner-ribbons()</code> mixin in your theme file (e.g. assets/themes/Kayzen/_kayzen.scss).</p>
                 
                 <p class="alert-bar-info">The options are recursive, so you always have access to the default options which you don't overwrite. <a href="#">Learn more</a>.</p>
          

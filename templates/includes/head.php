@@ -18,16 +18,16 @@
 
     <!-- Stylesheet -->
     <?php if (env == 'dev') { ?>
-        <link rel="stylesheet" href="<?php echo appDir ?>/build/styles/app.css">
+        <link rel="stylesheet" href="<?php echo appDir ?>/styles/app.css">
     <?php } else if (env == 'prod') { ?>
-        <link rel="stylesheet" href="<?php echo appDir ?>/build/styles/app.min.css">
+        <link rel="stylesheet" href="<?php echo appDir ?>/styles/app.min.css">
     <?php } ?>
 	
     <!-- sudojQuery start -->
     <?php if (env == 'dev') { ?>
-        <script src="<?php echo appDir ?>/build/scripts/sudojQuery-start.js"></script>
+        <script src="<?php echo appDir ?>/scripts/sudojQuery-start.js"></script>
     <?php } else if (env == 'prod') { ?>
-        <script src="<?php echo appDir ?>/build/scripts/sudojQuery-start.min.js"></script>
+        <script src="<?php echo appDir ?>/scripts/sudojQuery-start.min.js"></script>
     <?php } ?>
 	
 </head>

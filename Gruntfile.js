@@ -75,6 +75,9 @@ module.exports = function(grunt) {
                 'app/scripts/*.js',
                 '!app/scripts/*.min.js'
             ],
+            images: {
+                src: 'app/images'
+            },
             normalizeSupportFor: {
                 src: 'assets/vendor/normalize-scss/sass/_support-for.scss'
             }
@@ -296,7 +299,14 @@ module.exports = function(grunt) {
                 options: {
                     spawn: false,
                 }
-            }
+            },
+            images: {
+                files: 'assets/images/',
+                tasks: ['clean:images', 'imagemin'],
+                options: {
+                    spawn: false,
+                },
+            },
         },
       
         //---------------------------------------------------------
