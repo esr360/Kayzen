@@ -334,7 +334,7 @@ git clone https://github.com/esr360/Kayzen.git --recursive
                 <p>The core configuration file for the PHP templates can be found at templates/<b>app.php</b>. This is where all configurable templates are imported and all global variables are set.</p>
                 
                 <p>If your workflow involves using Grunt and the provided Gruntfile.js file, you have access to several Grunt tasks to help with your building.</p>
-			
+             
 				<h2 class="heading-light-size-5" id="deploy">Deploy</h2>
 				
 				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras eu ligula vel turpis pellentesque posuere. Vestibulum cursus mi ut nunc ultrices porttitor. Donec imperdiet efficitur hendrerit.</p>

@@ -11,6 +11,7 @@ define('env', 'dev');
 //-----------------------------------------------------------------
 
 include (ROOT.'/includes/article-item.php');
+include (ROOT.'/includes/dev-asset.php');
 include (ROOT.'/includes/google-map.php');
 include (ROOT.'/includes/sidebar.php');
 

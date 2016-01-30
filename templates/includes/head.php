@@ -17,17 +17,9 @@
     <!--[if IE]><link rel="shortcut icon" href="<?php echo appDir ?>/images/favicon.ico"><![endif]-->
 
     <!-- Stylesheet -->
-    <?php if (env == 'dev') { ?>
-        <link rel="stylesheet" href="<?php echo appDir ?>/styles/app.css">
-    <?php } else if (env == 'prod') { ?>
-        <link rel="stylesheet" href="<?php echo appDir ?>/styles/app.min.css">
-    <?php } ?>
+    <?php devAsset(array('path' => 'app.css')); ?>
 	
     <!-- sudojQuery start -->
-    <?php if (env == 'dev') { ?>
-        <script src="<?php echo appDir ?>/scripts/sudojQuery-start.js"></script>
-    <?php } else if (env == 'prod') { ?>
-        <script src="<?php echo appDir ?>/scripts/sudojQuery-start.min.js"></script>
-    <?php } ?>
+    <?php devAsset(array('path' => 'sudojQuery-start.js')); ?>
 	
 </head>
