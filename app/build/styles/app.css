@@ -3907,7 +3907,7 @@ p > a:hover, .text a:hover, .list a:hover, [class*="list-"] a:hover {
 p, ul, ol {
   font-weight: lighter;
 }
-p b, p strong, ul b, ul strong, ol b, ol strong {
+p strong, ul strong, ol strong {
   color: #232627;
 }
 
@@ -6774,6 +6774,8 @@ img {
   -webkit-transform: translateY(-50%);
       -ms-transform: translateY(-50%);
           transform: translateY(-50%);
+  margin-left: auto !important;
+  margin-right: auto !important;
 }
 
 .image-square {

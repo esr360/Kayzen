@@ -97,7 +97,66 @@
                 
                 <p>If you are not yet familiar with Sass/SCSS or CSS pre-processing, checkout <a href="http://www.webdesignerdepot.com/2013/11/the-beginners-guide-to-sass/" target="blank">this article</a> to understand the basis about what it is and why it's beneficial. Once you've decided to make the leap, you can read about how to setup your workflow to include Sass by reading <a href="https://medium.com/@ricardozea/sass-for-beginners-the-friendliest-guide-about-how-to-install-use-sass-on-windows-22ff4a32c1f7#.wrryv6w1r" target="blank">this article</a>.</p>
                 
-                <p>At this stage, it is not essential to know about JavaScript concatenation. As long as you are comfortable using Sass you will gain most of the benefits Kayzen has to offer.</p>
+                <p>At this stage, it is not essential to know about JavaScript concatenation. As long as you are comfortable using Sass you will gain most of the benefits Kayzen has to offer. Having said that, if you are comfortable combining JavaScript files, then continue reading.</p>
+                
+                <p class="alert-bar-error">The following section is only relevant if your workflow involves an automated build process involving JavaScript concatenation.</p>
+                
+                <p>Both the default provided <code>app.js</code> and <code>app.css</code> contain code from several third party libraries and plugins. The files for these libraries and plugins reside in the <b>app/vendor</b> folder, and include the following:</p>
+                
+                <ul class="list-clear">
+                    <li><a href="#">Englighter</a></li>
+                    <li><a href="#">Font-Awesome</a></li>
+                    <li><a href="#">Infinite-AJAX-Scroll</a></li>
+                    <li><a href="#">Isotope</a></li>
+                    <li><a href="#">jQuery</a></li>
+                    <li><a href="#">jquery-animateNumber</a></li>
+                    <li><a href="#">Kayzen-GS</a></li>
+                    <li><a href="#">Magnific-Popup</a></li>
+                    <li><a href="#">Masonry</a></li>
+                    <li><a href="#">Modular</a></li>
+                    <li><a href="#">MooTools-Core</a></li>
+                    <li><a href="#">normalize-scss</a></li>
+                    <li><a href="#">Owl-Carousel</a></li>
+                    <li><a href="#">pseudojQuery</a></li>
+                    <li><a href="#">SassyJSON</a></li>
+                    <li><a href="#">ScrollTrigger</a></li>
+                    <li><a href="#">Stellar</a></li>
+                    <li><a href="#">TweeCool</a></li>
+                </ul>
+                
+                <p>The <b>app.js</b> file contains the following third party JavaScript files:</p>
+                
+                <ul class="list-clear">
+                    <li>app/vendor/Owl-Carousel/src/js/owl.carousel.js</li>
+                    <li>app/vendor/Owl-Carousel/src/js/owl.animate.js</li>
+                    <li>app/vendor/Owl-Carousel/src/js/owl.autoheight.js</li>
+                    <li>app/vendor/Owl-Carousel/src/js/owl.autoplay.js</li>
+                    <li>app/vendor/Owl-Carousel/src/js/owl.compiled.js</li>
+                    <li>app/vendor/Owl-Carousel/src/js/owl.hash.js</li>
+                    <li>app/vendor/Owl-Carousel/src/js/owl.lazyload.js</li>
+                    <li>app/vendor/Owl-Carousel/src/js/owl.navigation.js</li>
+                    <li>app/vendor/Owl-Carousel/src/js/owl.video.js</li>
+                    <li>app/vendor/Magnific-Popup/src/js/core.js</li>
+                    <li>app/vendor/Magnific-Popup/src/js/gallery.js</li>
+                    <li>app/vendor/Magnific-Popup/src/js/image.js</li>
+                    <li>app/vendor/Magnific-Popup/src/js/retina.js</li>
+                    <li>app/vendor/Modular/src/modular.js</li>
+                    <li>app/vendor/jquery-animateNumber/jquery.animateNumber.js</li>
+                    <li>app/vendor/Kayzen.ScrollSpy/src/Kayzen.ScrollSpy.js</li>
+                    <li>app/vendor/ScrollTrigger/src/ScrollTrigger.js</li>
+                    <li>app/vendor/Stellar/src/jquery.stellar.js</li>
+                    <li>app/vendor/TweeCool/src/tweecool.js</li>
+                </ul>
+                
+                <ul class="list-clear">
+                    <li>app/modules/utilities/core/core.js</li>
+                    <li>app/includes/*.js</li>
+                    <li>app/modules/elements/**/*.js</li>
+                    <li>app/modules/objects/**/*.js</li>
+                    <li>app/themes/YOURTHEME/YOURTHEME.js</li>
+                </ul>
+                
+                <p>You will notice that all of the used third party resources exist on Github, and as such are included as <a href="https://git-scm.com/book/en/v2/Git-Tools-Submodules" target="blank">Git Submodules</a>. If you have purchased a license for Kayzen, you are entitled to access to the private Github repository <a href="https://github.com/esr360/Kayzen" target="blank">located here</a>. If you do not already have access, <a href="#">get in touch with us</a> to gain access.</p>
 			
 				<h2 class="heading-light-size-5" id="configure">Configure</h2>
 				
@@ -121,13 +180,58 @@
 			
                 <p>To set which theme your project should use, set the <code>$theme</code> variable at the top of <b>app.scss</b>. By default this is set to <code>Kayzen</code>.</p>
                 
-                <p>You can now control every configurable aspect of your peoject from <code>app/themes/Kayzen/_kayzen.scss</code>. This file is where all the modules which are used by the theme are included, and also where you can pass any custom options to them.</p>
+                <p>You can now control every configurable aspect of your project from <code>app/themes/Kayzen/_kayzen.scss</code>. This file is where all the modules which are used by the theme are included, and also where you can pass any custom options to them. There are three types of modules, for a list of all of them and their available options, see the following links:</p>
+                
+                <ul class="list-clear">
+                    <li><a href="#">app/modules/<b>elements</b></a></li>
+                    <li><a href="#">app/modules/<b>objects</b></a></li>
+                    <li><a href="#">app/modules/<b>utilities</b></a></li>
+                </ul>
+                
+                <p>You can pass a custom option to a module in your theme's file (e.g. app/themes/Kayzen/_kayzen.scss) like so:</p>
+                
+<pre data-enlighter-language="css" class="EnlighterJSRAW">
+@include accordions((
+    'section-margin'      : 1.4em,
+    'title-radius'        : 0.4em,
+    'title-active-radius' : 0.4em 0.4em 0 0,
+    'content-radius'      : 0 0 0.4em 0.4em
+));
+</pre>
+
+                <p>If the module you are editing has nestable options, you would change them like so:</p>
+
+<pre data-enlighter-language="css" class="EnlighterJSRAW">
+@include palettes((
+    'brand': (
+        'primary'   : #61BD6D,
+        'secondary' : #00A885
+    ),
+    'validation': (
+        'valid'     : MediumSeaGreen 
+    )
+));
+</pre>
+
+                <p>To get started quickly, some of the most common modules you might want to configure might include:</p>
+                
+                <ul class="list-clear">
+                    <li><strong>Colors:</strong> app/modules/utilities/<a href="#">color-palette</a></li>
+                    <li><strong>Breakpoints:</strong> app/modules/utilities/<a href="#">grid</a></li>
+                    <li><strong>Fonts:</strong> app/modules/utilities/<a href="#">typography</a></li>
+                    <li><strong>Header:</strong> app/modules/objects/<a href="#">header</a></li>
+                    <li><strong>Footer:</strong> app/modules/objects/<a href="#">footer</a></li>
+                </ul>
+            
+                <p>Once you have configured all of your desired opions, you can preview all the modules on the <a href="#">Cheatsheet</a> page.</p>
             
 				<h2 class="heading-light-size-5" id="build">Build</h2>
 				
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras eu ligula vel turpis pellentesque posuere. Vestibulum cursus mi ut nunc ultrices porttitor. Donec imperdiet efficitur hendrerit.</p>
+				<p>Once you have configured all of your modules, you're ready to sart building your pages. Kayzen comes with numerous templates ready-made for you to use for your pages, you can <a href="#">view them here</a>. New templates are added all the time, so be sure to regularly check for updates.</p>
+                
+                <p>You can either manually build your HTML pages, or you can use the provided <a href="#">page builder</a>. If you are manually building your pages, you may wish to checkout the <a href="#">blank page</a> example to quickly get started with a new page.</p>
 			
-				<h2 class="heading-light-size-5" id="deploy">deploy</h2>
+				<h2 class="heading-light-size-5" id="deploy">Deploy</h2>
 				
 				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras eu ligula vel turpis pellentesque posuere. Vestibulum cursus mi ut nunc ultrices porttitor. Donec imperdiet efficitur hendrerit.</p>
 				
@@ -146,6 +250,8 @@
     <?php include (ROOT.'/includes/ui-enhancements.php'); ?>
 
     <?php include (ROOT.'/includes/scripts.php'); ?>
+		
+    <?php include (ROOT.'/includes/syntax-highlighter.php'); ?>
 
 </body>
 </html>

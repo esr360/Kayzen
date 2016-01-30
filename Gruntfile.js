@@ -7,6 +7,8 @@ module.exports = function(grunt) {
     //-------------------------------------------------------------
     // Config
     //-------------------------------------------------------------
+    
+    var theme = 'Kayzen';
 
     // Built Asset Paths
     var buildScripts = 'app/build/scripts/';
@@ -49,7 +51,7 @@ module.exports = function(grunt) {
         'app/includes/*.js',
         'app/modules/elements/**/*.js',
         'app/modules/objects/**/*.js',
-        'app/themes/**/*.js'
+        'app/themes/' + theme + '/' + theme + '.js'
     ];
 
     //-------------------------------------------------------------
