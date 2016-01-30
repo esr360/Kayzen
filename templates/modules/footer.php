@@ -18,7 +18,6 @@
     
     <footer class="footer" id="footer">
         
-        <?php if (!$type == 'bar') { ?>
         <div class="footer_wrapper">
             <div class="container">
                 <div class="row">
@@ -169,7 +168,6 @@
                 </div>
             </div>
         </div>
-        <?php } ?>
         
         <div class="container">
             <div class="footer_bar">

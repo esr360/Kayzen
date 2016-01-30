@@ -6,12 +6,6 @@
 define('ROOT', dirname(__FILE__));
 define('appDir', '/app'); 
 define('env', 'dev');
-	
-$for = '';
-$widgetTitle = '';
-$style = '';
-$type = '';
-$container = '';
 
 // Templates
 //-----------------------------------------------------------------
@@ -51,19 +45,5 @@ include (ROOT.'/sections/statistics.php');
 include (ROOT.'/sections/testimonials.php');
 include (ROOT.'/sections/twitter-feed.php');
 include (ROOT.'/sections/why-choose-us.php');
-
-// Debug to Console
-//-----------------------------------------------------------------
-	
-function consoleLog($data) {
-    if (is_array($data)) {
-        $output = "<script>console.log( 'Debug Objects: " . implode( ',', $data) . "' );</script>";
-    } else {
-        $output = "<script>console.log( 'Debug Objects: " . $data . "' );</script>";
-    }
-    echo $output;
-}
-
-//consoleLog(appDir);
 
 ?>

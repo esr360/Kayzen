@@ -372,6 +372,36 @@ module.exports = function(grunt) {
                     ext: '.html'     
                 }]
             }
+        },
+      
+        //---------------------------------------------------------
+        // Auto-Install
+        // https://github.com/sindresorhus/grunt-sass
+        //---------------------------------------------------------
+        
+        auto_install: {
+            local: {},
+            mooTools: {
+                options: {
+                    cwd: 'assets/vendor/MooTools-Core'
+                }
+            }
+        },
+      
+        //---------------------------------------------------------
+        // Run-Grunt
+        // https://github.com/sindresorhus/grunt-sass
+        //---------------------------------------------------------
+        
+        run_grunt: {
+            options: {},
+            mooTools: {
+                options: {
+                    log: true,
+                    task: 'nocompat'
+                },
+                src: ['assets/vendor/MooTools-Core/Gruntfile.js']
+            }
         }
 
     });
@@ -393,6 +423,8 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-notify');
     grunt.loadNpmTasks('grunt-php-set-constant');
     grunt.loadNpmTasks('grunt-php2html');
+    grunt.loadNpmTasks('grunt-run-grunt');
+    grunt.loadNpmTasks('grunt-auto-install');
     //grunt.loadNpmTasks('grunt-sass');
     
     //-------------------------------------------------------------
@@ -401,6 +433,8 @@ module.exports = function(grunt) {
 
     //Default
     grunt.registerTask('default', [
+        'auto_install',
+        'run_grunt',
         'compile:dev',
         'watch',
         'postcss:dist'

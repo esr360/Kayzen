@@ -228,6 +228,14 @@ git clone https://github.com/esr360/Kayzen.git --recursive
                 
                 <p>Kayzen requires a minimum Sass version of <strong>3.4</strong>, so ensure that your Sass compiler is upto date with at least this version.</p>
                 
+				<h3 class="heading-uppercase-light-border" id="building-kayzen">Images</h2>
+                
+                <p>The images need to be copied (duplicated) into the <b>app</b> directory (app/images). This allows you to keep your source image files separate from your production ones, which may be compressed during your build process. These are located in the <b>assets</b> directory:</p>
+                
+                <ul class="list-clear">
+                    <li>assets/images/</li>
+                </ul>
+                
 				<h3 class="heading-uppercase-light-border" id="building-kayzen">FontAwesome</h2>
                 
                 <p>The FontAwesome font files need to be copied (duplicated) into the <b>app</b> directory (app/fonts). These are located here:</p>
@@ -236,13 +244,11 @@ git clone https://github.com/esr360/Kayzen.git --recursive
                     <li>assets/vendor/Font-Awesome/fonts/</li>
                 </ul>
                 
-				<h3 class="heading-uppercase-light-border" id="building-kayzen">Images</h2>
+				<h3 class="heading-uppercase-light-border" id="building-kayzen">MooTools</h2>
                 
-                <p>The images need to be copied (duplicated) into the <b>app</b> directory (app/images). This allows you to keep your source image files separate from your production ones, which may be compressed during your build process. These are located in the <b>assets</b> directory:</p>
+                <p class="alert-bar-info">This step is only required if you intend to use the <a href="#">Enlighter</a> syntax highlighter plugin.</p>
                 
-                <ul class="list-clear">
-                    <li>assets/images/</li>
-                </ul>
+                <p>The Enlighter plugin which is used by the Kayzen demo pages requires <a href="#">MooTools</a>. MooTools requires you to build the file manually. Details on how to do so can be found on the MooTools repository page. Once you have built the file, it should now be available at assets/vendor/MooTools-Core/build/<b>mootools-core.js</b>. This file should then be copied to Kayzen's <b>app</b> directory (app/scripts).</p>
                 
 				<h3 class="heading-uppercase-light-border" id="building-kayzen">Caveats</h2>
                 
@@ -320,6 +326,14 @@ git clone https://github.com/esr360/Kayzen.git --recursive
 				<p>Once you have configured all of your modules, you're ready to sart building your pages. Kayzen comes with numerous templates ready-made for you to use for your pages, you can <a href="#">view them here</a>. New templates are added all the time, so be sure to regularly check for updates.</p>
                 
                 <p>You can either manually build your HTML pages, or you can use the provided <a href="#">page builder</a>. If you are manually building your pages, you may wish to checkout the <a href="#">blank page</a> example to quickly get started with a new page.</p>
+                
+                <h3 class="heading-size-3" id="building-kayzen">PHP Templates</h3>
+                
+                <p>If you do not plan on integrating Kayzen into a CMS, you may wish to consider utilising the source PHP files from which the demo pages are built form. Whilst the PHP framework is extremely basic, it allows you to rapidly prototype pages using all the various components Kayzen has to offer. All the PHP templates are located in the <b>templates</b> directory.</p>
+                
+                <p>The core configuration file for the PHP templates can be found at templates/<b>app.php</b>. This is where all configurable templates are imported and all global variables are set.</p>
+                
+                <p>If your workflow involves using Grunt and the provided Gruntfile.js file, you have access to several Grunt tasks to help with your building.</p>
 			
 				<h2 class="heading-light-size-5" id="deploy">Deploy</h2>
 				
