@@ -11,11 +11,11 @@ module.exports = function(grunt) {
     var theme = 'Kayzen';
 
     // Built Asset Paths
-    var buildScripts = 'app/build/scripts/';
-    var buildStyles  = 'app/build/styles/';
+    var buildScripts = 'app/scripts/';
+    var buildStyles  = 'app/styles/';
 
     // Owl Carousel
-    var _owlPath = 'app/vendor/Owl-Carousel/src/js/'; 
+    var _owlPath = 'assets/vendor/Owl-Carousel/src/js/'; 
     var _owl = [
         _owlPath + 'owl.carousel.js',
         _owlPath + 'owl.animate.js',
@@ -29,7 +29,7 @@ module.exports = function(grunt) {
     ];
     
     // Magnific Popup
-    var _magnificPath = 'app/vendor/Magnific-Popup/src/js/'; 
+    var _magnificPath = 'assets/vendor/Magnific-Popup/src/js/'; 
     var _magnific = [
         _magnificPath + 'core.js',
         _magnificPath + 'gallery.js',
@@ -41,17 +41,17 @@ module.exports = function(grunt) {
     var _scripts = [   
         _owl,
         _magnific,
-        'app/vendor/Modular/src/modular.js',
-        'app/vendor/jquery-animateNumber/jquery.animateNumber.js',
-        'app/vendor/Kayzen.ScrollSpy/src/Kayzen.ScrollSpy.js',
-        'app/vendor/ScrollTrigger/src/ScrollTrigger.js',
-        'app/vendor/Stellar/src/jquery.stellar.js',
-        'app/vendor/TweeCool/src/tweecool.js',
-        'app/modules/utilities/core/core.js',
-        'app/includes/*.js',
-        'app/modules/elements/**/*.js',
-        'app/modules/objects/**/*.js',
-        'app/themes/' + theme + '/' + theme + '.js'
+        'assets/vendor/Modular/src/modular.js',
+        'assets/vendor/jquery-animateNumber/jquery.animateNumber.js',
+        'assets/vendor/Kayzen.ScrollSpy/src/Kayzen.ScrollSpy.js',
+        'assets/vendor/ScrollTrigger/src/ScrollTrigger.js',
+        'assets/vendor/Stellar/src/jquery.stellar.js',
+        'assets/vendor/TweeCool/src/tweecool.js',
+        'assets/modules/utilities/core/core.js',
+        'assets/includes/*.js',
+        'assets/modules/elements/**/*.js',
+        'assets/modules/objects/**/*.js',
+        'assets/themes/' + theme + '/' + theme + '.js'
     ];
 
     //-------------------------------------------------------------
@@ -69,14 +69,14 @@ module.exports = function(grunt) {
     
         clean: {
             build: {
-                src: 'app/build'
+                src: 'app'
             },
             scripts: [
-                'app/build/scripts/*.js',
-                '!app/build/scripts/*.min.js'
+                'app/scripts/*.js',
+                '!app/scripts/*.min.js'
             ],
             normalizeSupportFor: {
-                src: 'app/vendor/normalize-scss/sass/_support-for.scss'
+                src: 'assets/vendor/normalize-scss/sass/_support-for.scss'
             }
         },
       
@@ -101,53 +101,59 @@ module.exports = function(grunt) {
             app: {
                 files: [
                     {
-                        cwd: 'app/vendor/Font-Awesome/fonts',
+                        cwd: 'assets/images',
                         src: '**/*',
-                        dest: 'app/build/fonts',
+                        dest: 'app/images',
                         expand: true
                     },
                     {
-                        src: 'app/vendor/jQuery/dist/jquery.js',
+                        cwd: 'assets/vendor/Font-Awesome/fonts',
+                        src: '**/*',
+                        dest: 'app/fonts',
+                        expand: true
+                    },
+                    {
+                        src: 'assets/vendor/jQuery/dist/jquery.js',
                         dest: buildScripts + 'jquery.js'
                     },
                     {
-                        src: 'app/vendor/sudojQuery/src/sudojQuery-start.js',
+                        src: 'assets/vendor/sudojQuery/src/sudojQuery-start.js',
                         dest: buildScripts + 'sudojQuery-start.js'
                     },
                     {
-                        src: 'app/vendor/sudojQuery/src/sudojQuery-end.js',
+                        src: 'assets/vendor/sudojQuery/src/sudojQuery-end.js',
                         dest: buildScripts + 'sudojQuery-end.js'
                     },
                     {
-                        src: 'app/vendor/Masonry/dist/masonry.pkgd.js',
+                        src: 'assets/vendor/Masonry/dist/masonry.pkgd.js',
                         dest: buildScripts + 'masonry.pkgd.js'
                     },
                     {
-                        src: 'app/vendor/Isotope/dist/isotope.pkgd.js',
+                        src: 'assets/vendor/Isotope/dist/isotope.pkgd.js',
                         dest: buildScripts + 'isotope.pkgd.js'
                     },
                     {
-                        src: 'app/vendor/Infinite-AJAX-Scroll/dist/jquery-ias.js',
+                        src: 'assets/vendor/Infinite-AJAX-Scroll/dist/jquery-ias.js',
                         dest: buildScripts + 'jquery-ias.js'
                     },
                     {
-                        src: 'app/vendor/Enlighter/Build/EnlighterJS.js',
+                        src: 'assets/vendor/Enlighter/Build/EnlighterJS.js',
                         dest: buildScripts + 'EnlighterJS.js'
                     }, 
                     {
-                        src: 'app/vendor/Enlighter/Build/EnlighterJS.css',
+                        src: 'assets/vendor/Enlighter/Build/EnlighterJS.css',
                         dest: buildStyles + 'EnlighterJS.css'
                     },
                     {
-                        src: 'app/vendor/MooTools-Core/build/mootools-core.js',
+                        src: 'assets/vendor/MooTools-Core/build/mootools-core.js',
                         dest: buildScripts + 'mootools-core.js'
                     }
                 ]
             },
             normalizeSupportFor: {
                 files: [{
-                    src: 'app/vendor/support-for/sass/_support-for.scss',
-                    dest: 'app/vendor/normalize-scss/sass/_support-for.scss'
+                    src: 'assets/vendor/support-for/sass/_support-for.scss',
+                    dest: 'assets/vendor/normalize-scss/sass/_support-for.scss'
                 }]
             }
         },
@@ -160,7 +166,7 @@ module.exports = function(grunt) {
         uglify: {
             app: {
                 files: [{ 
-                    src: 'app/build/scripts/*.js',
+                    src: 'app/scripts/*.js',
                     dest: buildScripts,
                     expand: true,
                     flatten: true,
@@ -180,7 +186,7 @@ module.exports = function(grunt) {
                     style: 'expanded'
                 },
                 files: {
-                    [buildStyles + 'app.css']: 'app/app.scss'
+                    [buildStyles + 'app.css']: 'assets/app.scss'
                 }
             },
             prod: {
@@ -189,7 +195,7 @@ module.exports = function(grunt) {
                     sourcemap: 'none'
                 },
                 files: {
-                    [buildStyles + 'app.min.css']: 'app/app.scss'
+                    [buildStyles + 'app.min.css']: 'assets/app.scss'
                 }
             } 
         },
@@ -223,11 +229,43 @@ module.exports = function(grunt) {
         
         scsslint: {
             allFiles: [
-                'app/app.scss',
+                'assets/app.scss',
             ],
             options: {
                 colorizeOutput: true
             },
+        },
+        
+        //---------------------------------------------------------
+        // Imagemin
+        // https://github.com/sindresorhus/grunt-sass
+        //---------------------------------------------------------
+        
+        imagemin: {
+            png: {
+                options: {
+                    optimizationLevel: 7
+                },
+                files: [{
+                    expand: true,
+                    cwd: 'assets/images',
+                    src: ['**/*.png'],
+                    dest: 'app/images',
+                    ext: '.png'
+                }]
+            },
+            jpg: {
+                options: {
+                    progressive: true
+                },
+                files: [{
+                    expand: true,
+                    cwd: 'assets/images',
+                    src: ['**/*.jpg'],
+                    dest: 'app/images',
+                    ext: '.jpg'
+                }]
+            }
         },
       
         //---------------------------------------------------------
@@ -245,8 +283,8 @@ module.exports = function(grunt) {
             },
             css: {
                 files: [
-                    'app/includes/*.scss',
-                    'app/modules/**/*.scss'
+                    'assets/includes/*.scss',
+                    'assets/modules/**/*.scss'
                 ],
                 tasks: [
                     'copy:normalizeSupportFor', 
@@ -320,7 +358,7 @@ module.exports = function(grunt) {
                     expand: true, 
                     cwd: 'templates/pages/', 
                     src: '**/*.php', 
-                    dest: 'build', 
+                    dest: 'pages', 
                     ext: '.html'     
                 }]
             }
@@ -338,6 +376,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-contrib-clean');
+    grunt.loadNpmTasks('grunt-contrib-imagemin');
     grunt.loadNpmTasks('grunt-postcss');
     grunt.loadNpmTasks('grunt-scss-lint');
     grunt.loadNpmTasks('grunt-csscomb');
@@ -367,7 +406,8 @@ module.exports = function(grunt) {
         'concat',
         'sass:dev',
         'postcss',
-        'clean:normalizeSupportFor'
+        'clean:normalizeSupportFor',
+        'imagemin'
     ]); 
     
     grunt.registerTask('compile:dev', [
