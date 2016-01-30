@@ -1,24 +1,12 @@
 <?php function billboard($custom = array()) { ?>
 
-    <?php
-    
-        /**
-         * Options 
-         * Type: array
-         * Usage: $options['VALUE']
-         */
-    
-        $options = array_merge(array(
-            
-            'type'      => 'default', // 'homepage' / 'videoBg'
-            'headline'  => 'Kayzen',
-            'modifiers' => null,
-            'title'     => null,
-            'tag-line'  => null
-            
-        ), $custom);
-        
-    ?>
+    <?php $options = array_merge(array(
+        'type'      => 'default', // 'homepage' / 'videoBg'
+        'headline'  => 'Kayzen',
+        'modifiers' => null,
+        'title'     => null,
+        'tag-line'  => null
+    ), $custom); ?>
     
     <?php if ($options['type'] == 'homepage') { ?>
         <section class="billboard-overlay-full-screen" data-stellar-background-ratio="0.5">

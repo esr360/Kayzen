@@ -1,20 +1,8 @@
 <?php function shortcodes($custom = array()) { ?>
 
-    <?php
-    
-        /**
-         * Options 
-         * Type: array
-         * Usage: $options['VALUE']
-         */
-    
-        $options = array_merge(array(
-            
-            //'option' => 'VALUE'
-            
-        ), $custom);
-        
-    ?>
+    <?php $options = array_merge(array(
+        //'option' => 'VALUE'
+    ), $custom); ?>
  
     <!-- Shortcodes -->
     <section class="section-dot-map" id="shortcodes">

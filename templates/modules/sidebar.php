@@ -1,20 +1,8 @@
  <?php function sidebar($custom = array()) { ?>
 
-    <?php
-    
-        /**
-         * Options 
-         * Type: array
-         * Usage: $options['VALUE']
-         */
-    
-        $options = array_merge(array(
-            
-            'type' => 'blog'
-            
-        ), $custom);
-        
-    ?>
+    <?php $options = array_merge(array(
+        'type' => 'blog'
+    ), $custom); ?>
     
     <div class="tabs">
     

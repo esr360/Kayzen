@@ -2,12 +2,6 @@
 
     <?php
     
-        /**
-         * Options 
-         * Type: array
-         * Usage: $options['VALUE']
-         */
-    
         $options = array_merge(array(
             
             'path'  => ''

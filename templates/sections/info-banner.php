@@ -1,21 +1,9 @@
 <?php function infoBanner($custom = array()) { ?>
 
-    <?php
-    
-        /**
-         * Options 
-         * Type: array
-         * Usage: $options['VALUE']
-         */
-    
-        $options = array_merge(array(
-            
-            'color'         => 'brand', // 'brand' / 'light'
-            'cta-modifiers' => null
-            
-        ), $custom);
-        
-    ?>
+    <?php $options = array_merge(array(
+        'color'         => 'brand', // 'brand' / 'light'
+        'cta-modifiers' => null
+    ), $custom); ?>
     
     <!-- Info Banner -->
     <?php if ($options['color'] == 'brand') { ?>

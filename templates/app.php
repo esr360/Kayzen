@@ -12,23 +12,28 @@ define('env', 'dev');
 
 include (ROOT.'/includes/article-item.php');
 include (ROOT.'/includes/dev-asset.php');
-include (ROOT.'/includes/google-map.php');
-include (ROOT.'/includes/sidebar.php');
 
 include (ROOT.'/modules/billboard.php');
 include (ROOT.'/modules/earth-slider.php');
 include (ROOT.'/modules/footer.php');
+include (ROOT.'/modules/google-map.php');
 include (ROOT.'/modules/header.php');
+include (ROOT.'/modules/sidebar.php');
 include (ROOT.'/modules/top-bar.php');
 
 include (ROOT.'/sections/clients.php');
 include (ROOT.'/sections/contact-us.php');
+include (ROOT.'/sections/elements.php');
+include (ROOT.'/sections/feature-cards.php');
 include (ROOT.'/sections/feature-quote.php');
+include (ROOT.'/sections/in-store.php');
 include (ROOT.'/sections/info-banner.php');
 include (ROOT.'/sections/key-features.php');
 include (ROOT.'/sections/key-features-2.php');
 include (ROOT.'/sections/layouts.php');
+include (ROOT.'/sections/masonry-features.php');
 include (ROOT.'/sections/more-features.php');
+include (ROOT.'/sections/objects.php');
 include (ROOT.'/sections/options.php');
 include (ROOT.'/sections/our-team.php');
 include (ROOT.'/sections/pricing.php');

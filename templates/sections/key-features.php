@@ -1,20 +1,8 @@
 <?php function keyFeatures($custom = array()) { ?>
 
-    <?php
-    
-        /**
-         * Options 
-         * Type: array
-         * Usage: $options['VALUE']
-         */
-    
-        $options = array_merge(array(
-            
-            //'option' => 'VALUE'
-            
-        ), $custom);
-        
-    ?>
+    <?php $options = array_merge(array(
+        //'option' => 'VALUE'
+    ), $custom); ?>
 
     <!-- Key Features -->
     <section class="section" id="key-features">

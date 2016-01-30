@@ -1,20 +1,8 @@
 <?php function earthSlider($custom = array()) { ?>
 
-    <?php
-    
-        /**
-         * Options 
-         * Type: array
-         * Usage: $options['VALUE']
-         */
-    
-        $options = array_merge(array(
-            
-            //'option' => 'VALUE'
-            
-        ), $custom);
-        
-    ?>
+    <?php $options = array_merge(array(  
+        //'option' => 'VALUE'
+    ), $custom); ?>
     
     <section class="section earth-slider" id="s-welcome">
         <header class="earth-slider_section heading_group-block text-center">

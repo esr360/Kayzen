@@ -1,20 +1,8 @@
 <?php function whyChooseUs($custom = array()) { ?>
 
-    <?php
-    
-        /**
-         * Options 
-         * Type: array
-         * Usage: $options['VALUE']
-         */
-    
-        $options = array_merge(array(
-            
-            'cta-modifiers'   => null
-            
-        ), $custom);
-        
-    ?>
+    <?php $options = array_merge(array( 
+        'cta-modifiers'   => null
+    ), $custom); ?>
     
     <section class="section-primary-dot-map">
     

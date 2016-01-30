@@ -1,20 +1,8 @@
  <?php function recentWork($custom = array()) { ?>
 
-    <?php
-    
-        /**
-         * Options 
-         * Type: array
-         * Usage: $options['VALUE']
-         */
-    
-        $options = array_merge(array(
-            
-            'items' => 3
-            
-        ), $custom);
-        
-    ?>
+    <?php  $options = array_merge(array(
+        'items' => 3
+    ), $custom); ?>
 
     <section class="section-primary">
     

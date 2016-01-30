@@ -1,20 +1,8 @@
 <?php function topBar($custom = array()) { ?>
 
-    <?php
-    
-        /**
-         * Options 
-         * Type: array
-         * Usage: $options['VALUE']
-         */
-    
-        $options = array_merge(array(
-            
-            'modifiers' => null
-            
-        ), $custom);
-        
-    ?>
+    <?php $options = array_merge(array(
+        'modifiers' => null
+    ), $custom); ?>
     
     <!-- Login Box -->
     <div class="modal" id="modal-login">

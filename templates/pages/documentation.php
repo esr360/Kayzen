@@ -71,7 +71,7 @@
 							<i class="fa fa-rocket"></i>
 						</div>
 						<header class="widget_header heading_group">
-							<h4 class="heading-light-uppercase-brand-1">Deploy</h4>
+							<h4 class="heading-light-uppercase-brand-1">Test & Deploy</h4>
 						</header>
 					</a>
 					
@@ -136,7 +136,31 @@ git clone https://github.com/esr360/Kayzen.git --recursive
 			
                 <p class="alert-bar-info">The <b>--recursive</b> flag is required to install all the git submodules.</p>
                 
-                <p>If you are using Node, you can run <code>npm install</code> to allow you to use Grunt to build Kayzen from the source files. You can then run <code>grunt</code> to run the default Grunt tasks. If you are using another build tool, here are the key things it should encompass to successfully build Kayzen:</p>
+                <p>If you are using Node, you can run <code>npm install</code> to allow you to use Grunt to build Kayzen from the source files. You can then run <code>grunt</code> to run the default Grunt tasks. After running <code>npm install</code> you should now have the following Node modules in the <b>node_modules</b> directory:</p> 
+                
+                <ul class="list-clear">
+                    <li><a href="#">autoprefixer</a></li>
+                    <li><a href="#">grunt</a></li>
+                    <li><a href="#">grunt-auto-install</a></li>
+                    <li><a href="#">grunt-contrib-clean</a></li>
+                    <li><a href="#">grunt-contrib-concat</a></li>
+                    <li><a href="#">grunt-contrib-copy</a></li>
+                    <li><a href="#">grunt-contrib-imagemin</a></li>
+                    <li><a href="#">grunt-contrib-sass</a></li>
+                    <li><a href="#">grunt-contrib-uglify</a></li>
+                    <li><a href="#">grunt-contrib-watch</a></li>
+                    <li><a href="#">grunt-csscomb</a></li>
+                    <li><a href="#">grunt-notify</a></li>
+                    <li><a href="#">grunt-php-set-constant</a></li>
+                    <li><a href="#">grunt-php2html</a></li>
+                    <li><a href="#">grunt-postcss</a></li>
+                    <li><a href="#">grunt-run-grunt</a></li>
+                    <li><a href="#">grunt-sass</a></li>
+                    <li><a href="#">grunt-scss-lint</a></li>
+                    <li><a href="#">grunt-text-replace</a></li>
+                </ul>
+                
+                <p>If you are using another build tool, here are the key things it should encompass to successfully build Kayzen:</p>
                 
 				<h3 class="heading-uppercase-light-border" id="building-kayzen">JavaScript</h2>  
                 
@@ -331,13 +355,222 @@ git clone https://github.com/esr360/Kayzen.git --recursive
                 
                 <p>If you do not plan on integrating Kayzen into a CMS, you may wish to consider utilising the source PHP files from which the demo pages are built form. Whilst the PHP framework is extremely basic, it allows you to rapidly prototype pages using all the various components Kayzen has to offer. All the PHP templates are located in the <b>templates</b> directory.</p>
                 
-                <p>The core configuration file for the PHP templates can be found at templates/<b>app.php</b>. This is where all configurable templates are imported and all global variables are set.</p>
+                <p>The core configuration file for the PHP templates can be found at templates/<b>app.php</b>. This is where all configurable templates are imported and all global constants are set, which include the following:</p>
                 
-                <p>If your workflow involves using Grunt and the provided Gruntfile.js file, you have access to several Grunt tasks to help with your building.</p>
+				<table class="table-style-1-small">
+					<thead>
+						<tr>
+							<th>Constant</th>
+							<th>Default Value</th>
+							<th>Description</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td><code>appDir</code></td>
+							<td><code class="value">/app</code></td>
+							<td>The path to your compild assets.</td>
+						</tr>
+						<tr>
+							<td><code>env</code></td>
+							<td><code class="value">dev</code></td>
+							<td>Can be either 'dev' or 'prod'. If set to 'prod', any link included with the devAsset() function will have '.min' prepended before its default extension.</td>
+						</tr>
+                    </tbody>
+                </table>
+                
+                <h3 class="heading-uppercase-light-border" id="building-kayzen">Includes</h3>
+                
+                <p>The below includes can be used on any page which includes the <b>app.php</b> file, and will output some code depending on the options you pass to the function. They are located in the templates/<b>includes</b> directory.</p>
+                
+                <ul class="list-clear">
+                    <li><a href="#">articleItem()</a></li>
+                    <li><a href="#">devAsset()</a></li>
+                </ul>
+                
+                <p>You can use any of the above functions in yout PHP/PHTML pages like so:</p>
+                                
+<pre data-enlighter-language="php" class="EnlighterJSRAW">
+articleItem();
+</pre>                
+
+                <p>You can pass custom options to the function like so:</p>  
+                                        
+<pre data-enlighter-language="php" class="EnlighterJSRAW">
+articleItem(array(
+    'media'  => 'carousel',
+    'size'   => 'small',
+    'span'   => 4
+));
+</pre> 
+                
+                <h3 class="heading-uppercase-light-border" id="building-kayzen">Modules</h3>
+                
+                <p>The below modules can be used on any page which includes the <b>app.php</b> file, and will output some code depending on the options you pass to the function. They are located in the templates/<b>modules</b> directory.</p>
+                
+                <ul class="list-clear">
+                    <li><a href="#">appFooter()</a></li>
+                    <li><a href="#">appHeader()</a></li>
+                    <li><a href="#">billboard()</a></li>
+                    <li><a href="#">earthSlider()</a></li>
+                    <li><a href="#">googleMap()</a></li>
+                    <li><a href="#">sidebar()</a></li>
+                    <li><a href="#">topBar()</a></li>
+                </ul>
+                
+                <p>You can use any of the above functions in yout PHP/PHTML pages like so:</p>
+                                
+<pre data-enlighter-language="php" class="EnlighterJSRAW">
+billboard();
+</pre>                
+
+                <p>You can pass custom options to the function like so:</p>  
+                                        
+<pre data-enlighter-language="php" class="EnlighterJSRAW">
+billboard(array(
+    'title'    => 'My Billboard',
+    'tag-line' => 'My Tagline'
+));
+</pre> 
+                
+                <h3 class="heading-uppercase-light-border" id="building-kayzen">Sections</h3>
+                
+                <p>The below sections can be used on any page which includes the <b>app.php</b> file, and will output some code depending on the options you pass to the function. They are located in the templates/<b>sections</b> directory.</p>
+                
+                <ul class="list-clear">
+                    <li><a href="#">clients()</a></li>
+                    <li><a href="#">contactUs()</a></li>
+                    <li><a href="#">elements()</a></li>
+                    <li><a href="#">featureCards()</a></li>
+                    <li><a href="#">featureQuote()</a></li>
+                    <li><a href="#">inStore()</a></li>
+                    <li><a href="#">infoBanner()</a></li>
+                    <li><a href="#">keyFeatures()</a></li>
+                    <li><a href="#">keyFeatures-2()</a></li>
+                    <li><a href="#">layouts()</a></li>
+                    <li><a href="#">masonryFeatures()</a></li>
+                    <li><a href="#">moreFeatures()</a></li>
+                    <li><a href="#">objects()</a></li>
+                    <li><a href="#">options()</a></li>
+                    <li><a href="#">ourTeam()</a></li>
+                    <li><a href="#">pricing()</a></li>
+                    <li><a href="#">promoBanner()</a></li>
+                    <li><a href="#">promoSection()</a></li>
+                    <li><a href="#">recentWork()</a></li>
+                    <li><a href="#">recentArticles()</a></li>
+                    <li><a href="#">responsive()</a></li>
+                    <li><a href="#">services()</a></li>
+                    <li><a href="#">shareTheLove()</a></li>
+                    <li><a href="#">shortcodes()</a></li>
+                    <li><a href="#">showcase()</a></li>
+                    <li><a href="#">skill()</a></li>
+                    <li><a href="#">statistics()</a></li>
+                    <li><a href="#">testimonials()</a></li>
+                    <li><a href="#">twitterFeed()</a></li>
+                    <li><a href="#">whyChooseUs()</a></li>
+                </ul>
+                
+                <p>You can use any of the above functions in yout PHP/PHTML pages like so:</p>
+                                
+<pre data-enlighter-language="php" class="EnlighterJSRAW">
+clients();
+</pre>                
+
+                <p>You can pass custom options to the function like so:</p>  
+                                        
+<pre data-enlighter-language="php" class="EnlighterJSRAW">
+clients(array(
+    'title'     => 'Popular Brands',
+    'sub-title' => 'Get The Best Deals' 
+));
+</pre> 
+                
+                <h3 class="heading-uppercase-light-border" id="building-kayzen">Basic Template</h3>
+                
+                <p>Several things are required to create a PHP page using Kayzen. Below shows the minimum requirements to set up a blank page with all global modules and assets:</p>
+                
+<pre data-enlighter-language="html" class="EnlighterJSRAW">
+&lt;?php 
+    include ('../app.php');
+    $title = 'Documentation';
+    $tagline = 'Lorem Ipsum Dolor Sit Amet';
+?>
+
+&lt;!DOCTYPE html>
+&lt;html>
+
+    &lt;?php include (ROOT.'/includes/head.php'); ?>
+
+    &lt;body>
+
+        &lt;!-- Site Canvas -->
+        &lt;div id="site-content">
+            
+            &lt;!-- Topbar Module -->
+            &lt;?php topbar(); ?>
+
+            &lt;!-- Header Module -->
+            &lt;?php appHeader(array(
+                'modifiers' => 'bar-absolute-dark-sticky'
+            )); ?>
+
+            &lt;!-- Billboard Module -->
+            &lt;?php billboard(array(
+                'title'    => $title,
+                'tag-line' => $tagLine
+            )); ?>
+            
+            &lt;!-- YOUR HTML/PHP CONTENT -->
+            ...
+
+            &lt;?php appFooter(); ?>
+
+        &lt;/div>&lt;!-- Site Canvas -->
+
+        &lt;?php include (ROOT.'/includes/ui-enhancements.php'); ?>
+
+        &lt;?php include (ROOT.'/includes/scripts.php'); ?>
+
+    &lt;/body>
+    
+&lt;/html>
+</pre>
+
+                <p>If you are using Grunt and the provided Gruntfile.js, you can easily compile and build your app for development and production envrionments generating appropriate HTML files from your source PHP templates - see the below Grunt tasks.</p>
+
+                <h3 class="heading-size-3" id="building-kayzen">Grunt Tasks</h3>
+                
+                <p>The following Grunt tasks are available to use by default:</p>
+				<table class="table-small">
+					<thead>
+						<tr>
+							<th>Task</th>
+							<th>Description</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td><code>compile:dev</code></td>
+							<td>This will compile all JavaScript and CSS files for a development environment as well as compress all images.</td>
+						</tr>
+						<tr>
+							<td><code>build:dev</code></td>
+							<td>The same as above except all PHP pages will generate a corresponding HTML page.</td>
+						</tr>
+						<tr>
+							<td><code>compile:prod</code></td>
+							<td>This will compile all JavaScript and CSS files for a production envrionment as well as compress all images.</td>
+						</tr>
+						<tr>
+							<td><code>build:prod</code></td>
+							<td>The same as above except all PHP pages will generate a corresponding HTML page.</td>
+						</tr>
+                    </tbody>
+                </table>
              
-				<h2 class="heading-light-size-5" id="deploy">Deploy</h2>
+				<h2 class="heading-light-size-5" id="deploy">Test & Deploy</h2>
 				
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras eu ligula vel turpis pellentesque posuere. Vestibulum cursus mi ut nunc ultrices porttitor. Donec imperdiet efficitur hendrerit.</p>
+				<p>So you've created all your pages and configured all your modules, the front end for your project is now ready to test and then launch! Currently Kazen does not come with any automated tests or unit tests (though they are planned for the future), so this section will guide you through various tests you can conduct to ensure your users are getting the best experience possible.</p>
 				
 			</div>
 			

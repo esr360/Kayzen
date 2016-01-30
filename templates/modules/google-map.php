@@ -1,20 +1,8 @@
  <?php function googleMap($custom = array()) { ?>
 
-    <?php
-    
-        /**
-         * Options 
-         * Type: array
-         * Usage: $options['VALUE']
-         */
-    
-        $options = array_merge(array(
-            
-            'size' => null
-            
-        ), $custom);
-        
-    ?>
+    <?php $options = array_merge(array(
+        'size' => null
+    ), $custom); ?>
     
     <!-- Google Map -->
     <div class="google-map<?php if ($options['size'] == 'large') echo '-large' ?>" id="google-map"></div>

@@ -1,22 +1,10 @@
 <?php function promoBanner($custom = array()) { ?>
 
-    <?php
-    
-        /**
-         * Options 
-         * Type: array
-         * Usage: $options['VALUE']
-         */
-    
-        $options = array_merge(array(
-            
-            'minimal'         => false,
-            'small-container' => false,
-            'cta-modifiers'   => null
-            
-        ), $custom);
-        
-    ?>
+    <?php $options = array_merge(array(
+        'minimal'         => false,
+        'small-container' => false,
+        'cta-modifiers'   => null
+    ), $custom); ?>
     
     <!-- Promo Banner -->
     <?php if ($options['minimal']) { ?>

@@ -1,20 +1,8 @@
  <?php function responsive($custom = array()) { ?>
 
-    <?php
-    
-        /**
-         * Options 
-         * Type: array
-         * Usage: $options['VALUE']
-         */
-    
-        $options = array_merge(array(
-            
-            //'option' => 'VALUE'
-            
-        ), $custom);
-        
-    ?>
+    <?php $options = array_merge(array(
+        //'option' => 'VALUE'
+    ), $custom); ?>
  
     <!-- Responsive -->
     <section class="section-primary-dot-map" id="mobile-optimized">

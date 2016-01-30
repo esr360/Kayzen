@@ -1,21 +1,9 @@
 <?php function clients($custom = array()) { ?>
 
-    <?php
-    
-        /**
-         * Options 
-         * Type: array
-         * Usage: $options['VALUE']
-         */
-    
-        $options = array_merge(array(
-            
-            'title'     => 'Our Clients',
-            'sub-title' => 'Who We Work With'
-            
-        ), $custom);
-        
-    ?>
+    <?php $options = array_merge(array(
+        'title'     => 'Our Clients',
+        'sub-title' => 'Who We Work With'
+    ), $custom); ?>
     
     <section 
         class="section-secondary-overlay-alt-mini"

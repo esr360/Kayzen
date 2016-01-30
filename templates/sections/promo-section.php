@@ -1,22 +1,10 @@
 <?php function promoSection($custom = array()) { ?>
 
-    <?php
-    
-        /**
-         * Options 
-         * Type: array
-         * Usage: $options['VALUE']
-         */
-    
-        $options = array_merge(array(
-            
-            'dark'          => false,
-            'brand'         => false,
-            'cta-modifiers' => null
-            
-        ), $custom);
-        
-    ?>
+    <?php $options = array_merge(array(  
+        'dark'          => false,
+        'brand'         => false,
+        'cta-modifiers' => null
+    ), $custom); ?>
         
     <?php if ($options['dark']) { ?>
         <section class="section-secondary-overlay-dark" style="background-image: url('<?php echo appDir ?>/images/billboard-1.jpg')">

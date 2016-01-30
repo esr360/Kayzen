@@ -1,20 +1,8 @@
 <?php function appHeader($custom = array()) { ?>
 
-    <?php
-    
-        /**
-         * Options 
-         * Type: array
-         * Usage: $options['VALUE']
-         */
-    
-        $options = array_merge(array(
-            
-            'modifiers' => null
-            
-        ), $custom);
-        
-    ?>
+    <?php $options = array_merge(array(
+        'modifiers' => null
+    ), $custom); ?>
 
     <!-- Flyout Nav Trigger -->
     <span class="button-icon-primary flyout-trigger" id="flyout-trigger">
