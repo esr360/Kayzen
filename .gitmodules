@@ -55,3 +55,6 @@
 [submodule "app/vendor/normalize-scss"]
 	path = app/vendor/normalize-scss
 	url = https://github.com/JohnAlbin/normalize-scss.git
+[submodule "app/vendor/support-for"]
+	path = app/vendor/support-for
+	url = https://github.com/JohnAlbin/support-for.git
