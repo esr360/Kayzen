@@ -41,7 +41,7 @@
 				</div>
 			</header>
 				
-			<?php include (ROOT.'/sections/elements.php'); ?>
+			<?php elements(); ?>
 			
 		</section>
 			
@@ -57,7 +57,23 @@
 				</div>
 			</header>
 				
-			<?php include (ROOT.'/sections/objects.php'); ?>
+			<?php objects(); ?>
+	
+		</section>
+			
+		<section id="kayzenUtilities" class="section-block">
+			
+			<header class="heading_group-block has-icon text-center">
+				<div class="container-small">
+					<h4 class="heading-uppercase-light-spaced-brand-1-size-4"><span>Utilities</span></h4>
+					<h2 class="heading-uppercase-heavy-size-7 font-2"><span>General Helpers</span></h2>
+					<div class="heading_icon">
+						<i class="fa fa-cubes"></i>
+					</div>
+				</div>
+			</header>
+				
+			<?php utilities(); ?>
 	
 		</section>
         

@@ -276,11 +276,11 @@ git clone https://github.com/esr360/Kayzen.git --recursive
                 
 				<h3 class="heading-uppercase-light-border" id="building-kayzen">Caveats</h2>
                 
-                <p>One particular submodule (<a href="#">normalize-scss</a>) requires the <a href="#">support-for</a> library to be present within its own directory, and does not come by default as a result of installing <b>normalize-scss</b>. To clarify, the file located at assets/vendor/normalize-scss/sass/<b>_support-for.scss</b> must be present within the assets/vendor/normalize-scss/<b>sass/</b> directory when Sass compiles, otherwise it will throw an error. If you maually copy the file over, Git will complain that you have made changes to the <b>normalize-scss</b> submodule, so it is recommended that your build process involves copying the file over before Sass compiles, and then deleting it once the CSS has been compiled.</p>
+                <p>One particular submodule (<a href="#">normalize-scss</a>) requires the <a href="#">support-for</a> library to be present within its own directory, and does not come by default as a result of installing <b>normalize-scss</b>. To clarify, the file located at assets/vendor/support-for/sass/<b>_support-for.scss</b> must be present within the assets/vendor/normalize-scss/<b>sass/</b> directory when Sass compiles, otherwise it will throw an error. If you maually copy the file over, Git will complain that you have made changes to the <b>normalize-scss</b> submodule, so it is recommended that your build process involves copying the file over before Sass compiles, and then deleting it once the CSS has been compiled.</p>
                 
 				<h2 class="heading-light-size-5" id="configure">Configure</h2>
 				
-				<p>Kayzen is structured in a modular way, which makes things easier for everyone. As well as global configuration each module can be individually configured, giving you complete control and flexibility when customizing it for your project.</p>
+				<p>Kayzen is structured in a modular way, which makes things easier for everyone. Kayzen is built using the <a href="#">Modular</a> Sass library. As well as global configuration each module can be individually configured, giving you complete control and flexibility when customizing them for your project. This will also make updating your project in the future easier when new modules or module updates for Kayzen come out.</p>
                 
                 <p>Every module is imported in the main app.scss file:</p>
                 

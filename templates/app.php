@@ -50,6 +50,7 @@ include (ROOT.'/sections/skills.php');
 include (ROOT.'/sections/statistics.php');
 include (ROOT.'/sections/testimonials.php');
 include (ROOT.'/sections/twitter-feed.php');
+include (ROOT.'/sections/utilities.php');
 include (ROOT.'/sections/why-choose-us.php');
 
 ?>

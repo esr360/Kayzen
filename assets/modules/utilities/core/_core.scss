@@ -80,7 +80,7 @@
 	// Structure
 	//-------------------------------------------------------------
 	
-	@include module(container) {
+	@include module('container') {
 	
         width: option($grid, 'options', 'base-width');
         max-width: option($grid, 'options', 'max-width');
@@ -105,7 +105,7 @@
             max-width: none;
         }
 	
-	} // module(container)
+	} // module('container')
 
 	.wrapper {
 	    padding: 0 option($grid, 'options', 'gutter');

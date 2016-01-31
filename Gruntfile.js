@@ -451,7 +451,7 @@ module.exports = function(grunt) {
         'sass:dev',
         'postcss',
         'clean:normalizeSupportFor',
-        'imagemin'
+        //'imagemin'
     ]); 
     
     grunt.registerTask('compile:dev', [
