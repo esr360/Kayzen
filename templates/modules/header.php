@@ -3,11 +3,6 @@
     <?php $options = array_merge(array(
         'modifiers' => null
     ), $custom); ?>
-
-    <!-- Flyout Nav Trigger -->
-    <span class="button-icon-primary flyout-trigger" id="flyout-trigger">
-        <i class="fa fa-bars"></i>
-    </span>
     
     <header 
         class="app-header<?php echo '-'.$options['modifiers'] ?>" 

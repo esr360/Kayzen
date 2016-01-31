@@ -18,10 +18,15 @@
 <!-- Scroll to top icon -->
 <a class="button-icon-border scroll-top" href="#site-content">
 	<i class="fa fa-angle-up"></i>
-</a> 
+</a>
 
 <!-- Flyout Nav -->
 <div id="flyout"></div>
+
+<!-- Flyout Nav Trigger -->
+<span class="button-icon-primary flyout-trigger" id="flyout-trigger">
+    <i class="fa fa-bars"></i>
+</span>
 
 <!-- Site Overlay -->
 <div class="site-overlay" id="site-overlay"></div>

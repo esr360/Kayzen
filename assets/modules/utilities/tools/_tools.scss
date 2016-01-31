@@ -94,7 +94,7 @@
 	// Horizontal Rules
 	//-------------------------------------------------------------
 	
-	@include module(hrule) {
+	@include module('hrule') {
 		margin: base(margin) 0;
 		@include modifier(line) {
 			border-top: 1px solid rgba(0, 0, 0, 0.15);

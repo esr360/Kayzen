@@ -8,11 +8,28 @@ module.exports = function(grunt) {
     // Config
     //-------------------------------------------------------------
     
-    var theme = 'Kayzen';
+    // Set which theme you would like to build assets for
+    var theme = grunt.option('theme') || 'Kayzen';
+    
+    // If enabled each theme's assets will be output in their own 
+    // directory e.g. app/themes/Kayzen/scripts
+    var themes = grunt.option('themes') || false;
+    
+    // 'server' || 'static' - used to determine asset paths
+    var host = grunt.option('host') || 'server';
+    
+    //-------------------------------------------------------------
+    
+    // Used to determine how the theme's assets should be organised
+    var themePath = (themes) ? 'themes/' + theme + '/' : '';
 
     // Built Asset Paths
     var buildScripts = 'app/scripts/';
     var buildStyles  = 'app/styles/';
+    
+    // Theme Asset Paths
+    var themeBuildScripts = 'app/' + themePath + 'scripts/';
+    var themeBuildStyles  = 'app/' + themePath + 'styles/';
 
     // Owl Carousel
     var _owlPath = 'assets/vendor/Owl-Carousel/src/js/'; 
@@ -78,6 +95,9 @@ module.exports = function(grunt) {
             images: {
                 src: 'app/images'
             },
+            pages: {
+                src: 'pages'
+            },
             normalizeSupportFor: {
                 src: 'assets/vendor/normalize-scss/sass/_support-for.scss'
             }
@@ -91,7 +111,7 @@ module.exports = function(grunt) {
         concat: {   
             app: {
                 src: _scripts,
-                dest: buildScripts + 'app.js',
+                dest: themeBuildScripts + 'app.js',
             }
         },
       
@@ -170,7 +190,7 @@ module.exports = function(grunt) {
             app: {
                 files: [{ 
                     src: 'app/scripts/*.js',
-                    dest: buildScripts,
+                    dest: themeBuildScripts,
                     expand: true,
                     flatten: true,
                     ext: '.min.js'
@@ -189,7 +209,7 @@ module.exports = function(grunt) {
                     style: 'expanded'
                 },
                 files: {
-                    [buildStyles + 'app.css']: 'assets/app.scss'
+                    [themeBuildStyles + 'app.css']: 'assets/app.scss'
                 }
             },
             prod: {
@@ -198,7 +218,7 @@ module.exports = function(grunt) {
                     sourcemap: 'none'
                 },
                 files: {
-                    [buildStyles + 'app.min.css']: 'assets/app.scss'
+                    [themeBuildStyles + 'app.min.css']: 'assets/app.scss'
                 }
             } 
         },
@@ -221,7 +241,7 @@ module.exports = function(grunt) {
                 ]
             },
             build: {
-                src: buildStyles + '*.css'
+                src: themeBuildStyles + '*.css'
             }
         },
   
@@ -302,7 +322,7 @@ module.exports = function(grunt) {
             },
             images: {
                 files: 'assets/images/',
-                tasks: ['clean:images', 'imagemin'],
+                tasks: ['clean:images'],
                 options: {
                     spawn: false,
                 },
@@ -336,19 +356,50 @@ module.exports = function(grunt) {
         },
       
         //---------------------------------------------------------
+        // Sass
+        // https://github.com/sindresorhus/grunt-sass
+        //---------------------------------------------------------
+        
+        replace: {
+            sassTheme: {
+                src: ['assets/app.scss'],
+                dest: 'assets/app.scss',
+                replacements: [{
+                    from: /\$theme(.*?);/g,
+                    to: '$theme : \'' + theme + '\';'
+                }]
+            }
+        },
+      
+        //---------------------------------------------------------
         // Set PHP Constant
         // https://github.com/sindresorhus/grunt-sass
         //---------------------------------------------------------
         
         setPHPConstant: {
-            dev: {
+            theme : {
+                constant    : 'theme',
+                value       : theme,
+                file        : 'templates/app.php'
+            },
+            themes : {
+                constant    : 'themes',
+                value       : themes,
+                file        : 'templates/app.php'
+            },
+            dev : {
                 constant    : 'env',
                 value       : 'dev',
                 file        : 'templates/app.php'
             },
-            prod: {
+            prod : {
                 constant    : 'env',
                 value       : 'prod',
+                file        : 'templates/app.php'
+            },
+            host : {
+                constant    : 'host',
+                value       : host,
                 file        : 'templates/app.php'
             }
         },
@@ -362,7 +413,7 @@ module.exports = function(grunt) {
             default: {
                 options: {
                     processLinks: true,
-                    htmlhint: {},
+                    htmlhint: {}
                 },
                 files: [{
                     expand: true, 
@@ -410,6 +461,7 @@ module.exports = function(grunt) {
     // Load Npm Tasks
     //-------------------------------------------------------------
     
+    grunt.loadNpmTasks('grunt-auto-install');
     grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-sass');
@@ -417,15 +469,14 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.loadNpmTasks('grunt-contrib-imagemin');
-    grunt.loadNpmTasks('grunt-postcss');
-    grunt.loadNpmTasks('grunt-scss-lint');
-    grunt.loadNpmTasks('grunt-csscomb');
     grunt.loadNpmTasks('grunt-notify');
     grunt.loadNpmTasks('grunt-php-set-constant');
     grunt.loadNpmTasks('grunt-php2html');
+    grunt.loadNpmTasks('grunt-postcss');
     grunt.loadNpmTasks('grunt-run-grunt');
-    grunt.loadNpmTasks('grunt-auto-install');
     //grunt.loadNpmTasks('grunt-sass');
+    grunt.loadNpmTasks('grunt-scss-lint');
+    grunt.loadNpmTasks('grunt-text-replace');
     
     //-------------------------------------------------------------
     // Register Tasks
@@ -433,35 +484,36 @@ module.exports = function(grunt) {
 
     //Default
     grunt.registerTask('default', [
+        'compile:dev',
+        'watch',
+    ]); 
+       
+    grunt.registerTask('setup', [
         'auto_install',
         'run_grunt',
         'compile:dev',
-        'watch',
-        'postcss:dist'
+        'watch'
     ]);
     
     // Develop Tasks
     //-------------------------------------------------------------
     
     grunt.registerTask('compile:predev', [
+        'setPHPConstant:theme',
+        'setPHPConstant:themes',
         'setPHPConstant:dev',
+        'setPHPConstant:host',
         'clean:build',
+        'replace:sassTheme',
         'copy',
         'concat',
         'sass:dev',
         'postcss',
-        'clean:normalizeSupportFor',
-        //'imagemin'
+        'clean:normalizeSupportFor'
     ]); 
     
     grunt.registerTask('compile:dev', [
         'compile:predev',
-        'notify:app'
-    ]); 
-     
-    grunt.registerTask('build:dev', [
-        'compile:predev',
-        'php2html',
         'notify:app'
     ]);
     
@@ -469,15 +521,18 @@ module.exports = function(grunt) {
     //-------------------------------------------------------------
     
     grunt.registerTask('compile:preprod', [
+        'setPHPConstant:theme',
+        'setPHPConstant:themes',
         'setPHPConstant:prod',
+        'setPHPConstant:host',
         'clean:build',
+        'replace:sassTheme',
         'copy',
         'concat',
         'uglify',
         'clean:scripts',
         'sass:prod',
-        'postcss',
-        //'scsslint'
+        'postcss'
     ]);
     
     grunt.registerTask('compile:prod', [
@@ -485,10 +540,11 @@ module.exports = function(grunt) {
         'notify:app'
     ]);
     
-    grunt.registerTask('build:prod', [
-        'compile:preprod',
+    grunt.registerTask('templates', [
+        'clean:pages',
+        'setPHPConstant:static',
         'php2html',
-        'notify:app'
+        'setPHPConstant:host'
     ]);
 
 }; // function(grunt)

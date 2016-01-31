@@ -541,6 +541,7 @@ clients(array(
                 <h3 class="heading-size-3" id="building-kayzen">Grunt Tasks</h3>
                 
                 <p>The following Grunt tasks are available to use by default:</p>
+                
 				<table class="table-small">
 					<thead>
 						<tr>

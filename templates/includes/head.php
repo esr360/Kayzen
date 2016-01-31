@@ -17,7 +17,7 @@
     <!--[if IE]><link rel="shortcut icon" href="<?php echo appDir ?>/images/favicon.ico"><![endif]-->
 
     <!-- Stylesheet -->
-    <?php devAsset(array('path' => 'app.css')); ?>
+    <?php themeAsset(array('path' => 'app.css')); ?>
 	
     <!-- sudojQuery start -->
     <?php devAsset(array('path' => 'sudojQuery-start.js')); ?>

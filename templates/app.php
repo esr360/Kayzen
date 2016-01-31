@@ -1,17 +1,66 @@
 <?php
+/******************************************************************
+ * Config
+ *****************************************************************/
 
-// Config
-//-----------------------------------------------------------------
+/**
+ * Set which theme to use
+ * @const theme
+ *
+ * You can view list of available themes in 'assets/themes'
+ */
+define('theme', 'Kayzen');
 
-define('ROOT', dirname(__FILE__));
-define('appDir', '/app'); 
+/**
+ * Are you using multiple themes?
+ * @const themes
+ *
+ * Set to 'true' if your theme's assets are inside their own
+ * directory e.g. app/themes/Kayzen
+ */
+define('themes', false);
+
+/**
+ * Set your work environment
+ * @const env
+ *
+ * Values: 'dev', 'prod'
+ */
 define('env', 'dev');
 
-// Templates
-//-----------------------------------------------------------------
+/**
+ * Set how you intend to access your project's assets
+ * @const host
+ *
+ * Values: 'static', 'server'
+ */
+define('host', 'server');
+
+/**
+ * Set the root php/template directory
+ * @const ROOT
+ *
+ * This should probably be left untouched
+ */
+define('ROOT', dirname(__FILE__));
+
+/**
+ * This sets the appropriate directory for your assets based on the
+ * above settings
+ */
+if (host == 'server') {
+    define('appDir', '/app');
+} else if (host == 'static') {
+    define('appDir', realpath(__DIR__ . '/../app'));
+}
+
+/******************************************************************
+ * Templates
+ *****************************************************************/
 
 include (ROOT.'/includes/article-item.php');
 include (ROOT.'/includes/dev-asset.php');
+include (ROOT.'/includes/theme-asset.php');
 
 include (ROOT.'/modules/billboard.php');
 include (ROOT.'/modules/earth-slider.php');
