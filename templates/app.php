@@ -4,6 +4,14 @@
  *****************************************************************/
 
 /**
+ * Set your work environment
+ * @const env
+ *
+ * Values: 'dev', 'prod'
+ */
+define('env', 'dev');
+
+/**
  * Set which theme to use
  * @const theme
  *
@@ -19,14 +27,6 @@ define('theme', 'Kayzen');
  * directory e.g. app/themes/Kayzen
  */
 define('themes', false);
-
-/**
- * Set your work environment
- * @const env
- *
- * Values: 'dev', 'prod'
- */
-define('env', 'dev');
 
 /**
  * Set how you intend to access your project's assets

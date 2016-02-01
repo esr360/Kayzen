@@ -1,12 +1,12 @@
-/**
- *
- * Kayzen.infiniteScroll
- * @author @esr360
- * @description Uses "Isotope" (optional) and "Infinite Ajax Scroll" plugins
- *
- */
-
 (function ($) {
+    
+    /**
+     *
+     * Kayzen.infiniteScroll
+     * @author @esr360
+     * @description Uses "Isotope" (optional) and "Infinite Ajax Scroll" plugins
+     *
+     */
  
     $.fn.KayenInfiniteScroll = function(custom, callback) {
         

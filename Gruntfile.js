@@ -32,26 +32,26 @@ module.exports = function(grunt) {
     var themeBuildStyles  = 'app/' + themePath + 'styles/';
 
     // Owl Carousel
-    var _owlPath = 'assets/vendor/Owl-Carousel/src/js/'; 
+    var owlPath = 'assets/vendor/Owl-Carousel/src/js/'; 
     var _owl = [
-        _owlPath + 'owl.carousel.js',
-        _owlPath + 'owl.animate.js',
-        _owlPath + 'owl.autoheight.js',
-        _owlPath + 'owl.autoplay.js',
-        _owlPath + 'owl.compiled.js',
-        _owlPath + 'owl.hash.js',
-        _owlPath + 'owl.lazyload.js',
-        _owlPath + 'owl.navigation.js',
-        _owlPath + 'owl.video.js',
+        owlPath + 'owl.carousel.js',
+        owlPath + 'owl.animate.js',
+        owlPath + 'owl.autoheight.js',
+        owlPath + 'owl.autoplay.js',
+        owlPath + 'owl.compiled.js',
+        owlPath + 'owl.hash.js',
+        owlPath + 'owl.lazyload.js',
+        owlPath + 'owl.navigation.js',
+        owlPath + 'owl.video.js',
     ];
     
     // Magnific Popup
-    var _magnificPath = 'assets/vendor/Magnific-Popup/src/js/'; 
+    var magnificPath = 'assets/vendor/Magnific-Popup/src/js/'; 
     var _magnific = [
-        _magnificPath + 'core.js',
-        _magnificPath + 'gallery.js',
-        _magnificPath + 'image.js',
-        _magnificPath + 'retina.js',
+        magnificPath + 'core.js',
+        magnificPath + 'gallery.js',
+        magnificPath + 'image.js',
+        magnificPath + 'retina.js',
     ];
 
     // App Scripts
@@ -71,6 +71,24 @@ module.exports = function(grunt) {
         'assets/themes/' + theme + '/' + theme + '.js'
     ];
 
+    // Separate Scripts
+    var _separateScripts = [
+        'assets/vendor/jQuery/dist/jquery.js',
+        'assets/vendor/sudojQuery/src/sudojQuery-start.js',
+        'assets/vendor/sudojQuery/src/sudojQuery-end.js',
+        'assets/vendor/Masonry/dist/masonry.pkgd.js',
+        'assets/vendor/Isotope/dist/isotope.pkgd.js',
+        'assets/vendor/Infinite-AJAX-Scroll/dist/jquery-ias.js',
+        'assets/vendor/Enlighter/Build/EnlighterJS.js',
+        'assets/vendor/MooTools-Core/build/mootools-core.js',
+        'rherhlr.jw'
+    ];
+
+    // Separate Styles
+    var _separateStyles = [
+        'assets/vendor/Enlighter/Build/EnlighterJS.css'
+    ];
+
     //-------------------------------------------------------------
     // Tasks
     //-------------------------------------------------------------
@@ -85,7 +103,7 @@ module.exports = function(grunt) {
         //-----------------------------------------------------
     
         clean: {
-            build: {
+            app: {
                 src: 'app'
             },
             scripts: [
@@ -136,40 +154,16 @@ module.exports = function(grunt) {
                         expand: true
                     },
                     {
-                        src: 'assets/vendor/jQuery/dist/jquery.js',
-                        dest: buildScripts + 'jquery.js'
+                        src: [_separateScripts],
+                        dest: buildScripts,
+                        expand: true,
+                        flatten: true
                     },
                     {
-                        src: 'assets/vendor/sudojQuery/src/sudojQuery-start.js',
-                        dest: buildScripts + 'sudojQuery-start.js'
-                    },
-                    {
-                        src: 'assets/vendor/sudojQuery/src/sudojQuery-end.js',
-                        dest: buildScripts + 'sudojQuery-end.js'
-                    },
-                    {
-                        src: 'assets/vendor/Masonry/dist/masonry.pkgd.js',
-                        dest: buildScripts + 'masonry.pkgd.js'
-                    },
-                    {
-                        src: 'assets/vendor/Isotope/dist/isotope.pkgd.js',
-                        dest: buildScripts + 'isotope.pkgd.js'
-                    },
-                    {
-                        src: 'assets/vendor/Infinite-AJAX-Scroll/dist/jquery-ias.js',
-                        dest: buildScripts + 'jquery-ias.js'
-                    },
-                    {
-                        src: 'assets/vendor/Enlighter/Build/EnlighterJS.js',
-                        dest: buildScripts + 'EnlighterJS.js'
-                    }, 
-                    {
-                        src: 'assets/vendor/Enlighter/Build/EnlighterJS.css',
-                        dest: buildStyles + 'EnlighterJS.css'
-                    },
-                    {
-                        src: 'assets/vendor/MooTools-Core/build/mootools-core.js',
-                        dest: buildScripts + 'mootools-core.js'
+                        src: [_separateStyles],
+                        dest: buildStyles,
+                        expand: true,
+                        flatten: true
                     }
                 ]
             },
@@ -362,7 +356,7 @@ module.exports = function(grunt) {
         
         replace: {
             sassTheme: {
-                src: ['assets/app.scss'],
+                src: 'assets/app.scss',
                 dest: 'assets/app.scss',
                 replacements: [{
                     from: /\$theme(.*?);/g,
@@ -400,6 +394,11 @@ module.exports = function(grunt) {
             host : {
                 constant    : 'host',
                 value       : host,
+                file        : 'templates/app.php'
+            },
+            static : {
+                constant    : 'host',
+                value       : 'static',
                 file        : 'templates/app.php'
             }
         },
@@ -481,6 +480,32 @@ module.exports = function(grunt) {
     //-------------------------------------------------------------
     // Register Tasks
     //-------------------------------------------------------------
+    
+    // Compile Assets
+    var gruntCompile = function(environment) {
+        var assetTasks = [
+            'clean:app',
+            'replace:sassTheme',
+            'copy',
+            'concat',
+            'sass:' + environment,
+            'postcss',
+            'clean:normalizeSupportFor'
+        ];
+        if (environment == 'prod') {
+            assetTasks.push(
+                'uglify', 
+                'clean:scripts'
+            );
+        };
+        var backendTasks = [
+            'setPHPConstant:' + environment,
+            'setPHPConstant:theme',
+            'setPHPConstant:themes',
+            'setPHPConstant:host'
+        ];
+        return assetTasks.concat(backendTasks);
+    };
 
     //Default
     grunt.registerTask('default', [
@@ -488,29 +513,26 @@ module.exports = function(grunt) {
         'watch',
     ]); 
        
+    // Initial Setup
     grunt.registerTask('setup', [
         'auto_install',
-        'run_grunt',
-        'compile:dev',
-        'watch'
+        'run_grunt'
+    ]);
+    
+    // Generate HTML templates
+    grunt.registerTask('templates', [
+        'clean:pages',
+        'setPHPConstant:static',
+        'php2html',
+        'setPHPConstant:host'
     ]);
     
     // Develop Tasks
     //-------------------------------------------------------------
     
-    grunt.registerTask('compile:predev', [
-        'setPHPConstant:theme',
-        'setPHPConstant:themes',
-        'setPHPConstant:dev',
-        'setPHPConstant:host',
-        'clean:build',
-        'replace:sassTheme',
-        'copy',
-        'concat',
-        'sass:dev',
-        'postcss',
-        'clean:normalizeSupportFor'
-    ]); 
+    grunt.registerTask('compile:predev', 
+        gruntCompile('dev')
+    ); 
     
     grunt.registerTask('compile:dev', [
         'compile:predev',
@@ -520,31 +542,13 @@ module.exports = function(grunt) {
     // Production Tasks
     //-------------------------------------------------------------
     
-    grunt.registerTask('compile:preprod', [
-        'setPHPConstant:theme',
-        'setPHPConstant:themes',
-        'setPHPConstant:prod',
-        'setPHPConstant:host',
-        'clean:build',
-        'replace:sassTheme',
-        'copy',
-        'concat',
-        'uglify',
-        'clean:scripts',
-        'sass:prod',
-        'postcss'
-    ]);
+    grunt.registerTask('compile:preprod',
+        gruntCompile('prod')
+    );
     
     grunt.registerTask('compile:prod', [
         'compile:preprod',
         'notify:app'
-    ]);
-    
-    grunt.registerTask('templates', [
-        'clean:pages',
-        'setPHPConstant:static',
-        'php2html',
-        'setPHPConstant:host'
     ]);
 
 }; // function(grunt)
