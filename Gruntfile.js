@@ -80,8 +80,7 @@ module.exports = function(grunt) {
         'assets/vendor/Isotope/dist/isotope.pkgd.js',
         'assets/vendor/Infinite-AJAX-Scroll/dist/jquery-ias.js',
         'assets/vendor/Enlighter/Build/EnlighterJS.js',
-        'assets/vendor/MooTools-Core/build/mootools-core.js',
-        'rherhlr.jw'
+        'assets/vendor/MooTools-Core/build/mootools-core.js'
     ];
 
     // Separate Styles
@@ -131,6 +130,20 @@ module.exports = function(grunt) {
                 src: _scripts,
                 dest: themeBuildScripts + 'app.js',
             }
+        },
+      
+        //---------------------------------------------------------
+        // JS-Hint
+        // https://github.com/sindresorhus/grunt-sass
+        //---------------------------------------------------------
+        
+        jshint: {
+            app: [
+                'Gruntfile.js', 
+                'assets/includes/**/*.js',
+                'assets/modules/**/*.js',
+                'assets/themes/**/*.js'
+            ]
         },
       
         //---------------------------------------------------------
@@ -246,10 +259,12 @@ module.exports = function(grunt) {
         
         scsslint: {
             allFiles: [
-                'assets/app.scss',
+                'assets/modules/**/*.scss',
+                'assets/themes/**/*.scss'
             ],
             options: {
-                colorizeOutput: true
+                config: '.scss-lint.yml',
+                colorizeOutput: false
             },
         },
         
@@ -300,8 +315,8 @@ module.exports = function(grunt) {
             },
             css: {
                 files: [
-                    'assets/includes/*.scss',
-                    'assets/modules/**/*.scss'
+                    'assets/**/*.scss',
+                    '!assets/vendor/',
                 ],
                 tasks: [
                     'copy:normalizeSupportFor', 
@@ -462,6 +477,7 @@ module.exports = function(grunt) {
     
     grunt.loadNpmTasks('grunt-auto-install');
     grunt.loadNpmTasks('grunt-contrib-concat');
+    grunt.loadNpmTasks('grunt-contrib-jshint');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-sass');
     grunt.loadNpmTasks('grunt-contrib-watch');
@@ -480,6 +496,18 @@ module.exports = function(grunt) {
     //-------------------------------------------------------------
     // Register Tasks
     //-------------------------------------------------------------
+
+    //Default
+    grunt.registerTask('default', [
+        'compile:dev',
+        'watch',
+    ]); 
+       
+    // Initial Setup
+    grunt.registerTask('setup', [
+        'auto_install',
+        'run_grunt'
+    ]);
     
     // Compile Assets
     var gruntCompile = function(environment) {
@@ -504,20 +532,11 @@ module.exports = function(grunt) {
             'setPHPConstant:themes',
             'setPHPConstant:host'
         ];
-        return assetTasks.concat(backendTasks);
+        var notify = [
+            'notify:app'
+        ];
+        return assetTasks.concat(backendTasks, notify);
     };
-
-    //Default
-    grunt.registerTask('default', [
-        'compile:dev',
-        'watch',
-    ]); 
-       
-    // Initial Setup
-    grunt.registerTask('setup', [
-        'auto_install',
-        'run_grunt'
-    ]);
     
     // Generate HTML templates
     grunt.registerTask('templates', [
@@ -527,28 +546,20 @@ module.exports = function(grunt) {
         'setPHPConstant:host'
     ]);
     
-    // Develop Tasks
-    //-------------------------------------------------------------
-    
-    grunt.registerTask('compile:predev', 
+    // Compile the app for a development environment
+    grunt.registerTask('compile:dev', 
         gruntCompile('dev')
-    ); 
+    );
     
-    grunt.registerTask('compile:dev', [
-        'compile:predev',
-        'notify:app'
-    ]);
-    
-    // Production Tasks
-    //-------------------------------------------------------------
-    
-    grunt.registerTask('compile:preprod',
+    // Compile the app for a production environment
+    grunt.registerTask('compile:prod',
         gruntCompile('prod')
     );
     
-    grunt.registerTask('compile:prod', [
-        'compile:preprod',
-        'notify:app'
+    // Run asset linting and tests
+    grunt.registerTask('test', [
+        'jshint',
+        'scsslint'
     ]);
 
 }; // function(grunt)
