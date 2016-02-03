@@ -4,33 +4,33 @@
 
 @mixin grid($custom: ()) {
 
-	//-------------------------------------------------------------
-	// Config
-	//-------------------------------------------------------------
-	
+    //-------------------------------------------------------------
+    // Config
+    //-------------------------------------------------------------
+
     $grid: map-merge-deep((
-		'name'                : 'grid',
-		'output-JSON'         : true,
-		'options': (
-			'base-width'      : 1200px,
-			'max-width'       : 90%,
-			'small-width'     : 940px,
-			'full-width'      : 100%
+        'name'                : 'grid',
+        'output-JSON'         : true,
+        'options': (
+            'base-width'      : 1200px,
+            'max-width'       : 90%,
+            'small-width'     : 940px,
+            'full-width'      : 100%
         ),
         'breakpoints': (
             'break-5'         : 1400px
         )
     ), $kayzenGS);
-    
-	$grid: config($grid, $custom) !global;
-    
+
+    $grid: config($grid, $custom) !global;
+
     @include kayzen-gs($grid);
-    
+
     @include module(#{option($grid, 'options', 'row-namespace')}) {
-    
+
         // Waffle Row
         //---------------------------------------------------------
-    
+
         @include modifier('waffle') {
             margin-bottom: - option($grid, 'options', 'gutter');
             > [class*="#{option($grid, 'options', 'col-namespace')}"] {
@@ -52,7 +52,7 @@
         }
         
     }
-    
+
 } // @mixin grid
 
 @function breakpoint($breakpoint) {

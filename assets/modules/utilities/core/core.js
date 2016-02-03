@@ -10,7 +10,7 @@ window['baseTransition'] = _module['base']['transition'].slice(0,-1) * 1000;
 
 // Get breakpoint value
 function breakpoint(media, value) {
-	return window.matchMedia('(' + media + ':' + _module['grid']['breakpoints'][value] + ')').matches;
+    return window.matchMedia('(' + media + ':' + _module['grid']['breakpoints'][value] + ')').matches;
 }
 
 $(document).ready(function() {

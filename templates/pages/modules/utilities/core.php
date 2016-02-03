@@ -47,10 +47,10 @@
 				<h2 class="heading-light-size-5">Module Overview</h2>
                 
                 <p>This module provides the utmost basic CSS for a webpage as well as all core JavaScripts which do not apply to other modules.</p>
-				
+                
 				<h2 class="heading-light-size-5">Customizing</h2>
 				
-				<p>The core module can be customized using the following options:</p>
+				<p>The core module styles can be customized using the following options:</p>
 				
 				<p class="alert-bar-help">Read the <a href="configuration.html">Configuration</a> page to learn more about a module's configuration.</p>
 				
@@ -116,14 +116,59 @@
                     </tbody>
                 </table>
 				
-				<p>To change one of the above values, pass your new value(s) to the <code>base()</code> mixin in your theme file (e.g. assets/themes/Kayzen/_kayzen.scss).</p>
+				<p>To change one of the above values, pass your new value(s) to the <code>core()</code> mixin in your theme file (e.g. assets/themes/Kayzen/_kayzen.scss).</p>
 						
 <pre data-enlighter-language="css" class="EnlighterJSRAW">
-@include base((
+@include core((
     'margin'     : 1em,
     'transition' : 0.6s
 ));
 </pre>
+				
+				<h2 class="heading-light-size-5">JavaScript</h2>
+                
+                <p>The <code>core.js</code> file contains general JS tools, helpers and plugin initialisations.</p>
+                
+                <h4 class="heading-size-2-uppercase">Global Transition</h4>
+                
+                <p>The <a href="#">Modular</a> framework allows you to access any Sass configuration value in your JavaScript. You can use the <code>coreTransition</code> variable anywhere in your JavaScript to use the <code>transition</code> value set in <code>_core.scss</code>. Note that the value is converted from seconds to miliseconds, so a value of <code>0.4s</code> would become <code>400ms</code>. This is made possible from the below line found in <code>core.js</code>:</p>
+                
+<pre data-enlighter-language="javascript" class="EnlighterJSRAW">
+window['coreTransition'] = _module['core']['transition'].slice(0,-1) * 1000;
+</pre>
+
+                <h4 class="heading-size-2-uppercase">Get Breakpoint Value</h4>
+                
+                <p>You can use the <code>breakpoint()</code> function anywhere in your Javascript to fetch any breakpoint value from the <a href="#">Grid</a> module:</p>
+                           
+<pre data-enlighter-language="javascript" class="EnlighterJSRAW">
+if(breakpoint('min-width', 'break-3')) {
+    // do something   
+}
+</pre>    
+
+                <p>This is made possible using the <a href="#">Modular</a> framework, and the below function found in <code>core.js</code> which uses the <a href="https://developer.mozilla.org/en/docs/Web/API/Window/matchMedia" target="blank"><code>Window.matchMedia()</code></a> web API:</p>
+                       
+<pre data-enlighter-language="javascript" class="EnlighterJSRAW">
+function breakpoint(media, value) {
+    return window.matchMedia('(' + media + ':' + _module['grid']['breakpoints'][value] + ')').matches;
+}
+</pre>
+
+                <h4 class="heading-size-2-uppercase">Plugin Inits</h4>
+                
+                <p>The <code>core.js</code> file also contans general plugin initialisations which do not relate to any other modules, and should only be touched if you know what you're doing (you shouldn't need to edit them). For reference the following files/plugins are called in <code>core.js</code>:</p>
+                
+                <ul class="list-clear">
+                    <li>assets/includes/<b>Kayzen.smoothScroll.js</b></li>
+                    <li>assets/includes/<b>Kayzen.iframeHeight.js</b></li>
+                    <li>assets/includes/<b>Kayzen.scrollStats.js</b></li>
+                    <li>assets/includes/<b>Kayzen.masonryGrid.js</b></li>
+                    <li>assets/includes/<b>Kayzen.dataBg.js</b></li>
+                    <li>assets/vendor/<b>Stellar</b></li>
+                    <li>assets/vendor/<b>Owl-Carousel</b></li>
+                    <li>assets/vendor/<b>Magnific-Popup</b></li>
+                </ul>
                 
 			</div><!-- container-small -->
 			
