@@ -72,6 +72,9 @@
                     itemSelector : 'a'
                 });
                 
+                // Reload the smoothScroll plugin
+                $item.smoothScroll();
+                
             });
             
         }); // this.each

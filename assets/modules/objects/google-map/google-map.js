@@ -86,12 +86,8 @@
                             "featureType" : "road",
                             "elementType" : "geometry",
                             "stylers" : [
-                                {
-                                    "color" : mapColors['road']
-                                },
-                                {
-                                    "lightness" : -37
-                                }
+                                { "color" : mapColors['road'] },
+                                { "lightness" : -37 }
                             ]
                         },
                         {
@@ -111,27 +107,17 @@
                         {
                             "elementType" : "labels.text.stroke",
                             "stylers" : [
-                                {
-                                    "visibility" : "on"
-                                },
-                                {
-                                    "color" : mapColors['stroke']
-                                },
-                                {
-                                    "weight" : 2
-                                },
-                                {
-                                    "gamma" : 0.84
-                                }
+                                { "visibility" : "on" },
+                                { "color" : mapColors['stroke'] },
+                                { "weight" : 2 },
+                                { "gamma" : 0.84 }
                             ]
                         },
                         {
                             "featureType": "road.highway",
                             "elementType": "geometry",
                             "stylers": [
-                                {
-                                    "color": mapColors['highway']
-                                }
+                                { "color": mapColors['highway'] }
                             ]
                         },
                         {
@@ -144,12 +130,8 @@
                             "featureType" : "administrative",
                             "elementType" : "geometry",
                             "stylers" : [
-                                {
-                                    "weight" : 0.6
-                                },
-                                {
-                                    "color" : mapColors['administrative']
-                                }
+                                { "weight" : 0.6 },
+                                { "color" : mapColors['administrative'] }
                             ]
                         },
                         {

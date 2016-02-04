@@ -10,7 +10,8 @@
 
 	$masonry-grid: config((
 		'name'            : 'masonry-grid',
-        'spacing'         : 4px
+        'spacing'         : 4px,
+        'background'      : #eeeeee
 	), $custom);
 
 	//-------------------------------------------------------------
@@ -59,15 +60,15 @@
             }
         }
         &-img {
-            top: option($config, 'spacing');
-            right: option($config, 'spacing');
-            bottom: option($config, 'spacing');
-            left: option($config, 'spacing');
+            top: this('spacing');
+            right: this('spacing');
+            bottom: this('spacing');
+            left: this('spacing');
             position: absolute;
             transition: base('transition');
             background-size: cover;
             background-position: center center;
-            background-color: #eee;
+            background-color: this('background');
             &:hover {
                 opacity: 0.6;
             }

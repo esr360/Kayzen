@@ -1,7 +1,7 @@
 <?php 
 	include ('../app.php');
 	// page config
-	$title = 'Reusable Modules';
+	$title = 'Modules';
 ?>
 
 <!DOCTYPE html>

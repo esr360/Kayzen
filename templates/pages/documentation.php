@@ -353,7 +353,7 @@ git clone https://github.com/esr360/Kayzen.git --recursive
                 
                 <h3 class="heading-size-3" id="building-kayzen">PHP Templates</h3>
                 
-                <p>If you do not plan on integrating Kayzen into a CMS, you may wish to consider utilising the source PHP files from which the demo pages are built form. Whilst the PHP framework is extremely basic, it allows you to rapidly prototype pages using all the various components Kayzen has to offer. All the PHP templates are located in the <b>templates</b> directory.</p>
+                <p>The Kayzen demo pages are genrated from custom PHP source files. You are completely free to utilise these PHP templates for your own use. Whilst the PHP framework Kayzen is built from is extremely basic, it allows you to rapidly prototype pages using all the various components Kayzen has to offer. All the PHP templates are located in the <b>templates</b> directory.</p>
                 
                 <p>The core configuration file for the PHP templates can be found at templates/<b>app.php</b>. This is where all configurable templates are imported and all global constants are set, which include the following:</p>
                 

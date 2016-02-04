@@ -9,8 +9,21 @@
 	//-------------------------------------------------------------
 
 	$sections: config((
-		'name'            : 'section'
-	), $custom);
+		'name'                    : 'section',
+        'heading-group-color'     : typography('colors', 'heading'),
+        'padding'                 : 6em 0,
+        'padding-mini'            : 4em 0,
+        'banner-padding'          : 5em 0,
+        'block-padding'           : 7%,
+        'panel-background'        : color('greyscale', 'white'),
+        'secondary-background'    : color('brand', 'primary'),
+        'secondary-color'         : color('greyscale', 'white'),
+        'overlay-color'           : color('greyscale', 'white'),
+        'overlay-background'      : rgba(color('brand', 'primary'), 0.4),
+        'overlay-deep-background' : rgba(color('brand', 'primary'), 0.75),
+        'overlay-dark-background' : rgba(color('greyscale', 'grey-5'), 0.75),
+        'overlay-alt-background'  : rgba(color('greyscale', 'grey-5'), 0.5)
+ 	), $custom);
 
 	//-------------------------------------------------------------
 	// Module
@@ -32,7 +45,7 @@
 		}
         
         @include overwrite-component('group', $parent: 'heading') {
-            color: typography('colors', 'heading');
+            color: this('heading-group-color');
         }
 
 	// Modifiers
@@ -43,16 +56,16 @@
 		//---------------------------------------------------------
 		
 		@include modifiers(('primary', 'secondary')) {
-			padding: 6em 0;
+			padding: this('padding');
 		}
         
         @include modifier('mini') {
-            padding: 4em 0;
+            padding: this('padding-mini');
         }
         
         @include modifier('panel') {
 			border-top: 1px solid color('greyscale', 'grey-2');	
-			background: color('greyscale', 'white');
+			background: this('panel-background');
         }
 	
 		//---------------------------------------------------------
@@ -60,12 +73,12 @@
 		//---------------------------------------------------------
 		
 		@include modifier('secondary') {
-			background-color: color('brand', 'primary');
+			background-color: this('secondary-background');
 			> .container {
 				position: relative;
 			}
 			&, a:not([class*="button-"]) {
-				color: color('greyscale', 'white');
+				color: this('secondary-color');
 			}
 			.owl-dot {
 				&.active {
@@ -75,11 +88,11 @@
 				} 
 			}
             b, strong {
-                color: color('greyscale', 'white');
+                color: this('secondary-color');
             }
 			@include overwrite-component('group', $parent: 'heading') {
                 &, p {
-				    color: color('greyscale', 'white');
+				    color: this('secondary-color');
                 }
 			}
 		}
@@ -119,19 +132,26 @@
 		//---------------------------------------------------------
 		
 		@include modifier('overlay') {
-			@include bg-overlay(rgba(color('brand', 'primary'), 0.4));
+			@include bg-overlay(
+                this('overlay-background')
+            );
 			@include modifier('deep') {
-				@include bg-overlay(rgba(color('brand', 'primary'), 0.75));
+				@include bg-overlay(
+                    this('overlay-deep-background')
+                );
 			}
 			@include modifier('dark') {
-				@include bg-overlay(rgba(color('greyscale', 'grey-5'), 0.75));			
+				@include bg-overlay(
+                    this('overlay-dark-background')
+                );			
 			}
 			@include modifier('alt') {
-				@include bg-overlay(rgba(color('greyscale', 'grey-5'), 0.5));			
+				@include bg-overlay(
+                    this('overlay-alt-background')
+                );			
 			}
 			&, a:not([class*="button-"]) {
-				color: color('greyscale', 'white');
-                //text-shadow: 1px 1px 1px rgba(black, 0.5);
+				color: this('overlay-color');
 			}
 			.wrap-section {
 				position: relative;
@@ -165,7 +185,7 @@
 		//---------------------------------------------------------
 		
 		@include modifier('banner') {
-			padding: 5em 0;
+			padding: this('banner-padding');
 		}
 		
 		//---------------------------------------------------------
@@ -202,7 +222,7 @@
 		@include component('block') {
 			position: relative;
 			transition: base('transition');
-			padding: 7%;
+			padding: this('block-padding');
 			background-size: cover;
 			@include modifier('opaque') {
 				background: rgba(white, 0.95);
