@@ -40,10 +40,10 @@
 	// Fonts
 	//-------------------------------------------------------------
 
-   $i: 1; @each $typeface in map-get($typography, 'typefaces') {        
+    @for $i from 1 through length(this('typefaces')) {
         .font-#{$i} {
-            font-family: typography('typefaces', nth($typeface, 1));
-        } $i: $i + 1;
+            font-family: nth(nth(this('typefaces'), $i), 2);
+        }
     }
     
 	//-------------------------------------------------------------

@@ -9,7 +9,7 @@
  *
  * Values: 'dev', 'prod'
  */
-define('env', 'dev');
+define('env', 'prod');
 
 /**
  * Set which theme to use

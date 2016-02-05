@@ -136,7 +136,7 @@ git clone https://github.com/esr360/Kayzen.git --recursive
 			
                 <p class="alert-bar-info">The <b>--recursive</b> flag is required to install all the git submodules.</p>
                 
-                <p>If you are using Node, you can run <code>npm install</code> to allow you to use Grunt to build Kayzen from the source files. You can then run <code>grunt</code> to run the default Grunt tasks. After running <code>npm install</code> you should now have the following Node modules in the <b>node_modules</b> directory:</p> 
+                <p>If you are using Node, you can run <code>npm install</code> to allow you to use Grunt to build Kayzen from the source files. Once installed, you should first run <code>grunt setup</code> to run the initial setup tasks (<a href="#">learn more</a>). After running <code>npm install</code> you should now have the following Node modules in the <b>node_modules</b> directory:</p> 
                 
                 <ul class="list-clear">
                     <li><a href="#">autoprefixer</a></li>
@@ -160,7 +160,7 @@ git clone https://github.com/esr360/Kayzen.git --recursive
                     <li><a href="#">grunt-text-replace</a></li>
                 </ul>
                 
-                <p>If you are using another build tool, here are the key things it should encompass to successfully build Kayzen:</p>
+                <p>If you are using another build tool or want to build Kayzen manually, here are the key things it should encompass to successfully build Kayzen:</p>
                 
 				<h3 class="heading-uppercase-light-border" id="building-kayzen">JavaScript</h2>  
                 
@@ -367,14 +367,24 @@ git clone https://github.com/esr360/Kayzen.git --recursive
 					</thead>
 					<tbody>
 						<tr>
-							<td><code>appDir</code></td>
-							<td><code class="value">/app</code></td>
-							<td>The path to your compild assets.</td>
-						</tr>
-						<tr>
 							<td><code>env</code></td>
 							<td><code class="value">dev</code></td>
-							<td>Can be either 'dev' or 'prod'. If set to 'prod', any link included with the devAsset() function will have '.min' prepended before its default extension.</td>
+							<td>Can be either <code>dev</code> or <code>prod</code>. If <code>prod</code>, assets included with the <code>devAsset()</code> and <code>themeAsset()</code> functions will have <code>.min</code> prepended before its extension.</td>
+						</tr>
+						<tr>
+							<td><code>theme</code></td>
+							<td><code class="value">Kayzen</code></td>
+							<td>Set which theme's assets you would like to load.</td>
+						</tr>
+						<tr>
+							<td><code>themes</code></td>
+							<td><code class="value">false</code></td>
+							<td>If enabled, templates will look to assets nested inside a self-named directory, e.g. app/themes/Kayzen/scripts/app.js.</td>
+						</tr>
+						<tr>
+							<td><code>host</code></td>
+							<td><code class="value">server</code></td>
+							<td>Can either be <code>static</code> or <code>server</code>, and defines how asset paths should be loaded.</td>
 						</tr>
                     </tbody>
                 </table>

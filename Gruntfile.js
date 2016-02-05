@@ -106,8 +106,12 @@ module.exports = function(grunt) {
                 src: 'app'
             },
             scripts: [
-                'app/scripts/*.js',
-                '!app/scripts/*.min.js'
+                'app/scripts/**/*.js',
+                '!app/scripts/**/*.min.js'
+            ],
+            styles: [
+                'app/styles/**/*.css',
+                '!app/styles/**/*.min.css'
             ],
             images: {
                 src: 'app/images'
@@ -194,6 +198,11 @@ module.exports = function(grunt) {
         //---------------------------------------------------------
 		
         uglify: {
+            options: {
+                compress: {
+                    drop_console: true
+                }
+            },
             app: {
                 files: [{ 
                     src: 'app/scripts/*.js',
@@ -249,6 +258,23 @@ module.exports = function(grunt) {
             },
             build: {
                 src: themeBuildStyles + '*.css'
+            }
+        },
+        
+        //---------------------------------------------------------
+        // grunt-contrib-cssmin
+        // https://github.com/sindresorhus/grunt-sass
+        //---------------------------------------------------------
+        
+        cssmin: {
+            target: {
+                files: [{
+                    expand: true,
+                    cwd: themeBuildStyles,
+                    src: ['*.css', '!*.min.css'],
+                    dest: themeBuildStyles,
+                    ext: '.min.css'
+                }]
             }
         },
   
@@ -480,6 +506,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-jshint');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-sass');
+    grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-contrib-clean');
@@ -496,18 +523,6 @@ module.exports = function(grunt) {
     //-------------------------------------------------------------
     // Register Tasks
     //-------------------------------------------------------------
-
-    //Default
-    grunt.registerTask('default', [
-        'compile:dev',
-        'watch',
-    ]); 
-       
-    // Initial Setup
-    grunt.registerTask('setup', [
-        'auto_install',
-        'run_grunt'
-    ]);
     
     // Compile Assets
     var gruntCompile = function(environment) {
@@ -523,7 +538,9 @@ module.exports = function(grunt) {
         if (environment == 'prod') {
             assetTasks.push(
                 'uglify', 
-                'clean:scripts'
+                'clean:scripts',
+                'cssmin',
+                'clean:styles'
             );
         };
         var backendTasks = [
@@ -537,6 +554,18 @@ module.exports = function(grunt) {
         ];
         return assetTasks.concat(backendTasks, notify);
     };
+    
+    //Default
+    grunt.registerTask('default', [
+        'compile:dev',
+        'watch',
+    ]); 
+       
+    // Initial Setup
+    grunt.registerTask('setup', [
+        'auto_install',
+        'run_grunt'
+    ]);
     
     // Generate HTML templates
     grunt.registerTask('templates', [
