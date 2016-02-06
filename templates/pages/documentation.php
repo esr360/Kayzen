@@ -561,28 +561,107 @@ clients(array(
 					</thead>
 					<tbody>
 						<tr>
-							<td><code>compile:dev</code></td>
-							<td>This will compile all JavaScript and CSS files for a development environment as well as compress all images.</td>
+							<td><code>grunt setup</code></td>
+							<td>This is the initial task you need to run to complete your environment's setup. It only needs to be ran once, the first time you clone Kayzen.</td>
 						</tr>
 						<tr>
-							<td><code>build:dev</code></td>
-							<td>The same as above except all PHP pages will generate a corresponding HTML page.</td>
+							<td><code>grunt</code></td>
+							<td>The default grunt task - runs the below <code>compile:dev</code> task as well as the <code>watch</code> task.</td>
 						</tr>
 						<tr>
-							<td><code>compile:prod</code></td>
-							<td>This will compile all JavaScript and CSS files for a production envrionment as well as compress all images.</td>
+							<td><code>grunt templates</code></td>
+							<td>Used to generate HTML pages from your PHP templates. Will create one HTML page for every template in the templates/pages directory.</td>
 						</tr>
 						<tr>
-							<td><code>build:prod</code></td>
-							<td>The same as above except all PHP pages will generate a corresponding HTML page.</td>
+							<td><code>grunt compile:dev</code></td>
+							<td>This will compile your assets for a development environment (assets will be unminified).</td>
+						</tr>
+						<tr>
+							<td><code>grunt compile:prod</code></td>
+							<td>This will compile your assets for a production environment (assets will be minified).</td>
+						</tr>
+						<tr>
+							<td><code>grunt test</code></td>
+							<td>This will execute code linters on your .scss and .js files.</td>
 						</tr>
                     </tbody>
                 </table>
+                
+                <h3 class="heading-uppercase-light-border" id="building-kayzen">Passing Variables to Grunt Tasks</h3>
+                
+                <p>Using the <code><a href="http://gruntjs.com/api/grunt.option" target="blank">grunt.option</a></code> API, you can pass several parameters on the command line when running the above tasks:</p>
+                
+				<table class="table-small">
+					<thead>
+						<tr>
+							<th>Variable</th>
+							<th>Default Value</th>
+							<th>Description</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td><code>theme</code></td>
+							<td><code class="value">Kayzen</code></td>
+							<td>This is the theme you wish to compile assets from. Theme must be present in the assets/themes directory.</td>
+						</tr>
+						<tr>
+							<td><code>themes</code></td>
+							<td><code class="value">false</code></td>
+							<td>If enabled, assets will be compiled from individual theme folders (e.g. app/themes/Kayzen/scripts/app.js).</td>
+						</tr>
+						<tr>
+							<td><code>host</code></td>
+							<td><code class="value">Server</code></td>
+							<td>Can either be <code>static</code> or <code>server</code>, and will define how your asset paths are created.</td>
+						</tr>
+                    </tbody>
+                </table>
+                
+                <p>The above options would be used when calling the grunt task, like so:</p>
+                
+<pre data-enlighter-language="html" class="EnlighterJSRAW">
+grunt compile:dev --theme=YOURTHEME --themes=true --host=static
+</pre>
+
+                <br />
+                
+<pre data-enlighter-language="html" class="EnlighterJSRAW">
+grunt templates --theme=YOURTHEME
+</pre>
              
 				<h2 class="heading-light-size-5" id="deploy">Test & Deploy</h2>
 				
-				<p>So you've created all your pages and configured all your modules, the front end for your project is now ready to test and then launch! Currently Kazen does not come with any automated tests or unit tests (though they are planned for the future), so this section will guide you through various tests you can conduct to ensure your users are getting the best experience possible.</p>
+				<p>So you've created all your pages and configured all your modules, the front end for your project is now ready to test and then launch! There are several things you may want to test before you make your website live to ensure your users have the best experience possible. Below is a checklist of recommendations you can do to check your website is working properly and has no errors, as well as improving things like page load times etc.</p>
+                
+                <h3 class="heading-uppercase-light-border" id="building-kayzen">Minified Assets</h3>
+                
+                <p>You should be serving your users with minified versions of your assets (CSS and Javascript), as the file sizes will be smaller and load times faster. If you are using grunt, you can generate minified assets by running <code>grunt compile:prod</code>, otherwise you can use the minified assets provided with your download.</p>
+                
+                <h3 class="heading-uppercase-light-border" id="building-kayzen">Code Linting</h3>
+                
+                <p>If you are using our Gruntfile.js, you can run Javascript and Scss linters on your code. Simply run <code>grunt test</code> to run both linters. To run only Javasctipt linting, run the <code>grunt jshint</code> task, and to run only Scss linting run the <code>grunt scsslint</code> task.</p>
+                
+                <h3 class="heading-uppercase-light-border" id="building-kayzen">Console Errors</h3>
+                
+                <p>Check that you have no Javascript errors and are correctly loading assets by looking at the console. Right click anywhere on the page and click "inspect" (or "inspect element"). On the window that opens click the "console" tab. Any errors will be listed in red.</p>
+                
+                <h3 class="heading-uppercase-light-border" id="building-kayzen">Unit Tests</h3>
+                
+                <p>We are currently writing unit tests for all custom Javascripts. These, along with other such automated tests, will be released in furutre releases of Kayzen, so stay tuned.</p>
+                
+                <h3 class="heading-uppercase-light-border" id="building-kayzen">Cross-Browser Tests</h3>
+                
+                <p>Before you launch your site, check it in different browsers to makse sure it all works. Kayzen supports all modern browsers and degrades grecefully until Internet Explorer 9.</p>
 				
+                <h3 class="heading-uppercase-light-border" id="building-kayzen">Mobile/Responsive Tests</h3>
+                
+                <p>Check your website on multiple mobile devices before you launch to ensure there are no issues. Kayzen is fully responsive and should work and look great on all modern devices.</p>
+				
+                <h3 class="heading-uppercase-light-border" id="building-kayzen">Support</h3>
+                
+                <p>If you encounter any issues which you cannot resolve, you can <a href="#">get in touch</a> with us to receive free support..</p>
+                
 			</div>
 			
 		</section>

@@ -106,12 +106,10 @@ module.exports = function(grunt) {
                 src: 'app'
             },
             scripts: [
-                'app/scripts/**/*.js',
-                '!app/scripts/**/*.min.js'
+                'app/scripts/**/*.js', '!app/scripts/**/*.min.js'
             ],
             styles: [
-                'app/styles/**/*.css',
-                '!app/styles/**/*.min.css'
+                'app/styles/**/*.css', '!app/styles/**/*.min.css'
             ],
             images: {
                 src: 'app/images'
