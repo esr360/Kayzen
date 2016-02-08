@@ -2,15 +2,17 @@
 #============================================================
 
 - document 'blocks' list modifier
-- change 'default' options to 'enabled' (eg; flyout-nav.js)
-- update sudojQuery to pseudojQuery
 - update all empty # links
+- full responsive audit
 - add cheatsheet page
-- fix overlay JS component (sometimes hides when unwanted)
 - add themes and associated imagery
 
 # Done
 #============================================================
+
+- update sudojQuery to pseudojQuery
+- fix overlay JS component (sometimes hides when unwanted)
+- change 'default' options to 'enabled' (eg; flyout-nav.js)
 
 # Next Release
 #============================================================
