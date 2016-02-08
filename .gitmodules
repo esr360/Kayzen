@@ -7,9 +7,6 @@
 [submodule "assets/vendor/SassyJSON"]
 	path = assets/vendor/SassyJSON
 	url = https://github.com/esr360/SassyJSON.git
-[submodule "assets/vendor/sudojQuery"]
-	path = assets/vendor/sudojQuery
-	url = https://github.com/esr360/sudojQuery.git
 [submodule "assets/vendor/jQuery"]
 	path = assets/vendor/jQuery
 	url = https://github.com/jquery/jquery.git
