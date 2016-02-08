@@ -46,11 +46,9 @@
         
         // Options
         var options = $.extend({
-            
             overlay         : true,
             overlaySelector : '#site-overlay',
             animate         : _module['modal']['dafault-animation']
-            
         }, custom);
             
         var animateStyle = options.animate;
@@ -61,14 +59,14 @@
             // show the target modal
             el.addClass('modal-visible');
             if (options.overlay) {
-                $(options.overlaySelector).siteOverlay('show');
+                $(options.overlaySelector).siteOverlay('show', 'dialog');
             }
         }
         
         function closeModal(el) {
             el.removeClass('modal-visible');
             if (options.overlay) {
-                $(options.overlaySelector).siteOverlay('hide');
+                $(options.overlaySelector).siteOverlay('hide', 'dialog');
             }
         }
         

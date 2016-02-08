@@ -8,7 +8,7 @@
      * 
      */
 
-    $.fn.siteOverlay = function(state, custom) {
+    $.fn.siteOverlay = function(state, flag, custom) {
         
         // Options
         var options = $.extend({
@@ -17,12 +17,14 @@
         
         var overlay = $(this);
         
+        flag = (flag) ? flag + '-' : '';
+        
         function showOverlay() {
-            overlay.addClass('site-overlay-visible');
+            overlay.addClass('site-overlay-' + flag + 'visible');
         }
         
         function hideOverlay() {
-            overlay.removeClass('site-overlay-visible');
+            overlay.removeClass('site-overlay-' + flag + 'visible');
         }
         
         if (state == 'show') {
@@ -42,6 +44,6 @@
             overlay.click(hideOverlay);
         }
 
-    }; // Kayzen.siteOverlay
+    }; // siteOverlay
  
 }(jQuery));

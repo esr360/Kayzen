@@ -13,13 +13,11 @@
         
         // Options
         var options = $.extend({
-            
             navigation    : _navigation,
             overlay       : '#site-overlay',
             sticky        : _option('app-header', 'sticky'),
             side          : _option('app-header', 'side'),
             openCloseIcon : _module['side-nav']['collapsible']['icon']
-            
         }, custom);
         
         // Run the code on each occurance of the element
@@ -36,10 +34,10 @@
                     header.addClass('fixed');
                     navDropdown.hover(
                         function(){ 
-                            $(options.overlay).siteOverlay('show');
+                            $(options.overlay).siteOverlay('show', 'navDropdown');
                         },
                         function(){ 
-                            $(options.overlay).siteOverlay('hide');
+                            $(options.overlay).siteOverlay('hide', 'navDropdown');
                         }
                     );
                 }

@@ -32,16 +32,16 @@
                     
                 if (scroll > topBarHeight) {
                     topBarDropdown.hover(
-                        function(){ 
-                            options.overlay.siteOverlay('show');
+                        function() { 
+                            options.overlay.siteOverlay('show', 'topBar');
                         },
-                        function(){ 
-                            options.overlay.siteOverlay('hide');
+                        function() { 
+                            options.overlay.siteOverlay('hide', 'topBar');
                         }
                     );
                 } else {
                     topBarDropdown.unbind('mouseenter mouseleave');
-                    options.overlay.siteOverlay('hide');
+                    options.overlay.siteOverlay('hide', 'topBar');
                 }
                 
             });

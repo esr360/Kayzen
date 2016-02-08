@@ -86,10 +86,10 @@
             $(options.trigger).click(function() {
                 if ($('body').hasClass('flyout-active')) {
                     closeFlyoutNav();
-                    $(options.overlay).siteOverlay('hide');
+                    $(options.overlay).siteOverlay('hide', 'flyout');
                 } else {
                     openFlyoutNav();
-                    $(options.overlay).siteOverlay('show', {
+                    $(options.overlay).siteOverlay('show', 'flyout', {
                         selfClose : true
                     });
                 }
