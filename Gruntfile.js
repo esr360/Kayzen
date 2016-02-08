@@ -291,38 +291,6 @@ module.exports = function(grunt) {
                 colorizeOutput: false
             },
         },
-        
-        //---------------------------------------------------------
-        // Imagemin
-        // https://github.com/sindresorhus/grunt-sass
-        //---------------------------------------------------------
-        
-        imagemin: {
-            png: {
-                options: {
-                    optimizationLevel: 7
-                },
-                files: [{
-                    expand: true,
-                    cwd: 'assets/images',
-                    src: ['**/*.png'],
-                    dest: 'app/images',
-                    ext: '.png'
-                }]
-            },
-            jpg: {
-                options: {
-                    progressive: true
-                },
-                files: [{
-                    expand: true,
-                    cwd: 'assets/images',
-                    src: ['**/*.jpg'],
-                    dest: 'app/images',
-                    ext: '.jpg'
-                }]
-            }
-        },
       
         //---------------------------------------------------------
         // Watch
@@ -508,13 +476,11 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-contrib-clean');
-    grunt.loadNpmTasks('grunt-contrib-imagemin');
     grunt.loadNpmTasks('grunt-notify');
     grunt.loadNpmTasks('grunt-php-set-constant');
     grunt.loadNpmTasks('grunt-php2html');
     grunt.loadNpmTasks('grunt-postcss');
     grunt.loadNpmTasks('grunt-run-grunt');
-    //grunt.loadNpmTasks('grunt-sass');
     grunt.loadNpmTasks('grunt-scss-lint');
     grunt.loadNpmTasks('grunt-text-replace');
     

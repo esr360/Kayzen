@@ -84,7 +84,7 @@
                 <div class="thumbnail_mask">
                     <div class="thumbnail_controls<?php if($options['matrix'] && $options['maskTitle']) echo '-corner' ?> icon_group-small">
                         <a 
-                            href="<?php echo appDir ?>/images/wallpapers/bg-<?php echo $options['thumb'] ?>.jpg" 
+                            href="<?php echo appDir ?>/images/demo/hero-<?php echo $options['thumb'] ?>.jpg" 
                             class="button-icon-border-circle"
                             rel="lightbox"
                         >
@@ -105,7 +105,7 @@
                         </header>
                     <?php } ?>
                 </div>
-                <img src="<?php echo appDir ?>/images/wallpapers/<?php if ($options['height'] === 'tall') echo 'tall/' ?>bg-<?php echo $options['thumb'] ?>.jpg">
+                <img src="<?php echo appDir ?>/images/demo/hero-<?php echo $options['thumb']; if ($options['height'] === '-tall') echo 'tall/' ?>.jpg">
             </div>
             
         <? // Vimeo Article ?>
@@ -136,7 +136,7 @@
         
             <div class="article-thumbnails-carousel carousel-cornerDots-revealNav owl-carousel">
                 <?php foreach ($options['thumbs'] as $item) { ?>
-                    <img src="<?php echo appDir ?>/images/wallpapers/<?php if ($options['height'] === 'tall') echo 'tall/' ?>bg-<?php echo $item ?>.jpg">
+                    <img src="<?php echo appDir ?>/images/demo/hero-<?php echo $options['thumb']; if ($options['height'] === '-tall') echo 'tall/' ?>.jpg">
                 <?php } ?>
             </div>
             
@@ -148,8 +148,8 @@
                     <div class="tile tile-rec">
                         <a 
                             class="tile-img" 
-                            data-bg="<?php echo appDir ?>/images/wallpapers/bg-<?php echo rand(1, 7) ?>.jpg"
-                            href="<?php echo appDir ?>/images/wallpapers/bg-<?php echo rand(1, 7) ?>.jpg"
+                            data-bg="<?php echo appDir ?>/images/demo/hero-<?php echo rand(1, 7) ?>.jpg"
+                            href="<?php echo appDir ?>/images/demo/hero-<?php echo rand(1, 7) ?>.jpg"
                         ></a>
                     </div>
                     <div class="tile tile-rec">
@@ -157,23 +157,23 @@
                             <div class="tile tile-rec">
                                 <a 
                                     class="tile-img" 
-                                    data-bg="<?php echo appDir ?>/images/wallpapers/bg-<?php echo rand(1, 7) ?>.jpg"
-                                    href="<?php echo appDir ?>/images/wallpapers/bg-<?php echo rand(1, 7) ?>.jpg"
+                                    data-bg="<?php echo appDir ?>/images/demo/hero-<?php echo rand(1, 7) ?>.jpg"
+                                    href="<?php echo appDir ?>/images/demo/hero-<?php echo rand(1, 7) ?>.jpg"
                                 ></a>
                             </div>
                             <div class="tile tile-rec">
                                 <div class="tile tile-box">
                                     <a 
                                         class="tile-img" 
-                                        data-bg="<?php echo appDir ?>/images/wallpapers/bg-<?php echo rand(1, 7) ?>.jpg"
-                                        href="<?php echo appDir ?>/images/wallpapers/bg-<?php echo rand(1, 7) ?>.jpg"
+                                        data-bg="<?php echo appDir ?>/images/demo/hero-<?php echo rand(1, 7) ?>.jpg"
+                                        href="<?php echo appDir ?>/images/demo/hero-<?php echo rand(1, 7) ?>.jpg"
                                     ></a>
                                 </div>
                                 <div class="tile tile-box">
                                     <a 
                                         class="tile-img" 
-                                        data-bg="<?php echo appDir ?>/images/wallpapers/bg-<?php echo rand(1, 7) ?>.jpg"
-                                        href="<?php echo appDir ?>/images/wallpapers/bg-<?php echo rand(1, 7) ?>.jpg"
+                                        data-bg="<?php echo appDir ?>/images/demo/hero-<?php echo rand(1, 7) ?>.jpg"
+                                        href="<?php echo appDir ?>/images/demo/hero-<?php echo rand(1, 7) ?>.jpg"
                                     ></a>
                                 </div>
                             </div>
@@ -181,8 +181,8 @@
                         <div class="tile tile-box">
                             <a 
                                 class="tile-img" 
-                                data-bg="<?php echo appDir ?>/images/wallpapers/bg-<?php echo rand(1, 7) ?>.jpg"
-                                href="<?php echo appDir ?>/images/wallpapers/bg-<?php echo rand(1, 7) ?>.jpg"
+                                data-bg="<?php echo appDir ?>/images/demo/hero-<?php echo rand(1, 7) ?>.jpg"
+                                href="<?php echo appDir ?>/images/demo/hero-<?php echo rand(1, 7) ?>.jpg"
                             ></a>
                         </div>
                     </div>
@@ -190,8 +190,8 @@
                 <div class="tile tile-box">
                     <a 
                         class="tile-img" 
-                        data-bg="<?php echo appDir ?>/images/wallpapers/bg-<?php echo rand(1, 7) ?>.jpg"
-                        href="<?php echo appDir ?>/images/wallpapers/bg-<?php echo rand(1, 7) ?>.jpg"
+                        data-bg="<?php echo appDir ?>/images/demo/hero-<?php echo rand(1, 7) ?>.jpg"
+                        href="<?php echo appDir ?>/images/demo/hero-<?php echo rand(1, 7) ?>.jpg"
                     ></a>
                 </div>
             </div>
@@ -243,10 +243,14 @@
                 </div>
                 <?php if ($options['size'] === 'small') { ?>
                     <h2 class="heading-heavy-size-4 font-2"><?php echo $options['title'] ?></h2>
-                    <h3 class="heading-light-size-2">Posted in <a href="#"><?php echo $options['category'] ?></a></h3>
+                    <h3 class="heading-light-size-2">
+                        Posted in <a href="<?php pageLink('blog/single.php') ?>"><?php echo $options['category'] ?></a>
+                    </h3>
                 <?php } else { ?>
                     <h2 class="heading-heavy-size-5 font-2"><?php echo $options['title'] ?></h2>
-                    <h3 class="heading-light">Posted in <a href="#"><?php echo $options['category'] ?></a></h3>
+                    <h3 class="heading-light">
+                        Posted in <a href="<?php pageLink('blog/single.php') ?>"><?php echo $options['category'] ?></a>
+                    </h3>
                 <?php } ?>
             </header>
         
