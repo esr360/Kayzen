@@ -19,7 +19,7 @@
     <!-- Stylesheet -->
     <?php themeAsset(array('path' => 'app.css')); ?>
 	
-    <!-- sudojQuery start -->
-    <?php devAsset(array('path' => 'sudojQuery-start.js')); ?>
+    <!-- pseudojQuery start -->
+    <?php devAsset(array('path' => 'pseudojQuery-start.js')); ?>
 	
 </head>

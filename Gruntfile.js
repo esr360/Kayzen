@@ -74,8 +74,8 @@ module.exports = function(grunt) {
     // Separate Scripts
     var _separateScripts = [
         'assets/vendor/jQuery/dist/jquery.js',
-        'assets/vendor/sudojQuery/src/sudojQuery-start.js',
-        'assets/vendor/sudojQuery/src/sudojQuery-end.js',
+        'assets/vendor/pseudojQuery/src/pseudojQuery-start.js',
+        'assets/vendor/pseudojQuery/src/pseudojQuery-end.js',
         'assets/vendor/Masonry/dist/masonry.pkgd.js',
         'assets/vendor/Isotope/dist/isotope.pkgd.js',
         'assets/vendor/Infinite-AJAX-Scroll/dist/jquery-ias.js',

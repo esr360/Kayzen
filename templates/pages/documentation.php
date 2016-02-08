@@ -202,8 +202,8 @@ git clone https://github.com/esr360/Kayzen.git --recursive
                 
                 <ul class="list-clear">
                     <li>assets/vendor/jQuery/dist/jquery.js</li>
-                    <li>assets/vendor/sudojQuery/src/pseudojQuery-start.js</li>
-                    <li>assets/vendor/sudojQuery/src/pseudojQuery-end.js</li>
+                    <li>assets/vendor/pseudojQuery/src/pseudojQuery-start.js</li>
+                    <li>assets/vendor/pseudojQuery/src/pseudojQuery-end.js</li>
                     <li>assets/vendor/Masonry/dist/masonry.pkgd.js</li>
                     <li>assets/vendor/Isotope/dist/isotope.pkgd.js</li>
                     <li>assets/vendor/Infinite-AJAX-Scroll/dist/jquery-ias.js</li>
