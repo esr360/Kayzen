@@ -4,7 +4,6 @@
      * 
      * KAYZEN
      * @module: 'progress-bar'
-     * @requires: 'site-overlay'
      * @author: @esr360
      * 
      */
@@ -12,27 +11,23 @@
     $.fn.progressBar = function(custom) {
         
         // Options
-        var options = $.extend({
-            
-            overlay       : $('#site-overlay')
-            
-        }, custom);
+        var options = $.extend({}, custom);
         
         // Run the code on each occurance of the element
         return this.each(function() {
+            
+            var bar = $(this);
+            
+            var attrProgress = bar.attr('data-progress');
+            
+            bar.attr('value', attrProgress.replace(/[^-\d\.]/g, ''));
+            
+            bar.find('.progress').css({ 
+                width : attrProgress 
+            }); 
 
         }); // this.each
  
     }; // progressBar()
  
 }(jQuery));
-
-//-----------------------------------------------------------------
-// Progress Bars
-//-----------------------------------------------------------------
-
-$("progress.progress-bar").each(function() {
-    var attrProgress = $(this).attr('data-progress');
-    $(this).attr('value', attrProgress.replace(/[^-\d\.]/g, ''));
-    $(this).find('.progress').css({ width : attrProgress }); 
-});

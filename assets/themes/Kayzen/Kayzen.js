@@ -7,6 +7,8 @@ $(document).ready(function() {
     $(_accordion).accordion();
 
     $(_modal).modal();
+    
+    $('progress.progress-bar').progressBar();
 
     $(_tabs).tabs();
 
