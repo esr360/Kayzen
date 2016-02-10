@@ -48,22 +48,52 @@
                             </form>
                             
                             <div class="button_group-small">
-                                <a href="#" class="button-icon-size-2 tooltip-top" data-tooltip="Dribbble">
+                                <a 
+                                    href="https://dribbble.com/esr360/projects/308469-Kayzen" 
+                                    taret="blank" 
+                                    class="button-icon-size-2 tooltip-top" 
+                                    data-tooltip="Dribbble"
+                                >
                                     <i class="fa fa-dribbble"></i>
                                 </a>
-                                <a href="#" class="button-icon-size-2 tooltip-top" data-tooltip="Facebook">
+                                <a 
+                                    href="#" 
+                                    taret="blank" 
+                                    class="button-icon-size-2 tooltip-top" 
+                                    data-tooltip="Facebook"
+                                >
                                     <i class="fa fa-facebook"></i>
                                 </a>
-                                <a href="#" class="button-icon-size-2 tooltip-top" data-tooltip="Twitter">
+                                <a 
+                                    href="https://twitter.com/ESR360" 
+                                    taret="blank" 
+                                    class="button-icon-size-2 tooltip-top" 
+                                    data-tooltip="Twitter"
+                                >
                                     <i class="fa fa-twitter"></i>
                                 </a>
-                                <a href="#" class="button-icon-size-2 tooltip-top" data-tooltip="LinkedIn">
+                                <a 
+                                    href="#" 
+                                    taret="blank" 
+                                    class="button-icon-size-2 tooltip-top" 
+                                    data-tooltip="LinkedIn"
+                                >
                                     <i class="fa fa-linkedin"></i>
                                 </a>
-                                <a href="#" class="button-icon-size-2 tooltip-top" data-tooltip="DeviantArt">
+                                <a 
+                                    href="#" 
+                                    taret="blank" 
+                                    class="button-icon-size-2 tooltip-top" 
+                                    data-tooltip="DeviantArt"
+                                 >
                                     <i class="fa fa-deviantart"></i>
                                 </a>
-                                <a href="#" class="button-icon-size-2 tooltip-top" data-tooltip="Behance">
+                                <a 
+                                    href="#" 
+                                    taret="blank" 
+                                    class="button-icon-size-2 tooltip-top" 
+                                    data-tooltip="Behance"
+                                >
                                     <i class="fa fa-behance"></i>
                                 </a>
                             </div>

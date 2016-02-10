@@ -90,7 +90,7 @@
                         >
                             <i class="fa fa-search"></i>
                         </a>
-                        <a href="#" class="button-icon-border-circle">
+                        <a href="<?php pageLink('blog/single.php') ?>" class="button-icon-border-circle">
                             <i class="fa fa-link"></i>
                         </a>
                     </div>
@@ -270,23 +270,23 @@
                     <div class="span va-middle">
                         <ul class="list-reset-inline">
                             <?php if ($options['type'] === 'blog') { ?>
-                                <li><i class="fa fa-user"></i> <a href="#">John Doe</a></li>
+                                <li><i class="fa fa-user"></i> <a href="<?php pageLink('blog/classic/full-width.php')?>">John Doe</a></li>
                             <?php } ?>
                             <?php if (!$options['size'] == 'small') { ?>
-                                <li><i class="fa fa-comment-o"></i> <a href="#">3 Comments</a></li>
+                                <li><i class="fa fa-comment-o"></i> <a href="<?php pageLink('blog/single.php#comments') ?>">3 Comments</a></li>
                                 <li>
                                     <ul class="list-tags">
                                         <li class="title">Tags:</li>
-                                        <li class="plain"><a href="#">Web Design</a></li>
-                                        <li class="plain"><a href="#">HTML</a></li>
-                                        <li class="plain"><a href="#">CSS</a></li>
+                                        <li class="plain"><a href="<?php pageLink('blog/classic/full-width.php')?>">Web Design</a></li>
+                                        <li class="plain"><a href="<?php pageLink('blog/classic/full-width.php')?>">HTML</a></li>
+                                        <li class="plain"><a href="<?php pageLink('blog/classic/full-width.php')?>">CSS</a></li>
                                     </ul>
                                 </li>
                             <?php } ?>
                         </ul>
                     </div>
                     <div class="span va-middle text-right">
-                        <a href="#" class="button-primary">Read More</a>
+                        <a href="<?php pageLink('blog/single.php') ?>" class="button-primary">Read More</a>
                     </div>
                 </div>
             </small>
@@ -297,7 +297,9 @@
         
             <header class="heading_group-small">
                 <h3 class="heading-heavy-size-4"><?php echo $options['title'] ?></h3>
-                <h4 class="heading-light-uppercase-size-2">Category: <a href="#"><?php echo $options['category'] ?></a></h4>
+                <h4 class="heading-light-uppercase-size-2">
+                    Category: <a href="<?php pageLink('further/shop-category.php') ?>"><?php echo $options['category'] ?></a>
+                </h4>
             </header>
             <div class="heading_group-small">
                 <?php if (is_array($options['price'])) { ?>

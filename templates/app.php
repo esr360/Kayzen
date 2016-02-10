@@ -54,16 +54,6 @@ if (host == 'server') {
     define('appDir', realpath(__DIR__ . '/../app'));
 }
 
-/**
- * This sets the appropriate directory for your pages based on the
- * above settings
- */
-if (host == 'server') {
-    define('pageTree', '/templates/pages/');
-} else if (host == 'static') {
-    define('pageTree', realpath(__DIR__ . '/../pages/'));
-}
-
 /******************************************************************
  * Templates
  *****************************************************************/

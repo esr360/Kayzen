@@ -515,24 +515,28 @@ clients(array(
 
         &lt;!-- Site Canvas -->
         &lt;div id="site-content">
+        
+            &lt;?php&lt;!-- begin php -->
             
-            &lt;!-- Topbar Module -->
-            &lt;?php topbar(); ?>
+                &lt;!-- Topbar Module -->
+                topbar();
 
-            &lt;!-- Header Module -->
-            &lt;?php appHeader(array(
-                'modifiers' => 'bar-absolute-dark-sticky'
-            )); ?>
+                &lt;!-- Header Module -->
+                appHeader(array(
+                    'modifiers' => 'bar-absolute-dark-sticky'
+                ));
 
-            &lt;!-- Billboard Module -->
-            &lt;?php billboard(array(
-                'title'    => $title,
-                'tag-line' => $tagLine
-            )); ?>
+                &lt;!-- Billboard Module -->
+                billboard(array(
+                    'title'    => $title,
+                    'tag-line' => $tagLine
+                ));
             
+            ?>&lt;!-- end php -->
+                
             &lt;!-- YOUR HTML/PHP CONTENT -->
             ...
-
+                
             &lt;?php appFooter(); ?>
 
         &lt;/div>&lt;!-- Site Canvas -->

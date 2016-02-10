@@ -15,7 +15,7 @@ module.exports = function(grunt) {
     // directory e.g. app/themes/Kayzen/scripts
     var themes = grunt.option('themes') || false;
     
-    // 'server' || 'static' - used to determine asset paths
+    // 'server' | 'static' - used to determine asset paths
     var host = grunt.option('host') || 'server';
     
     //-------------------------------------------------------------
