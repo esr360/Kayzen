@@ -58,7 +58,7 @@ module.exports = function(grunt) {
     var _scripts = [   
         _owl,
         _magnific,
-        'assets/vendor/Modular/src/modular.js',
+        'assets/vendor/Modular/dist/modular.js',
         'assets/vendor/jquery-animateNumber/jquery.animateNumber.js',
         'assets/vendor/Kayzen.ScrollSpy/src/Kayzen.ScrollSpy.js',
         'assets/vendor/ScrollTrigger/src/ScrollTrigger.js',

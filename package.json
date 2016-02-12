@@ -1,6 +1,23 @@
 {
   "name": "Kayzen",
   "version": "0.1.0",
+  "description": "A premium HTML theme.",
+  "keywords": [
+    "sass",
+    "theme",
+    "themes",
+    "html",
+    "html5",
+    "front-end",
+    "framework",
+    "responsive",
+    "web"
+  ],
+  "homepage": "http://esr360.github.io/Modular/",
+  "author": "Edmund Reed | @esr360",
+  "bugs": {
+    "url": "https://github.com/esr360/Kayzen/issues"
+  },
   "devDependencies": {
     "autoprefixer": "^6.3.1",
     "grunt": "^0.4.5",
@@ -18,7 +35,6 @@
     "grunt-php2html": "^0.2.0",
     "grunt-postcss": "^0.6.0",
     "grunt-run-grunt": "^0.1.4",
-    "grunt-sass": "^1.1.0",
     "grunt-scss-lint": "^0.3.8",
     "grunt-text-replace": "^0.4.0"
   }

@@ -4,7 +4,7 @@
      * 
      * KAYZEN
      * @module: 'flyout-nav'
-     * @dependencies: 'side-nav', ('site-overlay')
+     * @dependencies: 'side-nav' (, 'site-overlay')
      * @author: @esr360
      * 
      */
@@ -61,7 +61,7 @@
                 // collapse by default
                 var openDefault = _module['flyout-nav']['collapsible']['open-by-default'];
                 
-                if ($(_flyoutNav).is('[class*="-collapse"]') == true || openDefault == false) {
+                if (!openDefault) {
                     $(_flyoutNav).find('a:not(:only-child) ~ ul').hide();
                 }
         
@@ -101,6 +101,6 @@
             
         }); // this.each
  
-    }; // flyoutNav()
- 
+    }; // flyoutNav() 
+    
 }(jQuery));
