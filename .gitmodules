@@ -4,9 +4,6 @@
 [submodule "assets/vendor/Owl-Carousel"]
 	path = assets/vendor/Owl-Carousel
 	url = https://github.com/smashingboxes/OwlCarousel2.git
-[submodule "assets/vendor/SassyJSON"]
-	path = assets/vendor/SassyJSON
-	url = https://github.com/esr360/SassyJSON.git
 [submodule "assets/vendor/jQuery"]
 	path = assets/vendor/jQuery
 	url = https://github.com/jquery/jquery.git
