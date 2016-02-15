@@ -26,7 +26,7 @@
 
 		?>
 
-		<section class="billboard-full-screen">
+		<section class="billboard-full-screen-overlay">
 			<div class="billboard_wrapper container text-left">
 				<div class="short" id="billboard-fade-parallax">
 					<header class="heading_group">
@@ -65,7 +65,7 @@
 		<div class="row-block text-center">
 			<section 
 				class="section-secondary-overlay-deep bg-cover span-6 va-middle"
-				style="background-image: url('<?php echo appDir ?>/images/stock-8.jpg')"
+				style="background-image: url('<?php echo appDir ?>/images/demo/hero-12.jpg')"
 			>
 				<div class="container-small">
 					<h3 class="heading-size-5">Responsive Grid System</h3>

@@ -26,7 +26,7 @@
 
 		?>
 
-		<section class="billboard-full-screen">
+		<section class="billboard-full-screen-overlay">
 			<div class="billboard_wrapper container text-left">
 				<div class="short">
 					<header class="heading_group">
@@ -49,16 +49,16 @@
 		
 		<?php 
         
-            include(ROOT.'/sections/masonry-features.php');
+            masonryFeatures();
         
-            include(ROOT.'/sections/in-store.php');
+            inStore();
             
             clients(array(
                'title'     => 'Popular Brands',
                'sub-title' => 'Get The Best Deals' 
             ));
             
-            include(ROOT.'/sections/feature-cards.php');
+            featureCards();
         
             promoBanner();
             

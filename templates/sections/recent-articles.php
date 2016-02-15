@@ -24,7 +24,7 @@
                     <div class="thumbnail-zoom">
                         <div class="thumbnail_mask">
                             <div class="thumbnail_controls icon_group-small">
-                                <a href="<?php echo appDir ?>/images/wallpapers/bg-7.jpg" class="button-icon-border-circle" rel="lightbox">
+                                <a href="<?php echo appDir ?>/images/demo/hero-1.jpg" class="button-icon-border-circle" rel="lightbox">
                                     <i class="fa fa-search"></i>
                                 </a>
                                 <a href="#" class="button-icon-border-circle">
@@ -32,7 +32,7 @@
                                 </a>
                             </div>
                         </div>
-                        <img src="<?php echo appDir ?>/images/wallpapers/bg-7.jpg">
+                        <img src="<?php echo appDir ?>/images/demo/hero-1.jpg">
                     </div>
                     <div class="thumbnail-profile-round-badge">
                         <img src="<?php echo appDir ?>/images/team/team-2.jpg" alt="">
@@ -60,7 +60,7 @@
                     <div class="thumbnail-zoom">
                         <div class="thumbnail_mask">
                             <div class="thumbnail_controls icon_group-small">
-                                <a href="<?php echo appDir ?>/images/wallpapers/bg-5.jpg" class="button-icon-border-circle" rel="lightbox">
+                                <a href="<?php echo appDir ?>/images/demo/hero-2.jpg" class="button-icon-border-circle" rel="lightbox">
                                     <i class="fa fa-search"></i>
                                 </a>
                                 <a href="#" class="button-icon-border-circle">
@@ -68,7 +68,7 @@
                                 </a>
                             </div>
                         </div>
-                        <img src="<?php echo appDir ?>/images/wallpapers/bg-5.jpg">
+                        <img src="<?php echo appDir ?>/images/demo/hero-2.jpg">
                     </div>
                     <div class="thumbnail-profile-round-badge">
                         <img src="<?php echo appDir ?>/images/team/team-2.jpg" alt="">
@@ -96,7 +96,7 @@
                     <div class="thumbnail-zoom">
                         <div class="thumbnail_mask">
                             <div class="thumbnail_controls icon_group-small">
-                                <a href="<?php echo appDir ?>/images/wallpapers/bg-3.jpg" class="button-icon-border-circle" rel="lightbox">
+                                <a href="<?php echo appDir ?>/images/demo/hero-3.jpg" class="button-icon-border-circle" rel="lightbox">
                                     <i class="fa fa-search"></i>
                                 </a>
                                 <a href="#" class="button-icon-border-circle">
@@ -104,7 +104,7 @@
                                 </a>
                             </div>
                         </div>
-                        <img src="<?php echo appDir ?>/images/wallpapers/bg-3.jpg">
+                        <img src="<?php echo appDir ?>/images/demo/hero-3.jpg">
                     </div>
                     <div class="thumbnail-profile-round-badge">
                         <img src="<?php echo appDir ?>/images/team/team-2.jpg" alt="">
