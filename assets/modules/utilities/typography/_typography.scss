@@ -2,11 +2,8 @@
 // Typography
 //=================================================================
 
-@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700,900);
-@import url(http://fonts.googleapis.com/css?family=Raleway:100,300,700,900);
-
 @mixin typography($custom: ()) {
-    
+
     //-------------------------------------------------------------
     // Config
     //-------------------------------------------------------------
@@ -14,8 +11,8 @@
     $typography: config((
         'name'                : 'typography',
         'typefaces': (
-            'primary'         : 'Lato',
-            'secondary'       : 'Raleway'
+            'primary'         : ('Lato', 'Lato:300,400,700,900'),
+            'secondary'       : ('Raleway', 'Raleway:100,300,700,900')
         ),
         'colors': (
             'base'            : color('greyscale', 'grey-4'),
@@ -41,8 +38,10 @@
 	//-------------------------------------------------------------
 
     @for $i from 1 through length(this('typefaces')) {
+        $google-font: nth(nth(nth(this('typefaces'), $i), 2), 2);
+        @import url(http://fonts.googleapis.com/css?family=#{$google-font});
         .font-#{$i} {
-            font-family: nth(nth(this('typefaces'), $i), 2);
+            font-family: nth(nth(nth(this('typefaces'), $i), 2), 1);
         }
     }
     

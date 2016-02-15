@@ -26,7 +26,7 @@
 
 		?>
 
-		<section class="billboard-full-screen">
+		<section class="billboard-full-screen-overlay">
 			<div class="billboard_wrapper container text-left">
 				<div class="short" id="billboard-fade-parallax">
 					<header class="heading_group">

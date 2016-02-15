@@ -67,8 +67,6 @@
             
             contactUs();
             
-            twitterFeed();
-            
             googleMap();
             
             appFooter();

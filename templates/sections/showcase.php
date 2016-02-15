@@ -22,25 +22,25 @@
         <!-- Showcase Thumbnails -->
         <section class="carousel-scale-3-greyscale-stageBg owl-carousel" id="showcase-thumbnails">
             <div class="showcase-thumbnail">
-                <img src="<?php echo appDir ?>/images/wallpapers/bg-1.jpg">
+                <img src="<?php echo appDir ?>/images/demo/hero-1.jpg">
             </div>
             <div class="showcase-thumbnail">
-                <img src="<?php echo appDir ?>/images/wallpapers/bg-2.jpg">
+                <img src="<?php echo appDir ?>/images/demo/hero-2.jpg">
             </div>
             <div class="showcase-thumbnail">
-                <img src="<?php echo appDir ?>/images/wallpapers/bg-3.jpg">
+                <img src="<?php echo appDir ?>/images/demo/hero-3.jpg">
             </div>
             <div class="showcase-thumbnail">
-                <img src="<?php echo appDir ?>/images/wallpapers/bg-4.jpg">
+                <img src="<?php echo appDir ?>/images/demo/hero-4.jpg">
             </div>
             <div class="showcase-thumbnail">
-                <img src="<?php echo appDir ?>/images/wallpapers/bg-5.jpg">
+                <img src="<?php echo appDir ?>/images/demo/hero-5.jpg">
             </div>
             <div class="showcase-thumbnail">
-                <img src="<?php echo appDir ?>/images/wallpapers/bg-6.jpg">
+                <img src="<?php echo appDir ?>/images/demo/hero-6.jpg">
             </div>
             <div class="showcase-thumbnail">
-                <img src="<?php echo appDir ?>/images/wallpapers/bg-7.jpg">
+                <img src="<?php echo appDir ?>/images/demo/hero-7.jpg">
             </div>
         </section> 
         
@@ -56,12 +56,12 @@
         <div id="showcase-carousel" class="owl-carousel">
             
             <!-- Showcase Slide 1 -->
-            <div class="row-block bg-cover" style="background-image: url('<?php echo appDir ?>/images/wallpapers/bg-1.jpg')">
+            <div class="row-block bg-cover" style="background-image: url('<?php echo appDir ?>/images/demo/hero-1.jpg')">
                 <div class="section_block span-6 text-center va-middle">
                     <div class="block-content span-9">
                         <div class="desktop-graphic-scroll">
                             <img src="<?php echo appDir ?>/images/demo-screen.png" alt="" />
-                            <div class="desktop-graphic_image" style="background-image: url('<?php echo appDir ?>/images/stock-1.jpg')"></div>
+                            <div class="desktop-graphic_image" style="background-image: url('<?php echo appDir ?>/images/demo/theme-1.jpg')"></div>
                         </div>
                     </div>
                 </div>
@@ -87,12 +87,12 @@
             </div>
             
             <!-- Showcase Slide 2 -->
-            <div class="row-block bg-cover" style="background-image: url('<?php echo appDir ?>/images/wallpapers/bg-2.jpg')">
+            <div class="row-block bg-cover" style="background-image: url('<?php echo appDir ?>/images/demo/hero-1.jpg')">
                 <div class="section_block span-6 text-center va-middle">
                     <div class="block-content span-9">
                         <div class="desktop-graphic-scroll">
                             <img src="<?php echo appDir ?>/images/demo-screen.png" alt="" />
-                            <div class="desktop-graphic_image" style="background-image: url('<?php echo appDir ?>/images/stock-2.jpg')"></div>
+                            <div class="desktop-graphic_image" style="background-image: url('<?php echo appDir ?>/images/demo/theme-1.jpg')"></div>
                         </div>
                     </div>
                 </div>
@@ -118,12 +118,12 @@
             </div>
             
             <!-- Showcase Slide 3 -->
-            <div class="row-block bg-cover" style="background-image: url('<?php echo appDir ?>/images/wallpapers/bg-3.jpg')">
+            <div class="row-block bg-cover" style="background-image: url('<?php echo appDir ?>/images/demo/hero-1.jpg')">
                 <div class="section_block span-6 text-center va-middle">
                     <div class="block-content span-9">
                         <div class="desktop-graphic-scroll">
                             <img src="<?php echo appDir ?>/images/demo-screen.png" alt="" />
-                            <div class="desktop-graphic_image" style="background-image: url('<?php echo appDir ?>/images/stock-4.jpg')"></div>
+                            <div class="desktop-graphic_image" style="background-image: url('<?php echo appDir ?>/images/demo/theme-1.jpg')"></div>
                         </div>
                     </div>
                 </div>
@@ -152,13 +152,13 @@
             <div 
                 class="row-block bg-cover"
                 data-stellar-background-ratio="0.5"
-                style="background-image: url('<?php echo appDir ?>/images/wallpapers/bg-4.jpg')"
+                style="background-image: url('<?php echo appDir ?>/images/demo/hero-1.jpg')"
             >
                 <div class="section_block span-6 text-center va-middle">
                     <div class="block-content span-9">
                         <div class="desktop-graphic-scroll">
                             <img src="<?php echo appDir ?>/images/demo-screen.png" alt="" />
-                            <div class="desktop-graphic_image" style="background-image: url('<?php echo appDir ?>/images/stock-5.jpg')"></div>
+                            <div class="desktop-graphic_image" style="background-image: url('<?php echo appDir ?>/images/demo/theme-1.jpg')"></div>
                         </div>
                     </div>
                 </div>
@@ -184,12 +184,12 @@
             </div>
             
             <!-- Showcase Slide 5 -->
-            <div class="row-block bg-cover" style="background-image: url('<?php echo appDir ?>/images/wallpapers/bg-5.jpg')">
+            <div class="row-block bg-cover" style="background-image: url('<?php echo appDir ?>/images/demo/hero-1.jpg')">
                 <div class="section_block span-6 text-center va-middle">
                     <div class="block-content span-9">
                         <div class="desktop-graphic-scroll">
                             <img src="<?php echo appDir ?>/images/demo-screen.png" alt="" />
-                            <div class="desktop-graphic_image" style="background-image: url('<?php echo appDir ?>/images/stock-3.jpg')"></div>
+                            <div class="desktop-graphic_image" style="background-image: url('<?php echo appDir ?>/images/demo/theme-1.jpg')"></div>
                         </div>
                     </div>
                 </div>
@@ -215,12 +215,12 @@
             </div>
             
             <!-- Showcase Slide 6 -->
-            <div class="row-block bg-cover" style="background-image: url('<?php echo appDir ?>/images/wallpapers/bg-6.jpg')">
+            <div class="row-block bg-cover" style="background-image: url('<?php echo appDir ?>/images/demo/hero-1.jpg')">
                 <div class="section_block span-6 text-center va-middle">
                     <div class="block-content span-9">
                         <div class="desktop-graphic-scroll">
                             <img src="<?php echo appDir ?>/images/demo-screen.png" alt="" />
-                            <div class="desktop-graphic_image" style="background-image: url('<?php echo appDir ?>/images/stock-3.jpg')"></div>
+                            <div class="desktop-graphic_image" style="background-image: url('<?php echo appDir ?>/images/demo/theme-1.jpg')"></div>
                         </div>
                     </div>
                 </div>
@@ -246,12 +246,12 @@
             </div>
             
             <!-- Showcase Slide 7 -->
-            <div class="row-block bg-cover" style="background-image: url('<?php echo appDir ?>/images/wallpapers/bg-7.jpg')">
+            <div class="row-block bg-cover" style="background-image: url('<?php echo appDir ?>/images/demo/hero-1.jpg')">
                 <div class="section_block span-6 text-center va-middle">
                     <div class="block-content span-9">
                         <div class="desktop-graphic-scroll">
                             <img src="<?php echo appDir ?>/images/demo-screen.png" alt="" />
-                            <div class="desktop-graphic_image" style="background-image: url('<?php echo appDir ?>/images/stock-3.jpg')"></div>
+                            <div class="desktop-graphic_image" style="background-image: url('<?php echo appDir ?>/images/demo/theme-1.jpg')"></div>
                         </div>
                     </div>
                 </div>

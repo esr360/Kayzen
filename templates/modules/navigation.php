@@ -15,7 +15,7 @@
 								<div class="span-4">
 									<div class="corner-ribbon-small-pink" data-ribbon="Hot"></div>
 									<a href="#">
-										<img src="<?php echo appDir ?>/images/stock-1-thumb.jpg" alt="Theme One" />
+										<img src="<?php echo appDir ?>/images/demo/theme-1-thumb.jpg" alt="Theme One" />
 									</a>
 								</div> 
 								<div class="span-8">
@@ -39,7 +39,7 @@
 								<div class="span-4">
 									<div class="corner-ribbon-small-purple" data-ribbon="Featured"></div>
 									<a href="#">
-										<img src="<?php echo appDir ?>/images/stock-2-thumb.jpg" alt="Theme One" />
+										<img src="<?php echo appDir ?>/images/demo/theme-1-thumb.jpg" alt="Theme One" />
 									</a>
 								</div> 
 								<div class="span-8">
@@ -63,7 +63,7 @@
 							<div class="widget-media row">               
 								<div class="span-4">
 									<a href="#">
-										<img src="<?php echo appDir ?>/images/stock-3-thumb.jpg" alt="Theme One" />
+										<img src="<?php echo appDir ?>/images/demo/theme-1-thumb.jpg" alt="Theme One" />
 									</a>
 								</div> 
 								<div class="span-8">
@@ -94,7 +94,7 @@
 								<div class="span-4">
 									<div class="corner-ribbon-small-green" data-ribbon="New"></div>
 									<a href="#">
-										<img src="<?php echo appDir ?>/images/stock-4-thumb.jpg" alt="Theme One" />
+										<img src="<?php echo appDir ?>/images/demo/theme-1-thumb.jpg" alt="Theme One" />
 									</a>
 								</div> 
 								<div class="span-8">
@@ -117,7 +117,7 @@
 							<div class="widget-media row">               
 								<div class="span-4">
 									<a href="#">
-										<img src="<?php echo appDir ?>/images/stock-5-thumb.jpg" alt="Theme One" />
+										<img src="<?php echo appDir ?>/images/demo/theme-1-thumb.jpg" alt="Theme One" />
 									</a>
 								</div> 
 								<div class="span-8">
@@ -141,7 +141,7 @@
 							<div class="widget-media row">               
 								<div class="span-4">
 									<a href="#">
-										<img src="<?php echo appDir ?>/images/stock-6-thumb.jpg" alt="Theme One" />
+										<img src="<?php echo appDir ?>/images/demo/theme-1-thumb.jpg" alt="Theme One" />
 									</a>
 								</div> 
 								<div class="span-8">
@@ -172,7 +172,7 @@
 								<div class="span-4">
 									<div class="corner-ribbon-small-pink" data-ribbon="Hot"></div>
 									<a href="#">
-										<img src="<?php echo appDir ?>/images/stock-3-thumb.jpg" alt="Theme One" />
+										<img src="<?php echo appDir ?>/images/demo/theme-1-thumb.jpg" alt="Theme One" />
 									</a>
 								</div> 
 								<div class="span-8">
@@ -195,7 +195,7 @@
 							<div class="widget-media row">               
 								<div class="span-4">
 									<a href="#">
-										<img src="<?php echo appDir ?>/images/stock-1-thumb.jpg" alt="Theme One" />
+										<img src="<?php echo appDir ?>/images/demo/theme-1-thumb.jpg" alt="Theme One" />
 									</a>
 								</div> 
 								<div class="span-8">
@@ -218,7 +218,7 @@
 							<div class="widget-media row">               
 								<div class="span-4">
 									<a href="#">
-										<img src="<?php echo appDir ?>/images/stock-2-thumb.jpg" alt="Theme One" />
+										<img src="<?php echo appDir ?>/images/demo/theme-1-thumb.jpg" alt="Theme One" />
 									</a>
 								</div> 
 								<div class="span-8">
@@ -248,7 +248,7 @@
 							<div class="widget-media row">               
 								<div class="span-4">
 									<a href="#">
-										<img src="<?php echo appDir ?>/images/stock-6-thumb.jpg" alt="Theme One" />
+										<img src="<?php echo appDir ?>/images/demo/theme-1-thumb.jpg" alt="Theme One" />
 									</a>
 								</div> 
 								<div class="span-8">
@@ -272,7 +272,7 @@
 								<div class="span-4">
 									<div class="corner-ribbon-small-green" data-ribbon="New"></div>
 									<a href="#">
-										<img src="<?php echo appDir ?>/images/stock-4-thumb.jpg" alt="Theme One" />
+										<img src="<?php echo appDir ?>/images/demo/theme-1-thumb.jpg" alt="Theme One" />
 									</a>
 								</div> 
 								<div class="span-8">
@@ -295,7 +295,7 @@
 							<div class="widget-media row">               
 								<div class="span-4">
 									<a href="#">
-										<img src="<?php echo appDir ?>/images/stock-5-thumb.jpg" alt="Theme One" />
+										<img src="<?php echo appDir ?>/images/demo/theme-1-thumb.jpg" alt="Theme One" />
 									</a>
 								</div> 
 								<div class="span-8">
