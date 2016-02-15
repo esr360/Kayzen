@@ -32,4 +32,4 @@
 <div class="site-overlay" id="site-overlay"></div>
 
 <!-- Styles JSON Configuration -->
-<div id="stylesConfigJSON"></div>
+<div id="modulesConfigJSON"></div>
