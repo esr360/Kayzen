@@ -195,7 +195,7 @@
                                         </a>
                                     </div>
                                 </div>
-                                <img src="<?php echo appDir ?>/images/product-1.jpg">
+                                <img src="<?php echo appDir ?>/images/demo/product-1.jpg">
                             </div>
                             <header class="heading_group-small">
                                 <h3 class="heading-heavy-size-4">Lorem Ipsum Dolor</h3>
@@ -226,7 +226,7 @@
                                         </a>
                                     </div>
                                 </div>
-                                <img src="<?php echo appDir ?>/images/product-2.jpg">
+                                <img src="<?php echo appDir ?>/images/demo/product-1.jpg">
                             </div>
                             <header class="heading_group-small">
                                 <h3 class="heading-heavy-size-4">Lorem Ipsum Dolor</h3>
@@ -257,7 +257,7 @@
                                         </a>
                                     </div>
                                 </div>
-                                <img src="<?php echo appDir ?>/images/product-3.jpg">
+                                <img src="<?php echo appDir ?>/images/demo/product-1.jpg">
                             </div>
                             <header class="heading_group-small">
                                 <h3 class="heading-heavy-size-4">Lorem Ipsum Dolor</h3>
@@ -287,7 +287,7 @@
                                         </a>
                                     </div>
                                 </div>
-                                <img src="<?php echo appDir ?>/images/product-4.jpg">
+                                <img src="<?php echo appDir ?>/images/demo/product-1.jpg">
                             </div>
                             <header class="heading_group-small">
                                 <h3 class="heading-heavy-size-4">Lorem Ipsum Dolor</h3>
@@ -325,7 +325,7 @@
                                         </a>
                                     </div>
                                 </div>
-                                <img src="<?php echo appDir ?>/images/product-1.jpg">
+                                <img src="<?php echo appDir ?>/images/demo/product-1.jpg">
                             </div>
                             <header class="heading_group-small">
                                 <h3 class="heading-heavy-size-4">Lorem Ipsum Dolor</h3>
@@ -356,7 +356,7 @@
                                         </a>
                                     </div>
                                 </div>
-                                <img src="<?php echo appDir ?>/images/product-2.jpg">
+                                <img src="<?php echo appDir ?>/images/demo/product-1.jpg">
                             </div>
                             <header class="heading_group-small">
                                 <h3 class="heading-heavy-size-4">Lorem Ipsum Dolor</h3>
@@ -387,7 +387,7 @@
                                         </a>
                                     </div>
                                 </div>
-                                <img src="<?php echo appDir ?>/images/product-3.jpg">
+                                <img src="<?php echo appDir ?>/images/demo/product-1.jpg">
                             </div>
                             <header class="heading_group-small">
                                 <h3 class="heading-heavy-size-4">Lorem Ipsum Dolor</h3>
@@ -417,7 +417,7 @@
                                         </a>
                                     </div>
                                 </div>
-                                <img src="<?php echo appDir ?>/images/product-4.jpg">
+                                <img src="<?php echo appDir ?>/images/demo/product-1.jpg">
                             </div>
                             <header class="heading_group-small">
                                 <h3 class="heading-heavy-size-4">Lorem Ipsum Dolor</h3>

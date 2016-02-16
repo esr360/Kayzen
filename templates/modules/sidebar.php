@@ -19,7 +19,7 @@
                 <article class="row">
                     <div class="span-2">
                         <div class="thumbnail-profile-fill<?php if ($option['type'] == 'blog') echo '-round' ?>">
-                            <img src="<?php echo appDir ?>/images/team/team-2.jpg" alt="">
+                            <img src="<?php stockImage('demo/team-1.jpg')?>" alt="">
                         </div>
                     </div>
                     <div class="span-10">
@@ -61,7 +61,7 @@
                 <article class="row">
                     <div class="span-2">
                         <div class="thumbnail-profile-fill<?php if ($option['type'] == 'blog') echo '-round' ?>">
-                            <img src="<?php echo appDir ?>/images/team/team-2.jpg" alt="">
+                            <img src="<?php stockImage('demo/team-1.jpg')?>" alt="">
                         </div>
                     </div>
                     <div class="span-10">
@@ -103,7 +103,7 @@
                 <article class="row">
                     <div class="span-2">
                         <div class="thumbnail-profile-fill<?php if ($option['type'] == 'blog') echo '-round' ?>">
-                            <img src="<?php echo appDir ?>/images/team/team-2.jpg" alt="">
+                            <img src="<?php stockImage('demo/team-1.jpg')?>" alt="">
                         </div>
                     </div>
                     <div class="span-10">
@@ -147,7 +147,7 @@
                 <article class="row">
                     <div class="span-2">
                         <div class="thumbnail-profile-fill<?php if ($option['type'] == 'blog') echo '-round' ?>">
-                            <img src="<?php echo appDir ?>/images/team/team-2.jpg" alt="">
+                            <img src="<?php stockImage('demo/team-1.jpg')?>" alt="">
                         </div>
                     </div>
                     <div class="span-10">
@@ -189,7 +189,7 @@
                 <article class="row">
                     <div class="span-2">
                         <div class="thumbnail-profile-fill<?php if ($option['type'] == 'blog') echo '-round' ?>">
-                            <img src="<?php echo appDir ?>/images/team/team-2.jpg" alt="">
+                            <img src="<?php stockImage('demo/team-1.jpg')?>" alt="">
                         </div>
                     </div>
                     <div class="span-10">
@@ -231,7 +231,7 @@
                 <article class="row">
                     <div class="span-2">
                         <div class="thumbnail-profile-fill<?php if ($option['type'] == 'blog') echo '-round' ?>">
-                            <img src="<?php echo appDir ?>/images/team/team-2.jpg" alt="">
+                            <img src="<?php stockImage('demo/team-1.jpg')?>" alt="">
                         </div>
                     </div>
                     <div class="span-10">
@@ -275,7 +275,7 @@
                 <article class="row">
                     <div class="span-2">
                         <div class="thumbnail-profile-fill<?php if ($option['type'] == 'blog') echo '-round' ?>">
-                            <img src="<?php echo appDir ?>/images/team/team-2.jpg" alt="">
+                            <img src="<?php stockImage('demo/team-1.jpg')?>" alt="">
                         </div>
                     </div>
                     <div class="span-10">
@@ -317,7 +317,7 @@
                 <article class="row">
                     <div class="span-2">
                         <div class="thumbnail-profile-fill<?php if ($option['type'] == 'blog') echo '-round' ?>">
-                            <img src="<?php echo appDir ?>/images/team/team-2.jpg" alt="">
+                            <img src="<?php stockImage('demo/team-1.jpg')?>" alt="">
                         </div>
                     </div>
                     <div class="span-10">
@@ -359,7 +359,7 @@
                 <article class="row">
                     <div class="span-2">
                         <div class="thumbnail-profile-fill<?php if ($option['type'] == 'blog') echo '-round' ?>">
-                            <img src="<?php echo appDir ?>/images/team/team-2.jpg" alt="">
+                            <img src="<?php stockImage('demo/team-1.jpg')?>" alt="">
                         </div>
                     </div>
                     <div class="span-10">

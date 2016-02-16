@@ -39,7 +39,7 @@
 					<div class="span-8">
                 
                         <div class="thumbnail-article">
-                            <img src="<?php echo appDir ?>/images/wallpapers/bg-<?php echo rand(1, 7) ?>.jpg">
+                            <img src="<?php stockImage('/demo/hero-'.rand(1, 7).'.jpg') ?>">
                         </div>
                         
                         <div class="post-content lede text-justify">
@@ -216,7 +216,7 @@
                             <div class="row">
                                 <div class="span-2 text-center">
                                     <div class="thumbnail-mini-profile-round-xlarge-styled">
-                                        <img src="<?php echo appDir ?>/images/team/team-2.jpg" alt="">
+                                        <img src="<?php stockImage('/demo/team-1.jpg') ?>">
                                     </div>
                                     <div class="icon_group-small">
                                         <a href="#" class="button-icon-border-size-1 tooltip-top" data-tooltip="Facebook">
@@ -253,7 +253,7 @@
                                     <div class="row object-small">
                                         <div class="span-2 va-middle text-center">
                                             <div class="thumbnail-profile-round-xlarge-styled">
-                                                <img src="<?php echo appDir ?>/images/team/team-2.jpg" alt="">
+                                                <img src="<?php stockImage('/demo/team-1.jpg') ?>">
                                             </div>
                                         </div>
                                         <div class="span-10 va-middle">
@@ -284,7 +284,7 @@
                                     <div class="row object-small span-10 text-left">
                                         <div class="span-2 va-middle text-center">
                                             <div class="thumbnail-profile-round-large-styled">
-                                                <img src="<?php echo appDir ?>/images/team/team-2.jpg" alt="">
+                                                <img src="<?php stockImage('/demo/team-1.jpg') ?>">
                                             </div>
                                         </div>
                                         <div class="span-10 va-middle">
@@ -315,7 +315,7 @@
                                     <div class="row object-small">
                                         <div class="span-2 va-middle text-center">
                                             <div class="thumbnail-profile-round-xlarge-styled">
-                                                <img src="<?php echo appDir ?>/images/team/team-2.jpg" alt="">
+                                                <img src="<?php stockImage('/demo/team-1.jpg') ?>">
                                             </div>
                                         </div>
                                         <div class="span-10 va-middle">
@@ -389,7 +389,7 @@
                                             </a>
                                         </div>
                                     </div>
-                                    <img src="<?php echo appDir ?>/images/wallpapers/bg-7.jpg">
+                                    <img src="<?php stockImage('/demo/hero-'.rand(1, 7).'.jpg') ?>">
                                 </div>
                                 <header class="heading_group">
                                     <div class="heading_date">
@@ -422,7 +422,7 @@
                                             </a>
                                         </div>
                                     </div>
-                                    <img src="<?php echo appDir ?>/images/wallpapers/bg-5.jpg">
+                                    <img src="<?php stockImage('/demo/hero-'.rand(1, 7).'.jpg') ?>">
                                 </div>
                                 <header class="heading_group">
                                     <div class="heading_date">
@@ -455,7 +455,7 @@
                                             </a>
                                         </div>
                                     </div>
-                                    <img src="<?php echo appDir ?>/images/wallpapers/bg-3.jpg">
+                                    <img src="<?php stockImage('/demo/hero-'.rand(1, 7).'.jpg') ?>">
                                 </div>
                                 <header class="heading_group">
                                     <div class="heading_date">

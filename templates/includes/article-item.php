@@ -84,7 +84,7 @@
                 <div class="thumbnail_mask">
                     <div class="thumbnail_controls<?php if($options['matrix'] && $options['maskTitle']) echo '-corner' ?> icon_group-small">
                         <a 
-                            href="<?php echo appDir ?>/images/demo/hero-<?php echo $options['thumb'] ?>.jpg" 
+                            href="<?php stockImage('/demo/hero'.$options['thumb'].'.jpg') ?>"
                             class="button-icon-border-circle"
                             rel="lightbox"
                         >
@@ -105,7 +105,7 @@
                         </header>
                     <?php } ?>
                 </div>
-                <img src="<?php echo appDir ?>/images/demo/hero-<?php echo $options['thumb']; if ($options['height'] === '-tall') echo 'tall/' ?>.jpg">
+                <img src="<?php echo appDir.'/images/demo/hero-'.$options['thumb']; if ($options['height'] === 'tall') echo '-tall'?>.jpg">
             </div>
             
         <? // Vimeo Article ?>
@@ -136,7 +136,11 @@
         
             <div class="article-thumbnails-carousel carousel-cornerDots-revealNav owl-carousel">
                 <?php foreach ($options['thumbs'] as $item) { ?>
-                    <img src="<?php echo appDir ?>/images/demo/hero-<?php echo $options['thumb']; if ($options['height'] === '-tall') echo 'tall/' ?>.jpg">
+                    <?php if ($options['height'] === 'tall') { ?>
+                        <img src="<?php stockImage('demo/hero-'.$options['thumb'].'-tall.jpg') ?>">
+                    <?php } else { ?>
+                        <img src="<?php stockImage('demo/hero-'.$options['thumb'].'.jpg') ?>">
+                    <?php } ?>
                 <?php } ?>
             </div>
             
@@ -148,8 +152,8 @@
                     <div class="tile tile-rec">
                         <a 
                             class="tile-img" 
-                            data-bg="<?php echo appDir ?>/images/demo/hero-<?php echo rand(1, 7) ?>.jpg"
-                            href="<?php echo appDir ?>/images/demo/hero-<?php echo rand(1, 7) ?>.jpg"
+                            data-bg="<?php stockImage('/demo/hero-'.rand(1, 7).'.jpg') ?>"
+                            href="<?php stockImage('/demo/hero-'.rand(1, 7).'.jpg') ?>"
                         ></a>
                     </div>
                     <div class="tile tile-rec">
@@ -157,23 +161,23 @@
                             <div class="tile tile-rec">
                                 <a 
                                     class="tile-img" 
-                                    data-bg="<?php echo appDir ?>/images/demo/hero-<?php echo rand(1, 7) ?>.jpg"
-                                    href="<?php echo appDir ?>/images/demo/hero-<?php echo rand(1, 7) ?>.jpg"
+                                    data-bg="<?php stockImage('/demo/hero-'.rand(1, 7).'.jpg') ?>"
+                                    href="<?php stockImage('/demo/hero-'.rand(1, 7).'.jpg') ?>"
                                 ></a>
                             </div>
                             <div class="tile tile-rec">
                                 <div class="tile tile-box">
                                     <a 
                                         class="tile-img" 
-                                        data-bg="<?php echo appDir ?>/images/demo/hero-<?php echo rand(1, 7) ?>.jpg"
-                                        href="<?php echo appDir ?>/images/demo/hero-<?php echo rand(1, 7) ?>.jpg"
+                                        data-bg="<?php stockImage('/demo/hero-'.rand(1, 7).'.jpg') ?>"
+                                        href="<?php stockImage('/demo/hero-'.rand(1, 7).'.jpg') ?>"
                                     ></a>
                                 </div>
                                 <div class="tile tile-box">
                                     <a 
                                         class="tile-img" 
-                                        data-bg="<?php echo appDir ?>/images/demo/hero-<?php echo rand(1, 7) ?>.jpg"
-                                        href="<?php echo appDir ?>/images/demo/hero-<?php echo rand(1, 7) ?>.jpg"
+                                        data-bg="<?php stockImage('/demo/hero-'.rand(1, 7).'.jpg') ?>"
+                                        href="<?php stockImage('/demo/hero-'.rand(1, 7).'.jpg') ?>"
                                     ></a>
                                 </div>
                             </div>
@@ -181,8 +185,8 @@
                         <div class="tile tile-box">
                             <a 
                                 class="tile-img" 
-                                data-bg="<?php echo appDir ?>/images/demo/hero-<?php echo rand(1, 7) ?>.jpg"
-                                href="<?php echo appDir ?>/images/demo/hero-<?php echo rand(1, 7) ?>.jpg"
+                                data-bg="<?php stockImage('/demo/hero-'.rand(1, 7).'.jpg') ?>"
+                                href="<?php stockImage('/demo/hero-'.rand(1, 7).'.jpg') ?>" 
                             ></a>
                         </div>
                     </div>
@@ -190,8 +194,8 @@
                 <div class="tile tile-box">
                     <a 
                         class="tile-img" 
-                        data-bg="<?php echo appDir ?>/images/demo/hero-<?php echo rand(1, 7) ?>.jpg"
-                        href="<?php echo appDir ?>/images/demo/hero-<?php echo rand(1, 7) ?>.jpg"
+                        data-bg="<?php stockImage('/demo/hero-'.rand(1, 7).'.jpg') ?>"
+                        href="<?php stockImage('/demo/hero-'.rand(1, 7).'.jpg') ?>"
                     ></a>
                 </div>
             </div>

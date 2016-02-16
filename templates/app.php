@@ -61,6 +61,7 @@ if (host == 'server') {
 include (ROOT.'/includes/article-item.php');
 include (ROOT.'/includes/dev-asset.php');
 include (ROOT.'/includes/page-link.php');
+include (ROOT.'/includes/stock-image.php');
 include (ROOT.'/includes/theme-asset.php');
 
 include (ROOT.'/modules/billboard.php');

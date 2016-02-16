@@ -153,7 +153,7 @@
                                 </div>
                                 <footer class="blockquote_footer">
                                     <a class="blockquote_avatar-small" href="">
-                                        <img src="<?php echo appDir ?>/images/team/team-2.jpg" alt="">
+                                        <img src="<?php stockImage('demo/team-1.jpg') ?>" alt="">
                                     </a>
                                     <div class="blockquote_cite heading_group">
                                         <h4 class="heading-size-2 font-2">John Dough</h4>
@@ -170,7 +170,7 @@
                                 </div>
                                 <footer class="blockquote_footer">
                                     <a class="blockquote_avatar-small" href="">
-                                        <img src="<?php echo appDir ?>/images/team/team-2.jpg" alt="">
+                                        <img src="<?php stockImage('demo/team-1.jpg') ?>" alt="">
                                     </a>
                                     <div class="blockquote_cite heading_group">
                                         <h4 class="heading-size-2 font-2">John Dough</h4>

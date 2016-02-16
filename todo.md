@@ -2,7 +2,6 @@
 #============================================================
 
 - update all empty # links
-- fix navigation links for HTML templates
 - come up with solution for stock images
 - full responsive audit
 - add cheatsheet page
@@ -11,6 +10,7 @@
 # Done
 #============================================================
 
+- fix navigation links for HTML templates
 - update sudojQuery to pseudojQuery
 - fix overlay JS component (sometimes hides when unwanted)
 - convert all javascripts to components (eg; flyout-nav.js)
