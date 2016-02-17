@@ -65,7 +65,7 @@
 
                 <h3 class="heading-size-3">Colors</h3>
                 
-                <p class="alert-bar-help">You can choose which colors to create a ribbon for in the module's <a href="#">configuration</a>.</p>
+                <p class="alert-bar-help">You can choose which colors to create a ribbon for in the module's <a href="#section-customizing">configuration</a>.</p>
                 
                 <div class="well object" style="height: 150px;">
                     <div class="corner-ribbon-green" data-ribbon="Green"></div>
@@ -86,7 +86,7 @@
 
                 <h3 class="heading-size-3">Sizes</h3>
                 
-                <p class="alert-bar-help">You can choose which sizes to create a ribbon for in the module's <a href="#">configuration</a>.</p>
+                <p class="alert-bar-help">You can choose which sizes to create a ribbon for in the module's <a href="#section-customizing">configuration</a>.</p>
                 
                 <div class="well object" style="height: 100px;">
                     <div class="corner-ribbon-small" data-ribbon="Small"></div>
@@ -102,7 +102,7 @@
 &lt;div class="corner-ribbon-large" data-ribbon="Large">&lt;/div>
 </pre>
 
-                <h2 class="heading-light-size-5">Customizing</h2>
+                <h2 class="heading-light-size-5" id="section-customizing">Customizing</h2>
                 
                 <p>The corner-ribbons can be customized using the following options:</p>
                 
@@ -137,7 +137,7 @@
                 
 				<p>To change one of the above values, pass your new value(s) to the <code>corner-ribbons()</code> mixin in your theme file (e.g. assets/themes/Kayzen/_kayzen.scss).</p>
                 
-                <p class="alert-bar-info">The options are recursive, so you always have access to the default options which you don't overwrite. <a href="#">Learn more</a>.</p>
+                <p class="alert-bar-info">The options are recursive, so you always have access to the default options which you don't overwrite. <a href="https://github.com/esr360/Modular#module-configuration-1" target="blank">Learn more</a>.</p>
          
 <pre data-enlighter-language="css" class="EnlighterJSRAW">
 @include corner-ribbons((

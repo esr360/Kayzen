@@ -168,7 +168,7 @@
 
                 <h3 class="heading-size-3">Sizes</h3>
                 
-                <p>For each size in the <a href="#">typography</a> module, a modifier for the headings is generated for that size.</p>
+                <p>For each size in the <a href="<?php pageLink('modules/utilities/typography.php') ?>">typography</a> module, a modifier for the headings is generated for that size.</p>
                 
                 <div class="well object">
                     <h3 class="heading-size-1">Lorem Ipsum Dolor</h3>
@@ -321,7 +321,7 @@
                                 <div>23</div>
                             </div>
                             <h2 class="heading-heavy-size-4 font-2">Lorem ipsum dolor sit amet</h2>
-                            <h3 class="heading-light-size-2">Posted in <a href="#">HTML Themes</a></h3>
+                            <h3 class="heading-light-size-2">Posted in <a href="<?php pageLink('blog/masonry/3-cols.php') ?>">HTML Themes</a></h3>
                         </header>
                     </div>
                 </div>
@@ -333,7 +333,7 @@
         &lt;div>23&lt;/div>
     &lt;/div>
     &lt;h2 class="heading-heavy-size-4 font-2">Lorem ipsum dolor sit amet&lt;/h2>
-    &lt;h3 class="heading-light-size-2">Posted in &lt;a href="#">HTML Themes&lt;/a>&lt;/h3>
+    &lt;h3 class="heading-light-size-2">Posted in &lt;a href="/html-themes">HTML Themes&lt;/a>&lt;/h3>
 &lt;/header>
 </pre>
 

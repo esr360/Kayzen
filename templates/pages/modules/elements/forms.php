@@ -148,7 +148,7 @@
     ...
 &lt;/form>
 </pre>
-                <p class="alert-bar-info">Notice the 'required' attribute on line 3. <a href="#">Learn more<a> about HTML5 validation</a>.</p>
+                <p class="alert-bar-info">Notice the 'required' attribute on line 3. <a href="http://www.sitepoint.com/html5-form-validation/" target="blank">Learn more<a> about HTML5 validation</a>.</p>
                 
                 <h3 class="heading-size-3">Form Group With Icon</h3>
                 
@@ -172,7 +172,7 @@
 &lt;/form>
 </pre>
 
-                <p>To crete an input group with an icon, add the <code>hasIcon</code> modifier to your <code>form_group</code> component: <code>form_group-hasIcon</code>, and place your desired icon (using <a href="#">Font Awesome</a> icons) underneath the input field as shown above.</p>
+                <p>To crete an input group with an icon, add the <code>hasIcon</code> modifier to your <code>form_group</code> component: <code>form_group-hasIcon</code>, and place your desired icon (using <a href="https://fortawesome.github.io/Font-Awesome/icons/" target="blank">Font Awesome</a> icons) underneath the input field as shown above.</p>
                 
                 <h4 class="heading-size-2-uppercase">With Faux Placeholder</h4>
                 
@@ -216,7 +216,7 @@
 &lt;/form>
 </pre>
 
-                <p>To create a small form group, add the <code>small</code> modifier to your <code>form_group</code> component: <code>form_group-small</code>. To ensure any labels you use are the appropriate size, you can use one of the various <b><a href="#">heading</a></b> classes, e.g. <code>heading-size-2</code>.</p>
+                <p>To create a small form group, add the <code>small</code> modifier to your <code>form_group</code> component: <code>form_group-small</code>. To ensure any labels you use are the appropriate size, you can use one of the various <b><a href="<?php pageLink('modules/elements/headings.php') ?>">heading</a></b> classes, e.g. <code>heading-size-2</code>.</p>
 
                 <h3 class="heading-size-3">Tighter Form Groups <span class="heading-light">(with icons)</span></h3>
 

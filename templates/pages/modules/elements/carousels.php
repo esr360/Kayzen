@@ -41,7 +41,7 @@
 					<li class="plain"><span>README.md</span></li>	
 				</ul>
                 
-                <p class="alert-bar-success">The 'carousels' module makes use of the <a href="#">owl-carousel</a> plugin which is built into <a href="#"><b>app.js</b></a>.</p>
+                <p class="alert-bar-success">The 'carousels' module makes use of the <a href="http://www.owlcarousel.owlgraphic.com/" target="blank">owl-carousel</a> plugin which is built into <a href="<?php pageLink('documentation.php#building-kayzen') ?>"><b>app.js</b></a>.</p>
                 
 				<p class="alert-bar-info"><strong>Github Page</strong> (customers only):  <a href="https://github.com/esr360/Kayzen/tree/master/assets/modules/elements/carousels" target="blank">https://github.com/esr360/Kayzen/tree/master/assets/modules/elements/carousels</a></p>
 				
@@ -211,7 +211,7 @@
 
 </pre>
 
-                <p>Where possilbe, Kayzen makes use of native plugin features to minimize the load of local resources. The above jQuery code is straight from the <a href="http://www.owlcarousel.owlgraphic.com/docs/api-options.html" target="blank">Owl-Carousel documentation</a>, using <a href="#">FontAwesome</a> icons for the previous and next arrows.</p>
+                <p>Where possilbe, Kayzen makes use of native plugin features to minimize the load of local resources. The above jQuery code is straight from the <a href="http://www.owlcarousel.owlgraphic.com/docs/api-options.html" target="blank">Owl-Carousel documentation</a>, using <a href="https://fortawesome.github.io/Font-Awesome/" target="blank">FontAwesome</a> icons for the previous and next arrows.</p>
                 
                 <h3 class="heading-size-3">Carousel With Corner Dots & Revealing Next/Prev Arrows</h3>
                 

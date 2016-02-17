@@ -45,7 +45,7 @@
 				
 				<h2 class="heading-light-size-5">Module Overview</h2>
                 
-                <p>At one point, a long time ago, Kayzen was built off the popular <a href="#">HTML5 Boilerplate</a>. There are still some remnants left over which Kayzen utilizes, such as the print styles. The <code>_print.scss</code> file should be used to contain any styles you wish to only be applied when the media type is equal to <code>print</code>.</p>
+                <p>At one point, a long time ago, Kayzen was built off the popular <a href="https://html5boilerplate.com/" targer="blank">HTML5 Boilerplate</a>. There are still some remnants left over which Kayzen utilizes, such as the print styles. The <code>_print.scss</code> file should be used to contain any styles you wish to only be applied when the media type is equal to <code>print</code>.</p>
                 
                 <h3 class="heading-size-1-uppercase"><a target="blank" href="https://github.com/h5bp/html5-boilerplate/blob/master/dist/doc/css.md#print-styles">From the H5BP docs:</a></h3>
                 

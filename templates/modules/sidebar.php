@@ -19,7 +19,7 @@
                 <article class="row">
                     <div class="span-2">
                         <div class="thumbnail-profile-fill<?php if ($option['type'] == 'blog') echo '-round' ?>">
-                            <img src="<?php stockImage('demo/team-1.jpg')?>" alt="">
+                            <img src="<?php stockImage('team/team-1.jpg')?>" alt="">
                         </div>
                     </div>
                     <div class="span-10">
@@ -32,12 +32,12 @@
                             <?php } ?>
                             <div>
                                 <h3 class="heading">Lorem Ipsum Dolor</h3>
-                                <h4 class="heading-light-uppercase-size-1">Category: <a href="#">Themes</a></h4>
+                                <h4 class="heading-light-uppercase-size-1">Category: <a href="<?php pageLink('blog/classic/3-cols-filterable.php') ?>">Themes</a></h4>
                                 <?php if ($options['type'] == 'blog') { ?>
                                     <ul class="list-tags-small">
-                                        <li class="plain"><a href="#">CSS</a></li>	
-                                        <li class="plain"><a href="#">HTML</a></li>	
-                                        <li class="plain"><a href="#">JS</a></li>	
+                                        <li class="plain"><a href="<?php pageLink('blog/classic/3-cols-filterable.php') ?>">CSS</a></li>	
+                                        <li class="plain"><a href="<?php pageLink('blog/classic/3-cols-filterable.php') ?>">HTML</a></li>	
+                                        <li class="plain"><a href="<?php pageLink('blog/classic/3-cols-filterable.php') ?>">JS</a></li>	
                                     </ul>
                                 <?php } else if ($options['type'] == 'shop') { ?>
                                     <div class="row-block">
@@ -61,7 +61,7 @@
                 <article class="row">
                     <div class="span-2">
                         <div class="thumbnail-profile-fill<?php if ($option['type'] == 'blog') echo '-round' ?>">
-                            <img src="<?php stockImage('demo/team-1.jpg')?>" alt="">
+                            <img src="<?php stockImage('team/team-2.jpg')?>" alt="">
                         </div>
                     </div>
                     <div class="span-10">
@@ -74,12 +74,12 @@
                             <?php } ?>
                             <span>
                                 <h3 class="heading">Lorem Ipsum Dolor</h3>
-                                <h4 class="heading-light-uppercase-size-1">Category: <a href="#">Themes</a></h4>
+                                <h4 class="heading-light-uppercase-size-1">Category: <a href="<?php pageLink('blog/classic/3-cols-filterable.php') ?>">Themes</a></h4>
                                 <?php if ($options['type'] == 'blog') { ?>
                                     <ul class="list-tags-small">
-                                        <li class="plain"><a href="#">CSS</a></li>	
-                                        <li class="plain"><a href="#">HTML</a></li>	
-                                        <li class="plain"><a href="#">JS</a></li>	
+                                        <li class="plain"><a href="<?php pageLink('blog/classic/3-cols-filterable.php') ?>">CSS</a></li>	
+                                        <li class="plain"><a href="<?php pageLink('blog/classic/3-cols-filterable.php') ?>">HTML</a></li>	
+                                        <li class="plain"><a href="<?php pageLink('blog/classic/3-cols-filterable.php') ?>">JS</a></li>	
                                     </ul>
                                 <?php } else if ($options['type'] == 'shop') { ?>
                                     <div class="row-block">
@@ -103,7 +103,7 @@
                 <article class="row">
                     <div class="span-2">
                         <div class="thumbnail-profile-fill<?php if ($option['type'] == 'blog') echo '-round' ?>">
-                            <img src="<?php stockImage('demo/team-1.jpg')?>" alt="">
+                            <img src="<?php stockImage('team/team-3.jpg')?>" alt="">
                         </div>
                     </div>
                     <div class="span-10">
@@ -116,12 +116,12 @@
                             <?php } ?>
                             <span>
                                 <h3 class="heading">Lorem Ipsum Dolor</h3>
-                                <h4 class="heading-light-uppercase-size-1">Category: <a href="#">Themes</a></h4>
+                                <h4 class="heading-light-uppercase-size-1">Category: <a href="<?php pageLink('blog/classic/3-cols-filterable.php') ?>">Themes</a></h4>
                                 <?php if ($options['type'] == 'blog') { ?>
                                     <ul class="list-tags-small">
-                                        <li class="plain"><a href="#">CSS</a></li>	
-                                        <li class="plain"><a href="#">HTML</a></li>	
-                                        <li class="plain"><a href="#">JS</a></li>	
+                                        <li class="plain"><a href="<?php pageLink('blog/classic/3-cols-filterable.php') ?>">CSS</a></li>	
+                                        <li class="plain"><a href="<?php pageLink('blog/classic/3-cols-filterable.php') ?>">HTML</a></li>	
+                                        <li class="plain"><a href="<?php pageLink('blog/classic/3-cols-filterable.php') ?>">JS</a></li>	
                                     </ul>
                                 <?php } else if ($options['type'] == 'shop') { ?>
                                     <div class="row-block">
@@ -147,7 +147,7 @@
                 <article class="row">
                     <div class="span-2">
                         <div class="thumbnail-profile-fill<?php if ($option['type'] == 'blog') echo '-round' ?>">
-                            <img src="<?php stockImage('demo/team-1.jpg')?>" alt="">
+                            <img src="<?php stockImage('team/team-1.jpg')?>" alt="">
                         </div>
                     </div>
                     <div class="span-10">
@@ -160,12 +160,12 @@
                             <?php } ?>
                             <div>
                                 <h3 class="heading">Lorem Ipsum Dolor</h3>
-                                <h4 class="heading-light-uppercase-size-1">Category: <a href="#">Themes</a></h4>
+                                <h4 class="heading-light-uppercase-size-1">Category: <a href="<?php pageLink('blog/classic/3-cols-filterable.php') ?>">Themes</a></h4>
                                 <?php if ($options['type'] == 'blog') { ?>
                                     <ul class="list-tags-small">
-                                        <li class="plain"><a href="#">CSS</a></li>	
-                                        <li class="plain"><a href="#">HTML</a></li>	
-                                        <li class="plain"><a href="#">JS</a></li>	
+                                        <li class="plain"><a href="<?php pageLink('blog/classic/3-cols-filterable.php') ?>">CSS</a></li>	
+                                        <li class="plain"><a href="<?php pageLink('blog/classic/3-cols-filterable.php') ?>">HTML</a></li>	
+                                        <li class="plain"><a href="<?php pageLink('blog/classic/3-cols-filterable.php') ?>">JS</a></li>	
                                     </ul>
                                 <?php } else if ($options['type'] == 'shop') { ?>
                                     <div class="row-block">
@@ -189,7 +189,7 @@
                 <article class="row">
                     <div class="span-2">
                         <div class="thumbnail-profile-fill<?php if ($option['type'] == 'blog') echo '-round' ?>">
-                            <img src="<?php stockImage('demo/team-1.jpg')?>" alt="">
+                            <img src="<?php stockImage('team/team-1.jpg')?>" alt="">
                         </div>
                     </div>
                     <div class="span-10">
@@ -202,12 +202,12 @@
                             <?php } ?>
                             <span>
                                 <h3 class="heading">Lorem Ipsum Dolor</h3>
-                                <h4 class="heading-light-uppercase-size-1">Category: <a href="#">Themes</a></h4>
+                                <h4 class="heading-light-uppercase-size-1">Category: <a href="<?php pageLink('blog/classic/3-cols-filterable.php') ?>">Themes</a></h4>
                                 <?php if ($options['type'] == 'blog') { ?>
                                     <ul class="list-tags-small">
-                                        <li class="plain"><a href="#">CSS</a></li>	
-                                        <li class="plain"><a href="#">HTML</a></li>	
-                                        <li class="plain"><a href="#">JS</a></li>	
+                                        <li class="plain"><a href="<?php pageLink('blog/classic/3-cols-filterable.php') ?>">CSS</a></li>	
+                                        <li class="plain"><a href="<?php pageLink('blog/classic/3-cols-filterable.php') ?>">HTML</a></li>	
+                                        <li class="plain"><a href="<?php pageLink('blog/classic/3-cols-filterable.php') ?>">JS</a></li>	
                                     </ul>
                                 <?php } else if ($options['type'] == 'shop') { ?>
                                     <div class="row-block">
@@ -231,7 +231,7 @@
                 <article class="row">
                     <div class="span-2">
                         <div class="thumbnail-profile-fill<?php if ($option['type'] == 'blog') echo '-round' ?>">
-                            <img src="<?php stockImage('demo/team-1.jpg')?>" alt="">
+                            <img src="<?php stockImage('team/team-1.jpg')?>" alt="">
                         </div>
                     </div>
                     <div class="span-10">
@@ -244,12 +244,12 @@
                             <?php } ?>
                             <span>
                                 <h3 class="heading">Lorem Ipsum Dolor</h3>
-                                <h4 class="heading-light-uppercase-size-1">Category: <a href="#">Themes</a></h4>
+                                <h4 class="heading-light-uppercase-size-1">Category: <a href="<?php pageLink('blog/classic/3-cols-filterable.php') ?>">Themes</a></h4>
                                 <?php if ($options['type'] == 'blog') { ?>
                                     <ul class="list-tags-small">
-                                        <li class="plain"><a href="#">CSS</a></li>	
-                                        <li class="plain"><a href="#">HTML</a></li>	
-                                        <li class="plain"><a href="#">JS</a></li>	
+                                        <li class="plain"><a href="<?php pageLink('blog/classic/3-cols-filterable.php') ?>">CSS</a></li>	
+                                        <li class="plain"><a href="<?php pageLink('blog/classic/3-cols-filterable.php') ?>">HTML</a></li>	
+                                        <li class="plain"><a href="<?php pageLink('blog/classic/3-cols-filterable.php') ?>">JS</a></li>	
                                     </ul>
                                 <?php } else if ($options['type'] == 'shop') { ?>
                                     <div class="row-block">
@@ -275,7 +275,7 @@
                 <article class="row">
                     <div class="span-2">
                         <div class="thumbnail-profile-fill<?php if ($option['type'] == 'blog') echo '-round' ?>">
-                            <img src="<?php stockImage('demo/team-1.jpg')?>" alt="">
+                            <img src="<?php stockImage('team/team-1.jpg')?>" alt="">
                         </div>
                     </div>
                     <div class="span-10">
@@ -288,12 +288,12 @@
                             <?php } ?>
                             <div>
                                 <h3 class="heading">Lorem Ipsum Dolor</h3>
-                                <h4 class="heading-light-uppercase-size-1">Category: <a href="#">Themes</a></h4>
+                                <h4 class="heading-light-uppercase-size-1">Category: <a href="<?php pageLink('blog/classic/3-cols-filterable.php') ?>">Themes</a></h4>
                                 <?php if ($options['type'] == 'blog') { ?>
                                     <ul class="list-tags-small">
-                                        <li class="plain"><a href="#">CSS</a></li>	
-                                        <li class="plain"><a href="#">HTML</a></li>	
-                                        <li class="plain"><a href="#">JS</a></li>	
+                                        <li class="plain"><a href="<?php pageLink('blog/classic/3-cols-filterable.php') ?>">CSS</a></li>	
+                                        <li class="plain"><a href="<?php pageLink('blog/classic/3-cols-filterable.php') ?>">HTML</a></li>	
+                                        <li class="plain"><a href="<?php pageLink('blog/classic/3-cols-filterable.php') ?>">JS</a></li>	
                                     </ul>
                                 <?php } else if ($options['type'] == 'shop') { ?>
                                     <div class="row-block">
@@ -317,7 +317,7 @@
                 <article class="row">
                     <div class="span-2">
                         <div class="thumbnail-profile-fill<?php if ($option['type'] == 'blog') echo '-round' ?>">
-                            <img src="<?php stockImage('demo/team-1.jpg')?>" alt="">
+                            <img src="<?php stockImage('team/team-1.jpg')?>" alt="">
                         </div>
                     </div>
                     <div class="span-10">
@@ -330,12 +330,12 @@
                             <?php } ?>
                             <span>
                                 <h3 class="heading">Lorem Ipsum Dolor</h3>
-                                <h4 class="heading-light-uppercase-size-1">Category: <a href="#">Themes</a></h4>
+                                <h4 class="heading-light-uppercase-size-1">Category: <a href="<?php pageLink('blog/classic/3-cols-filterable.php') ?>">Themes</a></h4>
                                 <?php if ($options['type'] == 'blog') { ?>
                                     <ul class="list-tags-small">
-                                        <li class="plain"><a href="#">CSS</a></li>	
-                                        <li class="plain"><a href="#">HTML</a></li>	
-                                        <li class="plain"><a href="#">JS</a></li>	
+                                        <li class="plain"><a href="<?php pageLink('blog/classic/3-cols-filterable.php') ?>">CSS</a></li>	
+                                        <li class="plain"><a href="<?php pageLink('blog/classic/3-cols-filterable.php') ?>">HTML</a></li>	
+                                        <li class="plain"><a href="<?php pageLink('blog/classic/3-cols-filterable.php') ?>">JS</a></li>	
                                     </ul>
                                 <?php } else if ($options['type'] == 'shop') { ?>
                                     <div class="row-block">
@@ -359,7 +359,7 @@
                 <article class="row">
                     <div class="span-2">
                         <div class="thumbnail-profile-fill<?php if ($option['type'] == 'blog') echo '-round' ?>">
-                            <img src="<?php stockImage('demo/team-1.jpg')?>" alt="">
+                            <img src="<?php stockImage('team/team-1.jpg')?>" alt="">
                         </div>
                     </div>
                     <div class="span-10">
@@ -372,12 +372,12 @@
                             <?php } ?>
                             <span>
                                 <h3 class="heading">Lorem Ipsum Dolor</h3>
-                                <h4 class="heading-light-uppercase-size-1">Category: <a href="#">Themes</a></h4>
+                                <h4 class="heading-light-uppercase-size-1">Category: <a href="<?php pageLink('blog/classic/3-cols-filterable.php') ?>">Themes</a></h4>
                                 <?php if ($options['type'] == 'blog') { ?>
                                     <ul class="list-tags-small">
-                                        <li class="plain"><a href="#">CSS</a></li>	
-                                        <li class="plain"><a href="#">HTML</a></li>	
-                                        <li class="plain"><a href="#">JS</a></li>	
+                                        <li class="plain"><a href="<?php pageLink('blog/classic/3-cols-filterable.php') ?>">CSS</a></li>	
+                                        <li class="plain"><a href="<?php pageLink('blog/classic/3-cols-filterable.php') ?>">HTML</a></li>	
+                                        <li class="plain"><a href="<?php pageLink('blog/classic/3-cols-filterable.php') ?>">JS</a></li>	
                                     </ul>
                                 <?php } else if ($options['type'] == 'shop') { ?>
                                     <div class="row-block">
@@ -411,11 +411,11 @@
     </header>
     
     <ul class="list-arrow">
-        <li><a href="#">HTML Templates</a></li>
-        <li><a href="#">Wordpress Themes</a></li>
-        <li><a href="#">jQuery Plugins</a></li>
-        <li><a href="#">Tutorials</a></li>
-        <li><a href="#">Photoshop/Design</a></li>
+        <li><a href="<?php pageLink('blog/classic/3-cols-filterable.php') ?>">HTML Templates</a></li>
+        <li><a href="<?php pageLink('blog/classic/3-cols-filterable.php') ?>">Wordpress Themes</a></li>
+        <li><a href="<?php pageLink('blog/classic/3-cols-filterable.php') ?>">jQuery Plugins</a></li>
+        <li><a href="<?php pageLink('blog/classic/3-cols-filterable.php') ?>">Tutorials</a></li>
+        <li><a href="<?php pageLink('blog/classic/3-cols-filterable.php') ?>">Photoshop/Design</a></li>
     </ul>
     
     <hr class="hrule-stripes" />

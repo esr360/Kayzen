@@ -46,9 +46,9 @@
                     
                             <ul class="list-reset-inline-small text">
                                 <li><i class="fa fa-calendar"></i> 5th November 2015</li>
-                                <li><i class="fa fa-user"></i> <a href="#">John Doe</a></li>
-                                <li><i class="fa fa-folder-o"></i> <a href="#">HTML Themes</a></li>
-                                <li><i class="fa fa-comment-o"></i> <a href="#">3 Comments</a></li>
+                                <li><i class="fa fa-user"></i> <a href="<?php pageLink('blog/single.php') ?>">John Doe</a></li>
+                                <li><i class="fa fa-folder-o"></i> <a href="<?php pageLink('blog/classic/3-cols-filterable.php') ?>">HTML Themes</a></li>
+                                <li><i class="fa fa-comment-o"></i> <a href="#postComments">3 Comments</a></li>
                             </ul>
                             
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. <a href="#">Inquit, dasne adolescenti veniam?</a> Ergo instituto veterum, quo etiam Stoici utuntur, hinc capiamus exordium. Quarum ambarum rerum cum medicinam pollicetur, luxuriae licentiam pollicetur. Duo Reges: constructio interrete. Docent enim nos, ut scis, dialectici, si ea quae rem aliquam sequantur, falsa sint.</p>
@@ -69,10 +69,10 @@
                             
                             <ul class="list-tags">
                                 <li class="title">Tags:</li>
-                                <li class="plain"><a href="#">Theme</a></li>
-                                <li class="plain"><a href="#">HTML</a></li>
-                                <li class="plain"><a href="#">CSS</a></li>
-                                <li class="plain"><a href="#">JavaScript</a></li>
+                                <li class="plain"><a href="<?php pageLink('blog/single.php') ?>">Theme</a></li>
+                                <li class="plain"><a href="<?php pageLink('blog/single.php') ?>">HTML</a></li>
+                                <li class="plain"><a href="<?php pageLink('blog/single.php') ?>">CSS</a></li>
+                                <li class="plain"><a href="<?php pageLink('blog/single.php') ?>">JavaScript</a></li>
                             </ul>
                             
                         </div>
@@ -241,7 +241,7 @@
                         
                         </div>
                         
-                            <div class="object-large">
+                        <div class="object-large" id="postComments">
                             
                             <h2 class="heading-size-6-light-strikethrough-dots text-center">
                                 <span><span class="heading-brand-1">3</span> Comments</span>
@@ -380,11 +380,11 @@
                             <div class="span-4 relative">	
                                 <div class="thumbnail-zoom">
                                     <div class="thumbnail_mask">
-                                        <div class="icon_group-small">
-                                            <a href="#" class="button-icon-border-circle-size-2">
+                                        <div class="thumbnail_controls icon_group-small">
+                                            <a href="<?php stockImage('/demo/hero-'.rand(1, 7).'.jpg') ?>" class="button-icon-border-circle-size-2" rel="lightbox">
                                                 <i class="fa fa-search"></i>
                                             </a>
-                                            <a href="#" class="button-icon-border-circle-size-2">
+                                            <a href="<?php pageLink('blog/single.php') ?>" class="button-icon-border-circle-size-2">
                                                 <i class="fa fa-link"></i>
                                             </a>
                                         </div>
@@ -397,7 +397,40 @@
                                         <div>23</div>
                                     </div>
                                     <h3 class="heading-heavy-size-3">Kayzen is Released</h3>
-                                    <h4 class="heading-light">Posted by <a href="#">Naomi Olson</a></h4>
+                                    <h4 class="heading-light">Posted by <a href="<?php pageLink('classic/full-width.php') ?>">Naomi Olson</a></h4>
+                                </header>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Inquit, dasne adolescenti veniam...</p>
+                                <div class="row">
+                                    <div class="span-5 va-middle">
+                                        <a href="#" class="button-oval-primary-size-2">Read More</a>
+                                    </div>
+                                    <div class="span-7 va-middle text-right">
+                                        <small>Posted in <a href="<?php pageLink('classic/3-cols.php') ?>">Web Design</a></small>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="span-4 relative">	
+                                <div class="thumbnail-zoom">
+                                    <div class="thumbnail_mask">
+                                        <div class="thumbnail_controls icon_group-small">
+                                            <a href="<?php stockImage('/demo/hero-'.rand(1, 7).'.jpg') ?>" class="button-icon-border-circle-size-2" rel="lightbox">
+                                                <i class="fa fa-search"></i>
+                                            </a>
+                                            <a href="<?php pageLink('blog/single.php') ?>" class="button-icon-border-circle-size-2">
+                                                <i class="fa fa-link"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <img src="<?php stockImage('/demo/hero-'.rand(1, 7).'.jpg') ?>">
+                                </div>
+                                <header class="heading_group">
+                                    <div class="heading_date">
+                                        <div>Sep</div>
+                                        <div>23</div>
+                                    </div>
+                                    <h3 class="heading-heavy-size-3">Kayzen is Released</h3>
+                                    <h4 class="heading-light">Posted by <a href="<?php pageLink('blog/single.php') ?>">Naomi Olson</a></h4>
                                 </header>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Inquit, dasne adolescenti veniam...</p>
                                 <div class="row">
@@ -413,7 +446,7 @@
                             <div class="span-4 relative">	
                                 <div class="thumbnail-zoom">
                                     <div class="thumbnail_mask">
-                                        <div class="icon_group-small">
+                                        <div class="thumbnail_controls icon_group-small">
                                             <a href="#" class="button-icon-border-circle-size-2">
                                                 <i class="fa fa-search"></i>
                                             </a>
@@ -430,7 +463,7 @@
                                         <div>23</div>
                                     </div>
                                     <h3 class="heading-heavy-size-3">Kayzen is Released</h3>
-                                    <h4 class="heading-light">Posted by <a href="#">Naomi Olson</a></h4>
+                                    <h4 class="heading-light">Posted by <a href="<?php pageLink('classic/full-width.php') ?>">Naomi Olson</a></h4>
                                 </header>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Inquit, dasne adolescenti veniam...</p>
                                 <div class="row">
@@ -438,40 +471,7 @@
                                         <a href="#" class="button-oval-primary-size-2">Read More</a>
                                     </div>
                                     <div class="span-7 va-middle text-right">
-                                        <small>Posted in <a href="blog.html">Web Design</a></small>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <div class="span-4 relative">	
-                                <div class="thumbnail-zoom">
-                                    <div class="thumbnail_mask">
-                                        <div class="icon_group-small">
-                                            <a href="#" class="button-icon-border-circle-size-2">
-                                                <i class="fa fa-search"></i>
-                                            </a>
-                                            <a href="#" class="button-icon-border-circle-size-2">
-                                                <i class="fa fa-link"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <img src="<?php stockImage('/demo/hero-'.rand(1, 7).'.jpg') ?>">
-                                </div>
-                                <header class="heading_group">
-                                    <div class="heading_date">
-                                        <div>Sep</div>
-                                        <div>23</div>
-                                    </div>
-                                    <h3 class="heading-heavy-size-3">Kayzen is Released</h3>
-                                    <h4 class="heading-light">Posted by <a href="#">Naomi Olson</a></h4>
-                                </header>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Inquit, dasne adolescenti veniam...</p>
-                                <div class="row">
-                                    <div class="span-5 va-middle">
-                                        <a href="#" class="button-oval-primary-size-2">Read More</a>
-                                    </div>
-                                    <div class="span-7 va-middle text-right">
-                                        <small>Posted in <a href="blog.html">Web Design</a></small>
+                                        <small>Posted in <a href="<?php pageLink('classic/full-width.php') ?>">Web Design</a></small>
                                     </div>
                                 </div>
                             </div>

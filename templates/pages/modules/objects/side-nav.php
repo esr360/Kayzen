@@ -61,7 +61,7 @@
 &lt;div class="side-nav">
     &lt;nav>
         &lt;ul>
-            &lt;li>&lt;a href="#">Link 1&lt;/a>&lt;/li>
+            &lt;li>&lt;a href="/link">Link 1&lt;/a>&lt;/li>
             ...
         &lt;/ul>
     &lt;/nav>

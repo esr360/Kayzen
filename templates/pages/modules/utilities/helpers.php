@@ -45,7 +45,7 @@
 				
 				<h2 class="heading-light-size-5">Module Overview</h2>
                 
-                <p>At one point, a long time ago, Kayzen was built off the popular <a href="#">HTML5 Boilerplate</a>. There are still some remnants left over which Kayzen utilizes, namely its helper classes.</p>
+                <p>At one point, a long time ago, Kayzen was built off the popular <a href="https://html5boilerplate.com/" target="blank">HTML5 Boilerplate</a>. There are still some remnants left over which Kayzen utilizes, namely its helper classes.</p>
                 
 				<table class="table-small">
 					<thead>

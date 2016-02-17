@@ -117,7 +117,7 @@
 					portfolioCarousel.owlCarousel({
 						items: 1,
 						loop: true
-					})
+					}).addClass('owl-full');
 			
 					portfolioCarousel.find("+ .slide-nav .slide-next").click(function() {
 						portfolioCarousel.trigger('next.owl.carousel');

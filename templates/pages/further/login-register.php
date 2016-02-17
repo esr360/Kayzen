@@ -95,10 +95,10 @@
                         </form>
                         <div class="">
                             <h3 class="heading">Login using...</h3>
-                            <a href="#" class="button-block-facebook">Facebook</a>
-                            <a href="#" class="button-block-twitter">Twitter</a>
-                            <a href="#" class="button-block-google-plus">Google Plus</a>
-                            <p><small>Forgot your password? <a href="#">Click Here</a></small></p>
+                            <a href="#facebook" class="button-block-facebook">Facebook</a>
+                            <a href="#twitter" class="button-block-twitter">Twitter</a>
+                            <a href="#googlePlus" class="button-block-google-plus">Google Plus</a>
+                            <p><small>Forgot your password? <a href="#forgotPassword">Click Here</a></small></p>
                         </div>
                     </div>
                     

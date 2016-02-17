@@ -59,7 +59,7 @@
 &lt;nav class="navigation">
     &lt;ul>
         &lt;li>&lt;a href="/">Home&lt;/a>&lt;/li>
-        &lt;li>&lt;a href="#">Demos&lt;/a>
+        &lt;li>&lt;a href="/demos">Demos&lt;/a>
             
             &lt;ul class="mega-menu row">
                 &lt;li class="span-4">

@@ -74,7 +74,7 @@ $(".countdown").countdown({
 });
 </pre>
 
-                <p><a href="#">View Demo</a></p>
+                <p><a href="<?php pageLink('further/coming-soon.php') ?>">View Demo</a></p>
 
                 <h3 class="heading-size-3">Custom Selectors</h3>
 							

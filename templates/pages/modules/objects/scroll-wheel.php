@@ -59,7 +59,7 @@
 &lt;a class="scroll-wheel" href="#key-features">&lt;/a>
 </pre>
 
-                <p><a href="#">View Demo</a></p>
+                <p><a href="<?php pageLink('homepages/homepage-1.php') ?>">View Demo</a></p>
 
 				<h2 class="heading-light-size-5">Customizing</h2>
 				

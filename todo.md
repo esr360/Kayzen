@@ -1,11 +1,13 @@
 # To Do
 #============================================================
 
+- fix tabs nav hover
 - update all empty # links
 - come up with solution for stock images
 - full responsive audit
 - add cheatsheet page
 - add themes and associated imagery
+- topbar dropdown
 
 # Done
 #============================================================

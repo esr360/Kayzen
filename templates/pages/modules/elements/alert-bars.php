@@ -96,7 +96,7 @@
 
                 <h2 class="heading-light-size-5">Customizing</h2>
                 
-                <p>The colors for the alert bars are defined (and hence can be changed from) within the <a href="#">color-palette</a> module.</p>
+                <p>The colors for the alert bars are defined (and hence can be changed from) within the <a href="<?php pageLink('modules/utilities/color-palette.php') ?>">color-palette</a> module.</p>
                 
                 <p>The alert bars can be customized using the following options:</p>
                 

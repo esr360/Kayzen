@@ -45,7 +45,7 @@
 				
 				<h2 class="heading-light-size-5">Module Overview</h2>
                 
-                <p class="alert-bar-help">This module is dependent on the <a href="#">Navigation</a> module.</p>
+                <p class="alert-bar-help">This module is dependent on the <a href="<?php pageLink('modules/objects/navigation.php') ?>">Navigation</a> module.</p>
                 
                 <p>A dropdown menu is any child menu of the main navigation module. No special markup is required and they are infinitely nestable.</p>
                 

@@ -73,7 +73,7 @@
                                 <li><span><i class="fa fa-support"></i> Support</span><strong>None</strong></li>
                             </ul>
                             <div class="buy-now">
-                                <a href="#" class="button-primary-block-size-3"><i class="fa fa-shopping-cart"></i> Get For Free</a>
+                                <a href="#get-for-free" class="button-primary-block-size-3"><i class="fa fa-shopping-cart"></i> Get For Free</a>
                             </div>
                         </div>
                     </div>
@@ -96,7 +96,7 @@
         &lt;li>&lt;span><&lt;i class="fa fa-support">&lt;/i> Support&lt;/span>&lt;strong>None&lt;/strong>&lt;/li>
     &lt;/ul>
     &lt;div class="buy-now">
-        &lt;a href="#" class="button-primary-block-size-3">&lt;i class="fa fa-shopping-cart">&lt;/i> Get For Free&lt;/a>
+        &lt;a href="#get-for-free" class="button-primary-block-size-3">&lt;i class="fa fa-shopping-cart">&lt;/i> Get For Free&lt;/a>
     &lt;/div>
 &lt;/div>
 </pre>
@@ -121,7 +121,7 @@
                                 <li><span><i class="fa fa-support"></i> Support</span><strong>None</strong></li>
                             </ul>
                             <div class="buy-now">
-                                <a href="#" class="button-block-size-3"><i class="fa fa-shopping-cart"></i> Get For Free</a>
+                                <a href="#get-for-free" class="button-block-size-3"><i class="fa fa-shopping-cart"></i> Get For Free</a>
                             </div>
                         </div>
                     </div>

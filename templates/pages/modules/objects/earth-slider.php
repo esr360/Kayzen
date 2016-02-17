@@ -91,7 +91,7 @@
 $('.earth-slider').KayzenEarthSlider();
 </pre>
 
-                <p><a href="#">View Demo</a></p>
+                <p><a href="<?php pageLink('homepages/homepage-2.php#s-welcome') ?>">View Demo</a></p>
 
                 <h3 class="heading-size-3">Custom Starting Section</h3>
 

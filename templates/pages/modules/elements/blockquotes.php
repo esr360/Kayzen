@@ -57,7 +57,7 @@
                 
                 <div class="object">
                     <blockquote class="blockquote">
-                        <p class="blockquote_content">Mihi vero, inquit, placet agi subtilius et, ut ipse dixisti, pressius. Idemne, quod iucunde? Qua ex cognitione facilior facta est investigatio rerum occultissimarum. Paria sunt igitur. <i>Graece donan, Latine voluptatem vocant.</i> <a href="#">Quod equidem non reprehendo;</a> <b>Scrupulum, inquam, abeunti;</b> Sed virtutem ipsam inchoavit, nihil amplius. Similiter sensus, cum accessit ad naturam, tuetur illam quidem, sed etiam se tuetur; </p>
+                        <p class="blockquote_content">Mihi vero, inquit, placet agi subtilius et, ut ipse dixisti, pressius. Idemne, quod iucunde? Qua ex cognitione facilior facta est investigatio rerum occultissimarum. Paria sunt igitur. <i>Graece donan, Latine voluptatem vocant.</i> <a href="#link">Quod equidem non reprehendo;</a> <b>Scrupulum, inquam, abeunti;</b> Sed virtutem ipsam inchoavit, nihil amplius. Similiter sensus, cum accessit ad naturam, tuetur illam quidem, sed etiam se tuetur; </p>
                     </blockquote>
                 </div>
                 
@@ -170,7 +170,7 @@
         &lt;/div>
     &lt;/div>
     &lt;footer class="blockquote_footer">
-        &lt;a class="blockquote_avatar-small" href="#">
+        &lt;a class="blockquote_avatar-small" href="/team">
             &lt;img src="/assets/images/team/team-2.jpg" alt="">
         &lt;/a>
         &lt;div class="blockquote_cite heading_group">
@@ -185,7 +185,7 @@
                 
                 <div class="well-deep object text-center">
                     <blockquote class="blockquote span-10">
-                        <a class="blockquote_avatar-large" href="#">
+                        <a class="blockquote_avatar-large" href="<?php pageLink('blog/single.php') ?>">
                             <img src="/assets/images/team/team-2.jpg" alt="">
                         </a>
                         <div class="blockquote_content">
@@ -199,7 +199,7 @@
                 
  <pre data-enlighter-language="html" class="EnlighterJSRAW">
 &lt;blockquote class="blockquote">
-    &lt;a class="blockquote_avatar-large" href="#">
+    &lt;a class="blockquote_avatar-large" href="/team">
         &lt;img src="/assets/images/team/team-2.jpg" alt="#">
     &lt;/a>
     &lt;div class="blockquote_content">

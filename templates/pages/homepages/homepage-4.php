@@ -230,7 +230,7 @@
 			
 		<div class="row-block text-center">
                     
-			<a href="#" class="widget-spectrum-quarter-tub span-3">
+			<a href="<?php pageLink('blog/single.php') ?>" class="widget-spectrum-quarter-tub span-3">
 				<div class="widget_lid">
 					<div class="widget_sticker">
                         <div class="widget_icon button-icon-plain-size-8">
@@ -247,7 +247,7 @@
 				<div class="button-block-grey-5-fat relative">Read More</div>
 			</a>
 			
-			<a href="#" class="widget-spectrum-quarter-tub span-3">
+			<a href="<?php pageLink('blog/single.php') ?>" class="widget-spectrum-quarter-tub span-3">
 				<div class="widget_lid">
 					<div class="widget_sticker">
                         <div class="widget_icon button-icon-plain-size-8">
@@ -264,7 +264,7 @@
 				<div class="button-block-grey-5-fat relative">Read More</div>
 			</a>
 			
-			<a href="#" class="widget-spectrum-quarter-tub span-3">
+			<a href="<?php pageLink('blog/single.php') ?>" class="widget-spectrum-quarter-tub span-3">
 				<div class="widget_lid">
 					<div class="widget_sticker">
                         <div class="widget_icon button-icon-plain-size-8">
@@ -281,7 +281,7 @@
 				<div class="button-block-grey-5-fat relative">Read More</div>
 			</a>
 			
-			<a href="#" class="widget-spectrum-quarter-tub span-3">
+			<a href="<?php pageLink('blog/single.php') ?>" class="widget-spectrum-quarter-tub span-3">
 				<div class="widget_lid">
 					<div class="widget_sticker">
                         <div class="widget_icon button-icon-plain-size-8">
