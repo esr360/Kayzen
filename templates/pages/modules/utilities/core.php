@@ -134,7 +134,7 @@
                 <p>The <a href="#">Modular</a> framework allows you to access any Sass configuration value in your JavaScript. You can use the <code>coreTransition</code> variable anywhere in your JavaScript to use the <code>transition</code> value set in <code>_core.scss</code>. Note that the value is converted from seconds to miliseconds, so a value of <code>0.4s</code> would become <code>400ms</code>. This is made possible from the below line found in <code>core.js</code>:</p>
                 
 <pre data-enlighter-language="javascript" class="EnlighterJSRAW">
-window['coreTransition'] = _module['core']['transition'].slice(0,-1) * 1000;
+window['coreTransition'] = _modules['core']['transition'].slice(0,-1) * 1000;
 </pre>
 
                 <h4 class="heading-size-2-uppercase">Get Breakpoint Value</h4>
@@ -151,7 +151,7 @@ if(breakpoint('min-width', 'break-3')) {
                        
 <pre data-enlighter-language="javascript" class="EnlighterJSRAW">
 function breakpoint(media, value) {
-    return window.matchMedia('(' + media + ':' + _module['grid']['breakpoints'][value] + ')').matches;
+    return window.matchMedia('(' + media + ':' + _modules['grid']['breakpoints'][value] + ')').matches;
 }
 </pre>
 

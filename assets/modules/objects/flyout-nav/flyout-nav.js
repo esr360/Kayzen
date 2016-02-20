@@ -40,7 +40,7 @@
                 if (_option('flyout-nav', 'collapsible')) {
             
                     // Create open/close icon
-                    var openClose = '<i class="side-nav_openClose fa ' + _module['side-nav']['collapsible']['icon'] + '"></i>';
+                    var openClose = '<i class="side-nav_openClose fa ' + _modules['side-nav']['collapsible']['icon'] + '"></i>';
                     
                     // Add icon to appropriate menu items
                     $(_flyoutNav).find('a:not(:only-child)').prepend(openClose);
@@ -59,7 +59,7 @@
                 }
 
                 // collapse by default
-                var openDefault = _module['flyout-nav']['collapsible']['open-by-default'];
+                var openDefault = _modules['flyout-nav']['collapsible']['open-by-default'];
                 
                 if (!openDefault) {
                     $(_flyoutNav).find('a:not(:only-child) ~ ul').hide();

@@ -14,7 +14,7 @@
         // Options
         
         var options = $.extend({
-            position      : _module['page-overview']['position'],
+            position      : _modules['page-overview']['position'],
             itemSelector  : 'a',
             titleSelector : _heading
         }, custom);

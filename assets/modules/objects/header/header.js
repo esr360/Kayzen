@@ -17,7 +17,7 @@
             overlay       : '#site-overlay',
             sticky        : _option('app-header', 'sticky'),
             side          : _option('app-header', 'side'),
-            openCloseIcon : _module['side-nav']['collapsible']['icon']
+            openCloseIcon : _modules['side-nav']['collapsible']['icon']
         }, custom);
         
         // Run the code on each occurance of the element
@@ -88,7 +88,7 @@
                 }
 
                 // collapse by default
-                var openDefault = _module['side-nav']['collapsible']['open-by-default'];
+                var openDefault = _modules['side-nav']['collapsible']['open-by-default'];
                 
                 if ($('.app-header_side-nav').is('[class*="-collapse"]') == true || openDefault == false) {
                     $('.app-header_side-nav').find('a:not(:only-child) ~ ul').hide();

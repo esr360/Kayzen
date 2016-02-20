@@ -11,7 +11,7 @@
         
         // Options
         var options = $.extend({
-            responsive : _module['grid']['options']['col-break']
+            responsive : _modules['grid']['options']['col-break']
         }, custom);
         
         // Run the code on each occurance of the element

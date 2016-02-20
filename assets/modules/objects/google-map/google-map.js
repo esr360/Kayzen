@@ -13,7 +13,7 @@
         // Options
         
         // Fetch the map colors from the CSS
-        var _mapColor = _module['google-map']['colors']
+        var _mapColor = _modules['google-map']['colors']
         
         var options = $.extend({
             

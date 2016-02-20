@@ -75,9 +75,9 @@
 <br />
 
 <pre data-enlighter-language="html" class="EnlighterJSRAW">
-&lt;a id="search-trigger" href="#">
+&lt;span id="search-trigger">
     &lt;i class="fa fa-search">&lt;/i>
-&lt;/a>
+&lt;/span>
 </pre>
 
                 <p>Then in your theme's JS file (e.g. assets/themes/Kayzen/kayzen.js), call the <code>searchBox()</code> function on your desired trigger:</p>
