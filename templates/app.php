@@ -47,7 +47,11 @@ define('ROOT', dirname(__FILE__));
 /**
  * Set the path to the app directory
  */
-define('appDir', '/app');
+ if (host == 'server') {
+    define('appDir', '/app');
+} else if (host == 'static') {
+    define('appDir', '/../'.theme.'/app');
+}
 
 /******************************************************************
  * Templates

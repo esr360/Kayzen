@@ -12,25 +12,23 @@
         $themePath = '/themes/'.$options['theme'];
     } else {
         $themePath = '';
-    }
-
-    $appDir = $_SERVER['DOCUMENT_ROOT'].'/app';          
+    }      
             
     if ($extension === 'js') {
             
         if (env == 'dev') {
-            echo '<script src="'.$appDir.$themePath.'/scripts/'.$path.'.js"></script>';
+            echo '<script src="'.appDir.$themePath.'/scripts/'.$path.'.js"></script>';
         } else if (env == 'prod') {
-            echo '<script src="'.$appDir.$themePath.'/scripts/'.$path.'.min.js"></script>';
+            echo '<script src="'.appDir.$themePath.'/scripts/'.$path.'.min.js"></script>';
         } 
     
     } else if ($extension === 'css') {
         
         if (env == 'dev') {
-            echo '<link rel="stylesheet" href="'.$appDir.$themePath.'/styles/'.$path.'.css">';
+            echo '<link rel="stylesheet" href="'.appDir.$themePath.'/styles/'.$path.'.css">';
         } else if (env == 'prod') {
-            echo '<link rel="stylesheet" href="'.$appDir.$themePath.'/styles/'.$path.'.min.cs">';
-        } 
+            echo '<link rel="stylesheet" href="'.appDir.$themePath.'/styles/'.$path.'.min.cs">';
+        }
         
     }          
                      
