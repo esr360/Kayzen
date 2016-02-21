@@ -40,15 +40,15 @@
                     </ul>
                     <p class="button_group">
                         <?php if ($options['dark']) { ?>
-                            <a href="#" target="blank" class="button-border-white<?php echo '-'.$options['cta-modifiers'] ?>">
+                            <a href="#viewDemo" class="button-border-white<?php echo '-'.$options['cta-modifiers'] ?>">
                                 View Demo
                             </a>
                         <?php } else  { ?>
-                            <a href="#" target="blank" class="button<?php echo '-'.$options['cta-modifiers'] ?>">
+                            <a href="#viewDemo" class="button<?php echo '-'.$options['cta-modifiers'] ?>">
                                 View Demo
                             </a>
                         <?php } ?>
-                        <a href="#" class="button-primary<?php echo '-'.$options['cta-modifiers'] ?>">
+                        <a href="http://themeforest.net/user/skyux/portfolio" target="blank" class="button-primary<?php echo '-'.$options['cta-modifiers'] ?>">
                             Purchase Theme
                         </a>
                     </p>

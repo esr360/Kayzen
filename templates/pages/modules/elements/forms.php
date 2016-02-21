@@ -83,7 +83,7 @@
     &lt;button type="submit" class="button-primary">Submit&lt;/button>
 &lt;/form>
 </pre>
-                <p class="alert-bar-help"><b>Tip:</b> Use the <a href="#">Grid System</a> classes to structure your forms.</p>
+                <p class="alert-bar-help"><b>Tip:</b> Use the <a href="<?php pageLink('modules/utilities/grid.php') ?>">Grid System</a> classes to structure your forms.</p>
 
                 <h3 class="heading-size-3">Faux Placeholders</h3>
                 

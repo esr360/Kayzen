@@ -11,7 +11,7 @@
 
         <div class="container-small text-center owl-carousel" id="testimonials-carousel">
             <blockquote class="blockquote">
-                <a class="blockquote_avatar-large" href="#">
+                <a class="blockquote_avatar-large" href="<?php pageLink('blog/classic/full-width.php') ?>">
                     <img src="/app/images/team/team-2.jpg" alt="">
                 </a>
                 <div class="blockquote_content">
@@ -22,7 +22,7 @@
                 </div>
             </blockquote>
             <blockquote class="blockquote">
-                <a class="blockquote_avatar-large" href="#">
+                <a class="blockquote_avatar-large" href="<?php pageLink('blog/classic/full-width.php') ?>">
                     <img src="/app/images/team/team-2.jpg" alt="">
                 </a>
                 <div class="blockquote_content">

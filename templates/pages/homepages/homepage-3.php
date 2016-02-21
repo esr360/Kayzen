@@ -71,8 +71,8 @@
 					<h3 class="heading-size-5">Responsive Grid System</h3>
 					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas mollis dolor ut euismod pellentesque. Vivamus mattis cursus urna, non gravida purus pulvinar ac. Nunc dignissim velit justo, id aliquet neque cursus vitae. Nulla mattis purus sed posuere aliquet.</p>
 					<p class="button_group">
-						<a href="#" class="button-oval-white" target="blank">View Demo</a>
-						<a href="#" class="button-oval-border-white">Purchase Theme</a>
+						<a href="#viewDemo" class="button-oval-white">View Demo</a>
+						<a href="http://themeforest.net/user/skyux/portfolio" target="blank" class="button-oval-border-white">Purchase Theme</a>
 					</p>
 				</div>
 			</section>
@@ -83,13 +83,13 @@
 				<div class="container">
 					<h3 class="heading-size-5">UI Elements</h3>
 					<div id="elements-carousel" class="owl-carousel">
-						<a href="#" class="widget">
+						<a href="<?php pageLink('modules/elements/alert-bars.php') ?>" class="widget">
 							<div class="button-icon-circle-border-white-size-7">
 								<i class="fa fa-exclamation-triangle"></i>
 							</div>
 							<h3 class="heading-size-3">Alert Bars</h3>
 						</a>
-						<a href="#" class="widget">
+						<a href="<?php pageLink('modules/elements/alert-bars.php') ?>" class="widget">
 							<div class="button-icon-circle-border-white-size-7">
 								<i class="fa fa-exclamation-triangle"></i>
 							</div>
@@ -218,8 +218,8 @@
 							<li>Sed sed iaculis arcu, eu pharetra nulla</li>
 						</ul>
 						<p class="button_group">
-							<a href="#" class="button-oval-primary" target="blank" >View Demo</a>
-							<a href="#" class="button-oval-border-white">Purchase Theme</a>
+							<a href="#viewDemo" class="button-oval-primary">View Demo</a>
+							<a href="http://themeforest.net/user/skyux/portfolio" target="blank" class="button-oval-border-white">Purchase Theme</a>
 						</p>
 					</div>
 				</div>

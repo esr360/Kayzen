@@ -1,41 +1,37 @@
-<?php function devAsset($custom = array()) { ?>
+<?php function devAsset($custom = array()) { 
+    
+    $options = array_merge(array(
+        'path'  => '',
+        'theme' => ''
+    ), $custom);
 
-    <?php
-    
-        $options = array_merge(array(
+    $extension = pathinfo($options['path'], PATHINFO_EXTENSION);
+    $path = pathinfo($options['path'], PATHINFO_FILENAME);
+
+    if ($options['theme']) {
+        $themePath = '/themes/'.$options['theme'];
+    } else {
+        $themePath = '';
+    }
+
+    $appDir = $_SERVER['DOCUMENT_ROOT'].'/app';          
             
-            'path'  => '',
-            'theme' => ''
+    if ($extension === 'js') {
             
-        ), $custom);
+        if (env == 'dev') {
+            echo '<script src="'.$appDir.$themePath.'/scripts/'.$path.'.js"></script>';
+        } else if (env == 'prod') {
+            echo '<script src="'.$appDir.$themePath.'/scripts/'.$path.'.min.js"></script>';
+        } 
+    
+    } else if ($extension === 'css') {
         
-        $extension = pathinfo($options['path'], PATHINFO_EXTENSION);
-        $path = pathinfo($options['path'], PATHINFO_FILENAME);
+        if (env == 'dev') {
+            echo '<link rel="stylesheet" href="'.$appDir.$themePath.'/styles/'.$path.'.css">';
+        } else if (env == 'prod') {
+            echo '<link rel="stylesheet" href="'.$appDir.$themePath.'/styles/'.$path.'.min.cs">';
+        } 
         
-        if ($options['theme']) {
-            $themePath = '/themes/'.$options['theme'];
-        } else {
-            $themePath = '';
-        }
-        
-    ?>
-    
-    <?php if ($extension === 'js') { ?>
-    
-        <?php if (env == 'dev') { ?>
-            <script src="<?php echo appDir.$themePath ?>/scripts/<?php echo $path ?>.js"></script>
-        <?php } else if (env == 'prod') { ?>
-            <script src="<?php echo appDir.$themePath ?>/scripts/<?php echo $path ?>.min.js"></script>
-        <?php } ?>
-    
-    <?php } else if ($extension === 'css') { ?>
-    
-        <?php if (env == 'dev') { ?>
-            <link rel="stylesheet" href="<?php echo appDir.$themePath ?>/styles/<?php echo $path ?>.css">
-        <?php } else if (env == 'prod') { ?>
-            <link rel="stylesheet" href="<?php echo appDir.$themePath ?>/styles/<?php echo $path ?>.min.css">
-        <?php } ?>
-    
-    <?php } ?>
-    
-<?php } ?>
+    }          
+                     
+} ?>

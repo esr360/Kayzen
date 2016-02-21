@@ -23,8 +23,7 @@
             ));
 
             billboard(array(
-                'title'    => $title,
-                'tag-line' => $tagLine
+                'title'    => $title
             ));
             
         ?>
@@ -91,7 +90,7 @@
                     <li>app/styles/<strong>app.css</strong></li>
                 </ul>
                 
-                <p>The only files that would ever need to be modified are <strong>app.js</strong> and <strong>app.css</strong>. The other files (jQuery and pseudojQuery) are JavaScript libraries which can be left untouched. Read more about pseudojQuery <a href="#">here</a>.</p>
+                <p>The only files that would ever need to be modified are <strong>app.js</strong> and <strong>app.css</strong>. The other files (jQuery and pseudojQuery) are JavaScript libraries which can be left untouched. Read more about pseudojQuery <a href="https://github.com/esr360/pseudojQuery" target="blank">here</a>.</p>
                 
                 <p>Kayzen comes with further JavaScript and CSS files which are only used for certain pages, these will be covered later. If you're desired workflow is to directly work on these files without touching the source files they are generated from (i.e. you are not comfortable with pre-processing and concatening), a lot of this documentation may not apply to you, and you will lose out on many of the fantastic features Kayzen has to offer.</p>
                 
@@ -106,24 +105,24 @@
                 <p>Both the default provided <code>app.js</code> and <code>app.css</code> contain code from several third party libraries and plugins. The files for these libraries and plugins reside in the <b>assets/vendor</b> folder, and include the following:</p>        
                 
                 <ul class="list-clear">
-                    <li><a href="#">Englighter</a></li>
-                    <li><a href="#">Font-Awesome</a></li>
-                    <li><a href="#">Infinite-AJAX-Scroll</a></li>
-                    <li><a href="#">Isotope</a></li>
-                    <li><a href="#">jQuery</a></li>
-                    <li><a href="#">jquery-animateNumber</a></li>
-                    <li><a href="#">Kayzen-GS</a></li>
-                    <li><a href="#">Magnific-Popup</a></li>
-                    <li><a href="#">Masonry</a></li>
-                    <li><a href="#">Modular</a></li>
-                    <li><a href="#">MooTools-Core</a></li>
-                    <li><a href="#">normalize-scss</a></li>
-                    <li><a href="#">Owl-Carousel</a></li>
-                    <li><a href="#">pseudojQuery</a></li>
-                    <li><a href="#">SassyJSON</a></li>
-                    <li><a href="#">ScrollTrigger</a></li>
-                    <li><a href="#">Stellar</a></li>
-                    <li><a href="#">TweeCool</a></li>
+                    <li><a href="https://github.com/AndiDittrich/EnlighterJS" target="blank">Englighter</a></li>
+                    <li><a href="https://github.com/FortAwesome/Font-Awesome" target="blank">Font-Awesome</a></li>
+                    <li><a href="https://github.com/webcreate/infinite-ajax-scroll" target="blank">Infinite-AJAX-Scroll</a></li>
+                    <li><a href="https://github.com/metafizzy/isotope" target="blank">Isotope</a></li>
+                    <li><a href="https://github.com/jquery/jquery" target="blank">jQuery</a></li>
+                    <li><a href="https://github.com/aishek/jquery-animateNumber" target="blank">jquery-animateNumber</a></li>
+                    <li><a href="https://github.com/esr360/Kayzen-GS" target="blank">Kayzen-GS</a></li>
+                    <li><a href="https://github.com/dimsemenov/Magnific-Popup" target="blank">Magnific-Popup</a></li>
+                    <li><a href="https://github.com/SnapKit/Masonry" target="blank">Masonry</a></li>
+                    <li><a href="#" target="blank">Modular</a></li>
+                    <li><a href="#" target="blank">MooTools-Core</a></li>
+                    <li><a href="#" target="blank">normalize-scss</a></li>
+                    <li><a href="#" target="blank">Owl-Carousel</a></li>
+                    <li><a href="#" target="blank">pseudojQuery</a></li>
+                    <li><a href="#" target="blank">SassyJSON</a></li>
+                    <li><a href="#" target="blank">ScrollTrigger</a></li>
+                    <li><a href="#" target="blank">Stellar</a></li>
+                    <li><a href="#" target="blank">TweeCool</a></li>
                 </ul>
                 
                 <p>You will notice that all of the used third party resources exist on Github, and as such are included as <a href="https://git-scm.com/book/en/v2/Git-Tools-Submodules" target="blank">Git Submodules</a>. If you have purchased a license for Kayzen, you are entitled to access to the private Github repository <a href="https://github.com/esr360/Kayzen" target="blank">located here</a>. If you do not already have access, <a href="#">get in touch with us</a> to gain access.</p>

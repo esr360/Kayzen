@@ -63,11 +63,11 @@
     &lt;/header>
     
     &lt;ul class="list-arrow">
-        &lt;li>&lt;a href="#">HTML Templates&lt;/a>&lt;/li>
-        &lt;li>&lt;a href="#">Wordpress Themes&lt;/a>&lt;/li>
-        &lt;li>&lt;a href="#">jQuery Plugins&lt;/a>&lt;/li>
-        &lt;li>&lt;a href="#">Tutorials&lt;/a>&lt;/li>
-        &lt;li>&lt;a href="#">Photoshop/Design&lt;/a>&lt;/li>
+        &lt;li>&lt;a href="/HTML-Templates">HTML Templates&lt;/a>&lt;/li>
+        &lt;li>&lt;a href="/Wordpress-Themes">Wordpress Themes&lt;/a>&lt;/li>
+        &lt;li>&lt;a href="/jQuery-Plugins">jQuery Plugins&lt;/a>&lt;/li>
+        &lt;li>&lt;a href="/Tutorials">Tutorials&lt;/a>&lt;/li>
+        &lt;li>&lt;a href="/Photoshop-Design">Photoshop/Design&lt;/a>&lt;/li>
     &lt;/ul>
     
     ...

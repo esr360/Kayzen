@@ -84,9 +84,8 @@ $('#page-overview').pageOverview();
                 <p class="alert-bar-success">The above example is only the bare minimum amount of code to create a fixed page overview menu. For some real examples see the following:</p>
                 
                 <ul class="list-clear">
-                    <li><a href="#">Example 1</a></li>
-                    <li><a href="#">Example 2</a></li>
-                    <li><a href="#">Example 3</a></li>
+                    <li><a href="<?php pageLink('features.php') ?>">Example 1</a></li>
+                    <li><a href="<?php pageLink('documentation.php') ?>">Example 2</a></li>
                 </ul>
 
                 <p>The parent navigation sections should have a <code>button-icon</code> and some text to act as the tooltip content, generally the item's title. By default, the plugin uses the first <code>heading</code> element of the item for the tooltip. You can change the selectors and the default fixed menu position by passing the appropriate option when calling the plugin:</p>  

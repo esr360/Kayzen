@@ -58,8 +58,8 @@
                 
                 <p>Within this module you will find the following other modules</p>
                     <ul class="list-clear">
-                        <li><a href="#">Logo</a></li>
-                        <li><a href="#">Navigation</a></li>
+                        <li><a href="<?php pageLink('modules/objects/logo.php') ?>">Logo</a></li>
+                        <li><a href="<?php pageLink('modules/objects/navigation.php') ?>">Navigation</a></li>
                     </ul>
                 </p>
 							

@@ -37,7 +37,7 @@
                             <li><span><i class="fa fa-support"></i> Support</span><strong>None</strong></li>
                         </ul>
                         <div class="buy-now">
-                            <a href="#" class="button-block-size-3"><i class="fa fa-shopping-cart"></i> Get For Free</a>
+                            <a href="<?php pageLink('further/shop-single.php') ?>" class="button-block-size-3"><i class="fa fa-shopping-cart"></i> Get For Free</a>
                         </div>
                     </div>
                 </div>
@@ -60,7 +60,7 @@
                             <li><span><i class="fa fa-support"></i> Support</span><strong>Yes</strong></li>
                         </ul>
                         <div class="buy-now">
-                            <a href="#" class="button-primary-block-size-3"><i class="fa fa-shopping-cart"></i> Buy Now</a>
+                            <a href="<?php pageLink('further/shop-single.php') ?>" class="button-primary-block-size-3"><i class="fa fa-shopping-cart"></i> Buy Now</a>
                         </div>
                     </div>
                 </div>
@@ -82,7 +82,7 @@
                             <li><span><i class="fa fa-support"></i> Support</span><strong>Yes</strong></li>
                         </ul>
                         <div class="buy-now">
-                            <a href="#" class="button-primary-block-size-3"><i class="fa fa-shopping-cart"></i> Buy Now</a>
+                            <a href="<?php pageLink('further/shop-single.php') ?>" class="button-primary-block-size-3"><i class="fa fa-shopping-cart"></i> Buy Now</a>
                         </div>
                     </div>
                 </div>

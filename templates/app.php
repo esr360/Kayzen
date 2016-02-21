@@ -45,14 +45,9 @@ define('host', 'server');
 define('ROOT', dirname(__FILE__));
 
 /**
- * This sets the appropriate directory for your assets based on the
- * above settings
+ * Set the path to the app directory
  */
-if (host == 'server') {
-    define('appDir', '/app');
-} else if (host == 'static') {
-    define('appDir', realpath(__DIR__ . '/../app'));
-}
+define('appDir', '/app');
 
 /******************************************************************
  * Templates

@@ -59,8 +59,8 @@
                 
                 <ul class="list-clear">
                     <li>A pre-existing navigation menu</li>
-                    <li>The <a href="#">side-nav</a> module</li>
-                    <li>[Optional] The <a href="#">site-overlay</a> module</li>
+                    <li>The <a href="<?php pageLink('modules/objects/side-nav.php') ?>">side-nav</a> module</li>
+                    <li>[Optional] The <a href="<?php pageLink('modules/objects/site-overlay.php') ?>">site-overlay</a> module</li>
                 </ul>
                 
 				<h2 class="heading-light-size-5">Examples</h2>
@@ -100,7 +100,7 @@ $('#flyout').flyoutNav({
 });
 </pre>
 
-                <p><a href="#" id="demo-flyout-trigger">View Demo</a></p>
+                <p><a href="#demoFlyoutTrigger" id="demo-flyout-trigger">View Demo</a></p>
 				
 				<h2 class="heading-light-size-5">Customizing</h2>
 				

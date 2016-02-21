@@ -57,7 +57,7 @@
                                     <i class="fa fa-dribbble"></i>
                                 </a>
                                 <a 
-                                    href="#" 
+                                    href="https://www.facebook.com/SkyUXThemes/" 
                                     taret="blank" 
                                     class="button-icon-size-2 tooltip-top" 
                                     data-tooltip="Facebook"
@@ -73,7 +73,7 @@
                                     <i class="fa fa-twitter"></i>
                                 </a>
                                 <a 
-                                    href="#" 
+                                    href="https://uk.linkedin.com/in/esr360" 
                                     taret="blank" 
                                     class="button-icon-size-2 tooltip-top" 
                                     data-tooltip="LinkedIn"
@@ -81,7 +81,7 @@
                                     <i class="fa fa-linkedin"></i>
                                 </a>
                                 <a 
-                                    href="#" 
+                                    href="http://esr360.deviantart.com/" 
                                     taret="blank" 
                                     class="button-icon-size-2 tooltip-top" 
                                     data-tooltip="DeviantArt"
@@ -89,7 +89,7 @@
                                     <i class="fa fa-deviantart"></i>
                                 </a>
                                 <a 
-                                    href="#" 
+                                    href="https://www.behance.net/esr360" 
                                     taret="blank" 
                                     class="button-icon-size-2 tooltip-top" 
                                     data-tooltip="Behance"

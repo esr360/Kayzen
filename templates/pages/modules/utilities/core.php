@@ -131,7 +131,7 @@
                 
                 <h4 class="heading-size-2-uppercase">Global Transition</h4>
                 
-                <p>The <a href="#">Modular</a> framework allows you to access any Sass configuration value in your JavaScript. You can use the <code>coreTransition</code> variable anywhere in your JavaScript to use the <code>transition</code> value set in <code>_core.scss</code>. Note that the value is converted from seconds to miliseconds, so a value of <code>0.4s</code> would become <code>400ms</code>. This is made possible from the below line found in <code>core.js</code>:</p>
+                <p>The <a href="https://github.com/esr360/Modular" target="blank">Modular</a> framework allows you to access any Sass configuration value in your JavaScript. You can use the <code>coreTransition</code> variable anywhere in your JavaScript to use the <code>transition</code> value set in <code>_core.scss</code>. Note that the value is converted from seconds to miliseconds, so a value of <code>0.4s</code> would become <code>400ms</code>. This is made possible from the below line found in <code>core.js</code>:</p>
                 
 <pre data-enlighter-language="javascript" class="EnlighterJSRAW">
 window['coreTransition'] = _modules['core']['transition'].slice(0,-1) * 1000;
@@ -139,7 +139,7 @@ window['coreTransition'] = _modules['core']['transition'].slice(0,-1) * 1000;
 
                 <h4 class="heading-size-2-uppercase">Get Breakpoint Value</h4>
                 
-                <p>You can use the <code>breakpoint()</code> function anywhere in your Javascript to fetch any breakpoint value from the <a href="#">Grid</a> module:</p>
+                <p>You can use the <code>breakpoint()</code> function anywhere in your Javascript to fetch any breakpoint value from the <a href="<?php pageLink('modules/utilities/grid.php') ?>">Grid</a> module:</p>
                            
 <pre data-enlighter-language="javascript" class="EnlighterJSRAW">
 if(breakpoint('min-width', 'break-3')) {
@@ -147,7 +147,7 @@ if(breakpoint('min-width', 'break-3')) {
 }
 </pre>    
 
-                <p>This is made possible using the <a href="#">Modular</a> framework, and the below function found in <code>core.js</code> which uses the <a href="https://developer.mozilla.org/en/docs/Web/API/Window/matchMedia" target="blank"><code>Window.matchMedia()</code></a> web API:</p>
+                <p>This is made possible using the <a href="https://github.com/esr360/Modular" target="blank">Modular</a> framework, and the below function found in <code>core.js</code> which uses the <a href="https://developer.mozilla.org/en/docs/Web/API/Window/matchMedia" target="blank"><code>Window.matchMedia()</code></a> web API:</p>
                        
 <pre data-enlighter-language="javascript" class="EnlighterJSRAW">
 function breakpoint(media, value) {

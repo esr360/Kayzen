@@ -9,7 +9,7 @@
     <!-- Promo Banner -->
     <?php if ($options['minimal']) { ?>
         <section class="section-secondary promo-banner text-center">
-            <a href="#" target="blank" class="button-white-border-size-4<?php echo '-'.$options['cta-modifiers'] ?>">
+            <a href="http://themeforest.net/user/skyux/portfolio" target="blank" class="button-white-border-size-4<?php echo '-'.$options['cta-modifiers'] ?>">
                 Get Kayzen Now
             </a>
         </section>
@@ -26,13 +26,13 @@
                             <h4 class="heading-size-5">
                                 Start your <b class="font-2">new project</b> with a <em>fresh</em> approach...
                             </h4>
-                            <p class="heading">leave your visitors with an experience to remember and <a href="#" target="blank">Purchase Nexus</a> now.</p>
+                            <p class="heading">leave your visitors with an experience to remember and <a href="http://themeforest.net/user/skyux/portfolio" target="blank">Purchase Nexus</a> now.</p>
                         </header>
                     </div>
                     <div class="span-5 va-middle text-right button_group">
-                        <a href="#" target="blank" class="button-white-border-size-3<?php echo '-'.$options['cta-modifiers'] ?>">Purchase Theme</a>
+                        <a href="http://themeforest.net/user/skyux/portfolio" target="blank" class="button-white-border-size-3<?php echo '-'.$options['cta-modifiers'] ?>">Purchase Theme</a>
                         <span class="text-sep">or</span>
-                        <a href="#about">Learn More</a>
+                        <a href="<?php pageLink('further/about-us.php') ?>">Learn More</a>
                     </div>
                 </div>
             </div>

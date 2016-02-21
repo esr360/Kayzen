@@ -23,8 +23,7 @@
             ));
 
             billboard(array(
-                'title'    => $title,
-                'tag-line' => $tagLine
+                'title'    => $title
             ));
             
         ?>

@@ -5,7 +5,9 @@
         'headline'  => 'Kayzen',
         'modifiers' => null,
         'title'     => null,
-        'tag-line'  => null
+        'tag-line'  => null,
+        'countdown' => false,
+        'search'    => false
     ), $custom); ?>
     
     <?php if ($options['type'] == 'homepage') { ?>

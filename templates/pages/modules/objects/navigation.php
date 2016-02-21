@@ -45,7 +45,7 @@
 				
 				<h2 class="heading-light-size-5">Module Overview</h2>
                 
-                <p>The Navigation module appears inside the <a href="#">Header</a> ('app-header') module by default, along with the <a href="#">Logo</a> module.</p>
+                <p>The Navigation module appears inside the <a href="<?php pageLink('modules/objects/header.php') ?>">Header</a> ('app-header') module by default, along with the <a href="<?php pageLink('modules/objects/logo.php') ?>">Logo</a> module.</p>
                 
                 <div class="well">
                     <ul class="list-reset">
@@ -58,8 +58,8 @@
                 <p>The Navigation module makes use of the following other modules, which will not be covered in this section:</p>
                 
                 <ul class="list-clear">
-                    <li><a href="#">Dropdown</a></li>
-                    <li><a href="#">Mega-Menu</a></li>
+                    <li><a href="<?php pageLink('modules/objects/dropdown.php') ?>">Dropdown</a></li>
+                    <li><a href="<?php pageLink('modules/objects/mega-menu.php') ?>">Mega-Menu</a></li>
                 </ul>
                 
 				<h2 class="heading-light-size-5">Examples</h2>
