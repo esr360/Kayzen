@@ -47,6 +47,8 @@
             transition: base('transition');
             min-width: 100%;
             display: block;
+            // Fix for pixel rounding spacing issues
+            transform: scale(1.005)
         }
         
         @include overwrite('button') {

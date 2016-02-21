@@ -38,7 +38,7 @@
                                 <div class="thumbnail_mask">
                                     <div class="thumbnail_controls icon_group-small">
                                         <a 
-                                            href="<?php echo appDir ?>/images/demo/product-1.jpg" 
+                                            href="<?php stockImage('demo/product-1.jpg') ?>" 
                                             class="button-icon-border-circle tooltip-top" 
                                             data-tooltip="Quick Look" 
                                             rel="lightbox"
@@ -50,7 +50,7 @@
                                         </a>
                                     </div>
                                 </div>
-                                <img src="<?php echo appDir ?>/images/demo/product-1.jpg">
+                                <img src="<?php stockImage('demo/product-1.jpg') ?>">
                             </div>
                             <header class="heading_group-small">
                                 <h3 class="heading-heavy-size-4">Lorem Ipsum Dolor</h3>
@@ -74,7 +74,7 @@
                                 <div class="thumbnail_mask">
                                     <div class="thumbnail_controls icon_group-small">
                                         <a 
-                                            href="<?php echo appDir ?>/images/demo/product-1.jpg" 
+                                            href="<?php stockImage('demo/product-1.jpg') ?>" 
                                             class="button-icon-border-circle tooltip-top" 
                                             data-tooltip="Quick Look" 
                                             rel="lightbox"
@@ -86,7 +86,7 @@
                                         </a>
                                     </div>
                                 </div>
-                                <img src="<?php echo appDir ?>/images/demo/product-1.jpg">
+                                <img src="<?php stockImage('demo/product-1.jpg') ?>">
                             </div>
                             <header class="heading_group-small">
                                 <h3 class="heading-heavy-size-4">Lorem Ipsum Dolor</h3>
@@ -110,7 +110,7 @@
                                 <div class="thumbnail_mask">
                                     <div class="thumbnail_controls icon_group-small">
                                         <a 
-                                            href="<?php echo appDir ?>/images/demo/product-1.jpg" 
+                                            href="<?php stockImage('demo/product-1.jpg') ?>" 
                                             class="button-icon-border-circle tooltip-top" 
                                             data-tooltip="Quick Look" 
                                             rel="lightbox"
@@ -122,7 +122,7 @@
                                         </a>
                                     </div>
                                 </div>
-                                <img src="<?php echo appDir ?>/images/demo/product-1.jpg">
+                                <img src="<?php stockImage('demo/product-1.jpg') ?>">
                             </div>
                             <header class="heading_group-small">
                                 <h3 class="heading-heavy-size-4">Lorem Ipsum Dolor</h3>
@@ -145,7 +145,7 @@
                                 <div class="thumbnail_mask">
                                     <div class="thumbnail_controls icon_group-small">
                                         <a 
-                                            href="<?php echo appDir ?>/images/demo/product-1.jpg" 
+                                            href="<?php stockImage('demo/product-1.jpg') ?>" 
                                             class="button-icon-border-circle tooltip-top" 
                                             data-tooltip="Quick Look" 
                                             rel="lightbox"
@@ -157,7 +157,7 @@
                                         </a>
                                     </div>
                                 </div>
-                                <img src="<?php echo appDir ?>/images/demo/product-1.jpg">
+                                <img src="<?php stockImage('demo/product-1.jpg') ?>">
                             </div>
                             <header class="heading_group-small">
                                 <h3 class="heading-heavy-size-4">Lorem Ipsum Dolor</h3>
@@ -195,7 +195,7 @@
                                         </a>
                                     </div>
                                 </div>
-                                <img src="<?php echo appDir ?>/images/demo/product-1.jpg">
+                                <img src="<?php stockImage('demo/product-1.jpg') ?>">
                             </div>
                             <header class="heading_group-small">
                                 <h3 class="heading-heavy-size-4">Lorem Ipsum Dolor</h3>
@@ -226,7 +226,7 @@
                                         </a>
                                     </div>
                                 </div>
-                                <img src="<?php echo appDir ?>/images/demo/product-1.jpg">
+                                <img src="<?php stockImage('demo/product-1.jpg') ?>">
                             </div>
                             <header class="heading_group-small">
                                 <h3 class="heading-heavy-size-4">Lorem Ipsum Dolor</h3>
@@ -257,7 +257,7 @@
                                         </a>
                                     </div>
                                 </div>
-                                <img src="<?php echo appDir ?>/images/demo/product-1.jpg">
+                                <img src="<?php stockImage('demo/product-1.jpg') ?>">
                             </div>
                             <header class="heading_group-small">
                                 <h3 class="heading-heavy-size-4">Lorem Ipsum Dolor</h3>
@@ -287,7 +287,7 @@
                                         </a>
                                     </div>
                                 </div>
-                                <img src="<?php echo appDir ?>/images/demo/product-1.jpg">
+                                <img src="<?php stockImage('demo/product-1.jpg') ?>">
                             </div>
                             <header class="heading_group-small">
                                 <h3 class="heading-heavy-size-4">Lorem Ipsum Dolor</h3>
@@ -325,7 +325,7 @@
                                         </a>
                                     </div>
                                 </div>
-                                <img src="<?php echo appDir ?>/images/demo/product-1.jpg">
+                                <img src="<?php stockImage('demo/product-1.jpg') ?>">
                             </div>
                             <header class="heading_group-small">
                                 <h3 class="heading-heavy-size-4">Lorem Ipsum Dolor</h3>
@@ -356,7 +356,7 @@
                                         </a>
                                     </div>
                                 </div>
-                                <img src="<?php echo appDir ?>/images/demo/product-1.jpg">
+                                <img src="<?php stockImage('demo/product-1.jpg') ?>">
                             </div>
                             <header class="heading_group-small">
                                 <h3 class="heading-heavy-size-4">Lorem Ipsum Dolor</h3>
@@ -387,7 +387,7 @@
                                         </a>
                                     </div>
                                 </div>
-                                <img src="<?php echo appDir ?>/images/demo/product-1.jpg">
+                                <img src="<?php stockImage('demo/product-1.jpg') ?>">
                             </div>
                             <header class="heading_group-small">
                                 <h3 class="heading-heavy-size-4">Lorem Ipsum Dolor</h3>
@@ -417,7 +417,7 @@
                                         </a>
                                     </div>
                                 </div>
-                                <img src="<?php echo appDir ?>/images/demo/product-1.jpg">
+                                <img src="<?php stockImage('demo/product-1.jpg') ?>">
                             </div>
                             <header class="heading_group-small">
                                 <h3 class="heading-heavy-size-4">Lorem Ipsum Dolor</h3>

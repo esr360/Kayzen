@@ -12,7 +12,7 @@
         <div class="container-small text-center owl-carousel" id="testimonials-carousel">
             <blockquote class="blockquote">
                 <a class="blockquote_avatar-large" href="<?php pageLink('blog/classic/full-width.php') ?>">
-                    <img src="/app/images/team/team-2.jpg" alt="">
+                    <img src="<?php stockImage('team/team-2.jpg') ?>" alt="">
                 </a>
                 <div class="blockquote_content">
                     <p class="lede">Suspendisse tempus sodales neque, eget eleifend <b>turpis tristique</b> eu. Nullam a nisl maximus, <b>ultrices est</b> ut blandit nislr, elit in lobortis mattis.</p>
@@ -23,7 +23,7 @@
             </blockquote>
             <blockquote class="blockquote">
                 <a class="blockquote_avatar-large" href="<?php pageLink('blog/classic/full-width.php') ?>">
-                    <img src="/app/images/team/team-2.jpg" alt="">
+                    <img src="<?php stockImage('team/team-3.jpg') ?>" alt="">
                 </a>
                 <div class="blockquote_content">
                     <p class="lede">Suspendisse tempus sodales neque, eget eleifend <b>turpis tristique</b> eu. Nullam a nisl maximus, <b>ultrices est</b> ut blandit nislr, elit in lobortis mattis.</p>

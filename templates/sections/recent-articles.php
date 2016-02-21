@@ -24,7 +24,7 @@
                     <div class="thumbnail-zoom">
                         <div class="thumbnail_mask">
                             <div class="thumbnail_controls icon_group-small">
-                                <a href="<?php echo appDir ?>/images/demo/hero-1.jpg" class="button-icon-border-circle" rel="lightbox">
+                                <a href="<?php stockImage('demo/hero-1.jpg') ?>" class="button-icon-border-circle" rel="lightbox">
                                     <i class="fa fa-search"></i>
                                 </a>
                                 <a href="#" class="button-icon-border-circle">
@@ -32,10 +32,10 @@
                                 </a>
                             </div>
                         </div>
-                        <img src="<?php echo appDir ?>/images/demo/hero-1.jpg">
+                        <img src="<?php stockImage('demo/hero-1.jpg') ?>">
                     </div>
                     <div class="thumbnail-profile-round-badge">
-                        <img src="<?php echo appDir ?>/images/team/team-2.jpg" alt="">
+                        <img src="<?php stockImage('team/team-2.jpg') ?>" alt="">
                     </div>
                     <header class="heading_group">
                         <div class="heading_date">
@@ -60,7 +60,7 @@
                     <div class="thumbnail-zoom">
                         <div class="thumbnail_mask">
                             <div class="thumbnail_controls icon_group-small">
-                                <a href="<?php echo appDir ?>/images/demo/hero-2.jpg" class="button-icon-border-circle" rel="lightbox">
+                                <a href="<?php stockImage('demo/hero-2.jpg') ?>" class="button-icon-border-circle" rel="lightbox">
                                     <i class="fa fa-search"></i>
                                 </a>
                                 <a href="#" class="button-icon-border-circle">
@@ -68,10 +68,10 @@
                                 </a>
                             </div>
                         </div>
-                        <img src="<?php echo appDir ?>/images/demo/hero-2.jpg">
+                        <img src="<?php stockImage('demo/hero-2.jpg') ?>">
                     </div>
                     <div class="thumbnail-profile-round-badge">
-                        <img src="<?php echo appDir ?>/images/team/team-2.jpg" alt="">
+                        <img src="<?php stockImage('team/team-2.jpg') ?>" alt="">
                     </div>
                     <header class="heading_group">
                         <div class="heading_date">
@@ -96,7 +96,7 @@
                     <div class="thumbnail-zoom">
                         <div class="thumbnail_mask">
                             <div class="thumbnail_controls icon_group-small">
-                                <a href="<?php echo appDir ?>/images/demo/hero-3.jpg" class="button-icon-border-circle" rel="lightbox">
+                                <a href="<?php stockImage('demo/hero-3.jpg') ?>" class="button-icon-border-circle" rel="lightbox">
                                     <i class="fa fa-search"></i>
                                 </a>
                                 <a href="#" class="button-icon-border-circle">
@@ -104,10 +104,10 @@
                                 </a>
                             </div>
                         </div>
-                        <img src="<?php echo appDir ?>/images/demo/hero-3.jpg">
+                        <img src="<?php stockImage('demo/hero-3.jpg') ?>">
                     </div>
                     <div class="thumbnail-profile-round-badge">
-                        <img src="<?php echo appDir ?>/images/team/team-2.jpg" alt="">
+                        <img src="<?php stockImage('team/team-2.jpg') ?>" alt="">
                     </div>
                     <header class="heading_group">
                         <div class="heading_date">

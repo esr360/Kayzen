@@ -105,7 +105,10 @@
                         </header>
                     <?php } ?>
                 </div>
-                <img src="<?php echo appDir.'/images/demo/hero-'.$options['thumb']; if ($options['height'] === 'tall') echo '-tall'?>.jpg">
+                <?php if ($options['height'] === 'tall') { ?>
+                <?php } else { ?>
+                    <img src="<?php stockImage('demo/hero-'.$options['thumb'].'.jpg') ?>">
+                <?php } ?>
             </div>
             
         <? // Vimeo Article ?>
@@ -113,7 +116,7 @@
         
             <div
                 class="auto-resizable-iframe<?php if ($isArticle) echo ' object'?>" 
-                data-iframe-height="<?php if ($options['height'] ==='tall') { echo '100%'; } else { echo '56.25%'; } ?>"
+                data-iframe-height="<?php if ($options['height'] ==='tall') { echo '100%'; } else { echo '66.5%'; } ?>"
             >
                 <div>
                     <iframe src="<?php echo $options['videoSrc'] ?>" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
@@ -125,7 +128,7 @@
         
             <div 
                 class="auto-resizable-iframe<?php if ($isArticle) echo ' object'?>"
-                data-iframe-height="<?php if ($options['height'] ==='tall') { echo '100%'; } else { echo '56.25%'; } ?>">
+                data-iframe-height="<?php if ($options['height'] ==='tall') { echo '100%'; } else { echo '66.5%'; } ?>">
                 <div>
                     <iframe allowfullscreen="" src="http://www.youtube.com/embed/Q3oItpVa9fs?theme=light"></iframe>
                 </div>

@@ -12,7 +12,7 @@
                     <div class="thumbnail-zoom">
                         <div class="thumbnail_mask">
                             <div class="thumbnail_controls icon_group-small">
-                                <a href="<?php echo appDir ?>/images/demo/hero-7.jpg" class="button-icon-border-circle" rel="lightbox">
+                                <a href="<?php stockImage('demo/hero-7.jpg') ?>" class="button-icon-border-circle" rel="lightbox">
                                     <i class="fa fa-search"></i>
                                 </a>
                                 <a href="#" class="button-icon-border-circle">
@@ -20,7 +20,7 @@
                                 </a>
                             </div>
                         </div>
-                        <img src="<?php echo appDir ?>/images/demo/hero-7.jpg">
+                        <img src="<?php stockImage('demo/hero-7.jpg') ?>">
                     </div>
                     <div class="widget_content">
                         <header class="heading_group">
@@ -37,7 +37,7 @@
                     <div class="thumbnail-zoom">
                         <div class="thumbnail_mask">
                             <div class="thumbnail_controls icon_group-small">
-                                <a href="<?php echo appDir ?>/images/demo/hero-3.jpg" class="button-icon-border-circle" rel="lightbox">
+                                <a href="<?php stockImage('demo/hero-3.jpg') ?>" class="button-icon-border-circle" rel="lightbox">
                                     <i class="fa fa-search"></i>
                                 </a>
                                 <a href="#" class="button-icon-border-circle">
@@ -45,7 +45,7 @@
                                 </a>
                             </div>
                         </div>
-                        <img src="<?php echo appDir ?>/images/demo/hero-3.jpg">
+                        <img src="<?php stockImage('demo/hero-3.jpg') ?>">
                     </div>
                     <div class="widget_content">
                         <header class="heading_group">
@@ -62,7 +62,7 @@
                     <div class="thumbnail-zoom">
                         <div class="thumbnail_mask">
                             <div class="thumbnail_controls icon_group-small">
-                                <a href="<?php echo appDir ?>/images/demo/hero-6.jpg" class="button-icon-border-circle" rel="lightbox">
+                                <a href="<?php stockImage('demo/hero-6.jpg') ?>" class="button-icon-border-circle" rel="lightbox">
                                     <i class="fa fa-search"></i>
                                 </a>
                                 <a href="#" class="button-icon-border-circle">
@@ -70,7 +70,7 @@
                                 </a>
                             </div>
                         </div>
-                        <img src="<?php echo appDir ?>/images/demo/hero-6.jpg">
+                        <img src="<?php stockImage('demo/hero-6.jpg') ?>">
                     </div>
                     <div class="widget_content">
                         <header class="heading_group">

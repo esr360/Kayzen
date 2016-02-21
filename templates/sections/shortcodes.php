@@ -25,19 +25,19 @@
             <div class="carousel-scale-2 owl-carousel" id="shortcodes-carousel">
                 <div class="desktop-graphic-scroll">
                     <img src="<?php echo appDir ?>/images/demo-screen.png" alt="" />
-                    <div class="desktop-graphic_image" style="background-image: url('<?php echo appDir ?>/images/demo/theme-1.jpg')"></div>
+                    <div class="desktop-graphic_image" style="background-image: url('<?php stockImage('demo/small/theme-1.jpg') ?>')"></div>
                 </div>
                 <div class="desktop-graphic-scroll">
                     <img src="<?php echo appDir ?>/images/demo-screen.png" alt="" />
-                    <div class="desktop-graphic_image" style="background-image: url('<?php echo appDir ?>/images/demo/theme-1.jpg')"></div>
+                    <div class="desktop-graphic_image" style="background-image: url('<?php stockImage('demo/small/theme-1.jpg') ?>')"></div>
                 </div>
                 <div class="desktop-graphic-scroll">
                     <img src="<?php echo appDir ?>/images/demo-screen.png" alt="" />
-                    <div class="desktop-graphic_image" style="background-image: url('<?php echo appDir ?>/images/demo/theme-1.jpg')"></div>
+                    <div class="desktop-graphic_image" style="background-image: url('<?php stockImage('demo/small/theme-1.jpg') ?>')"></div>
                 </div>
                 <div class="desktop-graphic-scroll">
                     <img src="<?php echo appDir ?>/images/demo-screen.png" alt="" />
-                    <div class="desktop-graphic_image" style="background-image: url('<?php echo appDir ?>/images/demo/theme-1.jpg')"></div>
+                    <div class="desktop-graphic_image" style="background-image: url('<?php stockImage('demo/small/theme-1.jpg') ?>')"></div>
                 </div>
             </div>
             

@@ -24,12 +24,12 @@
                     <div class="thumbnail">
                         <div class="thumbnail_mask">
                             <div class="thumbnail_controls">
-                                <a href="<?php echo appDir ?>/images/team/team-1.jpg" class="button-icon-border-circle" rel="lightbox">
+                                <a href="<?php stockImage('team/team-1.jpg') ?>" class="button-icon-border-circle" rel="lightbox">
                                     <i class="fa fa-search"></i>
                                 </a>
                             </div>
                         </div>
-                        <img src="<?php echo appDir ?>/images/team/team-1.jpg">
+                        <img src="<?php stockImage('team/team-1.jpg') ?>">
                     </div>
                     <header class="heading_group">
                         <h3 class="heading-heavy-size-4">Alexander	Welch</h3>
@@ -62,12 +62,12 @@
                     <div class="thumbnail">
                         <div class="thumbnail_mask">
                             <div class="thumbnail_controls">
-                                <a href="<?php echo appDir ?>/images/team/team-2.jpg" class="button-icon-border-circle" rel="lightbox">
+                                <a href="<?php stockImage('team/team-2.jpg') ?>" class="button-icon-border-circle" rel="lightbox">
                                     <i class="fa fa-search"></i>
                                 </a>
                             </div>
                         </div>
-                        <img src="<?php echo appDir ?>/images/team/team-2.jpg">
+                        <img src="<?php stockImage('team/team-2.jpg') ?>">
                     </div>
                     <header class="heading_group">
                         <h3 class="heading-heavy-size-4">Naomi Olson</h3>
@@ -97,12 +97,12 @@
                     <div class="thumbnail">
                         <div class="thumbnail_mask">
                             <div class="thumbnail_controls">
-                                <a href="<?php echo appDir ?>/images/team/team-3.jpg" class="button-icon-border-circle" rel="lightbox">
+                                <a href="<?php stockImage('team/team-3.jpg') ?>" class="button-icon-border-circle" rel="lightbox">
                                     <i class="fa fa-search"></i>
                                 </a>
                             </div>
                         </div>
-                        <img src="<?php echo appDir ?>/images/team/team-3.jpg">
+                        <img src="<?php stockImage('team/team-3.jpg') ?>">
                     </div>
                     <header class="heading_group">
                         <h3 class="heading-heavy-size-4">Brendan Mack</h3>
