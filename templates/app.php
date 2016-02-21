@@ -32,9 +32,18 @@ define('themes', false);
  * Set how you intend to access your project's assets
  * @const host
  *
- * Values: 'static', 'server'
+ * Values: 'static', 'server', 'explorer', 'finder' 
  */
 define('host', 'server');
+
+/**
+ * Will you be shipping the app?
+ * @const shippable
+ *
+ * Set to 'true' if you are ready to package the app for shipment.
+ * Stock images will be replaced with placeholders.
+ */
+define('shippable', false);
 
 /**
  * Set the root php/template directory
@@ -45,12 +54,20 @@ define('host', 'server');
 define('ROOT', dirname(__FILE__));
 
 /**
+ * Set the relative path to Kayzen if it is not in the root
+ * @const projectPath
+ */
+define('projectPath', '/../'.theme);
+
+/**
  * Set the path to the app directory
  */
  if (host == 'server') {
     define('appDir', '/app');
 } else if (host == 'static') {
-    define('appDir', '/../'.theme.'/app');
+    define('appDir', projectPath.'/app');
+} else if (host == 'explorer' || host == 'finder') {
+    define('appDir', realpath(__DIR__ . '/../app'));
 }
 
 /******************************************************************

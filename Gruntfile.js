@@ -15,8 +15,11 @@ module.exports = function(grunt) {
     // directory e.g. app/themes/Kayzen/scripts
     var themes = grunt.option('themes') || false;
     
-    // 'server' | 'static' - used to determine asset paths
+    // 'server' | 'static' | 'explorer' | 'finder' - used to determine asset paths
     var host = grunt.option('host') || 'server';
+    
+    // If enabled, stock images will be replaced with placeholder images
+    var shippable = grunt.option('shippable') || false;
     
     //-------------------------------------------------------------
     
@@ -157,12 +160,6 @@ module.exports = function(grunt) {
             app: {
                 files: [
                     {
-                        cwd: 'assets/images',
-                        src: '**/*',
-                        dest: 'app/images',
-                        expand: true
-                    },
-                    {
                         cwd: 'assets/vendor/Font-Awesome/fonts',
                         src: '**/*',
                         dest: 'app/fonts',
@@ -181,6 +178,14 @@ module.exports = function(grunt) {
                         flatten: true
                     }
                 ]
+            },
+            images: {
+                files: [{
+                    cwd: 'assets/images',
+                    src: '**/*',
+                    dest: 'app/images',
+                    expand: true
+                }]
             },
             normalizeSupportFor: {
                 files: [{
@@ -322,38 +327,16 @@ module.exports = function(grunt) {
                 }
             },
             images: {
-                files: 'assets/images/',
-                tasks: ['clean:images'],
+                files: 'assets/images/**/*',
+                tasks: [
+                    'clean:images',
+                    'copy:images',
+                    'responsive_images'
+                ],
                 options: {
                     spawn: false,
                 },
             },
-        },
-      
-        //---------------------------------------------------------
-        // Notify
-        // https://github.com/sindresorhus/grunt-sass
-        //---------------------------------------------------------
-        
-        notify: {
-            scripts: {
-                options: {
-                    title: 'Scripts Compiled',
-                    message: 'All scripts have been successfully compiled!'
-                }
-            },
-            css: {
-                options: {
-                    title: 'Styles Compiled',
-                    message: 'All styles have been successfully compiled!'
-                }
-            },
-            app: {
-                options: {
-                    title: 'App Built',
-                    message: 'Your app has been successfully built!'
-                }
-            }
         },
       
         //---------------------------------------------------------
@@ -368,6 +351,48 @@ module.exports = function(grunt) {
                 replacements: [{
                     from: /\$theme(.*?);/g,
                     to: '$theme : \'' + theme + '\';'
+                }]
+            }
+        },
+      
+        //---------------------------------------------------------
+        // TinyPNG
+        // https://github.com/sindresorhus/grunt-sass
+        //---------------------------------------------------------
+        
+        tinypng: {
+            options: {
+                apiKey: 'Rs-CYUCRwpOiLB57rTBQMtSMgQh5lDFB',
+                summarize: true,
+                summarizeOnError: true,
+                showProgress: true
+            },
+            app: {
+                cwd: 'app/images/demo',
+                src: '**/*.{jpg,png}',
+                dest: 'app/images/demo',
+                expand: true
+            }
+        },
+      
+        //---------------------------------------------------------
+        // Responsive Images
+        // https://github.com/sindresorhus/grunt-sass
+        //---------------------------------------------------------
+        
+        responsive_images: {
+            app: {
+                options: {
+                    sizes: [{
+                        name: "small",
+                        width: 480
+                    }]
+                },
+                files: [{
+                    cwd: 'app/images/demo',
+                    src: '**/*.{jpg,gif,png}',
+                    custom_dest: 'app/images/demo/{%= name %}/',
+                    expand: true
                 }]
             }
         },
@@ -407,6 +432,11 @@ module.exports = function(grunt) {
                 constant    : 'host',
                 value       : 'static',
                 file        : 'templates/app.php'
+            },
+            shippable : {
+                constant    : 'shippable',
+                value       : shippable,
+                file        : 'templates/app.php'
             }
         },
       
@@ -428,6 +458,32 @@ module.exports = function(grunt) {
                     dest: 'pages', 
                     ext: '.html'     
                 }]
+            }
+        },
+      
+        //---------------------------------------------------------
+        // Notify
+        // https://github.com/sindresorhus/grunt-sass
+        //---------------------------------------------------------
+        
+        notify: {
+            scripts: {
+                options: {
+                    title: 'Scripts Compiled',
+                    message: 'All scripts have been successfully compiled!'
+                }
+            },
+            css: {
+                options: {
+                    title: 'Styles Compiled',
+                    message: 'All styles have been successfully compiled!'
+                }
+            },
+            app: {
+                options: {
+                    title: 'App Built',
+                    message: 'Your app has been successfully built!'
+                }
             }
         },
       
@@ -480,9 +536,11 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-php-set-constant');
     grunt.loadNpmTasks('grunt-php2html');
     grunt.loadNpmTasks('grunt-postcss');
+    grunt.loadNpmTasks('grunt-responsive-images');
     grunt.loadNpmTasks('grunt-run-grunt');
     grunt.loadNpmTasks('grunt-scss-lint');
     grunt.loadNpmTasks('grunt-text-replace');
+    grunt.loadNpmTasks('grunt-tinypng');
     
     //-------------------------------------------------------------
     // Register Tasks
@@ -497,7 +555,8 @@ module.exports = function(grunt) {
             'concat',
             'sass:' + environment,
             'postcss',
-            'clean:normalizeSupportFor'
+            'clean:normalizeSupportFor',
+            'responsive_images'
         ];
         if (environment == 'prod') {
             assetTasks.push(
@@ -511,7 +570,8 @@ module.exports = function(grunt) {
             'setPHPConstant:' + environment,
             'setPHPConstant:theme',
             'setPHPConstant:themes',
-            'setPHPConstant:host'
+            'setPHPConstant:host',
+            'setPHPConstant:shippable'
         ];
         var notify = [
             'notify:app'
@@ -534,9 +594,9 @@ module.exports = function(grunt) {
     // Generate HTML templates
     grunt.registerTask('templates', [
         'clean:pages',
-        'setPHPConstant:static',
+        'setPHPConstant:host',
         'php2html',
-        'setPHPConstant:host'
+        'compile:dev'
     ]);
     
     // Compile the app for a development environment
@@ -553,6 +613,17 @@ module.exports = function(grunt) {
     grunt.registerTask('test', [
         'jshint',
         'scsslint'
+    ]);
+    
+    /**
+     * Compress Images
+     * 
+     * The TinyPNG API only allows us so many compressions, so use 
+     * liberally. Warning: This is a fairly heafty task
+     */
+    grunt.registerTask('compress:images', [
+        'clean:images',
+        'tinypng'
     ]);
 
 }; // function(grunt)

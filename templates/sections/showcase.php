@@ -149,11 +149,7 @@
             </div>
             
             <!-- Showcase Slide 4 -->
-            <div 
-                class="row-block bg-cover"
-                data-stellar-background-ratio="0.5"
-                style="background-image: url('<?php echo appDir ?>/images/demo/hero-1.jpg')"
-            >
+            <div class="row-block bg-cover"  style="background-image: url('<?php echo appDir ?>/images/demo/hero-1.jpg')">
                 <div class="section_block span-6 text-center va-middle">
                     <div class="block-content span-9">
                         <div class="desktop-graphic-scroll">

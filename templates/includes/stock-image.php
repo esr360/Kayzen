@@ -4,10 +4,10 @@
         'resolution' => '990x660'
     ), $custom);
         
-    if (host == 'server') { 
-        echo appDir.'/images/'.$path;
-    } else if (host == 'static') {
+    if (shippable) { 
         echo 'http://placehold.it/'.$options['resolution'];
+    } else {
+        echo appDir.'/images/'.$path;
     }
       
  } ?>

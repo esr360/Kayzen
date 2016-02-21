@@ -15,7 +15,9 @@
     if (host == 'server') {
         $pageTree = '/templates/pages/';
     } else if (host == 'static') {
-        $pageTree = '/../../'.theme.'/pages/';
+        $pageTree = '/..'.projectPath.'/pages/';
+    } else if (host == 'explorer' || host == 'finder') {
+        $pageTree = realpath(__DIR__.'/pages/');
     }
     
     if (host == 'static' && $extension == 'php') {
