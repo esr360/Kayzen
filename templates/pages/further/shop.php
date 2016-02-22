@@ -28,16 +28,16 @@
                 'tag-line' => $tagLine
             ));
             
-            include(ROOT.'/sections/masonry-features.php');
+            masonryFeatures();
         
-            include(ROOT.'/sections/in-store.php');
+            inStore();
             
             clients(array(
                'title'     => 'Popular Brands',
                'sub-title' => 'Get The Best Deals' 
             ));
             
-            include(ROOT.'/sections/feature-cards.php');
+            featureCards();
             
             promoBanner();
             

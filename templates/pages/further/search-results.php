@@ -46,47 +46,47 @@
                 
                 <section id="free-support" class="object-large">
                     <header class="heading_group-small">
-                        <h4 class="heading-size-4-dotted"><a href="#">Do I get free support?</a></h4>
+                        <h4 class="heading-size-4-border"><a href="#">Do I get free support?</a></h4>
                     </header>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sed eros congue leo tincidunt mattis. Vivamus bibendum laoreet nibh nec gravida. Phasellus a efficitur est, ac lacinia ipsum. <mark>Aliquam erat volutpat</mark>. Ut sit amet tellus mauris. Phasellus sed vehicula ligula. Donec ac congue arcu. Morbi metus felis, feugiat facilisis turpis nec, vulputate sollicitudin eros...</p>
                 </section>
                 
                 <section id="free-support" class="object-large">
                     <header class="heading_group-small">
-                        <h4 class="heading-size-4-dotted"><a href="#">Lorem Ipsum Dolor Sit Amet</a></h4>
+                        <h4 class="heading-size-4-border"><a href="#">Lorem Ipsum Dolor Sit Amet</a></h4>
                     </header>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sed eros congue leo tincidunt mattis. <mark>Aliquam erat volutpat</mark>. Vivamus bibendum laoreet nibh nec gravida. Phasellus a efficitur est, ac lacinia ipsum. Ut sit amet tellus mauris. Phasellus sed vehicula ligula. Donec ac congue arcu. Morbi metus felis, feugiat facilisis turpis nec, vulputate sollicitudin eros...</p>
                 </section>
                 
                 <section id="free-support" class="object-large">
                     <header class="heading_group-small">
-                        <h4 class="heading-size-4-dotted"><a href="#">About Us</a></h4>
+                        <h4 class="heading-size-4-border"><a href="#">About Us</a></h4>
                     </header>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sed eros congue leo tincidunt mattis. Vivamus bibendum laoreet nibh nec gravida. Phasellus a efficitur est, ac lacinia ipsum. Ut sit amet tellus mauris. Phasellus sed vehicula ligula. Donec ac congue arcu. <mark>Aliquam erat volutpat</mark>. Morbi metus felis, feugiat facilisis turpis nec, vulputate sollicitudin eros...</p>
                 </section>
                 
                 <section id="free-support" class="object-large">
                     <header class="heading_group-small">
-                        <h4 class="heading-size-4-dotted"><a href="#">Phasellus Sed Vehicula Ligula</a></h4>
+                        <h4 class="heading-size-4-border"><a href="#">Phasellus Sed Vehicula Ligula</a></h4>
                     </header>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. <mark>Aliquam erat volutpat</mark>. Vivamus sed eros congue leo tincidunt mattis. Vivamus bibendum laoreet nibh nec gravida. Phasellus a efficitur est, ac lacinia ipsum. Ut sit amet tellus mauris. Phasellus sed vehicula ligula. Donec ac congue arcu. Morbi metus felis, feugiat facilisis turpis nec, vulputate sollicitudin eros...</p>
                 </section>
                 
                 <section id="free-support" class="object">
                     <header class="heading_group-small">
-                        <h4 class="heading-size-4-dotted"><a href="#">Lorem Ipsum Dolor Sit Amet</a></h4>
+                        <h4 class="heading-size-4-border"><a href="#">Lorem Ipsum Dolor Sit Amet</a></h4>
                     </header>
                     <p><mark>Aliquam erat volutpat</mark>. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sed eros congue leo tincidunt mattis. Vivamus bibendum laoreet nibh nec gravida. Phasellus a efficitur est, ac lacinia ipsum. Ut sit amet tellus mauris. Phasellus sed vehicula ligula. Donec ac congue arcu. Morbi metus felis, feugiat facilisis turpis nec, vulputate sollicitudin eros...</p>
                 </section>
                 
-                <ul class="pagination tabs_nav-pills object-center">
-                    <li class="button-pill-grey-1-thin"><i class="fa fa-angle-left"></i></li>
-                    <li class="button-pill-grey-1-thin">1</li>
-                    <li class="button-pill-grey-1-thin active">2</li>
-                    <li class="button-pill-grey-1-thin">3</li>
-                    <li class="button-pill-grey-1-thin">...</li>
-                    <li class="button-pill-grey-1-thin">10</li>
-                    <li class="button-pill-grey-1-thin"><i class="fa fa-angle-right"></i></li>
+                <ul class="pagination tabs_nav-pills-center">
+                    <li class="button-pill-grey-1-round"><i class="fa fa-angle-left"></i></li>
+                    <li class="button-pill-grey-1-round">1</li>
+                    <li class="button-pill-grey-1-round active">2</li>
+                    <li class="button-pill-grey-1-round">3</li>
+                    <li class="button-pill-grey-1-round">...</li>
+                    <li class="button-pill-grey-1-round">10</li>
+                    <li class="button-pill-grey-1-round"><i class="fa fa-angle-right"></i></li>
                 </ul>
                 
             </div><!-- container -->

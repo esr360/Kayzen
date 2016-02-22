@@ -42,21 +42,21 @@
                             
                             <div class="span-4 lightbox-gallery">
                                 <div class="corner-ribbon-pink" data-ribbon="Sale"></div>
-                                <a href="<?php echo appDir ?>/images/product-1.jpg">
-                                    <img src="<?php echo appDir ?>/images/wallpapers/tall/bg-1.jpg" />
+                                <a href="<?php stockImage('demo/product-1.jpg') ?>">
+                                    <img src="<?php stockImage('demo/tall/hero-1.jpg') ?>" />
                                 </a>
                                 <div id="product-thumbs" class="row object-small">
-                                    <a class="span-3 image-square" href="<?php echo appDir ?>/images/product-1.jpg">
-                                        <img src="<?php echo appDir ?>/images/wallpapers/tall/bg-2.jpg" />
+                                    <a class="span-3 image-square" href="<?php stockImage('demo/product-1.jpg') ?>">
+                                        <img src="<?php stockImage('demo/tall/hero-2.jpg') ?>" />
                                     </a>
-                                    <a class="span-3 image-square" href="<?php echo appDir ?>/images/product-1.jpg">
-                                        <img src="<?php echo appDir ?>/images/wallpapers/tall/bg-3.jpg" />
+                                    <a class="span-3 image-square" href="<?php stockImage('demo/product-1.jpg') ?>">
+                                        <img src="<?php stockImage('demo/tall/hero-3.jpg') ?>" />
                                     </a>
-                                    <a class="span-3 image-square" href="<?php echo appDir ?>/images/product-1.jpg">
-                                        <img src="<?php echo appDir ?>/images/wallpapers/tall/bg-4.jpg" />
+                                    <a class="span-3 image-square" href="<?php stockImage('demo/product-1.jpg') ?>">
+                                        <img src="<?php stockImage('demo/tall/hero-4.jpg') ?>" />
                                     </a>
-                                    <a class="span-3 image-square" href="<?php echo appDir ?>/images/product-1.jpg">
-                                        <img src="<?php echo appDir ?>/images/wallpapers/tall/bg-5.jpg" />
+                                    <a class="span-3 image-square" href="<?php stockImage('demo/product-1.jpg') ?>">
+                                        <img src="<?php stockImage('demo/tall/hero-5.jpg') ?>" />
                                     </a>
                                 </div>
                             </div>
@@ -229,18 +229,18 @@
                             <div class="tabs">
                 
                                 <ul class="tabs_nav">
-                                    <li class="active"><i class="fa fa-comments"></i> Reviews</li>
-                                    <li><i class="fa fa-truck"></i> Delivery</li>
-                                    <li><i class="fa fa-refresh"></i> Returns</li>
+                                    <li class="button active"><i class="fa fa-comments"></i> Reviews</li>
+                                    <li class="button"><i class="fa fa-truck"></i> Delivery</li>
+                                    <li class="button"><i class="fa fa-refresh"></i> Returns</li>
                                 </ul>
                                 
                                 <section class="tabs_content-block-deep-glue active">
                                     
-                                    <article class="tabs_content active">
+                                    <article class="tabs_item active">
                                         <div class="comment object-small">
                                             <div class="object-small">
                                                 <div class="thumbnail-profile-round-xlarge-styled-inline sink">
-                                                    <img src="<?php echo appDir ?>/images/team/team-2.jpg" alt="">
+                                                    <img src="<?php stockImage('demo/team/team-1.jpg') ?>" alt="">
                                                 </div>
                                                 <div class="thumbnail_aside">
                                                     <div class="row-block">
@@ -270,7 +270,7 @@
                                         <div class="comment object-small">
                                             <div class="object-small">
                                                 <div class="thumbnail-profile-round-xlarge-styled-inline sink">
-                                                    <img src="<?php echo appDir ?>/images/team/team-2.jpg" alt="">
+                                                    <img src="<?php stockImage('demo/team/team-2.jpg') ?>" alt="">
                                                 </div>
                                                 <div class="thumbnail_aside">
                                                     <div class="row-block">
@@ -300,7 +300,7 @@
                                         <div class="comment object-small">
                                             <div class="object-small">
                                                 <div class="thumbnail-profile-round-xlarge-styled-inline sink">
-                                                    <img src="<?php echo appDir ?>/images/team/team-2.jpg" alt="">
+                                                    <img src="<?php stockImage('demo/team/team-3.jpg') ?>" alt="">
                                                 </div>
                                                 <div class="thumbnail_aside">
                                                     <div class="row-block">
@@ -328,7 +328,7 @@
                                         </div>
                                     </article>
                                     
-                                    <article class="tabs_content">
+                                    <article class="tabs_item">
                                         <p class="alert-bar-help"><b>Free Devliery</b> - Cum socis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
                                         <table class="table-small">
                                             <thead>
@@ -358,7 +358,7 @@
                                         </table>
                                     </article>
                                     
-                                    <article class="tabs_content">
+                                    <article class="tabs_item">
                                         <h3 class="heading-size-4">Returns Policy</h3>
                                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam finibus metus vel pharetra aliquam. Vestibulum libero leo, pretium at cursus ut, suscipit vel ipsum. Ut ante mauris, congue nec lectus ac, iaculis congue risus. Fusce luctus, libero sed accumsan placerat, urna diam pulvinar elit, quis luctus elit sem non nisl. Mauris bibendum condimentum nibh quis dictum.</p>
                                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam finibus metus vel pharetra aliquam. Integer sit amet massa tristique, rutrum purus in, vestibulum eros. Sed in vulputate augue, et egestas dui. Mauris at egestas erat. Integer libero lorem, commodo in vulputate at, eleifend et nisi. Etiam vel mi velit. Pellentesque vitae porta dui, et pretium libero.</p>

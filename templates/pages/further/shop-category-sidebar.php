@@ -183,16 +183,16 @@
                             ?>
                             
                         </div>  
-                        
-                        <ul class="pagination tabs_nav-pills object-center">
-                            <li class="button-pill-grey-1-thin"><i class="fa fa-angle-left"></i></li>
-                            <li class="button-pill-grey-1-thin">1</li>
-                            <li class="button-pill-grey-1-thin active">2</li>
-                            <li class="button-pill-grey-1-thin">3</li>
-                            <li class="button-pill-grey-1-thin">...</li>
-                            <li class="button-pill-grey-1-thin">10</li>
-                            <li class="button-pill-grey-1-thin"><i class="fa fa-angle-right"></i></li>
-                        </ul>  
+                
+                        <ul class="pagination tabs_nav-pills">
+                            <li class="button-pill-grey-1-round"><i class="fa fa-angle-left"></i></li>
+                            <li class="button-pill-grey-1-round">1</li>
+                            <li class="button-pill-grey-1-round active">2</li>
+                            <li class="button-pill-grey-1-round">3</li>
+                            <li class="button-pill-grey-1-round">...</li>
+                            <li class="button-pill-grey-1-round">10</li>
+                            <li class="button-pill-grey-1-round"><i class="fa fa-angle-right"></i></li>
+                        </ul>   
                         
                         <script>
                             $(document).ready(function() {
