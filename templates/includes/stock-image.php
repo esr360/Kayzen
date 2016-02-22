@@ -4,9 +4,9 @@
         'resolution' => '990x660'
     ), $custom);
         
-    if (demo) { 
+    if (realm == 'live') { 
         echo 'http://placehold.it/'.$options['resolution'];
-    } else {
+    } else if (realm == 'demo') {
         echo appDir.'/images/'.$path;
     }
       

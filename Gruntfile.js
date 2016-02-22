@@ -11,18 +11,17 @@ module.exports = function(grunt) {
     // Set which theme you would like to build assets for
     var theme = grunt.option('theme') || 'Kayzen';
     
-    // If enabled each theme's assets will be output in their own 
-    // directory e.g. app/themes/Kayzen/scripts
-    var themes = grunt.option('themes') || false;
-    
-    // 'server' | 'static' | 'explorer' | 'finder' - used to determine asset paths
-    var host = grunt.option('host') || 'server';
+    // 'demo' | 'live' - Set which realm to enable
+    var realm = grunt.option('realm') || 'demo';
     
     // 'dev' | 'prod' - used to determine asset minification
     var env = grunt.option('env') || 'dev';
     
-    // Set to enable demo mode
-    var demo = grunt.option('demo') || false;
+    // 'server' | 'static' | 'explorer' | 'finder' - used to determine asset paths
+    var host = grunt.option('host') || 'server';
+    
+    // Set to store assets in individual theme directories
+    var themes = grunt.option('themes') || false;
     
     //-------------------------------------------------------------
     
@@ -423,39 +422,39 @@ module.exports = function(grunt) {
         //---------------------------------------------------------
         
         setPHPConstant: {
-            theme : {
+            theme: {
                 constant    : 'theme',
                 value       : theme,
                 file        : 'templates/app.php'
             },
-            themes : {
+            themes: {
                 constant    : 'themes',
                 value       : themes,
                 file        : 'templates/app.php'
             },
-            dev : {
+            dev: {
                 constant    : 'env',
                 value       : 'dev',
                 file        : 'templates/app.php'
             },
-            prod : {
+            prod: {
                 constant    : 'env',
                 value       : 'prod',
                 file        : 'templates/app.php'
             },
-            host : {
+            host: {
                 constant    : 'host',
                 value       : host,
                 file        : 'templates/app.php'
             },
-            static : {
+            static: {
                 constant    : 'host',
                 value       : 'static',
                 file        : 'templates/app.php'
             },
-            demo : {
-                constant    : 'demo',
-                value       : demo,
+            realm: {
+                constant    : 'realm',
+                value       : realm,
                 file        : 'templates/app.php'
             }
         },
@@ -603,7 +602,7 @@ module.exports = function(grunt) {
             'setPHPConstant:theme',
             'setPHPConstant:themes',
             'setPHPConstant:host',
-            'setPHPConstant:demo'
+            'setPHPConstant:realm'
         ];
         var notify = [
             'notify:app'

@@ -37,12 +37,12 @@ define('themes', false);
 define('host', 'server');
 
 /**
- * Will you be shipping the app?
- * @const demo
+ * Set which realm you would like
+ * @const realm
  *
- * Set to enable 'demo' mode
+ * Values: 'demo' | 'live'
  */
-define('demo', false);
+define('realm', 'live');
 
 /**
  * Set the root php/template directory
