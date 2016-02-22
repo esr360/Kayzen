@@ -18,8 +18,11 @@ module.exports = function(grunt) {
     // 'server' | 'static' | 'explorer' | 'finder' - used to determine asset paths
     var host = grunt.option('host') || 'server';
     
-    // If enabled, stock images will be replaced with placeholder images
-    var shippable = grunt.option('shippable') || false;
+    // 'dev' | 'prod' - used to determine asset minification
+    var env = grunt.option('env') || 'dev';
+    
+    // Set to enable demo mode
+    var demo = grunt.option('demo') || false;
     
     //-------------------------------------------------------------
     
@@ -450,9 +453,9 @@ module.exports = function(grunt) {
                 value       : 'static',
                 file        : 'templates/app.php'
             },
-            shippable : {
-                constant    : 'shippable',
-                value       : shippable,
+            demo : {
+                constant    : 'demo',
+                value       : demo,
                 file        : 'templates/app.php'
             }
         },
@@ -600,7 +603,7 @@ module.exports = function(grunt) {
             'setPHPConstant:theme',
             'setPHPConstant:themes',
             'setPHPConstant:host',
-            'setPHPConstant:shippable'
+            'setPHPConstant:demo'
         ];
         var notify = [
             'notify:app'
@@ -610,7 +613,7 @@ module.exports = function(grunt) {
     
     //Default
     grunt.registerTask('default', [
-        'compile:dev',
+        'compile',
         'watch',
     ]); 
        
@@ -625,8 +628,13 @@ module.exports = function(grunt) {
         'clean:pages',
         'setPHPConstant:host',
         'php2html',
-        'compile:dev'
+        'compile'
     ]);
+    
+    // Compile the app
+    grunt.registerTask('compile', 
+        gruntCompile(env)
+    );
     
     // Compile the app for a development environment
     grunt.registerTask('compile:dev', 

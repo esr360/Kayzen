@@ -27,7 +27,7 @@
         if (env == 'dev') {
             echo '<link rel="stylesheet" href="'.appDir.$themePath.'/styles/'.$path.'.css">';
         } else if (env == 'prod') {
-            echo '<link rel="stylesheet" href="'.appDir.$themePath.'/styles/'.$path.'.min.cs">';
+            echo '<link rel="stylesheet" href="'.appDir.$themePath.'/styles/'.$path.'.min.css">';
         }
         
     }          

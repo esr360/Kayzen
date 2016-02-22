@@ -7,9 +7,9 @@
  * Set your work environment
  * @const env
  *
- * Values: 'dev', 'prod'
+ * Values: 'dev' | 'prod'
  */
-define('env', 'dev');
+define('env', 'prod');
 
 /**
  * Set which theme to use
@@ -32,18 +32,17 @@ define('themes', false);
  * Set how you intend to access your project's assets
  * @const host
  *
- * Values: 'static', 'server', 'explorer', 'finder' 
+ * Values: 'static' | 'server' | 'explorer' | 'finder' 
  */
 define('host', 'server');
 
 /**
  * Will you be shipping the app?
- * @const shippable
+ * @const demo
  *
- * Set to 'true' if you are ready to package the app for shipment.
- * Stock images will be replaced with placeholders.
+ * Set to enable 'demo' mode
  */
-define('shippable', false);
+define('demo', false);
 
 /**
  * Set the root php/template directory
