@@ -32,7 +32,7 @@
 		
 		<section class="section-primary relative">
 			
-			<div id="portfolio-items" class="owl-carousel">
+			<div id="portfolio-items" class="owl-carousel owl-full">
 				
 				<div class="container">
 					<div class="row-no-gutter">

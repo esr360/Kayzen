@@ -154,8 +154,8 @@
                         <header class="heading_group">
                             <?php if ($options['type'] == 'blog') { ?>
                                 <div class="heading_date">
-                                    <div>Sep</div>
-                                    <div>23</div>
+                                    <div>Oct</div>
+                                    <div>16</div>
                                 </div>
                             <?php } ?>
                             <div>
@@ -196,8 +196,8 @@
                         <header class="heading_group">
                             <?php if ($options['type'] == 'blog') { ?>
                                 <div class="heading_date">
-                                    <div>Sep</div>
-                                    <div>23</div>
+                                    <div>Oct</div>
+                                    <div>20</div>
                                 </div>
                             <?php } ?>
                             <span>
@@ -238,8 +238,8 @@
                         <header class="heading_group">
                             <?php if ($options['type'] == 'blog') { ?>
                                 <div class="heading_date">
-                                    <div>Sep</div>
-                                    <div>23</div>
+                                    <div>Oct</div>
+                                    <div>27</div>
                                 </div>
                             <?php } ?>
                             <span>
@@ -282,8 +282,8 @@
                         <header class="heading_group">
                             <?php if ($options['type'] == 'blog') { ?>
                                 <div class="heading_date">
-                                    <div>Sep</div>
-                                    <div>23</div>
+                                    <div>Feb</div>
+                                    <div>3</div>
                                 </div>
                             <?php } ?>
                             <div>
@@ -324,8 +324,8 @@
                         <header class="heading_group">
                             <?php if ($options['type'] == 'blog') { ?>
                                 <div class="heading_date">
-                                    <div>Sep</div>
-                                    <div>23</div>
+                                    <div>Feb</div>
+                                    <div>10</div>
                                 </div>
                             <?php } ?>
                             <span>
@@ -366,8 +366,8 @@
                         <header class="heading_group">
                             <?php if ($options['type'] == 'blog') { ?>
                                 <div class="heading_date">
-                                    <div>Sep</div>
-                                    <div>23</div>
+                                    <div>Feb</div>
+                                    <div>14</div>
                                 </div>
                             <?php } ?>
                             <span>

@@ -106,6 +106,7 @@
                     <?php } ?>
                 </div>
                 <?php if ($options['height'] === 'tall') { ?>
+                        <img src="<?php stockImage('demo/tall/hero-'.$options['thumb'].'.jpg') ?>">
                 <?php } else { ?>
                     <img src="<?php stockImage('demo/hero-'.$options['thumb'].'.jpg') ?>">
                 <?php } ?>
@@ -140,7 +141,7 @@
             <div class="article-thumbnails-carousel carousel-cornerDots-revealNav owl-carousel">
                 <?php foreach ($options['thumbs'] as $item) { ?>
                     <?php if ($options['height'] === 'tall') { ?>
-                        <img src="<?php stockImage('demo/hero-'.$options['thumb'].'-tall.jpg') ?>">
+                        <img src="<?php stockImage('demo/tall/hero-'.$options['thumb'].'.jpg') ?>">
                     <?php } else { ?>
                         <img src="<?php stockImage('demo/hero-'.$options['thumb'].'.jpg') ?>">
                     <?php } ?>

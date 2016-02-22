@@ -32,7 +32,7 @@
 		
 		<section class="section-primary relative">
 			
-			<div id="portfolio-items" class="owl-carousel">
+			<div id="portfolio-items" class="owl-carousel owl-full">
 				
 				<div class="container">
 	
@@ -41,12 +41,14 @@
                         <?php
                             
                             articleItem(array(
+                                'title'  => 'Lorem Ipsum Dolor',
                                 'type'   => 'portfolio',
                                 'size'   => 'small',
                                 'span'   => 3,
                             ));
                             
                             articleItem(array(
+                                'title'  => 'Lorem Ipsum Dolor',
                                 'type'   => 'portfolio',
                                 'media'  => 'carousel',
                                 'size'   => 'small',
@@ -54,6 +56,7 @@
                             ));
                             
                             articleItem(array(
+                                'title'  => 'Lorem Ipsum Dolor',
                                 'type'   => 'portfolio',
                                 'media'  => 'youtube',
                                 'size'   => 'small',
@@ -61,12 +64,14 @@
                             ));
                             
                             articleItem(array(
+                                'title'  => 'Lorem Ipsum Dolor',
                                 'type'   => 'portfolio',
                                 'size'   => 'small',
                                 'span'   => 3,
                             ));
                             
                             articleItem(array(
+                                'title'  => 'Lorem Ipsum Dolor',
                                 'type'   => 'portfolio',
                                 'media'  => 'vimeo',
                                 'size'   => 'small',
@@ -74,6 +79,7 @@
                             ));
                             
                             articleItem(array(
+                                'title'  => 'Lorem Ipsum Dolor',
                                 'type'   => 'portfolio',
                                 'media'  => 'carousel',
                                 'size'   => 'small',
@@ -81,12 +87,14 @@
                             ));
                             
                             articleItem(array(
+                                'title'  => 'Lorem Ipsum Dolor',
                                 'type'   => 'portfolio',
                                 'size'   => 'small',
                                 'span'   => 3,
                             ));
                             
                             articleItem(array(
+                                'title'  => 'Lorem Ipsum Dolor',
                                 'type'   => 'portfolio',
                                 'media'  => 'carousel',
                                 'size'   => 'small',
@@ -106,12 +114,14 @@
                         <?php
                             
                             articleItem(array(
+                                'title'  => 'Lorem Ipsum Dolor',
                                 'type'   => 'portfolio',
                                 'size'   => 'small',
                                 'span'   => 3,
                             ));
                             
                             articleItem(array(
+                                'title'  => 'Lorem Ipsum Dolor',
                                 'type'   => 'portfolio',
                                 'media'  => 'carousel',
                                 'size'   => 'small',
@@ -119,6 +129,7 @@
                             ));
                             
                             articleItem(array(
+                                'title'  => 'Lorem Ipsum Dolor',
                                 'type'   => 'portfolio',
                                 'media'  => 'youtube',
                                 'size'   => 'small',
@@ -126,12 +137,14 @@
                             ));
                             
                             articleItem(array(
+                                'title'  => 'Lorem Ipsum Dolor',
                                 'type'   => 'portfolio',
                                 'size'   => 'small',
                                 'span'   => 3,
                             ));
                             
                             articleItem(array(
+                                'title'  => 'Lorem Ipsum Dolor',
                                 'type'   => 'portfolio',
                                 'media'  => 'vimeo',
                                 'size'   => 'small',
@@ -139,6 +152,7 @@
                             ));
                             
                             articleItem(array(
+                                'title'  => 'Lorem Ipsum Dolor',
                                 'type'   => 'portfolio',
                                 'media'  => 'carousel',
                                 'size'   => 'small',
@@ -146,12 +160,14 @@
                             ));
                             
                             articleItem(array(
+                                'title'  => 'Lorem Ipsum Dolor',
                                 'type'   => 'portfolio',
                                 'size'   => 'small',
                                 'span'   => 3,
                             ));
                             
                             articleItem(array(
+                                'title'  => 'Lorem Ipsum Dolor',
                                 'type'   => 'portfolio',
                                 'media'  => 'carousel',
                                 'size'   => 'small',

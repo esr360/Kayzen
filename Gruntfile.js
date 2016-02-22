@@ -394,6 +394,23 @@ module.exports = function(grunt) {
                     custom_dest: 'app/images/demo/{%= name %}/',
                     expand: true
                 }]
+            },
+            tall: {
+                options: {
+                    sizes: [{
+                        name: 'tall',
+                        width: 860,
+                        height: 1150
+                    }],
+                    aspectRatio: false,
+                    gravity: 'center'
+                },
+                files: [{
+                    cwd: 'app/images/demo',
+                    src: 'hero-*.{jpg,gif,png}',
+                    custom_dest: 'app/images/demo/{%= name %}/',
+                    expand: true
+                }]
             }
         },
       
@@ -498,6 +515,11 @@ module.exports = function(grunt) {
                 options: {
                     cwd: 'assets/vendor/MooTools-Core'
                 }
+            },
+            infiniteAjaxScroll: {
+                options: {
+                    cwd: 'assets/vendor/Infinite-AJAX-Scroll'
+                }
             }
         },
       
@@ -513,7 +535,14 @@ module.exports = function(grunt) {
                     log: true,
                     task: 'nocompat'
                 },
-                src: ['assets/vendor/MooTools-Core/Gruntfile.js']
+                src: 'assets/vendor/MooTools-Core/Gruntfile.js'
+            },
+            infiniteAjaxScroll: {
+                options: {
+                    log: true,
+                    task: 'build'
+                },
+                src: 'assets/vendor/Infinite-AJAX-Scroll/Gruntfile.js'
             }
         }
 

@@ -190,6 +190,9 @@
 		.force-dots & {
 			position: static;
 		}
+        .owl-full > & {
+            margin-top: 4em;
+        }
 	}
 	
 	.owl-dot {

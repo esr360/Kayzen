@@ -44,6 +44,10 @@
             }
         }
         
+        @include modifier('ias') {
+            margin-bottom: 4em;
+        }
+        
         // Remove CSS transition from filterable elements
         @include modifier('filterable') {
             > [class*="#{option($grid, 'options', 'col-namespace')}"] {

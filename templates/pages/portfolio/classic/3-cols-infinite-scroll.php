@@ -117,17 +117,10 @@
                                 })
                             });
                         } articlesCarousel();
-                        
-                        // Redefine the lightbox plugin to pass to infiniteScroll
-                        function articlesGallery() {
-                            $('[rel="lightbox"]').magnificPopup({
-                                type : 'image'
-                            });
-                        };
 
                         $("#portfolio-items").KayenInfiniteScroll({
                             isotopeGrid : false
-                        }, [articlesCarousel, articlesGallery]);
+                        }, [articlesCarousel]);
                         
                     });
                 </script>

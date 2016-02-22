@@ -34,7 +34,7 @@
 				
             <div class="container">
 
-                <div class="row-flow row-waffle" id="portfolio-items">
+                <div class="row-flow row-waffle row-ias" id="portfolio-items">
                     
                     <?php
                         

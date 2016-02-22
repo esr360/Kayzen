@@ -22,8 +22,11 @@
             appHeader(array(
                 'modifiers' => 'bar-absolute-dark-sticky'
             ));
-            
-            billboard();
+
+            billboard(array(
+                'title'    => $title,
+                'tag-line' => $tagLine
+            ));
 
 		?>
 		
@@ -48,10 +51,10 @@
                 <div class="desktop-graphic">
                     <img src="<?php echo appDir ?>/images/demo-screen.png" alt="" />
                     <span class="desktop-graphic_image owl-carousel" id="portfolio-thumbs">
-                        <div style="background-image: url('<?php echo appDir ?>/images/stock-1.jpg')"></div>
-                        <div style="background-image: url('<?php echo appDir ?>/images/stock-2.jpg')"></div>
-                        <div style="background-image: url('<?php echo appDir ?>/images/stock-3.jpg')"></div>
-                        <div style="background-image: url('<?php echo appDir ?>/images/stock-4.jpg')"></div>
+                        <div class="bg-cover" style="background-image: url('<?php stockImage('demo/hero-1.jpg')?>')"></div>
+                        <div class="bg-cover" style="background-image: url('<?php stockImage('demo/hero-2.jpg')?>')"></div>
+                        <div class="bg-cover" style="background-image: url('<?php stockImage('demo/hero-3.jpg')?>')"></div>
+                        <div class="bg-cover" style="background-image: url('<?php stockImage('demo/hero-4.jpg')?>')"></div>
                     </span>
                 </div>
                 <nav class="slide-nav" id="desktop-graphic_nav">
@@ -85,7 +88,7 @@
         
         <section class="section-primary-flush">
             <div class="container-small text-center">
-                <p class="lede">Lorem ipsum dolor sit amet, <b>consectetur adipiscing</b> elit. Vestibulum euismod nisi tincidunt mollis sagittis. Sed rutrum quam non tortor ornare, ut semper lorem pellentesque. <a href="#">Mauris bibendum</a> velit mi, in elementum ex consequat id. Sed consequat cursus sapien, <i>non consequat</i> odio pretium sit amet. Nulla at lorem hendrerit sapien vehicula tincidunt faucibus sit amet nunc.</p>
+                <p class="lede">Lorem ipsum dolor sit amet, <strong>consectetur adipiscing</strong> elit. Vestibulum euismod nisi tincidunt mollis sagittis. Sed rutrum quam non tortor ornare, ut semper lorem pellentesque. <a href="#">Mauris bibendum</a> velit mi, in elementum ex consequat id. Sed consequat cursus sapien, <i>non consequat</i> odio pretium sit amet. Nulla at lorem hendrerit sapien vehicula tincidunt faucibus sit amet nunc.</p>
             </div>
         </section>
         
@@ -341,7 +344,7 @@
 			<div class="container-small text-center">
 				<blockquote class="blockquote">
 					<a class="blockquote_avatar-large" href="#">
-						<img src="/app/images/team/team-2.jpg" alt="">
+						<img src="<?php stockImage('demo/team/team-2.jpg')?>" alt="">
 					</a>
 					<div class="blockquote_content">
 						<p class="lede">Suspendisse tempus sodales neque, eget eleifend <b>turpis tristique</b> eu. Nullam a nisl maximus, <b>ultrices est</b> ut blandit nislr, elit in lobortis mattis.</p>

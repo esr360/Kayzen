@@ -129,14 +129,21 @@
 //-----------------------------------------------------------------
 
     .ias-spinner, .ias-noneleft {
-        position: absolute;
-        bottom: -2em;
-        left: 0;
-        right: 0;
+        margin-top: 4em;
         text-align: center;
         // offset flow row gutter
         [class*="-flow"] & {
             margin-left: option($grid, 'options', 'gutter');
+        }
+        .row-ias & {
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: -6em;
+        }
+        .row-waffle & {
+            margin-top: calc(4em - 3%);
+            margin-bottom: 3%;
         }
     }
     

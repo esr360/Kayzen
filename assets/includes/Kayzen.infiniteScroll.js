@@ -68,9 +68,15 @@
                     isotopeGrid.appended(items);
                 });
             } else {
-                // Show the items
                 ias.on('rendered', function(items) {
-                    $(items).css({ opacity: 1 });
+                    // Show the items
+                    $(items).css({ opacity: 1 });  
+                    // Re-call the iframeHeight plugin
+                    $('.auto-resizable-iframe').iframeHeight();
+                    // Re-call the lightbox plugin
+                    $('[rel="lightbox"]').magnificPopup({
+                        type : 'image'
+                    });             
                 });
             }
             
