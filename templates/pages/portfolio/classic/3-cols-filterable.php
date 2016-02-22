@@ -30,7 +30,7 @@
            
        ?>
 		
-		<section class="section-primary-mini relative text-center">
+		<section class="section-primary-mini relative">
 			<ul class="tabs_nav-pills-center" id="portfolio-categories">
 				<li class="button-pill-grey-1-round active" data-filter="*">View All</li>
 				<li class="button-pill-grey-1-round" data-filter="[data-HTML-theme]">HTML Themes</li>

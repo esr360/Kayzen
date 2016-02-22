@@ -189,6 +189,9 @@
 
     .pagination {
         margin-top: (base('margin') * 2);
+        .row-waffle + & {
+            margin-top: calc(#{(base('margin') * 2)} + 3%);
+        }
     }
 
 } // @mixin lists

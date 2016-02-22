@@ -35,7 +35,7 @@
 			<div class="container-small">
                 
                 <div class="thumbnail-article">
-                    <img src="<?php echo appDir ?>/images/wallpapers/bg-<?php echo rand(1, 7) ?>.jpg">
+                    <img src="<?php stockImage('hero-'.rand(1, 7).'.jpg') ?>">
                 </div>
                 
                 <div class="post-content lede text-justify">
@@ -49,17 +49,17 @@
                     
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. <a href="#">Inquit, dasne adolescenti veniam?</a> Ergo instituto veterum, quo etiam Stoici utuntur, hinc capiamus exordium. Quarum ambarum rerum cum medicinam pollicetur, luxuriae licentiam pollicetur. Duo Reges: constructio interrete. Docent enim nos, ut scis, dialectici, si ea quae rem aliquam sequantur, falsa sint.</p>
         
-                    <p><q class="blockquote-pull-left-top"><span class="blockquote_content">An vero, inquit, quisquam potest probare, quod perceptfum quod.</span></q>Falsam illam ipsam esse, quam sequantur. Universa enim illorum ratione cum tota vestra confligendum puto. Perturbationes autem nulla naturae <b>vi commoventur, omniaque ea sunt opiniones</b> ac iudicia levitatis. <a href="#">Haec dicuntur inconstantissime.</a> Restinguet citius, si ardentem acceperit. Quae sequuntur igitur? Quicquid enim a sapientia proficiscitur, id continuo debet expletum esse omnibus suis partibus; Quod non subducta utilitatis ratione effici solet, sed ipsum a se oritur et sua sponte nascitur. Non enim solum Torquatus dixit quid sentiret, sed etiam cur. </p>
+                    <p><q class="blockquote-pull-left-top"><span class="blockquote_content">An vero, inquit, quisquam potest probare, quod perceptfum quod.</span></q>Falsam illam ipsam esse, quam sequantur. Universa enim illorum ratione cum tota vestra confligendum puto. Perturbationes autem nulla naturae <strong>vi commoventur, omniaque ea sunt opiniones</strong> ac iudicia levitatis. <a href="#">Haec dicuntur inconstantissime.</a> Restinguet citius, si ardentem acceperit. Quae sequuntur igitur? Quicquid enim a sapientia proficiscitur, id continuo debet expletum esse omnibus suis partibus; Quod non subducta utilitatis ratione effici solet, sed ipsum a se oritur et sua sponte nascitur. Non enim solum Torquatus dixit quid sentiret, sed etiam cur. </p>
         
                     <p>Nullis enim partitionibus, nullis definitionibus utuntur ipsique dicunt ea se modo probare, quibus natura tacita adsentiatur. Quacumque enim ingredimur, in aliqua historia vestigium ponimus. Quae sunt igitur communia vobis cum antiquis, iis sic utamur quasi concessis. Immo alio genere. </p>
         
-                    <p>Mihi vero, inquit, placet agi subtilius et, ut ipse dixisti, pressius. Idemne, quod iucunde? Qua ex cognitione facilior facta est investigatio rerum occultissimarum. Paria sunt igitur. <i>Graece donan, Latine voluptatem vocant.</i> <a href="#">Quod equidem non reprehendo;</a> <b>Scrupulum, inquam, abeunti;</b> Sed virtutem ipsam inchoavit, nihil amplius. Similiter sensus, cum accessit ad naturam, tuetur illam quidem, sed etiam se tuetur; </p>
+                    <p>Mihi vero, inquit, placet agi subtilius et, ut ipse dixisti, pressius. Idemne, quod iucunde? Qua ex cognitione facilior facta est investigatio rerum occultissimarum. Paria sunt igitur. <i>Graece donan, Latine voluptatem vocant.</i> <a href="#">Quod equidem non reprehendo;</a> <strong>Scrupulum, inquam, abeunti;</strong> Sed virtutem ipsam inchoavit, nihil amplius. Similiter sensus, cum accessit ad naturam, tuetur illam quidem, sed etiam se tuetur; </p>
                     
                     <blockquote class="blockquote">
                         <p class="blockquote_content">An vero, inquit, quisquam potest probare, quod perceptfum, quod.</p>
                     </blockquote>
         
-                    <p>Quis non odit sordidos, vanos, leves, futtiles? Quid censes eos esse facturos, qui omnino virtutem a bonorum fine segregaverunt, Epicurum, Hieronymum, illos etiam, si qui Carneadeum finem tueri volunt? <b>Virtutibus igitur rectissime</b> mihi videris et ad consuetudinem nostrae orationis vitia posuisse contraria. Ita fit beatae vitae domina fortuna, quam Epicurus ait exiguam intervenire sapienti. <a href="#">Sed ego in hoc resisto;</a> Si longus, levis; Satisne vobis videor pro meo iure in vestris auribus commentatus? <a href="#">Satis est ad hoc responsum</a>. In qua si nihil est praeter rationem, sit in una virtute finis bonorum; Traditur, inquit, ab Epicuro ratio neglegendi doloris. </p>
+                    <p>Quis non odit sordidos, vanos, leves, futtiles? Quid censes eos esse facturos, qui omnino virtutem a bonorum fine segregaverunt, Epicurum, Hieronymum, illos etiam, si qui Carneadeum finem tueri volunt? <strong>Virtutibus igitur rectissime</strong> mihi videris et ad consuetudinem nostrae orationis vitia posuisse contraria. Ita fit beatae vitae domina fortuna, quam Epicurus ait exiguam intervenire sapienti. <a href="#">Sed ego in hoc resisto;</a> Si longus, levis; Satisne vobis videor pro meo iure in vestris auribus commentatus? <a href="#">Satis est ad hoc responsum</a>. In qua si nihil est praeter rationem, sit in una virtute finis bonorum; Traditur, inquit, ab Epicuro ratio neglegendi doloris. </p>
         
                     <p>Modo etiam paulum ad dexteram de via declinavi, ut ad Pericli sepulcrum accederem. In motu et in statu corporis nihil inest, quod animadvertendum esse ipsa natura iudicet? <a href="#">Ita nemo beato beatior.</a> Mihi autem nihil tam perspicuum videtur, quam has sententias eorum philosophorum re inter se magis quam verbis dissidere; Quacumque enim ingredimur, in aliqua historia vestigium ponimus. Quae sunt igitur communia vobis cum antiquis, iis sic utamur quasi concessis; Quod non faceret, si in voluptate summum bonum poneret. Qua tu etiam inprudens utebare non numquam. </p>
                     
@@ -210,7 +210,7 @@
                     <div class="row">
                         <div class="span-2 text-center">
                             <div class="thumbnail-mini-profile-round-xlarge-styled">
-                                <img src="<?php echo appDir ?>/images/team/team-2.jpg" alt="">
+                                <img src="<?php stockImage('demo/team/team-2.jpg') ?>" alt="">
                             </div>
                             <div class="icon_group-small">
                                 <a href="#" class="button-icon-border-size-1 tooltip-top" data-tooltip="Facebook">
@@ -247,7 +247,7 @@
                             <div class="row object-small">
                                 <div class="span-2 va-middle text-center">
                                     <div class="thumbnail-profile-round-xlarge-styled">
-                                        <img src="<?php echo appDir ?>/images/team/team-2.jpg" alt="">
+                                        <img src="<?php stockImage('demo/team/team-2.jpg') ?>" alt="">
                                     </div>
                                 </div>
                                 <div class="span-10 va-middle">
@@ -278,7 +278,7 @@
                             <div class="row object-small span-10 text-left">
                                 <div class="span-2 va-middle text-center">
                                     <div class="thumbnail-profile-round-large-styled">
-                                        <img src="<?php echo appDir ?>/images/team/team-2.jpg" alt="">
+                                        <img src="<?php stockImage('demo/team/team-2.jpg') ?>" alt="">
                                     </div>
                                 </div>
                                 <div class="span-10 va-middle">
@@ -309,7 +309,7 @@
                             <div class="row object-small">
                                 <div class="span-2 va-middle text-center">
                                     <div class="thumbnail-profile-round-xlarge-styled">
-                                        <img src="<?php echo appDir ?>/images/team/team-2.jpg" alt="">
+                                        <img src="<?php stockImage('demo/team/team-2.jpg') ?>" alt="">
                                     </div>
                                 </div>
                                 <div class="span-10 va-middle">
@@ -374,8 +374,8 @@
                     <div class="span-4 relative">	
                         <div class="thumbnail-zoom">
                             <div class="thumbnail_mask">
-                                <div class="icon_group-small">
-                                    <a href="#" class="button-icon-border-circle-size-2">
+                                <div class="thumbnail_controls icon_group-small">
+                                    <a href="<?php stockImage('demo/hero-7.jpg') ?>" class="button-icon-border-circle-size-2" rel="lightbox">
                                         <i class="fa fa-search"></i>
                                     </a>
                                     <a href="#" class="button-icon-border-circle-size-2">
@@ -383,7 +383,7 @@
                                     </a>
                                 </div>
                             </div>
-                            <img src="<?php echo appDir ?>/images/wallpapers/bg-7.jpg">
+                            <img src="<?php stockImage('demo/hero-7.jpg') ?>">
                         </div>
                         <header class="heading_group">
                             <div class="heading_date">
@@ -407,8 +407,8 @@
                     <div class="span-4 relative">	
                         <div class="thumbnail-zoom">
                             <div class="thumbnail_mask">
-                                <div class="icon_group-small">
-                                    <a href="#" class="button-icon-border-circle-size-2">
+                                <div class="thumbnail_controls icon_group-small">
+                                    <a href="<?php stockImage('demo/hero-7.jpg') ?>" class="button-icon-border-circle-size-2" rel="lightbox">
                                         <i class="fa fa-search"></i>
                                     </a>
                                     <a href="#" class="button-icon-border-circle-size-2">
@@ -416,7 +416,7 @@
                                     </a>
                                 </div>
                             </div>
-                            <img src="<?php echo appDir ?>/images/wallpapers/bg-5.jpg">
+                            <img src="<?php stockImage('demo/hero-5.jpg') ?>">
                         </div>
                         <header class="heading_group">
                             <div class="heading_date">
@@ -440,8 +440,8 @@
                     <div class="span-4 relative">	
                         <div class="thumbnail-zoom">
                             <div class="thumbnail_mask">
-                                <div class="icon_group-small">
-                                    <a href="#" class="button-icon-border-circle-size-2">
+                                <div class="thumbnail_controls icon_group-small">
+                                    <a href="<?php stockImage('demo/hero-7.jpg') ?>" class="button-icon-border-circle-size-2" rel="lightbox">
                                         <i class="fa fa-search"></i>
                                     </a>
                                     <a href="#" class="button-icon-border-circle-size-2">
@@ -449,7 +449,7 @@
                                     </a>
                                 </div>
                             </div>
-                            <img src="<?php echo appDir ?>/images/wallpapers/bg-3.jpg">
+                            <img src="<?php stockImage('demo/hero-3.jpg') ?>">
                         </div>
                         <header class="heading_group">
                             <div class="heading_date">

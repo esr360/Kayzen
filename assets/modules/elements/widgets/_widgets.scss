@@ -390,10 +390,6 @@
                     display: none;
                 }
             }
-            + .ias-noneleft {
-                position: relative;
-                bottom: 0;
-            }
             > .owl-carousel {
                 @extend .object;
             }

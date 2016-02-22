@@ -30,12 +30,12 @@
 
 		?>
 		
-		<section class="section-primary-mini relative text-center">	
-			<ul class="tabs_nav-pills" id="blog-types">
-				<li class="button-pill-grey-1-thin active" data-filter="*">View All</li>
-				<li class="button-pill-grey-1-thin" data-filter="[data-image]">Image</li>
-				<li class="button-pill-grey-1-thin" data-filter="[data-carousel]">Carousel</li>
-				<li class="button-pill-grey-1-thin" data-filter="[data-vimeo], [data-youtube]">Video</li>
+		<section class="section-primary-mini relative">	
+			<ul class="tabs_nav-pills-center" id="blog-types">
+				<li class="button-pill-grey-1-round active" data-filter="*">View All</li>
+				<li class="button-pill-grey-1-round" data-filter="[data-image]">Image</li>
+				<li class="button-pill-grey-1-round" data-filter="[data-carousel]">Carousel</li>
+				<li class="button-pill-grey-1-round" data-filter="[data-vimeo], [data-youtube]">Video</li>
 			</ul>
 		</section>
 		
