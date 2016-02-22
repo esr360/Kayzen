@@ -35,7 +35,7 @@
 			<div class="container-small">
                 
                 <div class="thumbnail-article">
-                    <img src="<?php stockImage('hero-'.rand(1, 7).'.jpg') ?>">
+                    <img src="<?php stockImage('demo/hero-'.rand(1, 7).'.jpg') ?>">
                 </div>
                 
                 <div class="post-content lede text-justify">
@@ -210,7 +210,7 @@
                     <div class="row">
                         <div class="span-2 text-center">
                             <div class="thumbnail-mini-profile-round-xlarge-styled">
-                                <img src="<?php stockImage('demo/team/team-2.jpg') ?>" alt="">
+                                <img src="<?php stockImage('team/team-2.jpg') ?>" alt="">
                             </div>
                             <div class="icon_group-small">
                                 <a href="#" class="button-icon-border-size-1 tooltip-top" data-tooltip="Facebook">
@@ -247,7 +247,7 @@
                             <div class="row object-small">
                                 <div class="span-2 va-middle text-center">
                                     <div class="thumbnail-profile-round-xlarge-styled">
-                                        <img src="<?php stockImage('demo/team/team-2.jpg') ?>" alt="">
+                                        <img src="<?php stockImage('team/team-2.jpg') ?>" alt="">
                                     </div>
                                 </div>
                                 <div class="span-10 va-middle">
@@ -278,7 +278,7 @@
                             <div class="row object-small span-10 text-left">
                                 <div class="span-2 va-middle text-center">
                                     <div class="thumbnail-profile-round-large-styled">
-                                        <img src="<?php stockImage('demo/team/team-2.jpg') ?>" alt="">
+                                        <img src="<?php stockImage('team/team-2.jpg') ?>" alt="">
                                     </div>
                                 </div>
                                 <div class="span-10 va-middle">
@@ -309,7 +309,7 @@
                             <div class="row object-small">
                                 <div class="span-2 va-middle text-center">
                                     <div class="thumbnail-profile-round-xlarge-styled">
-                                        <img src="<?php stockImage('demo/team/team-2.jpg') ?>" alt="">
+                                        <img src="<?php stockImage('team/team-2.jpg') ?>" alt="">
                                     </div>
                                 </div>
                                 <div class="span-10 va-middle">

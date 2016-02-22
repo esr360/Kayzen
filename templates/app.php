@@ -43,7 +43,7 @@ define('host', 'server');
  * Set to 'true' if you are ready to package the app for shipment.
  * Stock images will be replaced with placeholders.
  */
-define('shippable', true);
+define('shippable', false);
 
 /**
  * Set the root php/template directory

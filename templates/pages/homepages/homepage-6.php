@@ -214,7 +214,7 @@
 									<div class="thumbnail_mask">
 										<div class="thumbnail_controls icon_group-small">
 											<a 
-                                                href="<?php stockImage('demo/hero-7.jpg') ?>" 
+                                                href="<?php stockImage('demo/hero-12.jpg') ?>" 
                                                 class="button-icon-border-circle" 
                                                 rel="lightbox"
                                             >
@@ -225,7 +225,7 @@
 											</a>
 										</div>
 									</div>
-									<img src="<?php stockImage('demo/hero-7.jpg') ?>">
+									<img src="<?php stockImage('demo/hero-12.jpg') ?>">
 								</div>
 								<div class="thumbnail-profile-round-badge">
 									<img src="<?php stockImage('team/team-2.jpg') ?>" alt="">
@@ -254,7 +254,7 @@
 									<div class="thumbnail_mask">
 										<div class="thumbnail_controls icon_group-small">
 											<a 
-                                                href="<?php stockImage('demo/hero-7.jpg') ?>" 
+                                                href="<?php stockImage('demo/hero-10.jpg') ?>" 
                                                 class="button-icon-border-circle" 
                                                 rel="lightbox"
                                             >
@@ -265,7 +265,7 @@
 											</a>
 										</div>
 									</div>
-									<img src="<?php stockImage('demo/hero-7.jpg') ?>">
+									<img src="<?php stockImage('demo/hero-10.jpg') ?>">
 								</div>
 								<div class="thumbnail-profile-round-badge">
 									<img src="<?php stockImage('team/team-1.jpg') ?>" alt="">

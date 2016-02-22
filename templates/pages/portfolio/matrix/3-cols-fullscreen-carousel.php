@@ -22,8 +22,11 @@
             appHeader(array(
                 'modifiers' => 'bar-absolute-dark-sticky'
             ));
-            
-            billboard();
+
+            billboard(array(
+                'title'    => $title,
+                'tag-line' => $tagLine
+            ));
 
 		?>
 		

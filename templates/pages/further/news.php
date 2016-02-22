@@ -45,7 +45,7 @@
 							<div class="owl-carousel" id="latest-articles">
 								
 								<div class="thumbnail-feature">
-									<img src="<?php echo appDir ?>/images/wallpapers/bg-2.jpg">
+									<img src="<?php stockImage('demo/hero-2.jpg') ?>">
 									<div class="thumbnail_content">
 										<header class="heading_group-small">
 											<div class="heading_date">
@@ -61,7 +61,7 @@
 								</div>
 								
 								<div class="thumbnail-feature">
-									<img src="<?php echo appDir ?>/images/wallpapers/bg-3.jpg">
+									<img src="<?php stockImage('demo/hero-3.jpg') ?>">
 									<div class="thumbnail_content">
 										<header class="heading_group-small">
 											<div class="heading_date">
@@ -77,7 +77,7 @@
 								</div>
 								
 								<div class="thumbnail-feature">
-									<img src="<?php echo appDir ?>/images/wallpapers/bg-5.jpg">
+									<img src="<?php stockImage('demo/hero-5.jpg') ?>">
 									<div class="thumbnail_content">
 										<header class="heading_group-small">
 											<div class="heading_date">
@@ -93,7 +93,7 @@
 								</div>
 								
 								<div class="thumbnail-feature">
-									<img src="<?php echo appDir ?>/images/wallpapers/bg-6.jpg">
+									<img src="<?php stockImage('demo/hero-6.jpg') ?>">
 									<div class="thumbnail_content">
 										<header class="heading_group-small">
 											<div class="heading_date">
@@ -109,7 +109,7 @@
 								</div>
 								
 								<div class="thumbnail-feature">
-									<img src="<?php echo appDir ?>/images/wallpapers/bg-7.jpg">
+									<img src="<?php stockImage('demo/hero-7.jpg') ?>">
 									<div class="thumbnail_content">
 										<header class="heading_group-small">
 											<div class="heading_date">
@@ -134,11 +134,11 @@
 						</div>
 						
 						<div class="thumbnail_grid-fade row-magic" id="latest-articles-thumbs">
-							<img class="span active" src="<?php echo appDir ?>/images/wallpapers/bg-2.jpg">
-							<img class="span" src="<?php echo appDir ?>/images/wallpapers/bg-3.jpg">
-							<img class="span" src="<?php echo appDir ?>/images/wallpapers/bg-5.jpg">
-							<img class="span" src="<?php echo appDir ?>/images/wallpapers/bg-6.jpg">
-							<img class="span" src="<?php echo appDir ?>/images/wallpapers/bg-7.jpg">
+							<img class="span active" src="<?php stockImage('demo/hero-7.jpg') ?>">
+							<img class="span" src="<?php stockImage('demo/hero-4.jpg') ?>">
+							<img class="span" src="<?php stockImage('demo/hero-5.jpg') ?>">
+							<img class="span" src="<?php stockImage('demo/hero-6.jpg') ?>">
+							<img class="span" src="<?php stockImage('demo/hero-7.jpg') ?>">
 						</div>
 						
 						<script>
@@ -162,8 +162,8 @@
 							<div class="span-6 relative">	
 								<div class="thumbnail-zoom">
 									<div class="thumbnail_mask">
-										<div class="icon_group-small">
-											<a href="#" class="button-icon-border-circle-size-2">
+										<div class="thumbnail_controls icon_group-small">
+											<a href="<?php stockImage('demo/hero-7.jpg') ?>" class="button-icon-border-circle-size-2" rel="lightbox">
 												<i class="fa fa-search"></i>
 											</a>
 											<a href="#" class="button-icon-border-circle-size-2">
@@ -171,10 +171,10 @@
 											</a>
 										</div>
 									</div>
-									<img src="<?php echo appDir ?>/images/wallpapers/bg-7.jpg">
+									<img src="<?php stockImage('demo/hero-7.jpg') ?>">
 								</div>
 								<div class="thumbnail-profile-round-badge">
-									<img src="<?php echo appDir ?>/images/team/team-2.jpg" alt="">
+									<img src="<?php stockImage('team/team-2.jpg') ?>" alt="">
 								</div>
 								<header class="heading_group">
 									<div class="heading_date">
@@ -197,9 +197,9 @@
 							
 							<div class="span-6 relative">	
 								<div class="thumbnail-zoom">
-									<div class="thumbnail_mask">
+									<div class="thumbnail_controls thumbnail_mask">
 										<div class="icon_group-small">
-											<a href="#" class="button-icon-border-circle-size-2">
+											<a href="<?php stockImage('demo/hero-5.jpg') ?>" class="button-icon-border-circle-size-2" rel="lightbox">
 												<i class="fa fa-search"></i>
 											</a>
 											<a href="#" class="button-icon-border-circle-size-2">
@@ -207,10 +207,10 @@
 											</a>
 										</div>
 									</div>
-									<img src="<?php echo appDir ?>/images/wallpapers/bg-5.jpg">
+									<img src="<?php stockImage('demo/hero-5.jpg') ?>">
 								</div>
 								<div class="thumbnail-profile-round-badge">
-									<img src="<?php echo appDir ?>/images/team/team-2.jpg" alt="">
+									<img src="<?php stockImage('team/team-2.jpg') ?>" alt="">
 								</div>
 								<header class="heading_group">
 									<div class="heading_date">
@@ -287,7 +287,7 @@
 								
 								<blockquote class="blockquote">
 									<a class="blockquote_avatar-large" href="#">
-										<img src="/assets/images/team/team-2.jpg" alt="">
+										<img src="<?php stockImage('team/team-2.jpg') ?>" alt="">
 									</a>
 									<div class="blockquote_content">
 										<p>Suspendisse tempus sodales neque, eget eleifend <b>turpis tristique</b> eu. Nullam a nisl maximus, <b>ultrices est</b> ut blandit nislr, elit in lobortis mattis.</p>
@@ -299,7 +299,7 @@
 								
 								<blockquote class="blockquote">
 									<a class="blockquote_avatar-large" href="#">
-										<img src="/assets/images/team/team-2.jpg" alt="">
+										<img src="<?php stockImage('team/team-2.jpg') ?>" alt="">
 									</a>
 									<div class="blockquote_content">
 										<p>Suspendisse tempus sodales neque, eget eleifend <b>turpis tristique</b> eu. Nullam a nisl maximus, <b>ultrices est</b> ut blandit nislr, elit in lobortis mattis.</p>
@@ -335,16 +335,20 @@
 							<div class="span-4 relative">	
 								<div class="thumbnail-zoom">
 									<div class="thumbnail_mask">
-										<div class="icon_group-small">
-											<a href="#" class="button-icon-border-circle-size-2">
+										<div class="thumbnail_controls icon_group-small">
+											<a 
+                                                href="<?php stockImage('demo/hero-7.jpg') ?>" 
+                                                class="button-icon-border-circle" 
+                                                rel="lightbox"
+                                            >
 												<i class="fa fa-search"></i>
 											</a>
-											<a href="#" class="button-icon-border-circle-size-2">
+											<a href="#" class="button-icon-border-circle">
 												<i class="fa fa-link"></i>
 											</a>
 										</div>
 									</div>
-									<img src="<?php echo appDir ?>/images/wallpapers/bg-7.jpg">
+									<img src="<?php stockImage('demo/hero-7.jpg') ?>">
 								</div>
 								<header class="heading_group">
 									<div class="heading_date">
@@ -368,16 +372,20 @@
 							<div class="span-4 relative">	
 								<div class="thumbnail-zoom">
 									<div class="thumbnail_mask">
-										<div class="icon_group-small">
-											<a href="#" class="button-icon-border-circle-size-2">
+										<div class="thumbnail_controls icon_group-small">
+											<a 
+                                                href="<?php stockImage('demo/hero-5.jpg') ?>" 
+                                                class="button-icon-border-circle" 
+                                                rel="lightbox"
+                                            >
 												<i class="fa fa-search"></i>
 											</a>
-											<a href="#" class="button-icon-border-circle-size-2">
+											<a href="#" class="button-icon-border-circle">
 												<i class="fa fa-link"></i>
 											</a>
 										</div>
 									</div>
-									<img src="<?php echo appDir ?>/images/wallpapers/bg-5.jpg">
+									<img src="<?php stockImage('demo/hero-5.jpg') ?>">
 								</div>
 								<header class="heading_group">
 									<div class="heading_date">
@@ -401,16 +409,20 @@
 							<div class="span-4 relative">	
 								<div class="thumbnail-zoom">
 									<div class="thumbnail_mask">
-										<div class="icon_group-small">
-											<a href="#" class="button-icon-border-circle-size-2">
+										<div class="thumbnail_controls icon_group-small">
+											<a 
+                                                href="<?php stockImage('demo/hero-3.jpg') ?>" 
+                                                class="button-icon-border-circle" 
+                                                rel="lightbox"
+                                            >
 												<i class="fa fa-search"></i>
 											</a>
-											<a href="#" class="button-icon-border-circle-size-2">
+											<a href="#" class="button-icon-border-circle">
 												<i class="fa fa-link"></i>
 											</a>
 										</div>
 									</div>
-									<img src="<?php echo appDir ?>/images/wallpapers/bg-3.jpg">
+									<img src="<?php stockImage('demo/hero-3.jpg') ?>">
 								</div>
 								<header class="heading_group">
 									<div class="heading_date">

@@ -240,7 +240,7 @@
                                         <div class="comment object-small">
                                             <div class="object-small">
                                                 <div class="thumbnail-profile-round-xlarge-styled-inline sink">
-                                                    <img src="<?php stockImage('demo/team/team-1.jpg') ?>" alt="">
+                                                    <img src="<?php stockImage('team/team-1.jpg') ?>" alt="">
                                                 </div>
                                                 <div class="thumbnail_aside">
                                                     <div class="row-block">
@@ -270,7 +270,7 @@
                                         <div class="comment object-small">
                                             <div class="object-small">
                                                 <div class="thumbnail-profile-round-xlarge-styled-inline sink">
-                                                    <img src="<?php stockImage('demo/team/team-2.jpg') ?>" alt="">
+                                                    <img src="<?php stockImage('team/team-2.jpg') ?>" alt="">
                                                 </div>
                                                 <div class="thumbnail_aside">
                                                     <div class="row-block">
@@ -300,7 +300,7 @@
                                         <div class="comment object-small">
                                             <div class="object-small">
                                                 <div class="thumbnail-profile-round-xlarge-styled-inline sink">
-                                                    <img src="<?php stockImage('demo/team/team-3.jpg') ?>" alt="">
+                                                    <img src="<?php stockImage('team/team-3.jpg') ?>" alt="">
                                                 </div>
                                                 <div class="thumbnail_aside">
                                                     <div class="row-block">

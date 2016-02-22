@@ -84,7 +84,7 @@
                 <div class="thumbnail_mask">
                     <div class="thumbnail_controls<?php if($options['matrix'] && $options['maskTitle']) echo '-corner' ?> icon_group-small">
                         <a 
-                            href="<?php stockImage('/demo/hero'.$options['thumb'].'.jpg') ?>"
+                            href="<?php stockImage('demo/hero-'.$options['thumb'].'.jpg') ?>"
                             class="button-icon-border-circle"
                             rel="lightbox"
                         >
@@ -156,8 +156,8 @@
                     <div class="tile tile-rec">
                         <a 
                             class="tile-img" 
-                            data-bg="<?php stockImage('/demo/hero-'.rand(1, 7).'.jpg') ?>"
-                            href="<?php stockImage('/demo/hero-'.rand(1, 7).'.jpg') ?>"
+                            data-bg="<?php stockImage('demo/hero-'.rand(1, 7).'.jpg') ?>"
+                            href="<?php stockImage('demo/hero-'.rand(1, 7).'.jpg') ?>"
                         ></a>
                     </div>
                     <div class="tile tile-rec">
@@ -165,23 +165,23 @@
                             <div class="tile tile-rec">
                                 <a 
                                     class="tile-img" 
-                                    data-bg="<?php stockImage('/demo/hero-'.rand(1, 7).'.jpg') ?>"
-                                    href="<?php stockImage('/demo/hero-'.rand(1, 7).'.jpg') ?>"
+                                    data-bg="<?php stockImage('demo/hero-'.rand(1, 7).'.jpg') ?>"
+                                    href="<?php stockImage('demo/hero-'.rand(1, 7).'.jpg') ?>"
                                 ></a>
                             </div>
                             <div class="tile tile-rec">
                                 <div class="tile tile-box">
                                     <a 
                                         class="tile-img" 
-                                        data-bg="<?php stockImage('/demo/hero-'.rand(1, 7).'.jpg') ?>"
-                                        href="<?php stockImage('/demo/hero-'.rand(1, 7).'.jpg') ?>"
+                                        data-bg="<?php stockImage('demo/hero-'.rand(1, 7).'.jpg') ?>"
+                                        href="<?php stockImage('demo/hero-'.rand(1, 7).'.jpg') ?>"
                                     ></a>
                                 </div>
                                 <div class="tile tile-box">
                                     <a 
                                         class="tile-img" 
-                                        data-bg="<?php stockImage('/demo/hero-'.rand(1, 7).'.jpg') ?>"
-                                        href="<?php stockImage('/demo/hero-'.rand(1, 7).'.jpg') ?>"
+                                        data-bg="<?php stockImage('demo/hero-'.rand(1, 7).'.jpg') ?>"
+                                        href="<?php stockImage('demo/hero-'.rand(1, 7).'.jpg') ?>"
                                     ></a>
                                 </div>
                             </div>
@@ -189,8 +189,8 @@
                         <div class="tile tile-box">
                             <a 
                                 class="tile-img" 
-                                data-bg="<?php stockImage('/demo/hero-'.rand(1, 7).'.jpg') ?>"
-                                href="<?php stockImage('/demo/hero-'.rand(1, 7).'.jpg') ?>" 
+                                data-bg="<?php stockImage('demo/hero-'.rand(1, 7).'.jpg') ?>"
+                                href="<?php stockImage('demo/hero-'.rand(1, 7).'.jpg') ?>" 
                             ></a>
                         </div>
                     </div>
@@ -198,8 +198,8 @@
                 <div class="tile tile-box">
                     <a 
                         class="tile-img" 
-                        data-bg="<?php stockImage('/demo/hero-'.rand(1, 7).'.jpg') ?>"
-                        href="<?php stockImage('/demo/hero-'.rand(1, 7).'.jpg') ?>"
+                        data-bg="<?php stockImage('demo/hero-'.rand(1, 7).'.jpg') ?>"
+                        href="<?php stockImage('demo/hero-'.rand(1, 7).'.jpg') ?>"
                     ></a>
                 </div>
             </div>
