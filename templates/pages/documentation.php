@@ -76,7 +76,16 @@
 					
 				</div>
 			
-				<h2 class="heading-light-size-5" id="getting-started">Getting Started</h2>
+				<h2 class="heading-light-size-6" id="getting-started">Lorem Ipsum</h2>
+				<h2 class="heading-size-5" id="getting-started">Lorem Ipsum</h2>
+				<h2 class="heading-size-4" id="getting-started">Lorem Ipsum</h2>
+				<h2 class="heading-light-uppercase" id="getting-started">Lorem Ipsum</h2>
+				<h2 class="heading" id="getting-started">Lorem Ipsum</h2>
+				<h2 class="heading-size-2" id="getting-started">Lorem Ipsum</h2>
+                
+				<h2 class="heading-light-size-6" id="getting-started">Getting Started</h2>
+                
+                <p class="alert-bar-success"><a href="#">Click Here</a> if you just want to get started adding your content to the provided HTML files without touching any other code.</p>
 				
 				<p>It's great that you've decided to checkout Kayzen! How you go about buildig your next project with it depends on many things such as your prefered workflow, your skill level, amount of time you have etc. This page will cover the basics of all the different ways Kayzen can be adapted to suit any need. It is assumed that you have at least basic HTML, CSS and JavaScript/jQuery understanding.</p>
                 
@@ -98,31 +107,42 @@
                 
                 <p>At this stage, it is not essential to know about JavaScript concatenation. As long as you are comfortable using Sass you will gain most of the benefits Kayzen has to offer. Having said that, if you are comfortable combining JavaScript files, then continue reading.</p>
                 
-				<h3 class="heading-size-3" id="building-kayzen">Building Kayzen</h2>      
+				<h3 class="heading-size-5" id="building-kayzen">Building Kayzen</h2>   
                 
                 <p class="alert-bar-error">The following section is only relevant if your workflow involves building Kayzen yourself from the source files form Github.</p>
+                
+                <div class="well object"> 
+                    <h4 class="heading">Full Requirements</h4>
+                    <ul class="list-clear">
+                        <li>Minimum Sass 3.4</li>
+                        <li>Node</li>
+                        <li><a target="blank" href="http://www.graphicsmagick.org/" target="blank">GraphicsMagick*</a></li>
+                        <li><a target="blank" href="https://github.com/bezoerb/grunt-php2html#installing-php-cgi">php-cgi*</a></li>
+                    </ul>
+                    <small>* indicates that the requirement is only for <a href="#enhancedWorkflowFeatures">ehnanced workflow features</a></small>
+                </div>
                 
                 <p>Both the default provided <code>app.js</code> and <code>app.css</code> contain code from several third party libraries and plugins. The files for these libraries and plugins reside in the <b>assets/vendor</b> folder, and include the following:</p>        
                 
                 <ul class="list-clear">
-                    <li><a href="https://github.com/AndiDittrich/EnlighterJS" target="blank">Englighter</a></li>
-                    <li><a href="https://github.com/FortAwesome/Font-Awesome" target="blank">Font-Awesome</a></li>
-                    <li><a href="https://github.com/webcreate/infinite-ajax-scroll" target="blank">Infinite-AJAX-Scroll</a></li>
-                    <li><a href="https://github.com/metafizzy/isotope" target="blank">Isotope</a></li>
-                    <li><a href="https://github.com/jquery/jquery" target="blank">jQuery</a></li>
-                    <li><a href="https://github.com/aishek/jquery-animateNumber" target="blank">jquery-animateNumber</a></li>
-                    <li><a href="https://github.com/esr360/Kayzen-GS" target="blank">Kayzen-GS</a></li>
-                    <li><a href="https://github.com/dimsemenov/Magnific-Popup" target="blank">Magnific-Popup</a></li>
-                    <li><a href="https://github.com/SnapKit/Masonry" target="blank">Masonry</a></li>
-                    <li><a href="#" target="blank">Modular</a></li>
-                    <li><a href="#" target="blank">MooTools-Core</a></li>
-                    <li><a href="#" target="blank">normalize-scss</a></li>
-                    <li><a href="#" target="blank">Owl-Carousel</a></li>
-                    <li><a href="#" target="blank">pseudojQuery</a></li>
-                    <li><a href="#" target="blank">SassyJSON</a></li>
-                    <li><a href="#" target="blank">ScrollTrigger</a></li>
-                    <li><a href="#" target="blank">Stellar</a></li>
-                    <li><a href="#" target="blank">TweeCool</a></li>
+                    <li><a target="_blank" href="https://github.com/AndiDittrich/EnlighterJS">Englighter</a></li>
+                    <li><a target="_blank" href="https://github.com/FortAwesome/Font-Awesome">Font-Awesome</a></li>
+                    <li><a target="_blank" href="https://github.com/webcreate/infinite-ajax-scroll">Infinite-AJAX-Scroll</a></li>
+                    <li><a target="_blank" href="https://github.com/metafizzy/isotope">Isotope</a></li>
+                    <li><a target="_blank" href="https://github.com/jquery/jquery">jQuery</a></li>
+                    <li><a target="_blank" href="https://github.com/aishek/jquery-animateNumber">jquery-animateNumber</a></li>
+                    <li><a target="_blank" href="https://github.com/esr360/Kayzen-GS">Kayzen-GS</a></li>
+                    <li><a target="_blank" href="https://github.com/dimsemenov/Magnific-Popup">Magnific-Popup</a></li>
+                    <li><a target="_blank" href="https://github.com/SnapKit/Masonry">Masonry</a></li>
+                    <li><a target="_blank" href="https://github.com/esr360/Synergy">Synergy</a></li>
+                    <li><a target="_blank" href="https://github.com/mootools/mootools-core">MooTools-Core</a></li>
+                    <li><a target="_blank" href="https://github.com/JohnAlbin/normalize-scss">normalize-scss</a></li>
+                    <li><a target="_blank" href="https://github.com/smashingboxes/OwlCarousel2">Owl-Carousel</a></li>
+                    <li><a target="_blank" href="https://github.com/esr360/pseudojQuery">pseudojQuery</a></li>
+                    <li><a target="_blank" href="https://github.com/esr360/SassyJSON">SassyJSON</a></li>
+                    <li><a target="_blank" href="https://github.com/esr360/ScrollTrigger">ScrollTrigger</a></li>
+                    <li><a target="_blank" href="https://github.com/markdalgleish/stellar.js/">Stellar</a></li>
+                    <li><a target="_blank" href="https://github.com/esr360/tweecool-jquery-plugin">TweeCool</a></li>
                 </ul>
                 
                 <p>You will notice that all of the used third party resources exist on Github, and as such are included as <a href="https://git-scm.com/book/en/v2/Git-Tools-Submodules" target="blank">Git Submodules</a>. If you have purchased a license for Kayzen, you are entitled to access to the private Github repository <a href="https://github.com/esr360/Kayzen" target="blank">located here</a>. If you do not already have access, <a href="#">get in touch with us</a> to gain access.</p>
@@ -138,26 +158,68 @@ git clone https://github.com/esr360/Kayzen.git --recursive
                 <p>If you are using Node, you can run <code>npm install</code> to allow you to use Grunt to build Kayzen from the source files. Once installed, you should first run <code>grunt setup</code> to run the initial setup tasks (<a href="#">learn more</a>). After running <code>npm install</code> you should now have the following Node modules in the <b>node_modules</b> directory:</p> 
                 
                 <ul class="list-clear">
-                    <li><a href="#">autoprefixer</a></li>
-                    <li><a href="#">grunt</a></li>
-                    <li><a href="#">grunt-auto-install</a></li>
-                    <li><a href="#">grunt-contrib-clean</a></li>
-                    <li><a href="#">grunt-contrib-concat</a></li>
-                    <li><a href="#">grunt-contrib-copy</a></li>
-                    <li><a href="#">grunt-contrib-imagemin</a></li>
-                    <li><a href="#">grunt-contrib-sass</a></li>
-                    <li><a href="#">grunt-contrib-uglify</a></li>
-                    <li><a href="#">grunt-contrib-watch</a></li>
-                    <li><a href="#">grunt-csscomb</a></li>
-                    <li><a href="#">grunt-notify</a></li>
-                    <li><a href="#">grunt-php-set-constant</a></li>
-                    <li><a href="#">grunt-php2html</a></li>
-                    <li><a href="#">grunt-postcss</a></li>
-                    <li><a href="#">grunt-run-grunt</a></li>
-                    <li><a href="#">grunt-sass</a></li>
-                    <li><a href="#">grunt-scss-lint</a></li>
-                    <li><a href="#">grunt-text-replace</a></li>
+                    <li><a target="_blank" href="https://github.com/postcss/autoprefixer">autoprefixer</a></li>
+                    <li><a target="_blank" href="https://github.com/gruntjs/grunt">grunt</a></li>
+                    <li><a target="_blank" href="https://github.com/Manabu-GT/grunt-auto-install">grunt-auto-install</a></li>
+                    <li><a target="_blank" href="https://github.com/gruntjs/grunt-contrib-clean">grunt-contrib-clean</a></li>
+                    <li><a target="_blank" href="https://github.com/gruntjs/grunt-contrib-concat">grunt-contrib-concat</a></li>
+                    <li><a target="_blank" href="https://github.com/gruntjs/grunt-contrib-copy">grunt-contrib-copy</a></li>
+                    <li><a target="_blank" href="https://github.com/gruntjs/grunt-contrib-cssmin">grunt-contrib-cssmin</a></li>
+                    <li><a target="_blank" href="https://github.com/gruntjs/grunt-contrib-jshint">grunt-contrib-jshint</a></li>
+                    <li><a target="_blank" href="https://github.com/gruntjs/grunt-contrib-sass">grunt-contrib-sass</a></li>
+                    <li><a target="_blank" href="https://github.com/gruntjs/grunt-contrib-uglify">grunt-contrib-uglify</a></li>
+                    <li><a target="_blank" href="https://github.com/gruntjs/grunt-contrib-watch">grunt-contrib-watch</a></li>
+                    <li><a target="_blank" href="https://github.com/dylang/grunt-notify">grunt-notify</a></li>
+                    <li><a target="_blank" href="https://github.com/pajtai/grunt-php-set-constant">grunt-php-set-constant</a></li>
+                    <li><a target="_blank" href="https://github.com/bezoerb/grunt-php2html">grunt-php2html</a></li>
+                    <li><a target="_blank" href="https://github.com/nDmitry/grunt-postcss">grunt-postcss</a></li>
+                    <li><a target="_blank" href="https://github.com/andismith/grunt-responsive-images">grunt-responsive-images</a></li>
+                    <li><a target="_blank" href="https://github.com/Bartvds/grunt-run-grunt">grunt-run-grunt</a></li>
+                    <li><a target="_blank" href="https://github.com/ahmednuaman/grunt-scss-lint">grunt-scss-lint</a></li>
+                    <li><a target="_blank" href="https://github.com/yoniholmes/grunt-text-replace">grunt-text-replace</a></li>
+                    <li><a target="_blank" href="https://github.com/marrone/grunt-tinypng">grunt-tinypng</a></li>
                 </ul>
+                
+                <h4 class="heading-size-4">Ehnanced Workflow Features</h4>
+                
+                <h5 class="heading-light-uppercase">Installing php-cgi</h5>
+                                
+                <p>One of the tasks provided in <code>Gruntfile.js</code> generates HTML pages from PHP templates. For this to function, php-cgi must be installed.</p>
+                
+                <h6 class="heading-size-2">OSX</h5>            
+                    
+                <p>The <code>php-cgi</code> binary can be installed via Homebrew by tapping the <a href="https://github.com/josegonzalez/homebrew-php">homebrew-php</a> repository:</p>
+
+<pre data-enlighter-language="css" class="EnlighterJSRAW">
+brew tap homebrew/dupes
+brew tap homebrew/versions
+brew tap homebrew/homebrew-php
+brew install php56
+</pre>
+
+                <h6 class="heading-size-2">Windows</h5>
+                
+                <p>The <code>php-cgi</code> binary can be installed via <a href="http://www.apachefriends.org/de/xampp-windows.html">XAMPP</a>. Here is how you can add the binary to your PATH: <a href="https://www.monosnap.com/image/psLZ5fpwuSsvJJeZPdklEjxMr">Link</a></p>
+
+                <h6 class="heading-size-2">Ubuntu</h5>
+
+<pre data-enlighter-language="css" class="EnlighterJSRAW">
+sudo apt-get install php5-cgi
+</pre>          
+                
+                <h5 class="heading-light-uppercase">Installing GraphicsMagick</h5>
+                
+                <p>One of the tasks provided in <code>Gruntfile.js</code> creates <code>small</code> and <code>tall</code> variants of some images. For this to function, GraphicsMagick is required.</p>
+                
+                <p>If you're a Mac user and have <a href="http://brew.sh/" target="blank">Homebrew</a> installed, run:</p>
+                
+<pre data-enlighter-language="css" class="EnlighterJSRAW">
+brew install GraphicsMagick
+</pre>
+
+                <p>Otherwise, visit the <a target="blank" href="http://sourceforge.net/projects/graphicsmagick/files/graphicsmagick/">GraphicsMagick downloads page</a>.</p>
+                
+                <h4 class="heading-size-4">Alternate Build Methods</h4>
                 
                 <p>If you are using another build tool or want to build Kayzen manually, here are the key things it should encompass to successfully build Kayzen:</p>
                 
@@ -253,11 +315,13 @@ git clone https://github.com/esr360/Kayzen.git --recursive
                 
 				<h3 class="heading-uppercase-light-border" id="building-kayzen">Images</h2>
                 
-                <p>The images need to be copied (duplicated) into the <b>app</b> directory (app/images). This allows you to keep your source image files separate from your production ones, which may be compressed during your build process. These are located in the <b>assets</b> directory:</p>
+                <p>The images in the assets directory need to be copied (duplicated) into the <b>app</b> directory (app/images). This allows you to keep your source image files separate from your production ones, which may be compressed during your build process. These are located in the <b>assets</b> directory:</p>
                 
                 <ul class="list-clear">
                     <li>assets/images/</li>
                 </ul>
+                
+                <p>The default HTML templates will look for <code>small</code> and <code>tall</code> variants of the hero images provided in the <code>demo</code> sub-directory of <code>/images</code>. This point will likely be rendered moot as you add your own images.</p>
                 
 				<h3 class="heading-uppercase-light-border" id="building-kayzen">FontAwesome</h2>
                 
@@ -277,7 +341,7 @@ git clone https://github.com/esr360/Kayzen.git --recursive
                 
                 <p>One particular submodule (<a href="#">normalize-scss</a>) requires the <a href="#">support-for</a> library to be present within its own directory, and does not come by default as a result of installing <b>normalize-scss</b>. To clarify, the file located at assets/vendor/support-for/sass/<b>_support-for.scss</b> must be present within the assets/vendor/normalize-scss/<b>sass/</b> directory when Sass compiles, otherwise it will throw an error. If you maually copy the file over, Git will complain that you have made changes to the <b>normalize-scss</b> submodule, so it is recommended that your build process involves copying the file over before Sass compiles, and then deleting it once the CSS has been compiled.</p>
                 
-				<h2 class="heading-light-size-5" id="configure">Configure</h2>
+				<h2 class="heading-light-size-6" id="configure">Configure</h2>
 				
 				<p>Kayzen is structured in a modular way, which makes things easier for everyone. Kayzen is built using the <a href="#">Modular</a> Sass library. As well as global configuration each module can be individually configured, giving you complete control and flexibility when customizing them for your project. This will also make updating your project in the future easier when new modules or module updates for Kayzen come out.</p>
                 
@@ -344,19 +408,51 @@ git clone https://github.com/esr360/Kayzen.git --recursive
             
                 <p>Once you have configured all of your desired opions, you can preview all the modules on the <a href="#">Cheatsheet</a> page.</p>
             
-				<h2 class="heading-light-size-5" id="build">Build</h2>
+				<h2 class="heading-light-size-6" id="build">Build</h2>
 				
 				<p>Once you have configured all of your modules, you're ready to sart building your pages. Kayzen comes with numerous templates ready-made for you to use for your pages, you can <a href="#">view them here</a>. New templates are added all the time, so be sure to regularly check for updates.</p>
                 
-                <p>You can either manually build your HTML pages, or you can use the provided <a href="#">page builder</a>. If you are manually building your pages, you may wish to checkout the <a href="#">blank page</a> example to quickly get started with a new page.</p>
+                <h3 class="heading-size-5" id="building-kayzen">HTML Templates</h3>
                 
-                <h3 class="heading-size-3" id="building-kayzen">PHP Templates</h3>
+                <p>To edit the various features of the provided HTML templates, see the following sections.</p>
+                
+                <p class="alert-bar-success">To change the visual appearance of the UI components, see the <a href="<?php pageLink('modules.php') ?>">Modules</a> page.</p>
+                
+                <h3 class="heading-size-4" id="building-kayzen">Global</h3>
+                
+                <h4 class="heading-light-uppercase">Sticky Header</h4>
+                
+                <h4 class="heading-light-uppercase">Sticky Top Bar</h4>
+                
+                <h4 class="heading-light-uppercase">Footer Twitter Feed</h4>
+                
+                <h4 class="heading-light-uppercase">Google Map</h4>
+                
+                <h4 class="heading-light-uppercase">Social Share Widgets</h4>
+                
+                <h4 class="heading-light-uppercase">Get In Touch Form</h4>
+                
+                <h3 class="heading-size-4" id="building-kayzen">Homepages</h3>
+                
+                <h4 class="heading-light-uppercase">Parallax Billboard Background</h4>
+                
+                <h4 class="heading-light-uppercase">Parallax Billboard Content</h4>
+                
+                <h3 class="heading-size-4" id="building-kayzen">Portfolio/Blog Pages</h3>
+                
+                <h4 class="heading-light-uppercase">Columns</h4>
+                
+                <h4 class="heading-light-uppercase">Masonry Items</h4>
+                
+                <h4 class="heading-light-uppercase">Matrix Items</h4>
+                
+                <h3 class="heading-size-5" id="building-kayzen">PHP Templates</h3>
                 
                 <p>The Kayzen demo pages are genrated from custom PHP source files. You are completely free to utilise these PHP templates for your own use. Whilst the PHP framework Kayzen is built from is extremely basic, it allows you to rapidly prototype pages using all the various components Kayzen has to offer. All the PHP templates are located in the <b>templates</b> directory.</p>
                 
                 <p>The core configuration file for the PHP templates can be found at templates/<b>app.php</b>. This is where all configurable templates are imported and all global constants are set, which include the following:</p>
                 
-				<table class="table-style-1-small">
+				<table class="table-small">
 					<thead>
 						<tr>
 							<th>Constant</th>
@@ -366,14 +462,24 @@ git clone https://github.com/esr360/Kayzen.git --recursive
 					</thead>
 					<tbody>
 						<tr>
-							<td><code>env</code></td>
-							<td><code class="value">dev</code></td>
-							<td>Can be either <code>dev</code> or <code>prod</code>. If <code>prod</code>, assets included with the <code>devAsset()</code> and <code>themeAsset()</code> functions will have <code>.min</code> prepended before its extension.</td>
+							<td><code>theme</code></td>
+							<td><code class="value">'Kayzen'</code></td>
+							<td>Set which theme's assets you would like to load.</td>
 						</tr>
 						<tr>
-							<td><code>theme</code></td>
-							<td><code class="value">Kayzen</code></td>
-							<td>Set which theme's assets you would like to load.</td>
+							<td><code>realm</code></td>
+							<td><code class="value">'demo'</code></td>
+							<td>Can either be <code>demo</code> or <code>live</code>, currently only used to serve placeholder images instead of stock photos.</td>
+						</tr>
+						<tr>
+							<td><code>env</code></td>
+							<td><code class="value">dev</code></td>
+							<td>Can be either <code>dev</code> or <code>prod</code>. If <code>prod</code>, the code will look for minified (.min.*) assets.</td>
+						</tr>
+						<tr>
+							<td><code>host</code></td>
+							<td><code class="value">'server'</code></td>
+							<td>Can either be <code>static</code>,<code>server</code> or <code>explorer</code>, and defines how asset paths should be loaded.</td>
 						</tr>
 						<tr>
 							<td><code>themes</code></td>
@@ -381,14 +487,14 @@ git clone https://github.com/esr360/Kayzen.git --recursive
 							<td>If enabled, templates will look to assets nested inside a self-named directory, e.g. app/themes/Kayzen/scripts/app.js.</td>
 						</tr>
 						<tr>
-							<td><code>host</code></td>
-							<td><code class="value">server</code></td>
-							<td>Can either be <code>static</code> or <code>server</code>, and defines how asset paths should be loaded.</td>
+							<td><code>projectPath</code></td>
+							<td><code class="value">'/../'.theme</code></td>
+							<td>Used when the above <code>host</code> constant is set to 'static'. Also uses the above <code>theme</code> constant.</td>
 						</tr>
                     </tbody>
                 </table>
                 
-                <h3 class="heading-uppercase-light-border" id="building-kayzen">Includes</h3>
+                <h3 class="heading-size-4" id="building-kayzen">Includes</h3>
                 
                 <p>The below includes can be used on any page which includes the <b>app.php</b> file, and will output some code depending on the options you pass to the function. They are located in the templates/<b>includes</b> directory.</p>
                 
@@ -413,7 +519,7 @@ articleItem(array(
 ));
 </pre> 
                 
-                <h3 class="heading-uppercase-light-border" id="building-kayzen">Modules</h3>
+                <h3 class="heading-size-4" id="building-kayzen">Modules</h3>
                 
                 <p>The below modules can be used on any page which includes the <b>app.php</b> file, and will output some code depending on the options you pass to the function. They are located in the templates/<b>modules</b> directory.</p>
                 
@@ -442,7 +548,7 @@ billboard(array(
 ));
 </pre> 
                 
-                <h3 class="heading-uppercase-light-border" id="building-kayzen">Sections</h3>
+                <h3 class="heading-size-4" id="building-kayzen">Sections</h3>
                 
                 <p>The below sections can be used on any page which includes the <b>app.php</b> file, and will output some code depending on the options you pass to the function. They are located in the templates/<b>sections</b> directory.</p>
                 
@@ -494,7 +600,7 @@ clients(array(
 ));
 </pre> 
                 
-                <h3 class="heading-uppercase-light-border" id="building-kayzen">Basic Template</h3>
+                <h3 class="heading-size-4" id="building-kayzen">Basic Template</h3>
                 
                 <p>Several things are required to create a PHP page using Kayzen. Below shows the minimum requirements to set up a blank page with all global modules and assets:</p>
                 
@@ -551,9 +657,9 @@ clients(array(
 
                 <p>If you are using Grunt and the provided Gruntfile.js, you can easily compile and build your app for development and production envrionments generating appropriate HTML files from your source PHP templates - see the below Grunt tasks.</p>
 
-                <h3 class="heading-size-3" id="building-kayzen">Grunt Tasks</h3>
+                <h3 class="heading-size-5" id="building-kayzen">Grunt Tasks</h3>
                 
-                <p>The following Grunt tasks are available to use by default:</p>
+                <h3 class="heading-uppercase-light-border" id="building-kayzen">Executable Tasks</h3>
                 
 				<table class="table-small">
 					<thead>
@@ -564,16 +670,16 @@ clients(array(
 					</thead>
 					<tbody>
 						<tr>
-							<td><code>grunt setup</code></td>
-							<td>This is the initial task you need to run to complete your environment's setup. It only needs to be ran once, the first time you clone Kayzen.</td>
-						</tr>
-						<tr>
 							<td><code>grunt</code></td>
-							<td>The default grunt task - runs the below <code>compile:dev</code> task as well as the <code>watch</code> task.</td>
+							<td>The default grunt task - runs the below <code>compile</code> task as well as the <code>watch</code> task.</td>
 						</tr>
 						<tr>
 							<td><code>grunt templates</code></td>
-							<td>Used to generate HTML pages from your PHP templates. Will create one HTML page for every template in the templates/pages directory.</td>
+							<td>Used to generate HTML pages from your PHP templates (will only look for templates in the '/pages' directory).</td>
+						</tr>
+						<tr>
+							<td><code>grunt compile</code></td>
+							<td>This will compile your assets using the default value for the 'env' option.</td>
 						</tr>
 						<tr>
 							<td><code>grunt compile:dev</code></td>
@@ -584,15 +690,25 @@ clients(array(
 							<td>This will compile your assets for a production environment (assets will be minified).</td>
 						</tr>
 						<tr>
+							<td><code>grunt compress:images</code></td>
+							<td>This will compress all images in the 'demo' directory using the <a target="blank" href="https://tinypng.com/developers">TinyPNG API</a>. Use liberally.</td>
+						</tr>
+						<tr>
 							<td><code>grunt test</code></td>
 							<td>This will execute code linters on your .scss and .js files.</td>
+						</tr>
+						<tr>
+							<td><code>grunt setup</code></td>
+							<td>This runs <code>npm install</code> and any neccessery Grunt tasks for vendor assets. This only needs to be done once during your initial setup.</td>
 						</tr>
                     </tbody>
                 </table>
                 
-                <h3 class="heading-uppercase-light-border" id="building-kayzen">Passing Variables to Grunt Tasks</h3>
+                <h3 class="heading-uppercase-light-border" id="building-kayzen">Grunt Options</h3>
                 
                 <p>Using the <code><a href="http://gruntjs.com/api/grunt.option" target="blank">grunt.option</a></code> API, you can pass several parameters on the command line when running the above tasks:</p>
+                
+                <p class="alert-bar-info">The below values will also automatically be updated in <b>app.php</b>.</p>
                 
 				<table class="table-small">
 					<thead>
@@ -605,18 +721,28 @@ clients(array(
 					<tbody>
 						<tr>
 							<td><code>theme</code></td>
-							<td><code class="value">Kayzen</code></td>
+							<td><code class="value">'Kayzen'</code></td>
 							<td>This is the theme you wish to compile assets from. Theme must be present in the assets/themes directory.</td>
+						</tr>
+						<tr>
+							<td><code>realm</code></td>
+							<td><code class="value">'demo'</code></td>
+							<td>Can either be <code>demo</code> or <code>live</code>. Currently only used to serve placeholder images instead of stock photos.</td>
+						</tr>
+						<tr>
+							<td><code>env</code></td>
+							<td><code class="value">'dev'</code></td>
+							<td>Can either be <code>dev</code> or <code>prod</code>. Used to determine whether or not assets should be minified.</td>
+						</tr>
+						<tr>
+							<td><code>host</code></td>
+							<td><code class="value">'server'</code></td>
+							<td>Can either be <code>static</code> or <code>server</code>, and will define how your asset paths are created.</td>
 						</tr>
 						<tr>
 							<td><code>themes</code></td>
 							<td><code class="value">false</code></td>
-							<td>If enabled, assets will be compiled from individual theme folders (e.g. app/themes/Kayzen/scripts/app.js).</td>
-						</tr>
-						<tr>
-							<td><code>host</code></td>
-							<td><code class="value">Server</code></td>
-							<td>Can either be <code>static</code> or <code>server</code>, and will define how your asset paths are created.</td>
+							<td>If enabled, assets will be compiled into individual theme folders (e.g. app/themes/Kayzen/scripts/app.js).</td>
 						</tr>
                     </tbody>
                 </table>
@@ -624,7 +750,7 @@ clients(array(
                 <p>The above options would be used when calling the grunt task, like so:</p>
                 
 <pre data-enlighter-language="html" class="EnlighterJSRAW">
-grunt compile:dev --theme=YOURTHEME --themes=true --host=static
+grunt compile --env=prod
 </pre>
 
                 <br />
@@ -633,37 +759,37 @@ grunt compile:dev --theme=YOURTHEME --themes=true --host=static
 grunt templates --theme=YOURTHEME
 </pre>
              
-				<h2 class="heading-light-size-5" id="deploy">Test & Deploy</h2>
+				<h2 class="heading-light-size-6" id="deploy">Test & Deploy</h2>
 				
 				<p>So you've created all your pages and configured all your modules, the front end for your project is now ready to test and then launch! There are several things you may want to test before you make your website live to ensure your users have the best experience possible. Below is a checklist of recommendations you can do to check your website is working properly and has no errors, as well as improving things like page load times etc.</p>
                 
-                <h3 class="heading-uppercase-light-border" id="building-kayzen">Minified Assets</h3>
+                <h3 class="heading-size-4" id="building-kayzen">Minified Assets</h3>
                 
                 <p>You should be serving your users with minified versions of your assets (CSS and Javascript), as the file sizes will be smaller and load times faster. If you are using grunt, you can generate minified assets by running <code>grunt compile:prod</code>, otherwise you can use the minified assets provided with your download.</p>
                 
-                <h3 class="heading-uppercase-light-border" id="building-kayzen">Code Linting</h3>
+                <h3 class="heading-size-4" id="building-kayzen">Code Linting</h3>
                 
                 <p>If you are using our Gruntfile.js, you can run Javascript and Scss linters on your code. Simply run <code>grunt test</code> to run both linters. To run only Javasctipt linting, run the <code>grunt jshint</code> task, and to run only Scss linting run the <code>grunt scsslint</code> task.</p>
                 
-                <h3 class="heading-uppercase-light-border" id="building-kayzen">Console Errors</h3>
+                <h3 class="heading-size-4" id="building-kayzen">Console Errors</h3>
                 
                 <p>Check that you have no Javascript errors and are correctly loading assets by looking at the console. Right click anywhere on the page and click "inspect" (or "inspect element"). On the window that opens click the "console" tab. Any errors will be listed in red.</p>
                 
-                <h3 class="heading-uppercase-light-border" id="building-kayzen">Unit Tests</h3>
+                <h3 class="heading-size-4" id="building-kayzen">Unit Tests</h3>
                 
                 <p>We are currently writing unit tests for all custom Javascripts. These, along with other such automated tests, will be released in furutre releases of Kayzen, so stay tuned.</p>
                 
-                <h3 class="heading-uppercase-light-border" id="building-kayzen">Cross-Browser Tests</h3>
+                <h3 class="heading-size-4" id="building-kayzen">Cross-Browser Tests</h3>
                 
                 <p>Before you launch your site, check it in different browsers to makse sure it all works. Kayzen supports all modern browsers and degrades grecefully until Internet Explorer 9.</p>
 				
-                <h3 class="heading-uppercase-light-border" id="building-kayzen">Mobile/Responsive Tests</h3>
+                <h3 class="heading-size-4" id="building-kayzen">Mobile/Responsive Tests</h3>
                 
                 <p>Check your website on multiple mobile devices before you launch to ensure there are no issues. Kayzen is fully responsive and should work and look great on all modern devices.</p>
 				
-                <h3 class="heading-uppercase-light-border" id="building-kayzen">Support</h3>
+                <h3 class="heading-size-4" id="building-kayzen">Support</h3>
                 
-                <p>If you encounter any issues which you cannot resolve, you can <a href="#">get in touch</a> with us to receive free support..</p>
+                <p>If you encounter any issues which you cannot resolve, you can <a href="#">get in touch</a> with us to receive free support.</p>
                 
 			</div>
 			

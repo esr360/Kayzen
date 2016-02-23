@@ -45,18 +45,18 @@ define('host', 'server');
 define('realm', 'live');
 
 /**
+ * Set the relative path to Kayzen if it is not in the root
+ * @const projectPath
+ */
+define('projectPath', '/../'.theme);
+
+/**
  * Set the root php/template directory
  * @const ROOT
  *
  * This should probably be left untouched
  */
 define('ROOT', dirname(__FILE__));
-
-/**
- * Set the relative path to Kayzen if it is not in the root
- * @const projectPath
- */
-define('projectPath', '/../'.theme);
 
 /**
  * Set the path to the app directory

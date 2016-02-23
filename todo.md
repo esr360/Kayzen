@@ -2,6 +2,7 @@
 #============================================================
 
 - fix tabs nav hover
+- contact form (don't forget to document)
 - html5 form validation javascript
 - update all empty # links
 - full responsive audit
