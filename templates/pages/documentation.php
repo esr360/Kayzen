@@ -422,12 +422,104 @@ brew install GraphicsMagick
                 
                 <h4 class="heading-light-uppercase">Sticky Header</h4>
                 
-                <h4 class="heading-light-uppercase">Sticky Top Bar</h4>
+                <p>A sticky header will become fixed as it's scroll position reaches the top of the browser window.</p>
                 
+                <p>Locate <code>app-header</code> module in your HTML file. It should look something like:</p>
+                
+<pre data-enlighter-language="html" class="EnlighterJSRAW">
+&lt;header class="app-header" id="app-header">
+    ...
+&lt;/header>
+</pre>
+
+                <p>It may have one or more modifiers, and if so will look something like:</p>
+                
+<pre data-enlighter-language="html" class="EnlighterJSRAW">
+&lt;header class="app-header-bar-absolute" id="app-header">
+    ...
+&lt;/header>
+</pre>
+
+                <p>To achieve a sticky header, add the <code>sticky</code> modifier by adding <code>-sticky</code> to the header's class, like so:</p>
+                
+<pre data-enlighter-language="html" class="EnlighterJSRAW">
+&lt;header class="app-header-sticky" id="app-header">
+    ...
+&lt;/header>
+</pre>
+
+                <br />
+                
+<pre data-enlighter-language="html" class="EnlighterJSRAW">
+&lt;header class="app-header-absolute-sticky-bar" id="app-header">
+    ...
+&lt;/header>
+</pre>
+                
+                <p class="alert-bar-info">Read the <a href="<?php pageLink('modules/objects/header.php') ?>">header module</a> page for more information.</p>
+
+                <h4 class="heading-light-uppercase">Fixed Top Bar</h4>
+                
+                <p>A fixed top-bar will remain in a fixed position on screen.</p>
+                
+                <p>Locate <code>top-bar</code> module in your HTML file. It should look something like:</p>
+                
+<pre data-enlighter-language="html" class="EnlighterJSRAW">
+&lt;div class="top-bar">
+    ...
+&lt;/div>
+</pre>
+
+                <p>To achieve a fixed top-bar, add the <code>fixed</code> modifier by adding <code>-fixed</code> to the top-bar's class, like so:</p>
+               
+<pre data-enlighter-language="html" class="EnlighterJSRAW">
+&lt;div class="top-bar-fixed">
+    ...
+&lt;/div>
+</pre>
+                
+                <p class="alert-bar-error">Do not use a fixed top-bar in conjunction with a sticky header.</p>
+                
+                <p class="alert-bar-info">Read the <a href="<?php pageLink('modules/objects/top-bar.php') ?>">top-bar module</a> page for more information.</p>
+               
                 <h4 class="heading-light-uppercase">Footer Twitter Feed</h4>
+                
+                <p>In <code>app/scripts/app.js</code> (or <code> app/YOURTHEME/scripts/app.js</code>), locate the following code:</p>
+     
+<pre data-enlighter-language="javascript" class="EnlighterJSRAW">           
+$(_footer).footer();
+</pre>
+
+                <p>Reaplce with the following code, replacing your desired Twitter username to show tweets from:</p>
+                
+<pre data-enlighter-language="javascript" class="EnlighterJSRAW">  
+$(_footer).footer({
+    twitterFeed   : {
+        username  : 'esr360'
+    }
+});
+</pre>          
+                
+                <p class="alert-bar-info">Read the <a href="<?php pageLink('modules/objects/footer.php') ?>">footer module</a> page for more information.</p>
                 
                 <h4 class="heading-light-uppercase">Google Map</h4>
                 
+                <p>To change the google map colors, locate the following code in <code>app/scripts/app.js</code> (or <code> app/YOURTHEME/scripts/app.js</code>):</p>
+   
+<pre data-enlighter-language="javascript" class="EnlighterJSRAW">           
+$('#google-map').googleMap();
+</pre>   
+
+                <p>Grab your desired styles array (e.g. <a href="https://snazzymaps.com/style/35/avocado-world" target="blank">https://snazzymaps.com/style/35/avocado-world</a>) and pass it to the <code>styles</code> option:
+
+<pre data-enlighter-language="javascript" class="EnlighterJSRAW">           
+$('#google-map').googleMap({
+    styles: [...]
+});
+</pre>
+                
+                <p class="alert-bar-info">Read the <a href="<?php pageLink('modules/objects/google-map.php') ?>">google-map module</a> page for more information.</p>
+             
                 <h4 class="heading-light-uppercase">Social Share Widgets</h4>
                 
                 <h4 class="heading-light-uppercase">Get In Touch Form</h4>

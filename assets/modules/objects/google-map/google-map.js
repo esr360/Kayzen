@@ -13,21 +13,91 @@
         // Options
         
         // Fetch the map colors from the CSS
-        var _mapColor = _modules['google-map']['colors']
+        var _mapColor = _modules['google-map']['colors'];
         
         var options = $.extend({
             
-            colors  : {
-                'water'          : _mapColor['water'],
-                'landscape'      : _mapColor['landscape'],
-                'road'           : _mapColor['road'],
-                'highway'        : _mapColor['highway'],
-                'poi'            : _mapColor['poi'],
-                'transit'        : _mapColor['transit'],
-                'stroke'         : _mapColor['stroke'],
-                'administrative' : _mapColor['administrative'],
-                'park'           : _mapColor['park']
-            }
+            styles: [
+                {
+                    "featureType" : "water", 
+                    "elementType" : "geometry",
+                    "stylers" : [{
+                        "color" : _mapColor['water']
+                    }]
+                },
+                {
+                    "featureType" : "landscape",
+                    "elementType" : "geometry",
+                    "stylers" : [{
+                        "color" : _mapColor['landscape']
+                    }]
+                },
+                {
+                    "featureType" : "road",
+                    "elementType" : "geometry",
+                    "stylers" : [
+                        { "color" : _mapColor['road'] },
+                        { "lightness" : -37 }
+                    ]
+                },
+                {
+                    "featureType" : "poi",
+                    "elementType" : "geometry",
+                    "stylers" : [{
+                        "color" : _mapColor['poi']
+                    }]
+                },
+                {
+                    "featureType" : "transit",
+                    "elementType" : "geometry",
+                    "stylers" : [{
+                        "color" : _mapColor['transit']
+                    }]
+                },
+                {
+                    "elementType" : "labels.text.stroke",
+                    "stylers" : [
+                        { "visibility" : "on" },
+                        { "color" : _mapColor['stroke'] },
+                        { "weight" : 2 },
+                        { "gamma" : 0.84 }
+                    ]
+                },
+                {
+                    "featureType": "road.highway",
+                    "elementType": "geometry",
+                    "stylers": [
+                        { "color": _mapColor['highway'] }
+                    ]
+                },
+                {
+                    "elementType" : "labels.text.fill",
+                    "stylers" : [{
+                        "color" : "#ffffff"
+                    }]
+                },
+                {
+                    "featureType" : "administrative",
+                    "elementType" : "geometry",
+                    "stylers" : [
+                        { "weight" : 0.6 },
+                        { "color" : _mapColor['administrative'] }
+                    ]
+                },
+                {
+                    "elementType" : "labels.icon",
+                    "stylers" : [{
+                        "visibility" : "off"
+                    }]
+                },
+                {
+                    "featureType" : "poi.park",
+                    "elementType" : "geometry",
+                    "stylers" : [{
+                        "color" : _mapColor['park']
+                    }]
+                }
+            ]
             
         }, custom);
         
@@ -47,8 +117,6 @@
                     google.maps.event.addDomListener(window, 'load', init);
                 }
                     
-                var mapColors = options.colors;
-                    
                 // Basic options for a simple Google Map
                 // For more options see: https://developers.google.com/maps/documentation/javascript/reference#MapOptions
                 var mapOptions = {
@@ -67,87 +135,8 @@
                     // How you would like to style the map? 
                     // This is where you would paste any style found on Snazzy Maps.
                     
-                    styles: [
-                        {
-                            "featureType" : "water", 
-                            "elementType" : "geometry",
-                            "stylers" : [{
-                                "color" : mapColors['water']
-                            }]
-                        },
-                        {
-                            "featureType" : "landscape",
-                            "elementType" : "geometry",
-                            "stylers" : [{
-                                "color" : mapColors['landscape']
-                            }]
-                        },
-                        {
-                            "featureType" : "road",
-                            "elementType" : "geometry",
-                            "stylers" : [
-                                { "color" : mapColors['road'] },
-                                { "lightness" : -37 }
-                            ]
-                        },
-                        {
-                            "featureType" : "poi",
-                            "elementType" : "geometry",
-                            "stylers" : [{
-                                "color" : mapColors['poi']
-                            }]
-                        },
-                        {
-                            "featureType" : "transit",
-                            "elementType" : "geometry",
-                            "stylers" : [{
-                                "color" : mapColors['transit']
-                            }]
-                        },
-                        {
-                            "elementType" : "labels.text.stroke",
-                            "stylers" : [
-                                { "visibility" : "on" },
-                                { "color" : mapColors['stroke'] },
-                                { "weight" : 2 },
-                                { "gamma" : 0.84 }
-                            ]
-                        },
-                        {
-                            "featureType": "road.highway",
-                            "elementType": "geometry",
-                            "stylers": [
-                                { "color": mapColors['highway'] }
-                            ]
-                        },
-                        {
-                            "elementType" : "labels.text.fill",
-                            "stylers" : [{
-                                "color" : "#ffffff"
-                            }]
-                        },
-                        {
-                            "featureType" : "administrative",
-                            "elementType" : "geometry",
-                            "stylers" : [
-                                { "weight" : 0.6 },
-                                { "color" : mapColors['administrative'] }
-                            ]
-                        },
-                        {
-                            "elementType" : "labels.icon",
-                            "stylers" : [{
-                                "visibility" : "off"
-                            }]
-                        },
-                        {
-                            "featureType" : "poi.park",
-                            "elementType" : "geometry",
-                            "stylers" : [{
-                                "color" : mapColors['park']
-                            }]
-                        }
-                    ]
+                    styles: options.styles
+                    
                 };
 
                 // Create the Google Map using our element and options defined above

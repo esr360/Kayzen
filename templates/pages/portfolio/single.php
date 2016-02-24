@@ -328,9 +328,9 @@
 
             <script>
                 $(document).ready(function() {
-                    $.fn.KayzenSocialShareCount({
+                    $.fn.KayzenSocialShareCount(<?php if (realm == 'demo') { ?>{
                         url : 'http://themeforest.net'
-                    });
+                    }<?php } ?>);
                 });
             </script>
             

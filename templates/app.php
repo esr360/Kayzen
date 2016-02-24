@@ -9,7 +9,7 @@
  *
  * Values: 'dev' | 'prod'
  */
-define('env', 'prod');
+define('env', 'dev');
 
 /**
  * Set which theme to use
@@ -42,7 +42,7 @@ define('host', 'server');
  *
  * Values: 'demo' | 'live'
  */
-define('realm', 'live');
+define('realm', 'demo');
 
 /**
  * Set the relative path to Kayzen if it is not in the root
