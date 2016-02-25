@@ -522,6 +522,24 @@ $('#google-map').googleMap({
              
                 <h4 class="heading-light-uppercase">Social Share Widgets</h4>
                 
+                <p>Any page which uses the social share widgets (widgets which show how many shares a page has) will have the following JavasScript included on the page:</p>
+                
+<pre data-enlighter-language="javascript" class="EnlighterJSRAW">   
+$(document).ready(function() {
+    $.fn.KayzenSocialShareCount();
+});
+</pre>
+
+                <p>By default, the current page that the script is loaded on will be used to get the share information, but should you decide to use a different url, you can pass it as an option like so:</p>
+                
+<pre data-enlighter-language="javascript" class="EnlighterJSRAW">   
+$(document).ready(function() {
+    $.fn.KayzenSocialShareCount({
+        url : 'http://themeforest.net'
+    });
+});
+</pre>
+                
                 <h4 class="heading-light-uppercase">Get In Touch Form</h4>
                 
                 <h3 class="heading-size-4" id="building-kayzen">Homepages</h3>
