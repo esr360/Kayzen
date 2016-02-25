@@ -1,6 +1,8 @@
-//=================================================================
-// Kayzen - Grunt Setup
-//=================================================================
+/**
+ * KAYZEN
+ * Grunt Setup
+ * @uthor Edmund Reed | @esr360
+ */
 
 module.exports = function(grunt) {
 
