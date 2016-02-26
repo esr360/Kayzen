@@ -546,15 +546,183 @@ $(document).ready(function() {
                 
                 <h4 class="heading-light-uppercase">Parallax Billboard Background</h4>
                 
+                <p>To add a parallax effect to the billboard background, you can add the <code>data-stellar-background-ratio</code> data attribute to activate the <a href="#">Stellar</a> jQuery plugin.</p>
+                     
+<pre data-enlighter-language="html" class="EnlighterJSRAW">             
+ &lt;section class="billboard-overlay-full-screen" data-stellar-background-ratio="0.5">
+     ...
+ &lt;/section>
+</pre>
+                
                 <h4 class="heading-light-uppercase">Parallax Billboard Content</h4>
                 
+                <p>To add a faded parallax effect to the billboard content (as opposed to the background), structure your billboard's HTML like so:</p>
+                                     
+<pre data-enlighter-language="html" class="EnlighterJSRAW">             
+ &lt;section class="billboard-full-screen">
+     &lt;div class="billboard_wrapper container">
+        &lt;div class="billboard_content" id="billboard-fade-parallax">
+            ...
+        &lt;/div>
+     &lt;/div>
+ &lt;/section>
+</pre>
+
+                <p>The key to achieving the effect is the <code>billboard-fade-parallax</code> id on your billboard's content element.</p>
+
                 <h3 class="heading-size-4" id="building-kayzen">Portfolio/Blog Pages</h3>
                 
                 <h4 class="heading-light-uppercase">Columns</h4>
                 
+                <p>You can easily change the number of columns for any of the provided portfolio/blog templates by changing the <code>span-x</code> class of the respective items. Kayzen uses a 12 column grid system, so for example, to change a 3 column layout where the items will have a class of <code>span-4</code> to a 4 column layout, you would change the class for each item to <code>span-3</code>.</p>
+                
                 <h4 class="heading-light-uppercase">Masonry Items</h4>
                 
-                <h4 class="heading-light-uppercase">Matrix Items</h4>
+                <p>To create columns with masonry items, you can either use one of the provided <a href="<?php pageLink('templates.php#portfolio') ?>">templates</a>, or you can convert a non-masonry template into one by doing the following:</p>
+                
+                <h5 class="heading">Load Required Script(s)</h5>
+                
+                <p>Load app/scripts/<b>isotope.pkgd.js</b> at the bottom of the page right underneath all other scripts:</p>
+         
+<pre data-enlighter-language="html" class="EnlighterJSRAW">   
+...          
+&lt;script src="/app/scripts/app.js"></script>        
+&lt;script src="/app/scripts/isotope.pkgd.js"></script>
+</pre>
+                
+                <h5 class="heading">Call The Isotope Plugin</h5>
+                
+                <p>Finally you need to call the loaded plugin on the relevant container, ensuring the code is inside a <code>document.ready</code> function, and <code>window.load</code> function:</p>
+                
+                
+<pre data-enlighter-language="html" class="EnlighterJSRAW">   
+&lt;script>
+    $(document).ready(function() {
+        
+        $(window).load(function() {
+            $('#blog-items').isotope();
+        });
+        
+    });
+&lt;/script>
+</pre>
+                
+                <p>Where <code>#blog-items</code> is the direct container of your portfolio/blog items.</p>
+                
+                <h4 class="heading-light-uppercase">Filterable Items</h4>
+                
+                <p>To create a set of filterable items, you can either use one of the provided <a href="<?php pageLink('templates.php#portfolio') ?>">templates</a>, or you can convert a non-filterable template into one by doing the following:</p>
+                
+                <h5 class="heading">Load Required Script(s)</h5>
+                
+                <p>Load app/scripts/<b>isotope.pkgd.js</b> at the bottom of the page right underneath all other scripts:</p>
+         
+<pre data-enlighter-language="html" class="EnlighterJSRAW">   
+...          
+&lt;script src="/app/scripts/app.js"></script>        
+&lt;script src="/app/scripts/isotope.pkgd.js"></script>
+</pre>     
+                
+                <h5 class="headin">Create The Navigation</h5> 
+                
+                <p>Add the following code wherever you want the filter navigation to appear, changing <code>id="blog-types"</code> to whatever you desire and swapping out the example filter attributes for your own:</p>
+           
+<pre data-enlighter-language="html" class="EnlighterJSRAW">       
+&lt;ul class="tabs_nav-pills" id="blog-types">
+    &lt;li class="button-pill-grey-1-thin active" data-filter="*">View All&lt;/li>
+    &lt;li class="button-pill-grey-1-thin" data-filter="[data-image]">Image&lt;/li>
+    &lt;li class="button-pill-grey-1-thin" data-filter="[data-carousel]">Carousel&lt;/li>
+    &lt;li class="button-pill-grey-1-thin" data-filter="[data-vimeo], [data-youtube]">Video&lt;/li>
+    &lt;li class="button-pill-grey-1-thin" data-filter="[data-audio]">Audio&lt;/li>
+&lt;/ul>  
+</pre>   
+                
+                <h5 class="heading">Call The Isotope Plugin</h5>
+                
+                <p>Finally you need to call the loaded plugin on the relevant container, ensuring the code is inside a <code>document.ready</code> function, and <code>window.load</code> function:</p>
+                
+                
+<pre data-enlighter-language="html" class="EnlighterJSRAW">   
+&lt;script>
+    $(document).ready(function() {
+        
+        $(window).load(function() {
+            $('#blog-items').isotope();
+            $('#blog-types').on('click', 'li', function() {
+                var filterValue = $(this).attr('data-filter');
+                $('#blog-items').isotope({ 
+                    filter: filterValue 
+                });
+            });
+        });
+        
+    });
+&lt;/script>
+</pre>  
+
+                <p>Where <code>#blog-items</code> is the direct container of your portfolio/blog items, and <code>#blog-items</code> is the container for your filter navigation items.</p>
+                
+                <h4 class="heading-light-uppercase">Infinite Scroll Items</h4>
+                
+                <p>To create a set of infinitely-scrollable items, you can either use one of the provided <a href="<?php pageLink('templates.php#portfolio') ?>">templates</a>, or you can convert a non infinite-scroll template into one by doing the following:</p>
+                
+                <h5 class="heading">Load Required Script(s)</h5>
+                
+                <p>Load app/scripts/<b>jquery-ias.js</b> at the bottom of the page right underneath all other scripts:</p>
+         
+<pre data-enlighter-language="html" class="EnlighterJSRAW">   
+...          
+&lt;script src="/app/scripts/app.js"></script>        
+&lt;script src="/app/scripts/jquery-ias.js"></script>
+</pre>
+
+                <h5 class="heading">Create The Pagination</h5>
+                
+                <p>For each set of 'loaded' content, there needs to be a separate HTML file with the content for the infinite scroll page to fetch the next set of items from. You can duplicate the first page and just update the pagination link as appropriate. The plugin will by default look for an element with an id of <code>pagination</code> to get the next page to pull the content from.<p>
+                
+<pre data-enlighter-language="html" class="EnlighterJSRAW">   
+&lt;ul id="pagination">
+    &lt;li class="next">&lt;a href="3-cols-infinite-scroll-2.php">2&lt;/a>&lt;/li>
+&lt;/ul>
+</pre> 
+
+                <h5 class="heading">Call the Infinite Scroll Plugin</h5>  
+                
+                <p>You then need to call the loaded plugin on the relevant container, ensuring the code is inside a <code>document.ready</code> function:</p>
+                              
+<pre data-enlighter-language="html" class="EnlighterJSRAW">   
+&lt;script>
+    $(document).ready(function() {
+
+        $("#blog-items").KayenInfiniteScroll({
+            isotopeGrid : false
+        });
+        
+    });
+&lt;/script>
+</pre> 
+                
+                <p>Where <code>#blog-items</code> is the direct container for your portfolio/blog items.</p>
+                
+                <p>If you are calling other functions on your portfolio items, perhaps a carousel function, you will need to pass it to the infinite-scroll plugin so it can be re-called on the newly loaded items. This can be done like so:</p>
+                
+<pre data-enlighter-language="html" class="EnlighterJSRAW">   
+&lt;script>
+    $(document).ready(function() {
+         
+        function articlesCarousel() {
+            ...
+        } 
+        
+        articlesCarousel();
+                        
+        $("#blog-items").KayenInfiniteScroll({
+            isotopeGrid : false
+        }, articlesCarousel);
+        
+    });
+&lt;/script>
+</pre> 
                 
                 <h3 class="heading-size-5" id="building-kayzen">PHP Templates</h3>
                 

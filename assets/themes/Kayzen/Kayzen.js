@@ -52,7 +52,9 @@ $(document).ready(function() {
 // Modules
 //-----------------------------------------------------------------
 
-    $('#billboard-fade-parallax').billboard();
+    $(_billboard).billboard({
+        parallaxContent: true
+    });
     
     $('#google-map').googleMap();
 
