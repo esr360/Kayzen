@@ -270,7 +270,7 @@
                             </div>
                             <div class="button_group text-right">
                                 <a class="button-size-1-round"><i class="fa fa-reply"></i> Reply</a>
-                                <a class="button-size-1-round-error"><i class="fa fa-exclamation-triangle"></i> Report</a>
+                                <a class="button-size-1-round-invalid"><i class="fa fa-exclamation-triangle"></i> Report</a>
                             </div>
                         </div>
                     
@@ -301,7 +301,7 @@
                             </div>
                             <div class="button_group text-right">
                                 <a class="button-size-1-round"><i class="fa fa-reply"></i> Reply</a>
-                                <a class="button-size-1-round-error"><i class="fa fa-exclamation-triangle"></i> Report</a>
+                                <a class="button-size-1-round-invalid"><i class="fa fa-exclamation-triangle"></i> Report</a>
                             </div>
                         </div>
                     
@@ -332,7 +332,7 @@
                             </div>
                             <div class="button_group text-right">
                                 <a class="button-size-1-round"><i class="fa fa-reply"></i> Reply</a>
-                                <a class="button-size-1-round-error"><i class="fa fa-exclamation-triangle"></i> Report</a>
+                                <a class="button-size-1-round-invalid"><i class="fa fa-exclamation-triangle"></i> Report</a>
                             </div>
                         </div>
                     
@@ -346,7 +346,7 @@
                     <form class="form-fauxPlaceholders-html5">
                         <div class="row-flow">
                             <div class="form_group span-4">
-                                <input type="text" class="form_input" id="name" placeholder="Ex: John Doe" required="">
+                                <input type="text" class="form_input" id="firstName" placeholder="Ex: John Doe" required="">
                                 <label for="firstName">Name</label>
                             </div>
                             <div class="form_group span-4">

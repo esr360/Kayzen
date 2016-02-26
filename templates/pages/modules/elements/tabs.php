@@ -494,6 +494,11 @@
 							<td>The text color of the active tabs navigation item.</td>
 						</tr>
 						<tr>
+							<td><code>navItem-hover-color</code></td>
+							<td><code class="value">color('greyscale', 'grey-4')</code></td>
+							<td>The text color of the hovered tabs navigation item.</td>
+						</tr>
+						<tr>
 							<td><code>navItem-active-background</code></td>
 							<td><code class="value">color('brand', 'primary')</code></td>
 							<td>The background color of the active tabs navigation item.</td>

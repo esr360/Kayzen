@@ -182,11 +182,11 @@
         }
         
         // Alert Colos
-        @each $name, $color in palette('alert') {
+        @each $name, $color in palette('validation') {
             @include modifier($name) {
-                background: darken($color, 20%);
+                background: $color;
                 &:hover {
-                    background: darken($color, 40%);
+                    background: darken($color, 10%);
                 }
             }
         }

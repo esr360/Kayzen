@@ -5,6 +5,8 @@ $(document).ready(function() {
 //-----------------------------------------------------------------
 
     $(_accordion).accordion();
+    
+    $(_form).form();
 
     $(_modal).modal();
     

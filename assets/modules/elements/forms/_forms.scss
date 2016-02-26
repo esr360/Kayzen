@@ -10,6 +10,7 @@
 
     $forms: config((
         'name'             : 'form',
+        'output-JSON'      : true,
         'weight'           : lighter,
         'input-color'      : base('text-color'),
         'input-border'     : 1px solid color('greyscale', 'grey-3'),

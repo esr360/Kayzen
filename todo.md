@@ -1,15 +1,13 @@
 # To Do
 #============================================================
 
-- fix tabs nav hover
-- contact form (don't forget to document)
 - html5 form validation javascript
+- contact form (don't forget to document)
 - update all empty # links
 - full responsive audit
 - add cheatsheet page
 - add themes and associated imagery
 - topbar dropdown
-- change report button color e.g. single-sidebar.php
 
 # Done
 #============================================================
@@ -20,6 +18,9 @@
 - convert all javascripts to components (eg; flyout-nav.js)
 - change 'default' options to 'enabled' (eg; flyout-nav.js)
 - come up with solution for stock images
+- fix tabs nav hover
+- document navitem-hover-color
+- change report button color e.g. single-sidebar.php
 
 # Next Release
 #============================================================

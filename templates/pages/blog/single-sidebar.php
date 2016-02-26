@@ -276,7 +276,7 @@
                                     </div>
                                     <div class="button_group text-right">
                                         <a class="button-size-1-round"><i class="fa fa-reply"></i> Reply</a>
-                                        <a class="button-size-1-round-error"><i class="fa fa-exclamation-triangle"></i> Report</a>
+                                        <a class="button-size-1-round-invalid"><i class="fa fa-exclamation-triangle"></i> Report</a>
                                     </div>
                                 </div>
                             
@@ -307,7 +307,7 @@
                                     </div>
                                     <div class="button_group text-right">
                                         <a class="button-size-1-round"><i class="fa fa-reply"></i> Reply</a>
-                                        <a class="button-size-1-round-error"><i class="fa fa-exclamation-triangle"></i> Report</a>
+                                        <a class="button-size-1-round-invalid"><i class="fa fa-exclamation-triangle"></i> Report</a>
                                     </div>
                                 </div>
                             
@@ -338,7 +338,7 @@
                                     </div>
                                     <div class="button_group text-right">
                                         <a class="button-size-1-round"><i class="fa fa-reply"></i> Reply</a>
-                                        <a class="button-size-1-round-error"><i class="fa fa-exclamation-triangle"></i> Report</a>
+                                        <a class="button-size-1-round-invalid"><i class="fa fa-exclamation-triangle"></i> Report</a>
                                     </div>
                                 </div>
                             

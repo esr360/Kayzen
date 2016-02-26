@@ -18,6 +18,7 @@
         'navItem-color'              : base('text-color'),
         'navItem-background'         : transparent,
         'navItem-borderColor'        : color('greyscale', 'grey-3'),
+        'navItem-hover-color'        : color('greyscale', 'grey-4'),
         'navItem-active-color'       : color('greyscale', 'white'),
         'navItem-active-background'  : color('brand', 'primary'),
         'navItem-active-borderColor' : color('brand', 'primary'),
@@ -69,6 +70,12 @@
                 }
                 &:not(:last-child) {
                     border-right: none;
+                }
+            }
+            
+            @include overwrite('button') {
+                &:hover {
+                    color: this('navItem-hover-color');
                 }
             }
             
