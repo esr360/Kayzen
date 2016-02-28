@@ -12,11 +12,11 @@
 
     $foo: config((
         'name'          : 'notification',
+        'selector-type' : 'data',
         'background'    : color('validation', 'invalid'),
         'color'         : color('greyscale', 'white'),
         'size'          : 1.4em,
-        'font-size'     : font-size('size-1'),
-        'selector-type' : 'data'
+        'font-size'     : font-size('size-1')
     ), $custom);
 
     //-------------------------------------------------------------

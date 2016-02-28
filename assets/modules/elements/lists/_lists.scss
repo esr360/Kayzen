@@ -28,11 +28,6 @@
 
     @include module {
 
-    // Core Styles
-    //-------------------------------------------------------------
-
-        @extend .text;
-
     // Modifiers
     //-------------------------------------------------------------
 
@@ -42,6 +37,12 @@
         
         @include modifier('small') {
             font-size: this('small-size');
+        }
+        
+        @include modifier('interactive') {
+            li {
+                cursor: pointer;
+            }
         }
         
         @include modifier('inline') {

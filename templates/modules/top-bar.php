@@ -133,14 +133,55 @@
                                 <a href="#" data-notification="3">
                                     <i class="fa fa-shopping-cart"></i>
                                 </a>
-                                <ul>
-                                    <li>test</li>
+                                <ul class="list-cart list-divider">
+                                    <li class="title heading-size-3-uppercase">Shopping Cart</li>
+                                    <li>
+                                        <a href="<?php pageLink('further/shop-single.php') ?>" class="widget-media row">               
+                                            <div class="span-3">
+                                                <img src="<?php echo appDir ?>/images/demo/theme-1-thumb.jpg" alt="Theme One" />
+                                            </div> 
+                                            <div class="span-9">
+                                                <header class="heading_group">
+                                                    <h3 class="heading-heavy-size-2">Nexus</h3>
+                                                    <h4 class="heading-light-uppercase-brand-1-size-1">$9.95</h4>
+                                                </header>   
+                                            </div>   
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="<?php pageLink('further/shop-single.php') ?>" class="widget-media row">               
+                                            <div class="span-3">
+                                                <img src="<?php echo appDir ?>/images/demo/theme-1-thumb.jpg" alt="Theme One" />
+                                            </div> 
+                                            <div class="span-9">
+                                                <header class="heading_group">
+                                                    <h3 class="heading-heavy-size-2">Nexus</h3>
+                                                    <h4 class="heading-light-uppercase-brand-1-size-1">$24.95</h4>
+                                                </header>   
+                                            </div>   
+                                        </a>
+                                    </li>
+                                    <li class="row">
+                                        <div class="span-6 va-middle">
+                                            <h4 class="heading-size-5">$34.90</a>
+                                        </div>
+                                        <div class="span-6 text-right va-middle">
+                                            <a class="button-primary-size-2">View Cart</a>
+                                        </div>
+                                    </li>
                                 </ul>
                             </li>
                             <li>
                                 <a href="#">
-                                    <small>ENG</small> <i class="fa fa-angle-down"></i>
+                                    <small>USD</small> <i class="fa fa-angle-down"></i>
                                 </a>
+                                <ul class="list-interactive">
+                                    <li><i class="fa fa-gbp"></i> GBP</li>
+                                    <li><i class="fa fa-usd"></i> USD</li>
+                                    <li><i class="fa fa-eur"></i> EUR</li>
+                                    <li><i class="fa fa-jpy"></i> JPY</li>
+                                    <li><i class="fa fa-rub"></i> RUB</li>
+                                </ul>
                             </li>
                         </ul>
                     </div>
