@@ -37,6 +37,7 @@
             content: attr(data-#{this('name')});
             height: this('size');
             width: this('size');
+            color: this('color');
             line-height: (this('size') * 0.95);
             font-size: this('font-size');
             background: this('background');

@@ -78,15 +78,16 @@
 		&:after {
 			@include vertical-center(absolute);
 			@extend %horizontal-center;
+            text-align: center;
 			content: "Or";
-			font-size: font-size(size-1);
+			font-size: font-size('size-1');
 			font-weight: lighter;
 			height: 2.5em;
 			width: 2.5em;
 			line-height: 2.5em;
 			border-radius: 50%;
-			color: color(greyscale, white);
-			background: color(brand, primary);
+			color: color('greyscale', 'white');
+			background: color('brand', 'primary');
 		}
 	}
 	

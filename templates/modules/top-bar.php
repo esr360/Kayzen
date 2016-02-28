@@ -134,7 +134,7 @@
                                     <i class="fa fa-shopping-cart"></i>
                                 </a>
                                 <ul class="list-cart list-divider">
-                                    <li class="title heading-size-3-uppercase">Shopping Cart</li>
+                                    <li class="title heading-uppercase">Shopping Cart</li>
                                     <li>
                                         <a href="<?php pageLink('further/shop-single.php') ?>" class="widget-media row">               
                                             <div class="span-3">
@@ -163,7 +163,7 @@
                                     </li>
                                     <li class="row">
                                         <div class="span-6 va-middle">
-                                            <h4 class="heading-size-5">$34.90</a>
+                                            <h4 class="heading-size-4">$34.90</a>
                                         </div>
                                         <div class="span-6 text-right va-middle">
                                             <a class="button-primary-size-2">View Cart</a>

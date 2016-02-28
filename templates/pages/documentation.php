@@ -85,7 +85,7 @@
                 
 				<h2 class="heading-light-size-6" id="getting-started">Getting Started</h2>
                 
-                <p class="alert-bar-success"><a href="#">Click Here</a> if you just want to get started adding your content to the provided HTML files without touching any other code.</p>
+                <p class="alert-bar-success"><a href="#build-HTML-templates">Click Here</a> if you just want to get started adding your content to the provided HTML files without touching any other code.</p>
 				
 				<p>It's great that you've decided to checkout Kayzen! How you go about buildig your next project with it depends on many things such as your prefered workflow, your skill level, amount of time you have etc. This page will cover the basics of all the different ways Kayzen can be adapted to suit any need. It is assumed that you have at least basic HTML, CSS and JavaScript/jQuery understanding.</p>
                 
@@ -155,7 +155,7 @@ git clone https://github.com/esr360/Kayzen.git --recursive
 			
                 <p class="alert-bar-info">The <b>--recursive</b> flag is required to install all the git submodules.</p>
                 
-                <p>If you are using Node, you can run <code>npm install</code> to allow you to use Grunt to build Kayzen from the source files. Once installed, you should first run <code>grunt setup</code> to run the initial setup tasks (<a href="#">learn more</a>). After running <code>npm install</code> you should now have the following Node modules in the <b>node_modules</b> directory:</p> 
+                <p>If you are using Node, you can run <code>npm install</code> to allow you to use Grunt to build Kayzen from the source files. Once installed, you should first run <code>grunt setup</code> to run the initial setup tasks (<a href="#grunt-tasks">learn more</a>). After running <code>npm install</code> you should now have the following Node modules in the <b>node_modules</b> directory:</p> 
                 
                 <ul class="list-clear">
                     <li><a target="_blank" href="https://github.com/postcss/autoprefixer">autoprefixer</a></li>
@@ -333,17 +333,17 @@ brew install GraphicsMagick
                 
 				<h3 class="heading-uppercase-light-border" id="building-kayzen">MooTools</h2>
                 
-                <p class="alert-bar-info">This step is only required if you intend to use the <a href="#">Enlighter</a> syntax highlighter plugin.</p>
+                <p class="alert-bar-info">This step is only required if you intend to use the <a href="http://enlighterjs.org/" target="blank">Enlighter</a> syntax highlighter plugin.</p>
                 
-                <p>The Enlighter plugin which is used by the Kayzen demo pages requires <a href="#">MooTools</a>. MooTools requires you to build the file manually. Details on how to do so can be found on the MooTools repository page. Once you have built the file, it should now be available at assets/vendor/MooTools-Core/build/<b>mootools-core.js</b>. This file should then be copied to Kayzen's <b>app</b> directory (app/scripts).</p>
+                <p>The Enlighter plugin which is used by the Kayzen demo pages requires <a href="http://mootools.net/" target="blank">MooTools</a>. MooTools requires you to build the file manually. Details on how to do so can be found on the MooTools repository page. Once you have built the file, it should now be available at assets/vendor/MooTools-Core/build/<b>mootools-core.js</b>. This file should then be copied to Kayzen's <b>app</b> directory (app/scripts).</p>
                 
 				<h3 class="heading-uppercase-light-border" id="building-kayzen">Caveats</h2>
                 
-                <p>One particular submodule (<a href="#">normalize-scss</a>) requires the <a href="#">support-for</a> library to be present within its own directory, and does not come by default as a result of installing <b>normalize-scss</b>. To clarify, the file located at assets/vendor/support-for/sass/<b>_support-for.scss</b> must be present within the assets/vendor/normalize-scss/<b>sass/</b> directory when Sass compiles, otherwise it will throw an error. If you maually copy the file over, Git will complain that you have made changes to the <b>normalize-scss</b> submodule, so it is recommended that your build process involves copying the file over before Sass compiles, and then deleting it once the CSS has been compiled.</p>
+                <p>One particular submodule (<a href="https://github.com/JohnAlbin/normalize-scss" target="blank">normalize-scss</a>) requires the <a href="https://github.com/JohnAlbin/support-for" target="blank">support-for</a> library to be present within its own directory, and does not come by default as a result of installing <b>normalize-scss</b>. To clarify, the file located at assets/vendor/support-for/sass/<b>_support-for.scss</b> must be present within the assets/vendor/normalize-scss/<b>sass/</b> directory when Sass compiles, otherwise it will throw an error. If you maually copy the file over, Git will complain that you have made changes to the <b>normalize-scss</b> submodule, so it is recommended that your build process involves copying the file over before Sass compiles, and then deleting it once the CSS has been compiled.</p>
                 
 				<h2 class="heading-light-size-6" id="configure">Configure</h2>
 				
-				<p>Kayzen is structured in a modular way, which makes things easier for everyone. Kayzen is built using the <a href="#">Modular</a> Sass library. As well as global configuration each module can be individually configured, giving you complete control and flexibility when customizing them for your project. This will also make updating your project in the future easier when new modules or module updates for Kayzen come out.</p>
+				<p>Kayzen is structured in a modular way, which makes things easier for everyone. Kayzen is built using the <a href="https://github.com/esr360/Synergy" target="blank">Synergy</a> Sass Framework. As well as global configuration each module can be individually configured, giving you complete control and flexibility when customizing them for your project. This will also make updating your project in the future easier when new modules or module updates for Kayzen come out.</p>
                 
                 <p>Every module is imported in the main app.scss file:</p>
                 
@@ -366,9 +366,9 @@ brew install GraphicsMagick
                 <p>You can now control every configurable aspect of your project from <code>assets/themes/Kayzen/_kayzen.scss</code>. This file is where all the modules which are used by the theme are included, and also where you can pass any custom options to them. There are three types of modules, for a list of all of them and their available options, see the following links:</p>
                 
                 <ul class="list-clear">
-                    <li><a href="#">assets/modules/<b>elements</b></a></li>
-                    <li><a href="#">assets/modules/<b>objects</b></a></li>
-                    <li><a href="#">assets/modules/<b>utilities</b></a></li>
+                    <li><a href="<?php pageLink('modules.php#kayzenElements') ?>">assets/modules/<b>elements</b></a></li>
+                    <li><a href="<?php pageLink('modules.php#kayzenObjects') ?>">assets/modules/<b>objects</b></a></li>
+                    <li><a href="<?php pageLink('modules.php#kayzenUtilities') ?>">assets/modules/<b>utilities</b></a></li>
                 </ul>
                 
                 <p>You can pass a custom option to a module in your theme's file (e.g. assets/themes/Kayzen/_kayzen.scss) like so:</p>
@@ -399,11 +399,11 @@ brew install GraphicsMagick
                 <p>To get started quickly, some of the most common modules you might want to configure might include:</p>
                 
                 <ul class="list-clear">
-                    <li><strong>Colors:</strong> assets/modules/utilities/<a href="#">color-palette</a></li>
-                    <li><strong>Breakpoints:</strong> assets/modules/utilities/<a href="#">grid</a></li>
-                    <li><strong>Fonts:</strong> assets/modules/utilities/<a href="#">typography</a></li>
-                    <li><strong>Header:</strong> assets/modules/objects/<a href="#">header</a></li>
-                    <li><strong>Footer:</strong> assets/modules/objects/<a href="#">footer</a></li>
+                    <li><strong>Colors:</strong> assets/modules/utilities/<a href="<?php pageLink('modules/utilities/color-palette.php') ?>">color-palette</a></li>
+                    <li><strong>Breakpoints:</strong> assets/modules/utilities/<a href="<?php pageLink('modules/utilities/grid.php') ?>">grid</a></li>
+                    <li><strong>Fonts:</strong> assets/modules/utilities/<a href="<?php pageLink('modules/utilities/typography.php') ?>">typography</a></li>
+                    <li><strong>Header:</strong> assets/modules/objects/<a href="<?php pageLink('modules/objects/header.php') ?>">header</a></li>
+                    <li><strong>Footer:</strong> assets/modules/objects/<a href="<?php pageLink('modules/objects/footer.php') ?>">footer</a></li>
                 </ul>
             
                 <p>Once you have configured all of your desired opions, you can preview all the modules on the <a href="#">Cheatsheet</a> page.</p>
@@ -412,7 +412,7 @@ brew install GraphicsMagick
 				
 				<p>Once you have configured all of your modules, you're ready to sart building your pages. Kayzen comes with numerous templates ready-made for you to use for your pages, you can <a href="#">view them here</a>. New templates are added all the time, so be sure to regularly check for updates.</p>
                 
-                <h3 class="heading-size-5" id="building-kayzen">HTML Templates</h3>
+                <h3 class="heading-size-5" id="build-HTML-templates">HTML Templates</h3>
                 
                 <p>To edit the various features of the provided HTML templates, see the following sections.</p>
                 
@@ -546,7 +546,7 @@ $(document).ready(function() {
                 
                 <h4 class="heading-light-uppercase">Parallax Billboard Background</h4>
                 
-                <p>To add a parallax effect to the billboard background, you can add the <code>data-stellar-background-ratio</code> data attribute to activate the <a href="#">Stellar</a> jQuery plugin.</p>
+                <p>To add a parallax effect to the billboard background, you can add the <code>data-stellar-background-ratio</code> data attribute to activate the <a href="http://markdalgleish.com/projects/stellar.js/" target="blank">Stellar</a> jQuery plugin.</p>
                      
 <pre data-enlighter-language="html" class="EnlighterJSRAW">             
  &lt;section class="billboard-overlay-full-screen" data-stellar-background-ratio="0.5">
@@ -935,7 +935,7 @@ clients(array(
 
                 <p>If you are using Grunt and the provided Gruntfile.js, you can easily compile and build your app for development and production envrionments generating appropriate HTML files from your source PHP templates - see the below Grunt tasks.</p>
 
-                <h3 class="heading-size-5" id="building-kayzen">Grunt Tasks</h3>
+                <h3 class="heading-size-5" id="grunt-tasks">Grunt Tasks</h3>
                 
                 <h3 class="heading-uppercase-light-border" id="building-kayzen">Executable Tasks</h3>
                 
