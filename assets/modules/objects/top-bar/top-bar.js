@@ -13,9 +13,7 @@
         
         // Options
         var options = $.extend({
-            
-            overlay       : $('#site-overlay')
-            
+            overlay : $('#site-overlay')
         }, custom);
         
         // Run the code on each occurance of the element

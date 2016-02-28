@@ -180,6 +180,10 @@ module.exports = function(grunt) {
                         dest: buildStyles,
                         expand: true,
                         flatten: true
+                    },
+                    {
+                        src: 'templates/includes/contact-form.php',
+                        dest: 'app/contact-form.php'
                     }
                 ]
             },

@@ -20,28 +20,28 @@
         </header>
         
         <!-- Contact Form -->
-        <form class="form-fauxPlaceholders-html5">
+        <form class="form-fauxPlaceholders-html5" action="<?php echo appDir.'/contact-form.php' ?>" id="contactForm" method="post">
             <div class="container-small">
                 <div class="row-flow">
                     <div class="form_group span-6">
-                        <input type="text" class="form_input" id="firstName" placeholder="Ex: John" required="">
+                        <input type="text" class="form_input" name="firstName" id="firstName" placeholder="Ex: John" required="">
                         <label for="firstName">First Name</label>
                     </div>
                     <div class="form_group span-6">
-                        <input type="text" class="form_input" id="lastName" placeholder="Ex: Doe">
+                        <input type="text" class="form_input" name="lastName" id="lastName" placeholder="Ex: Doe">
                         <label for="lastName">Last Name</label>
                     </div>
                     <div class="form_group span-6">
-                        <input type="tel" class="form_input" id="phoneNumber" placeholder="Ex: (123) 456-7890 ">
+                        <input type="tel" class="form_input" name="phoneNumber" id="phoneNumber" placeholder="Ex: (123) 456-7890 ">
                         <label for="phoneNumber">Phone Number</label>
                     </div>
                     <div class="form_group span-6">
-                        <input type="email" class="form_input" id="emailAddress" placeholder="john@doe.com" required="">
+                        <input type="email" class="form_input" name="emailAddress" id="emailAddress" placeholder="john@doe.com" required="">
                         <label for="emailAddress">Email Address</label>
                     </div>
                 </div>
                 <div class="form_group">
-                    <textarea class="form_input" placeholder="We aim to respond to all messages within 24 hours." id="yourMessage" rows="8" required=""></textarea>
+                    <textarea class="form_input" name="yourMessage" placeholder="We aim to respond to all messages within 24 hours." id="yourMessage" rows="8" required=""></textarea>
                     <label for="yourMessage">Your Message</label>
                 </div>
                 <button type="submit" class="button-block-primary-size-3">Submit Message</button>

@@ -1,13 +1,12 @@
 # To Do
 #============================================================
 
-- html5 form validation javascript
 - contact form (don't forget to document)
 - update all empty # links
-- full responsive audit
-- add cheatsheet page
-- add themes and associated imagery
 - topbar dropdown
+- add cheatsheet page
+- full responsive audit
+- add themes and associated imagery
 
 # Done
 #============================================================
@@ -21,6 +20,7 @@
 - fix tabs nav hover
 - document navitem-hover-color
 - change report button color e.g. single-sidebar.php
+- html5 form validation javascript
 
 # Next Release
 #============================================================
@@ -28,6 +28,7 @@
 - create new module for tags and remove from list modifiers
 - change order of components/modifiers in module overview
 - document 'blocks' list modifier
+- fix issue when clicking "back" after submitting form
 
 # Backlog
 #============================================================

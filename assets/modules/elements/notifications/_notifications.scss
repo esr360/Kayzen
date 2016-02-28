@@ -1,0 +1,52 @@
+/******************************************************************
+ * Kayzen
+ * https://github.com/esr360/Kayzen
+ * @module notifications
+ *****************************************************************/
+
+@mixin notifications($custom: ()) {
+
+    //-------------------------------------------------------------
+    // Configuration
+    //-------------------------------------------------------------
+
+    $foo: config((
+        'name'          : 'notification',
+        'background'    : color('validation', 'invalid'),
+        'color'         : color('greyscale', 'white'),
+        'size'          : 1.4em,
+        'font-size'     : font-size('size-1'),
+        'selector-type' : 'data'
+    ), $custom);
+
+    //-------------------------------------------------------------
+    // Module
+    //-------------------------------------------------------------
+
+    @include module {
+        
+        $position: 0.8em;
+
+        //---------------------------------------------------------
+        // Core Styles
+        //---------------------------------------------------------
+
+        position: relative;
+        
+        &:before {
+            content: attr(data-#{this('name')});
+            height: this('size');
+            width: this('size');
+            line-height: (this('size') * 0.95);
+            font-size: this('font-size');
+            background: this('background');
+            position: absolute;
+            text-align: center;
+            top: 50%;
+            border-radius: 50%;
+            transform: translateX($position) translateY(calc(-50% - #{$position}));
+        }
+        
+    } // module
+
+} // @mixin notifications

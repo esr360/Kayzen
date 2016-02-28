@@ -30,6 +30,6 @@
             echo '<link rel="stylesheet" href="'.appDir.$themePath.'/styles/'.$path.'.min.css">';
         }
         
-    }          
+    }      
                      
 } ?>
