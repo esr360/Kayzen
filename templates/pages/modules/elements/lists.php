@@ -171,7 +171,7 @@
                     <ul class="list-tags">
                         <li><span>Vivamus</span></li>
                         <li><span>Lorem</span></li>
-                        <li><a href="#magna">Magna</a></li>
+                        <li><a href="#">Magna</a></li>
                     </ul>
                 </div>
                 
@@ -298,7 +298,7 @@
                     <ul id="list-demo-2" class="list-tags">
                         <li><span>Vivamus</span></li>
                         <li><span>Lorem</span></li>
-                        <li><a href="#magna">Magna</a></li>
+                        <li><a href="#">Magna</a></li>
                     </ul>
                 </div>
 

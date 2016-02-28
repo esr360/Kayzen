@@ -57,7 +57,7 @@
                 
                 <div class="object">
                     <blockquote class="blockquote">
-                        <p class="blockquote_content">Mihi vero, inquit, placet agi subtilius et, ut ipse dixisti, pressius. Idemne, quod iucunde? Qua ex cognitione facilior facta est investigatio rerum occultissimarum. Paria sunt igitur. <i>Graece donan, Latine voluptatem vocant.</i> <a href="#link">Quod equidem non reprehendo;</a> <b>Scrupulum, inquam, abeunti;</b> Sed virtutem ipsam inchoavit, nihil amplius. Similiter sensus, cum accessit ad naturam, tuetur illam quidem, sed etiam se tuetur; </p>
+                        <p class="blockquote_content">Mihi vero, inquit, placet agi subtilius et, ut ipse dixisti, pressius. Idemne, quod iucunde? Qua ex cognitione facilior facta est investigatio rerum occultissimarum. Paria sunt igitur. <i>Graece donan, Latine voluptatem vocant.</i> <a href="#">Quod equidem non reprehendo;</a> <b>Scrupulum, inquam, abeunti;</b> Sed virtutem ipsam inchoavit, nihil amplius. Similiter sensus, cum accessit ad naturam, tuetur illam quidem, sed etiam se tuetur; </p>
                     </blockquote>
                 </div>
                 

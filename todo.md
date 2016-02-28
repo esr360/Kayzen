@@ -3,7 +3,6 @@
 
 - contact form (don't forget to document)
 - update all empty # links
-- topbar dropdown
 - add cheatsheet page
 - full responsive audit
 - add themes and associated imagery
@@ -21,6 +20,7 @@
 - document navitem-hover-color
 - change report button color e.g. single-sidebar.php
 - html5 form validation javascript
+- topbar dropdown
 
 # Next Release
 #============================================================

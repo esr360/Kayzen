@@ -40,11 +40,11 @@
                     </ul>
                     <p class="button_group">
                         <?php if ($options['dark']) { ?>
-                            <a href="#viewDemo" class="button-border-white<?php echo '-'.$options['cta-modifiers'] ?>">
+                            <a href="#" class="button-border-white<?php echo '-'.$options['cta-modifiers'] ?>">
                                 View Demo
                             </a>
                         <?php } else  { ?>
-                            <a href="#viewDemo" class="button<?php echo '-'.$options['cta-modifiers'] ?>">
+                            <a href="#" class="button<?php echo '-'.$options['cta-modifiers'] ?>">
                                 View Demo
                             </a>
                         <?php } ?>

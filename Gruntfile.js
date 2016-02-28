@@ -407,7 +407,7 @@ module.exports = function(grunt) {
                 options: {
                     sizes: [{
                         name: 'tall',
-                        width: 860,
+                        width: 960,
                         height: 1150
                     }],
                     aspectRatio: false,

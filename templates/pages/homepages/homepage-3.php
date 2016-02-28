@@ -35,8 +35,8 @@
 					</header>
 					<p class="lede">Kayzen is a powerful themeing framework for architecting CSS for large, modular & scalable web applications. Built using only Sass (SCSS), Kayzen has the customizing power of a complete CMS theme.</p>
 					<p class="button_group">
-						<a class="button-oval-size-4-white" href="#ALAN">Purchase Now</a>
-						<a class="button-oval-size-4-border-white" href="#ALAN">Explore The Potential</a>
+						<a class="button-oval-size-4-white" href="#">Purchase Now</a>
+						<a class="button-oval-size-4-border-white" href="#">Explore The Potential</a>
 					</p>
 				</div>
 			</div>
@@ -71,7 +71,7 @@
 					<h3 class="heading-size-5">Responsive Grid System</h3>
 					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas mollis dolor ut euismod pellentesque. Vivamus mattis cursus urna, non gravida purus pulvinar ac. Nunc dignissim velit justo, id aliquet neque cursus vitae. Nulla mattis purus sed posuere aliquet.</p>
 					<p class="button_group">
-						<a href="#viewDemo" class="button-oval-white">View Demo</a>
+						<a href="#" class="button-oval-white">View Demo</a>
 						<a href="http://themeforest.net/user/skyux/portfolio" target="blank" class="button-oval-border-white">Purchase Theme</a>
 					</p>
 				</div>
@@ -218,7 +218,7 @@
 							<li>Sed sed iaculis arcu, eu pharetra nulla</li>
 						</ul>
 						<p class="button_group">
-							<a href="#viewDemo" class="button-oval-primary">View Demo</a>
+							<a href="#" class="button-oval-primary">View Demo</a>
 							<a href="http://themeforest.net/user/skyux/portfolio" target="blank" class="button-oval-border-white">Purchase Theme</a>
 						</p>
 					</div>

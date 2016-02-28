@@ -132,7 +132,7 @@
             &lt;a rel="lightbox" href="/images/wallpapers/bg-3.jpg" class="button-icon-border-circle">
                 &lt;i class="fa fa-search">&lt;/i>
             &lt;/a>
-            &lt;a href="#link" class="button-icon-border-circle">
+            &lt;a href="#" class="button-icon-border-circle">
                 &lt;i class="fa fa-link">&lt;/i>
             &lt;/a>
         &lt;/div>

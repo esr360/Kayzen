@@ -81,7 +81,7 @@
                             </div>
                             <button class="button-primary" type="subtmi">Add To Cart</button>
                         </form>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas vel gravida leo. Etiam magna dolor, convallis nec metus sed, rutrum semper quam. Praesent pharetra et enim interdum vulputate.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum quis elit dignissim, molestie est tristique, posuere libero. Suspendisse pulvinar porta maximus. Donec nec commodo dolor. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Cras faucibus odio augue.</p>
                         <ul class="list-arrow-adjust">
                             <li>Lorem ipsum dolor sit amet</li>
                             <li>Consectetur adipiscing elit</li>

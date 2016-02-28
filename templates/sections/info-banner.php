@@ -28,14 +28,14 @@
                     <p class="lede">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In nec velit vel turpis imperdiet tempus. Etiam venenatis maximus luctus. Curabitur eget lorem tortor.</p>
                     <p class="button_group">
                         <?php if ($options['color'] == 'light') { ?>
-                            <a href="#viewDemo" class="button-size-3<?php echo '-'.$options['cta-modifiers'] ?>">
+                            <a href="#" class="button-size-3<?php echo '-'.$options['cta-modifiers'] ?>">
                                 View Demo
                             </a>
                             <a href="http://themeforest.net/user/skyux/portfolio" target="blank" class="button-primary-size-3<?php echo '-'.$options['cta-modifiers'] ?>">
                                 Purchase Theme
                             </a>
                         <?php } else { ?>
-                            <a href="#viewDemo" target="blank" class="button-border-white-size-3<?php echo '-'.$options['cta-modifiers'] ?>">
+                            <a href="#" target="blank" class="button-border-white-size-3<?php echo '-'.$options['cta-modifiers'] ?>">
                                 View Demo
                             </a>
                             <a href="http://themeforest.net/user/skyux/portfolio" target="blank" class="button-white-size-3<?php echo '-'.$options['cta-modifiers'] ?>">
