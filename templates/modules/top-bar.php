@@ -86,38 +86,42 @@
     <!-- Top Bar -->
     <div class="top-bar<?php echo '-'.$options['modifiers'] ?>">
         <div class="container">
-            <div class="row-block">
+            <div class="row-block stack-0">
                 
-                <div class="top-bar_item row span">
-                    <div class="button_group-small span">
-                        <a href="#" class="button-icon-border-size-1 tooltip-bottom" data-tooltip="Facebook">
-                            <i class="fa fa-facebook"></i>
-                        </a>
-                        <a href="#" class="button-icon-border-size-1 tooltip-bottom" data-tooltip="Twitter">
-                            <i class="fa fa-twitter"></i>
-                        </a>
-                        <a href="#" class="button-icon-border-size-1 tooltip-bottom" data-tooltip="Dribbble">
-                            <i class="fa fa-dribbble"></i>
-                        </a>
-                        <a href="#" class="button-icon-border-size-1 tooltip-bottom" data-tooltip="Google Plus">
-                            <i class="fa fa-google-plus"></i>
-                        </a>
-                    </div>
-                    <div class="span">
-                        <small><a href="#"><i class="fa fa-envelope-o"></i> support@kayzen.com</a></small>
-                    </div>
-                    <div class="span">
-                        <small><a href="#"><i class="fa fa-phone"></i> (310) 276-2251</a></small>
-                    </div>
+                <div class="top-bar_nav-left span">
+                    <ul>
+                        <li class="min-break-2">
+                            <div class="button_group-small span">
+                                <a href="#" class="button-icon-border-size-1 tooltip-bottom" data-tooltip="Facebook">
+                                    <i class="fa fa-facebook"></i>
+                                </a>
+                                <a href="#" class="button-icon-border-size-1 tooltip-bottom" data-tooltip="Twitter">
+                                    <i class="fa fa-twitter"></i>
+                                </a>
+                                <a href="#" class="button-icon-border-size-1 tooltip-bottom" data-tooltip="Dribbble">
+                                    <i class="fa fa-dribbble"></i>
+                                </a>
+                                <a href="#" class="button-icon-border-size-1 tooltip-bottom" data-tooltip="Google Plus">
+                                    <i class="fa fa-google-plus"></i>
+                                </a>
+                            </div>
+                        </li>
+                        <li>
+                            <a class="button-plain-size-2" href="#"><i class="fa fa-envelope-o"></i> <span class="min-break-3">hello@kayzen.com</span></a>
+                        </li>
+                        <li>
+                            <a class="button-plain-size-2" href="#"><i class="fa fa-phone"></i> <span class="min-break-3">(310) 276-2251</span></a>
+                        </li>
+                    </ul>
                 </div>
                 
-                <div class="span text-right">
+                <div class="span text-right force-align">
                     
                     <div class="button_group span va-middle">
                         <a class="button-size-1" href="#modal-login">
                             <i class="fa fa-user"></i> Login
                         </a>
-                        <a class="button-primary-size-1" href="#modal-register">
+                        <a class="button-primary-size-1 min-break-1" href="#modal-register">
                             <i class="fa fa-pencil-square-o"></i> Register
                         </a>
                     </div>
@@ -175,7 +179,7 @@
                                 <a href="#">
                                     <small>USD</small> <i class="fa fa-angle-down"></i>
                                 </a>
-                                <ul class="list-interactive">
+                                <ul class="list-interactive-divider-small">
                                     <li><i class="fa fa-gbp"></i> GBP</li>
                                     <li><i class="fa fa-usd"></i> USD</li>
                                     <li><i class="fa fa-eur"></i> EUR</li>

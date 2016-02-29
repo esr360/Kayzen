@@ -1,5 +1,5 @@
 <!-- Navigation -->
-<nav class="navigation-no-icons" id="app-nav">
+<nav class="navigation-no-icons min-break-4" id="app-nav">
 	<ul>
 		<li class="active"><a href="<?php pageLink('homepages/homepage-1.php') ?>"><i class="navigation_icon fa fa-home"></i> Home</a></li>
 		<li>

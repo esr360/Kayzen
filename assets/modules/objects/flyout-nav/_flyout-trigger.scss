@@ -10,10 +10,6 @@
 
     $site-overlay: config((
         'name'            : 'flyout-trigger',
-        'top'             : 0.85rem,
-        'bottom'          : auto,
-        'left'            : auto,
-        'right'           : 0.85rem,
         'z-index'         : 14
     ), $custom);
 
@@ -23,14 +19,10 @@
 
     @include module {
         
-        top: this('top');
-        bottom: this('bottom');
-        left: this('left');
-        right: this('right');
-        z-index: this('z-index');
-        
-        position: absolute;
+        @include vertical-center(absolute);
+        right: 0;
         cursor: pointer;
+        z-index: this('z-index');
         
     } // module
         

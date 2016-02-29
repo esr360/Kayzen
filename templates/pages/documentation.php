@@ -406,7 +406,7 @@ brew install GraphicsMagick
                     <li><strong>Footer:</strong> assets/modules/objects/<a href="<?php pageLink('modules/objects/footer.php') ?>">footer</a></li>
                 </ul>
             
-                <p>Once you have configured all of your desired opions, you can preview all the modules on the <a href="#">Cheatsheet</a> page.</p>
+                <p>Once you have configured all of your desired opions, you can preview all the modules on the <a href="<?php pageLink('cheatsheet.php') ?>">Cheatsheet</a> page.</p>
             
 				<h2 class="heading-light-size-6" id="build">Build</h2>
 				

@@ -19,6 +19,11 @@
                 </div>
     
                 <?php include (ROOT.'/modules/navigation.php'); ?>
+                
+                <!-- Flyout Nav Trigger -->
+                <span class="button-icon-border-white flyout-trigger" id="flyout-trigger">
+                    <i class="fa fa-bars"></i>
+                </span>
     
             </div><!-- Header Wrapper -->
             

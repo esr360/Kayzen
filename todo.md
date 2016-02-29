@@ -3,7 +3,6 @@
 
 - contact form (don't forget to document)
 - update all empty # links
-- add cheatsheet page
 - full responsive audit
 - add themes and associated imagery
 
@@ -21,6 +20,7 @@
 - change report button color e.g. single-sidebar.php
 - html5 form validation javascript
 - topbar dropdown
+- add cheatsheet page
 
 # Next Release
 #============================================================
@@ -29,6 +29,7 @@
 - change order of components/modifiers in module overview
 - document 'blocks' list modifier
 - fix issue when clicking "back" after submitting form
+- make cheatsheet more in-depth
 
 # Backlog
 #============================================================
