@@ -36,7 +36,12 @@
     // Sizes
     //-------------------------------------------------------------
 
-        @include font-sizes;
+        @include font-sizes(
+            $responsive-values: (
+                'sizes' : ('size-7', 'size-8', 'size-9'),
+                'optional-sizes' : ('size-5')
+            )
+        );
 
     // Patterns
     //-------------------------------------------------------------

@@ -70,9 +70,6 @@
     
     .lede {
         font-size: font-size('size-4');
-        @media (max-width: breakpoint('break-2')) {
-            font-size: font-size('base');
-        }
     }
 	
 } // @mixin typography

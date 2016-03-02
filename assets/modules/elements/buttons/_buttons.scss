@@ -59,7 +59,14 @@
     // Sizes
     //-------------------------------------------------------------
 
-        @include font-sizes($responsive: false);
+        @include font-sizes(
+            $responsive-values: (
+                'sizes' : ('size-4'),
+                'breakpoints' : (
+                    'break-3' : 0.85
+                )
+            )
+        );
 
     // Modifiers
     //-------------------------------------------------------------

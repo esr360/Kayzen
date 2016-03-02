@@ -215,23 +215,6 @@
 	top: 50%;
 	transform: translateY(-50%);
 }
-	
-//-----------------------------------------------------------------
-// Font Sizes
-//-----------------------------------------------------------------
-
-@mixin font-sizes($responsive: true) {
-	@each $size, $value in typography-config('sizes') {
-		@include modifier($size) {
-			font-size: $value;
-            @if ($responsive) {
-                @media (max-width: breakpoint('break-2')) {
-                    font-size: ($value * 0.75);
-                }
-            }
-		}
-	}
-}
 
 //-----------------------------------------------------------------
 // Overlay

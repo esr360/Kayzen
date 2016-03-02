@@ -14,7 +14,7 @@
         <section class="billboard-overlay-full-screen" data-stellar-background-ratio="0.5">
             <div class="billboard_wrapper container-small">
                 <header class="heading_group">
-                    <h2 class="heading-uppercase-light-strikethrough-spaced-size-5"><span><?php echo $options['headline'] ?></span></h2>
+                    <h2 class="heading-uppercase-light-strikethrough-spaced-size-5-responsive"><span><?php echo $options['headline'] ?></span></h2>
                     <h3 class="heading-uppercase-heavy-size-9 font-2">What's your theme?</h3>
                 </header>
                 <p class="lede">Kayzen is a powerful themeing framework for architecting CSS for large, modular & scalable web applications. Built using only Sass (SCSS), Kayzen has the customizing power of a complete CMS theme.</p>

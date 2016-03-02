@@ -56,12 +56,6 @@
 				margin-right: 0;
 			}
             
-            @include modifier('left') {
-                @media(max-width: breakpoint('break-2')) {
-                    width: 90px;
-                }
-            }
-            
 			ul {
 				@extend %list-reset;
                 margin-top: 0;
@@ -142,7 +136,6 @@
                             box-shadow: none;
                             > a, > .span {
                                 padding-left: 0;
-                                content: "dopy";
                             }
                         }
                     }

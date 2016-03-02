@@ -22,7 +22,7 @@
         <div class="widget_group row-block text-center">
             
             <!-- Feature 1 -->
-            <div class="widget-block-panel span">
+            <div class="widget-block-panel span break-3-half">
                 <div class="widget_icon button-icon-plain-size-8">
                     <i class="fa fa-desktop"></i>
                 </div>
