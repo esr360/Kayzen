@@ -26,6 +26,7 @@
                         </div>
                     </div>
                 </div>
+                <hr class="hrule-stripes-large max-break-3" />
                 <div class="span-6">
                     <header class="heading_group">
                         <h2 class="heading-heavy-size-5-uppercase font-2">Kayzen is the Best</h2>

@@ -98,7 +98,9 @@
 	    }
 		
 		@include modifier('section') {
-			padding: 4em 0;
+            @media (min-width: breakpoint('break-3')) {
+			    padding: 4em 0;
+            }
 		}
         
         & > & {

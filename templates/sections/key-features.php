@@ -19,10 +19,10 @@
         </header>
         
         <!-- Features Row 1 -->
-        <div class="widget_group row-block text-center">
+        <div class="widget_group row-flow row-no-gutter text-center">
             
             <!-- Feature 1 -->
-            <div class="widget-block-panel span break-3-half">
+            <div class="widget-block-panel span-3 break-4-half break-2-full">
                 <div class="widget_icon button-icon-plain-size-8">
                     <i class="fa fa-desktop"></i>
                 </div>
@@ -34,7 +34,7 @@
             </div>
             
             <!-- Feature 2 -->
-            <div class="widget-block-panel span">
+            <div class="widget-block-panel span-3 break-4-half break-2-full">
                 <div class="widget_icon button-icon-plain-size-8">
                     <i class="fa fa-clipboard"></i>
                 </div>
@@ -46,7 +46,7 @@
             </div>
             
             <!-- Feature 3 -->
-            <div class="widget-block-panel span">
+            <div class="widget-block-panel span-3 break-4-half break-2-full">
                 <div class="widget_icon button-icon-plain-size-8">
                     <i class="fa fa-photo"></i>
                 </div>
@@ -58,7 +58,7 @@
             </div>
             
             <!-- Feature 4 -->
-            <div class="widget-block-panel span">
+            <div class="widget-block-panel span-3 break-4-half break-2-full">
                 <div class="widget_icon button-icon-plain-size-8">
                     <i class="fa fa-eyedropper"></i>
                 </div>
@@ -69,13 +69,8 @@
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc et erat posuere suscipit. Phasellus congue scelerisque lacus.</p>
             </div>
             
-        </div><!-- Features Row 1 -->
-        
-        <!-- Features Row 2 -->
-        <div class="widget_group row-block text-center">
-            
             <!-- Feature 5 -->
-            <div class="widget-block-panel span">
+            <div class="widget-block-panel span-3 break-4-half break-2-full">
                 <div class="widget_icon button-icon-plain-size-8">
                     <i class="fa fa-hand-o-down"></i>
                 </div>
@@ -87,7 +82,7 @@
             </div>
             
             <!-- Feature 6 -->
-            <div class="widget-block-panel span">
+            <div class="widget-block-panel span-3 break-4-half break-2-full">
                 <div class="widget_icon button-icon-plain-size-8">
                     <i class="fa fa-cubes"></i>
                 </div>
@@ -99,7 +94,7 @@
             </div>
             
             <!-- Feature 7 -->
-            <div class="widget-block-panel span">
+            <div class="widget-block-panel span-3 break-4-half break-2-full">
                 <div class="widget_icon button-icon-plain-size-8">
                     <i class="fa fa-cog"></i>
                 </div>
@@ -111,7 +106,7 @@
             </div>
             
             <!-- Feature 8 -->
-            <div class="widget-block-panel span">
+            <div class="widget-block-panel span-3 break-4-half break-2-full">
                 <div class="widget_icon button-icon-plain-size-8">
                     <i class="fa fa-google"></i>
                 </div>

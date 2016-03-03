@@ -8,10 +8,10 @@
         
         <div class="footer_wrapper">
             <div class="container">
-                <div class="row">
+                <div class="row-flow row-waffle-large table-fixed">
                     
                     <!-- Meta -->
-                    <div class="span-3">
+                    <div class="span-3 break-4-half break-2-full">
                         <div class="logo">
                             <a href="/"><img src="<?php echo appDir ?>/images/logo-white.png" alt="logo" /></a>
                         </div>
@@ -24,7 +24,7 @@
                     </div>
                     
                     <!-- Newsletter -->
-                    <div class="span-3">
+                    <div class="span-3 break-4-half break-2-full">
                         
                         <header class="heading_group-small">
                             <h4 class="footer_title heading-heavy-uppercase-size-3 font-2">
@@ -103,7 +103,7 @@
                     </div>
                     
                     <!-- Twitter Feed -->
-                    <div class="span-3" id="footer-twitter-feed">
+                    <div class="span-3 break-4-half break-2-full" id="footer-twitter-feed">
                         <header class="heading_group-small">
                             <h4 class="footer_title heading-heavy-uppercase-size-3 font-2">
                                 <i class="fa fa-twitter"></i> Twitter Feed
@@ -124,7 +124,7 @@
                     </div>
                     
                     <!-- Testimonials -->
-                    <div class="span-3">
+                    <div class="span-3 break-4-half break-2-full">
                         
                         <header class="heading_group-small">
                             <h4 class="footer_title heading-heavy-uppercase-size-3 font-2">

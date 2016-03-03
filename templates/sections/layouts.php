@@ -22,49 +22,41 @@
         <div class="container-full wrapper">
             
             <!-- Layouts Row 1 -->
-            <div class="widget_group-large row-magic">
-                <div class="span">
+            <div class="row-flow row-waffle">
+                <div class="span-3 break-3-half break-1-full">
                     <img src="<?php echo appDir ?>/images/layouts/layout-header-top.png" alt="" />
                 </div>
-                <div class="span">
+                <div class="span-3 break-3-half break-1-full">
                     <img src="<?php echo appDir ?>/images/layouts/layout-header-alt-topbar.png" alt="" />
                 </div>
-                <div class="span">
+                <div class="span-3 break-3-half break-1-full">
                     <img src="<?php echo appDir ?>/images/layouts/layout-right-sidebar.png" alt="" />
                 </div>
-                <div class="span">
+                <div class="span-3 break-3-half break-1-full">
                     <img src="<?php echo appDir ?>/images/layouts/layout-left-header.png" alt="" />
                 </div>
-            </div>
-            
-            <!-- Layouts Row 2 -->
-            <div class="widget_group-large row-magic">
-                <div class="span">
+                <div class="span-3 break-3-half break-1-full">
                     <img src="<?php echo appDir ?>/images/layouts/layout-right-header-topbar.png" alt="" />
                 </div>
-                <div class="span">
+                <div class="span-3 break-3-half break-1-full">
                     <img src="<?php echo appDir ?>/images/layouts/layout-topbar.png" alt="" />
                 </div>
-                <div class="span">
+                <div class="span-3 break-3-half break-1-full">
                     <img src="<?php echo appDir ?>/images/layouts/layout-header-alt.png" alt="" />
                 </div>
-                <div class="span">
+                <div class="span-3 break-3-half break-1-full">
                     <img src="<?php echo appDir ?>/images/layouts/layout-header-no-bar-topbar.png" alt="" />
                 </div>
-            </div>
-            
-            <!-- Layouts Row 3 -->
-            <div class="widget_group-large row-magic">
-                <div class="span">
+                <div class="span-3 break-3-half break-1-full">
                     <img src="<?php echo appDir ?>/images/layouts/layout-left-sidebar.png" alt="" />
                 </div>
-                <div class="span">
+                <div class="span-3 break-3-half break-1-full">
                     <img src="<?php echo appDir ?>/images/layouts/layout-right-header.png" alt="" />
                 </div>
-                <div class="span">
+                <div class="span-3 break-3-half break-1-full">
                     <img src="<?php echo appDir ?>/images/layouts/layout-menu-alt.png" alt="" />
                 </div>
-                <div class="span">
+                <div class="span-3 break-3-half break-1-full">
                     <img src="<?php echo appDir ?>/images/layouts/layout-left-header-topbar.png" alt="" />
                 </div>
             </div>

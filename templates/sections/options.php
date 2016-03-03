@@ -33,6 +33,8 @@
                     </div>
                 </div>
                 
+                <hr class="hrule-stripes-large max-break-3" />
+                
                 <!-- Options Content -->
                 <div class="span-6 va-middle">
                     <header class="heading_group">

@@ -40,7 +40,7 @@
                         <label for="emailAddress">Email Address</label>
                     </div>
                 </div>
-                <div class="form_group">
+                <div class="form_group object">
                     <textarea class="form_input" name="yourMessage" placeholder="We aim to respond to all messages within 24 hours." id="yourMessage" rows="8" required=""></textarea>
                     <label for="yourMessage">Your Message</label>
                 </div>

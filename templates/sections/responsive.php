@@ -20,10 +20,10 @@
         
         <div class="container-section">
             
-            <div class="row">
+            <div class="row-flow">
                 
                 <!-- Responsive Features -->
-                <div class="widget_group span-3 va-middle text-right">
+                <div class="widget_group span-3 break-3-half break-2-full va-middle text-right">
                     <div class="widget-stacked">   
                         <header class="widget_header-inline heading_group">
                             <h3 class="heading-heavy-size-4">Fast Performance</h3>
@@ -57,7 +57,7 @@
                 </div>
                 
                 <!-- Responsive Graphics -->
-                <div class="span-6 va-middle text-center">
+                <div class="span-6 va-middle text-center min-break-3">
                     <div class="center-xy span-6">
                         <img 
                             class="mobile-graphic-white" 
@@ -83,7 +83,7 @@
                 </div>
                 
                 <!-- Responsive Features -->
-                <div class="widget_group span-3 va-middle">
+                <div class="widget_group span-3 break-3-half break-2-full va-middle">
                     <div class="widget-stacked">                  
                         <div class="widget_icon-inline button-icon-plain-size-7">
                             <i class="fa fa-user"></i>

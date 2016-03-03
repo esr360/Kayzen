@@ -71,6 +71,10 @@
 		position: relative;
 	}
     
+    .fixed-table {
+        table-layout: fixed;
+    }
+    
     .rating {
         margin-top: 0.5em;
     }
@@ -133,6 +137,18 @@
 	}
     .text-justify {
         text-align: justify;
+    }
+    
+    .text-right-desktop {
+        @media (min-width: option($grid, 'options', 'col-break')) {
+		    text-align: right !important; 
+        }
+    }
+    
+    .center-mobile {
+        @media (max-width: option($grid, 'options', 'col-break')) {
+		    text-align: center !important; 
+        }
     }
 	
     // Object Aligning

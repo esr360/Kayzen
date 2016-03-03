@@ -5,10 +5,10 @@
     ), $custom); ?>
     
     <!-- Statistics -->
-    <section class="row-block text-center">
+    <section class="row-flow row-no-gutter text-center">
         
         <!-- Statistic 1 -->
-        <div class="widget-spectrum-quarter span-3">
+        <div class="widget-spectrum-quarter span-3 break-3-half break-2-full">
             <div class="widget_icon button-icon-plain-size-8">
                 <i class="fa fa-code"></i>
             </div>
@@ -19,7 +19,7 @@
         </div>
         
         <!-- Statistic 2 -->
-        <div class="widget-spectrum-quarter span-3">
+        <div class="widget-spectrum-quarter span-3 break-3-half break-2-full">
             <div class="widget_icon button-icon-plain-size-8">
                 <i class="fa fa-desktop"></i>
             </div>
@@ -30,7 +30,7 @@
         </div>
         
         <!-- Statistic 3 -->
-        <div class="widget-spectrum-quarter span-3">
+        <div class="widget-spectrum-quarter span-3 break-3-half break-2-full">
             <div class="widget_icon button-icon-plain-size-8">
                 <i class="fa fa-users"></i>
             </div>
@@ -41,7 +41,7 @@
         </div>
         
         <!-- Statistic 4 -->
-        <div class="widget-spectrum-quarter span-3">
+        <div class="widget-spectrum-quarter span-3 break-3-half break-2-full">
             <div class="widget_icon button-icon-plain-size-8">
                 <i class="fa fa-desktop"></i>
             </div>

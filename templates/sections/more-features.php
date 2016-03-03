@@ -24,7 +24,7 @@
             <div class="widget_group-grid row-flow">
                 
                 <!-- Feature 1 -->
-                <div class="widget span-4">                     
+                <div class="widget span-4 break-3-half break-2-full">                     
                     <div class="widget_icon-inline button-icon-plain-size-6">
                         <i class="fa fa-cogs"></i>
                     </div>  
@@ -36,7 +36,7 @@
                 </div>
                 
                 <!-- Feature 2 -->
-                <div class="widget span-4">                     
+                <div class="widget span-4 break-3-half break-2-full">                     
                     <div class="widget_icon-inline button-icon-plain-size-6">
                         <i class="fa fa-star"></i>
                     </div>  
@@ -48,7 +48,7 @@
                 </div>
                 
                 <!-- Feature 3 -->
-                <div class="widget span-4">                     
+                <div class="widget span-4 break-3-half break-2-full">                     
                     <div class="widget_icon-inline button-icon-plain-size-6">
                         <i class="fa fa-eye"></i>
                     </div>  
@@ -60,7 +60,7 @@
                 </div>
                 
                 <!-- Feature 4 -->
-                <div class="widget span-4">                     
+                <div class="widget span-4 break-3-half break-2-full">                     
                     <div class="widget_icon-inline button-icon-plain-size-6">
                         <i class="fa fa-home"></i>
                     </div>  
@@ -72,7 +72,7 @@
                 </div>
                 
                 <!-- Feature 5 -->
-                <div class="widget span-4">                     
+                <div class="widget span-4 break-3-half break-2-full">                     
                     <div class="widget_icon-inline button-icon-plain-size-6">
                         <i class="fa fa-image"></i>
                     </div>  
@@ -84,7 +84,7 @@
                 </div>
                 
                 <!-- Feature 6 -->
-                <div class="widget span-4">                     
+                <div class="widget span-4 break-3-half break-2-full">                     
                     <div class="widget_icon-inline button-icon-plain-size-6">
                         <i class="fa fa-search"></i>
                     </div>  
@@ -96,7 +96,7 @@
                 </div>
                 
                 <!-- Feature 7 -->
-                <div class="widget span-4">                     
+                <div class="widget span-4 break-3-half break-2-full">                     
                     <div class="widget_icon-inline button-icon-plain-size-6">
                         <i class="fa fa-user"></i>
                     </div>  
@@ -108,7 +108,7 @@
                 </div>
                 
                 <!-- Feature 8 -->
-                <div class="widget span-4">                     
+                <div class="widget span-4 break-3-half break-2-full">                     
                     <div class="widget_icon-inline button-icon-plain-size-6">
                         <i class="fa fa-twitter"></i>
                     </div>  
@@ -120,7 +120,7 @@
                 </div>
                 
                 <!-- Feature 9 -->
-                <div class="widget span-4">                     
+                <div class="widget span-4 break-3-half break-2-full max-break-2">                     
                     <div class="widget_icon-inline button-icon-plain-size-6">
                         <i class="fa fa-github-alt"></i>
                     </div>  

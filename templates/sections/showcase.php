@@ -56,7 +56,7 @@
         <div id="showcase-carousel" class="owl-carousel">
             
             <!-- Showcase Slide 1 -->
-            <div class="row-block bg-cover" style="background-image: url('<?php stockImage('demo/small/hero-1.jpg') ?>')">
+            <div class="row-block bg-cover stack-break-4" style="background-image: url('<?php stockImage('demo/small/hero-1.jpg') ?>')">
                 <div class="section_block span-6 text-center va-middle">
                     <div class="block-content span-9">
                         <div class="desktop-graphic-scroll">
@@ -87,7 +87,7 @@
             </div>
             
             <!-- Showcase Slide 2 -->
-            <div class="row-block bg-cover" style="background-image: url('<?php stockImage('demo/small/hero-1.jpg') ?>')">
+            <div class="row-block stack-break-4" style="background-image: url('<?php stockImage('demo/small/hero-1.jpg') ?>')">
                 <div class="section_block span-6 text-center va-middle">
                     <div class="block-content span-9">
                         <div class="desktop-graphic-scroll">
@@ -118,7 +118,7 @@
             </div>
             
             <!-- Showcase Slide 3 -->
-            <div class="row-block bg-cover" style="background-image: url('<?php stockImage('demo/small/hero-1.jpg') ?>')">
+            <div class="row-block bg-cover stack-break-4" style="background-image: url('<?php stockImage('demo/small/hero-1.jpg') ?>')">
                 <div class="section_block span-6 text-center va-middle">
                     <div class="block-content span-9">
                         <div class="desktop-graphic-scroll">
@@ -149,7 +149,7 @@
             </div>
             
             <!-- Showcase Slide 4 -->
-            <div class="row-block bg-cover" style="background-image: url('<?php stockImage('demo/small/hero-1.jpg') ?>')">
+            <div class="row-block bg-cover stack-break-4" style="background-image: url('<?php stockImage('demo/small/hero-1.jpg') ?>')">
                 <div class="section_block span-6 text-center va-middle">
                     <div class="block-content span-9">
                         <div class="desktop-graphic-scroll">
@@ -180,7 +180,7 @@
             </div>
             
             <!-- Showcase Slide 5 -->
-            <div class="row-block bg-cover" style="background-image: url('<?php stockImage('demo/small/hero-1.jpg') ?>')">
+            <div class="row-block bg-cover stack-break-4" style="background-image: url('<?php stockImage('demo/small/hero-1.jpg') ?>')">
                 <div class="section_block span-6 text-center va-middle">
                     <div class="block-content span-9">
                         <div class="desktop-graphic-scroll">
@@ -211,7 +211,7 @@
             </div>
             
             <!-- Showcase Slide 6 -->
-            <div class="row-block bg-cover" style="background-image: url('<?php stockImage('demo/small/hero-1.jpg') ?>')">
+            <div class="row-block bg-cover stack-break-4" style="background-image: url('<?php stockImage('demo/small/hero-1.jpg') ?>')">
                 <div class="section_block span-6 text-center va-middle">
                     <div class="block-content span-9">
                         <div class="desktop-graphic-scroll">
@@ -242,7 +242,7 @@
             </div>
             
             <!-- Showcase Slide 7 -->
-            <div class="row-block bg-cover" style="background-image: url('<?php stockImage('demo/small/hero-1.jpg') ?>')">
+            <div class="row-block bg-cover stack-break-4" style="background-image: url('<?php stockImage('demo/small/hero-1.jpg') ?>')">
                 <div class="section_block span-6 text-center va-middle">
                     <div class="block-content span-9">
                         <div class="desktop-graphic-scroll">
@@ -298,10 +298,16 @@
                 // Showcase Thumbs
                 $sync2.owlCarousel({
                     center: true,
-                    items: 5,
+                    items: 3,
                     stagePadding: 0,
                     responsive: {
-                        600: {
+                        540: {
+                            items:4
+                        },
+                        720: {
+                            items:5
+                        },
+                        960: {
                             items:6
                         }
                     }

@@ -21,10 +21,10 @@
         <div class="container">
             
             <!-- Features Row -->
-            <div class="widget_group row-magic text-center">
+            <div class="widget_group row-flow row-waffle stack-break-2 text-center">
                 
                 <!-- Feature 1 -->
-                <div class="widget-borderTop-highlight-block-scale span">
+                <div class="widget-borderTop-highlight-block-scale span-3 break-4-half break-2-full">
                     <div class="widget_icon button-icon-plain-size-8">
                         <i class="fa fa-desktop"></i>
                     </div>
@@ -36,7 +36,7 @@
                 </div>
                 
                 <!-- Feature 2 -->
-                <div class="widget-borderTop-highlight-block-scale span">
+                <div class="widget-borderTop-highlight-block-scale span-3 break-4-half break-2-full">
                     <div class="widget_icon button-icon-plain-size-8">
                         <i class="fa fa-clipboard"></i>
                     </div>
@@ -48,7 +48,7 @@
                 </div>
                 
                 <!-- Feature 3 -->
-                <div class="widget-borderTop-highlight-block-scale span">
+                <div class="widget-borderTop-highlight-block-scale span-3 break-4-half break-2-full">
                     <div class="widget_icon button-icon-plain-size-8">
                         <i class="fa fa-photo"></i>
                     </div>
@@ -60,7 +60,7 @@
                 </div>
                 
                 <!-- Feature 4 -->
-                <div class="widget-borderTop-highlight-block-scale span">
+                <div class="widget-borderTop-highlight-block-scale span-3 break-4-half break-2-full">
                     <div class="widget_icon button-icon-plain-size-8">
                         <i class="fa fa-eyedropper"></i>
                     </div>
