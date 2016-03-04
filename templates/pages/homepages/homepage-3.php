@@ -62,7 +62,7 @@
 			
 		</section>
 		
-		<div class="row-block text-center">
+		<div class="row-block table-fixed text-center">
 			<section 
 				class="section-secondary-overlay-deep bg-cover span-6 va-middle"
 				style="background-image: url('<?php stockImage('demo/hero-12.jpg') ?>')"
@@ -140,10 +140,10 @@
 			<div class="container">
 				
 				<!-- Features Row -->
-				<div class="widget_group row-magic text-center">
+				<div class="widget_group row-flow row-waffle-large text-center">
 					
 					<!-- Feature 1 -->
-					<div class="widget span">
+					<div class="widget span-3 break-3-half break-2-full">
 						<div class="widget_icon button-icon-plain-size-8">
 							<i class="fa fa-desktop"></i>
 						</div>
@@ -155,7 +155,7 @@
 					</div>
 					
 					<!-- Feature 2 -->
-					<div class="widget span">
+					<div class="widget span-3 break-3-half break-2-full">
 						<div class="widget_icon button-icon-plain-size-8">
 							<i class="fa fa-clipboard"></i>
 						</div>
@@ -167,7 +167,7 @@
 					</div>
 					
 					<!-- Feature 3 -->
-					<div class="widget span">
+					<div class="widget span-3 break-3-half break-2-full">
 						<div class="widget_icon button-icon-plain-size-8">
 							<i class="fa fa-photo"></i>
 						</div>
@@ -179,7 +179,7 @@
 					</div>
 					
 					<!-- Feature 4 -->
-					<div class="widget span">
+					<div class="widget span-3 break-3-half break-2-full">
 						<div class="widget_icon button-icon-plain-size-8">
 							<i class="fa fa-eyedropper"></i>
 						</div>
@@ -202,7 +202,7 @@
 			style="background-image: url('<?php echo appDir ?>/images/polygon-bg-blue.jpg')"
 		>
 			<div class="container">
-				<div class="row">
+				<div class="row row-waffle-large">
 					<div class="span-6 va-middle">
 						<img src="<?php echo appDir ?>/images/device-outline.png">
 					</div>
