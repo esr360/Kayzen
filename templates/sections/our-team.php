@@ -18,7 +18,7 @@
         </header>
         
         <div class="container">
-            <div class="row">
+            <div class="row row-waffle-large stack-break-2">
                 
                 <div class="span-4">
                     <div class="thumbnail">
@@ -49,12 +49,6 @@
                         <a href="#" class="button-icon-primary tooltip-top" data-tooltip="LinkedIn">
                             <i class="fa fa-linkedin"></i>
                         </a>
-                        <a href="#" class="button-icon-primary tooltip-top" data-tooltip="DeviantArt">
-                            <i class="fa fa-deviantart"></i>
-                        </a>
-                        <a href="#" class="button-icon-primary tooltip-top" data-tooltip="Behance">
-                            <i class="fa fa-behance"></i>
-                        </a>
                     </div>	
                 </div>
                 
@@ -75,9 +69,6 @@
                     </header>
                     <p>Cum socis natoque penatibus et magnis dis parturient montes, nascetur maximus ridiculus mus. Donec finibus fringilla ultrices purus.</p>		
                     <div class="icon_group-small">
-                        <a href="#" class="button-icon-primary tooltip-top" data-tooltip="Dribbble">
-                            <i class="fa fa-dribbble"></i>
-                        </a>
                         <a href="#" class="button-icon-primary tooltip-top" data-tooltip="Twitter">
                             <i class="fa fa-twitter"></i>
                         </a>

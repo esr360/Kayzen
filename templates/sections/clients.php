@@ -11,9 +11,9 @@
     >
     
         <div class="container">
-            <div class="row">
+            <div class="row row-waffle-large table-fixed">
                 
-                <div class="span-4 va-middle">
+                <div class="span-4 va-middle center-mobile">
                     <header class="heading_group">
                         <h4 class="heading-uppercase-light-brand-1-size-4"><?php echo $options['title'] ?></h4>
                         <h2 class="heading-heavy-size-6 font-2"><span><?php echo $options['sub-title'] ?></span></h2>
@@ -52,10 +52,15 @@
                             var clientsCarousel = $("#clients-slider");
                             
                             clientsCarousel.owlCarousel({
-                                items: 3,
+                                items: 2,
                                 center: true,
                                 loop: true,
-                                margin: 30
+                                margin: 30,
+                                responsive: {
+                                    540: {
+                                        items:3
+                                    }
+                                }
                             })
                             
                         });

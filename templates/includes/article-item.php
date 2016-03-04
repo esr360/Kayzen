@@ -7,6 +7,7 @@
             'type'       => 'blog',
             'media'      => 'image',
             'matrix'     => false,
+            'class'      => null,
             'size'       => null,
             'height'     => null,
             'span'       => null,
@@ -71,7 +72,7 @@
         
     ?>
 
-    <article class="<?php echo $class ?>" <?php echo $data ?>>
+    <article class="<?php echo $class.' '.$options['class'] ?>" <?php echo $data ?>>
 
         <?php if ($options['ribbon']) { ?>
             <div class="corner-ribbon-<?php echo $options['ribbon'][0] ?>" data-ribbon="<?php echo $options['ribbon'][1] ?>"></div>

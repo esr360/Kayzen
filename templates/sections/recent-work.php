@@ -26,7 +26,8 @@
                     articleItem(array(
                         'type'      => 'portfolio',
                         'matrix'    => true,
-                        'span'      => 4
+                        'span'      => 4,
+                        'class'    => 'break-3-half break-2-full'
                     ));
                     
                 } ?>

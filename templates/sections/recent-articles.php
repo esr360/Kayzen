@@ -18,9 +18,9 @@
         </header>
         
         <div class="container">
-            <div class="row">	
+            <div class="row row-flow row-waffle-large">	
                 
-                <div class="span-4 relative">	
+                <div class="span-4 break-3-half break-2-full relative">	
                     <div class="thumbnail-zoom">
                         <div class="thumbnail_mask">
                             <div class="thumbnail_controls icon_group-small">
@@ -46,7 +46,7 @@
                         <h4 class="heading-light-size-3">Posted by <a href="#">Naomi Olson</a></h4>
                     </header>
                     <p>Cum socis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec finibus fringilla purus. Integer libero justo, mattis et magna eget...</p>
-                    <div class="row">
+                    <div class="row stack-0">
                         <div class="span-6 va-middle">
                             <a href="#" class="button-oval-primary">Read More</a>
                         </div>
@@ -56,7 +56,7 @@
                     </div>
                 </div>
                 
-                <div class="span-4 relative">	
+                <div class="span-4 break-3-half break-2-full relative">	
                     <div class="thumbnail-zoom">
                         <div class="thumbnail_mask">
                             <div class="thumbnail_controls icon_group-small">
@@ -82,7 +82,7 @@
                         <h4 class="heading-light-size-3">Posted by <a href="#">Naomi Olson</a></h4>
                     </header>
                     <p>Cum socis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec finibus fringilla purus. Integer libero justo, mattis et magna eget...</p>
-                    <div class="row">
+                    <div class="row stack-0">
                         <div class="span-6 va-middle">
                             <a href="#" class="button-oval-primary">Read More</a>
                         </div>
@@ -92,7 +92,7 @@
                     </div>
                 </div>
                 
-                <div class="span-4 relative">	
+                <div class="span-4 min-break-3 relative">	
                     <div class="thumbnail-zoom">
                         <div class="thumbnail_mask">
                             <div class="thumbnail_controls icon_group-small">
@@ -118,7 +118,7 @@
                         <h4 class="heading-light-size-3">Posted by <a href="#">Naomi Olson</a></h4>
                     </header>
                     <p>Cum socis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec finibus fringilla purus. Integer libero justo, mattis et magna eget...</p>
-                    <div class="row">
+                    <div class="row stack-0">
                         <div class="span-6 va-middle">
                             <a href="#" class="button-oval-primary">Read More</a>
                         </div>

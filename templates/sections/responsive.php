@@ -82,6 +82,8 @@
                     </div>
                 </div>
                 
+                <hr class="hrule-stripes-large max-break-2" />
+                
                 <!-- Responsive Features -->
                 <div class="widget_group span-3 break-3-half break-2-full va-middle">
                     <div class="widget-stacked">                  

@@ -21,7 +21,7 @@
         <div class="container">
             
             <!-- More Features Row -->
-            <div class="widget_group-grid row-flow">
+            <div class="row-flow row-waffle-large">
                 
                 <!-- Feature 1 -->
                 <div class="widget span-4 break-3-half break-2-full">                     
@@ -120,7 +120,7 @@
                 </div>
                 
                 <!-- Feature 9 -->
-                <div class="widget span-4 break-3-half break-2-full max-break-2">                     
+                <div class="widget span-4 break-3-half break-2-full min-break-3">                     
                     <div class="widget_icon-inline button-icon-plain-size-6">
                         <i class="fa fa-github-alt"></i>
                     </div>  

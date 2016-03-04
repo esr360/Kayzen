@@ -107,7 +107,9 @@
 	//-------------------------------------------------------------
 	
 	.short {
-		width: 75%;
+        @media (min-width: option($grid, 'options', 'col-break')) {
+		    width: 75%;
+        }
 	}
 	
 	.col-full {

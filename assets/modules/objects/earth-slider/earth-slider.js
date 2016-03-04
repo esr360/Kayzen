@@ -12,10 +12,8 @@
         
         // Options
         var options = $.extend({
-            
            startingSection : 2,
            pinWrapper : '.pin-wrapper'
-            
         }, custom);
         
         // Run the code on each occurance of the element

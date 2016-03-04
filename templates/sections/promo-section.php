@@ -39,7 +39,7 @@
                         <li>Sed sed iaculis arcu, eu pharetra nulla</li>
                         <li>Etiam dapibus, nulla placerat</li>
                     </ul>
-                    <p class="button_group">
+                    <div class="button_group">
                         <?php if ($options['dark']) { ?>
                             <a href="#" class="button-border-white<?php echo '-'.$options['cta-modifiers'] ?>">
                                 View Demo
@@ -52,7 +52,7 @@
                         <a href="http://themeforest.net/user/skyux/portfolio" target="blank" class="button-primary<?php echo '-'.$options['cta-modifiers'] ?>">
                             Purchase Theme
                         </a>
-                    </p>
+                    </div>
                 </div>
             </div>
         </div>

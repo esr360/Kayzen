@@ -39,9 +39,12 @@
     }
 
     .earth-wrapper {
-        height: 185px;
+        height: 135px;
         margin: auto;
-        width: 55%;
+        @media (min-width: breakpoint('break-3')) { 
+            height: 185px;
+            width: 55%;
+        }
     }
 
     .earth {
@@ -59,14 +62,12 @@
 
     .pin-wrapper {
         @include vertical-center(absolute);
+        transform-origin: center;
+        width: 100%;
         &.active {
             .pin {
                 background: color('brand', 'primary');
             }
-        }
-        @media (min-width: breakpoint('break-3')) { 
-            transform-origin: center;
-            width: 100%;
         }
     }
 
@@ -78,6 +79,7 @@
         cursor: pointer;
         transition: base('transition');
         position: relative;
+        transform: translateX(-30%) rotate(-135deg);
         &:after {
             content: '';
             width: 50%;
@@ -90,9 +92,6 @@
             top: 0;
             bottom: 0;
             border-radius: 50%;
-        }
-        @media (min-width: breakpoint('break-3')) { 
-            transform: translateX(-30%) rotate(-135deg);
         }
     }
 

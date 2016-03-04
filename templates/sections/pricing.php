@@ -18,7 +18,7 @@
         </header>
         
         <div class="container">
-            <div class="row">
+            <div class="row row-waffle-large">
                 
                 <div class="span-4 price-chart_wrapper">
                     <div class="price-chart-free">
