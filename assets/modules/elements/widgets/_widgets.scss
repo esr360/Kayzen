@@ -442,7 +442,10 @@
         
         @include component('icon') {
             color: this('icon-color');
-            margin-bottom: base('margin');
+            margin-bottom: (base('margin') / 2);
+            @media (min-width: breakpoint('break-3')) {
+                margin-bottom: base('margin');
+            }
             @include modifier('inline') {
                 margin-right: 0.5rem;
             }

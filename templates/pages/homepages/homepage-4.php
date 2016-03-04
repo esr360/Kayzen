@@ -67,48 +67,56 @@
                         'type'   => 'portfolio',
                         'matrix' => true,
                         'span'   => 3,
+                        'class'  => 'break-3-half break-1-full'
                     ));
                     
                     articleItem(array(
                         'type'   => 'portfolio',
                         'matrix' => true,
                         'span'   => 3,
+                        'class'  => 'break-3-half break-1-full'
                     ));
                     
                     articleItem(array(
                         'type'   => 'portfolio',
                         'matrix' => true,
                         'span'   => 3,
+                        'class'  => 'break-3-half break-1-full'
                     ));
                     
                     articleItem(array(
                         'type'   => 'portfolio',
                         'matrix' => true,
                         'span'   => 3,
+                        'class'  => 'break-3-half break-1-full'
                     ));
                 
 				    articleItem(array(
                         'type'   => 'portfolio',
                         'matrix' => true,
                         'span'   => 3,
+                        'class'  => 'break-3-half break-1-full'
                     ));
                     
                     articleItem(array(
                         'type'   => 'portfolio',
                         'matrix' => true,
                         'span'   => 3,
+                        'class'  => 'break-3-half break-1-full'
                     ));
                     
                     articleItem(array(
                         'type'   => 'portfolio',
                         'matrix' => true,
                         'span'   => 3,
+                        'class'  => 'break-3-half break-1-full'
                     ));
                     
                     articleItem(array(
                         'type'   => 'portfolio',
                         'matrix' => true,
                         'span'   => 3,
+                        'class'  => 'break-3-half break-1-full'
                     ));
                     
                  ?>
@@ -131,9 +139,9 @@
 			</header>
 			
 			<!-- Features Row 1 -->
-			<div class="row-block text-center">
+			<div class="row-no-gutter table-fixed text-center">
 				
-				<div class="widget-block-panel-noHover span-3">
+				<div class="widget-block-panel-noHover span-3 break-4-half break-2-full">
 					<div class="widget_icon button-icon-plain-size-8">
 						<i class="fa fa-desktop"></i>
 					</div>
@@ -144,7 +152,7 @@
 					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc et erat posuere suscipit. Phasellus congue scelerisque lacus.</p>
 				</div>
 				
-				<div class="widget-block-panel-noHover span-3">
+				<div class="widget-block-panel-noHover span-3 break-4-half break-2-full">
 					<div class="widget_icon button-icon-plain-size-8">
 						<i class="fa fa-clipboard"></i>
 					</div>
@@ -155,7 +163,7 @@
 					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc et erat posuere suscipit. Phasellus congue scelerisque lacus.</p>
 				</div>
 				
-				<div class="section-secondary span-6 va-middle">
+				<div class="section-secondary span-6 break-4-full va-middle">
 					<div class="container-small">
 						<blockquote class="blockquote">
 							<div class="blockquote_content">
@@ -177,7 +185,7 @@
 			<div class="container v-center text-right">
                 <div class="row">
                     <div class="span-5 va-middle text-center">
-                        <div class="center-xy span-6">
+                        <div class="center-xy span-6 min-break-3">
                             <img 
                                 class="mobile-graphic-white" 
                                 src="<?php echo appDir ?>/images/mobile-screen.png" 
@@ -228,9 +236,9 @@
 			
 		</section>
 			
-		<div class="row-block text-center">
+		<div class="row-no-gutter text-center">
                     
-			<a href="<?php pageLink('blog/single.php') ?>" class="widget-spectrum-quarter-tub span-3">
+			<a href="<?php pageLink('blog/single.php') ?>" class="widget-spectrum-quarter-tub span-3 break-4-half break-2-full">
 				<div class="widget_lid">
 					<div class="widget_sticker">
                         <div class="widget_icon button-icon-plain-size-8">
@@ -247,7 +255,7 @@
 				<div class="button-block-grey-5-fat relative">Read More</div>
 			</a>
 			
-			<a href="<?php pageLink('blog/single.php') ?>" class="widget-spectrum-quarter-tub span-3">
+			<a href="<?php pageLink('blog/single.php') ?>" class="widget-spectrum-quarter-tub span-3 break-4-half break-2-full">
 				<div class="widget_lid">
 					<div class="widget_sticker">
                         <div class="widget_icon button-icon-plain-size-8">
@@ -264,7 +272,7 @@
 				<div class="button-block-grey-5-fat relative">Read More</div>
 			</a>
 			
-			<a href="<?php pageLink('blog/single.php') ?>" class="widget-spectrum-quarter-tub span-3">
+			<a href="<?php pageLink('blog/single.php') ?>" class="widget-spectrum-quarter-tub span-3 break-4-half break-2-full">
 				<div class="widget_lid">
 					<div class="widget_sticker">
                         <div class="widget_icon button-icon-plain-size-8">
@@ -281,7 +289,7 @@
 				<div class="button-block-grey-5-fat relative">Read More</div>
 			</a>
 			
-			<a href="<?php pageLink('blog/single.php') ?>" class="widget-spectrum-quarter-tub span-3">
+			<a href="<?php pageLink('blog/single.php') ?>" class="widget-spectrum-quarter-tub span-3 break-4-half break-2-full">
 				<div class="widget_lid">
 					<div class="widget_sticker">
                         <div class="widget_icon button-icon-plain-size-8">
@@ -317,7 +325,7 @@
 							<a class="button-border" href="#">Read More</a>
 						</p>
 					</div>
-					<div class="section_graphic span-4 text-center">
+					<div class="section_graphic span-4 text-center min-break-3">
 						<img 
 							class="span-10" 
 							src="<?php echo appDir ?>/images/tablet-base-dark.png"
