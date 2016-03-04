@@ -16,7 +16,7 @@
             
             <div class="tabs_item active">
                 
-                <article class="row">
+                <article class="row stack-0">
                     <div class="span-2">
                         <div class="thumbnail-profile-fill<?php if ($option['type'] == 'blog') echo '-round' ?>">
                             <img src="<?php stockImage('team/team-1.jpg')?>" alt="">
@@ -58,7 +58,7 @@
                 
                 <hr class="hrule-line-small" />
                 
-                <article class="row">
+                <article class="row stack-0">
                     <div class="span-2">
                         <div class="thumbnail-profile-fill<?php if ($option['type'] == 'blog') echo '-round' ?>">
                             <img src="<?php stockImage('team/team-2.jpg')?>" alt="">
@@ -100,7 +100,7 @@
                 
                 <hr class="hrule-line-small" />
                 
-                <article class="row">
+                <article class="row stack-0">
                     <div class="span-2">
                         <div class="thumbnail-profile-fill<?php if ($option['type'] == 'blog') echo '-round' ?>">
                             <img src="<?php stockImage('team/team-3.jpg')?>" alt="">
@@ -144,7 +144,7 @@
             
             <div class="tabs_item">
                 
-                <article class="row">
+                <article class="row stack-0">
                     <div class="span-2">
                         <div class="thumbnail-profile-fill<?php if ($option['type'] == 'blog') echo '-round' ?>">
                             <img src="<?php stockImage('team/team-1.jpg')?>" alt="">
@@ -186,7 +186,7 @@
                 
                 <hr class="hrule-line-small" />
                 
-                <article class="row">
+                <article class="row stack-0">
                     <div class="span-2">
                         <div class="thumbnail-profile-fill<?php if ($option['type'] == 'blog') echo '-round' ?>">
                             <img src="<?php stockImage('team/team-1.jpg')?>" alt="">
@@ -228,7 +228,7 @@
                 
                 <hr class="hrule-line-small" />
                 
-                <article class="row">
+                <article class="row stack-0">
                     <div class="span-2">
                         <div class="thumbnail-profile-fill<?php if ($option['type'] == 'blog') echo '-round' ?>">
                             <img src="<?php stockImage('team/team-1.jpg')?>" alt="">
@@ -272,7 +272,7 @@
             
             <div class="tabs_item">
                 
-                <article class="row">
+                <article class="row stack-0">
                     <div class="span-2">
                         <div class="thumbnail-profile-fill<?php if ($option['type'] == 'blog') echo '-round' ?>">
                             <img src="<?php stockImage('team/team-1.jpg')?>" alt="">
@@ -314,7 +314,7 @@
                 
                 <hr class="hrule-line-small" />
                 
-                <article class="row">
+                <article class="row stack-0">
                     <div class="span-2">
                         <div class="thumbnail-profile-fill<?php if ($option['type'] == 'blog') echo '-round' ?>">
                             <img src="<?php stockImage('team/team-1.jpg')?>" alt="">
@@ -356,7 +356,7 @@
                 
                 <hr class="hrule-line-small" />
                 
-                <article class="row">
+                <article class="row stack-0">
                     <div class="span-2">
                         <div class="thumbnail-profile-fill<?php if ($option['type'] == 'blog') echo '-round' ?>">
                             <img src="<?php stockImage('team/team-1.jpg')?>" alt="">
