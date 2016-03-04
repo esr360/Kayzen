@@ -464,8 +464,10 @@
                 margin-right: 0;
             }
             .col-full & {
-                position: absolute;
-                bottom: 2em;
+                @media (min-width: breakpoint('break-3')) {
+                    position: absolute;
+                    bottom: 2em;
+                }
             }
         }
         

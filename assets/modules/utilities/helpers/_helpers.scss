@@ -113,9 +113,11 @@
 	}
 	
 	.col-full {
-		position: absolute !important;
-        z-index: 3;
-		height: 100%;
+        @media (min-width: breakpoint('break-3')) {
+		    position: absolute !important;
+            z-index: 3;
+            height: 100%;
+        }
 	}
 		
 	//-------------------------------------------------------------

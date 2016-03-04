@@ -31,9 +31,9 @@
                 
                 <section class="tabs_item active">    
                                 
-                    <div class="row">
+                    <div class="row-flow row-waffle-large">
                         
-                        <div class="span-3">
+                        <div class="span-3 break-3-half break-2-full">
                             <div class="thumbnail">
                                 <div class="thumbnail_mask">
                                     <div class="thumbnail_controls icon_group-small">
@@ -68,7 +68,7 @@
                             </div>
                         </div>
                         
-                        <div class="span-3">
+                        <div class="span-3 break-3-half break-2-full">
                             <div class="thumbnail">
                                 <div class="corner-ribbon-pink" data-ribbon="Sale"></div>
                                 <div class="thumbnail_mask">
@@ -105,7 +105,7 @@
                             </div>
                         </div>
                         
-                        <div class="span-3">
+                        <div class="span-3 break-3-half break-2-full">
                             <div class="thumbnail">
                                 <div class="thumbnail_mask">
                                     <div class="thumbnail_controls icon_group-small">
@@ -140,7 +140,7 @@
                             </div>
                         </div>
                         
-                        <div class="span-3">
+                        <div class="span-3 break-3-half break-2-full">
                             <div class="thumbnail">
                                 <div class="thumbnail_mask">
                                     <div class="thumbnail_controls icon_group-small">
@@ -181,9 +181,9 @@
                 
                 <section class="tabs_item">    
                                 
-                    <div class="row">
+                    <div class="row-flow row-waffle-large">
                         
-                        <div class="span-3">
+                        <div class="span-3 break-3-half break-2-full">
                             <div class="thumbnail">
                                 <div class="thumbnail_mask">
                                     <div class="thumbnail_controls icon_group-small">
@@ -213,7 +213,7 @@
                             </div>
                         </div>
                         
-                        <div class="span-3">
+                        <div class="span-3 break-3-half break-2-full">
                             <div class="thumbnail">
                                 <div class="corner-ribbon-pink" data-ribbon="Sale"></div>
                                 <div class="thumbnail_mask">
@@ -245,7 +245,7 @@
                             </div>
                         </div>
                         
-                        <div class="span-3">
+                        <div class="span-3 break-3-half break-2-full">
                             <div class="thumbnail">
                                 <div class="thumbnail_mask">
                                     <div class="thumbnail_controls icon_group-small">
@@ -275,7 +275,7 @@
                             </div>
                         </div>
                         
-                        <div class="span-3">
+                        <div class="span-3 break-3-half break-2-full">
                             <div class="thumbnail">
                                 <div class="thumbnail_mask">
                                     <div class="thumbnail_controls icon_group-small">
@@ -311,9 +311,9 @@
                 
                 <section class="tabs_item">    
                                 
-                    <div class="row">
+                    <div class="row-flow row-waffle-large">
                         
-                        <div class="span-3">
+                        <div class="span-3 break-3-half break-2-full">
                             <div class="thumbnail">
                                 <div class="thumbnail_mask">
                                     <div class="thumbnail_controls icon_group-small">
@@ -375,7 +375,7 @@
                             </div>
                         </div>
                         
-                        <div class="span-3">
+                        <div class="span-3 break-3-half break-2-full">
                             <div class="thumbnail">
                                 <div class="thumbnail_mask">
                                     <div class="thumbnail_controls icon_group-small">

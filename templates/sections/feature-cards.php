@@ -6,7 +6,7 @@
     
     <section class="section-primary">
         <div class="container">
-            <div class="row text-center">
+            <div class="row row-waffle-large text-center">
                 
                 <div class="widget-card span-4">
                     <div class="thumbnail-zoom">
