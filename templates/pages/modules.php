@@ -76,11 +76,7 @@
 	
 		</section>
         
-		<?php 
-
-            appFooter();
-            
-        ?>
+		<?php appFooter(); ?>
         
         <script>
             $(document).ready(function() { 
