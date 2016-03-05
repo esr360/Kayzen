@@ -664,7 +664,6 @@ module.exports = function(grunt) {
      * liberally. Warning: This is a fairly heafty task
      */
     grunt.registerTask('compress:images', [
-        'clean:images',
         'tinypng'
     ]);
 

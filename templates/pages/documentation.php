@@ -75,13 +75,6 @@
 					</a>
 					
 				</div>
-			
-				<h2 class="heading-light-size-6" id="getting-started">Lorem Ipsum</h2>
-				<h2 class="heading-size-5" id="getting-started">Lorem Ipsum</h2>
-				<h2 class="heading-size-4" id="getting-started">Lorem Ipsum</h2>
-				<h2 class="heading-light-uppercase" id="getting-started">Lorem Ipsum</h2>
-				<h2 class="heading" id="getting-started">Lorem Ipsum</h2>
-				<h2 class="heading-size-2" id="getting-started">Lorem Ipsum</h2>
                 
 				<h2 class="heading-light-size-6" id="getting-started">Getting Started</h2>
                 

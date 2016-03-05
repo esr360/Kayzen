@@ -3,6 +3,7 @@
 
 - contact form (don't forget to document)
 - update all empty # links
+- add loading spinner
 - full responsive audit
 - add themes and associated imagery
 
