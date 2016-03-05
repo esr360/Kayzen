@@ -336,7 +336,7 @@
                     <h3 class="heading-size-4">Related Products</h3>
                 </header>
 
-                <div id="shop-items" class="row-flow row-waffle table-fixed">
+                <div id="shop-items" class="row-flow row-waffle fixed-table">
                         
                     <?php
                         

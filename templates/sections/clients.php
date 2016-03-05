@@ -11,7 +11,7 @@
     >
     
         <div class="container">
-            <div class="row row-waffle-large table-fixed">
+            <div class="row row-waffle-large fixed-table">
                 
                 <div class="span-4 va-middle center-mobile">
                     <header class="heading_group">

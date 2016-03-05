@@ -38,7 +38,7 @@
                     
                     <div class="span-8">
         
-                        <div id="shop-items" class="row-flow row-waffle-large table-fixed">
+                        <div id="shop-items" class="row-flow row-waffle-large fixed-table">
                                 
                             <?php
                                 

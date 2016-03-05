@@ -84,7 +84,7 @@
 			
 			<div class="container">		
 				
-				<div class="row table-fixed">
+				<div class="row fixed-table">
 					
 					<div class="newsfeed span-8">
 							

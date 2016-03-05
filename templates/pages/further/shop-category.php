@@ -34,7 +34,7 @@
 				
             <div class="container">
         
-                    <div id="shop-items" class="row-flow row-waffle-large table-fixed">
+                    <div id="shop-items" class="row-flow row-waffle-large fixed-table">
                         
                     <?php
                         

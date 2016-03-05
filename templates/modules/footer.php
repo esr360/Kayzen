@@ -8,7 +8,7 @@
         
         <div class="footer_wrapper">
             <div class="container">
-                <div class="row-flow row-waffle-large table-fixed">
+                <div class="row-flow row-waffle-large fixed-table">
                     
                     <!-- Meta -->
                     <div class="span-3 break-4-half break-2-full">

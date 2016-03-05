@@ -112,7 +112,7 @@
                 <h3 class="heading-size-3">Fixed Width Columns</h3>
                 
                 <div class="well object">
-                    <table class="table-fixed">
+                    <table class="fixed-table">
                         <thead>
                             <tr>
                                 <th>Property Name</th>

@@ -139,7 +139,7 @@
 			</header>
 			
 			<!-- Features Row 1 -->
-			<div class="row-no-gutter table-fixed text-center">
+			<div class="row-no-gutter fixed-table text-center">
 				
 				<div class="widget-block-panel-noHover span-3 break-4-half break-2-full">
 					<div class="widget_icon button-icon-plain-size-8">

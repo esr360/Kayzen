@@ -62,7 +62,7 @@
 			
 		</section>
 		
-		<div class="row-block table-fixed text-center">
+		<div class="row-block fixed-table text-center">
 			<section 
 				class="section-secondary-overlay-deep bg-cover span-6 va-middle"
 				style="background-image: url('<?php stockImage('demo/hero-12.jpg') ?>')"

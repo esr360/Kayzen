@@ -34,11 +34,11 @@
             
             <div class="container">
                 
-                <div class="row table-fixed">
+                <div class="row fixed-table">
                     
                     <div class="span-8">
                 
-                        <div class="row row-waffle-large table-fixed">
+                        <div class="row row-waffle-large fixed-table">
                             
                             <div class="span-4 lightbox-gallery">
                                 <div class="corner-ribbon-pink" data-ribbon="Sale"></div>
@@ -374,7 +374,7 @@
                             <h3 class="heading-size-4">Related Products</h3>
                         </header>
         
-                        <div id="shop-items" class="row-flow row-waffle table-fixed">
+                        <div id="shop-items" class="row-flow row-waffle fixed-table">
                                 
                             <?php
                                 
