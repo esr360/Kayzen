@@ -51,7 +51,7 @@
             <!-- Contact Form -->
             <form class="form-fauxPlaceholders-html5">
                 <div class="container">
-                    <div class="row">
+                    <div class="row row-waffle-large">
                         <div class="span-4">
                             <header class="heading_group">
                                 <h3 class="heading-heavy-size-4">Lorem Ipsum</h3>
@@ -94,12 +94,14 @@
                                     <input type="email" class="form_input-bg" id="emailAddress" placeholder="john@smith.com" required="">
                                     <label for="emailAddress">Email Address</label>
                                 </div>
+                                <div class="form_group span-12">
+                                    <textarea class="form_input-bg" placeholder="We aim to respond to all messages within 24 hours." id="yourMessage" rows="8" required=""></textarea>
+                                    <label for="yourMessage">Your Message</label>
+                                </div>
                             </div>
-                            <div class="form_group">
-                                <textarea class="form_input-bg" placeholder="We aim to respond to all messages within 24 hours." id="yourMessage" rows="8" required=""></textarea>
-                                <label for="yourMessage">Your Message</label>
+                            <div class="object">
+                                <button type="submit" class="button-block-primary-size-3">Submit Message</button>
                             </div>
-                            <button type="submit" class="button-block-primary-size-3">Submit Message</button>
                         </div>
                     </div>
                 </div>

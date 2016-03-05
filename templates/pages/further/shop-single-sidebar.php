@@ -34,18 +34,18 @@
             
             <div class="container">
                 
-                <div class="row">
+                <div class="row table-fixed">
                     
                     <div class="span-8">
                 
-                        <div class="row">
+                        <div class="row row-waffle-large table-fixed">
                             
                             <div class="span-4 lightbox-gallery">
                                 <div class="corner-ribbon-pink" data-ribbon="Sale"></div>
                                 <a href="<?php stockImage('demo/product-1.jpg') ?>">
                                     <img src="<?php stockImage('demo/tall/hero-1.jpg') ?>" />
                                 </a>
-                                <div id="product-thumbs" class="row object-small">
+                                <div id="product-thumbs" class="row stack-0 object-small">
                                     <a class="span-3 image-square" href="<?php stockImage('demo/product-1.jpg') ?>">
                                         <img src="<?php stockImage('demo/tall/hero-2.jpg') ?>" />
                                     </a>
@@ -98,7 +98,7 @@
                         
                         <section class="object">
                             
-                            <div class="row-block text-center">
+                            <div class="row-block stack-0 text-center">
                                     
                                 <!-- Facebook Shares Widget -->
                                 <a href="#" class="widget-tub span bg-facebook">
@@ -165,7 +165,7 @@
                                 </a>
                                 
                                 <!-- StumbleUpon Shares Widget -->
-                                <a href="#" class="widget-tub span bg-stumbleupon">
+                                <a href="#" class="widget-tub span bg-stumbleupon min-break-4">
                                     <div class="widget_lid">
                                         <div class="widget_sticker button-icon-plain-size-6">
                                             <i class="fa fa-stumbleupon"></i>
@@ -374,7 +374,7 @@
                             <h3 class="heading-size-4">Related Products</h3>
                         </header>
         
-                        <div id="shop-items" class="row-flow row-waffle">
+                        <div id="shop-items" class="row-flow row-waffle table-fixed">
                                 
                             <?php
                                 
@@ -385,6 +385,7 @@
                                     'size'     => 'small',
                                     'height'   => 'tall',
                                     'span'     => 4,
+                                    'class'    => 'break-3-half break-2-full'
                                 ));
                                 
                                 articleItem(array(
@@ -394,6 +395,7 @@
                                     'media'    => 'carousel',
                                     'size'     => 'small',
                                     'span'     => 4,
+                                    'class'    => 'break-3-half break-2-full'
                                 ));
                                 
                                 articleItem(array(
@@ -404,6 +406,18 @@
                                     'price'    => array('$24.99', '$19.99'),
                                     'size'     => 'small',
                                     'span'     => 4,
+                                    'class'    => 'break-3-half break-2-full'
+                                ));
+                                
+                                articleItem(array(
+                                    'type'     => 'shop',
+                                    'title'    => 'Lorem Ipsum',
+                                    'ribbon'   => array('pink', 'Sale'),
+                                    'height'   => 'tall',
+                                    'price'    => array('$24.99', '$19.99'),
+                                    'size'     => 'small',
+                                    'span'     => 4,
+                                    'class'    => 'break-3-half break-2-full max-break-3'
                                 ));
                                 
                             ?>
@@ -429,6 +443,8 @@
                         </script>
                         
                     </div>
+                    
+                    <hr class="hrule-stripes-large max-break-3" />
 					
 					<aside class="sidebar span-4">
     

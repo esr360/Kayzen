@@ -34,10 +34,10 @@
 			
 			<div class="container-small">
 			
-				<div class="widget_group-grid-large row-flow" id="page-overview">
+				<div class="row-waffle row-flow" id="page-overview">
 					
 					<!-- Feature 1 -->
-					<a class="widget-block-borderLeft span-4" href="#modular-ui">
+					<a class="widget-block-borderLeft span-4 break-4-half break-2-full" href="#modular-ui">
 						<div class="widget_icon-inline button-icon-plain-size-6">
 							<i class="fa fa-cubes"></i>
 						</div>
@@ -48,7 +48,7 @@
 					</a>
 					
 					<!-- Feature 2 -->
-					<a class="widget-block-borderLeft span-4" href="#page-builder">
+					<a class="widget-block-borderLeft span-4 break-4-half break-2-full" href="#page-builder">
 						<div class="widget_icon-inline button-icon-plain-size-6">
 							<i class="fa fa-arrows"></i>
 						</div>
@@ -59,7 +59,7 @@
 					</a>
 					
 					<!-- Feature 3 -->
-					<a class="widget-block-borderLeft span-4" href="#unique-configuration">
+					<a class="widget-block-borderLeft span-4 break-4-half break-2-full" href="#unique-configuration">
 						<div class="widget_icon-inline button-icon-plain-size-6">
 							<i class="fa fa-cog"></i>
 						</div>
@@ -70,7 +70,7 @@
 					</a>
 					
 					<!-- Feature 4 -->
-					<a class="widget-block-borderLeft span-4" href="#custom-grid-system">
+					<a class="widget-block-borderLeft span-4 break-4-half break-2-full" href="#custom-grid-system">
 						<div class="widget_icon-inline button-icon-plain-size-6">
 							<i class="fa fa-th-large"></i>
 						</div>
@@ -81,7 +81,7 @@
 					</a>
 					
 					<!-- Feature 5 -->
-					<a class="widget-block-borderLeft span-4" href="#intelligent-theming">
+					<a class="widget-block-borderLeft span-4 break-4-half break-2-full" href="#intelligent-theming">
 						<div class="widget_icon-inline button-icon-plain-size-6">
 							<i class="fa fa-eyedropper"></i>
 						</div>
@@ -92,7 +92,7 @@
 					</a>
 					
 					<!-- Feature 6 -->
-					<a class="widget-block-borderLeft span-4" href="#mobile-optimized">
+					<a class="widget-block-borderLeft span-4 break-4-half break-2-full" href="#mobile-optimized">
 						<div class="widget_icon-inline button-icon-plain-size-6">
 							<i class="fa fa-tablet"></i>
 						</div>
@@ -125,7 +125,7 @@
 							<a class="button-border-size-2" href="#">Learn More</a>
 						</div>
 					</div>
-					<div class="section_graphic span-5 text-center">
+					<div class="section_graphic span-5 text-center min-break-3">
 						<img 
 							class="span-10" 
 							src="<?php echo appDir ?>/images/tablet-base-dark.png"
@@ -140,7 +140,7 @@
 		<section class="section-primary" id="page-builder">
 			<div class="container-small">
 				<div class="row">
-					<div class="span-5 va-middle text-center">
+					<div class="span-5 va-middle text-center min-break-3">
 						<img class="span-10" src="<?php echo appDir ?>/images/layouts/layout-header-alt.png" alt="" />
 					</div>
 					<div class="span-7 va-middle">
@@ -157,7 +157,9 @@
 			</div>
 		</section>
 		
-		<hr class="stripes container-small" />
+        <div class="container-small">
+		    <hr class="hrule-stripes" />
+        </div>
 		
 		<section class="section-primary" id="unique-configuration">
 			<div class="container-small">
@@ -168,7 +170,7 @@
 						</header>
 						<p>Every configurable aspect of Kayzen can be controlled by editing a single value in the theme's config file. Change the complete look and feel of your project instantly by changing only a few settings. You'll be amazed at how much you can change Kayzen's appearance without changing any HTML! <a href="#">Learn More</a></p>
 					</div>
-					<div class="span-5 va-middle text-center">
+					<div class="span-5 va-middle text-center min-break-3">
 						<img class="span-10" src="<?php echo appDir ?>/images/layouts/layout-topbar.png" alt="" />
 					</div>
 				</div>
@@ -182,7 +184,7 @@
 		">
 			<div class="container-small text-right">
 				<div class="row">
-					<div class="section_graphic span-5 text-center">
+					<div class="section_graphic span-5 text-center min-break-3">
 						<img 
 							class="span-10" 
 							src="<?php echo appDir ?>/images/tablet-base-light.png" 
@@ -217,7 +219,7 @@
 							<a class="button-size-2" href="#">Learn More</a>
 						</div>
 					</div>
-					<div class="center-xy span-5 va-middle text-center">
+					<div class="center-xy span-5 va-middle text-center min-break-3">
 						<img 
 							class="span-9" 
 							src="<?php echo appDir ?>/images/layouts/layout-topbar.png" 
@@ -244,11 +246,11 @@
 		<section class="section-primary" id="mobile-optimized">
 		
 			<div class="container-small">
-				<div class="row-block">
+				<div class="row-block stack-break-2">
 					<!-- Responsive Graphics -->
 					<div class="span-5 va-middle text-center">
 						<div class="span-10">
-							<div class="center-xy span-6 va-middle">
+							<div class="center-xy span-6 va-middle min-break-2">
 								<img 
 									class="mobile-graphic-white" 
 									src="<?php echo appDir ?>/images/mobile-screen.png" 

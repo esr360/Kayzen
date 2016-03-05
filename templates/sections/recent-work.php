@@ -21,14 +21,27 @@
             
             <div class="row-no-gutter">
                             
-                <?php for ($i = 0; $i < $options['items']; $i++) {
+                <?php for ($i = 0; $i < $options['items']; $i++) {   
                     
-                    articleItem(array(
-                        'type'      => 'portfolio',
-                        'matrix'    => true,
-                        'span'      => 4,
-                        'class'    => 'break-3-half break-2-full'
-                    ));
+                    // last item
+                    if ($i == $options['items'] - 1) {
+                        articleItem(array(
+                            'type'      => 'portfolio',
+                            'matrix'    => true,
+                            'span'      => 4,
+                            'class'    => 'break-3-half break-2-full min-break-3'
+                        ));
+                    } 
+                    
+                    // all other items
+                    else {
+                        articleItem(array(
+                            'type'      => 'portfolio',
+                            'matrix'    => true,
+                            'span'      => 4,
+                            'class'    => 'break-3-half break-2-full'
+                        ));
+                    }
                     
                 } ?>
                 

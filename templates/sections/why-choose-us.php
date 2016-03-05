@@ -19,7 +19,7 @@
             
         <div class="container">
             
-            <div class="row row-waffle-large">
+            <div class="row row-waffle-large stack-break-4">
                 
                 <!-- Responsive Features -->
                 <div class="widget_group span-3 va-middle text-right">

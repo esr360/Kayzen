@@ -39,12 +39,14 @@
                         <input type="email" class="form_input" name="emailAddress" id="emailAddress" placeholder="john@doe.com" required="">
                         <label for="emailAddress">Email Address</label>
                     </div>
+                    <div class="form_group span-12">
+                        <textarea class="form_input" name="yourMessage" placeholder="We aim to respond to all messages within 24 hours." id="yourMessage" rows="8" required=""></textarea>
+                        <label for="yourMessage">Your Message</label>
+                    </div>
                 </div>
-                <div class="form_group object">
-                    <textarea class="form_input" name="yourMessage" placeholder="We aim to respond to all messages within 24 hours." id="yourMessage" rows="8" required=""></textarea>
-                    <label for="yourMessage">Your Message</label>
+                <div class="object">
+                    <button type="submit" class="button-block-primary-size-3">Submit Message</button>
                 </div>
-                <button type="submit" class="button-block-primary-size-3">Submit Message</button>
             </div>
         </form>
         

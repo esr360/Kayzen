@@ -33,8 +33,8 @@
 		<section class="section-primary relative">
 				
             <div class="container">
-
-                <div id="shop-items" class="row-flow row-waffle">
+        
+                    <div id="shop-items" class="row-flow row-waffle-large table-fixed">
                         
                     <?php
                         
@@ -45,6 +45,7 @@
                             'size'     => 'small',
                             'height'   => 'tall',
                             'span'     => 3,
+                            'class'    => 'break-3-half break-2-full'
                         ));
                         
                         articleItem(array(
@@ -54,6 +55,7 @@
                             'media'    => 'carousel',
                             'size'     => 'small',
                             'span'     => 3,
+                            'class'    => 'break-3-half break-2-full'
                         ));
                         
                         articleItem(array(
@@ -64,6 +66,7 @@
                             'price'    => array('$24.99', '$19.99'),
                             'size'     => 'small',
                             'span'     => 3,
+                            'class'    => 'break-3-half break-2-full'
                         ));
                         
                         articleItem(array(
@@ -72,6 +75,7 @@
                             'height'   => 'tall',
                             'size'     => 'small',
                             'span'     => 3,
+                            'class'    => 'break-3-half break-2-full'
                         ));
                         
                         articleItem(array(
@@ -82,6 +86,7 @@
                             'size'     => 'small',
                             'disabled' => true,
                             'span'     => 3,
+                            'class'    => 'break-3-half break-2-full'
                         ));
                         
                         articleItem(array(
@@ -91,6 +96,7 @@
                             'size'     => 'small',
                             'height'   => 'tall',
                             'span'     => 3,
+                            'class'    => 'break-3-half break-2-full'
                         ));
                         
                         articleItem(array(
@@ -100,6 +106,7 @@
                             'media'    => 'carousel',
                             'size'     => 'small',
                             'span'     => 3,
+                            'class'    => 'break-3-half break-2-full'
                         ));
                         
                         articleItem(array(
@@ -111,6 +118,7 @@
                             'price'    => array('$24.99', '$19.99'),
                             'size'     => 'small',
                             'span'     => 3,
+                            'class'    => 'break-3-half break-2-full'
                         ));
                         
                         articleItem(array(
@@ -120,6 +128,7 @@
                             'media'    => 'carousel',
                             'size'     => 'small',
                             'span'     => 3,
+                            'class'    => 'break-3-half break-2-full'
                         ));
                         
                         articleItem(array(
@@ -130,6 +139,7 @@
                             'price'    => array('$24.99', '$12.49'),
                             'height'   => 'tall',
                             'span'     => 3,
+                            'class'    => 'break-3-half break-2-full'
                         ));
                         
                         articleItem(array(
@@ -138,6 +148,7 @@
                             'height'   => 'tall',
                             'size'     => 'small',
                             'span'     => 3,
+                            'class'    => 'break-3-half break-2-full'
                         ));
                         
                         articleItem(array(
@@ -150,6 +161,7 @@
                             'price'    => array('$24.99', '$12.99'),
                             'size'     => 'small',
                             'span'     => 3,
+                            'class'    => 'break-3-half break-2-full'
                         ));
                         
                     ?>

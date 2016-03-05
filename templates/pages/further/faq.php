@@ -35,7 +35,7 @@
                 
                 <div class="tabs">
                     
-                    <ul class="tabs_nav-pills-large-center">
+                    <ul class="tabs_nav-pills-large-center min-break-2">
                         <li class="button-pill-grey-1-round active">View All</li>
                         <li class="button-pill-grey-1-round">Pre-purchase</li>
                         <li class="button-pill-grey-1-round">Installation</li>

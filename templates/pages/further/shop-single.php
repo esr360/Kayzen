@@ -34,14 +34,14 @@
             
             <div class="container">
                 
-                <div class="row">
+                <div class="row row-waffle-large">
                     
                     <div class="span-4 lightbox-gallery">
                         <div class="corner-ribbon-pink" data-ribbon="Sale"></div>
                         <a href="<?php stockImage('demo/product-1.jpg') ?>">
                             <img src="<?php stockImage('demo/tall/hero-1.jpg') ?>" />
                         </a>
-                        <div id="product-thumbs" class="row object-small">
+                        <div id="product-thumbs" class="row stack-0 object-small">
                             <a class="span-3 image-square" href="<?php stockImage('demo/product-1.jpg') ?>">
                                 <img src="<?php stockImage('demo/tall/hero-2.jpg') ?>" />
                             </a>
@@ -88,7 +88,7 @@
                             <li>Maecenas vel gravida leo</li>
                         </ul>
             
-                        <div class="row-block text-center">
+                        <div class="row-block stack-0 text-center">
                             
                             <!-- Facebook Shares Widget -->
                             <a href="#" class="widget-tub span bg-facebook">
@@ -336,7 +336,7 @@
                     <h3 class="heading-size-4">Related Products</h3>
                 </header>
 
-                <div id="shop-items" class="row-flow row-waffle">
+                <div id="shop-items" class="row-flow row-waffle table-fixed">
                         
                     <?php
                         
@@ -347,6 +347,7 @@
                             'size'     => 'small',
                             'height'   => 'tall',
                             'span'     => 3,
+                            'class'    => 'break-3-half break-2-full'
                         ));
                         
                         articleItem(array(
@@ -356,6 +357,7 @@
                             'media'    => 'carousel',
                             'size'     => 'small',
                             'span'     => 3,
+                            'class'    => 'break-3-half break-2-full'
                         ));
                         
                         articleItem(array(
@@ -366,6 +368,7 @@
                             'price'    => array('$24.99', '$19.99'),
                             'size'     => 'small',
                             'span'     => 3,
+                            'class'    => 'break-3-half break-2-full'
                         ));
                         
                         articleItem(array(
@@ -374,6 +377,7 @@
                             'height'   => 'tall',
                             'size'     => 'small',
                             'span'     => 3,
+                            'class'    => 'break-3-half break-2-full'
                         ));
                         
                     ?>

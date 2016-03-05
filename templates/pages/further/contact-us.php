@@ -36,7 +36,7 @@
             
             <div class="container-small">
                 
-                <div class="row-block text-center">
+                <div class="row-block stack-0 text-center table-fixed">
                     
                     <!-- Facebook Shares Widget -->
                     <a href="#" class="widget-tub span bg-facebook">

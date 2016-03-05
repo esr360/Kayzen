@@ -38,7 +38,7 @@
                     
                     <div class="span-8">
         
-                        <div id="shop-items" class="row-flow row-waffle">
+                        <div id="shop-items" class="row-flow row-waffle-large table-fixed">
                                 
                             <?php
                                 
@@ -49,6 +49,7 @@
                                     'size'     => 'small',
                                     'height'   => 'tall',
                                     'span'     => 4,
+                                    'class'    => 'break-3-half break-2-full'
                                 ));
                                 
                                 articleItem(array(
@@ -58,6 +59,7 @@
                                     'media'    => 'carousel',
                                     'size'     => 'small',
                                     'span'     => 4,
+                                    'class'    => 'break-3-half break-2-full'
                                 ));
                                 
                                 articleItem(array(
@@ -68,6 +70,7 @@
                                     'price'    => array('$24.99', '$19.99'),
                                     'size'     => 'small',
                                     'span'     => 4,
+                                    'class'    => 'break-3-half break-2-full'
                                 ));
                                 
                                 articleItem(array(
@@ -76,6 +79,7 @@
                                     'height'   => 'tall',
                                     'size'     => 'small',
                                     'span'     => 4,
+                                    'class'    => 'break-3-half break-2-full'
                                 ));
                                 
                                 articleItem(array(
@@ -86,6 +90,7 @@
                                     'size'     => 'small',
                                     'disabled' => true,
                                     'span'     => 4,
+                                    'class'    => 'break-3-half break-2-full'
                                 ));
                                 
                                 articleItem(array(
@@ -95,6 +100,7 @@
                                     'size'     => 'small',
                                     'height'   => 'tall',
                                     'span'     => 4,
+                                    'class'    => 'break-3-half break-2-full'
                                 ));
                                 
                                 articleItem(array(
@@ -104,6 +110,7 @@
                                     'media'    => 'carousel',
                                     'size'     => 'small',
                                     'span'     => 4,
+                                    'class'    => 'break-3-half break-2-full'
                                 ));
                                 
                                 articleItem(array(
@@ -115,6 +122,7 @@
                                     'price'    => array('$24.99', '$19.99'),
                                     'size'     => 'small',
                                     'span'     => 4,
+                                    'class'    => 'break-3-half break-2-full'
                                 ));
                                 
                                 articleItem(array(
@@ -123,6 +131,7 @@
                                     'height'   => 'tall',
                                     'size'     => 'small',
                                     'span'     => 4,
+                                    'class'    => 'break-3-half break-2-full'
                                 ));
                                 
                                 articleItem(array(
@@ -133,6 +142,7 @@
                                     'price'    => array('$24.99', '$12.49'),
                                     'height'   => 'tall',
                                     'span'     => 4,
+                                    'class'    => 'break-3-half break-2-full'
                                 ));
                                 
                                 articleItem(array(
@@ -141,6 +151,7 @@
                                     'height'   => 'tall',
                                     'size'     => 'small',
                                     'span'     => 4,
+                                    'class'    => 'break-3-half break-2-full'
                                 ));
                                 
                                 articleItem(array(
@@ -153,6 +164,7 @@
                                     'price'    => array('$24.99', '$12.99'),
                                     'size'     => 'small',
                                     'span'     => 4,
+                                    'class'    => 'break-3-half break-2-full'
                                 ));
                                 
                                 articleItem(array(
@@ -162,6 +174,7 @@
                                     'size'     => 'small',
                                     'media'    => 'carousel',
                                     'span'     => 4,
+                                    'class'    => 'break-3-half break-2-full'
                                 ));
                                 
                                 articleItem(array(
@@ -170,6 +183,7 @@
                                     'height'   => 'tall',
                                     'size'     => 'small',
                                     'span'     => 4,
+                                    'class'    => 'break-3-half break-2-full'
                                 ));
                                 
                                 articleItem(array(
@@ -178,6 +192,7 @@
                                     'height'   => 'tall',
                                     'size'     => 'small',
                                     'span'     => 4,
+                                    'class'    => 'min-break-3'
                                 ));
                                 
                             ?>
@@ -213,6 +228,8 @@
                         </script>
                         
                     </div>
+                    
+                    <hr class="hrule-stripes-large max-break-3" />
 					
 					<aside class="sidebar span-4">
     

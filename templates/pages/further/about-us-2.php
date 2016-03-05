@@ -43,9 +43,9 @@
 			</header>
 			
 			<!-- Features Row 1 -->
-			<div class="row-block text-center">
+			<div class="row-no-gutter table-fixed text-center">
 				
-				<div class="widget-block-panel-noHover span-3">
+				<div class="widget-block-panel-noHover span-3 break-4-half break-2-full">
 					<div class="widget_icon button-icon-plain-size-8">
 						<i class="fa fa-desktop"></i>
 					</div>
@@ -56,7 +56,7 @@
 					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc et erat posuere suscipit. Phasellus congue scelerisque lacus.</p>
 				</div>
 				
-				<div class="widget-block-panel-noHover span-3">
+				<div class="widget-block-panel-noHover span-3 break-4-half break-2-full">
 					<div class="widget_icon button-icon-plain-size-8">
 						<i class="fa fa-clipboard"></i>
 					</div>
@@ -67,7 +67,7 @@
 					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc et erat posuere suscipit. Phasellus congue scelerisque lacus.</p>
 				</div>
 				
-				<div class="section-secondary span-6 va-middle">
+				<div class="section-secondary span-6 break-4-full va-middle">
 					<div class="container-small">
 						<blockquote class="blockquote">
 							<div class="blockquote_content">

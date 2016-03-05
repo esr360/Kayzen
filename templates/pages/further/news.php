@@ -34,7 +34,7 @@
 			
 			<div class="container">		
 				
-				<div class="row">
+				<div class="row table-fixed">
 					
 					<div class="newsfeed span-8">
 							
@@ -133,7 +133,7 @@
 						
 						</div>
 						
-						<div class="thumbnail_grid-fade row-magic" id="latest-articles-thumbs">
+						<div class="thumbnail_grid-fade row-magic stack-0" id="latest-articles-thumbs">
 							<img class="span active" src="<?php stockImage('demo/hero-7.jpg') ?>">
 							<img class="span" src="<?php stockImage('demo/hero-4.jpg') ?>">
 							<img class="span" src="<?php stockImage('demo/hero-5.jpg') ?>">
@@ -157,7 +157,7 @@
 								
 						<!-- Featured Articles -->
 								
-						<div class="row">	
+						<div class="row stack-break-2 row-waffle-large">
 							
 							<div class="span-6 relative">	
 								<div class="thumbnail-zoom">
@@ -185,7 +185,7 @@
 									<h4 class="heading-light-size-3">Posted by <a href="#">Naomi Olson</a></h4>
 								</header>
 								<p>Cum socis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec finibus fringilla purus. Integer libero justo, mattis et magna eget...</p>
-								<div class="row">
+								<div class="row stack-0">
 									<div class="span-6 va-middle">
 										<a href="#" class="button-oval-primary">Read More</a>
 									</div>
@@ -221,7 +221,7 @@
 									<h4 class="heading-light-size-3">Posted by <a href="#">Naomi Olson</a></h4>
 								</header>
 								<p>Cum socis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec finibus fringilla purus. Integer libero justo, mattis et magna eget...</p>
-								<div class="row">
+								<div class="row stack-0">
 									<div class="span-6 va-middle">
 										<a href="#" class="button-oval-primary">Read More</a>
 									</div>
@@ -237,9 +237,9 @@
 								
 						<!-- Featured Categories -->
 						
-						<div class="widget_group row-magic text-center">
+						<div class="widget_group row-flow row-waffle-large text-center">
 							
-							<div class="widget-borderTop-highlight-block-scale span">
+							<div class="widget-borderTop-highlight-block-scale span-4 break-4-half break-2-full">
 								<div class="widget_icon button-icon-plain-size-8">
 									<i class="fa fa-desktop"></i>
 								</div>
@@ -250,7 +250,7 @@
 								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc et erat posuere suscipit.</p>
 							</div>
 							
-							<div class="widget-borderTop-highlight-block-scale span">
+							<div class="widget-borderTop-highlight-block-scale span-4 break-4-half break-2-full">
 								<div class="widget_icon button-icon-plain-size-8">
 									<i class="fa fa-desktop"></i>
 								</div>
@@ -261,7 +261,7 @@
 								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc et erat posuere suscipit.</p>
 							</div>
 							
-							<div class="widget-borderTop-highlight-block-scale span">
+							<div class="widget-borderTop-highlight-block-scale span-4 min-break-4">
 								<div class="widget_icon button-icon-plain-size-8">
 									<i class="fa fa-desktop"></i>
 								</div>
@@ -330,9 +330,9 @@
 								
 						<!-- More Articles -->
 						
-						<div class="row">
+						<div class="row-flow row-waffle-large">
 							
-							<div class="span-4 relative">	
+							<div class="span-4 break-4-half break-2-full relative">	
 								<div class="thumbnail-zoom">
 									<div class="thumbnail_mask">
 										<div class="thumbnail_controls icon_group-small">
@@ -369,7 +369,7 @@
 								</div>
 							</div>
 							
-							<div class="span-4 relative">	
+							<div class="span-4 break-4-half break-2-full relative">	
 								<div class="thumbnail-zoom">
 									<div class="thumbnail_mask">
 										<div class="thumbnail_controls icon_group-small">
@@ -396,7 +396,7 @@
 									<h4 class="heading-light">Posted by <a href="#">Naomi Olson</a></h4>
 								</header>
 								<p>Cum socis natoque penatibus et magnis dis parturient montes...</p>
-								<div class="row">
+								<div class="row stack-0">
 									<div class="span-5 va-middle">
 										<a href="#" class="button-oval-primary-size-2">Read More</a>
 									</div>
@@ -406,7 +406,7 @@
 								</div>
 							</div>
 							
-							<div class="span-4 relative">	
+							<div class="span-4 relative min-break-4">	
 								<div class="thumbnail-zoom">
 									<div class="thumbnail_mask">
 										<div class="thumbnail_controls icon_group-small">
@@ -433,7 +433,7 @@
 									<h4 class="heading-light">Posted by <a href="#">Naomi Olson</a></h4>
 								</header>
 								<p>Cum socis natoque penatibus et magnis dis parturient montes...</p>
-								<div class="row">
+								<div class="row stack-0">
 									<div class="span-5 va-middle">
 										<a href="#" class="button-oval-primary-size-2">Read More</a>
 									</div>
@@ -446,6 +446,8 @@
 						</div>
 						
 					</div><!-- newsfeed -->
+                    
+                    <hr class="hrule-stripes-large max-break-3" />
 					
 					<aside class="sidebar span-4">
     

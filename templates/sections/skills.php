@@ -28,7 +28,7 @@
                         <a href="http://themeforest.net/user/skyux/portfolio" target="blank" class="button-border-white<?php echo '-'.$options['cta-modifiers'] ?>">Purchase Theme</a>
                     </p>
                 </div>
-                <hr class="hrule-stripes-large max-bp3" />
+                <hr class="hrule-stripes-large max-break-3" />
                 <div class="span-6 progress-bar_group">
                     <h5 class="heading">HTML5</h5>
                     <progress class="progress-bar" max="100" data-progress="75%">

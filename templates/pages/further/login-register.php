@@ -34,7 +34,7 @@
             
             <div class="container-small">
                 
-                <div class="row-block">
+                <div class="row-block row-waffle-large">
                     
                     <div class="span-5">
                         <header class="heading_group">
@@ -83,7 +83,7 @@
                                 <i class="form_icon fa fa-key"></i>
                                 <label for="loginPassword">Password</label>
                             </div>
-                            <div class="row">
+                            <div class="row stack-0">
                                 <div class="span-8 va-middle">
                                     <input id="rememberMe" type="checkbox"> 
                                     <label for="rememberMe">Remember Me?</label>
@@ -93,7 +93,7 @@
                                 </div>
                             </div>
                         </form>
-                        <div class="">
+                        <div>
                             <h3 class="heading">Login using...</h3>
                             <a href="#" class="button-block-facebook">Facebook</a>
                             <a href="#" class="button-block-twitter">Twitter</a>

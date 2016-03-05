@@ -310,6 +310,9 @@
                     bottom: 0;
                     background: rgba(black, 0.4);
                     font-weight: bold;
+                    @media (max-width: breakpoint('break-2')) {
+                        display: none;
+                    }
                 }
             }
             @include overwrite-component('group', $parent: 'heading') {
@@ -337,6 +340,9 @@
             left: 0;
             right: 0;
             margin: auto;
+            @media (max-width: breakpoint('break-2')) {
+                top: 50%;
+            }
         }
         
         //---------------------------------------------------------
