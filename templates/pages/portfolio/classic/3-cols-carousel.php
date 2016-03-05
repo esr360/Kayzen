@@ -32,11 +32,11 @@
 		
 		<section class="section-primary relative">
 			
-			<div id="portfolio-items" class="owl-carousel owl-full">
+			<div id="portfolio-items" class="owl-carousel owl-full ">
 				
 				<div class="container">
 	
-					<div class="row-flow row-waffle">
+					<div class="row-flow row-waffle fixed-table">
                         
                         <?php
                             
@@ -88,7 +88,7 @@
 				
 				<div class="container">
 	
-					<div class="row-flow row-waffle">
+					<div class="row-flow row-waffle fixed-table">
                         
                         <?php
                             

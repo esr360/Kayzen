@@ -8,7 +8,7 @@
     <div class="modal" id="modal-login">
         <div class="modal_close"><i class="fa fa-times"></i></div>
         <div class="modal_content">
-            <div class="row-block row-waffle-large">
+            <div class="row-block">
                 <div class="span-5">
                     <h3 class="heading">Sign in to your account</h3>
                     <form class="form-fauxPlaceholders-html5">
@@ -49,7 +49,7 @@
     <div class="modal" id="modal-register">
         <div class="modal_close"><i class="fa fa-times"></i></div>
         <div class="modal_content text-left">
-            <div class="row-block row-waffle-large">
+            <div class="row-block">
                 <div class="span-5">
                     <h3 class="heading">Create your free account</h3>
                     <form class="form-fauxPlaceholders-html5">

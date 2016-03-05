@@ -7,29 +7,27 @@
      * @author: @esr360
      * 
      */
-    
+
     $.fn.tooltip = function(custom) {
         
         // Options
         var options = $.extend({
-            
-			position : "top"
-            
+            position : 'top'
         }, custom);
         
         return this.each(function() {
             
-            var $content = $(this).attr("data-tooltip");			
+            var $content = $(this).attr('data-tooltip');			
             var $position = options.position;
             
-            $(this).attr("ontouchstart", "");
+            $(this).attr('ontouchstart', '');
             
             $(this).append(
-                $("<div class='tooltip_wrapper-" + $position + "'><div class='tooltip_content'>"+ $content +"</div></div>")
+                $('<div class="tooltip_wrapper-' + $position + '"><div class="tooltip_content">' + $content + '</div></div>')
             );
             
         });
-			
-	} // tooltip
+            
+    } // tooltip
 
 }(jQuery));

@@ -36,7 +36,7 @@
 				
 				<div class="container">
 	
-					<div class="row-flow row-waffle-infinite">
+					<div class="row-flow row-waffle-infinite fixed-table">
                         
                         <?php
                             
@@ -109,7 +109,7 @@
 				
 				<div class="container">
 	
-					<div class="row-flow row-waffle">
+					<div class="row-flow row-waffle fixed-table">
                         
                         <?php
                             

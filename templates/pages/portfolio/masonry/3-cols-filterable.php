@@ -31,7 +31,7 @@
        ?>
 		
 		<section class="section-primary-mini relative text-center">	
-			<ul class="tabs_nav-pills-center" id="portfolio-categories">
+			<ul class="tabs_nav-pills-center min-break-2" id="portfolio-categories">
 				<li class="button-pill-grey-1-round active" data-filter="*">View All</li>
 				<li class="button-pill-grey-1-round" data-filter="[data-HTML-theme]">HTML Themes</li>
 				<li class="button-pill-grey-1-round" data-filter="[data-photography]">Photography</li>
@@ -43,7 +43,7 @@
 				
             <div class="container">
 
-                <div class="row-flow row-waffle-filterable" id="portfolio-items">
+                <div class="row-flow row-waffle-filterable fixed-table" id="portfolio-items">
                     
                     <?php
                         
@@ -52,6 +52,7 @@
                             'size'   => 'small',
                             'height' => 'tall',
                             'span'   => 4,
+                            'class'  => 'break-3-half break-2-full'
                         ));
                         
                         articleItem(array(
@@ -59,6 +60,7 @@
                             'media'  => 'vimeo',
                             'size'   => 'small',
                             'span'   => 4,
+                            'class'  => 'break-3-half break-2-full'
                         ));
                         
                         articleItem(array(
@@ -67,6 +69,7 @@
                             'size'   => 'small',
                             'height' => 'tall',
                             'span'   => 4,
+                            'class'  => 'break-3-half break-2-full'
                         ));
                         
                         articleItem(array(
@@ -75,6 +78,7 @@
                             'size'   => 'small',
                             'height' => 'tall',
                             'span'   => 4,
+                            'class'  => 'break-3-half break-2-full'
                         ));
                         
                         articleItem(array(
@@ -83,12 +87,14 @@
                             'size'   => 'small',
                             'height' => 'tall',
                             'span'   => 4,
+                            'class'  => 'break-3-half break-2-full'
                         ));
                         
                         articleItem(array(
                             'type'   => 'portfolio',
                             'size'   => 'small',
                             'span'   => 4,
+                            'class'  => 'break-3-half break-2-full'
                         ));
                         
                         articleItem(array(
@@ -96,6 +102,7 @@
                             'media'  => 'carousel',
                             'size'   => 'small',
                             'span'   => 4,
+                            'class'  => 'break-3-half break-2-full'
                         ));
                         
                         articleItem(array(
@@ -104,6 +111,7 @@
                             'size'   => 'small',
                             'height' => 'tall',
                             'span'   => 4,
+                            'class'  => 'break-3-half break-2-full'
                         ));
                         
                         articleItem(array(
@@ -111,6 +119,7 @@
                             'media'  => 'audio',
                             'size'   => 'small',
                             'span'   => 4,
+                            'class'  => 'break-3-half break-2-full'
                         ));
                         
                         articleItem(array(
@@ -118,6 +127,7 @@
                             'media'  => 'vimeo',
                             'size'   => 'small',
                             'span'   => 4,
+                            'class'  => 'break-3-half break-2-full'
                         ));
                      
                     ?>
