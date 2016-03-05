@@ -82,6 +82,14 @@
             
         ?>
         
+        <script>
+            $(document).ready(function() { 
+                $('.widget_group-center').each(function() {
+                    $(this).equalHeight();
+                });
+            });
+        </script>
+        
     </div><!-- Site Canvas -->
 
     <?php include (ROOT.'/includes/ui-enhancements.php'); ?>
