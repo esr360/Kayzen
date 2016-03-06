@@ -309,7 +309,7 @@
 		</div>
 		
 		<section 
-			class="section-primary hide-overflow"
+			class="section-primary hide-overflow center-mobile"
 			style="background-image: url('<?php echo appDir ?>/images/billboard-2.jpg')"
 		>
 		

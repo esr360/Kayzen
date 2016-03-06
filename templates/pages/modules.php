@@ -80,9 +80,7 @@
         
         <script>
             $(document).ready(function() { 
-                $('.widget_group-center').each(function() {
-                    $(this).equalHeight();
-                });
+                $('.widget_group-center').equalHeight();
             });
         </script>
         

@@ -95,7 +95,7 @@
 
                         $("#portfolio-items").KayenInfiniteScroll({
                             isotopeGrid : false
-                        }, [articlesCarousel, dataBG]);
+                        }, [articlesCarousel]);
                          
                     });
                 </script>

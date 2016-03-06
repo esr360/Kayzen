@@ -29,11 +29,9 @@
             <a href="#key-features" class="scroll-wheel"></a>
         </section>
     <?php } else if ($options['type'] == 'videoBg') { ?>
-        <section class="billboard-videoBg-full-screen">
-            <div class="auto-resizable-iframe" data-iframe-height="56.5%">
-                <div>
-                    <iframe src="https://player.vimeo.com/video/87701971?autoplay=1" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-                </div>
+        <section class="billboard-videoBg">
+            <div class="auto-resizable-iframe">
+                <iframe src="https://player.vimeo.com/video/87701971?autoplay=1" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
             </div>
         </section>
     <?php } else if ($options['type'] == 'default') { ?>

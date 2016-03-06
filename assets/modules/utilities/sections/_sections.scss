@@ -37,13 +37,6 @@
 		background-size: cover;	
 		background-position: center;
         
-		// Carousel Tools
-
-		.slide-prev,
-		.slide-next {
-			@include vertical-center(absolute);
-		}
-        
         @include overwrite-component('group', $parent: 'heading') {
             color: this('heading-group-color');
         }

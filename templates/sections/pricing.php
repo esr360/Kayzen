@@ -18,9 +18,9 @@
         </header>
         
         <div class="container">
-            <div class="row row-waffle-large">
+            <div class="row-flow row-waffle-large">
                 
-                <div class="span-4 price-chart_wrapper">
+                <div class="span-4 break-3-half break-2-full price-chart_wrapper">
                     <div class="price-chart-free">
                         <header class="heading_group">
                             <h4 class="heading-heavy-size-6-flush">Free</h4>
@@ -42,7 +42,7 @@
                     </div>
                 </div>
                 
-                <div class="span-4 price-chart_wrapper">                    
+                <div class="span-4 break-3-half break-2-full price-chart_wrapper">                    
                     <div class="price-chart">
                         <div class="corner-ribbon-large-green" data-ribbon="Great Valule"></div>
                         <header class="heading_group">

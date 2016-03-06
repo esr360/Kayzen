@@ -13,10 +13,10 @@
         var options = $.extend({
             child : '> *'
         }, custom);
-        
+                
         // Run the code on each occurance of the element
         return this.each(function() {
-            
+                
             var parent = $(this);
             var child = parent.find(options.child);
             
@@ -32,7 +32,7 @@
             // Set each height to the max height
             $(child).height(maxHeight);
                             
-        }); // this.each
+        }); // this.each  
  
     }; // equalHeight()
  

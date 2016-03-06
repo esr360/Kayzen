@@ -43,6 +43,14 @@
             background-image: url(option($config, 'bg-image'));
             background-size: cover;
         }
+	
+		.slide-prev,
+		.slide-next {
+            @media (max-width: breakpoint('break-4')) {
+                top: auto;
+                bottom: 1rem;
+            }
+        }
 
     // Settings
     //-------------------------------------------------------------
@@ -58,6 +66,7 @@
             
             height: calc(100% - #{option($header, 'height')});
             height: calc(100vh - #{option($header, 'height')});
+            min-height: 700px; // @TODO add to config
         
             // If header is "absolute" or header is "side"
             @if option($header, 'absolute') or option($header, 'side') {
@@ -114,6 +123,7 @@
         @include modifier('full-screen') {
             height: calc(100% - #{option($header, 'height')});
             height: calc(100vh - #{option($header, 'height')});
+            min-height: 700px; // @TODO add to config
         }
         
         // If header is "absolute"
@@ -189,7 +199,7 @@
             overflow: hidden;
             .auto-resizable-iframe {
                 position: absolute;
-                top: -10%;
+                top: 0;
                 left: 0;
                 height: 100%;
                 width: 100%;

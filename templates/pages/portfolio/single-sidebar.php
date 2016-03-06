@@ -34,7 +34,7 @@
             
             <div class="container">
                 
-                <div class="row">
+                <div class="row fixed-table">
                     
                     <div class="span-8">
             
@@ -106,7 +106,7 @@
                                 <h2 class="heading-size-6-light-strikethrough-dots text-center"><span>What We Did</span></h2>
                             </header>
                             
-                            <div class="widget_group row-magic text-center">
+                            <div class="widget_group row-waffle row-magic text-center stack-break-2">
                                 
                                 <!-- Feature 1 -->
                                 <div class="widget-borderTop-highlight-block-scale span">
@@ -182,7 +182,7 @@
                         
                         <section class="section-mini-flush"> 
                             
-                            <div class="row-block text-center">
+                            <div class="row-block text-center stack-break-0">
                                 
                                 <!-- Facebook Shares Widget -->
                                 <a href="#" class="widget-tub span bg-facebook">
@@ -342,7 +342,7 @@
                                 </div>
                             </header>
                                 
-                            <div class="row-no-gutter row-waffle">
+                            <div class="row-no-gutter">
                                 
                                 <?php
                                     
@@ -351,7 +351,8 @@
                                         'size'      => 'small',
                                         'matrix'    => true,
                                         'maskTitle' => false,
-                                        'span'      => 4
+                                        'span'      => 4,
+                                        'class'     => 'break-3-half break-2-full'
                                     ));
                                     
                                     articleItem(array(
@@ -359,7 +360,8 @@
                                         'size'      => 'small',
                                         'matrix'    => true,
                                         'maskTitle' => false,
-                                        'span'      => 4
+                                        'span'      => 4,
+                                        'class'     => 'break-3-half break-2-full'
                                     ));
                                     
                                     articleItem(array(
@@ -367,7 +369,17 @@
                                         'size'      => 'small',
                                         'matrix'    => true,
                                         'maskTitle' => false,
-                                        'span'      => 4
+                                        'span'      => 4,
+                                        'class'     => 'break-3-half break-2-full'
+                                    ));
+                                    
+                                    articleItem(array(
+                                        'type'      => 'portfolio',
+                                        'size'      => 'small',
+                                        'matrix'    => true,
+                                        'maskTitle' => false,
+                                        'span'      => 4,
+                                        'class'     => 'break-3-half break-2-full max-break-3'
                                     ));
                                     
                                 ?>
@@ -377,6 +389,8 @@
                         </section><!-- section -->
                         
                     </div><!-- main content (span-8) -->
+                    
+                    <hr class="hrule-stripes-large max-break-3" />
                     
                     <aside class="sidebar span-4">
     

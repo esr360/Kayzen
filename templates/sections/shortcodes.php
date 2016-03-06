@@ -44,7 +44,7 @@
         </div><!-- Container -->
     
         <!-- Shortcodes Slide Arrows -->
-        <nav class="slide-nav">
+        <nav class="slide-nav full-nav">
             <button class="slide-prev button-icon-border-size-3-grey-3"><i class="fa fa-angle-left"></i></button>
             <button class="slide-next button-icon-border-size-3-grey-3"><i class="fa fa-angle-right"></i></button>
         </nav>

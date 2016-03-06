@@ -34,7 +34,7 @@
             </blockquote>
         </div>
         
-        <nav class="slide-nav">
+        <nav class="slide-nav min-break-3">
             <button class="slide-prev button-icon-border-size-3"><i class="fa fa-angle-left"></i></button>
             <button class="slide-next button-icon-border-size-3"><i class="fa fa-angle-right"></i></button>
         </nav>
@@ -47,8 +47,7 @@
                 testimonialsCarousel.owlCarousel({
                     items: 1,
                     loop: true,
-                    margin: 30,
-                    dots: false
+                    margin: 30
                 })
         
                 testimonialsCarousel.find("+ .slide-nav .slide-next").click(function() {

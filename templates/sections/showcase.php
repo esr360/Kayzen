@@ -66,7 +66,7 @@
                     </div>
                 </div>
                 <div class="section_block-opaque span-6 va-middle">
-                    <div class="block-content span-10">
+                    <div class="block-content">
                         <header class="heading_group">
                             <h2 class="heading-heavy-size-6 font-2">Creative Blog</h2>
                             <h3 class="heading-light-brand-1-size-5">A Modern Template for Creative Blogs</h3>
@@ -97,7 +97,7 @@
                     </div>
                 </div>
                 <div class="section_block-opaque span-6 va-middle">
-                    <div class="block-content span-10">
+                    <div class="block-content">
                         <header class="heading_group">
                             <h2 class="heading-heavy-size-6 font-2">Mobile App</h2>
                             <h3 class="heading-light-brand-1-size-5">A Modern Template for Creative Blogs</h3>
@@ -128,7 +128,7 @@
                     </div>
                 </div>
                 <div class="section_block-opaque span-6 va-middle">
-                    <div class="block-content span-10">
+                    <div class="block-content">
                         <header class="heading_group">
                             <h2 class="heading-heavy-size-6 font-2">Creative Blog</h2>
                             <h3 class="heading-light-brand-1-size-5">A Modern Template for Creative Blogs</h3>
@@ -159,7 +159,7 @@
                     </div>
                 </div>
                 <div class="section_block-opaque span-6 va-middle">
-                    <div class="block-content span-10">
+                    <div class="block-content">
                         <header class="heading_group">
                             <h2 class="heading-heavy-size-6">Mobile App</h2>
                             <h3 class="heading-light-brand-1-size-5">A Modern Template for Creative Blogs</h3>
@@ -190,7 +190,7 @@
                     </div>
                 </div>
                 <div class="section_block-opaque span-6 va-middle">
-                    <div class="block-content span-10">
+                    <div class="block-content">
                         <header class="heading_group">
                             <h2 class="heading-heavy-size-6 font-2">Digital Agency</h2>
                             <h3 class="heading-light-brand-1-size-5">A Modern Template for Creative Blogs</h3>
@@ -221,7 +221,7 @@
                     </div>
                 </div>
                 <div class="section_block-opaque span-6 va-middle">
-                    <div class="block-content span-10">
+                    <div class="block-content">
                         <header class="heading_group">
                             <h2 class="heading-heavy-size-6 font-2">Digital Agency</h2>
                             <h3 class="heading-light-brand-1-size-5">A Modern Template for Creative Blogs</h3>
@@ -252,7 +252,7 @@
                     </div>
                 </div>
                 <div class="section_block-opaque span-6 va-middle">
-                    <div class="block-content span-10">
+                    <div class="block-content">
                         <header class="heading_group">
                             <h2 class="heading-heavy-size-6 font-2">Digital Agency</h2>
                             <h3 class="heading-light-brand-1-size-5">A Modern Template for Creative Blogs</h3>

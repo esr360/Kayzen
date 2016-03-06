@@ -31,7 +31,7 @@
        ?>
 		
 		<section class="section-primary-mini relative text-center">	
-			<ul class="tabs_nav-pills-center" id="portfolio-categories">
+			<ul class="tabs_nav-pills-center min-break-2" id="portfolio-categories">
 				<li class="button-pill-grey-1-round active">View All</li>
 				<li class="button-pill-grey-1-round">HTML Themes</li>
 				<li class="button-pill-grey-1-round">Photography</li>
@@ -55,104 +55,56 @@
                             'type'   => 'portfolio',
                             'matrix' => true,
                             'span'   => 3,
+                            'class'  => 'break-3-half break-2-full'
                         ));
                         
                         articleItem(array(
                             'type'   => 'portfolio',
                             'matrix' => true,
                             'span'   => 3,
+                            'class'  => 'break-3-half break-2-full'
                         ));
                         
                         articleItem(array(
                             'type'   => 'portfolio',
                             'matrix' => true,
                             'span'   => 3,
+                            'class'  => 'break-3-half break-2-full'
                         ));
                         
                         articleItem(array(
                             'type'   => 'portfolio',
                             'matrix' => true,
                             'span'   => 3,
+                            'class'  => 'break-3-half break-2-full'
                         ));
                         
                         articleItem(array(
                             'type'   => 'portfolio',
                             'matrix' => true,
                             'span'   => 3,
+                            'class'  => 'break-3-half break-2-full'
                         ));
                         
                         articleItem(array(
                             'type'   => 'portfolio',
                             'matrix' => true,
                             'span'   => 3,
+                            'class'  => 'break-3-half break-2-full'
                         ));
                         
                         articleItem(array(
                             'type'   => 'portfolio',
                             'matrix' => true,
                             'span'   => 3,
+                            'class'  => 'break-3-half break-2-full'
                         ));
                         
                         articleItem(array(
                             'type'   => 'portfolio',
                             'matrix' => true,
                             'span'   => 3,
-                        ));
-                        
-                    ?>
-					
-				</div>
-
-				<div class="row-no-gutter">
-                    
-                    <?php
-                        
-                        articleItem(array(
-                            'type'   => 'portfolio',
-                            'matrix' => true,
-                            'span'   => 3,
-                        ));
-                        
-                        articleItem(array(
-                            'type'   => 'portfolio',
-                            'matrix' => true,
-                            'span'   => 3,
-                        ));
-                        
-                        articleItem(array(
-                            'type'   => 'portfolio',
-                            'matrix' => true,
-                            'span'   => 3,
-                        ));
-                        
-                        articleItem(array(
-                            'type'   => 'portfolio',
-                            'matrix' => true,
-                            'span'   => 3,
-                        ));
-                        
-                        articleItem(array(
-                            'type'   => 'portfolio',
-                            'matrix' => true,
-                            'span'   => 3,
-                        ));
-                        
-                        articleItem(array(
-                            'type'   => 'portfolio',
-                            'matrix' => true,
-                            'span'   => 3,
-                        ));
-                        
-                        articleItem(array(
-                            'type'   => 'portfolio',
-                            'matrix' => true,
-                            'span'   => 3,
-                        ));
-                        
-                        articleItem(array(
-                            'type'   => 'portfolio',
-                            'matrix' => true,
-                            'span'   => 3,
+                            'class'  => 'break-3-half break-2-full'
                         ));
                         
                     ?>
@@ -167,48 +119,56 @@
                             'type'   => 'portfolio',
                             'matrix' => true,
                             'span'   => 3,
+                            'class'  => 'break-3-half break-2-full'
                         ));
                         
                         articleItem(array(
                             'type'   => 'portfolio',
                             'matrix' => true,
                             'span'   => 3,
+                            'class'  => 'break-3-half break-2-full'
                         ));
                         
                         articleItem(array(
                             'type'   => 'portfolio',
                             'matrix' => true,
                             'span'   => 3,
+                            'class'  => 'break-3-half break-2-full'
                         ));
                         
                         articleItem(array(
                             'type'   => 'portfolio',
                             'matrix' => true,
                             'span'   => 3,
+                            'class'  => 'break-3-half break-2-full'
                         ));
                         
                         articleItem(array(
                             'type'   => 'portfolio',
                             'matrix' => true,
                             'span'   => 3,
+                            'class'  => 'break-3-half break-2-full'
                         ));
                         
                         articleItem(array(
                             'type'   => 'portfolio',
                             'matrix' => true,
                             'span'   => 3,
+                            'class'  => 'break-3-half break-2-full'
                         ));
                         
                         articleItem(array(
                             'type'   => 'portfolio',
                             'matrix' => true,
                             'span'   => 3,
+                            'class'  => 'break-3-half break-2-full'
                         ));
                         
                         articleItem(array(
                             'type'   => 'portfolio',
                             'matrix' => true,
                             'span'   => 3,
+                            'class'  => 'break-3-half break-2-full'
                         ));
                         
                     ?>
@@ -223,48 +183,120 @@
                             'type'   => 'portfolio',
                             'matrix' => true,
                             'span'   => 3,
+                            'class'  => 'break-3-half break-2-full'
                         ));
                         
                         articleItem(array(
                             'type'   => 'portfolio',
                             'matrix' => true,
                             'span'   => 3,
+                            'class'  => 'break-3-half break-2-full'
                         ));
                         
                         articleItem(array(
                             'type'   => 'portfolio',
                             'matrix' => true,
                             'span'   => 3,
+                            'class'  => 'break-3-half break-2-full'
                         ));
                         
                         articleItem(array(
                             'type'   => 'portfolio',
                             'matrix' => true,
                             'span'   => 3,
+                            'class'  => 'break-3-half break-2-full'
                         ));
                         
                         articleItem(array(
                             'type'   => 'portfolio',
                             'matrix' => true,
                             'span'   => 3,
+                            'class'  => 'break-3-half break-2-full'
                         ));
                         
                         articleItem(array(
                             'type'   => 'portfolio',
                             'matrix' => true,
                             'span'   => 3,
+                            'class'  => 'break-3-half break-2-full'
                         ));
                         
                         articleItem(array(
                             'type'   => 'portfolio',
                             'matrix' => true,
                             'span'   => 3,
+                            'class'  => 'break-3-half break-2-full'
                         ));
                         
                         articleItem(array(
                             'type'   => 'portfolio',
                             'matrix' => true,
                             'span'   => 3,
+                            'class'  => 'break-3-half break-2-full'
+                        ));
+                        
+                    ?>
+					
+				</div>
+
+				<div class="row-no-gutter">
+                    
+                    <?php
+                        
+                        articleItem(array(
+                            'type'   => 'portfolio',
+                            'matrix' => true,
+                            'span'   => 3,
+                            'class'  => 'break-3-half break-2-full'
+                        ));
+                        
+                        articleItem(array(
+                            'type'   => 'portfolio',
+                            'matrix' => true,
+                            'span'   => 3,
+                            'class'  => 'break-3-half break-2-full'
+                        ));
+                        
+                        articleItem(array(
+                            'type'   => 'portfolio',
+                            'matrix' => true,
+                            'span'   => 3,
+                            'class'  => 'break-3-half break-2-full'
+                        ));
+                        
+                        articleItem(array(
+                            'type'   => 'portfolio',
+                            'matrix' => true,
+                            'span'   => 3,
+                            'class'  => 'break-3-half break-2-full'
+                        ));
+                        
+                        articleItem(array(
+                            'type'   => 'portfolio',
+                            'matrix' => true,
+                            'span'   => 3,
+                            'class'  => 'break-3-half break-2-full'
+                        ));
+                        
+                        articleItem(array(
+                            'type'   => 'portfolio',
+                            'matrix' => true,
+                            'span'   => 3,
+                            'class'  => 'break-3-half break-2-full'
+                        ));
+                        
+                        articleItem(array(
+                            'type'   => 'portfolio',
+                            'matrix' => true,
+                            'span'   => 3,
+                            'class'  => 'break-3-half break-2-full'
+                        ));
+                        
+                        articleItem(array(
+                            'type'   => 'portfolio',
+                            'matrix' => true,
+                            'span'   => 3,
+                            'class'  => 'break-3-half break-2-full'
                         ));
                         
                     ?>

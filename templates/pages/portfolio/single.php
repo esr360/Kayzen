@@ -98,10 +98,10 @@
                 <h2 class="heading-size-6-light-strikethrough-dots text-center"><span>What We Did</span></h2>
             </header>
             
-            <div class="widget_group row-magic text-center">
+            <div class="row-flow row-waffle text-center">
                 
                 <!-- Feature 1 -->
-                <div class="widget-borderTop-highlight-block-scale span">
+                <div class="widget-borderTop-highlight-block-scale span-3 break-3-half break-2-full">
                     <div class="widget_icon button-icon-plain-size-8">
                         <i class="fa fa-desktop"></i>
                     </div>
@@ -113,7 +113,7 @@
                 </div>
                 
                 <!-- Feature 2 -->
-                <div class="widget-borderTop-highlight-block-scale span">
+                <div class="widget-borderTop-highlight-block-scale span-3 break-3-half break-2-full">
                     <div class="widget_icon button-icon-plain-size-8">
                         <i class="fa fa-clipboard"></i>
                     </div>
@@ -125,7 +125,7 @@
                 </div>
                 
                 <!-- Feature 3 -->
-                <div class="widget-borderTop-highlight-block-scale span">
+                <div class="widget-borderTop-highlight-block-scale span-3 break-3-half break-2-full">
                     <div class="widget_icon button-icon-plain-size-8">
                         <i class="fa fa-photo"></i>
                     </div>
@@ -137,7 +137,7 @@
                 </div>
                 
                 <!-- Feature 4 -->
-                <div class="widget-borderTop-highlight-block-scale span">
+                <div class="widget-borderTop-highlight-block-scale span-3 break-3-half break-2-full">
                     <div class="widget_icon button-icon-plain-size-8">
                         <i class="fa fa-eyedropper"></i>
                     </div>
@@ -155,7 +155,7 @@
 		<section class="section-primary-flush container">
                 
             <div class="row">
-                <div class="span-4 va-middle text-center">
+                <div class="span-4 va-middle text-center min-break-3">
                     <img src="<?php echo appDir ?>/images/custom-graphic-1.png">
                 </div>
                 <div class="span-8 va-middle">
@@ -197,7 +197,7 @@
                         <a class="button-size-2" href="#">Learn More</a>
                     </div>
                 </div>
-                <div class="span-4 va-middle text-center">
+                <div class="span-4 va-middle text-center min-break-3">
                     <img class="span-10" src="<?php echo appDir ?>/images/layouts/layout-header-alt.png" alt="" />
                 </div>
             </div>
@@ -206,7 +206,7 @@
         
         <section class="section-primary-flush-dot-map container"> 
             
-            <div class="row-block text-center">
+            <div class="row-block text-center stack-break-0">
                 
                 <!-- Facebook Shares Widget -->
                 <a href="#" class="widget-tub span bg-facebook">
@@ -372,7 +372,7 @@
 			
 			<div class="container">
                 
-				<div class="row-no-gutter row-waffle">
+				<div class="row-no-gutter">
                                 
                     <?php
                         
@@ -381,7 +381,8 @@
                             'size'      => 'small',
                             'matrix'    => true,
                             'maskTitle' => false,
-                            'span'      => 4
+                            'span'      => 4,
+                            'class'     => 'break-3-half break-2-full'
                         ));
                         
                         articleItem(array(
@@ -389,7 +390,8 @@
                             'size'      => 'small',
                             'matrix'    => true,
                             'maskTitle' => false,
-                            'span'      => 4
+                            'span'      => 4,
+                            'class'     => 'break-3-half break-2-full'
                         ));
                         
                         articleItem(array(
@@ -397,7 +399,17 @@
                             'size'      => 'small',
                             'matrix'    => true,
                             'maskTitle' => false,
-                            'span'      => 4
+                            'span'      => 4,
+                            'class'     => 'break-3-half break-2-full'
+                        ));
+                        
+                        articleItem(array(
+                            'type'      => 'portfolio',
+                            'size'      => 'small',
+                            'matrix'    => true,
+                            'maskTitle' => false,
+                            'span'      => 4,
+                            'class'     => 'break-3-half break-2-full max-break-3'
                         ));
                         
                     ?>

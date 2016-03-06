@@ -30,7 +30,7 @@
 
 		?>
 		
-		<section class="section-primary-mini relative text-center">	
+		<section class="section-primary-mini relative text-center min-break-1">	
 			<ul class="tabs_nav-pills-center" id="portfolio-categories">
 				<li class="button-pill-grey-1-round active" data-filter="*">View All</li>
 				<li class="button-pill-grey-1-round" data-filter="[data-HTML-theme]">HTML Themes</li>
@@ -49,54 +49,63 @@
                         'type'   => 'portfolio',
                         'matrix' => true,
                         'span'   => 4,
+                        'class'  => 'break-3-half break-2-full'
                     ));
                     
                     articleItem(array(
                         'type'   => 'portfolio',
                         'matrix' => true,
                         'span'   => 4,
+                        'class'  => 'break-3-half break-2-full'
                     ));
                     
                     articleItem(array(
                         'type'   => 'portfolio',
                         'matrix' => true,
                         'span'   => 4,
+                        'class'  => 'break-3-half break-2-full'
                     ));
                     
                     articleItem(array(
                         'type'   => 'portfolio',
                         'matrix' => true,
                         'span'   => 4,
+                        'class'  => 'break-3-half break-2-full'
                     ));
                     
                     articleItem(array(
                         'type'   => 'portfolio',
                         'matrix' => true,
                         'span'   => 4,
+                        'class'  => 'break-3-half break-2-full'
                     ));
                     
                     articleItem(array(
                         'type'   => 'portfolio',
                         'matrix' => true,
                         'span'   => 4,
+                        'class'  => 'break-3-half break-2-full'
                     ));
                     
                     articleItem(array(
                         'type'   => 'portfolio',
                         'matrix' => true,
                         'span'   => 4,
+                        'class'  => 'break-3-half break-2-full'
                     ));
                     
                     articleItem(array(
                         'type'   => 'portfolio',
                         'matrix' => true,
                         'span'   => 4,
+                        'class'  => 'break-3-half break-2-full'
                     ));
                     
                     articleItem(array(
                         'type'   => 'portfolio',
                         'matrix' => true,
                         'span'   => 4,
+                        'class'  => 'break-3-half break-2-full min-break-3'
                     ));
                     
                 ?>

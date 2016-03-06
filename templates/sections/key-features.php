@@ -118,6 +118,12 @@
             </div>
             
         </div><!-- Features Row 2 -->
+                
+        <script>
+            $(document).ready(function() {
+                $('#key-features .widget_group').equalHeight();
+             });
+        </script>
         
     </section><!-- Key Features -->
     

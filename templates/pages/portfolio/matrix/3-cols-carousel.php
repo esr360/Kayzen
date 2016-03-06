@@ -44,36 +44,42 @@
                                 'type'   => 'portfolio',
                                 'matrix' => true,
                                 'span'   => 4,
+                                'class'  => 'break-3-half break-2-full'
                             ));
                             
                             articleItem(array(
                                 'type'   => 'portfolio',
                                 'matrix' => true,
                                 'span'   => 4,
+                                'class'  => 'break-3-half break-2-full'
                             ));
                             
                             articleItem(array(
                                 'type'   => 'portfolio',
                                 'matrix' => true,
                                 'span'   => 4,
+                                'class'  => 'break-3-half break-2-full'
                             ));
                             
                             articleItem(array(
                                 'type'   => 'portfolio',
                                 'matrix' => true,
                                 'span'   => 4,
+                                'class'  => 'break-3-half break-2-full'
                             ));
                             
                             articleItem(array(
                                 'type'   => 'portfolio',
                                 'matrix' => true,
                                 'span'   => 4,
+                                'class'  => 'break-3-half break-2-full'
                             ));
                             
                             articleItem(array(
                                 'type'   => 'portfolio',
                                 'matrix' => true,
                                 'span'   => 4,
+                                'class'  => 'break-3-half break-2-full'
                             ));
                             
                         ?>
@@ -92,36 +98,42 @@
                                 'type'   => 'portfolio',
                                 'matrix' => true,
                                 'span'   => 4,
+                                'class'  => 'break-3-half break-2-full'
                             ));
                             
                             articleItem(array(
                                 'type'   => 'portfolio',
                                 'matrix' => true,
                                 'span'   => 4,
+                                'class'  => 'break-3-half break-2-full'
                             ));
                             
                             articleItem(array(
                                 'type'   => 'portfolio',
                                 'matrix' => true,
                                 'span'   => 4,
+                                'class'  => 'break-3-half break-2-full'
                             ));
                             
                             articleItem(array(
                                 'type'   => 'portfolio',
                                 'matrix' => true,
                                 'span'   => 4,
+                                'class'  => 'break-3-half break-2-full'
                             ));
                             
                             articleItem(array(
                                 'type'   => 'portfolio',
                                 'matrix' => true,
                                 'span'   => 4,
+                                'class'  => 'break-3-half break-2-full'
                             ));
                             
                             articleItem(array(
                                 'type'   => 'portfolio',
                                 'matrix' => true,
                                 'span'   => 4,
+                                'class'  => 'break-3-half break-2-full'
                             ));
                             
                         ?>
@@ -132,7 +144,7 @@
 							
 			</div><!-- portfolio-carousel -->
 			
-			<nav class="slide-nav">
+			<nav class="slide-nav min-break-3">
 				<button class="slide-prev button-icon-border-size-3"><i class="fa fa-angle-left"></i></button>
 				<button class="slide-next button-icon-border-size-3"><i class="fa fa-angle-right"></i></button>
 			</nav>

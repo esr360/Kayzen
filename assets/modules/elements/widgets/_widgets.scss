@@ -303,6 +303,9 @@
                 right: 0;
                 margin: auto;
                 transform: scale(0) translateY(-50%);
+                @media (max-width: breakpoint('break-2')) {
+                    top: 50%;
+                }
                 @include overwrite('button', $special: 'adjacent-sibling') {
                     position: absolute;
                     z-index: 2;
@@ -457,6 +460,12 @@
             }
             @include context('parent-hovered') {
                 color: color('brand', 'primary');
+            }
+            #mobile-optimized &,
+            #why-choose-us & {
+                @media (min-width: breakpoint('break-3')) and (max-width: breakpoint('break-5')) {
+                    display: none;
+                }
             }
         }
         

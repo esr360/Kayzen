@@ -136,14 +136,26 @@
 			&:focus {
 				outline: none;
 			}
+            @at-root #{selector-replace(&, '.slide-nav', '.full-nav')} {
+                @media (max-width: breakpoint('break-4')) {
+                    top: auto;
+                    bottom: 9.7rem;
+                }
+            }
 		}
 	
 		.slide-prev {
-			left: 2rem;
+            left: 0;
+            @media (min-width: breakpoint('break-2')) {
+			     left: 2rem;
+            }
 		}
 	
 		.slide-next {
-			right: 2rem;
+			right: 0;
+            @media (min-width: breakpoint('break-2')) {
+			     right: 2rem;
+            }
 		}
 	
 		&.twin-nav {

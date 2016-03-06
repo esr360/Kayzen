@@ -35,7 +35,7 @@
 			<div id="portfolio-items" class="owl-carousel owl-full">
 				
 				<div class="container">
-					<div class="row-no-gutter">
+					<div class="row-no-gutter stack-break-2">
 						
                         <?php
                             
@@ -69,7 +69,7 @@
 				</div>
 				
 				<div class="container">
-					<div class="row-no-gutter">
+					<div class="row-no-gutter stack-break-2">
                         
                         <?php
                             
@@ -104,7 +104,7 @@
 							
 			</div><!-- portfolio-items -->
 			
-			<nav class="slide-nav">
+			<nav class="slide-nav min-break-3">
 				<button class="slide-prev button-icon-border-size-3"><i class="fa fa-angle-left"></i></button>
 				<button class="slide-next button-icon-border-size-3"><i class="fa fa-angle-right"></i></button>
 			</nav>
