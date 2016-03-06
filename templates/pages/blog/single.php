@@ -75,7 +75,7 @@
                 
                 <hr class="hrule-stripes-large" />
                 
-				<div class="row-block text-center">
+				<div class="row-block text-center stack-0">
                     
                     <!-- Facebook Shares Widget -->
                     <a href="#" class="widget-tub span bg-facebook">
@@ -207,7 +207,7 @@
                     
                     <h2 class="heading-size-6-light-strikethrough-dots text-center"><span>The Author</span></h2>
                     
-                    <div class="row">
+                    <div class="row row-waffle">
                         <div class="span-2 text-center">
                             <div class="thumbnail-mini-profile-round-xlarge-styled">
                                 <img src="<?php stockImage('team/team-2.jpg') ?>" alt="">
@@ -244,7 +244,7 @@
                     <div class="comments object">
                     
                         <div class="comment object-small">
-                            <div class="row object-small">
+                            <div class="row stack-0 object-small">
                                 <div class="span-2 va-middle text-center">
                                     <div class="thumbnail-profile-round-xlarge-styled">
                                         <img src="<?php stockImage('team/team-2.jpg') ?>" alt="">
@@ -275,7 +275,7 @@
                         </div>
                     
                         <div class="comment object-small text-right">
-                            <div class="row object-small span-10 text-left">
+                            <div class="row object-small span-10 text-left stack-0">
                                 <div class="span-2 va-middle text-center">
                                     <div class="thumbnail-profile-round-large-styled">
                                         <img src="<?php stockImage('team/team-2.jpg') ?>" alt="">
@@ -306,7 +306,7 @@
                         </div>
                     
                         <div class="comment object">
-                            <div class="row object-small">
+                            <div class="row object-small stack-0">
                                 <div class="span-2 va-middle text-center">
                                     <div class="thumbnail-profile-round-xlarge-styled">
                                         <img src="<?php stockImage('team/team-2.jpg') ?>" alt="">
@@ -346,7 +346,7 @@
                     <form class="form-fauxPlaceholders-html5">
                         <div class="row-flow">
                             <div class="form_group span-4">
-                                <input type="text" class="form_input" id="firstName" placeholder="Ex: John Doe" required="">
+                                <input type="text" class="form_input" id="name" placeholder="Ex: John Doe" required="">
                                 <label for="firstName">Name</label>
                             </div>
                             <div class="form_group span-4">
@@ -357,33 +357,35 @@
                                 <input type="url" class="form_input" id="website" placeholder="themeforest.net" required="">
                                 <label for="website">Website</label>
                             </div>
+                            <div class="form_group span-12">
+                                <textarea class="form_input" id="yourMessage" rows="8" required=""></textarea>
+                                <label for="yourMessage">Your Message</label>
+                            </div>
                         </div>
-                        <div class="form_group">
-                            <textarea class="form_input" id="yourMessage" rows="8" required=""></textarea>
-                            <label for="yourMessage">Your Message</label>
+                        <div class="object">
+                            <button type="submit" class="button-block-primary-size-3">Submit Message</button>
                         </div>
-                        <button type="submit" class="button-block-primary-size-3">Submit Message</button>
                     </form>
                     
                 </div>
                 
                 <h2 class="heading-size-6-light-strikethrough-dots text-center"><span>Related Posts</span></h2>
 
-                <div class="row">
-                    
-                    <div class="span-4 relative">	
+                <div class="row-flow row-waffle-large">
+                            
+                    <div class="span-4 break-4-half break-2-full relative">	
                         <div class="thumbnail-zoom">
                             <div class="thumbnail_mask">
                                 <div class="thumbnail_controls icon_group-small">
-                                    <a href="<?php stockImage('demo/hero-7.jpg') ?>" class="button-icon-border-circle-size-2" rel="lightbox">
+                                    <a href="<?php stockImage('demo/hero-'.rand(1, 7).'.jpg') ?>" class="button-icon-border-circle-size-2" rel="lightbox">
                                         <i class="fa fa-search"></i>
                                     </a>
-                                    <a href="#" class="button-icon-border-circle-size-2">
+                                    <a href="<?php pageLink('blog/single.php') ?>" class="button-icon-border-circle-size-2">
                                         <i class="fa fa-link"></i>
                                     </a>
                                 </div>
                             </div>
-                            <img src="<?php stockImage('demo/hero-7.jpg') ?>">
+                            <img src="<?php stockImage('demo/hero-'.rand(1, 7).'.jpg') ?>">
                         </div>
                         <header class="heading_group">
                             <div class="heading_date">
@@ -391,10 +393,43 @@
                                 <div>23</div>
                             </div>
                             <h3 class="heading-heavy-size-3">Kayzen is Released</h3>
-                            <h4 class="heading-light">Posted by <a href="#">Naomi Olson</a></h4>
+                            <h4 class="heading-light">Posted by <a href="<?php pageLink('classic/full-width.php') ?>">Naomi Olson</a></h4>
                         </header>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Inquit, dasne adolescenti veniam? Ergo instituto veterum...</p>
-                        <div class="row">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Inquit, dasne adolescenti veniam...</p>
+                        <div class="row stack-0">
+                            <div class="span-5 va-middle">
+                                <a href="#" class="button-oval-primary-size-2">Read More</a>
+                            </div>
+                            <div class="span-7 va-middle text-right">
+                                <small>Posted in <a href="<?php pageLink('classic/3-cols.php') ?>">Web Design</a></small>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="span-4 break-4-half break-2-full relative">	
+                        <div class="thumbnail-zoom">
+                            <div class="thumbnail_mask">
+                                <div class="thumbnail_controls icon_group-small">
+                                    <a href="<?php stockImage('demo/hero-'.rand(1, 7).'.jpg') ?>" class="button-icon-border-circle-size-2" rel="lightbox">
+                                        <i class="fa fa-search"></i>
+                                    </a>
+                                    <a href="<?php pageLink('blog/single.php') ?>" class="button-icon-border-circle-size-2">
+                                        <i class="fa fa-link"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <img src="<?php stockImage('demo/hero-'.rand(1, 7).'.jpg') ?>">
+                        </div>
+                        <header class="heading_group">
+                            <div class="heading_date">
+                                <div>Sep</div>
+                                <div>23</div>
+                            </div>
+                            <h3 class="heading-heavy-size-3">Kayzen is Released</h3>
+                            <h4 class="heading-light">Posted by <a href="<?php pageLink('blog/single.php') ?>">Naomi Olson</a></h4>
+                        </header>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Inquit, dasne adolescenti veniam...</p>
+                        <div class="row stack-0">
                             <div class="span-5 va-middle">
                                 <a href="#" class="button-oval-primary-size-2">Read More</a>
                             </div>
@@ -404,11 +439,11 @@
                         </div>
                     </div>
                     
-                    <div class="span-4 relative">	
+                    <div class="span-4 min-break-4 relative">	
                         <div class="thumbnail-zoom">
                             <div class="thumbnail_mask">
                                 <div class="thumbnail_controls icon_group-small">
-                                    <a href="<?php stockImage('demo/hero-7.jpg') ?>" class="button-icon-border-circle-size-2" rel="lightbox">
+                                    <a href="<?php stockImage('demo/hero-8.jpg') ?>" class="button-icon-border-circle-size-2" rel="lightbox">
                                         <i class="fa fa-search"></i>
                                     </a>
                                     <a href="#" class="button-icon-border-circle-size-2">
@@ -416,7 +451,7 @@
                                     </a>
                                 </div>
                             </div>
-                            <img src="<?php stockImage('demo/hero-5.jpg') ?>">
+                            <img src="<?php stockImage('demo/hero-8.jpg') ?>">
                         </div>
                         <header class="heading_group">
                             <div class="heading_date">
@@ -424,53 +459,20 @@
                                 <div>23</div>
                             </div>
                             <h3 class="heading-heavy-size-3">Kayzen is Released</h3>
-                            <h4 class="heading-light">Posted by <a href="#">Naomi Olson</a></h4>
+                            <h4 class="heading-light">Posted by <a href="<?php pageLink('classic/full-width.php') ?>">Naomi Olson</a></h4>
                         </header>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Inquit, dasne adolescenti veniam? Ergo instituto veterum...</p>
-                        <div class="row">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Inquit, dasne adolescenti veniam...</p>
+                        <div class="row stack-0">
                             <div class="span-5 va-middle">
                                 <a href="#" class="button-oval-primary-size-2">Read More</a>
                             </div>
                             <div class="span-7 va-middle text-right">
-                                <small>Posted in <a href="blog.html">Web Design</a></small>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="span-4 relative">	
-                        <div class="thumbnail-zoom">
-                            <div class="thumbnail_mask">
-                                <div class="thumbnail_controls icon_group-small">
-                                    <a href="<?php stockImage('demo/hero-7.jpg') ?>" class="button-icon-border-circle-size-2" rel="lightbox">
-                                        <i class="fa fa-search"></i>
-                                    </a>
-                                    <a href="#" class="button-icon-border-circle-size-2">
-                                        <i class="fa fa-link"></i>
-                                    </a>
-                                </div>
-                            </div>
-                            <img src="<?php stockImage('demo/hero-3.jpg') ?>">
-                        </div>
-                        <header class="heading_group">
-                            <div class="heading_date">
-                                <div>Sep</div>
-                                <div>23</div>
-                            </div>
-                            <h3 class="heading-heavy-size-3">Kayzen is Released</h3>
-                            <h4 class="heading-light">Posted by <a href="#">Naomi Olson</a></h4>
-                        </header>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Inquit, dasne adolescenti veniam? Ergo instituto veterum...</p>
-                        <div class="row">
-                            <div class="span-5 va-middle">
-                                <a href="#" class="button-oval-primary-size-2">Read More</a>
-                            </div>
-                            <div class="span-7 va-middle text-right">
-                                <small>Posted in <a href="blog.html">Web Design</a></small>
+                                <small>Posted in <a href="<?php pageLink('classic/full-width.php') ?>">Web Design</a></small>
                             </div>
                         </div>
                     </div>
             
-                </div>
+                </div><!-- row -->
 		
             </div><!-- container -->
             

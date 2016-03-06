@@ -34,7 +34,7 @@
 				
 			<div class="container">
 				
-				<div class="row">
+				<div class="row fixed-table">
 					
 					<div class="span-8">
                   
@@ -100,6 +100,8 @@
                         
 					</div>
 					
+                    <hr class="hrule-stripes-large max-break-3" />
+                    
 					<aside class="sidebar span-4">
     
                         <?php sidebar(); ?>

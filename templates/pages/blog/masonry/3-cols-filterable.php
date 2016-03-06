@@ -30,21 +30,19 @@
 
 		?>
 		
-		<section class="section-primary-mini relative text-center">	
-			<ul class="tabs_nav-pills" id="blog-types">
-				<li class="button-pill-grey-1-thin active" data-filter="*">View All</li>
-				<li class="button-pill-grey-1-thin" data-filter="[data-image]">Image</li>
-				<li class="button-pill-grey-1-thin" data-filter="[data-carousel]">Carousel</li>
-				<li class="button-pill-grey-1-thin" data-filter="[data-vimeo], [data-youtube]">Video</li>
-				<li class="button-pill-grey-1-thin" data-filter="[data-audio]">Audio</li>
+		<section class="section-primary">
+            
+			<ul class="tabs_nav-pills-center-large min-break-2" id="blog-types">
+				<li class="button-pill-grey-1-round active" data-filter="*">View All</li>
+				<li class="button-pill-grey-1-round" data-filter="[data-image]">Image</li>
+				<li class="button-pill-grey-1-round" data-filter="[data-carousel]">Carousel</li>
+				<li class="button-pill-grey-1-round" data-filter="[data-vimeo], [data-youtube]">Video</li>
+				<li class="button-pill-grey-1-round" data-filter="[data-audio]">Audio</li>
 			</ul>
-		</section>
-		
-		<section class="section-primary-flush">
 				
 			<div class="container">
                 
-                <div id="blog-items" class="row-flow row-waffle-filterable">
+                <div id="blog-items" class="row-flow row-waffle-filterable fixed-table">
                         
                     <?php
                         
@@ -52,12 +50,14 @@
                             'size'   => 'small',
                             'height' => 'tall',
                             'span'   => 4,
+                            'class'  => 'break-3-half break-2-full'
                         ));
                         
                         articleItem(array(
                             'media'  => 'vimeo',
                             'size'   => 'small',
                             'span'   => 4,
+                            'class'  => 'break-3-half break-2-full'
                         ));
                         
                         articleItem(array(
@@ -65,6 +65,7 @@
                             'size'   => 'small',
                             'height' => 'tall',
                             'span'   => 4,
+                            'class'  => 'break-3-half break-2-full'
                         ));
                         
                         articleItem(array(
@@ -72,6 +73,7 @@
                             'size'   => 'small',
                             'height' => 'tall',
                             'span'   => 4,
+                            'class'  => 'break-3-half break-2-full'
                         ));
                         
                         articleItem(array(
@@ -79,17 +81,20 @@
                             'size'   => 'small',
                             'height' => 'tall',
                             'span'   => 4,
+                            'class'  => 'break-3-half break-2-full'
                         ));
                         
                         articleItem(array(
                             'size'   => 'small',
                             'span'   => 4,
+                            'class'  => 'break-3-half break-2-full'
                         ));
                         
                         articleItem(array(
                             'media'  => 'carousel',
                             'size'   => 'small',
                             'span'   => 4,
+                            'class'  => 'break-3-half break-2-full'
                         ));
                         
                         articleItem(array(
@@ -97,18 +102,21 @@
                             'size'   => 'small',
                             'height' => 'tall',
                             'span'   => 4,
+                            'class'  => 'break-3-half break-2-full'
                         ));
                         
                         articleItem(array(
                             'media'  => 'audio',
                             'size'   => 'small',
                             'span'   => 4,
+                            'class'  => 'break-3-half break-2-full'
                         ));
                         
                         articleItem(array(
                             'media'  => 'vimeo',
                             'size'   => 'small',
                             'span'   => 4,
+                            'class'  => 'break-3-half break-2-full'
                         ));
                      
                     ?>

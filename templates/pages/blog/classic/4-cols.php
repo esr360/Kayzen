@@ -34,7 +34,7 @@
 				
 			<div class="container">
                 
-                <div id="blog-items" class="row-flow row-waffle-large">
+                <div id="blog-items" class="row-flow row-waffle-large fixed-table">
                     
                     <?php
                         
@@ -42,6 +42,7 @@
                             'size'   => 'small',
                             'title'  => 'Lorem ipsum dolor',
                             'span'   => 3,
+                            'class'  => 'break-3-half break-2-full'
                         ));
                     
                         articleItem(array(
@@ -49,6 +50,7 @@
                             'size'   => 'small',
                             'title'  => 'Lorem ipsum dolor',
                             'span'   => 3,
+                            'class'  => 'break-3-half break-2-full'
                         ));
                     
                         articleItem(array(
@@ -56,12 +58,14 @@
                             'size'   => 'small',
                             'title'  => 'Lorem ipsum dolor',
                             'span'   => 3,
+                            'class'  => 'break-3-half break-2-full'
                         ));
                     
                         articleItem(array(
                             'size'   => 'small',
                             'title'  => 'Lorem ipsum dolor',
                             'span'   => 3,
+                            'class'  => 'break-3-half break-2-full'
                         ));
                     
                         articleItem(array(
@@ -69,12 +73,14 @@
                             'size'   => 'small',
                             'title'  => 'Lorem ipsum dolor',
                             'span'   => 3,
+                            'class'  => 'break-3-half break-2-full'
                         ));
                     
                         articleItem(array(
                             'size'   => 'small',
                             'title'  => 'Lorem ipsum dolor',
                             'span'   => 3,
+                            'class'  => 'break-3-half break-2-full'
                         ));
                     
                         articleItem(array(
@@ -82,18 +88,21 @@
                             'size'   => 'small',
                             'title'  => 'Lorem ipsum dolor',
                             'span'   => 3,
+                            'class'  => 'break-3-half break-2-full'
                         ));
                     
                         articleItem(array(
                             'size'   => 'small',
                             'title'  => 'Lorem ipsum dolor',
                             'span'   => 3,
+                            'class'  => 'break-3-half break-2-full'
                         ));
                         
                         articleItem(array(
                             'size'   => 'small',
                             'title'  => 'Lorem ipsum dolor',
                             'span'   => 3,
+                            'class'  => 'break-3-half break-2-full'
                         ));
                     
                         articleItem(array(
@@ -101,6 +110,7 @@
                             'size'   => 'small',
                             'title'  => 'Lorem ipsum dolor',
                             'span'   => 3,
+                            'class'  => 'break-3-half break-2-full'
                         ));
                     
                         articleItem(array(
@@ -108,12 +118,14 @@
                             'size'   => 'small',
                             'title'  => 'Lorem ipsum dolor',
                             'span'   => 3,
+                            'class'  => 'break-3-half break-2-full'
                         ));
                     
                         articleItem(array(
                             'size'   => 'small',
                             'title'  => 'Lorem ipsum dolor',
                             'span'   => 3,
+                            'class'  => 'break-3-half break-2-full'
                         ));
                     
                     ?>

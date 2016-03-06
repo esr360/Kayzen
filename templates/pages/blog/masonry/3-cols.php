@@ -34,7 +34,7 @@
 				
 			<div class="container">
                 
-                <div id="blog-items" class="row-flow row-waffle">
+                <div id="blog-items" class="row-flow row-waffle fixed-table">
                     
                     <?php
                         
@@ -42,12 +42,14 @@
                             'size'   => 'small',
                             'height' => 'tall',
                             'span'   => 4,
+                            'class'  => 'break-3-half break-2-full'
                         ));
                         
                         articleItem(array(
                             'media'  => 'vimeo',
                             'size'   => 'small',
                             'span'   => 4,
+                            'class'  => 'break-3-half break-2-full'
                         ));
                         
                         articleItem(array(
@@ -55,6 +57,7 @@
                             'size'   => 'small',
                             'height' => 'tall',
                             'span'   => 4,
+                            'class'  => 'break-3-half break-2-full'
                         ));
                         
                         articleItem(array(
@@ -62,6 +65,7 @@
                             'size'   => 'small',
                             'height' => 'tall',
                             'span'   => 4,
+                            'class'  => 'break-3-half break-2-full'
                         ));
                         
                         articleItem(array(
@@ -69,17 +73,20 @@
                             'size'   => 'small',
                             'height' => 'tall',
                             'span'   => 4,
+                            'class'  => 'break-3-half break-2-full'
                         ));
                         
                         articleItem(array(
                             'size'   => 'small',
                             'span'   => 4,
+                            'class'  => 'break-3-half break-2-full'
                         ));
                         
                         articleItem(array(
                             'media'  => 'carousel',
                             'size'   => 'small',
                             'span'   => 4,
+                            'class'  => 'break-3-half break-2-full'
                         ));
                         
                         articleItem(array(
@@ -87,18 +94,21 @@
                             'size'   => 'small',
                             'height' => 'tall',
                             'span'   => 4,
+                            'class'  => 'break-3-half break-2-full'
                         ));
                         
                         articleItem(array(
                             'media'  => 'audio',
                             'size'   => 'small',
                             'span'   => 4,
+                            'class'  => 'break-3-half break-2-full'
                         ));
                         
                         articleItem(array(
                             'media'  => 'vimeo',
                             'size'   => 'small',
                             'span'   => 4,
+                            'class'  => 'break-3-half break-2-full'
                         ));
                      
                     ?>

@@ -79,7 +79,7 @@
                         
                         <hr class="hrule-stripes-large" />
                         
-                        <div class="row-block text-center">
+                        <div class="row-block text-center stack-break-0">
                             
                             <!-- Facebook Shares Widget -->
                             <a href="#" class="widget-tub span bg-facebook">
@@ -213,7 +213,7 @@
                             
                             <h2 class="heading-size-6-light-strikethrough-dots text-center"><span>The Author</span></h2>
                             
-                            <div class="row">
+                            <div class="row row-waffle">
                                 <div class="span-2 text-center">
                                     <div class="thumbnail-mini-profile-round-xlarge-styled">
                                         <img src="<?php stockImage('team/team-1.jpg') ?>">
@@ -250,7 +250,7 @@
                             <div class="comments object">
                             
                                 <div class="comment object-small">
-                                    <div class="row object-small">
+                                    <div class="row object-small stack-break-0">
                                         <div class="span-2 va-middle text-center">
                                             <div class="thumbnail-profile-round-xlarge-styled">
                                                 <img src="<?php stockImage('team/team-1.jpg') ?>">
@@ -281,7 +281,7 @@
                                 </div>
                             
                                 <div class="comment object-small text-right">
-                                    <div class="row object-small span-10 text-left">
+                                    <div class="row object-small span-10 text-left stack-break-0">
                                         <div class="span-2 va-middle text-center">
                                             <div class="thumbnail-profile-round-large-styled">
                                                 <img src="<?php stockImage('team/team-1.jpg') ?>">
@@ -312,7 +312,7 @@
                                 </div>
                             
                                 <div class="comment object">
-                                    <div class="row object-small">
+                                    <div class="row object-small stack-break-0">
                                         <div class="span-2 va-middle text-center">
                                             <div class="thumbnail-profile-round-xlarge-styled">
                                                 <img src="<?php stockImage('team/team-1.jpg') ?>">
@@ -363,21 +363,23 @@
                                         <input type="url" class="form_input" id="website" placeholder="themeforest.net" required="">
                                         <label for="website">Website</label>
                                     </div>
+                                    <div class="form_group span-12">
+                                        <textarea class="form_input" id="yourMessage" rows="8" required=""></textarea>
+                                        <label for="yourMessage">Your Message</label>
+                                    </div>
                                 </div>
-                                <div class="form_group">
-                                    <textarea class="form_input" id="yourMessage" rows="8" required=""></textarea>
-                                    <label for="yourMessage">Your Message</label>
+                                <div class="object">
+                                    <button type="submit" class="button-block-primary-size-3">Submit Message</button>
                                 </div>
-                                <button type="submit" class="button-block-primary-size-3">Submit Message</button>
                             </form>
                             
                         </div>
                         
                         <h2 class="heading-size-6-light-strikethrough-dots text-center"><span>Related Posts</span></h2>
         
-                        <div class="row">
+                        <div class="row-flow row-waffle-large">
                             
-                            <div class="span-4 relative">	
+                            <div class="span-4 break-4-half break-2-full relative">	
                                 <div class="thumbnail-zoom">
                                     <div class="thumbnail_mask">
                                         <div class="thumbnail_controls icon_group-small">
@@ -400,7 +402,7 @@
                                     <h4 class="heading-light">Posted by <a href="<?php pageLink('classic/full-width.php') ?>">Naomi Olson</a></h4>
                                 </header>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Inquit, dasne adolescenti veniam...</p>
-                                <div class="row">
+                                <div class="row stack-0">
                                     <div class="span-5 va-middle">
                                         <a href="#" class="button-oval-primary-size-2">Read More</a>
                                     </div>
@@ -410,7 +412,7 @@
                                 </div>
                             </div>
                             
-                            <div class="span-4 relative">	
+                            <div class="span-4 break-4-half break-2-full relative">	
                                 <div class="thumbnail-zoom">
                                     <div class="thumbnail_mask">
                                         <div class="thumbnail_controls icon_group-small">
@@ -433,7 +435,7 @@
                                     <h4 class="heading-light">Posted by <a href="<?php pageLink('blog/single.php') ?>">Naomi Olson</a></h4>
                                 </header>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Inquit, dasne adolescenti veniam...</p>
-                                <div class="row">
+                                <div class="row stack-0">
                                     <div class="span-5 va-middle">
                                         <a href="#" class="button-oval-primary-size-2">Read More</a>
                                     </div>
@@ -443,7 +445,7 @@
                                 </div>
                             </div>
                             
-                            <div class="span-4 relative">	
+                            <div class="span-4 min-break-4 relative">	
                                 <div class="thumbnail-zoom">
                                     <div class="thumbnail_mask">
                                         <div class="thumbnail_controls icon_group-small">
@@ -466,7 +468,7 @@
                                     <h4 class="heading-light">Posted by <a href="<?php pageLink('classic/full-width.php') ?>">Naomi Olson</a></h4>
                                 </header>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Inquit, dasne adolescenti veniam...</p>
-                                <div class="row">
+                                <div class="row stack-0">
                                     <div class="span-5 va-middle">
                                         <a href="#" class="button-oval-primary-size-2">Read More</a>
                                     </div>
@@ -479,6 +481,8 @@
                         </div><!-- row -->
 
                     </div><!-- main content (span-8) -->
+                
+                    <hr class="hrule-stripes-large max-break-3" />
                 
 					<aside class="sidebar span-4">
     
