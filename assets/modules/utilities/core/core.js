@@ -31,9 +31,11 @@ $(document).ready(function() {
     $('[data-bg]').dataBg();
 
     // Parallax Init
-    $.stellar({
-        horizontalScrolling : false
-    });
+    if (breakpoint('min-width', 'break-3')) {
+        $.stellar({
+            horizontalScrolling : false
+        });
+    }
 
     // Owl Carousel Init
     $('.carousel').each(function() {

@@ -111,9 +111,12 @@
         //---------------------------------------------------------
 
         @include modifier('panel') {
-            padding: this('panel-padding');
+            padding: 3em;
             border-top: this('panel-border');	
             border-left: this('panel-border');
+            @media (min-width: breapoint('break-2')) {
+                padding: this('panel-padding');
+            }
             @include modifier('small') {
                 padding: this('panel-small-padding');
             }
@@ -205,9 +208,11 @@
         @include modifier('scale') {
             z-index: 1;
             transform: translateZ(0);
-            &:hover {
-                transform: scale(this('scale')) translateZ(0);
-                z-index: 5;
+            @media (min-width: breakpoint('break-2')) {
+                &:hover {
+                    transform: scale(this('scale')) translateZ(0);
+                    z-index: 5;
+                }
             }
         }
         

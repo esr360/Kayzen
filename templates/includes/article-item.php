@@ -109,7 +109,7 @@
                 <?php if ($options['height'] === 'tall') { ?>
                         <img src="<?php stockImage('demo/tall/hero-'.$options['thumb'].'.jpg') ?>">
                 <?php } else { ?>
-                    <img src="<?php stockImage('demo/hero-'.$options['thumb'].'.jpg') ?>">
+                    <img src="<?php stockImage('demo/small/hero-'.$options['thumb'].'.jpg') ?>">
                 <?php } ?>
             </div>
             
@@ -144,7 +144,7 @@
                     <?php if ($options['height'] === 'tall') { ?>
                         <img src="<?php stockImage('demo/tall/hero-'.$options['thumb'].'.jpg') ?>">
                     <?php } else { ?>
-                        <img src="<?php stockImage('demo/hero-'.$options['thumb'].'.jpg') ?>">
+                        <img src="<?php stockImage('demo/small/hero-'.$options['thumb'].'.jpg') ?>">
                     <?php } ?>
                 <?php } ?>
             </div>

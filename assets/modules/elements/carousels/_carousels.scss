@@ -4,72 +4,72 @@
 
 @mixin carousels($custom: ()) {
 
-	//-------------------------------------------------------------
-	// Config
-	//-------------------------------------------------------------
+    //-------------------------------------------------------------
+    // Config
+    //-------------------------------------------------------------
 
-	$carousels: config((
-		'name'             : 'carousel',
+    $carousels: config((
+        'name'             : 'carousel',
         'scale-1-size'     : 1.1,
         'scale-2-size'     : 1.25,
         'scale-3-size'     : 1.4,
         'stage-background' : color('greyscale', 'grey-3')
-	), $custom);
+    ), $custom);
 
-	//-------------------------------------------------------------
-	// Module
-	//-------------------------------------------------------------
+    //-------------------------------------------------------------
+    // Module
+    //-------------------------------------------------------------
 
-	@include module {
+    @include module {
 
-	// Core Styles
-	//-------------------------------------------------------------
+    // Core Styles
+    //-------------------------------------------------------------
 
-		position: relative;
+        position: relative;
 
-	// Modifiers
-	//-------------------------------------------------------------
+    // Modifiers
+    //-------------------------------------------------------------
 
-	    @include modifier('scale') {
-	        margin-top: base('margin');
-	        @include modifier(1) {
-	            .center {
-	                transform: scale(this('scale-1-size'));
-	            }            
-	        }
-	        @include modifier(2) {
-	            .center {
-	                transform: scale(this('scale-2-size'));
-	            }      
-				.owl-stage-outer {
-					padding-bottom: 3em;
-				}      
-	        }
-	        @include modifier(3) {
-	            .center {
-	                transform: scale(this('scale-3-size'));
-	            }            
-	        }
-			.owl-stage-outer {
-				overflow: visible;
-			}
-	        .owl-item {
-	            z-index: 0;
-				transition: base('transition');
-	            &:hover {
-	                cursor: pointer;
-	            }
-	        }
-	        .center {
-	            z-index: 2;
-	        } 
-	    }
-		
-		@include modifier('stageBg') {
-			.owl-stage-outer {
-				background: this('stage-background');
-			}
-		}
+        @include modifier('scale') {
+            margin-top: base('margin');
+            @include modifier(1) {
+                .center {
+                    transform: scale(this('scale-1-size'));
+                }            
+            }
+            @include modifier(2) {
+                .center {
+                    transform: scale(this('scale-2-size'));
+                }      
+                .owl-stage-outer {
+                    padding-bottom: 3em;
+                }      
+            }
+            @include modifier(3) {
+                .center {
+                    transform: scale(this('scale-3-size'));
+                }            
+            }
+            .owl-stage-outer {
+                overflow: visible;
+            }
+            .owl-item {
+                z-index: 0;
+                transition: base('transition');
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+            .center {
+                z-index: 2;
+            } 
+        }
+        
+        @include modifier('stageBg') {
+            .owl-stage-outer {
+                background: this('stage-background');
+            }
+        }
         
         @include modifier('cornerDots') {
             .owl-dots {
@@ -121,113 +121,119 @@
                 }
             }
         }
-	
-	} // module
 
-	// Carousel Tools
-	//-------------------------------------------------------------
-	
-	.slide-nav {
-	
-		.slide-prev,
-		.slide-next {
-			z-index: 5;
-			@include vertical-center(absolute);
-			&:focus {
-				outline: none;
-			}
+    } // module
+
+    // Carousel Tools
+    //-------------------------------------------------------------
+
+    .slide-nav {
+
+        .slide-prev,
+        .slide-next {
+            z-index: 5;
+            @include vertical-center(absolute);
+            &:focus {
+                outline: none;
+            }
             @at-root #{selector-replace(&, '.slide-nav', '.full-nav')} {
                 @media (max-width: breakpoint('break-4')) {
                     top: auto;
                     bottom: 9.7rem;
                 }
             }
-		}
-	
-		.slide-prev {
-            left: 0;
-            @media (min-width: breakpoint('break-2')) {
-			     left: 2rem;
+        }
+
+        .slide-prev {
+            left: 2rem;
+            [class*="container"] & {
+                left: 0;
             }
-		}
-	
-		.slide-next {
-			right: 0;
             @media (min-width: breakpoint('break-2')) {
-			     right: 2rem;
+                left: 2rem;
             }
-		}
-	
-		&.twin-nav {
-			display: inline-block;
-			position: absolute;
-			z-index: 3;
-			transform: translateY(-50%) translateX(-50%);
-			background: color('brand', 'primary');
-			padding: 0.5em;
-			[class*="slide-"] {
-				position: relative;
-				left: auto;
-				right: auto;
-				transform: none;
-				margin-left: 0.25em;
-				&:first-child {
-					margin-left: 0;
-				}
-			}
-			&.strikethrough {
-				&:before {
-					content: "";
-					width: 9999px;
-					left: -4999px;
-					height: 10px;
-					background-color: color('brand', 'primary');
-					@include vertical-center(absolute);
-				}   
-			}
-		}
-	
-	} // .slide-nav
-	
-	// Custom Owl-Carousel styles
-	//-------------------------------------------------------------
-    
+        }
+
+        .slide-next {
+            right: 2rem;
+            [class*="container"] & {
+                right: 0;
+            }
+            @media (min-width: breakpoint('break-2')) {
+                right: 2rem;
+            }
+        }
+
+        &.twin-nav {
+            display: inline-block;
+            position: absolute;
+            z-index: 3;
+            transform: translateY(-50%) translateX(-50%);
+            background: color('brand', 'primary');
+            padding: 0.5em;
+            [class*="slide-"] {
+                position: relative;
+                left: auto;
+                right: auto;
+                transform: none;
+                margin-left: 0.25em;
+                &:first-child {
+                    margin-left: 0;
+                }
+            }
+            &.strikethrough {
+                &:before {
+                    content: "";
+                    width: 9999px;
+                    left: -4999px;
+                    height: 10px;
+                    background-color: color('brand', 'primary');
+                    @include vertical-center(absolute);
+                }   
+            }
+        }
+
+    } // .slide-nav
+
+    // Custom Owl-Carousel styles
+    //-------------------------------------------------------------
+
     .owl-prev, .owl-next {
         transition: base('transition');
     }
             
-	.owl-dots {
-		text-align: center;
-		margin-top: 1em;
-		.force-dots & {
-			position: static;
-		}
+    .owl-dots {
+        text-align: center;
+        margin-top: 1em;
+        .force-dots & {
+            position: static;
+        }
         .owl-full > & {
             margin-top: 4em;
         }
-	}
-	
-	.owl-dot {
-		cursor: pointer;
-		cursor: hand;
-		user-select: none;
-		display: inline-block;
-		&:not(:first-child) {
-			margin-left: 0.5em;
-		}
-		&.active {
-			span {
-				background: grey;
-			}
-		}
-		span {
-			display: block;
-			transition: base('transition');
-			border-radius: 50%;
-			height: 10px;
-			width: 10px;
-			background: rgba(black, 0.4);
-		}
-	}
-	
+    }
+
+    .owl-dot {
+        cursor: pointer;
+        cursor: hand;
+        user-select: none;
+        display: inline-block;
+        &:not(:first-child) {
+            margin-left: 0.5em;
+        }
+        &.active {
+            span {
+                background: grey;
+            }
+        }
+        span {
+            display: block;
+            transition: base('transition');
+            border-radius: 50%;
+            height: 10px;
+            width: 10px;
+            background: rgba(black, 0.4);
+        }
+    }
+
 } // @mixin carousels

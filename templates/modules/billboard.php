@@ -38,7 +38,7 @@
         <section class="billboard-overlay<?php echo '-'.$options['modifiers'] ?>" data-stellar-background-ratio="0.5">
             <div class="billboard_wrapper container">
                 <header class="heading_group<?php if($options['countdown']) echo '-small' ?>">
-                    <h2 class="heading-uppercase-light-strikethrough-spaced-size-4"><span><?php echo $options['headline'] ?></span></h2>
+                    <h2 class="heading-uppercase-light-strikethrough-spaced-size-4-responsive"><span><?php echo $options['headline'] ?></span></h2>
                     <h3 class="heading-uppercase-heavy-size-8 font-2"><?php echo $options['title'] ?></h3>
                     <?php if ($options['tag-line']) { ?>
                         <h4 class="heading-size-2-light"><i><?php echo $options['tag-line'] ?></i></h4>

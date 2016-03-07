@@ -67,9 +67,15 @@
                 width: 100%;
                 text-align: left;
             }
+            @media (max-width: this('bar-responsive')) {		
+                text-align: center;
+            }
         }
         
         @include component('copyright') {
+            @media (max-width: this('bar-responsive')) {		
+                margin-bottom: base('margin');
+            }
             h4 {
                 font-weight: lighter;
             }

@@ -215,8 +215,11 @@
 		@include component('block') {
 			position: relative;
 			transition: base('transition');
-			padding: this('block-padding');
+			padding: 5em this('block-padding');
 			background-size: cover;
+            @media (min-width: breakpoint('break-2')) {
+			 padding: this('block-padding');
+            }
 			@include modifier('opaque') {
 				background: rgba(white, 0.95);
 			}
