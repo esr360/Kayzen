@@ -27,6 +27,7 @@ $theme : 'Kayzen';
 @import "vendor/Owl-Carousel/src/scss/owl.lazyload";
 @import "vendor/Owl-Carousel/src/scss/owl.video";
 @import "vendor/Font-Awesome/scss/font-awesome";
+@import "vendor/Aloads/scss/preloaders";
 @import "vendor/Modular/src/scss/modular";
 @import "vendor/SassyJSON/src/SassyJSON";
 
@@ -87,6 +88,7 @@ $theme : 'Kayzen';
 @import "modules/objects/navigation/navigation";
 @import "modules/objects/dropdown/dropdown";
 @import "modules/objects/page-overview/page-overview";
+@import "modules/objects/preloader/preloader";
 @import "modules/objects/scroll-wheel/scroll-wheel";
 @import "modules/objects/scroll-top/scroll-top";
 @import "modules/objects/search/search";

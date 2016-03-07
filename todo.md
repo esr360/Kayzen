@@ -2,9 +2,7 @@
 #============================================================
 
 - contact form (don't forget to document)
-- update all empty # links
 - add loading spinner
-- full responsive audit
 - add themes and associated imagery
 
 # Done
@@ -22,6 +20,8 @@
 - html5 form validation javascript
 - topbar dropdown
 - add cheatsheet page
+- update all empty # links
+- full responsive audit
 
 # Next Release
 #============================================================

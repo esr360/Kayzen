@@ -118,6 +118,7 @@
                 <p>Both the default provided <code>app.js</code> and <code>app.css</code> contain code from several third party libraries and plugins. The files for these libraries and plugins reside in the <b>assets/vendor</b> folder, and include the following:</p>        
                 
                 <ul class="list-clear">
+                    <li><a target="_blank" href="https://github.com/awedoo/aloads">Aloads</a></li>
                     <li><a target="_blank" href="https://github.com/AndiDittrich/EnlighterJS">Englighter</a></li>
                     <li><a target="_blank" href="https://github.com/FortAwesome/Font-Awesome">Font-Awesome</a></li>
                     <li><a target="_blank" href="https://github.com/webcreate/infinite-ajax-scroll">Infinite-AJAX-Scroll</a></li>
@@ -403,7 +404,7 @@ brew install GraphicsMagick
             
 				<h2 class="heading-light-size-6" id="build">Build</h2>
 				
-				<p>Once you have configured all of your modules, you're ready to sart building your pages. Kayzen comes with numerous templates ready-made for you to use for your pages, you can <a href="#">view them here</a>. New templates are added all the time, so be sure to regularly check for updates.</p>
+				<p>Once you have configured all of your modules, you're ready to sart building your pages. Kayzen comes with numerous templates ready-made for you to use for your pages, you can <a href="<?php pageLink('templates.php') ?>">view them here</a>. New templates are added all the time, so be sure to regularly check for updates.</p>
                 
                 <h3 class="heading-size-5" id="build-HTML-templates">HTML Templates</h3>
                 

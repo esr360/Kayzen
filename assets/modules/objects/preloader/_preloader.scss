@@ -1,0 +1,51 @@
+/******************************************************************
+ * Kayzen
+ * https://github.com/esr360/Kayzen
+ * Sass module styleguide
+ *****************************************************************/
+
+@mixin preloader($custom: ()) {
+
+    //-------------------------------------------------------------
+    // Configuration
+    //-------------------------------------------------------------
+
+    $foo: config((
+        'name'        : 'preloader',
+        'output-JSON' : true,
+        'background'  : color('greyscale', 'grey-1'),
+        'z-index'     : 99,
+        'transition'  : base('transition')
+    ), $custom);
+
+    //-------------------------------------------------------------
+    // Module
+    //-------------------------------------------------------------
+
+    @include module {
+
+        //---------------------------------------------------------
+        // Core Styles
+        //---------------------------------------------------------
+        
+        background: this('background');
+        z-index: this('z-index');
+        transition: this('transition');
+        transform: scale(1);
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        
+        //---------------------------------------------------------
+        // Modifiers
+        //---------------------------------------------------------
+
+        @include modifier('loaded') {
+            transform: scale(0);
+        }
+        
+    } // module
+
+} // @mixin foo

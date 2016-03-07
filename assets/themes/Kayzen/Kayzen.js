@@ -70,6 +70,8 @@ $(document).ready(function() {
     
     $('#page-overview').pageOverview();
     
+    $(_preloader).preloader();
+    
     $(_scrollTop).scrollToTop();
     
     $('#search-trigger').searchBox();

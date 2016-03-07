@@ -126,6 +126,9 @@ module.exports = function(grunt) {
             },
             normalizeSupportFor: {
                 src: 'assets/vendor/normalize-scss/sass/_support-for.scss'
+            },
+            preloaders: {
+                src: 'assets/vendor/Aloads/scss'
             }
         },
       
@@ -199,6 +202,12 @@ module.exports = function(grunt) {
                 files: [{
                     src: 'assets/vendor/support-for/sass/_support-for.scss',
                     dest: 'assets/vendor/normalize-scss/sass/_support-for.scss'
+                }]
+            },
+            preloaders: {
+                files: [{
+                    src: 'assets/vendor/Aloads/css/preloaders.css',
+                    dest: 'assets/vendor/Aloads/scss/_preloaders.scss'
                 }]
             }
         },
@@ -325,10 +334,12 @@ module.exports = function(grunt) {
                 ],
                 tasks: [
                     'copy:normalizeSupportFor', 
+                    'copy:preloaders', 
                     'sass:dev', 
                     'postcss', 
-                    'notify:css', 
-                    'clean:normalizeSupportFor'
+                    'clean:normalizeSupportFor',
+                    'clean:preloaders',
+                    'notify:css'
                 ],
                 options: {
                     spawn: false,
@@ -593,6 +604,7 @@ module.exports = function(grunt) {
             'sass:' + environment,
             'postcss',
             'clean:normalizeSupportFor',
+            'clean:preloaders',
             'responsive_images'
         ];
         if (environment == 'prod') {
