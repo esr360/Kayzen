@@ -15,7 +15,8 @@
         'output-JSON' : true,
         'background'  : color('greyscale', 'grey-1'),
         'z-index'     : 99,
-        'transition'  : base('transition')
+        'transition'  : base('transition'),
+        'visible-at'  : breakpoint('break-2')
     ), $custom);
 
     //-------------------------------------------------------------
@@ -37,6 +38,23 @@
         left: 0;
         height: 100%;
         width: 100%;
+        
+        @media (max-width: this('visible-at')) {
+            display: none;
+        }
+        
+        //---------------------------------------------------------
+        // Component
+        //---------------------------------------------------------
+
+        @include component('close') {
+            position: absolute;
+            left: 0;
+            right: 0;
+            text-align: center;
+            margin: auto;
+            bottom: 4rem;
+        }
         
         //---------------------------------------------------------
         // Modifiers

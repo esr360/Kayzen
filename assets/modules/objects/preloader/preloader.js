@@ -1,9 +1,3 @@
-/******************************************************************
- * Kayzen
- * https://github.com/esr360/Kayzen
- * JavaScript module styleguide
- *****************************************************************/
- 
 (function ($) {
     
     /**
@@ -15,18 +9,31 @@
     $.fn.preloader = function(custom) {
         
         // Options
-        var options = $.extend({}, custom);
+        var options = $.extend({
+            closeSelector : '.preloader_close',
+            disableButton : true
+        }, custom);
             
         var preloader = $(this);
         
-        $(window).bind("load", function() {
+        function hidePreloader() {
             preloader.addClass('preloader-loaded');
             setTimeout(function() {
                 preloader.hide();
             }, baseTransition);
+        }
+        
+        $(window).bind("load", function() {
+            hidePreloader();
         });
         
-        console.log('test');
+        if (options.disableButton) {
+            $(options.closeSelector).click(function() {
+                hidePreloader();
+            });
+        } else {
+            $(options.closeSelector).hide();
+        }
  
     }; // preloader()
  

@@ -1,13 +1,16 @@
 <?php function preloader($style = 'clock') { ?>
 
     <!-- Preloader -->
-    <?php if ($style == 'clock') { ?>
         <div class="preloader">
-            <div class="awd_clock">
-                <div></div>
-                <div></div>
+            <div class="preloader_close">
+                <div class="button-round-border-size-2-thin-grey-3">Disable Preloader</div>
             </div>
+            <?php if ($style == 'clock') { ?>
+                <div class="awd_clock">
+                    <div></div>
+                    <div></div>
+                </div>
+            <?php } ?>
         </div>
-    <?php } ?>
     
 <?php } ?>
