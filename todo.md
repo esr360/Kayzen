@@ -2,7 +2,6 @@
 #============================================================
 
 - contact form (don't forget to document)
-- add loading spinner
 - add themes and associated imagery
 
 # Done
@@ -22,6 +21,7 @@
 - add cheatsheet page
 - update all empty # links
 - full responsive audit
+- add loading spinner
 
 # Next Release
 #============================================================

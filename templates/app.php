@@ -9,7 +9,7 @@
  *
  * Values: 'dev' | 'prod'
  */
-define('env', 'dev');
+define('env', 'prod');
 
 /**
  * Set which theme to use
@@ -26,15 +26,15 @@ define('theme', 'Kayzen');
  * Set to 'true' if your theme's assets are inside their own
  * directory e.g. app/themes/Kayzen
  */
-define('themes', false);
+define('themes', true);
 
 /**
  * Set how you intend to access your project's assets
- * @const host
+ * @const path
  *
- * Values: 'static' | 'server' | 'explorer' | 'finder' 
+ * Values: 'root' | 'relative' | 'real' 
  */
-define('host', 'server');
+define('path', 'relative');
 
 /**
  * Set which realm you would like
@@ -48,7 +48,7 @@ define('realm', 'demo');
  * Set the relative path to Kayzen if it is not in the root
  * @const projectPath
  */
-define('projectPath', '/../'.theme);
+define('projectPath', '/Kayzen');
 
 /**
  * Set the root php/template directory
@@ -61,11 +61,11 @@ define('ROOT', dirname(__FILE__));
 /**
  * Set the path to the app directory
  */
- if (host == 'server') {
+ if (path == 'root') {
     define('appDir', '/app');
-} else if (host == 'static') {
+} else if (path == 'relative') {
     define('appDir', projectPath.'/app');
-} else if (host == 'explorer' || host == 'finder') {
+} else if (path == 'real') {
     define('appDir', realpath(__DIR__ . '/../app'));
 }
 

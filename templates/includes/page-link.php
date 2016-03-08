@@ -12,15 +12,15 @@
         $directory = $directory.'/';
     }
    
-    if (host == 'server') {
+    if (path == 'root') {
         $pageTree = '/templates/pages/';
-    } else if (host == 'static') {
+    } else if (path == 'relative') {
         $pageTree = '/..'.projectPath.'/pages/';
-    } else if (host == 'explorer' || host == 'finder') {
+    } else if (path == 'real') {
         $pageTree = realpath(__DIR__.'/pages/');
     }
     
-    if (host == 'static' && $extension == 'php') {
+    if (path == 'relative' && $extension == 'php') {
         $extension = '.html';
     } else {
         $extension = '.'.$extension;

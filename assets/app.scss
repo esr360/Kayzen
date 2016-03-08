@@ -6,7 +6,7 @@ Made by @esr360
 ******************************************************************/
 
 // Asset Path
-$asset-path : "../../app";
+$asset-path : "../../..";
 
 // Output configuration data to JSON
 $to-JSON : true;
@@ -18,6 +18,8 @@ $theme : 'Kayzen';
 // Vendor Files
 //-----------------------------------------------------------------
 
+$fa-font-path: "#{$asset-path}/fonts";
+    
 @import "vendor/normalize-scss/sass/normalize";
 @import "vendor/Kayzen-GS/src/kayzen-gs";
 @import "vendor/Magnific-Popup/src/css/main.scss";

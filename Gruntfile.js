@@ -19,11 +19,11 @@ module.exports = function(grunt) {
     // 'dev' | 'prod' - used to determine asset minification
     var env = grunt.option('env') || 'dev';
     
-    // 'server' | 'static' | 'explorer' | 'finder' - used to determine asset paths
-    var host = grunt.option('host') || 'server';
+    // 'root' | 'relative' | 'real' - used to determine asset paths
+    var path = grunt.option('path') || 'root';
     
     // Set to store assets in individual theme directories
-    var themes = grunt.option('themes') || false;
+    var themes = grunt.option('themes') || true;
     
     //-------------------------------------------------------------
     
@@ -113,10 +113,10 @@ module.exports = function(grunt) {
                 src: 'app'
             },
             scripts: [
-                'app/scripts/**/*.js', '!app/scripts/**/*.min.js'
+                'app/**/*.js', '!app/**/*.min.js'
             ],
             styles: [
-                'app/styles/**/*.css', '!app/styles/**/*.min.css'
+                'app/**/*.css', '!app/**/*.min.css'
             ],
             images: {
                 src: 'app/images'
@@ -226,6 +226,15 @@ module.exports = function(grunt) {
             app: {
                 files: [{ 
                     src: 'app/scripts/*.js',
+                    dest: buildScripts,
+                    expand: true,
+                    flatten: true,
+                    ext: '.min.js'
+                }]
+            },
+            themes: {
+                files: [{ 
+                    src: 'app/themes/**/*.js',
                     dest: themeBuildScripts,
                     expand: true,
                     flatten: true,
@@ -387,9 +396,9 @@ module.exports = function(grunt) {
                 showProgress: true
             },
             app: {
-                cwd: 'app/images/demo',
+                cwd: 'app/images',
                 src: '**/*.{jpg,png}',
-                dest: 'app/images/demo',
+                dest: 'app/images',
                 expand: true
             }
         },
@@ -459,14 +468,14 @@ module.exports = function(grunt) {
                 value       : 'prod',
                 file        : 'templates/app.php'
             },
-            host: {
-                constant    : 'host',
-                value       : host,
+            path: {
+                constant    : 'path',
+                value       : path,
                 file        : 'templates/app.php'
             },
-            static: {
-                constant    : 'host',
-                value       : 'static',
+            relative: {
+                constant    : 'path',
+                value       : 'relative',
                 file        : 'templates/app.php'
             },
             realm: {
@@ -598,8 +607,11 @@ module.exports = function(grunt) {
     var gruntCompile = function(environment) {
         var assetTasks = [
             'clean:app',
+            'copy:normalizeSupportFor', 
+            'copy:preloaders', 
             'replace:sassTheme',
-            'copy',
+            'copy:app',
+            'copy:images',
             'concat',
             'sass:' + environment,
             'postcss',
@@ -619,7 +631,7 @@ module.exports = function(grunt) {
             'setPHPConstant:' + environment,
             'setPHPConstant:theme',
             'setPHPConstant:themes',
-            'setPHPConstant:host',
+            'setPHPConstant:path',
             'setPHPConstant:realm'
         ];
         var notify = [
@@ -643,7 +655,7 @@ module.exports = function(grunt) {
     // Generate HTML templates
     grunt.registerTask('templates', [
         'clean:pages',
-        'setPHPConstant:host',
+        'setPHPConstant:path',
         'php2html',
         'compile'
     ]);
