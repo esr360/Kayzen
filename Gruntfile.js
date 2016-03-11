@@ -297,13 +297,22 @@ module.exports = function(grunt) {
         
         cssmin: {
             target: {
-                files: [{
-                    expand: true,
-                    cwd: themeBuildStyles,
-                    src: ['*.css', '!*.min.css'],
-                    dest: themeBuildStyles,
-                    ext: '.min.css'
-                }]
+                files: [
+                    {
+                        expand: true,
+                        cwd: themeBuildStyles,
+                        src: ['*.css', '!*.min.css'],
+                        dest: themeBuildStyles,
+                        ext: '.min.css'
+                    },
+                    {
+                        expand: true,
+                        cwd: buildStyles,
+                        src: ['*.css', '!*.min.css'],
+                        dest: buildStyles,
+                        ext: '.min.css'
+                    }
+                ]
             }
         },
   

@@ -9,7 +9,7 @@
  *
  * Values: 'dev' | 'prod'
  */
-define('env', 'prod');
+define('env', 'dev');
 
 /**
  * Set which theme to use
@@ -17,7 +17,7 @@ define('env', 'prod');
  *
  * You can view list of available themes in 'assets/themes'
  */
-define('theme', 'Kayzen');
+define('theme', 'Nexus');
 
 /**
  * Are you using multiple themes?
@@ -34,7 +34,7 @@ define('themes', true);
  *
  * Values: 'root' | 'relative' | 'real' 
  */
-define('path', 'relative');
+define('path', 'root');
 
 /**
  * Set which realm you would like

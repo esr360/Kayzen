@@ -22,7 +22,7 @@
             
             // Get an array of all element heights
             var elementHeights = $(child).map(function() {
-                return $(this).height();
+                return $(this).outerHeight();
             }).get();
 
             // Math.max takes a variable number of arguments
@@ -30,7 +30,7 @@
             var maxHeight = Math.max.apply(null, elementHeights);
 
             // Set each height to the max height
-            $(child).height(maxHeight);
+            $(child).outerHeight(maxHeight);
                             
         }); // this.each  
  

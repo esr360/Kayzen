@@ -12,7 +12,7 @@ $asset-path : "../../..";
 $to-JSON : true;
 
 // Theme
-$theme : 'Kayzen';
+$theme : 'Nexus';
 
 //-----------------------------------------------------------------
 // Vendor Files
@@ -106,6 +106,7 @@ $fa-font-path: "#{$asset-path}/fonts";
 
 @import "themes/default/default";
 @import "themes/Kayzen/kayzen";
+@import "themes/Nexus/Nexus";
 
 // Output all configuration data to JSON only if setting exists and 
 // setting is "true"

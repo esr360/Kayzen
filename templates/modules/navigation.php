@@ -495,7 +495,7 @@
 						
 					</div>
 					
-					<p>More... <small>(<a href="<?php pageLink('modules.php#kayzenElements') ?>" class="link">View All</a>)</small></p>
+					<p>More... <small>(<a href="<?php pageLink('modules.php') ?>#kayzenElements" class="link">View All</a>)</small></p>
 					
 					<div class="row">
 						<div class="span-4">
@@ -580,7 +580,7 @@
 						</a>
 						
 						<div class="span-6 text-left">					
-							<p>More... <small>(<a href="<?php pageLink('modules.php#kayzenObjects') ?>" class="link">View All</a>)</small></p>
+							<p>More... <small>(<a href="<?php pageLink('modules.php') ?>#kayzenObjects" class="link">View All</a>)</small></p>
 							<div class="row">
 								<div class="span-6">
 									<ul class="list-arrow">
@@ -607,21 +607,21 @@
 		<li>
 			<a href="<?php pageLink('features.php') ?>"><i class="navigation_icon fa fa-star"></i> Features</a>
 			<ul>
-				<li><a href="<?php pageLink('features.php#modular-ui') ?>">100% Modular UI</a></li>
-				<li><a href="<?php pageLink('features.php#page-builder') ?>">Drag & Drop Page Builder</a></li>
-				<li><a href="<?php pageLink('features.php#unique-configuration') ?>">Unique Configuration</a></li>
-				<li><a href="<?php pageLink('features.php#custom-grid-system') ?>">Custom Grid System</a></li>
-				<li><a href="<?php pageLink('features.php#intelligent-theming') ?>">Intelligent Theming</a></li>
-				<li><a href="<?php pageLink('features.php#mobile-optimized') ?>">Mobile Optimized</a></li>
+				<li><a href="<?php pageLink('features.php') ?>#modular-ui">100% Modular UI</a></li>
+				<li><a href="<?php pageLink('features.php') ?>#page-builder">Drag & Drop Page Builder</a></li>
+				<li><a href="<?php pageLink('features.php') ?>#unique-configuration">Unique Configuration</a></li>
+				<li><a href="<?php pageLink('features.php') ?>#custom-grid-system">Custom Grid System</a></li>
+				<li><a href="<?php pageLink('features.php') ?>#intelligent-theming">Intelligent Theming</a></li>
+				<li><a href="<?php pageLink('features.php') ?>#mobile-optimized">Mobile Optimized</a></li>
 			</ul>
 		</li>
 		<li>
 			<a href="<?php pageLink('documentation.php') ?>"><i class="navigation_icon fa fa-files-o"></i> Documentation</a>
 			<ul>
-				<li><a href="<?php pageLink('documentation.php#getting-started') ?>">Getting Started</a></li>
-				<li><a href="<?php pageLink('documentation.php#configure') ?>">Configure</a></li>
-				<li><a href="<?php pageLink('documentation.php#build') ?>">Build</a></li>
-				<li><a href="<?php pageLink('documentation.php#deploy') ?>">Deploy</a></li>
+				<li><a href="<?php pageLink('documentation.php') ?>#getting-started">Getting Started</a></li>
+				<li><a href="<?php pageLink('documentation.php') ?>#configure">Configure</a></li>
+				<li><a href="<?php pageLink('documentation.php') ?>#build">Build</a></li>
+				<li><a href="<?php pageLink('documentation.php') ?>#deploy">Deploy</a></li>
 			</ul>
 		</li>
 	</ul>

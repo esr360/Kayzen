@@ -12,9 +12,7 @@
         
         // Options
         var options = $.extend({
-            
             targetClass : 'active'
-            
         }, custom);
             
         // Run the code on each occurance of the element
