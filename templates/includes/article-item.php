@@ -78,7 +78,7 @@
             <div class="corner-ribbon-<?php echo $options['ribbon'][0] ?>" data-ribbon="<?php echo $options['ribbon'][1] ?>"></div>
         <?php } ?>
         
-        <? // Standard Image Article ?>
+        <?php // Standard Image Article ?>
         <?php if ($options['media'] === 'image') { ?>
         
             <div class="thumbnail">
@@ -113,7 +113,7 @@
                 <?php } ?>
             </div>
             
-        <? // Vimeo Article ?>
+        <?php // Vimeo Article ?>
         <?php } else if ($options['media'] === 'vimeo') { ?>
         
             <div
@@ -125,7 +125,7 @@
                 </div>
             </div>
             
-        <? // Youtube Article ?>
+        <?php // Youtube Article ?>
         <?php } else if ($options['media'] === 'youtube') { ?>
         
             <div 
@@ -136,7 +136,7 @@
                 </div>
             </div>
             
-        <? // Carousel Article ?>
+        <?php // Carousel Article ?>
         <?php } else if ($options['media'] === 'carousel') { ?>
         
             <div class="article-thumbnails-carousel carousel-cornerDots-revealNav owl-carousel">
@@ -205,7 +205,7 @@
                 </div>
             </div>
         
-        <? // Audio Article ?>
+        <?php // Audio Article ?>
         <?php } else if ($options['media'] === 'audio') { ?>
         
             <iframe 
@@ -220,7 +220,7 @@
                 <?php } ?>
             ></iframe>
             
-        <? // Codepen Article ?>
+        <?php // Codepen Article ?>
         <?php } else if ($options['media'] === 'codepen') { ?>
         
             <div class="object">
@@ -230,7 +230,7 @@
         
         <?php } ?>
         
-        <? // Article Title (Portfolio) ?>
+        <?php // Article Title (Portfolio) ?>
         <?php if ($options['type'] === 'portfolio' && !$options['matrix'] && !empty($options['span'])) { ?>
         
             <div class="widget_content text-center">
@@ -244,7 +244,7 @@
         
         <?php if ($isArticle) { ?>
         
-            <? // Article Title (Blog) ?>
+            <?php // Article Title (Blog) ?>
             <header class="heading_group">
                 <div class="heading_date">
                     <div><?php echo $options['date'][0] ?></div>
@@ -263,7 +263,7 @@
                 <?php } ?>
             </header>
         
-            <? // Article Blurb ?>
+            <?php // Article Blurb ?>
             <?php if ($options['size'] === 'small') { ?>
                 <p class="blurb">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis blandit lectus ex, id feugiat felis consequat id. Nunc vel quam luctus, maximus justo eget...</p>
             <?php } else { ?>
@@ -272,7 +272,7 @@
                 
         <?php } ?>
         
-        <? // Article Meta ?>
+        <?php // Article Meta ?>
         <?php if ($isArticle) { ?>
             <small>
                 <div class="row-block">
@@ -301,7 +301,7 @@
             </small>
         <?php } ?>
         
-        <? // Shop Product ?>
+        <?php // Shop Product ?>
         <?php if ($options['type'] == 'shop') { ?>
         
             <header class="heading_group-small">
