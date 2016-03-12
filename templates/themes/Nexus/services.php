@@ -42,8 +42,10 @@
             pricing();
             
             testimonials();
-            
-            recentWork();
+    
+            recentWork(array(
+                'item-link' => themeLink('/portfolio-single.php')
+            ));
             
             promoBanner(array(
                 'cta-modifiers' => '-oval'

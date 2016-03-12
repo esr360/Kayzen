@@ -1,7 +1,8 @@
  <?php function recentArticles($custom = array()) { ?>
 
     <?php $options = array_merge(array(
-        'item-link' => pageLink('blog/single.php', 'pages', false)
+        'item-link' => pageLink('blog/single.php', 'pages', false),
+        'item-root' => pageLink('blog.php', 'pages', false)
     ), $custom); ?>
 
     <section class="section-primary">
@@ -43,7 +44,7 @@
                             <div>23</div>
                         </div>
                         <h3 class="heading-heavy-size-5">Kayzen is Released</h3>
-                        <h4 class="heading-light-size-3">Posted by <a href="#">Naomi Olson</a></h4>
+                        <h4 class="heading-light-size-3">Posted by <a href="<?php echo $options['item-root'] ?>">Naomi Olson</a></h4>
                     </header>
                     <p>Cum socis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec finibus fringilla purus. Integer libero justo, mattis et magna eget...</p>
                     <div class="row stack-0">
@@ -51,7 +52,7 @@
                             <a href="<?php echo $options['item-link'] ?>" class="button-oval-primary">Read More</a>
                         </div>
                         <div class="span-6 va-middle text-right">
-                            <small>Posted in <a href="blog.html">Web Design</a></small>
+                            <small>Posted in <a href="<?php echo $options['item-root'] ?>">Web Design</a></small>
                         </div>
                     </div>
                 </div>
@@ -79,7 +80,7 @@
                             <div>23</div>
                         </div>
                         <h3 class="heading-heavy-size-5">Kayzen is Released</h3>
-                        <h4 class="heading-light-size-3">Posted by <a href="#">Naomi Olson</a></h4>
+                        <h4 class="heading-light-size-3">Posted by <a href="<?php echo $options['item-root'] ?>">Naomi Olson</a></h4>
                     </header>
                     <p>Cum socis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec finibus fringilla purus. Integer libero justo, mattis et magna eget...</p>
                     <div class="row stack-0">
@@ -87,7 +88,7 @@
                             <a href="<?php echo $options['item-link'] ?>" class="button-oval-primary">Read More</a>
                         </div>
                         <div class="span-6 va-middle text-right">
-                            <small>Posted in <a href="blog.html">Web Design</a></small>
+                            <small>Posted in <a href="<?php echo $options['item-root'] ?>">Web Design</a></small>
                         </div>
                     </div>
                 </div>
@@ -115,7 +116,7 @@
                             <div>23</div>
                         </div>
                         <h3 class="heading-heavy-size-5">Kayzen is Released</h3>
-                        <h4 class="heading-light-size-3">Posted by <a href="#">Naomi Olson</a></h4>
+                        <h4 class="heading-light-size-3">Posted by <a href="<?php echo $options['item-root'] ?>">Naomi Olson</a></h4>
                     </header>
                     <p>Cum socis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec finibus fringilla purus. Integer libero justo, mattis et magna eget...</p>
                     <div class="row stack-0">
@@ -123,7 +124,7 @@
                             <a href="<?php echo $options['item-link'] ?>" class="button-oval-primary">Read More</a>
                         </div>
                         <div class="span-6 va-middle text-right">
-                            <small>Posted in <a href="blog.html">Web Design</a></small>
+                            <small>Posted in <a href="<?php echo $options['item-root'] ?>">Web Design</a></small>
                         </div>
                     </div>
                 </div>

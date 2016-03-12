@@ -94,7 +94,8 @@
             testimonials();
             
             recentArticles(array(
-                'item-link' => themeLink('/blog-single.php')
+                'item-link' => themeLink('/blog-single.php'),
+                'item-root' => themeLink('/blog.php')
             ));
 		
             promoBanner(array(

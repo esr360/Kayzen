@@ -55,7 +55,9 @@
         
             statistics();
     
-            recentWork();
+            recentWork(array(
+                'item-link' => themeLink('/portfolio-single.php')
+            ));
             
             googleMap();
             
