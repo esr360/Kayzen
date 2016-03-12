@@ -203,7 +203,7 @@
         
         <section class="section-primary-flush-dot-map container"> 
                 
-		  <?php socialWidgets() ?>
+		    <?php socialWidgets() ?>
                 
         </section> 
 		
