@@ -4,35 +4,38 @@
     
         $options = array_merge(array(
             
-            'type'       => 'blog',
-            'media'      => 'image',
-            'link'       => pageLink('blog/single.php', 'pages', false),
-            'matrix'     => false,
-            'class'      => null,
-            'size'       => null,
-            'height'     => null,
-            'span'       => null,
-            'disabled'   => false,
-            'ribbon'     => null,
-            'thumb'      => rand(1, 7),
-            'thumbs'     => array(
+            'type'          => 'blog',
+            'media'         => 'image',
+            'link'          => pageLink('blog/single.php', 'pages', false),
+            'widget'        => true,
+            'matrix'        => false,
+            'class'         => null,
+            'size'          => null,
+            'height'        => null,
+            'span'          => null,
+            'disabled'      => false,
+            'ribbon'        => null,
+            'cta-modifiers' => null,
+            'author-thumb'  => false,
+            'thumb'         => rand(1, 7),
+            'thumbs'        => array(
                 rand(1, 7),
                 rand(1, 7),
                 rand(1, 7),
             ),
-            'maskTitle'  => true,
-            'title'      => 'Lorem ipsum dolor sit amet',
-            'date'       => array('Sep', 23),
-            'category'   => 'HTML Themes',
-            'categories' => array(
+            'maskTitle'     => true,
+            'title'         => 'Lorem ipsum dolor sit amet',
+            'date'          => array('Sep', 23),
+            'category'      => 'HTML Themes',
+            'categories'    => array(
                 'HTML-theme',
                 'photography',
                 'logo'
             ),
-            'videoSrc'   => 'https://player.vimeo.com/video/87701971',
-            'audioSrc'   => 'https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/205050090&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true',
-            'price'      => '$24.99',
-            'rating'     => '4'
+            'videoSrc'      => 'https://player.vimeo.com/video/87701971',
+            'audioSrc'      => 'https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/205050090&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true',
+            'price'         => '$24.99',
+            'rating'        => '4'
             
         ), $custom);
         
@@ -53,12 +56,16 @@
         /**
          * Generate main class
          */
-         
-        $class = 'widget';
-        if ($isArticle) {
-            $class = $class.'-article';
-        } else {
-            $class = $class.'-card';
+        
+        $class = '';
+        
+        if ($options['widget']) {
+            $class = 'widget';
+            if ($isArticle) {
+                $class = $class.'-article';
+            } else {
+                $class = $class.'-card';
+            }
         }
         if (!empty($options['span'])) {
             $class = $class.' span-'.$options['span'];
@@ -120,6 +127,11 @@
                     <img src="<?php stockImage('demo/small/hero-'.$options['thumb'].'.jpg') ?>">
                 <?php } ?>
             </div>
+            <?php if ($options['author-thumb']) { ?>
+                <div class="thumbnail-profile-round-badge">
+                    <img src="<?php stockImage('team/team-2.jpg') ?>" alt="">
+                </div>
+            <?php } ?>
             
         <?php // Vimeo Article ?>
         <?php } else if ($options['media'] === 'vimeo') { ?>
@@ -272,7 +284,7 @@
             </header>
         
             <?php // Article Blurb ?>
-            <?php if ($options['size'] === 'small') { ?>
+            <?php if (!empty($options['span'])) { ?>
                 <p class="blurb">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis blandit lectus ex, id feugiat felis consequat id. Nunc vel quam luctus, maximus justo eget...</p>
             <?php } else { ?>
                 <p class="blurb">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis blandit lectus ex, id feugiat felis consequat id. Nunc vel quam luctus, maximus justo eget, laoreet massa. Maecenas congue sit amet ex quis egestas. Aliquam sapien sapien, dignissim ut tellus in...</p>
@@ -282,31 +294,33 @@
         
         <?php // Article Meta ?>
         <?php if ($isArticle) { ?>
-            <small>
-                <div class="row-block">
-                    <div class="span va-middle">
-                        <ul class="list-reset-inline">
-                            <?php if ($options['type'] === 'blog') { ?>
-                                <li><i class="fa fa-user"></i> <a href="<?php pageLink('blog/classic/full-width.php')?>">John Doe</a></li>
-                            <?php } ?>
-                            <?php if (!$options['size'] == 'small') { ?>
-                                <li><i class="fa fa-comment-o"></i> <a href="<?php pageLink('blog/single.php#comments') ?>">3 Comments</a></li>
-                                <li>
-                                    <ul class="list-tags">
-                                        <li class="title">Tags:</li>
-                                        <li class="plain"><a href="<?php pageLink('blog/classic/full-width.php')?>">Web Design</a></li>
-                                        <li class="plain"><a href="<?php pageLink('blog/classic/full-width.php')?>">HTML</a></li>
-                                        <li class="plain"><a href="<?php pageLink('blog/classic/full-width.php')?>">CSS</a></li>
-                                    </ul>
-                                </li>
-                            <?php } ?>
-                        </ul>
-                    </div>
-                    <div class="span va-middle text-right">
-                        <a href="<?php pageLink('blog/single.php') ?>" class="button-primary">Read More</a>
-                    </div>
+            <div class="row-block">
+                <small class="span va-middle">
+                    <ul class="list-reset-inline">
+                        <?php if ($options['type'] === 'blog') { ?>
+                            <li><i class="fa fa-user"></i> <a href="<?php pageLink('blog/classic/full-width.php')?>">John Doe</a></li>
+                        <?php } if (empty($options['span'])) { ?>
+                            <li><i class="fa fa-comment-o"></i> <a href="<?php pageLink('blog/single.php') ?>#comments">3 Comments</a></li>
+                            <li>
+                                <ul class="list-tags">
+                                    <li class="title">Tags:</li>
+                                    <li class="plain"><a href="<?php pageLink('blog/classic/full-width.php')?>">Web Design</a></li>
+                                    <li class="plain"><a href="<?php pageLink('blog/classic/full-width.php')?>">HTML</a></li>
+                                    <li class="plain"><a href="<?php pageLink('blog/classic/full-width.php')?>">CSS</a></li>
+                                </ul>
+                            </li>
+                        <?php } ?>
+                    </ul>
+                </small>
+                <div class="span va-middle text-right">
+                    <a 
+                        href="<?php pageLink('blog/single.php') ?>" 
+                        class="button-primary<?php echo '-'.$options['cta-modifiers']; if ($options['size'] === 'small') echo '-size-2' ?>"
+                    >
+                        Read More
+                    </a>
                 </div>
-            </small>
+            </div>
         <?php } ?>
         
         <?php // Shop Product ?>

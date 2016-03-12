@@ -91,7 +91,9 @@ include (ROOT.'/modules/sidebar.php');
 include (ROOT.'/modules/top-bar.php');
 
 include (ROOT.'/sections/clients.php');
+include (ROOT.'/sections/comments.php');
 include (ROOT.'/sections/contact-us.php');
+include (ROOT.'/sections/demo-post.php');
 include (ROOT.'/sections/elements.php');
 include (ROOT.'/sections/feature-cards.php');
 include (ROOT.'/sections/feature-quote.php');

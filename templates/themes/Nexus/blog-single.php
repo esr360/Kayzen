@@ -45,48 +45,17 @@
                     <img src="<?php stockImage('demo/hero-'.rand(1, 7).'.jpg') ?>">
                 </div>
                 
-                <div class="post-content lede text-justify">
-                    
-                    <ul class="list-reset-inline-small text">
-                        <li><i class="fa fa-calendar"></i> 5th November 2015</li>
-                        <li><i class="fa fa-user"></i> <a href="#">John Doe</a></li>
-                        <li><i class="fa fa-folder-o"></i> <a href="#">HTML Themes</a></li>
-                        <li><i class="fa fa-comment-o"></i> <a href="#">3 Comments</a></li>
-                    </ul>
-                    
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. <a href="#">Inquit, dasne adolescenti veniam?</a> Ergo instituto veterum, quo etiam Stoici utuntur, hinc capiamus exordium. Quarum ambarum rerum cum medicinam pollicetur, luxuriae licentiam pollicetur. Duo Reges: constructio interrete. Docent enim nos, ut scis, dialectici, si ea quae rem aliquam sequantur, falsa sint.</p>
-        
-                    <p><q class="blockquote-pull-left-top"><span class="blockquote_content">An vero, inquit, quisquam potest probare, quod perceptfum quod.</span></q>Falsam illam ipsam esse, quam sequantur. Universa enim illorum ratione cum tota vestra confligendum puto. Perturbationes autem nulla naturae <strong>vi commoventur, omniaque ea sunt opiniones</strong> ac iudicia levitatis. <a href="#">Haec dicuntur inconstantissime.</a> Restinguet citius, si ardentem acceperit. Quae sequuntur igitur? Quicquid enim a sapientia proficiscitur, id continuo debet expletum esse omnibus suis partibus; Quod non subducta utilitatis ratione effici solet, sed ipsum a se oritur et sua sponte nascitur. Non enim solum Torquatus dixit quid sentiret, sed etiam cur. </p>
-        
-                    <p>Nullis enim partitionibus, nullis definitionibus utuntur ipsique dicunt ea se modo probare, quibus natura tacita adsentiatur. Quacumque enim ingredimur, in aliqua historia vestigium ponimus. Quae sunt igitur communia vobis cum antiquis, iis sic utamur quasi concessis. Immo alio genere. </p>
-        
-                    <p>Mihi vero, inquit, placet agi subtilius et, ut ipse dixisti, pressius. Idemne, quod iucunde? Qua ex cognitione facilior facta est investigatio rerum occultissimarum. Paria sunt igitur. <i>Graece donan, Latine voluptatem vocant.</i> <a href="#">Quod equidem non reprehendo;</a> <strong>Scrupulum, inquam, abeunti;</strong> Sed virtutem ipsam inchoavit, nihil amplius. Similiter sensus, cum accessit ad naturam, tuetur illam quidem, sed etiam se tuetur; </p>
-                    
-                    <blockquote class="blockquote">
-                        <p class="blockquote_content">An vero, inquit, quisquam potest probare, quod perceptfum, quod.</p>
-                    </blockquote>
-        
-                    <p>Quis non odit sordidos, vanos, leves, futtiles? Quid censes eos esse facturos, qui omnino virtutem a bonorum fine segregaverunt, Epicurum, Hieronymum, illos etiam, si qui Carneadeum finem tueri volunt? <strong>Virtutibus igitur rectissime</strong> mihi videris et ad consuetudinem nostrae orationis vitia posuisse contraria. Ita fit beatae vitae domina fortuna, quam Epicurus ait exiguam intervenire sapienti. <a href="#">Sed ego in hoc resisto;</a> Si longus, levis; Satisne vobis videor pro meo iure in vestris auribus commentatus? <a href="#">Satis est ad hoc responsum</a>. In qua si nihil est praeter rationem, sit in una virtute finis bonorum; Traditur, inquit, ab Epicuro ratio neglegendi doloris. </p>
-        
-                    <p>Modo etiam paulum ad dexteram de via declinavi, ut ad Pericli sepulcrum accederem. In motu et in statu corporis nihil inest, quod animadvertendum esse ipsa natura iudicet? <a href="#">Ita nemo beato beatior.</a> Mihi autem nihil tam perspicuum videtur, quam has sententias eorum philosophorum re inter se magis quam verbis dissidere; Quacumque enim ingredimur, in aliqua historia vestigium ponimus. Quae sunt igitur communia vobis cum antiquis, iis sic utamur quasi concessis; Quod non faceret, si in voluptate summum bonum poneret. Qua tu etiam inprudens utebare non numquam. </p>
-                    
-                    <ul class="list-tags">
-                        <li class="title">Tags:</li>
-                        <li class="plain"><a href="#">Theme</a></li>
-                        <li class="plain"><a href="#">HTML</a></li>
-                        <li class="plain"><a href="#">CSS</a></li>
-                        <li class="plain"><a href="#">JavaScript</a></li>
-                    </ul>
-                    
-                </div>
+                <?php demoPost() ?>
                 
                 <hr class="hrule-stripes-large" />
                 
 				<?php socialWidgets() ?>
                 
                 <div class="object-large">
-                    
-                    <h2 class="heading-size-6-light-strikethrough-dots text-center"><span>The Author</span></h2>
+                
+                    <div class="heading_group">
+                        <h2 class="heading-size-6-light-strikethrough-dots text-center"><span>The Author</span></h2>
+                    </div>
                     
                     <div class="row row-waffle">
                         <div class="span-2 text-center">
@@ -116,243 +85,42 @@
                 
                 </div>
                 
-                <div class="object-large">
-                            
-                    <h2 class="heading-size-6-light-strikethrough-dots text-center">
-                        <span><span class="heading-brand-1">3</span> Comments</span>
-                    </h2>
-                    
-                    <div class="comments object">
-                    
-                        <div class="comment object-small">
-                            <div class="row stack-0 object-small">
-                                <div class="span-2 va-middle text-center">
-                                    <div class="thumbnail-profile-round-xlarge-styled">
-                                        <img src="<?php stockImage('team/team-2.jpg') ?>" alt="">
-                                    </div>
-                                </div>
-                                <div class="span-10 va-middle">
-                                    <div class="well-comment">
-                                        <div class="row-block">
-                                            <div class="span">
-                                                <header class="heading_group-small">
-                                                    <h4 class="heading font-2">John Doe</h4>
-                                                </header>
-                                            </div>
-                                            <div class="span text-right">
-                                                <h4 class="heading-light-size-2"><b>Posted:</b> Today, 9:16pm</h4>
-                                            </div>
-                                        </div>
-                                        <div class="comment_content">
-                                            <p>Nunc pharetra et massa eu volutpat. Duis at posuere justo. Vivamus lobortis mi at leo pellentesque vehicula. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aliquam erat volutpat. Proin ac augue quam. Etiam sollicitudin magna vitae nunc accumsan cursus.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="button_group text-right">
-                                <a class="button-size-1-round"><i class="fa fa-reply"></i> Reply</a>
-                                <a class="button-size-1-round-invalid"><i class="fa fa-exclamation-triangle"></i> Report</a>
-                            </div>
-                        </div>
-                    
-                        <div class="comment object-small text-right">
-                            <div class="row object-small span-10 text-left stack-0">
-                                <div class="span-2 va-middle text-center">
-                                    <div class="thumbnail-profile-round-large-styled">
-                                        <img src="<?php stockImage('team/team-2.jpg') ?>" alt="">
-                                    </div>
-                                </div>
-                                <div class="span-10 va-middle">
-                                    <div class="well-comment">
-                                        <div class="row-block">
-                                            <div class="span">
-                                                <header class="heading_group-small">
-                                                    <h4 class="heading font-2">John Doe</h4>
-                                                </header>
-                                            </div>
-                                            <div class="span text-right">
-                                                <h4 class="heading-light-size-2"><b>Posted:</b> Today, 9:16pm</h4>
-                                            </div>
-                                        </div>
-                                        <div class="comment_content">
-                                            <p>Nunc pharetra et massa eu volutpat. Duis at posuere justo. Vivamus lobortis mi at leo pellentesque vehicula. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aliquam erat volutpat.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="button_group text-right">
-                                <a class="button-size-1-round"><i class="fa fa-reply"></i> Reply</a>
-                                <a class="button-size-1-round-invalid"><i class="fa fa-exclamation-triangle"></i> Report</a>
-                            </div>
-                        </div>
-                    
-                        <div class="comment object">
-                            <div class="row object-small stack-0">
-                                <div class="span-2 va-middle text-center">
-                                    <div class="thumbnail-profile-round-xlarge-styled">
-                                        <img src="<?php stockImage('team/team-2.jpg') ?>" alt="">
-                                    </div>
-                                </div>
-                                <div class="span-10 va-middle">
-                                    <div class="well-comment">
-                                        <div class="row-block">
-                                            <div class="span">
-                                                <header class="heading_group-small">
-                                                    <h4 class="heading font-2">John Doe</h4>
-                                                </header>
-                                            </div>
-                                            <div class="span text-right">
-                                                <h4 class="heading-light-size-2"><b>Posted:</b> Today, 9:16pm</h4>
-                                            </div>
-                                        </div>
-                                        <div class="comment_content">
-                                            <p>Nunc pharetra et massa eu volutpat. Duis at posuere justo. Vivamus lobortis mi at leo pellentesque vehicula. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aliquam erat volutpat. Proin ac augue quam. Etiam sollicitudin magna vitae nunc accumsan cursus.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="button_group text-right">
-                                <a class="button-size-1-round"><i class="fa fa-reply"></i> Reply</a>
-                                <a class="button-size-1-round-invalid"><i class="fa fa-exclamation-triangle"></i> Report</a>
-                            </div>
-                        </div>
-                    
-                    </div>
-                    
-                    <header class="heading_group">
-                        <h4 class="heading-size-3">Leave a Comment</h4>
-                    </header>
-        
-                    <!-- Contact Form -->
-                    <form class="form-fauxPlaceholders-html5">
-                        <div class="row-flow">
-                            <div class="form_group span-4">
-                                <input type="text" class="form_input" id="name" placeholder="Ex: John Doe" required="">
-                                <label for="firstName">Name</label>
-                            </div>
-                            <div class="form_group span-4">
-                                <input type="email" class="form_input" id="emailAddress" placeholder="john@doe.com" required="">
-                                <label for="emailAddress">Email Address</label>
-                            </div>
-                            <div class="form_group span-4">
-                                <input type="url" class="form_input" id="website" placeholder="themeforest.net" required="">
-                                <label for="website">Website</label>
-                            </div>
-                            <div class="form_group span-12">
-                                <textarea class="form_input" id="yourMessage" rows="8" required=""></textarea>
-                                <label for="yourMessage">Your Message</label>
-                            </div>
-                        </div>
-                        <div class="object">
-                            <button type="submit" class="button-block-primary-size-3">Submit Message</button>
-                        </div>
-                    </form>
-                    
-                </div>
+                <?php comments() ?>
                 
-                <h2 class="heading-size-6-light-strikethrough-dots text-center"><span>Related Posts</span></h2>
+                <div class="heading_group-large">
+                    <h2 class="heading-size-6-light-strikethrough-dots text-center"><span>Related Posts</span></h2>
+                </div>
 
                 <div class="row-flow row-waffle-large">
-                            
-                    <div class="span-4 break-4-half break-2-full relative">	
-                        <div class="thumbnail-zoom">
-                            <div class="thumbnail_mask">
-                                <div class="thumbnail_controls icon_group-small">
-                                    <a href="<?php stockImage('demo/hero-'.rand(1, 7).'.jpg') ?>" class="button-icon-border-circle-size-2" rel="lightbox">
-                                        <i class="fa fa-search"></i>
-                                    </a>
-                                    <a href="<?php pageLink('blog/single.php') ?>" class="button-icon-border-circle-size-2">
-                                        <i class="fa fa-link"></i>
-                                    </a>
-                                </div>
-                            </div>
-                            <img src="<?php stockImage('demo/hero-'.rand(1, 7).'.jpg') ?>">
-                        </div>
-                        <header class="heading_group">
-                            <div class="heading_date">
-                                <div>Sep</div>
-                                <div>23</div>
-                            </div>
-                            <h3 class="heading-heavy-size-3">Kayzen is Released</h3>
-                            <h4 class="heading-light">Posted by <a href="<?php pageLink('classic/full-width.php') ?>">Naomi Olson</a></h4>
-                        </header>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Inquit, dasne adolescenti veniam...</p>
-                        <div class="row stack-0">
-                            <div class="span-5 va-middle">
-                                <a href="#" class="button-oval-primary-size-2">Read More</a>
-                            </div>
-                            <div class="span-7 va-middle text-right">
-                                <small>Posted in <a href="<?php pageLink('classic/3-cols.php') ?>">Web Design</a></small>
-                            </div>
-                        </div>
-                    </div>
                     
-                    <div class="span-4 break-4-half break-2-full relative">	
-                        <div class="thumbnail-zoom">
-                            <div class="thumbnail_mask">
-                                <div class="thumbnail_controls icon_group-small">
-                                    <a href="<?php stockImage('demo/hero-'.rand(1, 7).'.jpg') ?>" class="button-icon-border-circle-size-2" rel="lightbox">
-                                        <i class="fa fa-search"></i>
-                                    </a>
-                                    <a href="<?php pageLink('blog/single.php') ?>" class="button-icon-border-circle-size-2">
-                                        <i class="fa fa-link"></i>
-                                    </a>
-                                </div>
-                            </div>
-                            <img src="<?php stockImage('demo/hero-'.rand(1, 7).'.jpg') ?>">
-                        </div>
-                        <header class="heading_group">
-                            <div class="heading_date">
-                                <div>Sep</div>
-                                <div>23</div>
-                            </div>
-                            <h3 class="heading-heavy-size-3">Kayzen is Released</h3>
-                            <h4 class="heading-light">Posted by <a href="<?php pageLink('blog/single.php') ?>">Naomi Olson</a></h4>
-                        </header>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Inquit, dasne adolescenti veniam...</p>
-                        <div class="row stack-0">
-                            <div class="span-5 va-middle">
-                                <a href="#" class="button-oval-primary-size-2">Read More</a>
-                            </div>
-                            <div class="span-7 va-middle text-right">
-                                <small>Posted in <a href="blog.html">Web Design</a></small>
-                            </div>
-                        </div>
-                    </div>
+                    <?php  
                     
-                    <div class="span-4 min-break-4 relative">	
-                        <div class="thumbnail-zoom">
-                            <div class="thumbnail_mask">
-                                <div class="thumbnail_controls icon_group-small">
-                                    <a href="<?php stockImage('demo/hero-8.jpg') ?>" class="button-icon-border-circle-size-2" rel="lightbox">
-                                        <i class="fa fa-search"></i>
-                                    </a>
-                                    <a href="#" class="button-icon-border-circle-size-2">
-                                        <i class="fa fa-link"></i>
-                                    </a>
-                                </div>
-                            </div>
-                            <img src="<?php stockImage('demo/hero-8.jpg') ?>">
-                        </div>
-                        <header class="heading_group">
-                            <div class="heading_date">
-                                <div>Sep</div>
-                                <div>23</div>
-                            </div>
-                            <h3 class="heading-heavy-size-3">Kayzen is Released</h3>
-                            <h4 class="heading-light">Posted by <a href="<?php pageLink('classic/full-width.php') ?>">Naomi Olson</a></h4>
-                        </header>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Inquit, dasne adolescenti veniam...</p>
-                        <div class="row stack-0">
-                            <div class="span-5 va-middle">
-                                <a href="#" class="button-oval-primary-size-2">Read More</a>
-                            </div>
-                            <div class="span-7 va-middle text-right">
-                                <small>Posted in <a href="<?php pageLink('classic/full-width.php') ?>">Web Design</a></small>
-                            </div>
-                        </div>
-                    </div>
-            
+                        articleItem(array(
+                            'size'          => 'small',
+                            'title'         => 'Kayzen is Released',
+                            'cta-modifiers' => '-oval',
+                            'span'          => 4,
+                            'class'         => 'break-4-half break-2-full relative'
+                        ));
+                    
+                        articleItem(array(
+                            'size'          => 'small',
+                            'title'         => 'Kayzen is Released',
+                            'cta-modifiers' => '-oval',
+                            'span'          => 4,
+                            'class'         => 'break-4-half break-2-full relative'
+                        ));
+                    
+                        articleItem(array(
+                            'size'          => 'small',
+                            'title'         => 'Kayzen is Released',
+                            'cta-modifiers' => '-oval',
+                            'span'          => 4,
+                            'class'         => 'min-break-4 relative'
+                        ));
+                        
+                    ?>
+                    
                 </div><!-- row -->
 		
             </div><!-- container -->
@@ -361,7 +129,9 @@
 		
 		<?php
         
-            promoBanner();
+            promoBanner(array(
+                'cta-modifiers' => '-oval'
+            ));
             
             appFooter(); 
             
