@@ -27,7 +27,7 @@
                                 <a href="<?php stockImage('demo/hero-1.jpg') ?>" class="button-icon-border-circle" rel="lightbox">
                                     <i class="fa fa-search"></i>
                                 </a>
-                                <a href="#" class="button-icon-border-circle">
+                                <a href="<?php echo $options['item-link'] ?>" class="button-icon-border-circle">
                                     <i class="fa fa-link"></i>
                                 </a>
                             </div>
@@ -48,7 +48,7 @@
                     <p>Cum socis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec finibus fringilla purus. Integer libero justo, mattis et magna eget...</p>
                     <div class="row stack-0">
                         <div class="span-6 va-middle">
-                            <a href="#" class="button-oval-primary">Read More</a>
+                            <a href="<?php echo $options['item-link'] ?>" class="button-oval-primary">Read More</a>
                         </div>
                         <div class="span-6 va-middle text-right">
                             <small>Posted in <a href="blog.html">Web Design</a></small>
@@ -63,7 +63,7 @@
                                 <a href="<?php stockImage('demo/hero-2.jpg') ?>" class="button-icon-border-circle" rel="lightbox">
                                     <i class="fa fa-search"></i>
                                 </a>
-                                <a href="#" class="button-icon-border-circle">
+                                <a href="<?php echo $options['item-link'] ?>" class="button-icon-border-circle">
                                     <i class="fa fa-link"></i>
                                 </a>
                             </div>
@@ -84,7 +84,7 @@
                     <p>Cum socis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec finibus fringilla purus. Integer libero justo, mattis et magna eget...</p>
                     <div class="row stack-0">
                         <div class="span-6 va-middle">
-                            <a href="#" class="button-oval-primary">Read More</a>
+                            <a href="<?php echo $options['item-link'] ?>" class="button-oval-primary">Read More</a>
                         </div>
                         <div class="span-6 va-middle text-right">
                             <small>Posted in <a href="blog.html">Web Design</a></small>
@@ -99,7 +99,7 @@
                                 <a href="<?php stockImage('demo/hero-3.jpg') ?>" class="button-icon-border-circle" rel="lightbox">
                                     <i class="fa fa-search"></i>
                                 </a>
-                                <a href="#" class="button-icon-border-circle">
+                                <a href="<?php echo $options['item-link'] ?>" class="button-icon-border-circle">
                                     <i class="fa fa-link"></i>
                                 </a>
                             </div>
@@ -120,7 +120,7 @@
                     <p>Cum socis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec finibus fringilla purus. Integer libero justo, mattis et magna eget...</p>
                     <div class="row stack-0">
                         <div class="span-6 va-middle">
-                            <a href="#" class="button-oval-primary">Read More</a>
+                            <a href="<?php echo $options['item-link'] ?>" class="button-oval-primary">Read More</a>
                         </div>
                         <div class="span-6 va-middle text-right">
                             <small>Posted in <a href="blog.html">Web Design</a></small>

@@ -89,7 +89,7 @@
         <?php // Standard Image Article ?>
         <?php if ($options['media'] === 'image') { ?>
         
-            <div class="thumbnail<?php if ($isArticle) echo '-article' ?>">
+            <div class="thumbnail<?php if ($isArticle && empty($options['span'])) echo '-article' ?>">
                 <div class="thumbnail_mask">
                     <div class="thumbnail_controls<?php if($options['matrix'] && $options['maskTitle']) echo '-corner' ?> icon_group-small">
                         <a 
