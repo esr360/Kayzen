@@ -52,7 +52,9 @@
 // Objects
 //-----------------------------------------------------------------
 
-	@include top-bar;
+	@include top-bar((
+        'fixed' : true
+    ));
 	@include breadcrumb;
 	@include side-nav;
 	@include countdown;
@@ -65,9 +67,14 @@
 	@include header((
 		'background'     : transparent,
 		'font-size'      : 0.9em,
-		'dark'           : (
+        'bar'            : true,
+        'absolute'       : (
+            'enabled'    : true
+        ),
+        'dark'           : (
+            'enabled'    : true,
 			'background' : rgba(black, 0.3),
-		)
+        )
 	));
 	
 	@include logo;

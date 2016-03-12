@@ -103,19 +103,19 @@
                     }
                 }	
             }
-        
-            // If website has "top-bar" and top-bar is "fixed" and header is "absolute"
-            @at-root {
-                @include overwrite('top-bar') {
-                    @if option($header, 'absolute') and option($top-bar, 'fixed') {
-                        @include overwrite($special: 'general-sibling') {
-                            margin-top: option($top-bar, 'height');
-                        }
+            
+        } // full-screen
+    
+        // If website has "top-bar" and top-bar is "fixed" and header is "absolute"
+        @at-root {
+            @include overwrite('top-bar') {
+                @if option($header, 'absolute') and option($top-bar, 'fixed') {
+                    @include overwrite($special: 'general-sibling') {
+                        margin-top: option($top-bar, 'height');
                     }
                 }
             }
-            
-        } // full-screen
+        }
         
         // Modifiers
         //---------------------------------------------------------
@@ -172,21 +172,21 @@
         }
         
         // If website has "top-bar" and header is "absolute"
-        @at-root {
-            @include overwrite('top-bar') {
-                @include overwrite('app-header', $is: 'absolute', $special: 'general-sibling') {
-                    @include overwrite($is: 'full-screen', $special: 'adjacent-sibling') {
-                        height: calc(100vh - #{option($top-bar, 'height')});
-                    }
+        @include overwrite('top-bar', $special: 'at-root') {
+            @include overwrite('app-header', $is: 'absolute', $special: 'general-sibling') {
+                @include overwrite($is: 'full-screen', $special: 'adjacent-sibling') {
+                    height: calc(100vh - #{option($top-bar, 'height')});
                 }
             }
         }
         
         // If website has "top-bar" and top-bar is "fixed" and header is "absolute"
-        @include overwrite('top-bar', $is: 'fixed', $special: 'at-root') {
-            @include overwrite('app-header', $is: 'absolute', $special: 'adjacent-sibling') {
-                @include overwrite($is: 'full-screen', $special: 'adjacent-sibling') {
-                    margin-top: option($top-bar, 'height');
+        @if not option($header, 'absolute') and option($top-bar, 'fixed') {
+            @include overwrite('top-bar', $is: 'fixed', $special: 'at-root') {
+                @include overwrite('app-header', $is: 'absolute', $special: 'adjacent-sibling') {
+                    @include overwrite($special: 'adjacent-sibling') {
+                        margin-top: option($top-bar, 'height');
+                    }
                 }
             }
         }

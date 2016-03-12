@@ -1,7 +1,7 @@
  <?php function recentArticles($custom = array()) { ?>
 
     <?php $options = array_merge(array(
-        //'option' => 'VALUE'
+        'item-link' => pageLink('blog/single.php', 'pages', false)
     ), $custom); ?>
 
     <section class="section-primary">

@@ -6,6 +6,7 @@
             
             'type'       => 'blog',
             'media'      => 'image',
+            'link'       => pageLink('blog/single.php', 'pages', false),
             'matrix'     => false,
             'class'      => null,
             'size'       => null,
@@ -34,6 +35,13 @@
             'rating'     => '4'
             
         ), $custom);
+        
+        /**
+         * Update the default link if type if 'portfolio'
+         */
+        if ($options['link'] === pageLink('blog/single.php', 'pages', false) && $options['type'] === 'portfolio') {
+            $options['link'] = pageLink('portfolio/single.php', 'pages', false);
+        }
         
         /**
          * Act as article?
@@ -81,7 +89,7 @@
         <?php // Standard Image Article ?>
         <?php if ($options['media'] === 'image') { ?>
         
-            <div class="thumbnail-article">
+            <div class="thumbnail<?php if ($isArticle) echo '-article' ?>">
                 <div class="thumbnail_mask">
                     <div class="thumbnail_controls<?php if($options['matrix'] && $options['maskTitle']) echo '-corner' ?> icon_group-small">
                         <a 
@@ -91,7 +99,7 @@
                         >
                             <i class="fa fa-search"></i>
                         </a>
-                        <a href="<?php pageLink('blog/single.php') ?>" class="button-icon-border-circle">
+                        <a href="<?php echo $options['link'] ?>" class="button-icon-border-circle">
                             <i class="fa fa-link"></i>
                         </a>
                     </div>

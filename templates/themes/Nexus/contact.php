@@ -20,7 +20,6 @@
             topbar();
 
             appHeader(array(
-                'modifiers' => 'bar-absolute-dark',
                 'nav-links'  => array(
                     'Home' => themeLink('/index.php'),
                     'About' => themeLink('/about.php'),

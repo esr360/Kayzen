@@ -18,12 +18,9 @@
 		
 		<?php 
         
-            topbar(array(
-                'modifiers' => 'fixed'
-            ));
+            topbar();
 
             appHeader(array(
-                'modifiers' => 'bar-absolute-dark',
                 'nav-links'  => array(
                     'Home' => themeLink('/index.php'),
                     'About' => themeLink('/about.php'),
@@ -90,12 +87,15 @@
             featureQuote();
             
             recentWork(array(
-                'items' => 6
+                'items'     => 6,
+                'item-link' => themeLink('/portfolio-single.php')
             ));
             
             testimonials();
             
-            recentArticles();
+            recentArticles(array(
+                'item-link' => themeLink('/blog-single.php')
+            ));
 		
             promoBanner(array(
                 'cta-modifiers' => '-oval'

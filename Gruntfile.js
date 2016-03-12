@@ -356,7 +356,7 @@ module.exports = function(grunt) {
                 tasks: [
                     'copy:normalizeSupportFor', 
                     'copy:preloaders', 
-                    'sass:dev', 
+                    'sass:' + env, 
                     'postcss', 
                     'clean:normalizeSupportFor',
                     'clean:preloaders',
