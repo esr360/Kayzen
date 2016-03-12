@@ -11,7 +11,7 @@
 
 <body>
     
-    <?php preloader() ?>
+    <?php preloader($style = 'pacman') ?>
 
     <!-- Site Canvas -->
     <div id="site-content">

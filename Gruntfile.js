@@ -6,6 +6,9 @@
 
 module.exports = function(grunt) {
 
+    // Allows the passing of multiple flags on the command line
+    require('nopt-grunt-fix')(grunt);
+    
     //-------------------------------------------------------------
     // Config
     //-------------------------------------------------------------

@@ -9,7 +9,7 @@
  *
  * Values: 'dev' | 'prod'
  */
-define('env', 'dev');
+define('env', 'prod');
 
 /**
  * Set which theme to use
@@ -116,6 +116,7 @@ include (ROOT.'/sections/share-the-love.php');
 include (ROOT.'/sections/shortcodes.php');
 include (ROOT.'/sections/showcase.php');
 include (ROOT.'/sections/skills.php');
+include (ROOT.'/sections/social-widgets.php');
 include (ROOT.'/sections/statistics.php');
 include (ROOT.'/sections/testimonials.php');
 include (ROOT.'/sections/twitter-feed.php');

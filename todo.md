@@ -2,6 +2,7 @@
 #============================================================
 
 - contact form (don't forget to document)
+- document preloader
 - add themes and associated imagery
 
 # Done

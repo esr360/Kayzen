@@ -42,13 +42,17 @@
             
             whyChooseUs();
             
-            promoBanner();
+            promoBanner(array(
+                'cta-modifiers' => '-oval'
+            ));
             
             ourTeam();
             
             clients();
             
-            promoSection();
+            promoSection(array(
+                'cta-modifiers' => '-oval'
+            ));
         
             statistics();
     

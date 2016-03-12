@@ -10,6 +10,15 @@
                     <div></div>
                     <div></div>
                 </div>
+            <?php } else if ($style == 'pacman') { ?>
+                <div class="awd_pacman">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
             <?php } ?>
         </div>
     
