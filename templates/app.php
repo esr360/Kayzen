@@ -78,12 +78,14 @@ include (ROOT.'/includes/dev-asset.php');
 include (ROOT.'/includes/page-link.php');
 include (ROOT.'/includes/stock-image.php');
 include (ROOT.'/includes/theme-asset.php');
+include (ROOT.'/includes/theme-link.php');
 
 include (ROOT.'/modules/billboard.php');
 include (ROOT.'/modules/earth-slider.php');
 include (ROOT.'/modules/footer.php');
 include (ROOT.'/modules/google-map.php');
 include (ROOT.'/modules/header.php');
+include (ROOT.'/modules/navigation.php');
 include (ROOT.'/modules/preloader.php');
 include (ROOT.'/modules/sidebar.php');
 include (ROOT.'/modules/top-bar.php');

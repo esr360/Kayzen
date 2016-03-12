@@ -1,4 +1,4 @@
-<?php function pageLink($path, $relative = false) {
+<?php function pageLink($path, $root = 'pages', $echo = true, $relative = false) {
 
     $filename  = pathinfo($path, PATHINFO_FILENAME);
     $extension = pathinfo($path, PATHINFO_EXTENSION);
@@ -13,11 +13,11 @@
     }
    
     if (path == 'root') {
-        $pageTree = '/templates/pages/';
+        $pageTree = '/templates/'.$root.'/';
     } else if (path == 'relative') {
-        $pageTree = '/..'.projectPath.'/pages/';
+        $pageTree = '/..'.projectPath.'/'.$root.'/';
     } else if (path == 'real') {
-        $pageTree = realpath(__DIR__.'/pages/');
+        $pageTree = realpath(__DIR__.'/'.$root.'/');
     }
     
     if (path == 'relative' && $extension == 'php') {
@@ -26,10 +26,18 @@
         $extension = '.'.$extension;
     }
 
-    if ($relative) {
-        echo $filename.$extension;
+    if ($echo) {
+        if ($relative) {
+            echo $filename.$extension;
+        } else {
+            echo $pageTree.$directory.$filename.$extension;
+        }
     } else {
-        echo $pageTree.$directory.$filename.$extension;
+        if ($relative) {
+            return $filename.$extension;
+        } else {
+            return $pageTree.$directory.$filename.$extension;
+        }
     }
 
 } ?>

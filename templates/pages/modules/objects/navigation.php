@@ -149,6 +149,11 @@
 							<td>This border for navigation items.</td>
 						</tr>
 						<tr>
+							<td><code>item-radius</code></td>
+							<td><code class="value">0</code></td>
+							<td>This border radius for top level navigation items.</td>
+						</tr>
+						<tr>
 							<td><code>item-hover-bg</code></td>
 							<td><code class="value">transparent</code></td>
 							<td>The background for hovered navigation items.</td>

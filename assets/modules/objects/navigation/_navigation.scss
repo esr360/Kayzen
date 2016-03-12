@@ -25,6 +25,7 @@
         'item-color'               : color('greyscale', 'white'),
         'item-bg'                  : transparent,
         'item-border'              : 1px solid transparent,
+        'item-radius'              : 0,
         // list-item:hover
         'item-hover-bg'            : transparent,
         'item-hover-border'        : 1px solid color('greyscale', 'white'),
@@ -55,9 +56,9 @@
         li {    
             a {
                 display: block;
-                padding: option($navigation, 'item-padding');
-                color: option($navigation, 'item-color');
-                border: option($navigation, 'item-border');
+                padding: this('item-padding');
+                color: this('item-color');
+                border: this('item-border');
                 &:hover {
                     text-decoration: none;
                 }
@@ -85,9 +86,11 @@
 
                 > a {
                     background: option($navigation, 'item-bg');
+                    border-radius: this('item-radius');
                     // if item has child menu
                     &:not(:only-child) {
                         border-bottom-color: transparent;
+                        border-radius: 0;
                         &:after {
                             content: option($navigation, 'dropdown-icon');
                             font-family: FontAwesome;
