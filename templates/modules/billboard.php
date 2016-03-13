@@ -18,9 +18,9 @@
                     <h3 class="heading-uppercase-heavy-size-9 font-2">What's your theme?</h3>
                 </header>
                 <p class="lede">Kayzen is a powerful themeing framework for architecting CSS for large, modular & scalable web applications. Built using only Sass (SCSS), Kayzen has the customizing power of a complete CMS theme.</p>
-                <p class="button_group">
+                <div class="button_group">
                     <a class="button-size-4-border-white" href="#key-features">Explore The Potential</a>
-                </p>
+                </div>
             </div>
             <nav class="slide-nav">
                 <button class="slide-prev button-icon-border-size-3-white"><i class="fa fa-angle-left"></i></button>

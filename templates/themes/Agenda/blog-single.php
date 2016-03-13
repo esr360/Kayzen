@@ -11,13 +11,13 @@
 <?php include (ROOT.'/includes/head.php'); ?>
 
 <body>
+    
+    <?php preloader() ?>
 
     <!-- Site Canvas -->
     <div id="site-content">
 		
 		<?php 
-        
-            topbar();
 
             appHeader(array(
                 'nav-links'  => array(
@@ -139,7 +139,9 @@
                 'cta-modifiers' => '-oval'
             ));
             
-            appFooter(); 
+            appFooter(array(
+                'columns' => false
+            )); 
             
         ?>
 

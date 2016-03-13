@@ -9,7 +9,7 @@
  *
  * Values: 'dev' | 'prod'
  */
-define('env', 'prod');
+define('env', 'dev');
 
 /**
  * Set which theme to use
@@ -17,7 +17,7 @@ define('env', 'prod');
  *
  * You can view list of available themes in 'assets/themes'
  */
-define('theme', 'Nexus');
+define('theme', 'Agenda');
 
 /**
  * Are you using multiple themes?

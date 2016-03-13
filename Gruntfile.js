@@ -113,7 +113,7 @@ module.exports = function(grunt) {
     
         clean: {
             app: {
-                src: 'app'
+                src: ['app/*', '!app/themes/**']
             },
             scripts: [
                 'app/**/*.js', '!app/**/*.min.js'

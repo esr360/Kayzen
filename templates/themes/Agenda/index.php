@@ -1,0 +1,116 @@
+<?php 
+	include ('../../app.php');
+	// page config
+	$title = 'Homepage 2';
+?>
+
+<!DOCTYPE html>
+<html class="no-js">
+
+<?php include (ROOT.'/includes/head.php'); ?>
+
+<body>
+    
+    <?php preloader() ?>
+
+    <!-- Site Canvas -->
+    <div id="site-content">
+		
+		<?php 
+
+            appHeader(array(
+                'nav-links'  => array(
+                    'Home' => themeLink('/index.php'),
+                    'About' => themeLink('/about.php'),
+                    'Services' => themeLink('/services.php'),
+                    'Portfolio' => themeLink('/portfolio.php'),
+                    'Blog' => themeLink('/blog.php'),
+                    'Contact' => themeLink('/contact.php')
+                )
+            ));
+
+		?>
+
+		<section class="billboard-full-screen-overlay">
+			<div class="billboard_wrapper container text-left">
+				<div class="short" id="billboard-fade-parallax">
+					<header class="heading_group">
+						<h3 class="heading-uppercase-heavy-size-8 font-2">Welcome to Kayzen</h3>
+						<h2 class="heading-light-size-6"><span>A Unique & Modern Theme Framework</span></h2>
+					</header>
+					<p class="lede">Kayzen is a powerful themeing framework for architecting CSS for large, modular & scalable web applications. Built using only Sass (SCSS), Kayzen has the customizing power of a complete CMS theme.</p>
+					<div class="button_group">
+						<a class="button-oval-size-4-white" href="#">Purchase Now</a>
+						<a class="button-oval-size-4-border-white" href="#">Explore The Potential</a>
+					</div>
+				</div>
+			</div>
+			<a href="#s-welcome" class="scroll-wheel"></a>
+		</section>
+
+		<?php 
+        
+            earthSlider(); 
+            
+            skills(array(
+                'cta-modifiers' => '-oval'
+            ));
+        
+		    whyChooseUs();
+		
+            promoBanner(array(
+                'cta-modifiers' => '-oval'
+            ));
+        
+		    ourTeam();
+            
+            promoSection(array(
+                'cta-modifiers' => '-oval'
+            ));
+            
+            services();
+            
+            statistics();
+            
+            keyFeatures2();
+            
+            clients();
+            
+            pricing();
+            
+            featureQuote();
+            
+            recentWork(array(
+                'items'     => 6,
+                'item-link' => themeLink('/portfolio-single.php')
+            ));
+            
+            testimonials();
+            
+            recentArticles(array(
+                'item-link' => themeLink('/blog-single.php'),
+                'item-root' => themeLink('/blog.php')
+            ));
+		
+            promoBanner(array(
+                'cta-modifiers' => '-oval'
+            ));
+            
+            contactUs();
+            
+            googleMap();
+            
+            appFooter(array(
+                'columns' => false
+            )); 
+                    
+        ?>
+
+    </div><!-- Site Canvas -->
+
+    <?php include (ROOT.'/includes/ui-enhancements.php'); ?>
+
+    <?php include (ROOT.'/includes/scripts.php'); ?>
+
+</body>
+</html>

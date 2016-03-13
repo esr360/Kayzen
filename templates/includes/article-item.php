@@ -50,7 +50,7 @@
         /**
          * Update the default root link if type if 'portfolio'
          */
-        if ($options['root'] === pageLink('blog/classic/3-cols.php)', 'pages', false) && $options['type'] === 'portfolio') {
+        if ($options['root'] === pageLink('blog/classic/3-cols.php', 'pages', false) && $options['type'] === 'portfolio') {
             $options['root'] = pageLink('portfolio/masonry/3-cols-filterable.php', 'pages', false);
         }
         

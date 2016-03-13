@@ -139,7 +139,7 @@
         // If header is "side"
         @at-root {
             @include overwrite('app-header', $is: 'side') {
-                + #site-content {
+                ~ #site-content {
                     @include overwrite($is: 'full-screen') {
                         height: 100%;
                         height: 100vh;
@@ -160,7 +160,7 @@
         // If website has "top-bar" and header is "side"
         @at-root {
             @include overwrite('app-header', $is: 'side') {
-                + #site-content {
+                ~ #site-content {
                     @include overwrite('top-bar') {
                         @include overwrite($is: 'full-screen', $special: 'adjacent-sibling') {
                             height: calc(100% - #{option($top-bar, 'height')});
