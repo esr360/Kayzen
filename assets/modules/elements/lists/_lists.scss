@@ -85,6 +85,18 @@
                     color: this('arrow-color');
                 }
             }
+            .text-right & {
+                > li {
+                    padding: 0.2em 1.5em 0.2em 0;
+                    &:before {
+                        left: auto;
+                        right: 0;
+                        margin-left: 0.5em;
+                        margin-right: 0;
+                        transform: rotate(180deg) translateY(50%);
+                    }
+                }
+            }
             @include modifier('adjust') {
                 > li {
                     line-height: 1.7;

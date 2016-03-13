@@ -9,16 +9,17 @@
     //-------------------------------------------------------------
 
     $headings: config((
-        'name'                 : 'heading',
-        'output-JSON'          : true,
-        'highlight-color'      : color('brand', 'primary'),
-        'highlight-dark-color' : color('greyscale', 'grey-6'),
-        'strikethrough-width'  : 75px,
-        'spaced-spacing'       : 0.35em,
-        'border'               : 1px dotted rgba(black, 0.2),
-        'group-dots-color'     : rgba(black, 0.4),
-        'group-dots-size'      : 24px,
-        'group-block-padding'  : 6em
+        'name'                   : 'heading',
+        'output-JSON'            : true,
+        'highlight-color'        : color('brand', 'primary'),
+        'highlight-dark-color'   : color('greyscale', 'grey-6'),
+        'highlight-opaque-color' : rgba(black, 0.6),
+        'strikethrough-width'    : 75px,
+        'spaced-spacing'         : 0.35em,
+        'border'                 : 1px dotted rgba(black, 0.2),
+        'group-dots-color'       : rgba(black, 0.4),
+        'group-dots-size'        : 24px,
+        'group-block-padding'    : 6em
     ), $custom);
 
     //-------------------------------------------------------------
@@ -95,6 +96,12 @@
                 > b {
                     background: this('highlight-dark-color');
                     box-shadow: $highlight-dimensions 0 0 this('highlight-dark-color'), -$highlight-dimensions 0 0 this('highlight-dark-color');
+                }
+            }
+            @include modifier('opaque') {
+                > b {
+                    background: this('highlight-opaque-color');
+                    box-shadow: $highlight-dimensions 0 0 this('highlight-opaque-color'), -$highlight-dimensions 0 0 this('highlight-opaque-color');
                 }
             }
         }
