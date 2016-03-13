@@ -88,6 +88,13 @@
 				    color: this('secondary-color');
                 }
 			}
+            @include overwrite('list', $is: 'arrow') {
+                > li {
+                    &:before {
+                        color: this('secondary-color');
+                    }
+                }
+            }
 		}
 		
 		//---------------------------------------------------------

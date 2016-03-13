@@ -45,30 +45,45 @@
                         
                     <?php
                         
-                        articleItem();
-                        
                         articleItem(array(
-                            'media' => 'vimeo'
+                            'cta-modifiers' => '-oval',
+                            'link'          => themeLink('/blog-single.php'),
                         ));
                         
                         articleItem(array(
-                            'media' => 'youtube'
+                            'media'         => 'vimeo',
+                            'link'          => themeLink('/blog-single.php'),
+                            'cta-modifiers' => '-oval'
                         ));
                         
                         articleItem(array(
-                            'media' => 'carousel'
+                            'media' => 'youtube',
+                            'link'          => themeLink('/blog-single.php'),
+                            'cta-modifiers' => '-oval'
                         ));
                         
                         articleItem(array(
-                            'media' => 'masonry'
+                            'media' => 'carousel',
+                            'link'          => themeLink('/blog-single.php'),
+                            'cta-modifiers' => '-oval'
                         ));
                         
                         articleItem(array(
-                            'media' => 'audio'
+                            'media' => 'masonry',
+                            'link'          => themeLink('/blog-single.php'),
+                            'cta-modifiers' => '-oval'
                         ));
                         
                         articleItem(array(
-                            'media' => 'codepen'
+                            'media' => 'audio',
+                            'link'          => themeLink('/blog-single.php'),
+                            'cta-modifiers' => '-oval'
+                        ));
+                        
+                        articleItem(array(
+                            'media' => 'codepen',
+                            'link'          => themeLink('/blog-single.php'),
+                            'cta-modifiers' => '-oval'
                         ));
                         
                     ?> 

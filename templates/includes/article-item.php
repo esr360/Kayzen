@@ -300,7 +300,7 @@
                         <?php if ($options['type'] === 'blog') { ?>
                             <li><i class="fa fa-user"></i> <a href="<?php pageLink('blog/classic/full-width.php')?>">John Doe</a></li>
                         <?php } if (empty($options['span'])) { ?>
-                            <li><i class="fa fa-comment-o"></i> <a href="<?php pageLink('blog/single.php') ?>#comments">3 Comments</a></li>
+                            <li><i class="fa fa-comment-o"></i> <a href="<?php echo $options['link'] ?>#comments">3 Comments</a></li>
                             <li>
                                 <ul class="list-tags">
                                     <li class="title">Tags:</li>
@@ -314,7 +314,7 @@
                 </small>
                 <div class="span va-middle text-right">
                     <a 
-                        href="<?php pageLink('blog/single.php') ?>" 
+                        href="<?php echo $options['link'] ?>" 
                         class="button-primary<?php echo '-'.$options['cta-modifiers']; if ($options['size'] === 'small') echo '-size-2' ?>"
                     >
                         Read More

@@ -100,6 +100,7 @@
                             'title'         => 'Kayzen is Released',
                             'cta-modifiers' => '-oval',
                             'span'          => 4,
+                            'link'          => themeLink('/blog-single.php'),
                             'class'         => 'break-4-half break-2-full relative'
                         ));
                     
@@ -108,6 +109,7 @@
                             'title'         => 'Kayzen is Released',
                             'cta-modifiers' => '-oval',
                             'span'          => 4,
+                            'link'          => themeLink('/blog-single.php'),
                             'class'         => 'break-4-half break-2-full relative'
                         ));
                     
@@ -116,6 +118,7 @@
                             'title'         => 'Kayzen is Released',
                             'cta-modifiers' => '-oval',
                             'span'          => 4,
+                            'link'          => themeLink('/blog-single.php'),
                             'class'         => 'min-break-4 relative'
                         ));
                         

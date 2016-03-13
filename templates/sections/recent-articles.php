@@ -29,6 +29,7 @@
                         'span'          => 4,
                         'author-thumb'  => true,
                         'widget'        => false,
+                        'link'          => $options['item-link'],
                         'class'         => 'break-3-half break-2-full relative'
                     ));
                 
@@ -38,6 +39,7 @@
                         'span'          => 4,
                         'author-thumb'  => true,
                         'widget'        => false,
+                        'link'          => $options['item-link'],
                         'class'         => 'break-3-half break-2-full relative'
                     ));
                 
@@ -47,6 +49,7 @@
                         'span'          => 4,
                         'author-thumb'  => true,
                         'widget'        => false,
+                        'link'          => $options['item-link'],
                         'class'         => 'min-break-3 relative'
                     ));
                     

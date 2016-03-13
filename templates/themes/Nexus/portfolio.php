@@ -51,6 +51,7 @@
                                 'type'   => 'portfolio',
                                 'matrix' => true,
                                 'span'   => 4,
+                                'link'   => themeLink('/portfolio-single.php'),
                                 'class'  => 'break-3-half break-2-full'
                             ));
                             
@@ -58,6 +59,7 @@
                                 'type'   => 'portfolio',
                                 'matrix' => true,
                                 'span'   => 4,
+                                'link'   => themeLink('/portfolio-single.php'),
                                 'class'  => 'break-3-half break-2-full'
                             ));
                             
@@ -65,6 +67,7 @@
                                 'type'   => 'portfolio',
                                 'matrix' => true,
                                 'span'   => 4,
+                                'link'   => themeLink('/portfolio-single.php'),
                                 'class'  => 'break-3-half break-2-full'
                             ));
                             
@@ -72,6 +75,7 @@
                                 'type'   => 'portfolio',
                                 'matrix' => true,
                                 'span'   => 4,
+                                'link'   => themeLink('/portfolio-single.php'),
                                 'class'  => 'break-3-half break-2-full'
                             ));
                             
@@ -79,6 +83,7 @@
                                 'type'   => 'portfolio',
                                 'matrix' => true,
                                 'span'   => 4,
+                                'link'   => themeLink('/portfolio-single.php'),
                                 'class'  => 'break-3-half break-2-full'
                             ));
                             
@@ -86,6 +91,7 @@
                                 'type'   => 'portfolio',
                                 'matrix' => true,
                                 'span'   => 4,
+                                'link'   => themeLink('/portfolio-single.php'),
                                 'class'  => 'break-3-half break-2-full'
                             ));
                             
@@ -105,6 +111,7 @@
                                 'type'   => 'portfolio',
                                 'matrix' => true,
                                 'span'   => 4,
+                                'link'   => themeLink('/portfolio-single.php'),
                                 'class'  => 'break-3-half break-2-full'
                             ));
                             
@@ -112,6 +119,7 @@
                                 'type'   => 'portfolio',
                                 'matrix' => true,
                                 'span'   => 4,
+                                'link'   => themeLink('/portfolio-single.php'),
                                 'class'  => 'break-3-half break-2-full'
                             ));
                             
@@ -119,6 +127,7 @@
                                 'type'   => 'portfolio',
                                 'matrix' => true,
                                 'span'   => 4,
+                                'link'   => themeLink('/portfolio-single.php'),
                                 'class'  => 'break-3-half break-2-full'
                             ));
                             
@@ -126,6 +135,7 @@
                                 'type'   => 'portfolio',
                                 'matrix' => true,
                                 'span'   => 4,
+                                'link'   => themeLink('/portfolio-single.php'),
                                 'class'  => 'break-3-half break-2-full'
                             ));
                             
@@ -133,6 +143,7 @@
                                 'type'   => 'portfolio',
                                 'matrix' => true,
                                 'span'   => 4,
+                                'link'   => themeLink('/portfolio-single.php'),
                                 'class'  => 'break-3-half break-2-full'
                             ));
                             
@@ -140,6 +151,7 @@
                                 'type'   => 'portfolio',
                                 'matrix' => true,
                                 'span'   => 4,
+                                'link'   => themeLink('/portfolio-single.php'),
                                 'class'  => 'break-3-half break-2-full'
                             ));
                             
@@ -180,7 +192,9 @@
 		
 		<?php
         
-            promoBanner();
+            promoBanner(array(
+                'cta-modifiers' => '-oval'
+            ));
             
             appFooter(); 
             
