@@ -2,7 +2,7 @@
 
     <?php $options = array_merge(array(), $custom); ?>
 
-    <div class="object-large">
+    <div class="object-large" id="comments">
                 
                 
         <div class="heading_group-large">

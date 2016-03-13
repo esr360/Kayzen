@@ -7,6 +7,7 @@
             'type'          => 'blog',
             'media'         => 'image',
             'link'          => pageLink('blog/single.php', 'pages', false),
+            'root'          => pageLink('blog/classic/3-cols.php)', 'pages', false),
             'widget'        => true,
             'matrix'        => false,
             'class'         => null,
@@ -44,6 +45,13 @@
          */
         if ($options['link'] === pageLink('blog/single.php', 'pages', false) && $options['type'] === 'portfolio') {
             $options['link'] = pageLink('portfolio/single.php', 'pages', false);
+        }
+        
+        /**
+         * Update the default root link if type if 'portfolio'
+         */
+        if ($options['root'] === pageLink('blog/classic/3-cols.php)', 'pages', false) && $options['type'] === 'portfolio') {
+            $options['root'] = pageLink('portfolio/masonry/3-cols-filterable.php', 'pages', false);
         }
         
         /**
@@ -273,12 +281,12 @@
                 <?php if ($options['size'] === 'small') { ?>
                     <h2 class="heading-heavy-size-4 font-2"><?php echo $options['title'] ?></h2>
                     <h3 class="heading-light-size-2">
-                        Posted in <a href="<?php pageLink('blog/single.php') ?>"><?php echo $options['category'] ?></a>
+                        Posted in <a href="<?php $options['root'] ?>"><?php echo $options['category'] ?></a>
                     </h3>
                 <?php } else { ?>
                     <h2 class="heading-heavy-size-5 font-2"><?php echo $options['title'] ?></h2>
                     <h3 class="heading-light">
-                        Posted in <a href="<?php pageLink('blog/single.php') ?>"><?php echo $options['category'] ?></a>
+                        Posted in <a href="<?php $options['root'] ?>"><?php echo $options['category'] ?></a>
                     </h3>
                 <?php } ?>
             </header>
@@ -298,15 +306,15 @@
                 <small class="span va-middle">
                     <ul class="list-reset-inline">
                         <?php if ($options['type'] === 'blog') { ?>
-                            <li><i class="fa fa-user"></i> <a href="<?php pageLink('blog/classic/full-width.php')?>">John Doe</a></li>
+                            <li><i class="fa fa-user"></i> <a href="<?php echo $options['root'] ?>">John Doe</a></li>
                         <?php } if (empty($options['span'])) { ?>
                             <li><i class="fa fa-comment-o"></i> <a href="<?php echo $options['link'] ?>#comments">3 Comments</a></li>
                             <li>
                                 <ul class="list-tags">
                                     <li class="title">Tags:</li>
-                                    <li class="plain"><a href="<?php pageLink('blog/classic/full-width.php')?>">Web Design</a></li>
-                                    <li class="plain"><a href="<?php pageLink('blog/classic/full-width.php')?>">HTML</a></li>
-                                    <li class="plain"><a href="<?php pageLink('blog/classic/full-width.php')?>">CSS</a></li>
+                                    <li class="plain"><a href="<?php $options['root'] ?>">Web Design</a></li>
+                                    <li class="plain"><a href="<?php $options['root'] ?>">HTML</a></li>
+                                    <li class="plain"><a href="<?php $options['root'] ?>">CSS</a></li>
                                 </ul>
                             </li>
                         <?php } ?>

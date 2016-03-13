@@ -30,6 +30,7 @@
                         'author-thumb'  => true,
                         'widget'        => false,
                         'link'          => $options['item-link'],
+                        'root'          => $options['item-root'],
                         'class'         => 'break-3-half break-2-full relative'
                     ));
                 
@@ -40,6 +41,7 @@
                         'author-thumb'  => true,
                         'widget'        => false,
                         'link'          => $options['item-link'],
+                        'root'          => $options['item-root'],
                         'class'         => 'break-3-half break-2-full relative'
                     ));
                 
@@ -50,6 +52,7 @@
                         'author-thumb'  => true,
                         'widget'        => false,
                         'link'          => $options['item-link'],
+                        'root'          => $options['item-root'],
                         'class'         => 'min-break-3 relative'
                     ));
                     
