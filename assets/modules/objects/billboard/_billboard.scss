@@ -181,12 +181,10 @@
         }
         
         // If website has "top-bar" and top-bar is "fixed" and header is "absolute"
-        @if not option($header, 'absolute') and option($top-bar, 'fixed') {
-            @include overwrite('top-bar', $is: 'fixed', $special: 'at-root') {
-                @include overwrite('app-header', $is: 'absolute', $special: 'adjacent-sibling') {
-                    @include overwrite($special: 'adjacent-sibling') {
-                        margin-top: option($top-bar, 'height');
-                    }
+        @include overwrite('top-bar', $is: 'fixed', $special: 'at-root') {
+            @include overwrite('app-header', $is: 'absolute', $special: 'adjacent-sibling') {
+                @include overwrite($special: 'adjacent-sibling') {
+                    margin-top: option($top-bar, 'height');
                 }
             }
         }
