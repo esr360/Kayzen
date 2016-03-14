@@ -115,6 +115,9 @@ module.exports = function(grunt) {
             app: {
                 src: ['app/*', '!app/themes/**']
             },
+            theme: {
+                src: 'app/themes/' + theme
+            },
             scripts: [
                 'app/**/*.js', '!app/**/*.min.js'
             ],
@@ -619,6 +622,7 @@ module.exports = function(grunt) {
     var gruntCompile = function(environment) {
         var assetTasks = [
             'clean:app',
+            'clean:theme',
             'copy:normalizeSupportFor', 
             'copy:preloaders', 
             'replace:sassTheme',

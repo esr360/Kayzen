@@ -12,14 +12,6 @@
 define('env', 'dev');
 
 /**
- * Set which theme to use
- * @const theme
- *
- * You can view list of available themes in 'assets/themes'
- */
-define('theme', 'Agenda');
-
-/**
  * Are you using multiple themes?
  * @const themes
  *
@@ -75,8 +67,10 @@ define('ROOT', dirname(__FILE__));
 
 include (ROOT.'/includes/article-item.php');
 include (ROOT.'/includes/dev-asset.php');
+include (ROOT.'/includes/head.php');
 include (ROOT.'/includes/page-link.php');
 include (ROOT.'/includes/stock-image.php');
+include (ROOT.'/includes/scripts.php');
 include (ROOT.'/includes/theme-asset.php');
 include (ROOT.'/includes/theme-link.php');
 

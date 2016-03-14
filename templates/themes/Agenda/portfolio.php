@@ -1,6 +1,7 @@
 <?php 
 	include ('../../app.php');
 	// page config
+    $theme = 'Agenda';
 	$title = 'Our Portfolio';
 	$tagLine = 'Some of our most recent and best work';
 ?>
@@ -8,7 +9,7 @@
 <!DOCTYPE html>
 <html>
 
-<?php include (ROOT.'/includes/head.php'); ?>
+<?php head($theme) ?>
 
 <body>
     
@@ -21,12 +22,12 @@
 
             appHeader(array(
                 'nav-links'  => array(
-                    'Home' => themeLink('/index.php'),
-                    'About' => themeLink('/about.php'),
-                    'Services' => themeLink('/services.php'),
-                    'Portfolio' => themeLink('/portfolio.php'),
-                    'Blog' => themeLink('/blog.php'),
-                    'Contact' => themeLink('/contact.php')
+                    'Home' => themeLink($theme, '/index.php'),
+                    'About' => themeLink($theme, '/about.php'),
+                    'Services' => themeLink($theme, '/services.php'),
+                    'Portfolio' => themeLink($theme, '/portfolio.php'),
+                    'Blog' => themeLink($theme, '/blog.php'),
+                    'Contact' => themeLink($theme, '/contact.php')
                 )
             ));
 
@@ -47,50 +48,50 @@
                         
                         articleItem(array(
                             'type'  => 'portfolio',
-                            'link'  => themeLink('/blog-single.php'),
-                            'root'  => themeLink('/blog.php')
+                            'link'  => themeLink($theme, '/blog-single.php'),
+                            'root'  => themeLink($theme, '/blog.php')
                         ));
                         
                         articleItem(array(
                             'media' => 'vimeo',
                             'type'  => 'portfolio',
-                            'link'  => themeLink('/blog-single.php'),
-                            'root'  => themeLink('/blog.php')
+                            'link'  => themeLink($theme, '/blog-single.php'),
+                            'root'  => themeLink($theme, '/blog.php')
                         ));
                         
                         articleItem(array(
                             'media' => 'youtube',
                             'type'  => 'portfolio',
-                            'link'  => themeLink('/blog-single.php'),
-                            'root'  => themeLink('/blog.php')
+                            'link'  => themeLink($theme, '/blog-single.php'),
+                            'root'  => themeLink($theme, '/blog.php')
                         ));
                         
                         articleItem(array(
                             'media' => 'carousel',
                             'type'  => 'portfolio',
-                            'link'  => themeLink('/blog-single.php'),
-                            'root'  => themeLink('/blog.php')
+                            'link'  => themeLink($theme, '/blog-single.php'),
+                            'root'  => themeLink($theme, '/blog.php')
                         ));
                         
                         articleItem(array(
                             'media' => 'masonry',
                             'type'  => 'portfolio',
-                            'link'  => themeLink('/blog-single.php'),
-                            'root'  => themeLink('/blog.php')
+                            'link'  => themeLink($theme, '/blog-single.php'),
+                            'root'  => themeLink($theme, '/blog.php')
                         ));
                         
                         articleItem(array(
                             'media' => 'audio',
                             'type'  => 'portfolio',
-                            'link'  => themeLink('/blog-single.php'),
-                            'root'  => themeLink('/blog.php')
+                            'link'  => themeLink($theme, '/blog-single.php'),
+                            'root'  => themeLink($theme, '/blog.php')
                         ));
                         
                         articleItem(array(
                             'media' => 'codepen',
                             'type'  => 'portfolio',
-                            'link'  => themeLink('/blog-single.php'),
-                            'root'  => themeLink('/blog.php')
+                            'link'  => themeLink($theme, '/blog-single.php'),
+                            'root'  => themeLink($theme, '/blog.php')
                         ));
                         
                     ?>
@@ -143,6 +144,6 @@
 
     <?php include (ROOT.'/includes/ui-enhancements.php'); ?>
 
-    <?php include (ROOT.'/includes/scripts.php'); ?>
+    <?php scripts($theme) ?>
 
 </body>

@@ -1,13 +1,14 @@
 <?php 
 	include ('../../app.php');
 	// page config
+    $theme = 'Agenda';
 	$title = 'Homepage 2';
 ?>
 
 <!DOCTYPE html>
 <html class="no-js">
 
-<?php include (ROOT.'/includes/head.php'); ?>
+<?php head($theme) ?>
 
 <body>
     
@@ -20,12 +21,12 @@
 
             appHeader(array(
                 'nav-links'  => array(
-                    'Home' => themeLink('/index.php'),
-                    'About' => themeLink('/about.php'),
-                    'Services' => themeLink('/services.php'),
-                    'Portfolio' => themeLink('/portfolio.php'),
-                    'Blog' => themeLink('/blog.php'),
-                    'Contact' => themeLink('/contact.php')
+                    'Home' => themeLink($theme, '/index.php'),
+                    'About' => themeLink($theme, '/about.php'),
+                    'Services' => themeLink($theme, '/services.php'),
+                    'Portfolio' => themeLink($theme, '/portfolio.php'),
+                    'Blog' => themeLink($theme, '/blog.php'),
+                    'Contact' => themeLink($theme, '/contact.php')
                 )
             ));
 
@@ -82,14 +83,14 @@
             
             recentWork(array(
                 'items'     => 6,
-                'item-link' => themeLink('/portfolio-single.php')
+                'item-link' => themeLink($theme, '/portfolio-single.php')
             ));
             
             testimonials();
             
             recentArticles(array(
-                'item-link' => themeLink('/blog-single.php'),
-                'item-root' => themeLink('/blog.php')
+                'item-link' => themeLink($theme, '/blog-single.php'),
+                'item-root' => themeLink($theme, '/blog.php')
             ));
 		
             promoBanner(array(
@@ -110,7 +111,7 @@
 
     <?php include (ROOT.'/includes/ui-enhancements.php'); ?>
 
-    <?php include (ROOT.'/includes/scripts.php'); ?>
+    <?php scripts($theme) ?>
 
 </body>
 </html>

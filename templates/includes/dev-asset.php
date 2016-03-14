@@ -1,15 +1,10 @@
-<?php function devAsset($custom = array()) { 
-    
-    $options = array_merge(array(
-        'path'  => '',
-        'theme' => ''
-    ), $custom);
+<?php function devAsset($theme, $path) { 
 
-    $extension = pathinfo($options['path'], PATHINFO_EXTENSION);
-    $path = pathinfo($options['path'], PATHINFO_FILENAME);
+    $extension = pathinfo($path, PATHINFO_EXTENSION);
+    $path = pathinfo($path, PATHINFO_FILENAME);
 
-    if ($options['theme']) {
-        $themePath = '/themes/'.$options['theme'];
+    if ($theme) {
+        $themePath = '/themes/'.$theme;
     } else {
         $themePath = '';
     }      

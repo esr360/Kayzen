@@ -1,4 +1,8 @@
 <!-- SCRIPTS -->
-<?php devAsset(array('path' => 'jquery.js')); ?>
-<?php devAsset(array('path' => 'pseudojQuery-end.js')); ?>
-<?php themeAsset(array('path' => 'app.js')); ?>
+<?php function scripts($theme = 'Kayzen') { 
+    
+    devAsset(null, 'jquery.js');
+    devAsset(null, 'pseudojQuery-end.js');
+    themeAsset($theme, 'app.js');
+    
+} ?>

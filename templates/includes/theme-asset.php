@@ -1,18 +1,11 @@
-<?php function themeAsset($custom = array()) {
-    
-    $options = array_merge(array(
-        'path'  => ''
-    ), $custom);
+<?php function themeAsset($theme, $path) {
     
     if (themes) {
-        $theme = theme;
+        $theme = $theme;
     } else {
         $theme = '';
     }
     
-    devAsset(array(
-        'path' => $options['path'],
-        'theme' => $theme
-    ));
+    devAsset($theme, $path);
        
 } ?>

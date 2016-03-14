@@ -1,6 +1,7 @@
 <?php 
 	include ('../../app.php');
 	// page config
+    $theme = 'Agenda';
 	$title = 'Our Services';
 	$tagLine = 'Aenean lobortis ante nunc urabitur at enim nisi.';
 ?>
@@ -8,7 +9,7 @@
 <!DOCTYPE html>
 <html class="no-js">
 
-<?php include (ROOT.'/includes/head.php'); ?>
+<?php head($theme) ?>
 
 <body>
     
@@ -21,12 +22,12 @@
 
             appHeader(array(
                 'nav-links'  => array(
-                    'Home' => themeLink('/index.php'),
-                    'About' => themeLink('/about.php'),
-                    'Services' => themeLink('/services.php'),
-                    'Portfolio' => themeLink('/portfolio.php'),
-                    'Blog' => themeLink('/blog.php'),
-                    'Contact' => themeLink('/contact.php')
+                    'Home' => themeLink($theme, '/index.php'),
+                    'About' => themeLink($theme, '/about.php'),
+                    'Services' => themeLink($theme, '/services.php'),
+                    'Portfolio' => themeLink($theme, '/portfolio.php'),
+                    'Blog' => themeLink($theme, '/blog.php'),
+                    'Contact' => themeLink($theme, '/contact.php')
                 )
             ));
 
@@ -44,7 +45,7 @@
             testimonials();
     
             recentWork(array(
-                'item-link' => themeLink('/portfolio-single.php')
+                'item-link' => themeLink($theme, '/portfolio-single.php')
             ));
             
             promoBanner(array(
@@ -61,6 +62,6 @@
 
     <?php include (ROOT.'/includes/ui-enhancements.php'); ?>
 
-    <?php include (ROOT.'/includes/scripts.php'); ?>
+    <?php scripts($theme) ?>
 
 </body>

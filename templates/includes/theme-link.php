@@ -1,5 +1,5 @@
-<?php function themeLink($path) {
+<?php function themeLink($theme, $path) {
 
-    return pageLink(theme.$path, $root = 'themes', $echo = false);
+    return pageLink($theme.$path, $root = 'themes', $echo = false);
 
 } ?>
