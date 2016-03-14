@@ -627,8 +627,7 @@ module.exports = function(grunt) {
             'sass:' + environment,
             'postcss',
             'clean:normalizeSupportFor',
-            'clean:preloaders',
-            'responsive_images'
+            'clean:preloaders'
         ];
         if (environment == 'prod') {
             assetTasks.push(
@@ -685,10 +684,24 @@ module.exports = function(grunt) {
         gruntCompile('prod')
     );
     
+    // Package the app
+    grunt.registerTask('package', 
+        'compile',
+        'responsive_images',
+        'templates'
+    );
+    
     // Run asset linting and tests
     grunt.registerTask('test', [
         'jshint',
         'scsslint'
+    ]);
+    
+    // Run asset linting and tests
+    grunt.registerTask('ship', [
+        'package',
+        'test',
+        'compress:images'
     ]);
     
     /**
