@@ -463,11 +463,6 @@ module.exports = function(grunt) {
         //---------------------------------------------------------
         
         setPHPConstant: {
-            theme: {
-                constant    : 'theme',
-                value       : theme,
-                file        : 'templates/app.php'
-            },
             themes: {
                 constant    : 'themes',
                 value       : themes,
@@ -645,7 +640,6 @@ module.exports = function(grunt) {
         };
         var backendTasks = [
             'setPHPConstant:' + environment,
-            'setPHPConstant:theme',
             'setPHPConstant:themes',
             'setPHPConstant:path',
             'setPHPConstant:realm'
