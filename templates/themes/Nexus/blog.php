@@ -1,6 +1,7 @@
 <?php 
 	include ('../../app.php');
 	// page config
+    $theme = 'Nexus';
 	$title = 'Our Blog';
 	$tagLine = 'Read about all the great work we do';
 ?>
@@ -8,7 +9,7 @@
 <!DOCTYPE html>
 <html class="no-js">
 
-<?php include (ROOT.'/includes/head.php'); ?>
+<?php head($theme) ?>
 
 <body>
 
@@ -21,12 +22,12 @@
 
             appHeader(array(
                 'nav-links'  => array(
-                    'Home' => themeLink('/index.php'),
-                    'About' => themeLink('/about.php'),
-                    'Services' => themeLink('/services.php'),
-                    'Portfolio' => themeLink('/portfolio.php'),
-                    'Blog' => themeLink('/blog.php'),
-                    'Contact' => themeLink('/contact.php')
+                    'Home' => themeLink($theme, '/index.php'),
+                    'About' => themeLink($theme, '/about.php'),
+                    'Services' => themeLink($theme, '/services.php'),
+                    'Portfolio' => themeLink($theme, '/portfolio.php'),
+                    'Blog' => themeLink($theme, '/blog.php'),
+                    'Contact' => themeLink($theme, '/contact.php')
                 )
             ));
 
@@ -47,49 +48,49 @@
                         
                         articleItem(array(
                             'cta-modifiers' => '-oval',
-                            'link'          => themeLink('/blog-single.php'),
-                            'root'          => themeLink('/blog.php')
+                            'link'          => themeLink($theme, '/blog-single.php'),
+                            'root'          => themeLink($theme, '/blog.php')
                         ));
                         
                         articleItem(array(
                             'media'         => 'vimeo',
-                            'link'          => themeLink('/blog-single.php'),
-                            'root'          => themeLink('/blog.php'),
+                            'link'          => themeLink($theme, '/blog-single.php'),
+                            'root'          => themeLink($theme, '/blog.php'),
                             'cta-modifiers' => '-oval'
                         ));
                         
                         articleItem(array(
                             'media' => 'youtube',
-                            'link'          => themeLink('/blog-single.php'),
-                            'root'          => themeLink('/blog.php'),
+                            'link'          => themeLink($theme, '/blog-single.php'),
+                            'root'          => themeLink($theme, '/blog.php'),
                             'cta-modifiers' => '-oval'
                         ));
                         
                         articleItem(array(
                             'media' => 'carousel',
-                            'link'          => themeLink('/blog-single.php'),
-                            'root'          => themeLink('/blog.php'),
+                            'link'          => themeLink($theme, '/blog-single.php'),
+                            'root'          => themeLink($theme, '/blog.php'),
                             'cta-modifiers' => '-oval'
                         ));
                         
                         articleItem(array(
                             'media' => 'masonry',
-                            'link'          => themeLink('/blog-single.php'),
-                            'root'          => themeLink('/blog.php'),
+                            'link'          => themeLink($theme, '/blog-single.php'),
+                            'root'          => themeLink($theme, '/blog.php'),
                             'cta-modifiers' => '-oval'
                         ));
                         
                         articleItem(array(
                             'media' => 'audio',
-                            'link'          => themeLink('/blog-single.php'),
-                            'root'          => themeLink('/blog.php'),
+                            'link'          => themeLink($theme, '/blog-single.php'),
+                            'root'          => themeLink($theme, '/blog.php'),
                             'cta-modifiers' => '-oval'
                         ));
                         
                         articleItem(array(
                             'media' => 'codepen',
-                            'link'          => themeLink('/blog-single.php'),
-                            'root'          => themeLink('/blog.php'),
+                            'link'          => themeLink($theme, '/blog-single.php'),
+                            'root'          => themeLink($theme, '/blog.php'),
                             'cta-modifiers' => '-oval'
                         ));
                         
@@ -141,6 +142,6 @@
 
     <?php include (ROOT.'/includes/ui-enhancements.php'); ?>
 
-    <?php include (ROOT.'/includes/scripts.php'); ?>
+    <?php scripts($theme) ?>
 
 </body>

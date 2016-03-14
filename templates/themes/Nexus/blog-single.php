@@ -1,6 +1,7 @@
 <?php 
 	include ('../../app.php');
 	// page config
+    $theme = 'Nexus';
 	$title = 'Single Post Title';
 	$tagLine = 'Aenean lobortis ante nunc, curabitur at enim ac nisi lacinia.';
 ?>
@@ -8,7 +9,7 @@
 <!DOCTYPE html>
 <html class="no-js">
 
-<?php include (ROOT.'/includes/head.php'); ?>
+<?php head($theme) ?>
 
 <body>
 
@@ -21,12 +22,12 @@
 
             appHeader(array(
                 'nav-links'  => array(
-                    'Home' => themeLink('/index.php'),
-                    'About' => themeLink('/about.php'),
-                    'Services' => themeLink('/services.php'),
-                    'Portfolio' => themeLink('/portfolio.php'),
-                    'Blog' => themeLink('/blog.php'),
-                    'Contact' => themeLink('/contact.php')
+                    'Home' => themeLink($theme, '/index.php'),
+                    'About' => themeLink($theme, '/about.php'),
+                    'Services' => themeLink($theme, '/services.php'),
+                    'Portfolio' => themeLink($theme, '/portfolio.php'),
+                    'Blog' => themeLink($theme, '/blog.php'),
+                    'Contact' => themeLink($theme, '/contact.php')
                 )
             ));
 
@@ -100,8 +101,8 @@
                             'title'         => 'Kayzen is Released',
                             'cta-modifiers' => '-oval',
                             'span'          => 4,
-                            'link'          => themeLink('/blog-single.php'),
-                            'root'          => themeLink('/blog.php'),
+                            'link'          => themeLink($theme, '/blog-single.php'),
+                            'root'          => themeLink($theme, '/blog.php'),
                             'class'         => 'break-4-half break-2-full relative'
                         ));
                     
@@ -110,8 +111,8 @@
                             'title'         => 'Kayzen is Released',
                             'cta-modifiers' => '-oval',
                             'span'          => 4,
-                            'link'          => themeLink('/blog-single.php'),
-                            'root'          => themeLink('/blog.php'),
+                            'link'          => themeLink($theme, '/blog-single.php'),
+                            'root'          => themeLink($theme, '/blog.php'),
                             'class'         => 'break-4-half break-2-full relative'
                         ));
                     
@@ -120,8 +121,8 @@
                             'title'         => 'Kayzen is Released',
                             'cta-modifiers' => '-oval',
                             'span'          => 4,
-                            'link'          => themeLink('/blog-single.php'),
-                            'root'          => themeLink('/blog.php'),
+                            'link'          => themeLink($theme, '/blog-single.php'),
+                            'root'          => themeLink($theme, '/blog.php'),
                             'class'         => 'min-break-4 relative'
                         ));
                         
@@ -147,6 +148,6 @@
 
     <?php include (ROOT.'/includes/ui-enhancements.php'); ?>
 
-    <?php include (ROOT.'/includes/scripts.php'); ?>
+    <?php scripts($theme) ?>
 
 </body>
