@@ -38,8 +38,8 @@ module.exports = function(grunt) {
     var buildStyles  = 'app/styles/';
     
     // Theme Asset Paths
-    var themeBuildScripts = 'app/' + themePath + 'scripts/';
-    var themeBuildStyles  = 'app/' + themePath + 'styles/';
+    var themeBuildScripts = 'app/' + themePath;
+    var themeBuildStyles  = 'app/' + themePath;
 
     // Owl Carousel
     var owlPath = 'assets/vendor/Owl-Carousel/src/js/'; 

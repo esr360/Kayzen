@@ -1,30 +1,23 @@
 <?php function devAsset($theme, $path) { 
-
+    
     $extension = pathinfo($path, PATHINFO_EXTENSION);
     $path = pathinfo($path, PATHINFO_FILENAME);
-
+    
     if ($theme) {
-        $themePath = '/themes/'.$theme;
+        $themePath = '/themes/'.$theme.'/';
+        $stylesPath = null;
+        $scriptsPath = null;
     } else {
         $themePath = '';
-    }      
+        $stylesPath = '/styles/';
+        $scriptsPath = '/scripts/';
+    }    
             
     if ($extension === 'js') {
-            
-        if (env == 'dev') {
-            echo '<script src="'.appDir.$themePath.'/scripts/'.$path.'.js"></script>';
-        } else if (env == 'prod') {
-            echo '<script src="'.appDir.$themePath.'/scripts/'.$path.'.min.js"></script>';
-        } 
-    
-    } else if ($extension === 'css') {
-        
-        if (env == 'dev') {
-            echo '<link rel="stylesheet" href="'.appDir.$themePath.'/styles/'.$path.'.css">';
-        } else if (env == 'prod') {
-            echo '<link rel="stylesheet" href="'.appDir.$themePath.'/styles/'.$path.'.min.css">';
-        }
-        
-    }      
+        echo '<script src="'.appDir.$themePath.$scriptsPath.$path.((env === 'dev') ? '' : '.min').'.js"></script>';
+    }
+     else if ($extension === 'css') {
+        echo '<link rel="stylesheet" href="'.appDir.$themePath.$stylesPath.$path.((env == 'dev') ? '' : '.min').'.css">';
+    }
                      
 } ?>

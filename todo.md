@@ -32,6 +32,7 @@
 - document 'blocks' list modifier
 - fix issue when clicking "back" after submitting form
 - make cheatsheet more in-depth
+- improve the returned JSON data for Synergy
 
 # Backlog
 #============================================================
