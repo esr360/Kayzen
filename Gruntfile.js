@@ -131,7 +131,7 @@ module.exports = function(grunt) {
                 src: 'app/images'
             },
             pages: {
-                src: 'pages'
+                src: ['pages', 'themes']
             },
             normalizeSupportFor: {
                 src: 'assets/vendor/normalize-scss/sass/_support-for.scss'
@@ -369,7 +369,10 @@ module.exports = function(grunt) {
         watch: {
             scripts: {
                 files: _scripts,
-                tasks: ['concat', 'notify:scripts'],
+                tasks: [
+                    'concat', 
+                    'notify:scripts'
+                ],
                 options: {
                     spawn: false,
                 },
@@ -536,6 +539,19 @@ module.exports = function(grunt) {
                     dest: 'pages', 
                     ext: '.html'     
                 }]
+            },
+            themes: {
+                options: {
+                    processLinks: true,
+                    htmlhint: {}
+                },
+                files: [{
+                    expand: true, 
+                    cwd: 'templates/themes/', 
+                    src: '**/*.php', 
+                    dest: 'themes', 
+                    ext: '.html'     
+                }]
             }
         },
       
@@ -554,6 +570,7 @@ module.exports = function(grunt) {
                     cwd: '<%= relativeRoot.app.options.root %>',
                     src: [
                         'app/**/*.css', 
+                        'themes/**/*.html',
                         'pages/**/*.html'
                     ],
                     dest: 'prototype/'
@@ -689,15 +706,13 @@ module.exports = function(grunt) {
             'setPHPConstant:path',
             'setPHPConstant:realm'
         ];
-        var notify = [
-            'notify:app'
-        ];
-        return assetTasks.concat(backendTasks, notify);
+        return assetTasks.concat(backendTasks);
     };
     
     //Default
     grunt.registerTask('default', [
         'compile',
+        'notify:app',
         'watch',
     ]); 
        
