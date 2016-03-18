@@ -179,6 +179,6 @@
 
     <?php scripts() ?>
     
-    <?php devAsset(array('path' => 'isotope.pkgd.js')); ?>
+    <?php devAsset('', 'isotope.pkgd.js') ?>
 
 </body>

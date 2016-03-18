@@ -179,7 +179,7 @@
 
     <?php scripts() ?>
     
-    <?php devAsset(array('path' => 'jquery-ias.js')); ?>
-    <?php devAsset(array('path' => 'isotope.pkgd.js')); ?>
+    <?php devAsset('', 'jquery-ias.js') ?>
+    <?php devAsset('', 'isotope.pkgd.js') ?>
 
 </body>

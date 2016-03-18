@@ -131,6 +131,6 @@
 
     <?php scripts() ?>
     
-    <?php devAsset(array('path' => 'jquery-ias.js')); ?>
+    <?php devAsset('', 'jquery-ias.js') ?>
 
 </body>
