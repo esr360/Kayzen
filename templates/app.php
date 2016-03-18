@@ -24,7 +24,7 @@ define('themes', true);
  * Set how you intend to access your project's assets
  * @const path
  *
- * Values: 'root' | 'relative' | 'real' 
+ * Values: 'root' | 'relative'
  */
 define('path', 'root');
 
@@ -37,12 +37,6 @@ define('path', 'root');
 define('realm', 'demo');
 
 /**
- * Set the relative path to Kayzen if it is not in the root
- * @const projectPath
- */
-define('projectPath', '/Kayzen');
-
-/**
  * Set the root php/template directory
  * @const ROOT
  *
@@ -52,14 +46,10 @@ define('ROOT', dirname(__FILE__));
 
 /**
  * Set the path to the app directory
+ * @const appDir
  */
- if (path == 'root') {
-    define('appDir', '/app');
-} else if (path == 'relative') {
-    define('appDir', projectPath.'/app');
-} else if (path == 'real') {
-    define('appDir', realpath(__DIR__ . '/../app'));
-}
+ 
+define('appDir', '/app');
 
 /******************************************************************
  * Templates

@@ -8,7 +8,7 @@
 <!DOCTYPE html>
 <html class="no-js">
 
-<?php include (ROOT.'/includes/head.php'); ?>
+<?php head() ?>
 
 <body>
 
@@ -174,17 +174,13 @@ function breakpoint(media, value) {
 			
 		</section>
 
-		<?php 
-
-            appFooter();
-            
-        ?>
+		<?php appFooter() ?>
 
     </div><!-- Site Canvas -->
 
     <?php include (ROOT.'/includes/ui-enhancements.php'); ?>
-
-    <?php include (ROOT.'/includes/scripts.php'); ?>
+    
+    <?php scripts() ?>
 		
     <?php include (ROOT.'/includes/syntax-highlighter.php'); ?>
 

@@ -758,11 +758,6 @@ $(document).ready(function() {
 							<td><code class="value">false</code></td>
 							<td>If enabled, templates will look to assets nested inside a self-named directory, e.g. app/themes/Kayzen/scripts/app.js.</td>
 						</tr>
-						<tr>
-							<td><code>projectPath</code></td>
-							<td><code class="value">'/../'.theme</code></td>
-							<td>Used when the above <code>host</code> constant is set to 'static'. Also uses the above <code>theme</code> constant.</td>
-						</tr>
                     </tbody>
                 </table>
                 

@@ -34,6 +34,7 @@
     "grunt-php-set-constant": "0.0.15",
     "grunt-php2html": "^0.2.0",
     "grunt-postcss": "^0.6.0",
+    "grunt-relative-root": "^0.5.0",
     "grunt-responsive-images": "^0.1.7",
     "grunt-run-grunt": "^0.1.4",
     "grunt-scss-lint": "^0.3.8",

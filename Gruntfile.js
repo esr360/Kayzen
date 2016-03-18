@@ -22,7 +22,7 @@ module.exports = function(grunt) {
     // 'dev' | 'prod' - used to determine asset minification
     var env = grunt.option('env') || 'dev';
     
-    // 'root' | 'relative' | 'real' - used to determine asset paths
+    // 'root' | 'relative' - used to determine page link paths
     var path = grunt.option('path') || 'root';
     
     // Set to store assets in individual theme directories
@@ -115,6 +115,9 @@ module.exports = function(grunt) {
             app: {
                 src: ['app/*', '!app/themes/**']
             },
+            prototype: {
+                src: 'prototype'
+            },
             theme: {
                 src: 'app/themes/' + theme
             },
@@ -193,6 +196,26 @@ module.exports = function(grunt) {
                     {
                         src: 'templates/includes/contact-form.php',
                         dest: 'app/contact-form.php'
+                    }
+                ]
+            },
+            prototype: {
+                files: [
+                    {
+                        src: 'app/**/*.js',
+                        dest: 'prototype/'
+                    },
+                    {
+                        cwd: 'app/fonts',
+                        src: '**/*',
+                        dest: 'prototype/app/fonts',
+                        expand: true
+                    },
+                    {
+                        cwd: 'app/images',
+                        src: '**/*',
+                        dest: 'prototype/app/images',
+                        expand: true
                     }
                 ]
             },
@@ -517,6 +540,28 @@ module.exports = function(grunt) {
         },
       
         //---------------------------------------------------------
+        // Relative Root
+        // https://github.com/sindresorhus/grunt-sass
+        //---------------------------------------------------------
+        
+        relativeRoot: {
+            app: {
+                options: {
+                    root: ''
+                },
+                files: [{
+                    expand: true,
+                    cwd: '<%= relativeRoot.app.options.root %>',
+                    src: [
+                        'app/**/*.css', 
+                        'pages/**/*.html'
+                    ],
+                    dest: 'prototype/'
+                }]
+            }
+        },
+      
+        //---------------------------------------------------------
         // Notify
         // https://github.com/sindresorhus/grunt-sass
         //---------------------------------------------------------
@@ -603,6 +648,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-php-set-constant');
     grunt.loadNpmTasks('grunt-php2html');
     grunt.loadNpmTasks('grunt-postcss');
+    grunt.loadNpmTasks('grunt-relative-root');
     grunt.loadNpmTasks('grunt-responsive-images');
     grunt.loadNpmTasks('grunt-run-grunt');
     grunt.loadNpmTasks('grunt-scss-lint');
@@ -661,14 +707,6 @@ module.exports = function(grunt) {
         'run_grunt'
     ]);
     
-    // Generate HTML templates
-    grunt.registerTask('templates', [
-        'clean:pages',
-        'setPHPConstant:path',
-        'php2html',
-        'compile'
-    ]);
-    
     // Compile the app
     grunt.registerTask('compile', 
         gruntCompile(env)
@@ -684,12 +722,29 @@ module.exports = function(grunt) {
         gruntCompile('prod')
     );
     
+    // Generate HTML templates
+    grunt.registerTask('templates', [
+        'clean:pages',
+        'setPHPConstant:relative',
+        'php2html',
+        'setPHPConstant:path',
+    ]);
+    
     // Package the app
-    grunt.registerTask('package', 
+    grunt.registerTask('prototype', [
+        'clean:prototype',
+        'templates',
+        'relativeRoot',
+        'copy:prototype',
+        'clean:pages'
+    ]);
+    
+    // Package the app
+    grunt.registerTask('package', [
         'compile',
         'responsive_images',
-        'templates'
-    );
+        'prototype'
+    ]);
     
     // Run asset linting and tests
     grunt.registerTask('test', [
