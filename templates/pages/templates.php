@@ -8,7 +8,7 @@
 <!DOCTYPE html>
 <html class="no-js">
 
-<?php include (ROOT.'/includes/head.php'); ?>
+<?php head() ?>
 
 <body>
 
@@ -228,17 +228,13 @@
 				
 		</section>
 		
-		<?php 
-        
-            appFooter();
-            
-        ?>
+		<?php appFooter() ?>
 
     </div><!-- Site Canvas -->
 
     <?php include (ROOT.'/includes/ui-enhancements.php'); ?>
 
-    <?php include (ROOT.'/includes/scripts.php'); ?>
+    <?php scripts() ?>
 
 </body>
 </html>
