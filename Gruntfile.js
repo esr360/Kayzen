@@ -130,9 +130,6 @@ module.exports = function(grunt) {
             images: {
                 src: 'app/images'
             },
-            pages: {
-                src: ['pages', 'themes']
-            },
             normalizeSupportFor: {
                 src: 'assets/vendor/normalize-scss/sass/_support-for.scss'
             },
@@ -203,6 +200,10 @@ module.exports = function(grunt) {
                 files: [
                     {
                         src: 'app/**/*.js',
+                        dest: 'prototype/'
+                    },
+                    {
+                        src: 'app/**/*.css',
                         dest: 'prototype/'
                     },
                     {
@@ -527,7 +528,7 @@ module.exports = function(grunt) {
         //---------------------------------------------------------
         
         php2html: {
-            default: {
+            pages: {
                 options: {
                     processLinks: true,
                     htmlhint: {}
@@ -536,7 +537,7 @@ module.exports = function(grunt) {
                     expand: true, 
                     cwd: 'templates/pages/', 
                     src: '**/*.php', 
-                    dest: 'pages', 
+                    dest: 'prototype/pages', 
                     ext: '.html'     
                 }]
             },
@@ -549,7 +550,7 @@ module.exports = function(grunt) {
                     expand: true, 
                     cwd: 'templates/themes/', 
                     src: '**/*.php', 
-                    dest: 'themes', 
+                    dest: 'prototype/themes', 
                     ext: '.html'     
                 }]
             }
@@ -569,11 +570,11 @@ module.exports = function(grunt) {
                     expand: true,
                     cwd: '<%= relativeRoot.app.options.root %>',
                     src: [
-                        'app/**/*.css', 
-                        'themes/**/*.html',
-                        'pages/**/*.html'
+                        'prototype/app/**/*.css', 
+                        'prototype/themes/**/*.html',
+                        'prototype/pages/**/*.html'
                     ],
-                    dest: 'prototype/'
+                    dest: ''
                 }]
             }
         },
@@ -739,7 +740,6 @@ module.exports = function(grunt) {
     
     // Generate HTML templates
     grunt.registerTask('templates', [
-        'clean:pages',
         'setPHPConstant:relative',
         'php2html',
         'setPHPConstant:path',
@@ -749,9 +749,8 @@ module.exports = function(grunt) {
     grunt.registerTask('prototype', [
         'clean:prototype',
         'templates',
-        'relativeRoot',
         'copy:prototype',
-        'clean:pages'
+        'relativeRoot'
     ]);
     
     // Package the app
