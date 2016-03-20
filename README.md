@@ -802,7 +802,7 @@ If you are using Grunt and the provided Gruntfile.js, you can easily compile and
 
 ### Grunt Options
 
-Using the `[grunt.option](http://gruntjs.com/api/grunt.option)` API, you can pass several parameters on the command line when running the above tasks:
+Using the [`grunt.option`](http://gruntjs.com/api/grunt.option) API, you can pass several parameters on the command line when running the above tasks:
 
 The below values will also automatically be updated in **app.php**.
 
