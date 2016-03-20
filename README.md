@@ -800,7 +800,7 @@ If you are using Grunt and the provided Gruntfile.js, you can easily compile and
 | `grunt prototype` | This task creates a fully useable prototype for the entire app which can be uploaded to a server. |
 | `grunt package` | This runs the `compile`, `responsive_images` and `prototype` tasks.
 | `grunt test` | This will execute code linters on your .scss and .js files. |
-| `ship` | This is the final task which should be ran before deploying to production. Runs the `package`, `test` and `compress:images` tasks. |
+| `grunt ship` | This is the final task which should be ran before deploying to production. Runs the `package`, `test` and `compress:images` tasks. |
 | `grunt compress:images` | This will compress all images in the 'demo' directory using the [TinyPNG API](https://tinypng.com/developers). Use liberally. |
 
 ### Grunt Options
