@@ -562,8 +562,8 @@ Load app/scripts/**jquery-ias.js** at the bottom of the page right underneath al
 
 ```html  
 ...          
-<script src="/app/scripts/app.js">        
-<script src="/app/scripts/jquery-ias.js">
+<script src="/app/scripts/app.js"></script> 
+<script src="/app/scripts/jquery-ias.js"></script>
 ```
 
 ##### Create The Pagination
@@ -573,6 +573,7 @@ For each set of 'loaded' content, there needs to be a separate HTML file with th
 ```html
 <ul id="pagination">
     <li class="next"><a href="3-cols-infinite-scroll-2.php">2</a></li>
+</ul>
 ```
 
 ##### Call the Infinite Scroll Plugin
