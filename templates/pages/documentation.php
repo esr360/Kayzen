@@ -749,7 +749,7 @@ $(document).ready(function() {
 							<td>Can be either <code>dev</code> or <code>prod</code>. If <code>prod</code>, the code will look for minified (.min.*) assets.</td>
 						</tr>
 						<tr>
-							<td><code>host</code></td>
+							<td><code>path</code></td>
 							<td><code class="value">'server'</code></td>
 							<td>Can either be <code>static</code>,<code>server</code> or <code>explorer</code>, and defines how asset paths should be loaded.</td>
 						</tr>
