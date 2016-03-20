@@ -3,11 +3,11 @@
 * [Getting Started](#getting-started)
 * [Configure](#configure)
 * [Build](#build)
-* [Test & Deploy](#test-deploy)
+* [Test & Deploy](#test--deploy)
 
 ## Getting Started
 
-[Click Here](#build-HTML-templates) if you just want to get started adding your content to the provided HTML files without touching any other code.
+[Click Here](#html-templates) if you just want to get started adding your content to the provided HTML files without touching any other code.
 
 It's great that you've decided to checkout Kayzen! How you go about buildig your next project with it depends on many things such as your prefered workflow, your skill level, amount of time you have etc. This page will cover the basics of all the different ways Kayzen can be adapted to suit any need. It is assumed that you have at least basic HTML, CSS and JavaScript/jQuery understanding.
 
@@ -70,7 +70,7 @@ To clone Kayzen from the official repository and all of its submodules, run the 
 git clone https://github.com/esr360/Kayzen.git --recursive
 ```
 
-The **--recursive** flag is required to install all the git submodules.
+> The **--recursive** flag is required to install all the git submodules.
 
 If you are using Node, you can run `npm install` to allow you to use Grunt to build Kayzen from the source files. Once installed, you should first run `grunt setup` to run the initial setup tasks ([learn more](#grunt-tasks)). After running `npm install` you should now have the following Node modules in the **node_modules** directory:
 
