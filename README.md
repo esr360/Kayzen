@@ -545,7 +545,7 @@ Finally you need to call the loaded plugin on the relevant container, ensuring t
 
     });
 </script>
-<```
+```
 
 Where `#blog-items` is the direct container of your portfolio/blog items, and `#blog-items` is the container for your filter navigation items.
 
