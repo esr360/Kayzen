@@ -437,25 +437,25 @@ $(document).ready(function() {
 
 To add a parallax effect to the billboard background, you can add the `data-stellar-background-ratio` data attribute to activate the [Stellar](http://markdalgleish.com/projects/stellar.js/) jQuery plugin.
 
-<pre data-enlighter-language="html" class="EnlighterJSRAW">             
- <section class="billboard-overlay-full-screen" data-stellar-background-ratio="0.5">
-     ...
- </section>
-</pre>
+```html           
+<section class="billboard-overlay-full-screen" data-stellar-background-ratio="0.5">
+    ...
+</section>
+```
 
 #### Parallax Billboard Content
 
 To add a faded parallax effect to the billboard content (as opposed to the background), structure your billboard's HTML like so:
 
-<pre data-enlighter-language="html" class="EnlighterJSRAW">             
- <section class="billboard-full-screen">
-     <div class="billboard_wrapper container">
+```html         
+<section class="billboard-full-screen">
+    <div class="billboard_wrapper container">
         <div class="billboard_content" id="billboard-fade-parallax">
             ...
         </div>
-     </div>
- </section>
-</pre>
+    </div>
+</section>
+```
 
 The key to achieving the effect is the `billboard-fade-parallax` id on your billboard's content element.
 
@@ -473,17 +473,17 @@ To create columns with masonry items, you can either use one of the provided [te
 
 Load app/scripts/**isotope.pkgd.js** at the bottom of the page right underneath all other scripts:
 
-<pre data-enlighter-language="html" class="EnlighterJSRAW">   
+```html
 ...          
 <script src="/app/scripts/app.js">        
 <script src="/app/scripts/isotope.pkgd.js">
-</pre>
+```
 
 ##### Call The Isotope Plugin
 
 Finally you need to call the loaded plugin on the relevant container, ensuring the code is inside a `document.ready` function, and `window.load` function:
 
-<pre data-enlighter-language="html" class="EnlighterJSRAW">   
+```html 
 <script>
     $(document).ready(function() {
 
@@ -493,7 +493,7 @@ Finally you need to call the loaded plugin on the relevant container, ensuring t
 
     });
 </script>
-</pre>
+```
 
 Where `#blog-items` is the direct container of your portfolio/blog items.
 
@@ -505,17 +505,17 @@ To create a set of filterable items, you can either use one of the provided [tem
 
 Load app/scripts/**isotope.pkgd.js** at the bottom of the page right underneath all other scripts:
 
-<pre data-enlighter-language="html" class="EnlighterJSRAW">   
+```html 
 ...          
 <script src="/app/scripts/app.js">        
 <script src="/app/scripts/isotope.pkgd.js">
-</pre>
+```
 
 ##### Create The Navigation
 
 Add the following code wherever you want the filter navigation to appear, changing `id="blog-types"` to whatever you desire and swapping out the example filter attributes for your own:
 
-<pre data-enlighter-language="html" class="EnlighterJSRAW">       
+```html      
 <ul class="tabs_nav-pills" id="blog-types">
     <li class="button-pill-grey-1-thin active" data-filter="*">View All</li>
     <li class="button-pill-grey-1-thin" data-filter="[data-image]">Image</li>
@@ -523,13 +523,13 @@ Add the following code wherever you want the filter navigation to appear, changi
     <li class="button-pill-grey-1-thin" data-filter="[data-vimeo], [data-youtube]">Video</li>
     <li class="button-pill-grey-1-thin" data-filter="[data-audio]">Audio</li>
 </ul>  
-</pre>
+```
 
 ##### Call The Isotope Plugin
 
 Finally you need to call the loaded plugin on the relevant container, ensuring the code is inside a `document.ready` function, and `window.load` function:
 
-<pre data-enlighter-language="html" class="EnlighterJSRAW">   
+```html  
 <script>
     $(document).ready(function() {
 
@@ -545,7 +545,7 @@ Finally you need to call the loaded plugin on the relevant container, ensuring t
 
     });
 </script>
-</pre>
+<```
 
 Where `#blog-items` is the direct container of your portfolio/blog items, and `#blog-items` is the container for your filter navigation items.
 
@@ -557,27 +557,26 @@ To create a set of infinitely-scrollable items, you can either use one of the pr
 
 Load app/scripts/**jquery-ias.js** at the bottom of the page right underneath all other scripts:
 
-<pre data-enlighter-language="html" class="EnlighterJSRAW">   
+```html  
 ...          
 <script src="/app/scripts/app.js">        
 <script src="/app/scripts/jquery-ias.js">
-</pre>
+```
 
 ##### Create The Pagination
 
 For each set of 'loaded' content, there needs to be a separate HTML file with the content for the infinite scroll page to fetch the next set of items from. You can duplicate the first page and just update the pagination link as appropriate. The plugin will by default look for an element with an id of `pagination` to get the next page to pull the content from.
 
-<pre data-enlighter-language="html" class="EnlighterJSRAW">   
+```html
 <ul id="pagination">
     <li class="next"><a href="3-cols-infinite-scroll-2.php">2</a></li>
-</ul>
-</pre>
+```
 
 ##### Call the Infinite Scroll Plugin
 
 You then need to call the loaded plugin on the relevant container, ensuring the code is inside a `document.ready` function:
 
-<pre data-enlighter-language="html" class="EnlighterJSRAW">   
+```html
 <script>
     $(document).ready(function() {
 
@@ -587,13 +586,13 @@ You then need to call the loaded plugin on the relevant container, ensuring the 
 
     });
 </script>
-</pre>
+```
 
 Where `#blog-items` is the direct container for your portfolio/blog items.
 
 If you are calling other functions on your portfolio items, perhaps a carousel function, you will need to pass it to the infinite-scroll plugin so it can be re-called on the newly loaded items. This can be done like so:
 
-<pre data-enlighter-language="html" class="EnlighterJSRAW">   
+```html  
 <script>
     $(document).ready(function() {
 
@@ -609,7 +608,7 @@ If you are calling other functions on your portfolio items, perhaps a carousel f
 
     });
 </script>
-</pre>
+```
 
 ### PHP Templates
 
@@ -629,101 +628,108 @@ The core configuration file for the PHP templates can be found at templates/**ap
 
 The below includes can be used on any page which includes the **app.php** file, and will output some code depending on the options you pass to the function. They are located in the templates/**includes** directory.
 
-*   [articleItem()](#)
-*   [devAsset()](#)
+* [articleItem()](#)
+* [devAsset()](#)
 
 You can use any of the above functions in yout PHP/PHTML pages like so:
 
-<pre data-enlighter-language="php" class="EnlighterJSRAW">articleItem();
-</pre>
+```php
+articleItem();
+```
 
 You can pass custom options to the function like so:
 
-<pre data-enlighter-language="php" class="EnlighterJSRAW">articleItem(array(
+```php
+articleItem(array(
     'media'  => 'carousel',
     'size'   => 'small',
     'span'   => 4
 ));
-</pre>
+```
 
 ### Modules
 
 The below modules can be used on any page which includes the **app.php** file, and will output some code depending on the options you pass to the function. They are located in the templates/**modules** directory.
 
-*   [appFooter()](#)
-*   [appHeader()](#)
-*   [billboard()](#)
-*   [earthSlider()](#)
-*   [googleMap()](#)
-*   [sidebar()](#)
-*   [topBar()](#)
+* [appFooter()](#)
+* [appHeader()](#)
+* [billboard()](#)
+* [earthSlider()](#)
+* [googleMap()](#)
+* [sidebar()](#)
+* [topBar()](#)
 
 You can use any of the above functions in yout PHP/PHTML pages like so:
 
-<pre data-enlighter-language="php" class="EnlighterJSRAW">billboard();
-</pre>
+```php
+billboard();
+```
 
 You can pass custom options to the function like so:
 
-<pre data-enlighter-language="php" class="EnlighterJSRAW">billboard(array(
+```php
+billboard(array(
     'title'    => 'My Billboard',
     'tag-line' => 'My Tagline'
 ));
-</pre>
+```
 
 ### Sections
 
 The below sections can be used on any page which includes the **app.php** file, and will output some code depending on the options you pass to the function. They are located in the templates/**sections** directory.
 
-*   [clients()](#)
-*   [contactUs()](#)
-*   [elements()](#)
-*   [featureCards()](#)
-*   [featureQuote()](#)
-*   [inStore()](#)
-*   [infoBanner()](#)
-*   [keyFeatures()](#)
-*   [keyFeatures-2()](#)
-*   [layouts()](#)
-*   [masonryFeatures()](#)
-*   [moreFeatures()](#)
-*   [objects()](#)
-*   [options()](#)
-*   [ourTeam()](#)
-*   [pricing()](#)
-*   [promoBanner()](#)
-*   [promoSection()](#)
-*   [recentWork()](#)
-*   [recentArticles()](#)
-*   [responsive()](#)
-*   [services()](#)
-*   [shareTheLove()](#)
-*   [shortcodes()](#)
-*   [showcase()](#)
-*   [skill()](#)
-*   [statistics()](#)
-*   [testimonials()](#)
-*   [twitterFeed()](#)
-*   [whyChooseUs()](#)
+* [clients()](#)
+* [contactUs()](#)
+* [elements()](#)
+* [featureCards()](#)
+* [featureQuote()](#)
+* [inStore()](#)
+* [infoBanner()](#)
+* [keyFeatures()](#)
+* [keyFeatures-2()](#)
+* [layouts()](#)
+* [masonryFeatures()](#)
+* [moreFeatures()](#)
+* [objects()](#)
+* [options()](#)
+* [ourTeam()](#)
+* [pricing()](#)
+* [promoBanner()](#)
+* [promoSection()](#)
+* [recentWork()](#)
+* [recentArticles()](#)
+* [responsive()](#)
+* [services()](#)
+* [shareTheLove()](#)
+* [shortcodes()](#)
+* [showcase()](#)
+* [skill()](#)
+* [statistics()](#)
+* [testimonials()](#)
+* [twitterFeed()](#)
+* [whyChooseUs()](#)
 
 You can use any of the above functions in yout PHP/PHTML pages like so:
 
-<pre data-enlighter-language="php" class="EnlighterJSRAW">clients();
-</pre>
+```php
+clients();
+```
 
 You can pass custom options to the function like so:
 
-<pre data-enlighter-language="php" class="EnlighterJSRAW">clients(array(
+```php
+clients(array(
     'title'     => 'Popular Brands',
     'sub-title' => 'Get The Best Deals' 
 ));
-</pre>
+```
 
 ### Basic Template
 
 Several things are required to create a PHP page using Kayzen. Below shows the minimum requirements to set up a blank page with all global modules and assets:
 
-<pre data-enlighter-language="html" class="EnlighterJSRAW"><?php 
+```html
+<?php 
     include ('../app.php');
     $title = 'Documentation';
     $tagline = 'Lorem Ipsum Dolor Sit Amet';
@@ -771,7 +777,7 @@ Several things are required to create a PHP page using Kayzen. Below shows the m
     </body>
 
 </html>
-</pre>
+```
 
 If you are using Grunt and the provided Gruntfile.js, you can easily compile and build your app for development and production envrionments generating appropriate HTML files from your source PHP templates - see the below Grunt tasks.
 
@@ -806,11 +812,13 @@ The below values will also automatically be updated in **app.php**.
 
 The above options would be used when calling the grunt task, like so:
 
-<pre data-enlighter-language="html" class="EnlighterJSRAW">grunt compile --env=prod
-</pre>
+```
+grunt compile --env=prod
+```
 
-<pre data-enlighter-language="html" class="EnlighterJSRAW">grunt templates --theme=YOURTHEME
-</pre>
+```
+grunt templates --theme=YOURTHEME
+```
 
 ## Test & Deploy
 
