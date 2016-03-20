@@ -169,8 +169,8 @@ The other files which are includes in **app.js** are:
 
 * assets/modules/utilities/core/core.js
 * assets/includes/*.js
-* assets/modules/elements/&lowast;&lowast;/*.js
-* assets/modules/objects/&lowast;&lowast;/*.js
+* assets/modules/elements/&ast;&ast;/*.js
+* assets/modules/objects/&ast;&ast;/*.js
 * assets/themes/YOURTHEME/YOURTHEME.js
 
 Some pages use certain JavaScript files on an opt-in basis, and as such these files are not part of **app.js** and will need to be copied over into the **app** directory (app/scripts). These files include:
