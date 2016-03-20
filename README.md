@@ -52,7 +52,6 @@ Both the default provided `app.js` and `app.css` contain code from several third
 * [Kayzen-GS](https://github.com/esr360/Kayzen-GS)
 * [Magnific-Popup](https://github.com/dimsemenov/Magnific-Popup)
 * [Masonry](https://github.com/SnapKit/Masonry)
-* [Synergy](https://github.com/esr360/Synergy)
 * [MooTools-Core](https://github.com/mootools/mootools-core)
 * [normalize-scss](https://github.com/JohnAlbin/normalize-scss)
 * [Owl-Carousel](https://github.com/smashingboxes/OwlCarousel2)
@@ -60,6 +59,8 @@ Both the default provided `app.js` and `app.css` contain code from several third
 * [SassyJSON](https://github.com/esr360/SassyJSON)
 * [ScrollTrigger](https://github.com/esr360/ScrollTrigger)
 * [Stellar](https://github.com/markdalgleish/stellar.js/)
+* [support-for](https://github.com/JohnAlbin/support-for)
+* [Synergy](https://github.com/esr360/Synergy)
 * [TweeCool](https://github.com/esr360/tweecool-jquery-plugin)
 
 You will notice that all of the used third party resources exist on Github, and as such are included as [Git Submodules](https://git-scm.com/book/en/v2/Git-Tools-Submodules). If you have purchased a license for Kayzen, you are entitled to access to the private Github repository [located here](https://github.com/esr360/Kayzen). If you do not already have access, [get in touch with us](#) to gain access.
@@ -89,11 +90,13 @@ If you are using Node, you can run `npm install` to allow you to use Grunt to bu
 * [grunt-php-set-constant](https://github.com/pajtai/grunt-php-set-constant)
 * [grunt-php2html](https://github.com/bezoerb/grunt-php2html)
 * [grunt-postcss](https://github.com/nDmitry/grunt-postcss)
+* [grunt-relative-root](https://github.com/hurrymaplelad/grunt-relative-root)
 * [grunt-responsive-images](https://github.com/andismith/grunt-responsive-images)
 * [grunt-run-grunt](https://github.com/Bartvds/grunt-run-grunt)
 * [grunt-scss-lint](https://github.com/ahmednuaman/grunt-scss-lint)
 * [grunt-text-replace](https://github.com/yoniholmes/grunt-text-replace)
 * [grunt-tinypng](https://github.com/marrone/grunt-tinypng)
+* [nopt-grunt-fix](https://github.com/widgetworks/nopt-grunt-fix)
 
 #### Ehnanced Workflow Features
 
@@ -166,8 +169,8 @@ The other files which are includes in **app.js** are:
 
 * assets/modules/utilities/core/core.js
 * assets/includes/*.js
-* assets/modules/elements/**/*.js
-* assets/modules/objects/**/*.js
+* assets/modules/elements/&lowast;&lowast;/*.js
+* assets/modules/objects/&lowast;&lowast;/*.js
 * assets/themes/YOURTHEME/YOURTHEME.js
 
 Some pages use certain JavaScript files on an opt-in basis, and as such these files are not part of **app.js** and will need to be copied over into the **app** directory (app/scripts). These files include:
