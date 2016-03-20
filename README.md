@@ -38,7 +38,7 @@ The following section is only relevant if your workflow involves building Kayzen
 * [GraphicsMagick*](http://www.graphicsmagick.org/)
 * [php-cgi*](https://github.com/bezoerb/grunt-php2html#installing-php-cgi)
 
-/* indicates that the requirement is only for [ehnanced workflow features](#enhancedWorkflowFeatures)
+&lowast; indicates that the requirement is only for [ehnanced workflow features](#enhancedWorkflowFeatures)
 
 Both the default provided `app.js` and `app.css` contain code from several third party libraries and plugins. The files for these libraries and plugins reside in the **assets/vendor** folder, and include the following:
 
