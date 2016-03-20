@@ -197,28 +197,12 @@ module.exports = function(grunt) {
                 ]
             },
             prototype: {
-                files: [
-                    {
-                        src: 'app/**/*.js',
-                        dest: 'prototype/'
-                    },
-                    {
-                        src: 'app/**/*.css',
-                        dest: 'prototype/'
-                    },
-                    {
-                        cwd: 'app/fonts',
-                        src: '**/*',
-                        dest: 'prototype/app/fonts',
-                        expand: true
-                    },
-                    {
-                        cwd: 'app/images',
-                        src: '**/*',
-                        dest: 'prototype/app/images',
-                        expand: true
-                    }
-                ]
+                files: [{
+                    cwd: 'app',
+                    src: '**/*',
+                    dest: 'prototype/app',
+                    expand: true
+                }]
             },
             images: {
                 files: [{
