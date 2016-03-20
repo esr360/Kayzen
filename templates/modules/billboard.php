@@ -1,7 +1,7 @@
 <?php function billboard($custom = array()) { ?>
 
     <?php $options = array_merge(array(
-        'type'      => 'default', // 'homepage' / 'videoBg'
+        'type'      => 'default', // 'homepage' | 'videoBg'
         'headline'  => 'Kayzen',
         'modifiers' => null,
         'title'     => null,
