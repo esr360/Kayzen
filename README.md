@@ -1,3 +1,10 @@
+# Kayzen
+
+* [Getting Started](#getting-started)
+* [Configure](#configure)
+* [Build](#build)
+* [Test & Deploy](#test-deploy)
+
 ## Getting Started
 
 [Click Here](#build-HTML-templates) if you just want to get started adding your content to the provided HTML files without touching any other code.
@@ -6,11 +13,11 @@ It's great that you've decided to checkout Kayzen! How you go about buildig your
 
 To start from the bottom up, Kayzen is built using HTML5, CSS3 and jQuery. At the bare minimum, each Kayzen wepage should be served the following JavaScript and CSS assets:
 
-*   app/scripts/**jquery.js**
-*   app/scripts/**app.js**
-*   app/scripts/**pseudojQuery-start.js**
-*   app/scripts/**pseudojQuery-end.js**
-*   app/styles/**app.css**
+* app/scripts/**jquery.js**
+* app/scripts/**app.js**
+* app/scripts/**pseudojQuery-start.js**
+* app/scripts/**pseudojQuery-end.js**
+* app/styles/**app.css**
 
 The only files that would ever need to be modified are **app.js** and **app.css**. The other files (jQuery and pseudojQuery) are JavaScript libraries which can be left untouched. Read more about pseudojQuery [here](https://github.com/esr360/pseudojQuery).
 
@@ -24,70 +31,69 @@ At this stage, it is not essential to know about JavaScript concatenation. As lo
 
 The following section is only relevant if your workflow involves building Kayzen yourself from the source files form Github.
 
-<div class="well object">
-
 #### Full Requirements
 
-*   Minimum Sass 3.4
-*   Node
-*   [GraphicsMagick*](http://www.graphicsmagick.org/)
-*   [php-cgi*](https://github.com/bezoerb/grunt-php2html#installing-php-cgi)
+* Minimum Sass 3.4
+* Node
+* [GraphicsMagick*](http://www.graphicsmagick.org/)
+* [php-cgi*](https://github.com/bezoerb/grunt-php2html#installing-php-cgi)
 
-<small>* indicates that the requirement is only for [ehnanced workflow features](#enhancedWorkflowFeatures)</small></div>
+/* indicates that the requirement is only for [ehnanced workflow features](#enhancedWorkflowFeatures)
 
 Both the default provided `app.js` and `app.css` contain code from several third party libraries and plugins. The files for these libraries and plugins reside in the **assets/vendor** folder, and include the following:
 
-*   [Aloads](https://github.com/awedoo/aloads)
-*   [Englighter](https://github.com/AndiDittrich/EnlighterJS)
-*   [Font-Awesome](https://github.com/FortAwesome/Font-Awesome)
-*   [Infinite-AJAX-Scroll](https://github.com/webcreate/infinite-ajax-scroll)
-*   [Isotope](https://github.com/metafizzy/isotope)
-*   [jQuery](https://github.com/jquery/jquery)
-*   [jquery-animateNumber](https://github.com/aishek/jquery-animateNumber)
-*   [Kayzen-GS](https://github.com/esr360/Kayzen-GS)
-*   [Magnific-Popup](https://github.com/dimsemenov/Magnific-Popup)
-*   [Masonry](https://github.com/SnapKit/Masonry)
-*   [Synergy](https://github.com/esr360/Synergy)
-*   [MooTools-Core](https://github.com/mootools/mootools-core)
-*   [normalize-scss](https://github.com/JohnAlbin/normalize-scss)
-*   [Owl-Carousel](https://github.com/smashingboxes/OwlCarousel2)
-*   [pseudojQuery](https://github.com/esr360/pseudojQuery)
-*   [SassyJSON](https://github.com/esr360/SassyJSON)
-*   [ScrollTrigger](https://github.com/esr360/ScrollTrigger)
-*   [Stellar](https://github.com/markdalgleish/stellar.js/)
-*   [TweeCool](https://github.com/esr360/tweecool-jquery-plugin)
+* [Aloads](https://github.com/awedoo/aloads)
+* [Englighter](https://github.com/AndiDittrich/EnlighterJS)
+* [Font-Awesome](https://github.com/FortAwesome/Font-Awesome)
+* [Infinite-AJAX-Scroll](https://github.com/webcreate/infinite-ajax-scroll)
+* [Isotope](https://github.com/metafizzy/isotope)
+* [jQuery](https://github.com/jquery/jquery)
+* [jquery-animateNumber](https://github.com/aishek/jquery-animateNumber)
+* [Kayzen-GS](https://github.com/esr360/Kayzen-GS)
+* [Magnific-Popup](https://github.com/dimsemenov/Magnific-Popup)
+* [Masonry](https://github.com/SnapKit/Masonry)
+* [Synergy](https://github.com/esr360/Synergy)
+* [MooTools-Core](https://github.com/mootools/mootools-core)
+* [normalize-scss](https://github.com/JohnAlbin/normalize-scss)
+* [Owl-Carousel](https://github.com/smashingboxes/OwlCarousel2)
+* [pseudojQuery](https://github.com/esr360/pseudojQuery)
+* [SassyJSON](https://github.com/esr360/SassyJSON)
+* [ScrollTrigger](https://github.com/esr360/ScrollTrigger)
+* [Stellar](https://github.com/markdalgleish/stellar.js/)
+* [TweeCool](https://github.com/esr360/tweecool-jquery-plugin)
 
 You will notice that all of the used third party resources exist on Github, and as such are included as [Git Submodules](https://git-scm.com/book/en/v2/Git-Tools-Submodules). If you have purchased a license for Kayzen, you are entitled to access to the private Github repository [located here](https://github.com/esr360/Kayzen). If you do not already have access, [get in touch with us](#) to gain access.
 
 To clone Kayzen from the official repository and all of its submodules, run the following code on your command line in the directory you wish Kayzen to be cloned into:
 
-<pre data-enlighter-language="css" class="EnlighterJSRAW">git clone https://github.com/esr360/Kayzen.git --recursive
-</pre>
+```
+git clone https://github.com/esr360/Kayzen.git --recursive
+```
 
 The **--recursive** flag is required to install all the git submodules.
 
 If you are using Node, you can run `npm install` to allow you to use Grunt to build Kayzen from the source files. Once installed, you should first run `grunt setup` to run the initial setup tasks ([learn more](#grunt-tasks)). After running `npm install` you should now have the following Node modules in the **node_modules** directory:
 
-*   [autoprefixer](https://github.com/postcss/autoprefixer)
-*   [grunt](https://github.com/gruntjs/grunt)
-*   [grunt-auto-install](https://github.com/Manabu-GT/grunt-auto-install)
-*   [grunt-contrib-clean](https://github.com/gruntjs/grunt-contrib-clean)
-*   [grunt-contrib-concat](https://github.com/gruntjs/grunt-contrib-concat)
-*   [grunt-contrib-copy](https://github.com/gruntjs/grunt-contrib-copy)
-*   [grunt-contrib-cssmin](https://github.com/gruntjs/grunt-contrib-cssmin)
-*   [grunt-contrib-jshint](https://github.com/gruntjs/grunt-contrib-jshint)
-*   [grunt-contrib-sass](https://github.com/gruntjs/grunt-contrib-sass)
-*   [grunt-contrib-uglify](https://github.com/gruntjs/grunt-contrib-uglify)
-*   [grunt-contrib-watch](https://github.com/gruntjs/grunt-contrib-watch)
-*   [grunt-notify](https://github.com/dylang/grunt-notify)
-*   [grunt-php-set-constant](https://github.com/pajtai/grunt-php-set-constant)
-*   [grunt-php2html](https://github.com/bezoerb/grunt-php2html)
-*   [grunt-postcss](https://github.com/nDmitry/grunt-postcss)
-*   [grunt-responsive-images](https://github.com/andismith/grunt-responsive-images)
-*   [grunt-run-grunt](https://github.com/Bartvds/grunt-run-grunt)
-*   [grunt-scss-lint](https://github.com/ahmednuaman/grunt-scss-lint)
-*   [grunt-text-replace](https://github.com/yoniholmes/grunt-text-replace)
-*   [grunt-tinypng](https://github.com/marrone/grunt-tinypng)
+* [autoprefixer](https://github.com/postcss/autoprefixer)
+* [grunt](https://github.com/gruntjs/grunt)
+* [grunt-auto-install](https://github.com/Manabu-GT/grunt-auto-install)
+* [grunt-contrib-clean](https://github.com/gruntjs/grunt-contrib-clean)
+* [grunt-contrib-concat](https://github.com/gruntjs/grunt-contrib-concat)
+* [grunt-contrib-copy](https://github.com/gruntjs/grunt-contrib-copy)
+* [grunt-contrib-cssmin](https://github.com/gruntjs/grunt-contrib-cssmin)
+* [grunt-contrib-jshint](https://github.com/gruntjs/grunt-contrib-jshint)
+* [grunt-contrib-sass](https://github.com/gruntjs/grunt-contrib-sass)
+* [grunt-contrib-uglify](https://github.com/gruntjs/grunt-contrib-uglify)
+* [grunt-contrib-watch](https://github.com/gruntjs/grunt-contrib-watch)
+* [grunt-notify](https://github.com/dylang/grunt-notify)
+* [grunt-php-set-constant](https://github.com/pajtai/grunt-php-set-constant)
+* [grunt-php2html](https://github.com/bezoerb/grunt-php2html)
+* [grunt-postcss](https://github.com/nDmitry/grunt-postcss)
+* [grunt-responsive-images](https://github.com/andismith/grunt-responsive-images)
+* [grunt-run-grunt](https://github.com/Bartvds/grunt-run-grunt)
+* [grunt-scss-lint](https://github.com/ahmednuaman/grunt-scss-lint)
+* [grunt-text-replace](https://github.com/yoniholmes/grunt-text-replace)
+* [grunt-tinypng](https://github.com/marrone/grunt-tinypng)
 
 #### Ehnanced Workflow Features
 
@@ -99,11 +105,12 @@ One of the tasks provided in `Gruntfile.js` generates HTML pages from PHP templa
 
 The `php-cgi` binary can be installed via Homebrew by tapping the [homebrew-php](https://github.com/josegonzalez/homebrew-php) repository:
 
-<pre data-enlighter-language="css" class="EnlighterJSRAW">brew tap homebrew/dupes
+```
+brew tap homebrew/dupes
 brew tap homebrew/versions
 brew tap homebrew/homebrew-php
 brew install php56
-</pre>
+```
 
 ###### Windows
 
@@ -111,8 +118,9 @@ The `php-cgi` binary can be installed via [XAMPP](http://www.apachefriends.org/d
 
 ###### Ubuntu
 
-<pre data-enlighter-language="css" class="EnlighterJSRAW">sudo apt-get install php5-cgi
-</pre>
+```
+sudo apt-get install php5-cgi
+```
 
 ##### Installing GraphicsMagick
 
@@ -120,8 +128,9 @@ One of the tasks provided in `Gruntfile.js` creates `small` and `tall` variants 
 
 If you're a Mac user and have [Homebrew](http://brew.sh/) installed, run:
 
-<pre data-enlighter-language="css" class="EnlighterJSRAW">brew install GraphicsMagick
-</pre>
+```
+brew install GraphicsMagick
+```
 
 Otherwise, visit the [GraphicsMagick downloads page](http://sourceforge.net/projects/graphicsmagick/files/graphicsmagick/).
 
@@ -133,44 +142,44 @@ If you are using another build tool or want to build Kayzen manually, here are t
 
 The app/scripts/**app.js** file contains the following third party JavaScript files:
 
-*   assets/vendor/Owl-Carousel/src/js/owl.carousel.js
-*   assets/vendor/Owl-Carousel/src/js/owl.animate.js
-*   assets/vendor/Owl-Carousel/src/js/owl.autoheight.js
-*   assets/vendor/Owl-Carousel/src/js/owl.autoplay.js
-*   assets/vendor/Owl-Carousel/src/js/owl.compiled.js
-*   assets/vendor/Owl-Carousel/src/js/owl.hash.js
-*   assets/vendor/Owl-Carousel/src/js/owl.lazyload.js
-*   assets/vendor/Owl-Carousel/src/js/owl.navigation.js
-*   assets/vendor/Owl-Carousel/src/js/owl.video.js
-*   assets/vendor/Magnific-Popup/src/js/core.js
-*   assets/vendor/Magnific-Popup/src/js/gallery.js
-*   assets/vendor/Magnific-Popup/src/js/image.js
-*   assets/vendor/Magnific-Popup/src/js/retina.js
-*   assets/vendor/Modular/src/modular.js
-*   assets/vendor/jquery-animateNumber/jquery.animateNumber.js
-*   assets/vendor/Kayzen.ScrollSpy/src/Kayzen.ScrollSpy.js
-*   assets/vendor/ScrollTrigger/src/ScrollTrigger.js
-*   assets/vendor/Stellar/src/jquery.stellar.js
-*   assets/vendor/TweeCool/src/tweecool.js
+* assets/vendor/Owl-Carousel/src/js/owl.carousel.js
+* assets/vendor/Owl-Carousel/src/js/owl.animate.js
+* assets/vendor/Owl-Carousel/src/js/owl.autoheight.js
+* assets/vendor/Owl-Carousel/src/js/owl.autoplay.js
+* assets/vendor/Owl-Carousel/src/js/owl.compiled.js
+* assets/vendor/Owl-Carousel/src/js/owl.hash.js
+* assets/vendor/Owl-Carousel/src/js/owl.lazyload.js
+* assets/vendor/Owl-Carousel/src/js/owl.navigation.js
+* assets/vendor/Owl-Carousel/src/js/owl.video.js
+* assets/vendor/Magnific-Popup/src/js/core.js
+* assets/vendor/Magnific-Popup/src/js/gallery.js
+* assets/vendor/Magnific-Popup/src/js/image.js
+* assets/vendor/Magnific-Popup/src/js/retina.js
+* assets/vendor/Modular/src/modular.js
+* assets/vendor/jquery-animateNumber/jquery.animateNumber.js
+* assets/vendor/Kayzen.ScrollSpy/src/Kayzen.ScrollSpy.js
+* assets/vendor/ScrollTrigger/src/ScrollTrigger.js
+* assets/vendor/Stellar/src/jquery.stellar.js
+* assets/vendor/TweeCool/src/tweecool.js
 
 The other files which are includes in **app.js** are:
 
-*   assets/modules/utilities/core/core.js
-*   assets/includes/*.js
-*   assets/modules/elements/**/*.js
-*   assets/modules/objects/**/*.js
-*   assets/themes/YOURTHEME/YOURTHEME.js
+* assets/modules/utilities/core/core.js
+* assets/includes/*.js
+* assets/modules/elements/**/*.js
+* assets/modules/objects/**/*.js
+* assets/themes/YOURTHEME/YOURTHEME.js
 
 Some pages use certain JavaScript files on an opt-in basis, and as such these files are not part of **app.js** and will need to be copied over into the **app** directory (app/scripts). These files include:
 
-*   assets/vendor/jQuery/dist/jquery.js
-*   assets/vendor/pseudojQuery/src/pseudojQuery-start.js
-*   assets/vendor/pseudojQuery/src/pseudojQuery-end.js
-*   assets/vendor/Masonry/dist/masonry.pkgd.js
-*   assets/vendor/Isotope/dist/isotope.pkgd.js
-*   assets/vendor/Infinite-AJAX-Scroll/dist/jquery-ias.js
-*   assets/vendor/Enlighter/Build/EnlighterJS.js
-*   assets/vendor/MooTools-Core/build/mootools-core.js
+* assets/vendor/jQuery/dist/jquery.js
+* assets/vendor/pseudojQuery/src/pseudojQuery-start.js
+* assets/vendor/pseudojQuery/src/pseudojQuery-end.js
+* assets/vendor/Masonry/dist/masonry.pkgd.js
+* assets/vendor/Isotope/dist/isotope.pkgd.js
+* assets/vendor/Infinite-AJAX-Scroll/dist/jquery-ias.js
+* assets/vendor/Enlighter/Build/EnlighterJS.js
+* assets/vendor/MooTools-Core/build/mootools-core.js
 
 To reiterate, the above files should be copied (duplicated) into app/**scripts**.
 
@@ -178,21 +187,21 @@ To reiterate, the above files should be copied (duplicated) into app/**scripts**
 
 The app/styles/**app.css** file contains the following third party stylesheet files, which are all impored at the top of assets/**app.scss** by default:
 
-*   assets/vendor/normalize-scss/sass/_normalize.scss
-*   assets/vendor/Kayzen-GS/src/kayzen-gs.scss
-*   assets/vendor/Magnific-Popup/src/css/main.scss
-*   assets/vendor/Owl-Carousel/src/scss/owl.animate.scss
-*   assets/vendor/Owl-Carousel/src/scss/owl.autoheight.scss
-*   assets/vendor/Owl-Carousel/src/scss/owl.core.scss
-*   assets/vendor/Owl-Carousel/src/scss/owl.lazyload.scss
-*   assets/vendor/Owl-Carousel/src/scss/owl.video.scss
-*   assets/vendor/Font-Awesome/scss/font-awesome.scss
-*   assets/vendor/Modular/src/_modular.scss
-*   assets/vendor/SassyJSON/stylesheets/_SassyJSON.scss
+* assets/vendor/normalize-scss/sass/_normalize.scss
+* assets/vendor/Kayzen-GS/src/kayzen-gs.scss
+* assets/vendor/Magnific-Popup/src/css/main.scss
+* assets/vendor/Owl-Carousel/src/scss/owl.animate.scss
+* assets/vendor/Owl-Carousel/src/scss/owl.autoheight.scss
+* assets/vendor/Owl-Carousel/src/scss/owl.core.scss
+* assets/vendor/Owl-Carousel/src/scss/owl.lazyload.scss
+* assets/vendor/Owl-Carousel/src/scss/owl.video.scss
+* assets/vendor/Font-Awesome/scss/font-awesome.scss
+* assets/vendor/Modular/src/_modular.scss
+* assets/vendor/SassyJSON/stylesheets/_SassyJSON.scss
 
 Some pages use certain CSS files on an opt-in basis, and as such these files are not part of **app.css** and will need to be copied over into the **app** directory (app/styles). These files include:
 
-*   assets/vendor/Enlighter/Build/EnlighterJS.css
+* assets/vendor/Enlighter/Build/EnlighterJS.css
 
 To reiterate, the above files should be copied (duplicated) into app/**styles**.
 
@@ -200,8 +209,8 @@ To reiterate, the above files should be copied (duplicated) into app/**styles**.
 
 Kayzen uses PostCSS in order to use [Autoprefixer](https://github.com/postcss/autoprefixer). It does not use Compass or any other Sass libraries to handle vendor prefixing, so ensure your build process involves Autoprefixer with the following browser support options:
 
-*   last 2 versions
-*   ie >= 9
+* last 2 versions
+* ie >= 9
 
 ### Sass/SCSS
 
@@ -211,7 +220,7 @@ Kayzen requires a minimum Sass version of **3.4**, so ensure that your Sass comp
 
 The images in the assets directory need to be copied (duplicated) into the **app** directory (app/images). This allows you to keep your source image files separate from your production ones, which may be compressed during your build process. These are located in the **assets** directory:
 
-*   assets/images/
+* assets/images/
 
 The default HTML templates will look for `small` and `tall` variants of the hero images provided in the `demo` sub-directory of `/images`. This point will likely be rendered moot as you add your own images.
 
@@ -219,7 +228,7 @@ The default HTML templates will look for `small` and `tall` variants of the hero
 
 The FontAwesome font files need to be copied (duplicated) into the **app** directory (app/fonts). These are located here:
 
-*   assets/vendor/Font-Awesome/fonts/
+* assets/vendor/Font-Awesome/fonts/
 
 ### MooTools
 
@@ -237,7 +246,7 @@ Kayzen is structured in a modular way, which makes things easier for everyone. K
 
 Every module is imported in the main app.scss file:
 
-*   assets/**app.scss**
+* assets/**app.scss**
 
 This is the root file for your project. As well as importing all the Sass modules it is also used to set which theme your project should use (more on this later), the path to your assets, and the option to output all the configuration to JSON to allow it to be accessed in your project's JavaScript (again, more on this later).
 
@@ -245,29 +254,31 @@ In terms of the Kayzen modules that are imported, for the most part importing th
 
 Themes are located in the **themes** directory. Each theme comes with a **.scss** file and a **.js** file. Kayzen provides several themes for you to choose from:
 
-*   assets/themes/**Kayzen**
+* assets/themes/**Kayzen**
 
 To set which theme your project should use, set the `$theme` variable at the top of **app.scss**. By default this is set to `Kayzen`.
 
 You can now control every configurable aspect of your project from `assets/themes/Kayzen/_kayzen.scss`. This file is where all the modules which are used by the theme are included, and also where you can pass any custom options to them. There are three types of modules, for a list of all of them and their available options, see the following links:
 
-*   [assets/modules/**elements**](<?php pageLink('modules.php#kayzenElements') ?>)
-*   [assets/modules/**objects**](<?php pageLink('modules.php#kayzenObjects') ?>)
-*   [assets/modules/**utilities**](<?php pageLink('modules.php#kayzenUtilities') ?>)
+* [assets/modules/**elements**](<?php pageLink('modules.php#kayzenElements') ?>)
+* [assets/modules/**objects**](<?php pageLink('modules.php#kayzenObjects') ?>)
+* [assets/modules/**utilities**](<?php pageLink('modules.php#kayzenUtilities') ?>)
 
 You can pass a custom option to a module in your theme's file (e.g. assets/themes/Kayzen/_kayzen.scss) like so:
 
-<pre data-enlighter-language="css" class="EnlighterJSRAW">@include accordions((
+```scss
+@include accordions((
     'section-margin'      : 1.4em,
     'title-radius'        : 0.4em,
     'title-active-radius' : 0.4em 0.4em 0 0,
     'content-radius'      : 0 0 0.4em 0.4em
 ));
-</pre>
+```
 
 If the module you are editing has nestable options, you would change them like so:
 
-<pre data-enlighter-language="css" class="EnlighterJSRAW">@include palettes((
+```scss
+@include palettes((
     'brand': (
         'primary'   : #61BD6D,
         'secondary' : #00A885
@@ -276,15 +287,15 @@ If the module you are editing has nestable options, you would change them like s
         'valid'     : MediumSeaGreen 
     )
 ));
-</pre>
+```
 
 To get started quickly, some of the most common modules you might want to configure might include:
 
-*   **Colors:** assets/modules/utilities/[color-palette](<?php pageLink('modules/utilities/color-palette.php') ?>)
-*   **Breakpoints:** assets/modules/utilities/[grid](<?php pageLink('modules/utilities/grid.php') ?>)
-*   **Fonts:** assets/modules/utilities/[typography](<?php pageLink('modules/utilities/typography.php') ?>)
-*   **Header:** assets/modules/objects/[header](<?php pageLink('modules/objects/header.php') ?>)
-*   **Footer:** assets/modules/objects/[footer](<?php pageLink('modules/objects/footer.php') ?>)
+* **Colors:** assets/modules/utilities/[color-palette](<?php pageLink('modules/utilities/color-palette.php') ?>)
+* **Breakpoints:** assets/modules/utilities/[grid](<?php pageLink('modules/utilities/grid.php') ?>)
+* **Fonts:** assets/modules/utilities/[typography](<?php pageLink('modules/utilities/typography.php') ?>)
+* **Header:** assets/modules/objects/[header](<?php pageLink('modules/objects/header.php') ?>)
+* **Footer:** assets/modules/objects/[footer](<?php pageLink('modules/objects/footer.php') ?>)
 
 Once you have configured all of your desired opions, you can preview all the modules on the [Cheatsheet](<?php pageLink('cheatsheet.php') ?>) page.
 
@@ -306,29 +317,33 @@ A sticky header will become fixed as it's scroll position reaches the top of the
 
 Locate `app-header` module in your HTML file. It should look something like:
 
-<pre data-enlighter-language="html" class="EnlighterJSRAW"><header class="app-header" id="app-header">
+```html
+<header class="app-header" id="app-header">
     ...
 </header>
-</pre>
+```
 
 It may have one or more modifiers, and if so will look something like:
 
-<pre data-enlighter-language="html" class="EnlighterJSRAW"><header class="app-header-bar-absolute" id="app-header">
+```html
+<header class="app-header-bar-absolute" id="app-header">
     ...
 </header>
-</pre>
+```
 
 To achieve a sticky header, add the `sticky` modifier by adding `-sticky` to the header's class, like so:
 
-<pre data-enlighter-language="html" class="EnlighterJSRAW"><header class="app-header-sticky" id="app-header">
+```html
+<header class="app-header-sticky" id="app-header">
     ...
 </header>
-</pre>
+```
 
-<pre data-enlighter-language="html" class="EnlighterJSRAW"><header class="app-header-absolute-sticky-bar" id="app-header">
+```html
+<header class="app-header-absolute-sticky-bar" id="app-header">
     ...
 </header>
-</pre>
+```
 
 Read the [header module](<?php pageLink('modules/objects/header.php') ?>) page for more information.
 
@@ -338,17 +353,19 @@ A fixed top-bar will remain in a fixed position on screen.
 
 Locate `top-bar` module in your HTML file. It should look something like:
 
-<pre data-enlighter-language="html" class="EnlighterJSRAW"><div class="top-bar">
+```html
+<div class="top-bar">
     ...
 </div>
-</pre>
+```
 
 To achieve a fixed top-bar, add the `fixed` modifier by adding `-fixed` to the top-bar's class, like so:
 
-<pre data-enlighter-language="html" class="EnlighterJSRAW"><div class="top-bar-fixed">
+```html
+<div class="top-bar-fixed">
     ...
 </div>
-</pre>
+```
 
 Do not use a fixed top-bar in conjunction with a sticky header.
 
@@ -358,19 +375,19 @@ Read the [top-bar module](<?php pageLink('modules/objects/top-bar.php') ?>) page
 
 In `app/scripts/app.js` (or `app/YOURTHEME/scripts/app.js`), locate the following code:
 
-<pre data-enlighter-language="javascript" class="EnlighterJSRAW">           
+```js          
 $(_footer).footer();
-</pre>
+```
 
 Reaplce with the following code, replacing your desired Twitter username to show tweets from:
 
-<pre data-enlighter-language="javascript" class="EnlighterJSRAW">  
+```js
 $(_footer).footer({
     twitterFeed   : {
         username  : 'esr360'
     }
 });
-</pre>
+```
 
 Read the [footer module](<?php pageLink('modules/objects/footer.php') ?>) page for more information.
 
@@ -378,17 +395,17 @@ Read the [footer module](<?php pageLink('modules/objects/footer.php') ?>) page f
 
 To change the google map colors, locate the following code in `app/scripts/app.js` (or `app/YOURTHEME/scripts/app.js`):
 
-<pre data-enlighter-language="javascript" class="EnlighterJSRAW">           
+```js          
 $('#google-map').googleMap();
-</pre>
+```
 
 Grab your desired styles array (e.g. [https://snazzymaps.com/style/35/avocado-world](https://snazzymaps.com/style/35/avocado-world)) and pass it to the `styles` option:
 
-<pre data-enlighter-language="javascript" class="EnlighterJSRAW">           
+```js        
 $('#google-map').googleMap({
     styles: [...]
 });
-</pre>
+```
 
 Read the [google-map module](<?php pageLink('modules/objects/google-map.php') ?>) page for more information.
 
@@ -396,21 +413,21 @@ Read the [google-map module](<?php pageLink('modules/objects/google-map.php') ?>
 
 Any page which uses the social share widgets (widgets which show how many shares a page has) will have the following JavasScript included on the page:
 
-<pre data-enlighter-language="javascript" class="EnlighterJSRAW">   
+```js
 $(document).ready(function() {
     $.fn.KayzenSocialShareCount();
 });
-</pre>
+```
 
 By default, the current page that the script is loaded on will be used to get the share information, but should you decide to use a different url, you can pass it as an option like so:
 
-<pre data-enlighter-language="javascript" class="EnlighterJSRAW">   
+```js
 $(document).ready(function() {
     $.fn.KayzenSocialShareCount({
         url : 'http://themeforest.net'
     });
 });
-</pre>
+```
 
 #### Get In Touch Form
 
