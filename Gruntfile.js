@@ -605,6 +605,11 @@ module.exports = function(grunt) {
                 options: {
                     cwd: 'assets/vendor/Infinite-AJAX-Scroll'
                 }
+            },
+            owlCarousel: {
+                options: {
+                    cwd: 'assets/vendor/Owl-Carousel'
+                }
             }
         },
       
@@ -628,6 +633,13 @@ module.exports = function(grunt) {
                     task: 'build'
                 },
                 src: 'assets/vendor/Infinite-AJAX-Scroll/Gruntfile.js'
+            },
+            owlCarousel: {
+                options: {
+                    log: true,
+                    task: 'dist'
+                },
+                src: 'assets/vendor/Owl-Carousel/Gruntfile.js'
             }
         }
 
