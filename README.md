@@ -814,17 +814,17 @@ The below values will also automatically be updated in **app.php**.
 | `theme` | `'Kayzen'` | This is the theme you wish to compile assets from. Theme must be present in the assets/themes directory. |
 | `realm` | `'demo'` | Can either be `demo` or `live`. Currently only used to serve placeholder images instead of stock photos. |
 | `env` | `'dev'` | Can either be `dev` or `prod`. Used to determine whether or not assets should be minified. |
-| `host` | `'server'` | Can either be `static` or `server`, and will define how your asset paths are created. |
+| `path` | `'root'` | Can either be `root` or `relative`, and will define how your asset paths are created. |
 | `themes` | `false` | If enabled, assets will be compiled into individual theme folders (e.g. app/themes/Kayzen/scripts/app.js). |
 
 The above options would be used when calling the grunt task, like so:
 
 ```
-grunt compile --env=prod
+grunt compile --env=prod --themes=false
 ```
 
 ```
-grunt templates --theme=YOURTHEME
+grunt templates --theme=YOURTHEME --realm=live
 ```
 
 ## Test & Deploy
