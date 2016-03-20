@@ -510,8 +510,8 @@ Load app/scripts/**isotope.pkgd.js** at the bottom of the page right underneath 
 
 ```html 
 ...          
-<script src="/app/scripts/app.js">        
-<script src="/app/scripts/isotope.pkgd.js">
+<script src="/app/scripts/app.js"></script>    
+<script src="/app/scripts/isotope.pkgd.js"></script>
 ```
 
 ##### Create The Navigation
