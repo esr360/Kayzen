@@ -635,12 +635,12 @@
                     </ul>
                 </li>
                 <li>
-                    <a href="<?php pageLink('documentation.php') ?>"><i class="navigation_icon fa fa-files-o"></i> Documentation</a>
+                    <a href="https://github.com/esr360/Kayzen.docs" target="blank"><i class="navigation_icon fa fa-files-o"></i> Documentation</a>
                     <ul>
-                        <li><a href="<?php pageLink('documentation.php') ?>#getting-started">Getting Started</a></li>
-                        <li><a href="<?php pageLink('documentation.php') ?>#configure">Configure</a></li>
-                        <li><a href="<?php pageLink('documentation.php') ?>#build">Build</a></li>
-                        <li><a href="<?php pageLink('documentation.php') ?>#deploy">Deploy</a></li>
+                        <li><a href="https://github.com/esr360/Kayzen.docs#getting-started" target="blank">Getting Started</a></li>
+                        <li><a href="https://github.com/esr360/Kayzen.docs#configure" target="blank">Configure</a></li>
+                        <li><a href="https://github.com/esr360/Kayzen.docs#build" target="blank">Build</a></li>
+                        <li><a href="https://github.com/esr360/Kayzen.docs#deploy" target="blank">Deploy</a></li>
                     </ul>
                 </li>
             </ul>
