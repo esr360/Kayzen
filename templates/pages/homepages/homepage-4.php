@@ -141,7 +141,7 @@
 			</header>
 			
 			<!-- Features Row 1 -->
-			<div class="row-no-gutter fixed-table text-center">
+			<div class="row-no-gutter fixed-table text-center" id="featureSection1">
 				
 				<div class="widget-block-panel-noHover span-3 break-4-half break-2-full">
 					<div class="widget_icon button-icon-plain-size-8">
@@ -166,7 +166,7 @@
 				</div>
 				
 				<div class="section-secondary span-6 break-4-full va-middle">
-					<div class="container-small">
+					<div class="container-small v-center">
 						<blockquote class="blockquote">
 							<div class="blockquote_content">
 								<h4 class="heading-light-size-6 font-2">We can take your awesome ideas and turn them into an <b class="heading-heavy">exciting reality</b>...</h4>
@@ -176,6 +176,12 @@
 				</div>
 				
 			</div><!-- Features Row 1 -->
+                
+            <script>
+                $(document).ready(function() {
+                    $('#featureSection1').equalHeight();
+                });
+            </script>
 			
 		</section>
 		
