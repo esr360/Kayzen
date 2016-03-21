@@ -141,7 +141,7 @@ Otherwise, visit the [GraphicsMagick downloads page](http://sourceforge.net/proj
 
 If you are using another build tool or want to build Kayzen manually, here are the key things it should encompass to successfully build Kayzen:
 
-### JavaScript
+##### JavaScript
 
 The app/scripts/**app.js** file contains the following third party JavaScript files:
 
@@ -186,7 +186,7 @@ Some pages use certain JavaScript files on an opt-in basis, and as such these fi
 
 To reiterate, the above files should be copied (duplicated) into app/**scripts**.
 
-### CSS
+##### CSS
 
 The app/styles/**app.css** file contains the following third party stylesheet files, which are all impored at the top of assets/**app.scss** by default:
 
@@ -208,18 +208,18 @@ Some pages use certain CSS files on an opt-in basis, and as such these files are
 
 To reiterate, the above files should be copied (duplicated) into app/**styles**.
 
-### PostCSS/AutoPrefixer
+##### PostCSS/AutoPrefixer
 
 Kayzen uses PostCSS in order to use [Autoprefixer](https://github.com/postcss/autoprefixer). It does not use Compass or any other Sass libraries to handle vendor prefixing, so ensure your build process involves Autoprefixer with the following browser support options:
 
 * last 2 versions
 * ie >= 9
 
-### Sass/SCSS
+##### Sass/SCSS
 
 Kayzen requires a minimum Sass version of **3.4**, so ensure that your Sass compiler is upto date with at least this version.
 
-### Images
+##### Images
 
 The images in the assets directory need to be copied (duplicated) into the **app** directory (app/images). This allows you to keep your source image files separate from your production ones, which may be compressed during your build process. These are located in the **assets** directory:
 
@@ -227,25 +227,25 @@ The images in the assets directory need to be copied (duplicated) into the **app
 
 The default HTML templates will look for `small` and `tall` variants of the hero images provided in the `demo` sub-directory of `/images`. This point will likely be rendered moot as you add your own images.
 
-### FontAwesome
+##### FontAwesome
 
 The FontAwesome font files need to be copied (duplicated) into the **app** directory (app/fonts). These are located here:
 
 * assets/vendor/Font-Awesome/fonts/
 
-### MooTools
+##### MooTools
 
 This step is only required if you intend to use the [Enlighter](http://enlighterjs.org/) syntax highlighter plugin.
 
 The Enlighter plugin which is used by the Kayzen demo pages requires [MooTools](http://mootools.net/). MooTools requires you to build the file manually. Details on how to do so can be found on the MooTools repository page. Once you have built the file, it should now be available at assets/vendor/MooTools-Core/build/**mootools-core.js**. This file should then be copied to Kayzen's **app** directory (app/scripts).
 
-### Caveats
+##### Caveats
 
-##### Normalize-Scss
+###### Normalize-Scss
 
 [Normalize-scss](https://github.com/JohnAlbin/normalize-scss) requires the [support-for](https://github.com/JohnAlbin/support-for) library to be present within its own directory, and does not come packaged with **normalize-scss**. To clarify, the file located at assets/vendor/support-for/sass/**_support-for.scss** must be present within the assets/vendor/normalize-scss/**sass/** directory when Sass compiles, otherwise it will throw an error. If you maually copy the file over, Git will complain that you have made changes to the **normalize-scss** submodule, so it is recommended that your build process involves copying the file over before Sass compiles, and then deleting it once the CSS has been compiled.
 
-##### Aloads/Preloaders
+###### Aloads/Preloaders
 
 Kayzen's main **app.scss** file attempts to import `assets/vendor/Aloads/scss/_preloaders.scss`, which does not come packaged with the default [Aloads](https://github.com/awedoo/aloads) library. Ruby Sass cannot import **.css** files which is why the app must look for a **.scss** file. Other than the extension, the contents of these two files would be identical. If you maually create this file and directory, Git will complain that you have made changes to the **Aloads** submodule, so it is recommended that your build process involves copying the file over before Sass compiles, and then deleting it once the CSS has been compiled.
 
