@@ -241,7 +241,13 @@ The Enlighter plugin which is used by the Kayzen demo pages requires [MooTools](
 
 ### Caveats
 
-One particular submodule ([normalize-scss](https://github.com/JohnAlbin/normalize-scss)) requires the [support-for](https://github.com/JohnAlbin/support-for) library to be present within its own directory, and does not come by default as a result of installing **normalize-scss**. To clarify, the file located at assets/vendor/support-for/sass/**_support-for.scss** must be present within the assets/vendor/normalize-scss/**sass/** directory when Sass compiles, otherwise it will throw an error. If you maually copy the file over, Git will complain that you have made changes to the **normalize-scss** submodule, so it is recommended that your build process involves copying the file over before Sass compiles, and then deleting it once the CSS has been compiled.
+##### Normalize-Scss
+
+[Normalize-scss](https://github.com/JohnAlbin/normalize-scss) requires the [support-for](https://github.com/JohnAlbin/support-for) library to be present within its own directory, and does not come packaged with **normalize-scss**. To clarify, the file located at assets/vendor/support-for/sass/**_support-for.scss** must be present within the assets/vendor/normalize-scss/**sass/** directory when Sass compiles, otherwise it will throw an error. If you maually copy the file over, Git will complain that you have made changes to the **normalize-scss** submodule, so it is recommended that your build process involves copying the file over before Sass compiles, and then deleting it once the CSS has been compiled.
+
+##### Aloads/Preloaders
+
+Kayzen's main **app.scss** file attempts to import `assets/vendor/Aloads/scss/_preloaders.scss`, which does not come packaged with the default [Aloads](https://github.com/awedoo/aloads) library. Ruby Sass cannot import **.css** files which is why the app must look for a **.scss** file. Other than the extension, the contents of these two files would be identical. If you maually create this file and directory, Git will complain that you have made changes to the **Aloads** submodule, so it is recommended that your build process involves copying the file over before Sass compiles, and then deleting it once the CSS has been compiled.
 
 ## Configure
 
