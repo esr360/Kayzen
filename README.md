@@ -195,7 +195,7 @@ The app/styles/**app.css** file contains the following third party stylesheet fi
 * assets/vendor/Magnific-Popup/src/css/main.scss
 * assets/vendor/Owl-Carousel/src/scss/owl.animate.scss
 * assets/vendor/Owl-Carousel/src/scss/owl.autoheight.scss
-* assets/vendor/Owl-Carousel/src/scss/owl.core.scss
+* assets/vendor/Owl-Carousel/src/scss/owl.carousel.scss
 * assets/vendor/Owl-Carousel/src/scss/owl.lazyload.scss
 * assets/vendor/Owl-Carousel/src/scss/owl.video.scss
 * assets/vendor/Font-Awesome/scss/font-awesome.scss
