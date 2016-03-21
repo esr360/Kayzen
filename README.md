@@ -7,7 +7,7 @@
 
 ## Getting Started
 
-[Click Here](#html-templates) if you just want to get started using the default HTML files without touching any other code.
+> [Click Here](#html-templates) if you just want to get started using the default HTML files without touching any other code.
 
 It's great that you've decided to checkout Kayzen! How you go about buildig your next project with it depends on many things such as your prefered workflow, your skill level, amount of time you have etc. This page will cover the basics of all the different ways Kayzen can be adapted to suit any need. It is assumed that you have at least basic HTML, CSS and JavaScript/jQuery understanding.
 
