@@ -193,6 +193,10 @@ module.exports = function(grunt) {
                     {
                         src: 'templates/includes/contact-form.php',
                         dest: 'app/contact-form.php'
+                    },
+                    {
+                        src: 'docs/README.md',
+                        dest: 'README.md'
                     }
                 ]
             },
