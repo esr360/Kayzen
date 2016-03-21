@@ -318,9 +318,9 @@ To edit the various features of the provided HTML templates, see the following s
 
 To change the visual appearance of the UI components, see the [Modules](<?php pageLink('modules.php') ?>) page.
 
-### Global
+#### Global
 
-#### Sticky Header
+##### Sticky Header
 
 A sticky header will become fixed as it's scroll position reaches the top of the browser window.
 
@@ -356,7 +356,7 @@ To achieve a sticky header, add the `sticky` modifier by adding `-sticky` to the
 
 Read the [header module](<?php pageLink('modules/objects/header.php') ?>) page for more information.
 
-#### Fixed Top Bar
+##### Fixed Top Bar
 
 A fixed top-bar will remain in a fixed position on screen.
 
@@ -380,7 +380,7 @@ Do not use a fixed top-bar in conjunction with a sticky header.
 
 Read the [top-bar module](<?php pageLink('modules/objects/top-bar.php') ?>) page for more information.
 
-#### Footer Twitter Feed
+##### Footer Twitter Feed
 
 In `app/scripts/app.js` (or `app/YOURTHEME/scripts/app.js`), locate the following code:
 
@@ -400,7 +400,7 @@ $(_footer).footer({
 
 Read the [footer module](<?php pageLink('modules/objects/footer.php') ?>) page for more information.
 
-#### Google Map
+##### Google Map
 
 To change the google map colors, locate the following code in `app/scripts/app.js` (or `app/YOURTHEME/scripts/app.js`):
 
@@ -418,7 +418,7 @@ $('#google-map').googleMap({
 
 Read the [google-map module](<?php pageLink('modules/objects/google-map.php') ?>) page for more information.
 
-#### Social Share Widgets
+##### Social Share Widgets
 
 Any page which uses the social share widgets (widgets which show how many shares a page has) will have the following JavasScript included on the page:
 
@@ -438,11 +438,11 @@ $(document).ready(function() {
 });
 ```
 
-#### Get In Touch Form
+##### Get In Touch Form
 
-### Homepages
+#### Homepages
 
-#### Parallax Billboard Background
+##### Parallax Billboard Background
 
 To add a parallax effect to the billboard background, you can add the `data-stellar-background-ratio` data attribute to activate the [Stellar](http://markdalgleish.com/projects/stellar.js/) jQuery plugin.
 
@@ -452,7 +452,7 @@ To add a parallax effect to the billboard background, you can add the `data-stel
 </section>
 ```
 
-#### Parallax Billboard Content
+##### Parallax Billboard Content
 
 To add a faded parallax effect to the billboard content (as opposed to the background), structure your billboard's HTML like so:
 
@@ -468,17 +468,17 @@ To add a faded parallax effect to the billboard content (as opposed to the backg
 
 The key to achieving the effect is the `billboard-fade-parallax` id on your billboard's content element.
 
-### Portfolio/Blog Pages
+#### Portfolio/Blog Pages
 
-#### Columns
+##### Columns
 
 You can easily change the number of columns for any of the provided portfolio/blog templates by changing the `span-x` class of the respective items. Kayzen uses a 12 column grid system, so for example, to change a 3 column layout where the items will have a class of `span-4` to a 4 column layout, you would change the class for each item to `span-3`.
 
-#### Masonry Items
+##### Masonry Items
 
 To create columns with masonry items, you can either use one of the provided [templates](<?php pageLink('templates.php#portfolio') ?>), or you can convert a non-masonry template into one by doing the following:
 
-##### Load Required Script(s)
+###### Load Required Script(s)
 
 Load app/scripts/**isotope.pkgd.js** at the bottom of the page right underneath all other scripts:
 
@@ -488,7 +488,7 @@ Load app/scripts/**isotope.pkgd.js** at the bottom of the page right underneath 
 <script src="/app/scripts/isotope.pkgd.js">
 ```
 
-##### Call The Isotope Plugin
+###### Call The Isotope Plugin
 
 Finally you need to call the loaded plugin on the relevant container, ensuring the code is inside a `document.ready` function, and `window.load` function:
 
@@ -506,11 +506,11 @@ Finally you need to call the loaded plugin on the relevant container, ensuring t
 
 Where `#blog-items` is the direct container of your portfolio/blog items.
 
-#### Filterable Items
+##### Filterable Items
 
 To create a set of filterable items, you can either use one of the provided [templates](<?php pageLink('templates.php#portfolio') ?>), or you can convert a non-filterable template into one by doing the following:
 
-##### Load Required Script(s)
+###### Load Required Script(s)
 
 Load app/scripts/**isotope.pkgd.js** at the bottom of the page right underneath all other scripts:
 
@@ -558,11 +558,11 @@ Finally you need to call the loaded plugin on the relevant container, ensuring t
 
 Where `#blog-items` is the direct container of your portfolio/blog items, and `#blog-items` is the container for your filter navigation items.
 
-#### Infinite Scroll Items
+##### Infinite Scroll Items
 
 To create a set of infinitely-scrollable items, you can either use one of the provided [templates](<?php pageLink('templates.php#portfolio') ?>), or you can convert a non infinite-scroll template into one by doing the following:
 
-##### Load Required Script(s)
+###### Load Required Script(s)
 
 Load app/scripts/**jquery-ias.js** at the bottom of the page right underneath all other scripts:
 
@@ -572,7 +572,7 @@ Load app/scripts/**jquery-ias.js** at the bottom of the page right underneath al
 <script src="/app/scripts/jquery-ias.js"></script>
 ```
 
-##### Create The Pagination
+###### Create The Pagination
 
 For each set of 'loaded' content, there needs to be a separate HTML file with the content for the infinite scroll page to fetch the next set of items from. You can duplicate the first page and just update the pagination link as appropriate. The plugin will by default look for an element with an id of `pagination` to get the next page to pull the content from.
 
@@ -582,7 +582,7 @@ For each set of 'loaded' content, there needs to be a separate HTML file with th
 </ul>
 ```
 
-##### Call the Infinite Scroll Plugin
+###### Call the Infinite Scroll Plugin
 
 You then need to call the loaded plugin on the relevant container, ensuring the code is inside a `document.ready` function:
 
@@ -634,7 +634,7 @@ The core configuration file for the PHP templates can be found at templates/**ap
 | `path` | `'root'` | Can either be `root` or `relative`, and defines how asset paths should be loaded. |
 | `themes` | `true` | If enabled, templates will look to assets nested inside a self-named directory, e.g. app/themes/Kayzen/scripts/app.js. |
 
-### Includes
+#### Includes
 
 The below includes can be used on any page which includes the **app.php** file, and will output some code depending on the options you pass to the function. They are located in the templates/**includes** directory.
 
@@ -657,7 +657,7 @@ articleItem(array(
 ));
 ```
 
-### Modules
+#### Modules
 
 The below modules can be used on any page which includes the **app.php** file, and will output some code depending on the options you pass to the function. They are located in the templates/**modules** directory.
 
@@ -684,7 +684,7 @@ billboard(array(
 ));
 ```
 
-### Sections
+#### Sections
 
 The below sections can be used on any page which includes the **app.php** file, and will output some code depending on the options you pass to the function. They are located in the templates/**sections** directory.
 
@@ -734,7 +734,7 @@ clients(array(
 ));
 ```
 
-### Basic Template
+#### Basic Template
 
 Several things are required to create a PHP page using Kayzen. Below shows the minimum requirements to set up a blank page with all global modules and assets:
 
@@ -793,7 +793,7 @@ If you are using Grunt and the provided Gruntfile.js, you can easily compile and
 
 ### Grunt Tasks
 
-### Executable Tasks
+#### Executable Tasks
 
 | Task | Description |
 | --- | --- |
@@ -809,7 +809,7 @@ If you are using Grunt and the provided Gruntfile.js, you can easily compile and
 | `grunt ship` | This is the final task which should be ran before deploying to production. Runs the `package`, `test` and `compress:images` tasks. |
 | `grunt compress:images` | This will compress all images in the 'demo' directory using the [TinyPNG API](https://tinypng.com/developers). Use liberally. |
 
-### Grunt Options
+#### Grunt Options
 
 Using the [`grunt.option`](http://gruntjs.com/api/grunt.option) API, you can pass several parameters on the command line when running the above tasks:
 
