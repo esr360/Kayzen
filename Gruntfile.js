@@ -686,7 +686,6 @@ module.exports = function(grunt) {
             'copy:preloaders', 
             'replace:sassTheme',
             'copy:app',
-            'copy:images',
             'concat',
             'sass:' + environment,
             'postcss',
@@ -757,6 +756,7 @@ module.exports = function(grunt) {
     grunt.registerTask('package', [
         'compile',
         'clean:images',
+        'copy:images',
         'responsive_images',
         'prototype'
     ]);
