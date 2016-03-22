@@ -7,9 +7,9 @@
 [submodule "assets/vendor/jQuery"]
 	path = assets/vendor/jQuery
 	url = https://github.com/jquery/jquery.git
-[submodule "assets/vendor/Modular"]
-	path = assets/vendor/Modular
-	url = https://github.com/esr360/Modular.git
+[submodule "assets/vendor/Synergy"]
+	path = assets/vendor/Synergy
+	url = https://github.com/esr360/Synergy.git
 [submodule "assets/vendor/Enlighter"]
 	path = assets/vendor/Enlighter
 	url = https://github.com/AndiDittrich/EnlighterJS.git

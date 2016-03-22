@@ -68,7 +68,7 @@ module.exports = function(grunt) {
     var _scripts = [   
         _owl,
         _magnific,
-        'assets/vendor/Modular/dist/modular.js',
+        'assets/vendor/Synergy/dist/synergy.js',
         'assets/vendor/jquery-animateNumber/jquery.animateNumber.js',
         'assets/vendor/Kayzen.ScrollSpy/src/Kayzen.ScrollSpy.js',
         'assets/vendor/ScrollTrigger/src/ScrollTrigger.js',
@@ -690,6 +690,7 @@ module.exports = function(grunt) {
             'concat',
             'sass:' + environment,
             'postcss',
+            'responsive_images',
             'clean:normalizeSupportFor',
             'clean:preloaders'
         ];
@@ -756,7 +757,6 @@ module.exports = function(grunt) {
     // Package the app
     grunt.registerTask('package', [
         'compile',
-        'responsive_images',
         'prototype'
     ]);
     

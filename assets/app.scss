@@ -12,7 +12,7 @@ $asset-path : "../.." !default;
 $to-JSON : true;
 
 // Theme
-$theme : 'Blizzard';
+$theme : 'Kayzen';
 
 //-----------------------------------------------------------------
 // Vendor Files
@@ -30,8 +30,8 @@ $fa-font-path: "#{$asset-path}/fonts";
 @import "vendor/Owl-Carousel/src/scss/owl.video";
 @import "vendor/Font-Awesome/scss/font-awesome";
 @import "vendor/Aloads/scss/preloaders";
-@import "vendor/Modular/src/scss/modular";
 @import "vendor/SassyJSON/src/SassyJSON";
+@import "vendor/Synergy/src/scss/synergy";
 
 //-----------------------------------------------------------------
 // Utilities
