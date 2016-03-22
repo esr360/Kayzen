@@ -1,13 +1,14 @@
 <?php 
 	include ('../../app.php');
 	// page config
-	$title = 'Homepage 3';
+    $theme = 'Blizzard';
+	$title = 'Homepage 2';
 ?>
 
 <!DOCTYPE html>
 <html class="no-js">
 
-<?php head() ?>
+<?php head($theme) ?>
 
 <body>
     
@@ -18,12 +19,17 @@
 		
 		<?php 
         
-            topbar(array(
-                'modifiers' => 'fixed'
-            ));
+            topbar();
 
             appHeader(array(
-                'modifiers' => 'bar-absolute-dark'
+                'nav-links'  => array(
+                    'Home' => themeLink($theme, '/index.php'),
+                    'About' => themeLink($theme, '/about.php'),
+                    'Services' => themeLink($theme, '/services.php'),
+                    'Portfolio' => themeLink($theme, '/portfolio.php'),
+                    'Blog' => themeLink($theme, '/blog.php'),
+                    'Contact' => themeLink($theme, '/contact.php')
+                )
             ));
 
 		?>
@@ -42,10 +48,6 @@
 					</div>
 				</div>
 			</div>
-			<nav class="slide-nav">
-				<button class="slide-prev button-icon-border-size-3-white"><i class="fa fa-angle-left"></i></button>
-				<button class="slide-next button-icon-border-size-3-white"><i class="fa fa-angle-right"></i></button>
-			</nav>
 			<a href="#s-welcome" class="scroll-wheel"></a>
 		</section>
 		
@@ -241,8 +243,8 @@
     </div><!-- Site Canvas -->
 
     <?php include (ROOT.'/includes/ui-enhancements.php'); ?>
-
-    <?php scripts() ?>
+    
+    <?php scripts($theme) ?>
 
 </body>
 </html>

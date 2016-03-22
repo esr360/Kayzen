@@ -1,0 +1,114 @@
+//=================================================================
+// Kayzen
+//=================================================================
+
+@if $theme == 'Blizzard' {
+
+    @include normalize();
+
+//-----------------------------------------------------------------
+// Skeleton
+//-----------------------------------------------------------------
+
+	@include palettes((
+		'brand': (
+			'primary' : #00ddff
+		)
+	));
+	
+	@include typography;
+    
+	@include grid((
+        'options' : (
+            'max-width' : 90%
+        )
+    ));
+    
+	@include base;
+	@include tools;
+	@include masonry-grid;
+	@include helpers;
+
+//-----------------------------------------------------------------
+// Elements
+//-----------------------------------------------------------------
+
+	@include accordions;
+	@include alert-bars;
+	@include blockquotes;
+	@include buttons;
+	@include carousels;
+	@include corner-ribbons;
+	@include forms;
+	@include headings;
+	@include images;
+	@include lists;
+	@include modals;
+	@include notifications;
+	@include price-charts;
+	@include progress-bars;
+	@include tables;
+	@include tabs;
+	@include thumbnails;
+	@include tooltips;
+	@include wells;
+	@include widgets;
+
+//-----------------------------------------------------------------
+// Objects
+//-----------------------------------------------------------------
+
+	@include top-bar((
+        'fixed'  : true,
+        'height' : 66px
+    ));
+    
+	@include breadcrumb;
+	@include side-nav;
+	@include countdown;
+	@include earth-slider;
+	@include flyout-nav;
+	@include flyout-trigger;
+	@include footer;
+	@include google-map;
+	
+	@include header((
+		'background'     : transparent,
+		'font-size'      : 0.9em,
+        'side'           : (
+            'enabled'    : left
+        )
+	));
+	
+	@include logo((
+        'padding' : 0.75em
+    ));
+	
+	@include navigation((
+		'link-color'   : color('greyscale', 'white'),
+        'item-radius'  : 1.5em,
+        'item-padding' : 0.5rem 1rem
+	));
+	
+	@include mega-menu;
+	@include dropdown;
+	@include page-overview;
+	@include preloader;
+	@include scroll-top;
+	@include search;
+	@include scroll-wheel;
+	@include sidebar;
+	@include site-overlay;
+	@include twitter-feed;
+	
+//-----------------------------------------------------------------
+// Sections
+//-----------------------------------------------------------------
+
+	@include sections;
+	
+	@include billboard((
+		'bg-image': "#{$asset-path}/images/demo/hero-5.jpg"
+	));
+
+} // Kayzen

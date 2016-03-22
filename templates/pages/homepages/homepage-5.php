@@ -36,10 +36,10 @@
 						<h2 class="heading-uppercase-heavy-size-8 font-2"><span>The New Experience</span></h2>
 					</header>
 					<p class="lede">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas mollis dolor ut euismod pellentesque. Vivamus mattis cursus urna, non gravida purus pulvinar ac. Nunc dignissim velit justo, id aliquet neque.</p>
-					<p class="button_group">
+					<div class="button_group">
 						<a class="button-size-4-grey-1" href="#">Purchase Now</a>
 						<a class="button-size-4-border-white" href="#">Explore The Potential</a>
-					</p>
+					</div>
 				</div>
 			</div>
 			<nav class="slide-nav">

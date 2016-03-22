@@ -36,10 +36,10 @@
 						<b>Welcome to Kayzen</b><br />
 						<b>A Unique Theme Framework</b>
 					</h3>
-					<p class="button_group">
+					<div class="button_group">
 						<a class="button-size-4-grey-6" href="#">Purchase Now</a>
 						<a class="button-size-4-grey-6" href="#">Explore The Potential</a>
-					</p>
+					</div>
 				</div>
 			</div>
 			<nav class="slide-nav">
@@ -221,10 +221,10 @@
                             <b>Seeing things clearly is simple when you look at the bigger picture</b>
                         </h3>
                         <p class="lede">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam scelerisque, eros vel scelerisque vestibulum, neque nunc lobortis ex, a venenatis enim nisi sit amet purus. Praesent lacinia et nulla a facilisis. Sed aliquam pharetra ante non efficitur. Sed malesuada mauris quis congue porttitor.</p>
-                        <p class="button_group">
+                        <div class="button_group">
                             <a class="button-size-4-primary" href="#">Purchase Now</a>
                             <a class="button-size-4-border-white" href="#">Read More</a>
-                        </p>
+                        </div>
                     </div>
                 </div>
 			</div>
@@ -328,10 +328,10 @@
 							<h3 class="heading-size-6">One Nexus</h3>
 						</header>
 						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam semper nisi eu metus accumsan aliquet. Mauris a diam ac lectus facilisis faucibus. Sed convallis, ex et viverra suscipit, dui neque accumsan magna, et auctor leo ligula non ipsum. Phasellus ullamcorper interdum nisl et ornare.</p>
-						<p class="button_group">
+						<div class="button_group">
 							<a class="button-border-primary" href="#">Purchase Now</a>
 							<a class="button-border" href="#">Read More</a>
-						</p>
+						</div>
 					</div>
 					<div class="section_graphic span-4 text-center min-break-3">
 						<img 

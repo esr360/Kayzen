@@ -11,7 +11,7 @@ This is the official documentation for the Kayzen HTML theme. If you are a custo
 
 > [Click Here](#html-templates) if you just want to get started using the default HTML files without touching any other code.
 
-It's great that you've decided to checkout Kayzen! How you go about buildig your next project with it depends on many things such as your prefered workflow, your skill level, amount of time you have etc. This page will cover the basics of all the different ways Kayzen can be adapted to suit any need. It is assumed that you have at least basic HTML, CSS and JavaScript/jQuery understanding.
+It's great that you've decided to checkout Kayzen! How you go about building your next project with it depends on many things such as your prefered workflow, your skill level, amount of time you have etc. This page will cover the basics of all the different ways Kayzen can be adapted to suit any need. It is assumed that you have at least basic HTML, CSS and JavaScript/jQuery understanding.
 
 To start from the bottom up, Kayzen is built using HTML5, CSS3 and jQuery. At the bare minimum, each Kayzen wepage should be served the following JavaScript and CSS assets:
 
@@ -42,7 +42,7 @@ The following section is only relevant if your workflow involves building Kayzen
 
 &ast; indicates that the requirement is only for [ehnanced workflow features](#enhanced-workflow-features)
 
-Both the default provided `app.js` and `app.css` contain code from several third party libraries and plugins. The files for these libraries and plugins reside in the **assets/vendor** folder, and include the following:
+Both the default provided `app.js` and `app.css` contain code from several third party libraries and plugins. The source files for these libraries and plugins reside in the **assets/vendor** folder, and include the following:
 
 * [Aloads](https://github.com/awedoo/aloads)
 * [Englighter](https://github.com/AndiDittrich/EnlighterJS)
@@ -249,7 +249,7 @@ The Enlighter plugin which is used by the Kayzen demo pages requires [MooTools](
 
 ###### Aloads/Preloaders
 
-Kayzen's main **app.scss** file attempts to import `assets/vendor/Aloads/scss/_preloaders.scss`, which does not come packaged with the default [Aloads](https://github.com/awedoo/aloads) library. Ruby Sass cannot import **.css** files which is why the app must look for a **.scss** file. Other than the extension, the contents of these two files would be identical. If you maually create this file and directory, Git will complain that you have made changes to the **Aloads** submodule, so it is recommended that your build process involves copying the file over before Sass compiles, and then deleting it once the CSS has been compiled.
+Kayzen's main **app.scss** file attempts to import `assets/vendor/Aloads/scss/_preloaders.scss`, which does not come packaged with the default [Aloads](https://github.com/awedoo/aloads) library. Ruby Sass cannot import **.css** files which is why the app must look for a **.scss** file. Other than the extension, the contents of these two files would be identical. If you maually create this file and directory, Git will complain that you have made changes to the **Aloads** submodule, so it is recommended that your build process involves creating the file before Sass compiles, and then deleting it once the CSS has been compiled.
 
 ## Configure
 
@@ -823,7 +823,7 @@ The below values will also automatically be updated in **app.php**.
 | `realm` | `'demo'` | Can either be `demo` or `live`. Currently only used to serve placeholder images instead of stock photos. |
 | `env` | `'dev'` | Can either be `dev` or `prod`. Used to determine whether or not assets should be minified. |
 | `path` | `'root'` | Can either be `root` or `relative`, and will define how your asset paths are created. |
-| `themes` | `false` | If enabled, assets will be compiled into individual theme folders (e.g. app/themes/Kayzen/scripts/app.js). |
+| `themes` | `true` | If enabled, assets will be compiled into individual theme folders (e.g. app/themes/Kayzen/scripts/app.js). |
 
 The above options would be used when calling the grunt task, like so:
 

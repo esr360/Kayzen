@@ -78,10 +78,10 @@
                             <li>Sed sed iaculis arcu, eu pharetra nulla</li>
                             <li>Etiam dapibus, nulla placerat</li>
                         </ul>
-                        <p class="button_group">
+                        <div class="button_group">
                             <a href="#" target="blank" class="button-size-3">View Demo</a>
                             <a href="#" class="button-primary-size-3">Purchase Theme</a>
-                        </p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -109,10 +109,10 @@
                             <li>Sed sed iaculis arcu, eu pharetra nulla</li>
                             <li>Etiam dapibus, nulla placerat</li>
                         </ul>
-                        <p class="button_group">
+                        <div class="button_group">
                             <a href="#" target="blank" class="button-size-3">View Demo</a>
                             <a href="#" class="button-primary-size-3">Purchase Theme</a>
-                        </p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -140,10 +140,10 @@
                             <li>Sed sed iaculis arcu, eu pharetra nulla</li>
                             <li>Etiam dapibus, nulla placerat</li>
                         </ul>
-                        <p class="button_group">
+                        <div class="button_group">
                             <a href="#" target="blank" class="button-size-3">View Demo</a>
                             <a href="#" class="button-primary-size-3">Purchase Theme</a>
-                        </p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -171,10 +171,10 @@
                             <li>Sed sed iaculis arcu, eu pharetra nulla</li>
                             <li>Etiam dapibus, nulla placerat</li>
                         </ul>
-                        <p class="button_group">
+                        <div class="button_group">
                             <a href="#" target="blank" class="button-size-3">View Demo</a>
                             <a href="#" class="button-primary-size-3">Purchase Theme</a>
-                        </p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -202,10 +202,10 @@
                             <li>Sed sed iaculis arcu, eu pharetra nulla</li>
                             <li>Etiam dapibus, nulla placerat</li>
                         </ul>
-                        <p class="button_group">
+                        <div class="button_group">
                             <a href="#" target="blank" class="button-size-3">View Demo</a>
                             <a href="#" class="button-primary-size-3">Purchase Theme</a>
-                        </p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -233,10 +233,10 @@
                             <li>Sed sed iaculis arcu, eu pharetra nulla</li>
                             <li>Etiam dapibus, nulla placerat</li>
                         </ul>
-                        <p class="button_group">
+                        <div class="button_group">
                             <a href="#" target="blank" class="button-size-3">View Demo</a>
                             <a href="#" class="button-primary-size-3">Purchase Theme</a>
-                        </p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -264,10 +264,10 @@
                             <li>Sed sed iaculis arcu, eu pharetra nulla</li>
                             <li>Etiam dapibus, nulla placerat</li>
                         </ul>
-                        <p class="button_group">
+                        <div class="button_group">
                             <a href="#" target="blank" class="button-size-3">View Demo</a>
                             <a href="#" class="button-primary-size-3">Purchase Theme</a>
-                        </p>
+                        </div>
                     </div>
                 </div>
             </div>

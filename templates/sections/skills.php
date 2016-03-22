@@ -23,10 +23,10 @@
                         <li>Donec malesuada metus non massa sodales auctor</li>
                         <li>Sed sed iaculis arcu, eu pharetra nulla</li>
                     </ul>
-                    <p class="button_group">
+                    <div class="button_group">
                         <a href="#" class="button-primary<?php echo '-'.$options['cta-modifiers'] ?>">View Demo</a>
                         <a href="http://themeforest.net/user/skyux/portfolio" target="blank" class="button-border-white<?php echo '-'.$options['cta-modifiers'] ?>">Purchase Theme</a>
-                    </p>
+                    </div>
                 </div>
                 <hr class="hrule-stripes-large max-break-3" />
                 <div class="span-6 progress-bar_group">
