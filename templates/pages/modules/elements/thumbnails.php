@@ -108,7 +108,7 @@
                 <div class="well object">
                     <div class="thumbnail span-6">
                         <div class="thumbnail_mask">
-                            <div class="thumbnail_controls-corner icon_group-small">
+                            <div class="thumbnail_controls-corner button_group-small">
                                 <a rel="lightbox" href="<?php echo appDir ?>/images/wallpapers/bg-3.jpg" class="button-icon-border-circle">
                                     <i class="fa fa-search"></i>
                                 </a>
@@ -128,7 +128,7 @@
 <pre data-enlighter-language="html" class="EnlighterJSRAW">
 &lt;div class="thumbnail">
     &lt;div class="thumbnail_mask">
-        &lt;div class="thumbnail_controls-corner icon_group-small">
+        &lt;div class="thumbnail_controls-corner button_group-small">
             &lt;a rel="lightbox" href="/images/wallpapers/bg-3.jpg" class="button-icon-border-circle">
                 &lt;i class="fa fa-search">&lt;/i>
             &lt;/a>

@@ -61,7 +61,7 @@
         &lt;i class="fa fa-twitter">&lt;/i>
     &lt;/a>
     &lt;div class="twitter-feed_content container">
-        &lt;div class="tweets-nav icon_group-small">
+        &lt;div class="tweets-nav button_group-small">
             &lt;div class="tweet-prev button-icon-border-size-2">
                 &lt;i class="fa fa-angle-left">&lt;/i>
             &lt;/div>
@@ -94,7 +94,7 @@ $('#twitter-feed').twitterFeed({
                         <i class="fa fa-twitter"></i>
                     </a>
                     <div class="twitter-feed_content container">
-                        <div class="tweets-nav icon_group-small">
+                        <div class="tweets-nav button_group-small">
                             <div class="tweet-prev button-icon-border-size-2">
                                 <i class="fa fa-angle-left"></i>
                             </div>
@@ -127,7 +127,7 @@ $('#twitter-feed').twitterFeed({
                         <i class="fa fa-twitter"></i>
                     </a>
                     <div class="twitter-feed_content container">
-                        <div class="tweets-nav icon_group-small">
+                        <div class="tweets-nav button_group-small">
                             <div class="tweet-prev button-icon-border-size-2">
                                 <i class="fa fa-angle-left"></i>
                             </div>

@@ -102,7 +102,7 @@
                         &lt;h5 class="heading-light-brand-1">
                             View our latest tweets
                         &lt/h5>
-                        &lt;div class="footer_tweets-nav icon_group-small">
+                        &lt;div class="footer_tweets-nav button_group-small">
                             &lt;div class="tweet-prev button-icon-circle-size-1">
                                 &lt;i class="fa fa-angle-left">&lt;/i>
                             &lt;/div>
@@ -165,7 +165,7 @@ $('.footer').footer({
                         &lt;h5 class="heading-light-brand-1">
                             See what our clients say
                         &lt;/h5>
-                        &lt;div class="footer_testimonials-nav icon_group-small">
+                        &lt;div class="footer_testimonials-nav button_group-small">
                             &lt;div class="tweet-prev button-icon-circle-size-1">
                                 &lt;i class="fa fa-angle-left">&lt;/i>
                             &lt;/div>

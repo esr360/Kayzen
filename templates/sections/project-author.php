@@ -7,7 +7,7 @@
             <div class="thumbnail-mini-profile-round-xlarge-styled">
                 <img src="<?php stockImage('team/team-2.jpg') ?>" alt="">
             </div>
-            <div class="icon_group-small">
+            <div class="button_group-small">
                 <a href="#" class="button-icon-border-size-1 tooltip-top" data-tooltip="Facebook">
                     <i class="fa fa-facebook"></i>
                 </a>

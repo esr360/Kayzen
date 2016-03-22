@@ -214,7 +214,7 @@
 							<div class="span-6 relative">	
 								<div class="thumbnail-zoom">
 									<div class="thumbnail_mask">
-										<div class="thumbnail_controls icon_group-small">
+										<div class="thumbnail_controls button_group-small">
 											<a 
                                                 href="<?php stockImage('demo/hero-12.jpg') ?>" 
                                                 class="button-icon-border-circle" 
@@ -254,7 +254,7 @@
 							<div class="span-6 relative">	
 								<div class="thumbnail-zoom">
 									<div class="thumbnail_mask">
-										<div class="thumbnail_controls icon_group-small">
+										<div class="thumbnail_controls button_group-small">
 											<a 
                                                 href="<?php stockImage('demo/hero-10.jpg') ?>" 
                                                 class="button-icon-border-circle" 
@@ -395,7 +395,7 @@
 							<div class="span-4 break-4-half break-2-full relative">	
 								<div class="thumbnail-zoom">
 									<div class="thumbnail_mask">
-										<div class="thumbnail_controls icon_group-small">
+										<div class="thumbnail_controls button_group-small">
 											<a 
                                                 href="<?php stockImage('demo/hero-7.jpg') ?>" 
                                                 class="button-icon-border-circle" 
@@ -432,7 +432,7 @@
 							<div class="span-4 break-4-half break-2-full relative">	
 								<div class="thumbnail-zoom">
 									<div class="thumbnail_mask">
-										<div class="thumbnail_controls icon_group-small">
+										<div class="thumbnail_controls button_group-small">
 											<a 
                                                 href="<?php stockImage('demo/hero-5.jpg') ?>" 
                                                 class="button-icon-border-circle" 
@@ -469,7 +469,7 @@
 							<div class="span-4 relative min-break-4">	
 								<div class="thumbnail-zoom">
 									<div class="thumbnail_mask">
-										<div class="thumbnail_controls icon_group-small">
+										<div class="thumbnail_controls button_group-small">
 											<a 
                                                 href="<?php stockImage('demo/hero-3.jpg') ?>" 
                                                 class="button-icon-border-circle" 

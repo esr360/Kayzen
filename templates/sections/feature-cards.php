@@ -11,7 +11,7 @@
                 <div class="widget-card span-4">
                     <div class="thumbnail-zoom">
                         <div class="thumbnail_mask">
-                            <div class="thumbnail_controls icon_group-small">
+                            <div class="thumbnail_controls button_group-small">
                                 <a href="<?php stockImage('demo/hero-7.jpg') ?>" class="button-icon-border-circle" rel="lightbox">
                                     <i class="fa fa-search"></i>
                                 </a>
@@ -36,7 +36,7 @@
                 <div class="widget-card span-4">
                     <div class="thumbnail-zoom">
                         <div class="thumbnail_mask">
-                            <div class="thumbnail_controls icon_group-small">
+                            <div class="thumbnail_controls button_group-small">
                                 <a href="<?php stockImage('demo/hero-3.jpg') ?>" class="button-icon-border-circle" rel="lightbox">
                                     <i class="fa fa-search"></i>
                                 </a>
@@ -61,7 +61,7 @@
                 <div class="widget-card span-4">
                     <div class="thumbnail-zoom">
                         <div class="thumbnail_mask">
-                            <div class="thumbnail_controls icon_group-small">
+                            <div class="thumbnail_controls button_group-small">
                                 <a href="<?php stockImage('demo/hero-6.jpg') ?>" class="button-icon-border-circle" rel="lightbox">
                                     <i class="fa fa-search"></i>
                                 </a>

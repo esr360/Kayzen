@@ -18,7 +18,7 @@
         </header>
         
         <div class="container">
-            <div class="icon_group-small text-center">
+            <div class="button_group-small text-center">
                 <a 
                     href="#"
                     class="tooltip-top button-icon-size-6-border-circle-primary"

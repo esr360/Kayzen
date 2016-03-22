@@ -580,7 +580,7 @@
                         <article class="widget-article span-4">
                             <div class="thumbnail">
                                 <div class="thumbnail_mask">
-                                    <div class="thumbnail_controls icon_group-small">
+                                    <div class="thumbnail_controls button_group-small">
                                         <a href="<?php echo appDir ?>/images/wallpapers/bg-5.jpg" class="button-icon-border-circle" rel="lightbox">
                                             <i class="fa fa-search"></i>
                                         </a>
@@ -617,7 +617,7 @@
                         <article class="widget-article span-4">
                             <div class="thumbnail">
                                 <div class="thumbnail_mask">
-                                    <div class="thumbnail_controls icon_group-small">
+                                    <div class="thumbnail_controls button_group-small">
                                         <a href="<?php echo appDir ?>/images/wallpapers/bg-6.jpg" class="button-icon-border-circle" rel="lightbox">
                                             <i class="fa fa-search"></i>
                                         </a>
@@ -654,7 +654,7 @@
                         <article class="widget-article span-4">
                             <div class="thumbnail">
                                 <div class="thumbnail_mask">
-                                    <div class="thumbnail_controls icon_group-small">
+                                    <div class="thumbnail_controls button_group-small">
                                         <a href="<?php echo appDir ?>/images/wallpapers/bg-7.jpg" class="button-icon-border-circle" rel="lightbox">
                                             <i class="fa fa-search"></i>
                                         </a>
@@ -698,7 +698,7 @@
     &lt;article class="widget-article span-4">
         &lt;div class="thumbnail">
             &lt;div class="thumbnail_mask">
-                &lt;div class="thumbnail_controls icon_group-small">
+                &lt;div class="thumbnail_controls button_group-small">
                     &lt;a href="/images/wallpapers/bg-7.jpg" class="button-icon-border-circle" rel="lightbox">
                         &lt;i class="fa fa-search">&lt;/i>
                     &lt;/a>

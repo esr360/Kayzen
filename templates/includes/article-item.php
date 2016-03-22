@@ -106,7 +106,7 @@
         
             <div class="thumbnail<?php if ($isArticle && empty($options['span'])) echo '-article' ?>">
                 <div class="thumbnail_mask">
-                    <div class="thumbnail_controls<?php if($options['matrix'] && $options['maskTitle']) echo '-corner' ?> icon_group-small">
+                    <div class="thumbnail_controls<?php if($options['matrix'] && $options['maskTitle']) echo '-corner' ?> button_group-small">
                         <a 
                             href="<?php stockImage('demo/hero-'.$options['thumb'].'.jpg') ?>"
                             class="button-icon-border-circle"

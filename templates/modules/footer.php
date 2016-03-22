@@ -112,7 +112,7 @@
                                 <h5 class="heading-light-brand-1">
                                     View our latest tweets
                                 </h5>
-                                <div class="footer_tweets-nav icon_group-small">
+                                <div class="footer_tweets-nav button_group-small">
                                     <div class="tweet-prev button-icon-circle-size-1">
                                         <i class="fa fa-angle-left"></i>
                                     </div>
@@ -134,7 +134,7 @@
                                 <h5 class="heading-light-brand-1">
                                     See what our clients say
                                 </h5>
-                                <div class="footer_testimonials-nav icon_group-small">
+                                <div class="footer_testimonials-nav button_group-small">
                                     <div class="tweet-prev button-icon-circle-size-1">
                                         <i class="fa fa-angle-left"></i>
                                     </div>

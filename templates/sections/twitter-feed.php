@@ -10,7 +10,7 @@
             <i class="fa fa-twitter"></i>
         </a>
         <div class="twitter-feed_content container">
-            <div class="tweets-nav icon_group-small">
+            <div class="tweets-nav button_group-small">
                 <div class="tweet-prev button-icon-border-size-2">
                     <i class="fa fa-angle-left"></i>
                 </div>

@@ -63,7 +63,7 @@
                                 <li><b><i class="fa fa-fw fa-brand fa-phone-square"></i> Phone:</b> (0161) 123 4567</li>
                                 <li><b><i class="fa fa-fw fa-brand fa-envelope"></i> Email:</b> <a href="mailto:support@themeforest.net">support@themeforest.net</a></li>
                             </ul>
-                            <div class="icon_group-small">
+                            <div class="button_group-small">
                                 <a href="#" class="button-icon-border-size-2 tooltip-top" data-tooltip="Dribbble">
                                     <i class="fa fa-dribbble"></i>
                                 </a>

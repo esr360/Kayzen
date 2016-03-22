@@ -36,7 +36,7 @@
                         <div class="span-3 break-3-half break-2-full">
                             <div class="thumbnail">
                                 <div class="thumbnail_mask">
-                                    <div class="thumbnail_controls icon_group-small">
+                                    <div class="thumbnail_controls button_group-small">
                                         <a 
                                             href="<?php stockImage('demo/product-1.jpg') ?>" 
                                             class="button-icon-border-circle tooltip-top" 
@@ -72,7 +72,7 @@
                             <div class="thumbnail">
                                 <div class="corner-ribbon-pink" data-ribbon="Sale"></div>
                                 <div class="thumbnail_mask">
-                                    <div class="thumbnail_controls icon_group-small">
+                                    <div class="thumbnail_controls button_group-small">
                                         <a 
                                             href="<?php stockImage('demo/product-1.jpg') ?>" 
                                             class="button-icon-border-circle tooltip-top" 
@@ -108,7 +108,7 @@
                         <div class="span-3 break-3-half break-2-full">
                             <div class="thumbnail">
                                 <div class="thumbnail_mask">
-                                    <div class="thumbnail_controls icon_group-small">
+                                    <div class="thumbnail_controls button_group-small">
                                         <a 
                                             href="<?php stockImage('demo/product-1.jpg') ?>" 
                                             class="button-icon-border-circle tooltip-top" 
@@ -143,7 +143,7 @@
                         <div class="span-3 break-3-half break-2-full">
                             <div class="thumbnail">
                                 <div class="thumbnail_mask">
-                                    <div class="thumbnail_controls icon_group-small">
+                                    <div class="thumbnail_controls button_group-small">
                                         <a 
                                             href="<?php stockImage('demo/product-1.jpg') ?>" 
                                             class="button-icon-border-circle tooltip-top" 
@@ -186,7 +186,7 @@
                         <div class="span-3 break-3-half break-2-full">
                             <div class="thumbnail">
                                 <div class="thumbnail_mask">
-                                    <div class="thumbnail_controls icon_group-small">
+                                    <div class="thumbnail_controls button_group-small">
                                         <a href="#" class="button-icon-border-circle tooltip-top" data-tooltip="Quick Look">
                                             <i class="fa fa-search-plus"></i>
                                         </a>
@@ -217,7 +217,7 @@
                             <div class="thumbnail">
                                 <div class="corner-ribbon-pink" data-ribbon="Sale"></div>
                                 <div class="thumbnail_mask">
-                                    <div class="thumbnail_controls icon_group-small">
+                                    <div class="thumbnail_controls button_group-small">
                                         <a href="#" class="button-icon-border-circle tooltip-top" data-tooltip="Quick Look">
                                             <i class="fa fa-search-plus"></i>
                                         </a>
@@ -248,7 +248,7 @@
                         <div class="span-3 break-3-half break-2-full">
                             <div class="thumbnail">
                                 <div class="thumbnail_mask">
-                                    <div class="thumbnail_controls icon_group-small">
+                                    <div class="thumbnail_controls button_group-small">
                                         <a href="#" class="button-icon-border-circle tooltip-top" data-tooltip="Quick Look">
                                             <i class="fa fa-search-plus"></i>
                                         </a>
@@ -278,7 +278,7 @@
                         <div class="span-3 break-3-half break-2-full">
                             <div class="thumbnail">
                                 <div class="thumbnail_mask">
-                                    <div class="thumbnail_controls icon_group-small">
+                                    <div class="thumbnail_controls button_group-small">
                                         <a href="#" class="button-icon-border-circle tooltip-top" data-tooltip="Quick Look">
                                             <i class="fa fa-search-plus"></i>
                                         </a>
@@ -316,7 +316,7 @@
                         <div class="span-3 break-3-half break-2-full">
                             <div class="thumbnail">
                                 <div class="thumbnail_mask">
-                                    <div class="thumbnail_controls icon_group-small">
+                                    <div class="thumbnail_controls button_group-small">
                                         <a href="#" class="button-icon-border-circle tooltip-top" data-tooltip="Quick Look">
                                             <i class="fa fa-search-plus"></i>
                                         </a>
@@ -347,7 +347,7 @@
                             <div class="thumbnail">
                                 <div class="corner-ribbon-pink" data-ribbon="Sale"></div>
                                 <div class="thumbnail_mask">
-                                    <div class="thumbnail_controls icon_group-small">
+                                    <div class="thumbnail_controls button_group-small">
                                         <a href="#" class="button-icon-border-circle tooltip-top" data-tooltip="Quick Look">
                                             <i class="fa fa-search-plus"></i>
                                         </a>
@@ -378,7 +378,7 @@
                         <div class="span-3 break-3-half break-2-full">
                             <div class="thumbnail">
                                 <div class="thumbnail_mask">
-                                    <div class="thumbnail_controls icon_group-small">
+                                    <div class="thumbnail_controls button_group-small">
                                         <a href="#" class="button-icon-border-circle tooltip-top" data-tooltip="Quick Look">
                                             <i class="fa fa-search-plus"></i>
                                         </a>
@@ -408,7 +408,7 @@
                         <div class="span-3">
                             <div class="thumbnail">
                                 <div class="thumbnail_mask">
-                                    <div class="thumbnail_controls icon_group-small">
+                                    <div class="thumbnail_controls button_group-small">
                                         <a href="#" class="button-icon-border-circle tooltip-top" data-tooltip="Quick Look">
                                             <i class="fa fa-search-plus"></i>
                                         </a>
