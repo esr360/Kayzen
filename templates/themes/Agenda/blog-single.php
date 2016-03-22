@@ -43,7 +43,7 @@
 			<div class="container-small">
                 
                 <div class="thumbnail-article">
-                    <img src="<?php stockImage('demo/hero-'.rand(1, 7).'.jpg') ?>">
+                    <img src="<?php stockImage('demo/stock-'.rand(1, 7).'.jpg') ?>">
                 </div>
                 
                 <?php demoPost() ?>

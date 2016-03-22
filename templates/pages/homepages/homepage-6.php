@@ -35,7 +35,7 @@
 					<a
                         href="#"
 						class="widget-feature-zoom span-4"
-						data-bg="<?php stockImage('demo/hero-6.jpg') ?>"
+						data-bg="<?php stockImage('demo/stock-6.jpg') ?>"
 					>
 						<div class="corner-ribbon-green" data-ribbon="23 Sep"></div>
 						<header class="widget_header heading_group">
@@ -46,7 +46,7 @@
 					<a
                         href="#"
 						class="widget-feature-zoom span-4"
-						data-bg="<?php stockImage('demo/hero-3.jpg') ?>"
+						data-bg="<?php stockImage('demo/stock-3.jpg') ?>"
 					>
 						<div class="corner-ribbon-green" data-ribbon="3 Oct"></div>
 						<header class="widget_header heading_group">
@@ -57,7 +57,7 @@
 					<a
                         href="#"
 						class="widget-feature-zoom span-4 col-full"
-						data-bg="<?php stockImage('demo/hero-4.jpg') ?>"
+						data-bg="<?php stockImage('demo/stock-4.jpg') ?>"
 					>
 						<div class="corner-ribbon-green" data-ribbon="16 Oct"></div>
 						<header class="widget_header heading_group">
@@ -70,7 +70,7 @@
 					<a
                         href="#"
 						class="widget-feature-zoom span-8"
-						data-bg="<?php stockImage('demo/hero-5.jpg') ?>"
+						data-bg="<?php stockImage('demo/stock-5.jpg') ?>"
 					>
 						<div class="corner-ribbon-green" data-ribbon="27 Oct"></div>
 						<header class="widget_header heading_group">
@@ -97,7 +97,7 @@
 							<div class="owl-carousel" id="latest-articles">
 								
 								<div class="thumbnail-feature">
-									<img src="<?php stockImage('demo/hero-1.jpg') ?>">
+									<img src="<?php stockImage('demo/stock-1.jpg') ?>">
 									<div class="thumbnail_content">
 										<header class="heading_group-small">
 											<div class="heading_date">
@@ -113,7 +113,7 @@
 								</div>
 								
 								<div class="thumbnail-feature">
-									<img src="<?php stockImage('demo/hero-12.jpg') ?>">
+									<img src="<?php stockImage('demo/stock-12.jpg') ?>">
 									<div class="thumbnail_content">
 										<header class="heading_group-small">
 											<div class="heading_date">
@@ -129,7 +129,7 @@
 								</div>
 								
 								<div class="thumbnail-feature">
-									<img src="<?php stockImage('demo/hero-11.jpg') ?>">
+									<img src="<?php stockImage('demo/stock-11.jpg') ?>">
 									<div class="thumbnail_content">
 										<header class="heading_group-small">
 											<div class="heading_date">
@@ -145,7 +145,7 @@
 								</div>
 								
 								<div class="thumbnail-feature">
-									<img src="<?php stockImage('demo/hero-10.jpg') ?>">
+									<img src="<?php stockImage('demo/stock-10.jpg') ?>">
 									<div class="thumbnail_content">
 										<header class="heading_group-small">
 											<div class="heading_date">
@@ -161,7 +161,7 @@
 								</div>
 								
 								<div class="thumbnail-feature">
-									<img src="<?php stockImage('demo/hero-9.jpg') ?>">
+									<img src="<?php stockImage('demo/stock-9.jpg') ?>">
 									<div class="thumbnail_content">
 										<header class="heading_group-small">
 											<div class="heading_date">
@@ -186,11 +186,11 @@
 						</div>
 						
 						<div class="thumbnail_grid-fade row-magic stack-0" id="latest-articles-thumbs">
-							<img class="span active" src="<?php stockImage('demo/hero-1.jpg') ?>">
-							<img class="span" src="<?php stockImage('demo/hero-12.jpg') ?>">
-							<img class="span" src="<?php stockImage('demo/hero-11.jpg') ?>">
-							<img class="span" src="<?php stockImage('demo/hero-10.jpg') ?>">
-							<img class="span" src="<?php stockImage('demo/hero-9.jpg') ?>">
+							<img class="span active" src="<?php stockImage('demo/stock-1.jpg') ?>">
+							<img class="span" src="<?php stockImage('demo/stock-12.jpg') ?>">
+							<img class="span" src="<?php stockImage('demo/stock-11.jpg') ?>">
+							<img class="span" src="<?php stockImage('demo/stock-10.jpg') ?>">
+							<img class="span" src="<?php stockImage('demo/stock-9.jpg') ?>">
 						</div>
 						
 						<script>
@@ -216,7 +216,7 @@
 									<div class="thumbnail_mask">
 										<div class="thumbnail_controls button_group-small">
 											<a 
-                                                href="<?php stockImage('demo/hero-12.jpg') ?>" 
+                                                href="<?php stockImage('demo/stock-12.jpg') ?>" 
                                                 class="button-icon-border-circle" 
                                                 rel="lightbox"
                                             >
@@ -227,7 +227,7 @@
 											</a>
 										</div>
 									</div>
-									<img src="<?php stockImage('demo/hero-12.jpg') ?>">
+									<img src="<?php stockImage('demo/stock-12.jpg') ?>">
 								</div>
 								<div class="thumbnail-profile-round-badge">
 									<img src="<?php stockImage('team/team-2.jpg') ?>" alt="">
@@ -256,7 +256,7 @@
 									<div class="thumbnail_mask">
 										<div class="thumbnail_controls button_group-small">
 											<a 
-                                                href="<?php stockImage('demo/hero-10.jpg') ?>" 
+                                                href="<?php stockImage('demo/stock-10.jpg') ?>" 
                                                 class="button-icon-border-circle" 
                                                 rel="lightbox"
                                             >
@@ -267,7 +267,7 @@
 											</a>
 										</div>
 									</div>
-									<img src="<?php stockImage('demo/hero-10.jpg') ?>">
+									<img src="<?php stockImage('demo/stock-10.jpg') ?>">
 								</div>
 								<div class="thumbnail-profile-round-badge">
 									<img src="<?php stockImage('team/team-1.jpg') ?>" alt="">
@@ -397,7 +397,7 @@
 									<div class="thumbnail_mask">
 										<div class="thumbnail_controls button_group-small">
 											<a 
-                                                href="<?php stockImage('demo/hero-7.jpg') ?>" 
+                                                href="<?php stockImage('demo/stock-7.jpg') ?>" 
                                                 class="button-icon-border-circle" 
                                                 rel="lightbox"
                                             >
@@ -408,7 +408,7 @@
 											</a>
 										</div>
 									</div>
-									<img src="<?php stockImage('demo/hero-7.jpg') ?>">
+									<img src="<?php stockImage('demo/stock-7.jpg') ?>">
 								</div>
 								<header class="heading_group">
 									<div class="heading_date">
@@ -434,7 +434,7 @@
 									<div class="thumbnail_mask">
 										<div class="thumbnail_controls button_group-small">
 											<a 
-                                                href="<?php stockImage('demo/hero-5.jpg') ?>" 
+                                                href="<?php stockImage('demo/stock-5.jpg') ?>" 
                                                 class="button-icon-border-circle" 
                                                 rel="lightbox"
                                             >
@@ -445,7 +445,7 @@
 											</a>
 										</div>
 									</div>
-									<img src="<?php stockImage('demo/hero-5.jpg') ?>">
+									<img src="<?php stockImage('demo/stock-5.jpg') ?>">
 								</div>
 								<header class="heading_group">
 									<div class="heading_date">
@@ -471,7 +471,7 @@
 									<div class="thumbnail_mask">
 										<div class="thumbnail_controls button_group-small">
 											<a 
-                                                href="<?php stockImage('demo/hero-3.jpg') ?>" 
+                                                href="<?php stockImage('demo/stock-3.jpg') ?>" 
                                                 class="button-icon-border-circle" 
                                                 rel="lightbox"
                                             >
@@ -482,7 +482,7 @@
 											</a>
 										</div>
 									</div>
-									<img src="<?php stockImage('demo/hero-3.jpg') ?>">
+									<img src="<?php stockImage('demo/stock-3.jpg') ?>">
 								</div>
 								<header class="heading_group">
 									<div class="heading_date">

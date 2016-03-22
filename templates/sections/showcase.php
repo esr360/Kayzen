@@ -22,25 +22,25 @@
         <!-- Showcase Thumbnails -->
         <section class="carousel-scale-3-greyscale-stageBg owl-carousel" id="showcase-thumbnails">
             <div class="showcase-thumbnail">
-                <img src="<?php stockImage('demo/small/hero-1.jpg') ?>">
+                <img src="<?php stockImage('demo/small/stock-1.jpg') ?>">
             </div>
             <div class="showcase-thumbnail">
-                <img src="<?php stockImage('demo/small/hero-2.jpg') ?>">
+                <img src="<?php stockImage('demo/small/stock-2.jpg') ?>">
             </div>
             <div class="showcase-thumbnail">
-                <img src="<?php stockImage('demo/small/hero-3.jpg') ?>">
+                <img src="<?php stockImage('demo/small/stock-3.jpg') ?>">
             </div>
             <div class="showcase-thumbnail">
-                <img src="<?php stockImage('demo/small/hero-4.jpg') ?>">
+                <img src="<?php stockImage('demo/small/stock-4.jpg') ?>">
             </div>
             <div class="showcase-thumbnail">
-                <img src="<?php stockImage('demo/small/hero-5.jpg') ?>">
+                <img src="<?php stockImage('demo/small/stock-5.jpg') ?>">
             </div>
             <div class="showcase-thumbnail">
-                <img src="<?php stockImage('demo/small/hero-6.jpg') ?>">
+                <img src="<?php stockImage('demo/small/stock-6.jpg') ?>">
             </div>
             <div class="showcase-thumbnail">
-                <img src="<?php stockImage('demo/small/hero-7.jpg') ?>">
+                <img src="<?php stockImage('demo/small/stock-7.jpg') ?>">
             </div>
         </section> 
         
@@ -56,7 +56,7 @@
         <div id="showcase-carousel" class="owl-carousel">
             
             <!-- Showcase Slide 1 -->
-            <div class="row-block bg-cover stack-break-4" style="background-image: url('<?php stockImage('demo/small/hero-1.jpg') ?>')">
+            <div class="row-block bg-cover stack-break-4" style="background-image: url('<?php stockImage('demo/small/stock-1.jpg') ?>')">
                 <div class="section_block span-6 text-center va-middle">
                     <div class="block-content span-9">
                         <div class="desktop-graphic-scroll">
@@ -87,7 +87,7 @@
             </div>
             
             <!-- Showcase Slide 2 -->
-            <div class="row-block stack-break-4" style="background-image: url('<?php stockImage('demo/small/hero-1.jpg') ?>')">
+            <div class="row-block stack-break-4" style="background-image: url('<?php stockImage('demo/small/stock-1.jpg') ?>')">
                 <div class="section_block span-6 text-center va-middle">
                     <div class="block-content span-9">
                         <div class="desktop-graphic-scroll">
@@ -118,7 +118,7 @@
             </div>
             
             <!-- Showcase Slide 3 -->
-            <div class="row-block bg-cover stack-break-4" style="background-image: url('<?php stockImage('demo/small/hero-1.jpg') ?>')">
+            <div class="row-block bg-cover stack-break-4" style="background-image: url('<?php stockImage('demo/small/stock-1.jpg') ?>')">
                 <div class="section_block span-6 text-center va-middle">
                     <div class="block-content span-9">
                         <div class="desktop-graphic-scroll">
@@ -149,7 +149,7 @@
             </div>
             
             <!-- Showcase Slide 4 -->
-            <div class="row-block bg-cover stack-break-4" style="background-image: url('<?php stockImage('demo/small/hero-1.jpg') ?>')">
+            <div class="row-block bg-cover stack-break-4" style="background-image: url('<?php stockImage('demo/small/stock-1.jpg') ?>')">
                 <div class="section_block span-6 text-center va-middle">
                     <div class="block-content span-9">
                         <div class="desktop-graphic-scroll">
@@ -180,7 +180,7 @@
             </div>
             
             <!-- Showcase Slide 5 -->
-            <div class="row-block bg-cover stack-break-4" style="background-image: url('<?php stockImage('demo/small/hero-1.jpg') ?>')">
+            <div class="row-block bg-cover stack-break-4" style="background-image: url('<?php stockImage('demo/small/stock-1.jpg') ?>')">
                 <div class="section_block span-6 text-center va-middle">
                     <div class="block-content span-9">
                         <div class="desktop-graphic-scroll">
@@ -211,7 +211,7 @@
             </div>
             
             <!-- Showcase Slide 6 -->
-            <div class="row-block bg-cover stack-break-4" style="background-image: url('<?php stockImage('demo/small/hero-1.jpg') ?>')">
+            <div class="row-block bg-cover stack-break-4" style="background-image: url('<?php stockImage('demo/small/stock-1.jpg') ?>')">
                 <div class="section_block span-6 text-center va-middle">
                     <div class="block-content span-9">
                         <div class="desktop-graphic-scroll">
@@ -242,7 +242,7 @@
             </div>
             
             <!-- Showcase Slide 7 -->
-            <div class="row-block bg-cover stack-break-4" style="background-image: url('<?php stockImage('demo/small/hero-1.jpg') ?>')">
+            <div class="row-block bg-cover stack-break-4" style="background-image: url('<?php stockImage('demo/small/stock-1.jpg') ?>')">
                 <div class="section_block span-6 text-center va-middle">
                     <div class="block-content span-9">
                         <div class="desktop-graphic-scroll">

@@ -1,7 +1,8 @@
  <?php function appFooter($custom = array()) { ?>
 
     <?php $options = array_merge(array(
-        'columns' => true
+        'columns' => true,
+        'blurb' => true
     ), $custom); ?>
     
     <footer class="footer" id="footer">
@@ -16,7 +17,9 @@
                             <div class="logo">
                                 <a href="/"><img src="<?php echo appDir ?>/images/logo-white.png" alt="logo" /></a>
                             </div>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris in hendrerit neque, suscipit congue mauris.</p>
+                            <?php if ($options['blurb']) { ?>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris in hendrerit neque, suscipit congue mauris.</p>
+                            <?php } ?>
                             <ul class="list-reset">
                                 <li><b><i class="fa fa-fw fa-brand fa-globe"></i> Location:</b> Manchester, Unted Kingdom</li>
                                 <li><b><i class="fa fa-fw fa-brand fa-phone-square"></i> Phone:</b> (0161) 123 4567</li>

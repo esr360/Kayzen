@@ -1,0 +1,160 @@
+<?php 
+	include ('../../app.php');
+	// page config
+    $theme = 'Blizzard';
+	$title = 'Portfolio';
+	$tagLine = 'Aenean lobortis ante nunc urabitur at enim nisi.';
+?>
+
+<!DOCTYPE html>
+<html class="no-js">
+
+<?php head($theme) ?>
+
+<body>
+    
+    <?php preloader() ?>
+
+    <!-- Site Canvas -->
+    <div id="site-content">
+		
+		<?php 
+        
+            topbar();
+
+            appHeader(array(
+                'nav-links'  => array(
+                    'Home' => themeLink($theme, '/index.php'),
+                    'Services' => themeLink($theme, '/services.php'),
+                    'Portfolio' => themeLink($theme, '/portfolio.php'),
+                    'Blog' => themeLink($theme, '/blog.php'),
+                    'Contact' => themeLink($theme, '/contact.php')
+                )
+            ));
+
+            billboard(array(
+                'title'    => $title,
+                'tag-line' => $tagLine
+            ));
+
+		?>
+		
+		<section class="section-primary-mini relative text-center min-break-1">	
+			<ul class="tabs_nav-pills-center" id="portfolio-categories">
+				<li class="button-pill-grey-1-round active" data-filter="*">View All</li>
+				<li class="button-pill-grey-1-round" data-filter="[data-HTML-theme]">HTML Themes</li>
+				<li class="button-pill-grey-1-round" data-filter="[data-photography]">Photography</li>
+				<li class="button-pill-grey-1-round" data-filter="[data-logo]">Logos</li>
+			</ul>
+		</section>
+		
+		<section class="section relative">
+			
+			<div id="portfolio-items" class="row-no-gutter row-filterable">
+
+                <?php
+                    
+                    articleItem(array(
+                        'type'   => 'portfolio',
+                        'matrix' => true,
+                        'span'   => 4,
+                        'class'  => 'break-3-half break-2-full'
+                    ));
+                    
+                    articleItem(array(
+                        'type'   => 'portfolio',
+                        'matrix' => true,
+                        'span'   => 4,
+                        'class'  => 'break-3-half break-2-full'
+                    ));
+                    
+                    articleItem(array(
+                        'type'   => 'portfolio',
+                        'matrix' => true,
+                        'span'   => 4,
+                        'class'  => 'break-3-half break-2-full'
+                    ));
+                    
+                    articleItem(array(
+                        'type'   => 'portfolio',
+                        'matrix' => true,
+                        'span'   => 4,
+                        'class'  => 'break-3-half break-2-full'
+                    ));
+                    
+                    articleItem(array(
+                        'type'   => 'portfolio',
+                        'matrix' => true,
+                        'span'   => 4,
+                        'class'  => 'break-3-half break-2-full'
+                    ));
+                    
+                    articleItem(array(
+                        'type'   => 'portfolio',
+                        'matrix' => true,
+                        'span'   => 4,
+                        'class'  => 'break-3-half break-2-full'
+                    ));
+                    
+                    articleItem(array(
+                        'type'   => 'portfolio',
+                        'matrix' => true,
+                        'span'   => 4,
+                        'class'  => 'break-3-half break-2-full'
+                    ));
+                    
+                    articleItem(array(
+                        'type'   => 'portfolio',
+                        'matrix' => true,
+                        'span'   => 4,
+                        'class'  => 'break-3-half break-2-full'
+                    ));
+                    
+                    articleItem(array(
+                        'type'   => 'portfolio',
+                        'matrix' => true,
+                        'span'   => 4,
+                        'class'  => 'break-3-half break-2-full min-break-3'
+                    ));
+                    
+                ?>
+							
+			</div><!-- portfolio-items -->
+            
+            <script>
+                $(document).ready(function() {
+                    $(window).load(function() {
+                    
+                        $('#portfolio-categories').KayzenClickHelper();
+                            
+                        $('#portfolio-items').isotope();
+                        
+                        $('#portfolio-categories').on('click', 'li', function() {
+                            var filterValue = $(this).attr('data-filter');
+                            $('#portfolio-items').isotope({ 
+                                filter: filterValue 
+                            });
+                        });
+                    
+                    });
+                });
+            </script>            
+			
+		</section>
+		
+        <?php 
+            
+            appFooter(); 
+            
+        ?>
+
+    </div><!-- Site Canvas -->
+
+    <?php include (ROOT.'/includes/ui-enhancements.php'); ?>
+    
+    <?php scripts($theme) ?>
+    
+    <?php devAsset('', 'isotope.pkgd.js') ?>
+
+</body>
+</html>

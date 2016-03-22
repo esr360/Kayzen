@@ -39,20 +39,20 @@
                     <div class="span-4 lightbox-gallery">
                         <div class="corner-ribbon-pink" data-ribbon="Sale"></div>
                         <a href="<?php stockImage('demo/product-1.jpg') ?>">
-                            <img src="<?php stockImage('demo/tall/hero-1.jpg') ?>" />
+                            <img src="<?php stockImage('demo/tall/stock-1.jpg') ?>" />
                         </a>
                         <div id="product-thumbs" class="row stack-0 object-small">
                             <a class="span-3 image-square" href="<?php stockImage('demo/product-1.jpg') ?>">
-                                <img src="<?php stockImage('demo/tall/hero-2.jpg') ?>" />
+                                <img src="<?php stockImage('demo/tall/stock-2.jpg') ?>" />
                             </a>
                             <a class="span-3 image-square" href="<?php stockImage('demo/product-1.jpg') ?>">
-                                <img src="<?php stockImage('demo/tall/hero-3.jpg') ?>" />
+                                <img src="<?php stockImage('demo/tall/stock-3.jpg') ?>" />
                             </a>
                             <a class="span-3 image-square" href="<?php stockImage('demo/product-1.jpg') ?>">
-                                <img src="<?php stockImage('demo/tall/hero-4.jpg') ?>" />
+                                <img src="<?php stockImage('demo/tall/stock-4.jpg') ?>" />
                             </a>
                             <a class="span-3 image-square" href="<?php stockImage('demo/product-1.jpg') ?>">
-                                <img src="<?php stockImage('demo/tall/hero-5.jpg') ?>" />
+                                <img src="<?php stockImage('demo/tall/stock-5.jpg') ?>" />
                             </a>
                         </div>
                     </div>

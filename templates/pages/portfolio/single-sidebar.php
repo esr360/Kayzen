@@ -59,10 +59,10 @@
                                 <div class="desktop-graphic">
                                     <img src="<?php echo appDir ?>/images/demo-screen.png" alt="" />
                                     <span class="desktop-graphic_image owl-carousel" id="portfolio-thumbs">
-                                        <div class="bg-cover" style="background-image: url('<?php stockImage('demo/hero-1.jpg')?>')"></div>
-                                        <div class="bg-cover" style="background-image: url('<?php stockImage('demo/hero-2.jpg')?>')"></div>
-                                        <div class="bg-cover" style="background-image: url('<?php stockImage('demo/hero-3.jpg')?>')"></div>
-                                        <div class="bg-cover" style="background-image: url('<?php stockImage('demo/hero-4.jpg')?>')"></div>
+                                        <div class="bg-cover" style="background-image: url('<?php stockImage('demo/stock-1.jpg')?>')"></div>
+                                        <div class="bg-cover" style="background-image: url('<?php stockImage('demo/stock-2.jpg')?>')"></div>
+                                        <div class="bg-cover" style="background-image: url('<?php stockImage('demo/stock-3.jpg')?>')"></div>
+                                        <div class="bg-cover" style="background-image: url('<?php stockImage('demo/stock-4.jpg')?>')"></div>
                                     </span>
                                 </div>
                                 <nav class="slide-nav" id="desktop-graphic_nav">

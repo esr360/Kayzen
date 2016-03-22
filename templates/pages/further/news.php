@@ -45,7 +45,7 @@
 							<div class="owl-carousel" id="latest-articles">
 								
 								<div class="thumbnail-feature">
-									<img src="<?php stockImage('demo/hero-2.jpg') ?>">
+									<img src="<?php stockImage('demo/stock-2.jpg') ?>">
 									<div class="thumbnail_content">
 										<header class="heading_group-small">
 											<div class="heading_date">
@@ -61,7 +61,7 @@
 								</div>
 								
 								<div class="thumbnail-feature">
-									<img src="<?php stockImage('demo/hero-3.jpg') ?>">
+									<img src="<?php stockImage('demo/stock-3.jpg') ?>">
 									<div class="thumbnail_content">
 										<header class="heading_group-small">
 											<div class="heading_date">
@@ -77,7 +77,7 @@
 								</div>
 								
 								<div class="thumbnail-feature">
-									<img src="<?php stockImage('demo/hero-5.jpg') ?>">
+									<img src="<?php stockImage('demo/stock-5.jpg') ?>">
 									<div class="thumbnail_content">
 										<header class="heading_group-small">
 											<div class="heading_date">
@@ -93,7 +93,7 @@
 								</div>
 								
 								<div class="thumbnail-feature">
-									<img src="<?php stockImage('demo/hero-6.jpg') ?>">
+									<img src="<?php stockImage('demo/stock-6.jpg') ?>">
 									<div class="thumbnail_content">
 										<header class="heading_group-small">
 											<div class="heading_date">
@@ -109,7 +109,7 @@
 								</div>
 								
 								<div class="thumbnail-feature">
-									<img src="<?php stockImage('demo/hero-7.jpg') ?>">
+									<img src="<?php stockImage('demo/stock-7.jpg') ?>">
 									<div class="thumbnail_content">
 										<header class="heading_group-small">
 											<div class="heading_date">
@@ -134,11 +134,11 @@
 						</div>
 						
 						<div class="thumbnail_grid-fade row-magic stack-0" id="latest-articles-thumbs">
-							<img class="span active" src="<?php stockImage('demo/hero-7.jpg') ?>">
-							<img class="span" src="<?php stockImage('demo/hero-4.jpg') ?>">
-							<img class="span" src="<?php stockImage('demo/hero-5.jpg') ?>">
-							<img class="span" src="<?php stockImage('demo/hero-6.jpg') ?>">
-							<img class="span" src="<?php stockImage('demo/hero-7.jpg') ?>">
+							<img class="span active" src="<?php stockImage('demo/stock-7.jpg') ?>">
+							<img class="span" src="<?php stockImage('demo/stock-4.jpg') ?>">
+							<img class="span" src="<?php stockImage('demo/stock-5.jpg') ?>">
+							<img class="span" src="<?php stockImage('demo/stock-6.jpg') ?>">
+							<img class="span" src="<?php stockImage('demo/stock-7.jpg') ?>">
 						</div>
 						
 						<script>
@@ -163,7 +163,7 @@
 								<div class="thumbnail-zoom">
 									<div class="thumbnail_mask">
 										<div class="thumbnail_controls button_group-small">
-											<a href="<?php stockImage('demo/hero-7.jpg') ?>" class="button-icon-border-circle-size-2" rel="lightbox">
+											<a href="<?php stockImage('demo/stock-7.jpg') ?>" class="button-icon-border-circle-size-2" rel="lightbox">
 												<i class="fa fa-search"></i>
 											</a>
 											<a href="#" class="button-icon-border-circle-size-2">
@@ -171,7 +171,7 @@
 											</a>
 										</div>
 									</div>
-									<img src="<?php stockImage('demo/hero-7.jpg') ?>">
+									<img src="<?php stockImage('demo/stock-7.jpg') ?>">
 								</div>
 								<div class="thumbnail-profile-round-badge">
 									<img src="<?php stockImage('team/team-2.jpg') ?>" alt="">
@@ -199,7 +199,7 @@
 								<div class="thumbnail-zoom">
 									<div class="thumbnail_controls thumbnail_mask">
 										<div class="button_group-small">
-											<a href="<?php stockImage('demo/hero-5.jpg') ?>" class="button-icon-border-circle-size-2" rel="lightbox">
+											<a href="<?php stockImage('demo/stock-5.jpg') ?>" class="button-icon-border-circle-size-2" rel="lightbox">
 												<i class="fa fa-search"></i>
 											</a>
 											<a href="#" class="button-icon-border-circle-size-2">
@@ -207,7 +207,7 @@
 											</a>
 										</div>
 									</div>
-									<img src="<?php stockImage('demo/hero-5.jpg') ?>">
+									<img src="<?php stockImage('demo/stock-5.jpg') ?>">
 								</div>
 								<div class="thumbnail-profile-round-badge">
 									<img src="<?php stockImage('team/team-2.jpg') ?>" alt="">
@@ -337,7 +337,7 @@
 									<div class="thumbnail_mask">
 										<div class="thumbnail_controls button_group-small">
 											<a 
-                                                href="<?php stockImage('demo/hero-7.jpg') ?>" 
+                                                href="<?php stockImage('demo/stock-7.jpg') ?>" 
                                                 class="button-icon-border-circle" 
                                                 rel="lightbox"
                                             >
@@ -348,7 +348,7 @@
 											</a>
 										</div>
 									</div>
-									<img src="<?php stockImage('demo/hero-7.jpg') ?>">
+									<img src="<?php stockImage('demo/stock-7.jpg') ?>">
 								</div>
 								<header class="heading_group">
 									<div class="heading_date">
@@ -374,7 +374,7 @@
 									<div class="thumbnail_mask">
 										<div class="thumbnail_controls button_group-small">
 											<a 
-                                                href="<?php stockImage('demo/hero-5.jpg') ?>" 
+                                                href="<?php stockImage('demo/stock-5.jpg') ?>" 
                                                 class="button-icon-border-circle" 
                                                 rel="lightbox"
                                             >
@@ -385,7 +385,7 @@
 											</a>
 										</div>
 									</div>
-									<img src="<?php stockImage('demo/hero-5.jpg') ?>">
+									<img src="<?php stockImage('demo/stock-5.jpg') ?>">
 								</div>
 								<header class="heading_group">
 									<div class="heading_date">
@@ -411,7 +411,7 @@
 									<div class="thumbnail_mask">
 										<div class="thumbnail_controls button_group-small">
 											<a 
-                                                href="<?php stockImage('demo/hero-3.jpg') ?>" 
+                                                href="<?php stockImage('demo/stock-3.jpg') ?>" 
                                                 class="button-icon-border-circle" 
                                                 rel="lightbox"
                                             >
@@ -422,7 +422,7 @@
 											</a>
 										</div>
 									</div>
-									<img src="<?php stockImage('demo/hero-3.jpg') ?>">
+									<img src="<?php stockImage('demo/stock-3.jpg') ?>">
 								</div>
 								<header class="heading_group">
 									<div class="heading_date">

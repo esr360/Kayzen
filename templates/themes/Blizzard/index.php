@@ -67,7 +67,7 @@
 		<div class="row-block fixed-table text-center">
 			<section 
 				class="section-secondary-overlay-deep bg-cover span-6 va-middle"
-				style="background-image: url('<?php stockImage('demo/hero-12.jpg') ?>')"
+				style="background-image: url('<?php stockImage('demo/stock-12.jpg') ?>')"
 			>
 				<div class="container-small">
 					<h3 class="heading-size-5">Responsive Grid System</h3>
@@ -234,7 +234,9 @@
             
             googleMap();
             
-            appFooter(); 
+            appFooter(array(
+                'blurb' => true
+            )); 
             
         ?>
 

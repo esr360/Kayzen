@@ -29,7 +29,7 @@
 		?>
 
 		<section class="billboard-full-screen"
-			style="background-image: url('<?php stockImage('demo/hero-5.jpg') ?>')">
+			style="background-image: url('<?php stockImage('demo/stock-5.jpg') ?>')">
 			<div class="billboard_wrapper container text-left">
 				<div class="short" id="billboard-fade-parallax">
 					<h3 class="heading-uppercase-heavy-highlight-dark-size-8 font-2">
@@ -188,7 +188,7 @@
 		<section 
 			class="section-secondary-full-screen-overlay-alt"
 			data-stellar-background-ratio="0.8"
-			style="background-image: url('<?php stockImage('demo/hero-7.jpg') ?>')"
+			style="background-image: url('<?php stockImage('demo/stock-7.jpg') ?>')"
 		>
 			<div class="container v-center text-right">
                 <div class="row">
