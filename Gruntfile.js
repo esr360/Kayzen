@@ -756,6 +756,7 @@ module.exports = function(grunt) {
     // Package the app
     grunt.registerTask('package', [
         'compile',
+        'clean:images',
         'responsive_images',
         'prototype'
     ]);
