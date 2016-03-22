@@ -61,3 +61,6 @@
 [submodule "docs"]
 	path = docs
 	url = https://github.com/esr360/Kayzen.docs.git
+[submodule "assets/vendor/SassyJSON"]
+	path = assets/vendor/SassyJSON
+	url = https://github.com/esr360/SassyJSON.git
