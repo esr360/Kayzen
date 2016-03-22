@@ -18,11 +18,11 @@
             'ribbon'        => null,
             'cta-modifiers' => null,
             'author-thumb'  => false,
-            'thumb'         => rand(1, 7),
+            'thumb'         => rand(1, 25),
             'thumbs'        => array(
-                rand(1, 7),
-                rand(1, 7),
-                rand(1, 7),
+                rand(1, 25),
+                rand(1, 25),
+                rand(1, 25),
             ),
             'maskTitle'     => true,
             'title'         => 'Lorem ipsum dolor sit amet',
@@ -185,8 +185,8 @@
                     <div class="tile tile-rec">
                         <a 
                             class="tile-img" 
-                            data-bg="<?php stockImage('demo/stock-'.rand(1, 7).'.jpg') ?>"
-                            href="<?php stockImage('demo/stock-'.rand(1, 7).'.jpg') ?>"
+                            data-bg="<?php stockImage('demo/stock-'.rand(1, 25).'.jpg') ?>"
+                            href="<?php stockImage('demo/stock-'.rand(1, 25).'.jpg') ?>"
                         ></a>
                     </div>
                     <div class="tile tile-rec">
@@ -194,23 +194,23 @@
                             <div class="tile tile-rec">
                                 <a 
                                     class="tile-img" 
-                                    data-bg="<?php stockImage('demo/stock-'.rand(1, 7).'.jpg') ?>"
-                                    href="<?php stockImage('demo/stock-'.rand(1, 7).'.jpg') ?>"
+                                    data-bg="<?php stockImage('demo/stock-'.rand(1, 25).'.jpg') ?>"
+                                    href="<?php stockImage('demo/stock-'.rand(1, 25).'.jpg') ?>"
                                 ></a>
                             </div>
                             <div class="tile tile-rec">
                                 <div class="tile tile-box">
                                     <a 
                                         class="tile-img" 
-                                        data-bg="<?php stockImage('demo/stock-'.rand(1, 7).'.jpg') ?>"
-                                        href="<?php stockImage('demo/stock-'.rand(1, 7).'.jpg') ?>"
+                                        data-bg="<?php stockImage('demo/stock-'.rand(1, 25).'.jpg') ?>"
+                                        href="<?php stockImage('demo/stock-'.rand(1, 25).'.jpg') ?>"
                                     ></a>
                                 </div>
                                 <div class="tile tile-box">
                                     <a 
                                         class="tile-img" 
-                                        data-bg="<?php stockImage('demo/stock-'.rand(1, 7).'.jpg') ?>"
-                                        href="<?php stockImage('demo/stock-'.rand(1, 7).'.jpg') ?>"
+                                        data-bg="<?php stockImage('demo/stock-'.rand(1, 25).'.jpg') ?>"
+                                        href="<?php stockImage('demo/stock-'.rand(1, 25).'.jpg') ?>"
                                     ></a>
                                 </div>
                             </div>
@@ -218,8 +218,8 @@
                         <div class="tile tile-box">
                             <a 
                                 class="tile-img" 
-                                data-bg="<?php stockImage('demo/stock-'.rand(1, 7).'.jpg') ?>"
-                                href="<?php stockImage('demo/stock-'.rand(1, 7).'.jpg') ?>" 
+                                data-bg="<?php stockImage('demo/stock-'.rand(1, 25).'.jpg') ?>"
+                                href="<?php stockImage('demo/stock-'.rand(1, 25).'.jpg') ?>" 
                             ></a>
                         </div>
                     </div>
@@ -227,8 +227,8 @@
                 <div class="tile tile-box">
                     <a 
                         class="tile-img" 
-                        data-bg="<?php stockImage('demo/stock-'.rand(1, 7).'.jpg') ?>"
-                        href="<?php stockImage('demo/stock-'.rand(1, 7).'.jpg') ?>"
+                        data-bg="<?php stockImage('demo/stock-'.rand(1, 25).'.jpg') ?>"
+                        href="<?php stockImage('demo/stock-'.rand(1, 25).'.jpg') ?>"
                     ></a>
                 </div>
             </div>

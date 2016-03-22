@@ -113,7 +113,7 @@ module.exports = function(grunt) {
     
         clean: {
             app: {
-                src: ['app/*', '!app/themes/**']
+                src: ['app/*', '!app/themes/**', '!app/images/**']
             },
             prototype: {
                 src: 'prototype'
@@ -690,7 +690,6 @@ module.exports = function(grunt) {
             'concat',
             'sass:' + environment,
             'postcss',
-            'responsive_images',
             'clean:normalizeSupportFor',
             'clean:preloaders'
         ];
@@ -757,6 +756,7 @@ module.exports = function(grunt) {
     // Package the app
     grunt.registerTask('package', [
         'compile',
+        'responsive_images',
         'prototype'
     ]);
     
