@@ -1,7 +1,7 @@
 <?php 
 	include ('../../app.php');
 	// page config
-    $theme = 'Agenda';
+    $theme = 'Blizzard';
 	$title = 'Project Title';
 	$tagLine = 'Aenean lobortis ante nunc curabitur at enim nisi.';
 ?>
@@ -19,6 +19,8 @@
     <div id="site-content">
 		
 		<?php 
+        
+            topbar();
 
             appHeader(array(
                 'nav-links'  => array(
@@ -48,9 +50,7 @@
             
             include (ROOT.'/sections/what-we-did.php');
                     
-            projectSections(array(
-               'cta-modifiers' => '-oval' 
-            ));
+            projectSections();
             
             socialWidgets(array(
                 'section' => 'section-primary-flush-dot-map container'
@@ -62,13 +62,9 @@
                 'item-link' => themeLink($theme, '/portfolio-single.php')
             ));
             
-            promoBanner(array(
-                'cta-modifiers' => '-oval'
-            ));
+            promoBanner();
             
-            appFooter(array(
-                'columns' => false
-            )); 
+            appFooter(); 
             
         ?>
 

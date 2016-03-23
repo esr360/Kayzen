@@ -21,21 +21,23 @@
     //-------------------------------------------------------------
 
     @include module {
+        
         position: relative;
         overflow: hidden;
-    }
 
-    @include component('section') {
-        transition: base('transition');
-        transform: scale(0);
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        &.active {
-            position: relative;
-            transform: scale(1);
+        @include component('section') {
+            transition: base('transition');
+            transform: scale(0);
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            &.active {
+                position: relative;
+                transform: scale(1);
+            }
         }
+        
     }
 
     .earth-wrapper {

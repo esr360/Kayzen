@@ -48,50 +48,50 @@
                         
                         articleItem(array(
                             'type'  => 'portfolio',
-                            'link'  => themeLink($theme, '/blog-single.php'),
-                            'root'  => themeLink($theme, '/blog.php')
+                            'link'  => themeLink($theme, '/portfolio-single.php'),
+                            'root'  => themeLink($theme, '/portfolio.php')
                         ));
                         
                         articleItem(array(
                             'media' => 'vimeo',
                             'type'  => 'portfolio',
-                            'link'  => themeLink($theme, '/blog-single.php'),
-                            'root'  => themeLink($theme, '/blog.php')
+                            'link'  => themeLink($theme, '/portfolio-single.php'),
+                            'root'  => themeLink($theme, '/portfolio.php')
                         ));
                         
                         articleItem(array(
                             'media' => 'youtube',
                             'type'  => 'portfolio',
-                            'link'  => themeLink($theme, '/blog-single.php'),
-                            'root'  => themeLink($theme, '/blog.php')
+                            'link'  => themeLink($theme, '/portfolio-single.php'),
+                            'root'  => themeLink($theme, '/portfolio.php')
                         ));
                         
                         articleItem(array(
                             'media' => 'carousel',
                             'type'  => 'portfolio',
-                            'link'  => themeLink($theme, '/blog-single.php'),
-                            'root'  => themeLink($theme, '/blog.php')
+                            'link'  => themeLink($theme, '/portfolio-single.php'),
+                            'root'  => themeLink($theme, '/portfolio.php')
                         ));
                         
                         articleItem(array(
                             'media' => 'masonry',
                             'type'  => 'portfolio',
-                            'link'  => themeLink($theme, '/blog-single.php'),
-                            'root'  => themeLink($theme, '/blog.php')
+                            'link'  => themeLink($theme, '/portfolio-single.php'),
+                            'root'  => themeLink($theme, '/portfolio.php')
                         ));
                         
                         articleItem(array(
                             'media' => 'audio',
                             'type'  => 'portfolio',
-                            'link'  => themeLink($theme, '/blog-single.php'),
-                            'root'  => themeLink($theme, '/blog.php')
+                            'link'  => themeLink($theme, '/portfolio-single.php'),
+                            'root'  => themeLink($theme, '/portfolio.php')
                         ));
                         
                         articleItem(array(
                             'media' => 'codepen',
                             'type'  => 'portfolio',
-                            'link'  => themeLink($theme, '/blog-single.php'),
-                            'root'  => themeLink($theme, '/blog.php')
+                            'link'  => themeLink($theme, '/portfolio-single.php'),
+                            'root'  => themeLink($theme, '/portfolio.php')
                         ));
                         
                     ?>

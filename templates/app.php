@@ -93,6 +93,7 @@ include (ROOT.'/sections/objects.php');
 include (ROOT.'/sections/options.php');
 include (ROOT.'/sections/our-team.php');
 include (ROOT.'/sections/pricing.php');
+include (ROOT.'/sections/project-sections.php');
 include (ROOT.'/sections/promo-banner.php');
 include (ROOT.'/sections/promo-section.php');
 include (ROOT.'/sections/recent-work.php');

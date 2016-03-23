@@ -465,7 +465,7 @@ module.exports = function(grunt) {
                 },
                 files: [{
                     cwd: 'app/images/demo',
-                    src: 'hero-*.{jpg,gif,png}',
+                    src: 'stock-*.{jpg,gif,png}',
                     custom_dest: 'app/images/demo/{%= name %}/',
                     expand: true
                 }]

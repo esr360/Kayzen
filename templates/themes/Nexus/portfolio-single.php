@@ -48,7 +48,9 @@
                     
             include (ROOT.'/sections/what-we-did.php');
                     
-            include (ROOT.'/sections/project-sections.php');
+            projectSections(array(
+               'cta-modifiers' => '-oval' 
+            ));
             
             socialWidgets(array(
                 'section' => 'section-primary-flush-dot-map container'

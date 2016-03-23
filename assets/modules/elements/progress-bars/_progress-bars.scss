@@ -39,6 +39,16 @@
             color: this('value-color');
             font-size: this('value-size');
         }
+
+        // Components
+        //-------------------------------------------------------------
+
+        @include component('group') {
+            @include overwrite('heading') {
+                margin-bottom: this('group-spacing');
+            }
+        }
+    
     }
 
     .progress {
@@ -65,14 +75,5 @@
         }
 
     } // progress
-
-    // Components
-    //-------------------------------------------------------------
-
-    @include component('group') {
-        @include overwrite('heading') {
-            margin-bottom: this('group-spacing');
-        }
-    }
 
 } // @mixin progress-bars

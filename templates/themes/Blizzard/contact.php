@@ -1,9 +1,9 @@
 <?php 
 	include ('../../app.php');
 	// page config
-    $theme = 'Agenda';
-	$title = 'Project Title';
-	$tagLine = 'Aenean lobortis ante nunc curabitur at enim nisi.';
+    $theme = 'Blizzard';
+	$title = 'Get in Touch';
+	$tagLine = 'Aenean lobortis ante nunc urabitur at enim nisi.';
 ?>
 
 <!DOCTYPE html>
@@ -19,6 +19,8 @@
     <div id="site-content">
 		
 		<?php 
+        
+            topbar();
 
             appHeader(array(
                 'nav-links'  => array(
@@ -36,40 +38,26 @@
                 'tag-line' => $tagLine
             ));
             
-            sectionTitle(array(
-                'title' => 'Single Project',
-                'sub-title' => 'See How We Did It',
-                'icon' => 'fa-magic'
-            ));
+            contactUs();
             
-            include (ROOT.'/sections/portfolio-thumbs.php');
-            
-            include (ROOT.'/sections/project-summary.php');
-            
-            include (ROOT.'/sections/what-we-did.php');
-                    
-            projectSections(array(
-               'cta-modifiers' => '-oval' 
-            ));
-            
-            socialWidgets(array(
-                'section' => 'section-primary-flush-dot-map container'
-            ));
+        ?>
         
-            include (ROOT.'/sections/project-testimonial.php');
-    
-            recentWork(array(
-                'item-link' => themeLink($theme, '/portfolio-single.php')
-            ));
+        <section class="section-primary-flush-dot-map container"> 
             
-            promoBanner(array(
-                'cta-modifiers' => '-oval'
-            ));
+            <div class="container-small">
+                
+			    <?php socialWidgets() ?>
             
-            appFooter(array(
-                'columns' => false
-            )); 
+            </div>
             
+        </section> 
+        
+        <?php
+            
+            googleMap();
+            
+            appFooter(); 
+        
         ?>
 
     </div><!-- Site Canvas -->
