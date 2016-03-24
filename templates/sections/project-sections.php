@@ -9,10 +9,7 @@
         <div class="container">
                 
             <div class="row">
-                <div class="span-4 va-middle text-center min-break-3">
-                    <img class="span-10 greyscale" src="<?php echo appDir ?>/images/layouts/layout-header-alt.png" alt="" />
-                </div>
-                <div class="span-8 va-middle">
+                <div class="span-8 va-middle text-right">
                     <header class="heading_group">
                         <h2 class="heading-heavy-size-5 font-2">Digital Agency</h2>
                         <h3 class="heading-light-size-4-highlight-opaque"><b>A Modern Template for Creative Blog</b></h3>
@@ -23,6 +20,9 @@
                         <a class="button-size-2-white<?php echo '-'.$options['cta-modifiers'] ?>" href="#">Learn More</a>
                     </div>
                 </div>
+                <div class="span-4 va-middle text-center min-break-3">
+                    <img class="span-10 greyscale" src="<?php echo appDir ?>/images/layouts/layout-header-alt.png" alt="" />
+                </div>
             </div>
             
         </div>
@@ -32,7 +32,10 @@
     <section class="section-primary container">
 
         <div class="row">
-            <div class="span-8 va-middle text-right">
+            <div class="span-4 va-middle text-center min-break-3">
+                <img class="greyscale" src="<?php echo appDir ?>/images/custom-graphic-1.png">
+            </div>
+            <div class="span-8 va-middle">
                 <header class="heading_group">
                     <h2 class="heading-heavy-size-5  font-2">Digital Agency</h2>
                     <h3 class="heading-light-brand-1-size-4">A Modern Template for Creative Blogs</h3>
@@ -48,9 +51,6 @@
                     <a class="button-primary-size-2<?php echo '-'.$options['cta-modifiers'] ?>" href="#">View Modules</a>
                     <a class="button-size-2<?php echo '-'.$options['cta-modifiers'] ?>" href="#">Learn More</a>
                 </div>
-            </div>
-            <div class="span-4 va-middle text-center min-break-3">
-                <img class="greyscale" src="<?php echo appDir ?>/images/custom-graphic-1.png">
             </div>
         </div>
             

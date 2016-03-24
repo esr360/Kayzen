@@ -46,7 +46,7 @@
 				<div class="row-waffle row-flow" id="page-overview">
 					
 					<!-- Feature 1 -->
-					<a class="widget-block-borderLeft span-4 break-4-half break-2-full" href="#modular-ui">
+					<a class="widget-block-borderLeft span-4 break-5-half break-2-full" href="#modular-ui">
 						<div class="widget_icon-inline button-icon-plain-size-6">
 							<i class="fa fa-cubes"></i>
 						</div>
@@ -57,7 +57,7 @@
 					</a>
 					
 					<!-- Feature 2 -->
-					<a class="widget-block-borderLeft span-4 break-4-half break-2-full" href="#page-builder">
+					<a class="widget-block-borderLeft span-4 break-5-half break-2-full" href="#page-builder">
 						<div class="widget_icon-inline button-icon-plain-size-6">
 							<i class="fa fa-arrows"></i>
 						</div>
@@ -68,7 +68,7 @@
 					</a>
 					
 					<!-- Feature 3 -->
-					<a class="widget-block-borderLeft span-4 break-4-half break-2-full" href="#unique-configuration">
+					<a class="widget-block-borderLeft span-4 break-5-half break-2-full" href="#unique-configuration">
 						<div class="widget_icon-inline button-icon-plain-size-6">
 							<i class="fa fa-cog"></i>
 						</div>
@@ -79,7 +79,7 @@
 					</a>
 					
 					<!-- Feature 4 -->
-					<a class="widget-block-borderLeft span-4 break-4-half break-2-full" href="#custom-grid-system">
+					<a class="widget-block-borderLeft span-4 break-5-half break-2-full" href="#custom-grid-system">
 						<div class="widget_icon-inline button-icon-plain-size-6">
 							<i class="fa fa-th-large"></i>
 						</div>
@@ -90,7 +90,7 @@
 					</a>
 					
 					<!-- Feature 5 -->
-					<a class="widget-block-borderLeft span-4 break-4-half break-2-full" href="#intelligent-theming">
+					<a class="widget-block-borderLeft span-4 break-5-half break-2-full" href="#intelligent-theming">
 						<div class="widget_icon-inline button-icon-plain-size-6">
 							<i class="fa fa-eyedropper"></i>
 						</div>
@@ -101,7 +101,7 @@
 					</a>
 					
 					<!-- Feature 6 -->
-					<a class="widget-block-borderLeft span-4 break-4-half break-2-full" href="#mobile-optimized">
+					<a class="widget-block-borderLeft span-4 break-5-half break-2-full" href="#mobile-optimized">
 						<div class="widget_icon-inline button-icon-plain-size-6">
 							<i class="fa fa-tablet"></i>
 						</div>

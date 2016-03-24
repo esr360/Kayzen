@@ -25,7 +25,6 @@
             appHeader(array(
                 'nav-links'  => array(
                     'Home' => themeLink($theme, '/index.php'),
-                    'About' => themeLink($theme, '/about.php'),
                     'Services' => themeLink($theme, '/services.php'),
                     'Portfolio' => themeLink($theme, '/portfolio.php'),
                     'Blog' => themeLink($theme, '/blog.php'),

@@ -17,7 +17,7 @@
         'font-size'            : 1em,
         'z-index'              : 5,
         // Settings
-        'bar'                  : false,
+        'bar'                  : true,
         'absolute'             : (
             'enabled'          : false,
             'top-position'     : 0
@@ -67,15 +67,13 @@
         //---------------------------------------------------------
         
         @include option('bar') {
-            @include component('wrapper') {	
+            @include overwrite-component('wrapper') {	
                 display: table;
                 width: 100%;
-                content: "dopy";
             }
             @include overwrite(('logo', 'navigation')) {
                 display: table-cell;
                 vertical-align: middle;
-                content: "dopy";
             }
         }
         
@@ -98,6 +96,7 @@
             @extend #{$side-nav-selector};
             
             width: this('side', 'width');
+            left: -#{this('side', 'width')};
             
             @include overwrite('container') {
                 max-width: this('side', 'container-width');
@@ -114,23 +113,27 @@
             }
             
             @include value($value: 'left') {
-                left: 0;
-                right: auto;
-                ~ #site-content {
-                    margin-left: this('side', 'width');
-                    @include overwrite('top-bar') {
-                        width: calc(100% - #{this('side', 'width')})
+                @media (min-width: breakpoint('break-4')) {
+                    left: 0;
+                    right: auto;
+                    ~ #site-content {
+                        margin-left: this('side', 'width');
+                        @include overwrite('top-bar') {
+                            width: calc(100% - #{this('side', 'width')})
+                        }
                     }
                 }
             }
             
             @include value($value: 'right') {
-                right: 0;
-                left: auto;
-                ~ #site-content {
-                    margin-right: this('side', 'width');
-                    @include overwrite('top-bar') {
-                        width: calc(100% - #{this('side', 'width')})
+                @media (min-width: breakpoint('break-4')) {
+                    right: 0;
+                    left: auto;
+                    ~ #site-content {
+                        margin-right: this('side', 'width');
+                        @include overwrite('top-bar') {
+                            width: calc(100% - #{this('side', 'width')})
+                        }
                     }
                 }
             }
@@ -193,5 +196,18 @@
         }
         
     } // module
+    
+    // Hide the header when body had special class
+    .toggleHeader {
+        #site-content {
+            margin-left: 0;
+        }
+        @include overwrite('top-bar') {
+            width: 100% !important;
+        }
+        @include overwrite('app-header') {
+            left: -#{option($header, 'side', 'width')};
+        }
+    }
 
 } // @mixin header

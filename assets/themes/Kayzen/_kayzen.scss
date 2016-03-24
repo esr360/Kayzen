@@ -65,6 +65,7 @@
 	@include header((
 		'background'     : transparent,
 		'font-size'      : 0.9em,
+        'bar'            : true,
 		'dark'           : (
 			'background' : rgba(black, 0.3),
 		)

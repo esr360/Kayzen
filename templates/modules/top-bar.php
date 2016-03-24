@@ -187,6 +187,11 @@
                                     <li><i class="fa fa-rub"></i> RUB</li>
                                 </ul>
                             </li>
+                            <li class="min-break-4">
+                                <a href="#" id="toggleHeader">
+                                    <i class="fa fa-bars"></i>
+                                </a>
+                            </li>
                         </ul>
                     </div>
                     

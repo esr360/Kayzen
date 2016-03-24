@@ -17,7 +17,8 @@
             overlay       : '#site-overlay',
             sticky        : _option('app-header', 'sticky'),
             side          : _option('app-header', 'side'),
-            openCloseIcon : _modules['side-nav']['collapsible']['icon']
+            openCloseIcon : _modules['side-nav']['collapsible']['icon'],
+            toggleHeader  : '#toggleHeader'
         }, custom);
         
         // Run the code on each occurance of the element
@@ -93,6 +94,11 @@
                 if ($('.app-header_side-nav').is('[class*="-collapse"]') == true || openDefault == false) {
                     $('.app-header_side-nav').find('a:not(:only-child) ~ ul').hide();
                 }
+                
+                $(options.toggleHeader).click(function(e) {
+                   $('body').toggleClass('toggleHeader');
+                   e.preventDefault();
+                });
                 
             }
                 
