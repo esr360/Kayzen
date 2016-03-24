@@ -112,22 +112,24 @@
 				</div>
 				<script>
 					$(document).ready(function() {
+                        $(window).load(function() {
 						
-						var elementsCarousel = $("#elements-carousel");
+                            var elementsCarousel = $("#elements-carousel");
+                            
+                            elementsCarousel.owlCarousel({
+                                items: 1,
+                                loop: true,
+                                margin: 30
+                            })
+                    
+                            elementsCarousel.find("+ .slide-nav .slide-next").click(function() {
+                                elementsCarousel.trigger('next.owl.carousel');
+                            });
+                            elementsCarousel.find("+ .slide-nav .slide-prev").click(function() {
+                                elementsCarousel.trigger('prev.owl.carousel');
+                            });
 						
-						elementsCarousel.owlCarousel({
-							items: 1,
-							loop: true,
-							margin: 30
-						})
-				
-						elementsCarousel.find("+ .slide-nav .slide-next").click(function() {
-							elementsCarousel.trigger('next.owl.carousel');
-						});
-						elementsCarousel.find("+ .slide-nav .slide-prev").click(function() {
-							elementsCarousel.trigger('prev.owl.carousel');
-						});
-						
+					   });
 					});
 				</script>
 			</section>

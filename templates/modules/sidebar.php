@@ -7,9 +7,9 @@
     <div class="tabs">
     
         <ul class="tabs_nav">
-            <li class="button active">Latest</li>
-            <li class="button">Popular</li>
-            <li class="button">Comments</li>
+            <li class="tabs_nav_item active">Latest</li>
+            <li class="tabs_nav_item">Popular</li>
+            <li class="tabs_nav_item">Comments</li>
         </ul>
         
         <section class="tabs_content-block-glue active">

@@ -147,20 +147,11 @@
             
             <script>
                 $(document).ready(function() {
-                    $(window).load(function() {
                     
-                        $('#portfolio-categories').KayzenClickHelper();
-                            
-                        $('#portfolio-items').isotope();
-                        
-                        $('#portfolio-categories').on('click', 'li', function() {
-                            var filterValue = $(this).attr('data-filter');
-                            $('#portfolio-items').isotope({ 
-                                filter: filterValue 
-                            });
-                        });
-                    
+                    $('#portfolio-categories').filterGrid({
+                        items : '#portfolio-items'
                     });
+                    
                 });
             </script>            
 			
