@@ -15,8 +15,12 @@
     $tabs: config((
         'name'                       : 'tabs',
         'output-JSON'                : true,
+        'navItem-transition'         : base('transition'),
         'navItem-color'              : base('text-color'),
         'navItem-background'         : transparent,
+        'navItem-round'              : false,
+        'navItem-radius'             : 0.4em,
+        'navItem-padding'            : 0.75em 1.25em,
         'navItem-borderColor'        : color('greyscale', 'grey-3'),
         'navItem-hover-color'        : color('greyscale', 'grey-5'),
         'navItem-hover-background'   : darken(color('greyscale', 'grey-1'), 4%),
@@ -51,9 +55,12 @@
             
             @include component('item') {
                 color: this('navItem-color');
+                padding: this('navItem-padding');
                 background: this('navItem-background');
                 border: 1px solid this('navItem-borderColor');
+                transition: this('navItem-transition');
                 display: table-cell;
+                cursor: pointer;
                 &.active {
                     color: this('navItem-active-color');
                     border-color: this('navItem-active-borderColor');
@@ -65,11 +72,19 @@
                         color: this('navItem-active-color');
                     }
                 }
-                &:hover {
+                &:hover:not(.active) {
                     background: this('navItem-hover-background');
                 }
                 &:not(:last-child) {
                     border-right: none;
+                }
+                @if this('navItem-round') {
+                    &:first-child {
+                        border-radius: this('navItem-radius') 0 0 this('navItem-radius');
+                    }
+                    &:last-child {
+                        border-radius: 0 this('navItem-radius') this('navItem-radius') 0;
+                    }
                 }
             }
             
