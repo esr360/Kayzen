@@ -119,8 +119,12 @@
                     ~ #site-content {
                         margin-left: this('side', 'width');
                         @include overwrite('top-bar') {
-                            width: calc(100% - #{this('side', 'width')})
+                            width: calc(100% - #{this('side', 'width')});
                         }
+                    }
+                    ~ .search-box {
+                        width: calc(100% - #{this('side', 'width')});
+                        right: 0;
                     }
                 }
             }
@@ -134,6 +138,10 @@
                         @include overwrite('top-bar') {
                             width: calc(100% - #{this('side', 'width')})
                         }
+                    }
+                    ~ .search-box {
+                        width: calc(100% - #{this('side', 'width')});
+                        left: 0;
                     }
                 }
             }
@@ -207,6 +215,9 @@
         }
         @include overwrite('app-header') {
             left: -#{option($header, 'side', 'width')};
+        }
+        .search-box {
+            width: 100%;
         }
     }
 

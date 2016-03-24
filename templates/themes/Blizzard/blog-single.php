@@ -20,7 +20,13 @@
 		
 		<?php 
         
-            topbar();
+            topbar(array(
+                'social-links' => array(
+                    'facebook', 'twitter'
+                ),
+                'side-header' => true,
+                'flyout-trigger' => true
+            ));
 
             appHeader(array(
                 'nav-links'  => array(

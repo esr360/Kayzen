@@ -18,7 +18,13 @@
 		
 		<?php 
         
-            topbar();
+            topbar(array(
+                'social-links' => array(
+                    'facebook', 'twitter'
+                ),
+                'side-header' => true,
+                'flyout-trigger' => true
+            ));
 
             appHeader(array(
                 'nav-links'  => array(
@@ -27,7 +33,8 @@
                     'Portfolio' => themeLink($theme, '/portfolio.php'),
                     'Blog' => themeLink($theme, '/blog.php'),
                     'Contact' => themeLink($theme, '/contact.php')
-                )
+                ),
+                'flyout-trigger' => false
             ));
 
 		?>

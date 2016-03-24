@@ -1,7 +1,12 @@
 <?php function topBar($custom = array()) { ?>
 
     <?php $options = array_merge(array(
-        'modifiers' => null
+        'modifiers'      => null,
+        'social-links'   => array(
+            'facebook', 'twitter', 'dribbble', 'google-plus'
+        ),
+        'side-header'    => false,
+        'flyout-trigger' => false
     ), $custom); ?>
     
     <!-- Login Box -->
@@ -92,18 +97,23 @@
                     <ul>
                         <li class="min-break-2">
                             <div class="button_group-small span">
-                                <a href="#" class="button-icon-border-size-1 tooltip-bottom" data-tooltip="Facebook">
-                                    <i class="fa fa-facebook"></i>
-                                </a>
-                                <a href="#" class="button-icon-border-size-1 tooltip-bottom" data-tooltip="Twitter">
-                                    <i class="fa fa-twitter"></i>
-                                </a>
-                                <a href="#" class="button-icon-border-size-1 tooltip-bottom" data-tooltip="Dribbble">
-                                    <i class="fa fa-dribbble"></i>
-                                </a>
-                                <a href="#" class="button-icon-border-size-1 tooltip-bottom" data-tooltip="Google Plus">
-                                    <i class="fa fa-google-plus"></i>
-                                </a>
+                                <?php if (in_array('facebook', $options['social-links'])) { ?>
+                                    <a href="#" class="button-icon-border-size-1 tooltip-bottom" data-tooltip="Facebook">
+                                        <i class="fa fa-facebook"></i>
+                                    </a>
+                                <?php } if (in_array('twitter', $options['social-links'])) { ?>
+                                    <a href="#" class="button-icon-border-size-1 tooltip-bottom" data-tooltip="Twitter">
+                                        <i class="fa fa-twitter"></i>
+                                    </a>
+                                <?php } if (in_array('dribbble', $options['social-links'])) { ?>
+                                    <a href="#" class="button-icon-border-size-1 tooltip-bottom" data-tooltip="Dribbble">
+                                        <i class="fa fa-dribbble"></i>
+                                    </a>
+                                <?php } if (in_array('google-plus', $options['social-links'])) { ?>
+                                    <a href="#" class="button-icon-border-size-1 tooltip-bottom" data-tooltip="Google Plus">
+                                        <i class="fa fa-google-plus"></i>
+                                    </a>
+                                <?php } ?>
                             </div>
                         </li>
                         <li>
@@ -175,7 +185,7 @@
                                     </li>
                                 </ul>
                             </li>
-                            <li>
+                            <li class="min-break-2">
                                 <a href="#">
                                     <small>USD</small> <i class="fa fa-angle-down"></i>
                                 </a>
@@ -187,11 +197,19 @@
                                     <li><i class="fa fa-rub"></i> RUB</li>
                                 </ul>
                             </li>
-                            <li class="min-break-4">
-                                <a href="#" id="toggleHeader">
-                                    <i class="fa fa-bars"></i>
-                                </a>
-                            </li>
+                            <?php if ($options['side-header']) { ?>
+                                <li class="min-break-4">
+                                    <a href="#" id="toggleHeader">
+                                        <i class="fa fa-bars"></i>
+                                    </a>
+                                </li>
+                            <?php } if ($options['flyout-trigger']) { ?>
+                                <li class="max-break-4">
+                                    <a href="#" id="flyout-trigger">
+                                        <i class="fa fa-bars"></i>
+                                    </a>
+                                </li>
+                            <?php } ?>
                         </ul>
                     </div>
                     

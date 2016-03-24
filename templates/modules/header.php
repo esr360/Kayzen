@@ -1,8 +1,9 @@
 <?php function appHeader($custom = array()) { ?>
 
     <?php $options = array_merge(array(
-        'modifiers' => null,
-        'nav-links' => null
+        'modifiers'      => null,
+        'nav-links'      => null,
+        'flyout-trigger' => true
     ), $custom); ?>
     
     <header 
@@ -23,11 +24,13 @@
                     'pages' => $options['nav-links']
                 )) ?>
                 
-                <!-- Flyout Nav Trigger -->
-                <span class="button-icon-border-white flyout-trigger max-break-4" id="flyout-trigger">
-                    <i class="fa fa-bars"></i>
-                </span>
-    
+                <?php if ($options['flyout-trigger']) { ?>
+                    <!-- Flyout Nav Trigger -->
+                    <span class="button-icon-border-white flyout-trigger max-break-4" id="flyout-trigger">
+                        <i class="fa fa-bars"></i>
+                    </span>
+                <?php } ?>
+                
             </div><!-- Header Wrapper -->
             
         </div><!-- Container -->

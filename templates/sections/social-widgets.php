@@ -1,7 +1,7 @@
 <?php function socialWidgets($custom = array()) { ?>
 
     <?php $options = array_merge(array( 
-        'url'         => 'http://themeforest.net',   
+        'url'         => '"http://themeforest.net"',   
         'facebook'    => true, 
         'twitter'     => true, 
         'google-plus' => true, 
