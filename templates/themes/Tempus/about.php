@@ -1,8 +1,8 @@
 <?php 
 	include ('../../app.php');
 	// page config
-    $theme = 'Agenda';
-	$title = 'Our Services';
+    $theme = 'Tempus';
+	$title = 'Our Company';
 	$tagLine = 'Aenean lobortis ante nunc urabitur at enim nisi.';
 ?>
 
@@ -12,13 +12,13 @@
 <?php head($theme) ?>
 
 <body>
-    
-    <?php preloader() ?>
 
     <!-- Site Canvas -->
     <div id="site-content">
 		
 		<?php 
+        
+            topbar();
 
             appHeader(array(
                 'nav-links'  => array(
@@ -36,25 +36,33 @@
                 'tag-line' => $tagLine
             ));
             
-            whyChooseUs();
+            earthSlider();
     
-            featureQuote();
+            skills();
             
-            pricing();
+            whyChooseUs();
             
-            testimonials();
+            promoBanner(array(
+                'cta-modifiers' => '-oval'
+            ));
             
-            options();
+            ourTeam();
             
-            featureSpectrumBlocks();
+            clients();
             
-            recentWork();
+            promoSection(array(
+                'cta-modifiers' => '-oval'
+            ));
+        
+            statistics();
+    
+            recentWork(array(
+                'item-link' => themeLink($theme, '/portfolio-single.php')
+            ));
             
-            promoBanner();
+            googleMap();
             
-            appFooter(array(
-                'columns' => false
-            )); 
+            appFooter(); 
         
         ?>
 

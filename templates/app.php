@@ -82,6 +82,7 @@ include (ROOT.'/sections/demo-post.php');
 include (ROOT.'/sections/elements.php');
 include (ROOT.'/sections/feature-cards.php');
 include (ROOT.'/sections/feature-quote.php');
+include (ROOT.'/sections/feature-spectrum-blocks.php');
 include (ROOT.'/sections/in-store.php');
 include (ROOT.'/sections/info-banner.php');
 include (ROOT.'/sections/key-features.php');

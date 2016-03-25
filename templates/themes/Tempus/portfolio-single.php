@@ -1,6 +1,7 @@
 <?php 
 	include ('../../app.php');
 	// page config
+    $theme = 'Tempus';
 	$title = 'Project Title';
 	$tagLine = 'Aenean lobortis ante nunc curabitur at enim nisi.';
 ?>
@@ -8,9 +9,11 @@
 <!DOCTYPE html>
 <html class="no-js">
 
-<?php head() ?>
+<?php head($theme) ?>
 
 <body>
+    
+    <?php preloader($style = 'pacman') ?>
 
     <!-- Site Canvas -->
     <div id="site-content">
@@ -20,41 +23,29 @@
             topbar();
 
             appHeader(array(
-                'modifiers' => 'bar-absolute-dark-sticky'
+                'nav-links'  => array(
+                    'Home' => themeLink($theme, '/index.php'),
+                    'About' => themeLink($theme, '/about.php'),
+                    'Services' => themeLink($theme, '/services.php'),
+                    'Portfolio' => themeLink($theme, '/portfolio.php'),
+                    'Blog' => themeLink($theme, '/blog.php'),
+                    'Contact' => themeLink($theme, '/contact.php')
+                )
             ));
 
             billboard(array(
                 'title'    => $title,
                 'tag-line' => $tagLine
             ));
-		
+            
             sectionTitle(array(
                 'title' => 'Single Project',
                 'sub-title' => 'See How We Did It',
                 'icon' => 'fa-magic'
             ));
-
-		?>
 				
-		<section class="section-primary-flush relative container text-center">
-                
-            <div class="span-7">
-                <div class="desktop-graphic">
-                    <img src="<?php echo appDir ?>/images/demo-screen.png" alt="" />
-                    <span class="desktop-graphic_image owl-carousel" id="portfolio-thumbs">
-                        <div class="auto-resizable-iframe" data-iframe-height="56.5%">
-                            <div>
-                                <iframe allowfullscreen="" src="http://www.youtube.com/embed/Q3oItpVa9fs?theme=light"></iframe>
-                            </div>
-                        </div>
-                    </span>
-                </div>
-            </div>
+            include (ROOT.'/sections/portfolio-thumbs.php');
             
-        </section>
-        
-        <?php
-        
             include (ROOT.'/sections/project-summary.php');
                     
             include (ROOT.'/sections/what-we-did.php');
@@ -72,17 +63,19 @@
             recentWork(array(
                 'item-link' => themeLink($theme, '/portfolio-single.php')
             ));
+            
+            promoBanner(array(
+                'cta-modifiers' => '-oval'
+            ));
         
-            promoBanner();
-            
-            appFooter(); 
-            
+            appFooter();
         ?>
 
     </div><!-- Site Canvas -->
 
     <?php include (ROOT.'/includes/ui-enhancements.php'); ?>
 
-    <?php scripts() ?>
+    <?php scripts($theme) ?>
 
 </body>
+</html>

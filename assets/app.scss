@@ -12,7 +12,7 @@ $asset-path : "../.." !default;
 $to-JSON : true;
 
 // Theme
-$theme : 'Blizzard';
+$theme : 'Tempus';
 
 //-----------------------------------------------------------------
 // Vendor Files
@@ -108,6 +108,7 @@ $fa-font-path: "#{$asset-path}/fonts";
 @import "themes/Blizzard/blizzard";
 @import "themes/Kayzen/kayzen";
 @import "themes/Nexus/nexus";
+@import "themes/Tempus/tempus";
 
 // Output all configuration data to JSON only if setting exists and 
 // setting is "true"
