@@ -43,6 +43,20 @@
             $('.footer_testimonials-nav .tweet-next').click(function() {
                 footerTestimonials.trigger('next.owl.carousel');
             });
+                        
+            function delayCarousel(carousel, delay) { 
+                setTimeout(function() {
+                    carousel.owlCarousel('invalidate', 'all').owlCarousel('refresh');
+                }, delay); 
+            }
+            
+            $(window).load(function() {
+                delayCarousel(footerTestimonials, baseTransition)
+            });
+            
+            $('#toggleHeader').click(function() {
+                delayCarousel(footerTestimonials, baseTransition)
+            });
             
         } // testimonials()
         

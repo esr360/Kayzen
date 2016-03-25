@@ -97,6 +97,10 @@
                 
                 $(options.toggleHeader).click(function(e) {
                    $('body').toggleClass('toggleHeader');
+                   // reload any google maps
+                   setTimeout(function() {
+                       google.maps.event.trigger($('#google-map')[0], 'resize');
+                   }, baseTransition); 
                    e.preventDefault();
                 });
                 

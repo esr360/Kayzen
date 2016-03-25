@@ -147,11 +147,9 @@
             
             <script>
                 $(document).ready(function() {
-                    
                     $('#portfolio-categories').filterGrid({
                         items : '#portfolio-items'
                     });
-                    
                 });
             </script>            
 			

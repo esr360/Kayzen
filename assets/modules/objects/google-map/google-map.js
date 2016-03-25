@@ -97,7 +97,8 @@
                         "color" : _mapColor['park']
                     }]
                 }
-            ]
+            ],
+            headerTrigger : '#toggleHeader'
             
         }, custom);
         
