@@ -1,8 +1,8 @@
 <?php 
 	include ('../../app.php');
 	// page config
-    $theme = 'Tempus';
-	$title = 'Get in Touch';
+    $theme = 'Dart';
+	$title = 'Our Services';
 	$tagLine = 'Aenean lobortis ante nunc urabitur at enim nisi.';
 ?>
 
@@ -12,6 +12,8 @@
 <?php head($theme) ?>
 
 <body>
+    
+    <?php preloader($style = 'pacman') ?>
 
     <!-- Site Canvas -->
     <div id="site-content">
@@ -36,23 +38,21 @@
                 'tag-line' => $tagLine
             ));
             
-            contactUs();
+            services();
+    
+            featureQuote();
             
-        ?>
-        
-        <section class="section-primary-flush-dot-map container"> 
+            pricing();
             
-            <div class="container-small">
-                
-			    <?php socialWidgets() ?>
+            testimonials();
+    
+            recentWork(array(
+                'item-link' => themeLink($theme, '/portfolio-single.php')
+            ));
             
-            </div>
-            
-        </section> 
-        
-        <?php
-            
-            googleMap();
+            promoBanner(array(
+                'cta-modifiers' => '-oval'
+            ));
             
             appFooter(); 
         
@@ -65,4 +65,4 @@
     <?php scripts($theme) ?>
 
 </body>
-		
+</html>

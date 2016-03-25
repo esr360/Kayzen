@@ -1,8 +1,8 @@
 <?php 
 	include ('../../app.php');
 	// page config
-    $theme = 'Tempus';
-	$title = 'Our Portfolio';
+    $theme = 'Dart';
+	$title = 'Our Blog';
 	$tagLine = 'Read about all the great work we do';
 ?>
 
@@ -47,96 +47,80 @@
                     <?php
                         
                         articleItem(array(
-                            'type'   => 'portfolio',
                             'size'   => 'small',
-                            'height' => 'tall',
                             'span'   => 4,
-                            'link'   => themeLink($theme, '/portfolio-single.php'),
-                            'class'  => 'break-3-half break-2-full'
+                            'class'  => 'break-3-half break-2-full',
+                            'link'   => themeLink($theme, '/blog-single.php'),
+                            'root'   => themeLink($theme, '/blog.php')
                         ));
-                        
+                    
                         articleItem(array(
-                            'type'   => 'portfolio',
+                            'media'  => 'carousel',
+                            'size'   => 'small',
+                            'span'   => 4,
+                            'class'  => 'break-3-half break-2-full',
+                            'link'   => themeLink($theme, '/blog-single.php'),
+                            'root'   => themeLink($theme, '/blog.php')
+                        ));
+                    
+                        articleItem(array(
+                            'media'  => 'carousel',
+                            'size'   => 'small',
+                            'span'   => 4,
+                            'class'  => 'break-3-half break-2-full',
+                            'link'   => themeLink($theme, '/blog-single.php'),
+                            'root'   => themeLink($theme, '/blog.php')
+                        ));
+                    
+                        articleItem(array(
                             'media'  => 'vimeo',
                             'size'   => 'small',
                             'span'   => 4,
-                            'link'   => themeLink($theme, '/portfolio-single.php'),
-                            'class'  => 'break-3-half break-2-full'
+                            'class'  => 'break-3-half break-2-full',
+                            'link'   => themeLink($theme, '/blog-single.php'),
+                            'root'   => themeLink($theme, '/blog.php')
                         ));
-                        
+                    
                         articleItem(array(
-                            'type'   => 'portfolio',
-                            'media'  => 'carousel',
                             'size'   => 'small',
-                            'height' => 'tall',
                             'span'   => 4,
-                            'link'   => themeLink($theme, '/portfolio-single.php'),
-                            'class'  => 'break-3-half break-2-full'
+                            'class'  => 'break-3-half break-2-full',
+                            'link'   => themeLink($theme, '/blog-single.php'),
+                            'root'   => themeLink($theme, '/blog.php')
                         ));
-                        
+                    
                         articleItem(array(
-                            'type'   => 'portfolio',
-                            'media'  => 'audio',
-                            'size'   => 'small',
-                            'height' => 'tall',
-                            'span'   => 4,
-                            'link'   => themeLink($theme, '/portfolio-single.php'),
-                            'class'  => 'break-3-half break-2-full'
-                        ));
-                        
-                        articleItem(array(
-                            'type'   => 'portfolio',
                             'media'  => 'youtube',
                             'size'   => 'small',
-                            'height' => 'tall',
                             'span'   => 4,
-                            'link'   => themeLink($theme, '/portfolio-single.php'),
-                            'class'  => 'break-3-half break-2-full'
+                            'class'  => 'break-3-half break-2-full',
+                            'link'   => themeLink($theme, '/blog-single.php'),
+                            'root'   => themeLink($theme, '/blog.php')
                         ));
-                        
+                    
                         articleItem(array(
-                            'type'   => 'portfolio',
                             'size'   => 'small',
                             'span'   => 4,
-                            'link'   => themeLink($theme, '/portfolio-single.php'),
-                            'class'  => 'break-3-half break-2-full'
+                            'class'  => 'break-3-half break-2-full',
+                            'link'   => themeLink($theme, '/blog-single.php'),
+                            'root'   => themeLink($theme, '/blog.php')
                         ));
-                        
+                    
                         articleItem(array(
-                            'type'   => 'portfolio',
+                            'size'   => 'small',
+                            'span'   => 4,
+                            'class'  => 'break-3-half break-2-full',
+                            'link'   => themeLink($theme, '/blog-single.php'),
+                            'root'   => themeLink($theme, '/blog.php')
+                        ));
+                    
+                        articleItem(array(
                             'media'  => 'carousel',
                             'size'   => 'small',
                             'span'   => 4,
-                            'link'   => themeLink($theme, '/portfolio-single.php'),
-                            'class'  => 'break-3-half break-2-full'
-                        ));
-                        
-                        articleItem(array(
-                            'type'   => 'portfolio',
-                            'media'  => 'carousel',
-                            'size'   => 'small',
-                            'height' => 'tall',
-                            'span'   => 4,
-                            'link'   => themeLink($theme, '/portfolio-single.php'),
-                            'class'  => 'break-3-half break-2-full'
-                        ));
-                        
-                        articleItem(array(
-                            'type'   => 'portfolio',
-                            'media'  => 'audio',
-                            'size'   => 'small',
-                            'span'   => 4,
-                            'link'   => themeLink($theme, '/portfolio-single.php'),
-                            'class'  => 'break-3-half break-2-full'
-                        ));
-                        
-                        articleItem(array(
-                            'type'   => 'portfolio',
-                            'media'  => 'vimeo',
-                            'size'   => 'small',
-                            'span'   => 4,
-                            'link'   => themeLink($theme, '/portfolio-single.php'),
-                            'class'  => 'break-3-half break-2-full'
+                            'class'  => 'break-3-half break-2-full',
+                            'link'   => themeLink($theme, '/blog-single.php'),
+                            'root'   => themeLink($theme, '/blog.php')
                         ));
                      
                     ?>
@@ -194,7 +178,5 @@
     <?php include (ROOT.'/includes/ui-enhancements.php'); ?>
 
     <?php scripts($theme) ?>
-    
-    <?php devAsset('', 'isotope.pkgd.js') ?>
 
 </body>

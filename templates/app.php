@@ -75,6 +75,7 @@ include (ROOT.'/modules/preloader.php');
 include (ROOT.'/modules/sidebar.php');
 include (ROOT.'/modules/top-bar.php');
 
+include (ROOT.'/sections/blocks-with-quote.php');
 include (ROOT.'/sections/clients.php');
 include (ROOT.'/sections/comments.php');
 include (ROOT.'/sections/contact-us.php');

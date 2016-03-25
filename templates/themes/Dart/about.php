@@ -1,8 +1,8 @@
 <?php 
 	include ('../../app.php');
 	// page config
-    $theme = 'Tempus';
-	$title = 'Get in Touch';
+    $theme = 'Dart';
+	$title = 'Our Company';
 	$tagLine = 'Aenean lobortis ante nunc urabitur at enim nisi.';
 ?>
 
@@ -36,21 +36,29 @@
                 'tag-line' => $tagLine
             ));
             
-            contactUs();
+            blocksWithQuote();
             
-        ?>
+            testimonials();
+            
+            responsive(array(
+                'iphone-colors' => array(
+                    'white', 'red', 'red'
+                )
+            ));
+            
+            promoBanner();
+            
+            ourTeam();
+            
+            clients();
+            
+            promoSection();
         
-        <section class="section-primary-flush-dot-map container"> 
-            
-            <div class="container-small">
-                
-			    <?php socialWidgets() ?>
-            
-            </div>
-            
-        </section> 
-        
-        <?php
+            statistics();
+    
+            recentWork(array(
+                'item-link' => themeLink($theme, '/portfolio-single.php')
+            ));
             
             googleMap();
             
@@ -65,4 +73,3 @@
     <?php scripts($theme) ?>
 
 </body>
-		

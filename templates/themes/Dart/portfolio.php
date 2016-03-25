@@ -1,7 +1,7 @@
 <?php 
 	include ('../../app.php');
 	// page config
-    $theme = 'Tempus';
+    $theme = 'Dart';
 	$title = 'Our Portfolio';
 	$tagLine = 'Read about all the great work we do';
 ?>
@@ -49,7 +49,6 @@
                         articleItem(array(
                             'type'   => 'portfolio',
                             'size'   => 'small',
-                            'height' => 'tall',
                             'span'   => 4,
                             'link'   => themeLink($theme, '/portfolio-single.php'),
                             'class'  => 'break-3-half break-2-full'
@@ -68,7 +67,6 @@
                             'type'   => 'portfolio',
                             'media'  => 'carousel',
                             'size'   => 'small',
-                            'height' => 'tall',
                             'span'   => 4,
                             'link'   => themeLink($theme, '/portfolio-single.php'),
                             'class'  => 'break-3-half break-2-full'
@@ -76,9 +74,8 @@
                         
                         articleItem(array(
                             'type'   => 'portfolio',
-                            'media'  => 'audio',
+                            'media'  => 'carousel',
                             'size'   => 'small',
-                            'height' => 'tall',
                             'span'   => 4,
                             'link'   => themeLink($theme, '/portfolio-single.php'),
                             'class'  => 'break-3-half break-2-full'
@@ -88,7 +85,6 @@
                             'type'   => 'portfolio',
                             'media'  => 'youtube',
                             'size'   => 'small',
-                            'height' => 'tall',
                             'span'   => 4,
                             'link'   => themeLink($theme, '/portfolio-single.php'),
                             'class'  => 'break-3-half break-2-full'
@@ -115,7 +111,6 @@
                             'type'   => 'portfolio',
                             'media'  => 'carousel',
                             'size'   => 'small',
-                            'height' => 'tall',
                             'span'   => 4,
                             'link'   => themeLink($theme, '/portfolio-single.php'),
                             'class'  => 'break-3-half break-2-full'
@@ -123,16 +118,7 @@
                         
                         articleItem(array(
                             'type'   => 'portfolio',
-                            'media'  => 'audio',
-                            'size'   => 'small',
-                            'span'   => 4,
-                            'link'   => themeLink($theme, '/portfolio-single.php'),
-                            'class'  => 'break-3-half break-2-full'
-                        ));
-                        
-                        articleItem(array(
-                            'type'   => 'portfolio',
-                            'media'  => 'vimeo',
+                            'media'  => 'carousel',
                             'size'   => 'small',
                             'span'   => 4,
                             'link'   => themeLink($theme, '/portfolio-single.php'),
@@ -194,7 +180,5 @@
     <?php include (ROOT.'/includes/ui-enhancements.php'); ?>
 
     <?php scripts($theme) ?>
-    
-    <?php devAsset('', 'isotope.pkgd.js') ?>
 
 </body>

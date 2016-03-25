@@ -47,6 +47,7 @@
             color: this('wrapper-color');
             @include overwrite('logo') {
                 padding: 0;
+                border: 0;
                 img {
                     height: this('logo-height');
                 }

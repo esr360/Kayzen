@@ -1,17 +1,17 @@
 <?php 
 	include ('../../app.php');
 	// page config
-	$title = 'Homepage 4';
+    $theme = 'Dart';
 ?>
 
 <!DOCTYPE html>
 <html class="no-js">
 
-<?php head() ?>
+<?php head($theme) ?>
 
 <body>
     
-    <?php preloader() ?>
+    <?php preloader($style = 'pacman') ?>
 
     <!-- Site Canvas -->
     <div id="site-content">
@@ -19,17 +19,24 @@
 		<?php 
         
             topbar(array(
-                'modifiers' => 'fixed'
+                'flyout-trigger' => true
             ));
 
             appHeader(array(
-                'modifiers' => 'bar-absolute-dark'
+                'nav-links'  => array(
+                    'Home' => themeLink($theme, '/index.php'),
+                    'About' => themeLink($theme, '/about.php'),
+                    'Services' => themeLink($theme, '/services.php'),
+                    'Portfolio' => themeLink($theme, '/portfolio.php'),
+                    'Blog' => themeLink($theme, '/blog.php'),
+                    'Contact' => themeLink($theme, '/contact.php')
+                )
             ));
 
 		?>
 
 		<section class="billboard-full-screen"
-			style="background-image: url('<?php stockImage('demo/stock-5.jpg') ?>')">
+			style="background-image: url('<?php stockImage('demo/stock-17.jpg') ?>')">
 			<div class="billboard_wrapper container text-left">
 				<div class="short" id="billboard-fade-parallax">
 					<h3 class="heading-uppercase-heavy-highlight-dark-size-8 font-2">
@@ -42,10 +49,6 @@
 					</div>
 				</div>
 			</div>
-			<nav class="slide-nav">
-				<button class="slide-prev button-icon-border-size-3-white"><i class="fa fa-angle-left"></i></button>
-				<button class="slide-next button-icon-border-size-3-white"><i class="fa fa-angle-right"></i></button>
-			</nav>
 			<a href="#s-welcome" class="scroll-wheel"></a>
 		</section>
 					
@@ -68,56 +71,42 @@
 				    articleItem(array(
                         'type'   => 'portfolio',
                         'matrix' => true,
-                        'span'   => 3,
+                        'span'   => 4,
                         'class'  => 'break-3-half break-1-full'
                     ));
                     
                     articleItem(array(
                         'type'   => 'portfolio',
                         'matrix' => true,
-                        'span'   => 3,
+                        'span'   => 4,
                         'class'  => 'break-3-half break-1-full'
                     ));
                     
                     articleItem(array(
                         'type'   => 'portfolio',
                         'matrix' => true,
-                        'span'   => 3,
+                        'span'   => 4,
                         'class'  => 'break-3-half break-1-full'
                     ));
                     
                     articleItem(array(
                         'type'   => 'portfolio',
                         'matrix' => true,
-                        'span'   => 3,
+                        'span'   => 4,
                         'class'  => 'break-3-half break-1-full'
                     ));
                 
 				    articleItem(array(
                         'type'   => 'portfolio',
                         'matrix' => true,
-                        'span'   => 3,
+                        'span'   => 4,
                         'class'  => 'break-3-half break-1-full'
                     ));
                     
                     articleItem(array(
                         'type'   => 'portfolio',
                         'matrix' => true,
-                        'span'   => 3,
-                        'class'  => 'break-3-half break-1-full'
-                    ));
-                    
-                    articleItem(array(
-                        'type'   => 'portfolio',
-                        'matrix' => true,
-                        'span'   => 3,
-                        'class'  => 'break-3-half break-1-full'
-                    ));
-                    
-                    articleItem(array(
-                        'type'   => 'portfolio',
-                        'matrix' => true,
-                        'span'   => 3,
+                        'span'   => 4,
                         'class'  => 'break-3-half break-1-full'
                     ));
                     
@@ -126,13 +115,13 @@
 			</div>
             
 		</section><!-- Key Features -->
-		
-		<?php
-            
+        
+        <?php
+        
             blocksWithQuote();
             
         ?>
-		
+        
 		<section 
 			class="section-secondary-full-screen-overlay-alt"
 			data-stellar-background-ratio="0.8"
@@ -150,14 +139,14 @@
                                 alt=""
                             / >
                             <img 
-                                class="mobile-graphic-blue" 
+                                class="mobile-graphic-red" 
                                 src="<?php echo appDir ?>/images/mobile-screen.png" 
                                 data-trigger="transform: translate(45%, -50%) translateZ(0) scale(0.85)"
                                 data-hover="right: -25%"
                                 alt=""
                             / >
                             <img 
-                                class="mobile-graphic-purple" 
+                                class="mobile-graphic-red" 
                                 src="<?php echo appDir ?>/images/mobile-screen.png" 
                                 data-hover="transform: scale(1.05) translateY(-47.5%) translateZ(0)"
                                 alt=""
@@ -305,7 +294,7 @@
 
     <?php include (ROOT.'/includes/ui-enhancements.php'); ?>
 
-    <?php scripts() ?>
+    <?php scripts($theme) ?>
 
 </body>
 </html>

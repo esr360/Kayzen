@@ -1,7 +1,9 @@
  <?php function responsive($custom = array()) { ?>
 
     <?php $options = array_merge(array(
-        //'option' => 'VALUE'
+        'iphone-colors' => array(
+            'white', 'purple', 'blue'
+        )
     ), $custom); ?>
  
     <!-- Responsive -->
@@ -60,21 +62,21 @@
                 <div class="span-6 va-middle text-center min-break-3">
                     <div class="center-xy span-6">
                         <img 
-                            class="mobile-graphic-white" 
+                            class="mobile-graphic-<?php echo $options['iphone-colors'][0] ?>" 
                             src="<?php echo appDir ?>/images/mobile-screen.png" 
                             data-trigger="transform: translate(-45%, -50%) translateZ(0) scale(0.85)"
                             data-hover="left: -25%"
                             alt=""
                         / >
                         <img 
-                            class="mobile-graphic-blue" 
+                            class="mobile-graphic-<?php echo $options['iphone-colors'][1] ?>" 
                             src="<?php echo appDir ?>/images/mobile-screen.png" 
                             data-trigger="transform: translate(45%, -50%) translateZ(0) scale(0.85)"
                             data-hover="right: -25%"
                             alt=""
                         / >
                         <img 
-                            class="mobile-graphic-purple" 
+                            class="mobile-graphic-<?php echo $options['iphone-colors'][2] ?>" 
                             src="<?php echo appDir ?>/images/mobile-screen.png" 
                             data-hover="transform: scale(1.05) translateY(-47.5%) translateZ(0)"
                             alt=""

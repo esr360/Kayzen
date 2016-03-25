@@ -135,9 +135,6 @@
                     left: auto;
                     ~ #site-content {
                         margin-right: this('side', 'width');
-                        @include overwrite('top-bar') {
-                            width: calc(100% - #{this('side', 'width')})
-                        }
                     }
                     ~ .search-box {
                         width: calc(100% - #{this('side', 'width')});

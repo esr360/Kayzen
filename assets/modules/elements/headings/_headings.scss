@@ -76,7 +76,7 @@
                 background: this('highlight-color');
                 color: white;
                 padding: 0.1em 0;
-                font-weight: normal;
+                font-weight: inherit;
                 box-shadow: $highlight-dimensions 0 0 this('highlight-color'), -$highlight-dimensions 0 0 this('highlight-color');
                 text-shadow: none;    
                 &:not(:first-child) {
