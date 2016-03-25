@@ -217,11 +217,7 @@
             </div>
         </section>
         
-        <?php
-            
-            appFooter(); 
-        
-        ?>
+        <?php  appFooter() ?>
 
     </div><!-- Site Canvas -->
 

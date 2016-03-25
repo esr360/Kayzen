@@ -252,11 +252,7 @@
 			</div>
 		</section>
 		
-		<?php 
-        
-            promoBanner();
-            
-        ?>
+		<?php promoBanner() ?>
 		
 		<section class="section-primary" id="mobile-optimized">
 		
@@ -304,11 +300,7 @@
 				
 		</section>
 		
-        <?php 
-            
-            appFooter(); 
-            
-        ?>
+        <?php appFooter() ?>
 
     </div><!-- Site Canvas -->
 

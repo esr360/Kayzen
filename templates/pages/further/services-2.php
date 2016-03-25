@@ -44,7 +44,7 @@
             
             promoBanner();
             
-            appFooter(); 
+            appFooter();
         
         ?>
 

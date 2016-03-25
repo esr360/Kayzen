@@ -109,11 +109,7 @@
             
         </section><!-- Contact Us -->
     
-        <?php
-            
-            appFooter(); 
-        
-        ?>
+        <?php appFooter() ?>
 
     </div><!-- Site Canvas -->
 
