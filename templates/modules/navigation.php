@@ -1,10 +1,43 @@
-<?php function navigation($custom = array()) { ?>
+<?php function navigation($custom = array()) {
 
-    <?php $options = array_merge(array(
+    $options = array_merge(array(
         'pages' => null
-    ), $custom); ?>
+    ), $custom);
     
-    <?php if ($options['pages']) { ?>
+    function navThemeItem($custom = array()) {
+        
+        $options = array_merge(array(
+            'theme'   => 'Kayzen',
+            'thumb'   => 'theme-1-thumb.jpg',
+            'heading' => 'Digital Agency Demo',
+            'tags'    => array('Multi-Page'),
+            'ribbon'  => null
+        ), $custom); ?>
+        
+        <a href="<?php echo themeLink($options['theme'], '/index.php') ?>" class="widget-media row">               
+            <div class="span-4">
+                <?php if ($options['ribbon']) { ?>
+                    <div class="corner-ribbon-small-<?php echo $options['ribbon'][0] ?>" data-ribbon="<?php echo $options['ribbon'][1] ?>"></div>
+                <?php } ?>
+                <img src="<?php echo appDir ?>/images/demo/<?php echo $options['thumb'] ?>" alt="<?php echo $options['thumb'] ?>" />
+            </div> 
+            <div class="span-8">
+                <header class="heading_group">
+                    <h3 class="heading-heavy-size-2"><?php echo $options['theme'] ?></h3>
+                    <h4 class="heading-light-uppercase-brand-1-size-1"><?php echo $options['heading'] ?></h4>
+                </header>   
+                <div class="widget_controls">
+                    <ul class="list-tags-small">
+                        <?php foreach ($options['tags'] as $tag) { ?>
+                            <li class="plain"><span><?php echo $tag ?></span></li>
+                        <?php } ?>
+                    </ul>
+                </div>
+            </div>   
+        </a>
+    <?php }
+    
+    if ($options['pages']) { ?>
 
         <!-- Navigation -->
         <nav class="navigation-no-icons min-break-4" id="app-nav">
@@ -29,76 +62,30 @@
                             <h3 class="mega-menu_title heading">Business/Corporate</h3>
                             <ul class="list-divider">
                                 
+                                <!-- Theme 1 -->
                                 <li>
-                                    <div class="widget-media row">               
-                                        <div class="span-4">
-                                            <div class="corner-ribbon-small-pink" data-ribbon="Hot"></div>
-                                            <a href="#">
-                                                <img src="<?php echo appDir ?>/images/demo/theme-1-thumb.jpg" alt="Theme One" />
-                                            </a>
-                                        </div> 
-                                        <div class="span-8">
-                                            <header class="heading_group">
-                                                <a href="#">
-                                                    <h3 class="heading-heavy-size-2">Nexus</h3>
-                                                    <h4 class="heading-light-uppercase-brand-1-size-1">Digital Agency Demo</h4>
-                                                </a>
-                                            </header>   
-                                            <div class="widget_controls">
-                                                <ul class="list-tags-small">
-                                                    <li class="plain"><a href="#">Multi-Page</a></li>
-                                                </ul>
-                                            </div>
-                                        </div>   
-                                    </div>
+                                    <?php navThemeItem(array(
+                                        'theme' => 'Nexus',
+                                        'thumb' => 'theme-3-thumb.jpg',
+                                        'ribbon' => array('pink', 'Hot')
+                                    )) ?>
                                 </li>
                                 
+                                <!-- Theme 2 -->
                                 <li>
-                                    <div class="widget-media row">               
-                                        <div class="span-4">
-                                            <div class="corner-ribbon-small-purple" data-ribbon="Featured"></div>
-                                            <a href="#">
-                                                <img src="<?php echo appDir ?>/images/demo/theme-1-thumb.jpg" alt="Theme One" />
-                                            </a>
-                                        </div> 
-                                        <div class="span-8">
-                                            <header class="heading_group">
-                                                <a href="#">
-                                                    <h3 class="heading-heavy-size-2">Kayzen</h3>
-                                                    <h4 class="heading-light-uppercase-brand-1-size-1">Original Demo</h4>
-                                                </a>
-                                            </header>   
-                                            <div class="widget_controls">
-                                                <ul class="list-tags-small">
-                                                    <li class="plain"><a href="#">Multi-Page</a></li>
-                                                    <li class="plain"><a href="#">Parallax</a></li>
-                                                </ul>
-                                            </div>
-                                        </div>   
-                                    </div>
+                                    <?php navThemeItem(array(
+                                        'theme' => 'Kayzen',
+                                        'thumb' => 'theme-1-thumb.jpg',
+                                        'ribbon' => array('purple', 'Featured')
+                                    )) ?>
                                 </li>
                                 
+                                <!-- Theme 3 -->
                                 <li>
-                                    <div class="widget-media row">               
-                                        <div class="span-4">
-                                            <a href="#">
-                                                <img src="<?php echo appDir ?>/images/demo/theme-1-thumb.jpg" alt="Theme One" />
-                                            </a>
-                                        </div> 
-                                        <div class="span-8">
-                                            <header class="heading_group">
-                                                <a href="#">
-                                                    <h3 class="heading-heavy-size-2">Agenda</h3>
-                                                    <h4 class="heading-light-uppercase-brand-1-size-1">Digital Agency Demo</h4>
-                                                </a>
-                                            </header>   
-                                            <div class="widget_controls">
-                                                <ul class="list-tags-small">
-                                                    <li class="plain"><a href="#">One-Page</a></li>
-                                                </ul>
-                                            </div>
-                                        </div>   
-                                    </div>
+                                    <?php navThemeItem(array(
+                                        'theme' => 'Agenda',
+                                        'thumb' => 'theme-2-thumb.jpg'
+                                    )) ?>
                                 </li>
                                 
                             </ul>
@@ -108,75 +95,28 @@
                             <h3 class="mega-menu_title heading">Creative/Portfolio</h3>
                             <ul class="list-divider">
                                 
+                                <!-- Theme 4 -->
                                 <li>
-                                    <div class="widget-media row">               
-                                        <div class="span-4">
-                                            <div class="corner-ribbon-small-green" data-ribbon="New"></div>
-                                            <a href="#">
-                                                <img src="<?php echo appDir ?>/images/demo/theme-1-thumb.jpg" alt="Theme One" />
-                                            </a>
-                                        </div> 
-                                        <div class="span-8">
-                                            <header class="heading_group">
-                                                <a href="#">
-                                                    <h3 class="heading-heavy-size-2">Nexus</h3>
-                                                    <h4 class="heading-light-uppercase-brand-1-size-1">Digital Agency Demo</h4>
-                                                </a>
-                                            </header>   
-                                            <div class="widget_controls">
-                                                <ul class="list-tags-small">
-                                                    <li class="plain"><a href="#">Multi-Page</a></li>
-                                                </ul>
-                                            </div>
-                                        </div>   
-                                    </div>
+                                    <?php navThemeItem(array(
+                                        'theme' => 'Blizzard',
+                                        'thumb' => 'theme-4-thumb.jpg'
+                                    )) ?>
                                 </li>
                                 
+                                <!-- Theme 5 -->
                                 <li>
-                                    <div class="widget-media row">               
-                                        <div class="span-4">
-                                            <a href="#">
-                                                <img src="<?php echo appDir ?>/images/demo/theme-1-thumb.jpg" alt="Theme One" />
-                                            </a>
-                                        </div> 
-                                        <div class="span-8">
-                                            <header class="heading_group">
-                                                <a href="#">
-                                                    <h3 class="heading-heavy-size-2">Kayzen</h3>
-                                                    <h4 class="heading-light-uppercase-brand-1-size-1">Original Demo</h4>
-                                                </a>
-                                            </header>   
-                                            <div class="widget_controls">
-                                                <ul class="list-tags-small">
-                                                    <li class="plain"><a href="#">Multi-Page</a></li>
-                                                    <li class="plain"><a href="#">Parallax</a></li>
-                                                </ul>
-                                            </div>
-                                        </div>   
-                                    </div>
+                                    <?php navThemeItem(array(
+                                        'theme' => 'Tempus',
+                                        'thumb' => 'theme-6-thumb.jpg'
+                                    )) ?>
                                 </li>
                                 
+                                <!-- Theme 6 -->
                                 <li>
-                                    <div class="widget-media row">               
-                                        <div class="span-4">
-                                            <a href="#">
-                                                <img src="<?php echo appDir ?>/images/demo/theme-1-thumb.jpg" alt="Theme One" />
-                                            </a>
-                                        </div> 
-                                        <div class="span-8">
-                                            <header class="heading_group">
-                                                <a href="#">
-                                                    <h3 class="heading-heavy-size-2">Agenda</h3>
-                                                    <h4 class="heading-light-uppercase-brand-1-size-1">Digital Agency Demo</h4>
-                                                </a>
-                                            </header>   
-                                            <div class="widget_controls">
-                                                <ul class="list-tags-small">
-                                                    <li class="plain"><a href="#">One-Page</a></li>
-                                                </ul>
-                                            </div>
-                                        </div>   
-                                    </div>
+                                    <?php navThemeItem(array(
+                                        'theme' => 'Dart',
+                                        'thumb' => 'theme-5-thumb.jpg'
+                                    )) ?>
                                 </li>
                                 
                             </ul>

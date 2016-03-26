@@ -22,25 +22,25 @@
         <!-- Showcase Thumbnails -->
         <section class="carousel-scale-3-greyscale-stageBg owl-carousel" id="showcase-thumbnails">
             <div class="showcase-thumbnail">
-                <img src="<?php stockImage('demo/small/stock-1.jpg') ?>">
+                <img src="<?php stockImage('demo/theme-1-thumb.jpg') ?>">
             </div>
             <div class="showcase-thumbnail">
-                <img src="<?php stockImage('demo/small/stock-2.jpg') ?>">
+                <img src="<?php stockImage('demo/theme-2-thumb.jpg') ?>">
             </div>
             <div class="showcase-thumbnail">
-                <img src="<?php stockImage('demo/small/stock-3.jpg') ?>">
+                <img src="<?php stockImage('demo/theme-3-thumb.jpg') ?>">
             </div>
             <div class="showcase-thumbnail">
-                <img src="<?php stockImage('demo/small/stock-4.jpg') ?>">
+                <img src="<?php stockImage('demo/theme-5-thumb.jpg') ?>">
             </div>
             <div class="showcase-thumbnail">
-                <img src="<?php stockImage('demo/small/stock-5.jpg') ?>">
+                <img src="<?php stockImage('demo/theme-4-thumb.jpg') ?>">
             </div>
             <div class="showcase-thumbnail">
-                <img src="<?php stockImage('demo/small/stock-6.jpg') ?>">
+                <img src="<?php stockImage('demo/theme-6-thumb.jpg') ?>">
             </div>
             <div class="showcase-thumbnail">
-                <img src="<?php stockImage('demo/small/stock-7.jpg') ?>">
+                <img src="<?php stockImage('demo/theme-1-thumb.jpg') ?>">
             </div>
         </section> 
         
@@ -149,7 +149,7 @@
             </div>
             
             <!-- Showcase Slide 4 -->
-            <div class="row-block bg-cover stack-break-4" style="background-image: url('<?php stockImage('demo/small/stock-1.jpg') ?>')">
+            <div class="row-block bg-cover stack-break-4" style="background-image: url('<?php stockImage('demo/stock-17.jpg') ?>')">
                 <div class="section_block span-6 text-center va-middle">
                     <div class="block-content span-9">
                         <div class="desktop-graphic-scroll">
