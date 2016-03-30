@@ -65,14 +65,12 @@
                     
                     lastId = id;
                     
-                    // Remove active class from old item
-                    items.removeClass('active');
-                    
                     // Add active class to appropriate item
                     if ($(options.itemSelector).prop('tagName') == 'A') {
-                        items.filter('[href=#'+id+']').addClass('active');
+                        items.removeClass('active').filter('[href=#'+id+']').addClass('active');
                     } else {
-                        items.find('a').filter('[href=#'+id+']').end().addClass('active');
+                        items.find('a').removeClass('active');
+                        items.find('a[href=#'+id+']').addClass('active');
                     }
                     
                 }   
