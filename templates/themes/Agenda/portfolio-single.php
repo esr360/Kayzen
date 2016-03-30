@@ -23,11 +23,11 @@
             appHeader(array(
                 'nav-links'  => array(
                     'Home' => themeLink($theme, '/index.php'),
-                    'About' => themeLink($theme, '/about.php'),
-                    'Services' => themeLink($theme, '/services.php'),
-                    'Portfolio' => themeLink($theme, '/portfolio.php'),
-                    'Blog' => themeLink($theme, '/blog.php'),
-                    'Contact' => themeLink($theme, '/contact.php')
+                    'About' => themeLink($theme, '/index.php').'#s-about',
+                    'Services' => themeLink($theme, '/index.php').'#s-services',
+                    'Portfolio' => themeLink($theme, '/index.php').'#s-portfolio',
+                    'Blog' => themeLink($theme, '/index.php').'#s-blog',
+                    'Contact' => themeLink($theme, '/index.php').'#s-contact'
                 )
             ));
 

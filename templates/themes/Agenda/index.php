@@ -30,6 +30,16 @@
             ));
 
 		?>
+        
+        <script>
+            $(document).ready(function() {
+                $(window).load(function() {
+                    $('#app-nav').scrollSpy({
+                        itemSelector : 'li'
+                    });
+                });
+            });
+        </script>
 
 		<section class="billboard-full-screen-overlay">
 			<div class="billboard_wrapper container text-left">

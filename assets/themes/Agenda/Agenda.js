@@ -82,4 +82,12 @@ $(document).ready(function() {
     
     $(_twitterFeed).twitterFeed();
 
+//-----------------------------------------------------------------
+// Tools
+//-----------------------------------------------------------------
+
+    $('a[href*="#"]:not([href*="modal"])').smoothScroll({
+        offsetTop : 0
+    });
+
 }); // document.ready

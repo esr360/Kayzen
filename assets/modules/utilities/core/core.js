@@ -15,9 +15,6 @@ function breakpoint(media, value) {
 
 $(document).ready(function() {
 
-    // Smooth Scroll
-    $('a[href*="#"]:not([href*="modal"])').smoothScroll();
-
     // Set Iframe Height
     $('.auto-resizable-iframe').iframeHeight();
 
