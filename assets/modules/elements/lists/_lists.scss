@@ -138,6 +138,7 @@
             
             @include extend('reset');
             margin: 0;
+            transition: 0s;
             > li {
                 display: inline-block;
                 font-size: font-size('size-2');

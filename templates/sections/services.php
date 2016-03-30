@@ -1,10 +1,10 @@
 <?php function services($custom = array()) { ?>
 
     <?php $options = array_merge(array(  
-        //'option'   => 'VALUE'
+        'id'   => null
     ), $custom); ?>
     
-    <section class="section-primary">
+    <section class="section-primary" <?php if ($options['id']) echo 'id="'.$options['id'].'"' ?>>
         
         <header class="heading_group-large text-center">
             <div class="container-small">

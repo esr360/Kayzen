@@ -2,10 +2,11 @@
 
     <?php $options = array_merge(array(
         'item-link' => pageLink('blog/single.php', 'pages', false),
-        'item-root' => pageLink('blog.php', 'pages', false)
+        'item-root' => pageLink('blog.php', 'pages', false),
+        'id' => null
     ), $custom); ?>
 
-    <section class="section-primary">
+    <section class="section-primary" <?php if ($options['id']) echo 'id="'.$options['id'].'"' ?>>
         
         <header class="heading_group-large text-center">
             <div class="container-small">

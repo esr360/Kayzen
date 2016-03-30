@@ -105,6 +105,12 @@
                 });
                 
             }
+        
+            $(window).load(function() {
+                $(options.navigation).scrollSpy({
+                    itemSelector : 'li'
+                });
+            });
                 
             if (options.sticky)  {
                 stickyHeader();

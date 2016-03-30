@@ -66,7 +66,9 @@ $(document).ready(function() {
         trigger : '#flyout-trigger, #demo-flyout-trigger'
     });
     
-    $(_appHeader).header();
+    $(_appHeader).header({
+        navigation : '#app-nav'
+    });
     
     $('#page-overview').pageOverview();
     

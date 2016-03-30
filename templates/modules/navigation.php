@@ -12,9 +12,15 @@
             'heading' => 'Digital Agency Demo',
             'tags'    => array('Multi-Page'),
             'ribbon'  => null
-        ), $custom); ?>
+        ), $custom); 
         
-        <a href="<?php echo themeLink($options['theme'], '/index.php') ?>" class="widget-media row">               
+        $link = themeLink($options['theme'], '/index.php');
+        
+        if ($options['theme'] == 'Kayzen') {
+            $link = pageLink('homepages/homepage-1.php', $root = 'pages', $echo = false);
+        } ?>
+        
+        <a href="<?php echo $link ?>" class="widget-media row">               
             <div class="span-4">
                 <?php if ($options['ribbon']) { ?>
                     <div class="corner-ribbon-small-<?php echo $options['ribbon'][0] ?>" data-ribbon="<?php echo $options['ribbon'][1] ?>"></div>
@@ -126,75 +132,31 @@
                             <h3 class="mega-menu_title heading">Shop/E-Commerce</h3>
                             <ul class="list-divider">
                                 
+                                <!-- Theme 7 -->
                                 <li>
-                                    <div class="widget-media row">               
-                                        <div class="span-4">
-                                            <div class="corner-ribbon-small-pink" data-ribbon="Hot"></div>
-                                            <a href="#">
-                                                <img src="<?php echo appDir ?>/images/demo/theme-1-thumb.jpg" alt="Theme One" />
-                                            </a>
-                                        </div> 
-                                        <div class="span-8">
-                                            <header class="heading_group">
-                                                <a href="#">
-                                                    <h3 class="heading-heavy-size-2">Nexus</h3>
-                                                    <h4 class="heading-light-uppercase-brand-1-size-1">Digital Agency Demo</h4>
-                                                </a>
-                                            </header>   
-                                            <div class="widget_controls">
-                                                <ul class="list-tags-small">
-                                                    <li class="plain"><a href="#">Multi-Page</a></li>
-                                                </ul>
-                                            </div>
-                                        </div>   
-                                    </div>
+                                    <?php navThemeItem(array(
+                                        'theme' => 'Kayzen',
+                                        'thumb' => 'theme-1-thumb.jpg',
+                                        'ribbon' => array('purple', 'Featured')
+                                    )) ?>
                                 </li>
                                 
+                                <!-- Theme 8 -->
                                 <li>
-                                    <div class="widget-media row">               
-                                        <div class="span-4">
-                                            <a href="#">
-                                                <img src="<?php echo appDir ?>/images/demo/theme-1-thumb.jpg" alt="Theme One" />
-                                            </a>
-                                        </div> 
-                                        <div class="span-8">
-                                            <header class="heading_group">
-                                                <a href="#">
-                                                    <h3 class="heading-heavy-size-2">Kayzen</h3>
-                                                    <h4 class="heading-light-uppercase-brand-1-size-1">Original Demo</h4>
-                                                </a>
-                                            </header>   
-                                            <div class="widget_controls">
-                                                <ul class="list-tags-small">
-                                                    <li class="plain"><a href="#">Multi-Page</a></li>
-                                                </ul>
-                                            </div>
-                                        </div>   
-                                    </div>
+                                    <?php navThemeItem(array(
+                                        'theme' => 'Kayzen',
+                                        'thumb' => 'theme-1-thumb.jpg',
+                                        'ribbon' => array('purple', 'Featured')
+                                    )) ?>
                                 </li>
                                 
+                                <!-- Theme 9 -->
                                 <li>
-                                    <div class="widget-media row">               
-                                        <div class="span-4">
-                                            <a href="#">
-                                                <img src="<?php echo appDir ?>/images/demo/theme-1-thumb.jpg" alt="Theme One" />
-                                            </a>
-                                        </div> 
-                                        <div class="span-8">
-                                            <header class="heading_group">
-                                                <a href="#">
-                                                    <h3 class="heading-heavy-size-2">Agenda</h3>
-                                                    <h4 class="heading-light-uppercase-brand-1-size-1">Digital Agency Demo</h4>
-                                                </a>
-                                            </header>   
-                                            <div class="widget_controls">
-                                                <ul class="list-tags-small">
-                                                    <li class="plain"><a href="#">Multi-Page</a></li>
-                                                    <li class="plain"><a href="#">Parallax</a></li>
-                                                </ul>
-                                            </div>
-                                        </div>   
-                                    </div>
+                                    <?php navThemeItem(array(
+                                        'theme' => 'Kayzen',
+                                        'thumb' => 'theme-1-thumb.jpg',
+                                        'ribbon' => array('purple', 'Featured')
+                                    )) ?>
                                 </li>
                                 
                             </ul>
@@ -203,74 +165,31 @@
                             <h3 class="mega-menu_title heading">Blog/News</h3>
                             <ul class="list-divider">
                                 
+                                <!-- Theme 10 -->
                                 <li>
-                                    <div class="widget-media row">               
-                                        <div class="span-4">
-                                            <a href="#">
-                                                <img src="<?php echo appDir ?>/images/demo/theme-1-thumb.jpg" alt="Theme One" />
-                                            </a>
-                                        </div> 
-                                        <div class="span-8">
-                                            <header class="heading_group">
-                                                <a href="#">
-                                                    <h3 class="heading-heavy-size-2">Nexus</h3>
-                                                    <h4 class="heading-light-uppercase-brand-1-size-1">Digital Agency Demo</h4>
-                                                </a>
-                                            </header>   
-                                            <div class="widget_controls">
-                                                <ul class="list-tags-small">
-                                                    <li class="plain"><a href="#">Multi-Page</a></li>
-                                                </ul>
-                                            </div>
-                                        </div>   
-                                    </div>
+                                    <?php navThemeItem(array(
+                                        'theme' => 'Kayzen',
+                                        'thumb' => 'theme-1-thumb.jpg',
+                                        'ribbon' => array('purple', 'Featured')
+                                    )) ?>
                                 </li>
                                 
+                                <!-- Theme 11 -->
                                 <li>
-                                    <div class="widget-media row">               
-                                        <div class="span-4">
-                                            <div class="corner-ribbon-small-green" data-ribbon="New"></div>
-                                            <a href="#">
-                                                <img src="<?php echo appDir ?>/images/demo/theme-1-thumb.jpg" alt="Theme One" />
-                                            </a>
-                                        </div> 
-                                        <div class="span-8">
-                                            <header class="heading_group">
-                                                <a href="#">
-                                                    <h3 class="heading-heavy-size-2">Kayzen</h3>
-                                                    <h4 class="heading-light-uppercase-brand-1-size-1">Original Demo</h4>
-                                                </a>
-                                            </header>   
-                                            <div class="widget_controls">
-                                                <ul class="list-tags-small">
-                                                    <li class="plain"><a href="#">Multi-Page</a></li>
-                                                </ul>
-                                            </div>
-                                        </div>   
-                                    </div>
+                                    <?php navThemeItem(array(
+                                        'theme' => 'Kayzen',
+                                        'thumb' => 'theme-1-thumb.jpg',
+                                        'ribbon' => array('purple', 'Featured')
+                                    )) ?>
                                 </li>
                                 
+                                <!-- Theme 12 -->
                                 <li>
-                                    <div class="widget-media row">               
-                                        <div class="span-4">
-                                            <a href="#">
-                                                <img src="<?php echo appDir ?>/images/demo/theme-1-thumb.jpg" alt="Theme One" />
-                                            </a>
-                                        </div> 
-                                        <div class="span-8">
-                                            <header class="heading_group">
-                                                <a href="#">
-                                                    <h3 class="heading-heavy-size-2">Agenda</h3>
-                                                    <h4 class="heading-light-uppercase-brand-1-size-1">Digital Agency Demo</h4>
-                                                </a>
-                                            </header>   
-                                            <div class="widget_controls">
-                                                <ul class="list-tags-small">
-                                                    <li class="plain"><a href="#">One-Page</a></li>
-                                                </ul>
-                                            </div>
-                                        </div>   
-                                    </div>
+                                    <?php navThemeItem(array(
+                                        'theme' => 'Kayzen',
+                                        'thumb' => 'theme-1-thumb.jpg',
+                                        'ribbon' => array('purple', 'Featured')
+                                    )) ?>
                                 </li>
                                 
                             </ul>

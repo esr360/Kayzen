@@ -1,10 +1,10 @@
 <?php function earthSlider($custom = array()) { ?>
 
     <?php $options = array_merge(array(  
-        //'option' => 'VALUE'
+        'id' => 's-welcome'
     ), $custom); ?>
     
-    <section class="section earth-slider" id="s-welcome">
+    <section class="section earth-slider" id="<?php echo $options['id'] ?>">
         <header class="earth-slider_section heading_group-block text-center">
             <div class="container-small">
                 <h4 class="heading-uppercase-light-brand-1-spaced-size-4"><span>This is Kayzen 1</span></h4>

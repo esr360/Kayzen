@@ -21,12 +21,11 @@
 
             appHeader(array(
                 'nav-links'  => array(
-                    'Home' => themeLink($theme, '/index.php'),
-                    'About' => themeLink($theme, '/about.php'),
-                    'Services' => themeLink($theme, '/services.php'),
-                    'Portfolio' => themeLink($theme, '/portfolio.php'),
-                    'Blog' => themeLink($theme, '/blog.php'),
-                    'Contact' => themeLink($theme, '/contact.php')
+                    'About' => '#s-about',
+                    'Services' => '#s-services',
+                    'Portfolio' => '#s-portfolio',
+                    'Blog' => '#s-blog',
+                    'Contact' => '#s-contact'
                 )
             ));
 
@@ -51,7 +50,9 @@
 
 		<?php 
         
-            earthSlider(); 
+            earthSlider(array(
+                'id' => 's-about'
+            )); 
             
             skills(array(
                 'cta-modifiers' => '-oval'
@@ -69,7 +70,9 @@
                 'cta-modifiers' => '-oval'
             ));
             
-            services();
+            services(array(
+                'id' => 's-services'
+            ));
             
             statistics();
             
@@ -83,21 +86,25 @@
             
             recentWork(array(
                 'items'     => 6,
-                'item-link' => themeLink($theme, '/portfolio-single.php')
+                'item-link' => themeLink($theme, '/portfolio-single.php'),
+                'id' => 's-portfolio'
             ));
             
             testimonials();
             
             recentArticles(array(
                 'item-link' => themeLink($theme, '/blog-single.php'),
-                'item-root' => themeLink($theme, '/blog.php')
+                'item-root' => themeLink($theme, '/blog.php'),
+                'id' => 's-blog'
             ));
 		
             promoBanner(array(
                 'cta-modifiers' => '-oval'
             ));
             
-            contactUs();
+            contactUs(array(
+                'id' => 's-contact'
+            ));
             
             googleMap();
             

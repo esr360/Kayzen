@@ -1,11 +1,11 @@
  <?php function contactUs($custom = array()) { ?>
 
     <?php $options = array_merge(array(
-        //'option' => 'VALUE'
+        'id' => null
     ), $custom); ?>
     
     <!-- Contact Us -->
-    <section class="section-primary">
+    <section class="section-primary" <?php if ($options['id']) echo 'id="'.$options['id'].'"' ?>>
     
         <!-- Contact Us Header -->
         <header class="heading_group-large has-icon text-center">

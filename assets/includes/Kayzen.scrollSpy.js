@@ -51,8 +51,9 @@
                 
                 // Get id of current scroll item
                 var current = scrollItems.map(function() {
-                if ($(this).offset().top < fromTop)
-                    return this;
+                    if ($(this).offset().top < fromTop) {
+                        return this;
+                    }
                 });
                 
                 // Get the id of the current element
