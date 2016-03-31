@@ -10,7 +10,7 @@
                 <a
                     href="#" 
                     class="widget-feature-zoom span-4"
-                    data-bg="<?php stockImage('demo/stock-6.jpg') ?>"
+                    data-bg="<?php stockImage('demo/stock-'.rand(1, 25).'.jpg') ?>"
                 >
                     <div class="corner-ribbon-pink" data-ribbon="Hot"></div>
                     <header class="widget_header heading_group">
@@ -21,7 +21,7 @@
                 <a 
                     href="#" 
                     class="widget-feature-zoom span-4"
-                    data-bg="<?php stockImage('demo/stock-11.jpg') ?>"
+                    data-bg="<?php stockImage('demo/stock-'.rand(1, 25).'.jpg') ?>"
                 >
                     <div class="corner-ribbon-green" data-ribbon="New"></div>
                     <header class="widget_header heading_group">
@@ -32,7 +32,7 @@
                 <a
                     href="#"  
                     class="widget-feature-zoom span-4 col-full"
-                    data-bg="<?php stockImage('demo/stock-10.jpg') ?>"
+                    data-bg="<?php stockImage('demo/stock-'.rand(1, 25).'.jpg') ?>"
                 >
                     <header class="widget_header heading_group">
                         <h4 class="heading-heavy-uppercase-size-4 font-2">Lorem Ipsum</h4>
@@ -44,7 +44,7 @@
                 <a 
                     href="#" 
                     class="widget-feature-zoom span-8"
-                    data-bg="<?php stockImage('demo/stock-8.jpg') ?>"
+                    data-bg="<?php stockImage('demo/stock-'.rand(1, 25).'.jpg') ?>"
                 >
                     <header class="widget_header heading_group">
                         <h4 class="heading-heavy-uppercase-size-4 font-2">Lorem Ipsum</h4>

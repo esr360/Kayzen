@@ -24,9 +24,9 @@
             <div class="tabs">
                 
                 <ul class="tabs_nav-pills-large-center">
-                    <li class="button-pill-grey-1-round active">New Arrivals</li>
-                    <li class="button-pill-grey-1-round">Best Sellers</li>
-                    <li class="button-pill-grey-1-round">On Offer</li>
+                    <li class="tabs_nav_item active">New Arrivals</li>
+                    <li class="tabs_nav_item">Best Sellers</li>
+                    <li class="tabs_nav_item">On Offer</li>
                 </ul>
                 
                 <section class="tabs_item active">    

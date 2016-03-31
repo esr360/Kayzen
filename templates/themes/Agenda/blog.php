@@ -60,35 +60,35 @@
                         ));
                         
                         articleItem(array(
-                            'media' => 'youtube',
+                            'media'         => 'youtube',
                             'link'          => themeLink($theme, '/blog-single.php'),
                             'root'          => themeLink($theme, '/blog.php'),
                             'cta-modifiers' => '-oval'
                         ));
                         
                         articleItem(array(
-                            'media' => 'carousel',
+                            'media'         => 'carousel',
                             'link'          => themeLink($theme, '/blog-single.php'),
                             'root'          => themeLink($theme, '/blog.php'),
                             'cta-modifiers' => '-oval'
                         ));
                         
                         articleItem(array(
-                            'media' => 'masonry',
+                            'media'         => 'masonry',
                             'link'          => themeLink($theme, '/blog-single.php'),
                             'root'          => themeLink($theme, '/blog.php'),
                             'cta-modifiers' => '-oval'
                         ));
                         
                         articleItem(array(
-                            'media' => 'audio',
+                            'media'         => 'audio',
                             'link'          => themeLink($theme, '/blog-single.php'),
                             'root'          => themeLink($theme, '/blog.php'),
                             'cta-modifiers' => '-oval'
                         ));
                         
                         articleItem(array(
-                            'media' => 'codepen',
+                            'media'         => 'codepen',
                             'link'          => themeLink($theme, '/blog-single.php'),
                             'root'          => themeLink($theme, '/blog.php'),
                             'cta-modifiers' => '-oval'
@@ -99,13 +99,13 @@
                 </div>
                 
                 <ul class="pagination tabs_nav-pills-center">
-                    <li class="button-pill-grey-1-round"><i class="fa fa-angle-left"></i></li>
-                    <li class="button-pill-grey-1-round">1</li>
-                    <li class="button-pill-grey-1-round active">2</li>
-                    <li class="button-pill-grey-1-round">3</li>
-                    <li class="button-pill-grey-1-round">...</li>
-                    <li class="button-pill-grey-1-round">10</li>
-                    <li class="button-pill-grey-1-round"><i class="fa fa-angle-right"></i></li>
+                    <li class="tabs_nav_item"><i class="fa fa-angle-left"></i></li>
+                    <li class="tabs_nav_item">1</li>
+                    <li class="tabs_nav_item active">2</li>
+                    <li class="tabs_nav_item">3</li>
+                    <li class="tabs_nav_item">...</li>
+                    <li class="tabs_nav_item">10</li>
+                    <li class="tabs_nav_item"><i class="fa fa-angle-right"></i></li>
                 </ul>
             
                 <script>

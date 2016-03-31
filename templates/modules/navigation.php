@@ -41,9 +41,8 @@
                 </div>
             </div>   
         </a>
-    <?php }
-    
-    if ($options['pages']) { ?>
+        
+    <?php } if ($options['pages']) { ?>
 
         <!-- Navigation -->
         <nav class="navigation-no-icons min-break-4" id="app-nav">

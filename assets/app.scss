@@ -12,7 +12,7 @@ $asset-path : "../.." !default;
 $to-JSON : true;
 
 // Theme
-$theme : 'Agenda';
+$theme : 'Mall';
 
 //-----------------------------------------------------------------
 // Vendor Files
@@ -108,6 +108,7 @@ $fa-font-path: "#{$asset-path}/fonts";
 @import "themes/Blizzard/blizzard";
 @import "themes/Dart/dart";
 @import "themes/Kayzen/kayzen";
+@import "themes/Mall/mall";
 @import "themes/Nexus/nexus";
 @import "themes/Tempus/tempus";
 
