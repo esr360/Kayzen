@@ -1,0 +1,119 @@
+//=================================================================
+// Mall
+//=================================================================
+
+@if $theme == 'Lily' {
+    
+    @include normalize();
+
+//-----------------------------------------------------------------
+// Skeleton
+//-----------------------------------------------------------------
+
+	@include palettes((
+		'brand': (
+			'primary' : #cb60ce
+		)
+	));
+	
+	@include typography;
+    
+	@include grid((
+        'options' : (
+            'max-width' : 90%
+        )
+    ));
+    
+	@include base;
+	@include tools;
+	@include masonry-grid;
+	@include helpers;
+
+//-----------------------------------------------------------------
+// Elements
+//-----------------------------------------------------------------
+
+	@include accordions;
+	@include alert-bars;
+	@include blockquotes;
+	@include buttons;
+	@include carousels;
+	@include corner-ribbons;
+	@include forms;
+	@include headings;
+	@include images;
+	@include lists;
+	@include modals;
+	@include notifications;
+	@include price-charts;
+	@include progress-bars;
+	@include tables;
+	@include tabs;
+	@include thumbnails;
+	@include tooltips;
+	@include wells;
+	@include widgets;
+
+//-----------------------------------------------------------------
+// Objects
+//-----------------------------------------------------------------
+
+	@include top-bar((
+        'background' : #0A0A0A
+    ));
+    
+	@include breadcrumb;
+	@include side-nav;
+	@include countdown;
+	@include earth-slider;
+	@include flyout-nav;
+	@include flyout-trigger;
+	@include footer;
+	@include google-map;
+	
+	@include header((
+		'background'     : transparent,
+		'font-size'      : 0.9em,
+        'bar'            : true,
+        'absolute'       : (
+            'enabled'    : true
+        ),
+        'sticky'         : (
+            'enabled'    : true
+        ),
+        'dark'           : (
+            'enabled'    : true,
+			'background' : rgba(black, 0.3),
+        )
+	));
+	
+	@include logo();
+	
+	@include navigation((
+		'link-color' : color('greyscale', 'white')
+	));
+	
+	@include mega-menu;
+	@include dropdown;
+	@include page-overview;
+	@include preloader;
+	@include scroll-top;
+	@include search;
+	@include scroll-wheel;
+	@include sidebar;
+	@include site-overlay;
+	@include twitter-feed;
+	
+//-----------------------------------------------------------------
+// Sections
+//-----------------------------------------------------------------
+
+	@include sections;
+	
+	@include billboard((
+		'bg-image'        : "#{$asset-path}/images/demo/stock-15.jpg",
+        'overlay-color'   : black,
+        'overlay-opacity' : 0.4
+	));
+
+}

@@ -1,16 +1,19 @@
 <?php 
 	include ('../../app.php');
 	// page config
-	$title = 'Online Store';
+    $theme = 'Lily';
+	$title = 'Our Company';
 	$tagLine = 'Aenean lobortis ante nunc urabitur at enim nisi.';
 ?>
 
 <!DOCTYPE html>
 <html class="no-js">
 
-<?php head() ?>
+<?php head($theme) ?>
 
 <body>
+    
+    <?php preloader($style = 'pacman') ?>
 
     <!-- Site Canvas -->
     <div id="site-content">
@@ -20,17 +23,24 @@
             topbar();
 
             appHeader(array(
-                'modifiers' => 'bar-absolute-dark-sticky'
+                'nav-links'  => array(
+                    'Home' => themeLink($theme, '/index.php'),
+                    'About' => themeLink($theme, '/about.php'),
+                    'Shop' => themeLink($theme, '/shop-category.php'),
+                    'Blog' => themeLink($theme, '/blog.php'),
+                    'Contact' => themeLink($theme, '/contact.php')
+                )
             ));
 
             billboard(array(
                 'title'    => $title,
                 'tag-line' => $tagLine
             ));
+
+		?>
+        
+        <section class="section-primary">
             
-        ?>
-		
-		<section class="section-primary relative">
 				
             <div class="container">
         
@@ -199,12 +209,12 @@
             </div>
             
         </section>
-               
-        <?php
+		
+		<?php 
             
             promoBanner();
             
-            appFooter(); 
+            appFooter();
         
         ?>
 
@@ -212,7 +222,7 @@
 
     <?php include (ROOT.'/includes/ui-enhancements.php'); ?>
 
-    <?php scripts() ?>
+    <?php scripts($theme) ?>
 
 </body>
-		
+</html>
