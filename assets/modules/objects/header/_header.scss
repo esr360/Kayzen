@@ -118,7 +118,10 @@
                     right: auto;
                     ~ #site-content {
                         margin-left: this('side', 'width');
-                        @include overwrite('top-bar') {
+                        @include overwrite('top-bar', $is: 'fixed') {
+                            width: calc(100% - #{this('side', 'width')});
+                        }
+                        @if option($top-bar, 'fixed') {
                             width: calc(100% - #{this('side', 'width')});
                         }
                     }

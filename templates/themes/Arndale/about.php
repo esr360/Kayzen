@@ -1,7 +1,7 @@
 <?php 
 	include ('../../app.php');
 	// page config
-    $theme = 'Mall';
+    $theme = 'Arndale';
 	$title = 'Our Company';
 	$tagLine = 'Aenean lobortis ante nunc urabitur at enim nisi.';
 ?>

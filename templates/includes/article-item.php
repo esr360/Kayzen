@@ -337,7 +337,7 @@
             <header class="heading_group-small">
                 <h3 class="heading-heavy-size-4"><?php echo $options['title'] ?></h3>
                 <h4 class="heading-light-uppercase-size-2">
-                    Category: <a href="<?php pageLink('further/shop-category.php') ?>"><?php echo $options['category'] ?></a>
+                    Category: <a href="<?php $options['root'] ?>"><?php echo $options['category'] ?></a>
                 </h4>
             </header>
             <div class="heading_group-small">

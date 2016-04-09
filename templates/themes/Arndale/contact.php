@@ -1,8 +1,8 @@
 <?php 
 	include ('../../app.php');
 	// page config
-    $theme = 'Mall';
-	$title = 'Our Company';
+    $theme = 'Arndale';
+	$title = 'Get in Touch';
 	$tagLine = 'Aenean lobortis ante nunc urabitur at enim nisi.';
 ?>
 
@@ -12,8 +12,6 @@
 <?php head($theme) ?>
 
 <body>
-    
-    <?php preloader($style = 'pacman') ?>
 
     <!-- Site Canvas -->
     <div id="site-content">
@@ -37,33 +35,25 @@
                 'tag-line' => $tagLine
             ));
             
-            earthSlider();
-    
-            skills();
+            contactUs();
             
-            whyChooseUs();
-            
-            promoBanner(array(
-                'cta-modifiers' => '-oval'
-            ));
-            
-            ourTeam();
-            
-            clients();
-            
-            promoSection(array(
-                'cta-modifiers' => '-oval'
-            ));
+        ?>
         
-            statistics();
-    
-            recentWork(array(
-                'item-link' => themeLink($theme, '/portfolio-single.php')
-            ));
+        <section class="section-primary-flush-dot-map container"> 
+            
+            <div class="container-small">
+                
+			    <?php socialWidgets() ?>
+            
+            </div>
+            
+        </section> 
+        
+        <?php
             
             googleMap();
             
-            appFooter();
+            appFooter(); 
         
         ?>
 
@@ -74,4 +64,4 @@
     <?php scripts($theme) ?>
 
 </body>
-</html>
+		

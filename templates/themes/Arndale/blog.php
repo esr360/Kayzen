@@ -1,7 +1,7 @@
 <?php 
 	include ('../../app.php');
 	// page config
-    $theme = 'Mall';
+    $theme = 'Arndale';
 	$title = 'Our Company';
 	$tagLine = 'Aenean lobortis ante nunc urabitur at enim nisi.';
 ?>
@@ -43,7 +43,7 @@
 				
 			<div class="container">
 				
-				<div class="row fixed-table">
+				<div class="row fixed-table stack-break-5">
 					
 					<div class="span-8">
                   
