@@ -91,7 +91,7 @@
                             <button class="button-primary" type="subtmi">Add To Cart</button>
                         </form>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum quis elit dignissim, molestie est tristique, posuere libero. Suspendisse pulvinar porta maximus. Donec nec commodo dolor. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Cras faucibus odio augue.</p>
-                        <ul class="list-arrow-adjust">
+                        <ul class="list-arrow">
                             <li>Lorem ipsum dolor sit amet</li>
                             <li>Consectetur adipiscing elit</li>
                             <li>Maecenas vel gravida leo</li>
@@ -139,7 +139,7 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="comment_content">
+                                            <div class="object-small comment_content">
                                                 <p>Nunc pharetra et massa eu volutpat. Duis at posuere justo. Vivamus lobortis mi at leo pellentesque vehicula. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aliquam erat volutpat. Proin ac augue quam. Etiam sollicitudin magna vitae nunc accumsan cursus.</p>
                                             </div>
                                         </div>
@@ -169,7 +169,7 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="comment_content">
+                                            <div class="object-small comment_content">
                                                 <p>Nunc pharetra et massa eu volutpat. Duis at posuere justo. Vivamus lobortis mi at leo pellentesque vehicula. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aliquam erat volutpat. Proin ac augue quam. Etiam sollicitudin magna vitae nunc accumsan cursus.</p>
                                             </div>
                                         </div>
@@ -234,7 +234,9 @@
                             'size'     => 'small',
                             'height'   => 'tall',
                             'span'     => 3,
-                            'class'    => 'break-3-half break-2-full'
+                            'class'    => 'break-3-half break-2-full',
+                            'link'     => themeLink($theme, '/shop-single.php'),
+                            'root'     => themeLink($theme, '/shop-category.php')
                         ));
                         
                         articleItem(array(
@@ -244,7 +246,9 @@
                             'media'    => 'carousel',
                             'size'     => 'small',
                             'span'     => 3,
-                            'class'    => 'break-3-half break-2-full'
+                            'class'    => 'break-3-half break-2-full',
+                            'link'     => themeLink($theme, '/shop-single.php'),
+                            'root'     => themeLink($theme, '/shop-category.php')
                         ));
                         
                         articleItem(array(
@@ -255,7 +259,9 @@
                             'price'    => array('$24.99', '$19.99'),
                             'size'     => 'small',
                             'span'     => 3,
-                            'class'    => 'break-3-half break-2-full'
+                            'class'    => 'break-3-half break-2-full',
+                            'link'     => themeLink($theme, '/shop-single.php'),
+                            'root'     => themeLink($theme, '/shop-category.php')
                         ));
                         
                         articleItem(array(
@@ -264,7 +270,9 @@
                             'height'   => 'tall',
                             'size'     => 'small',
                             'span'     => 3,
-                            'class'    => 'break-3-half break-2-full'
+                            'class'    => 'break-3-half break-2-full',
+                            'link'     => themeLink($theme, '/shop-single.php'),
+                            'root'     => themeLink($theme, '/shop-category.php')
                         ));
                         
                     ?>

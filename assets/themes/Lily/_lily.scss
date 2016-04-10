@@ -111,7 +111,7 @@
 	@include sections;
 	
 	@include billboard((
-		'bg-image'        : "#{$asset-path}/images/demo/stock-15.jpg",
+		'bg-image'        : "#{$asset-path}/images/demo/stock-3.jpg",
         'overlay-color'   : black,
         'overlay-opacity' : 0.4
 	));

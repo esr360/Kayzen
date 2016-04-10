@@ -36,7 +36,7 @@
                         <h4 class="heading-light-uppercase-brand-1">Chief Executive Officer</h4>
                     </header>
                     <p>Cum socis natoque penatibus et magnis dis parturient montes, nascetur maximus ridiculus mus. Donec finibus fringilla ultrices purus.</p>		
-                    <div class="button_group-small">
+                    <div class="object">
                         <a href="#" class="button-icon-primary tooltip-top" data-tooltip="Dribbble">
                             <i class="fa fa-dribbble"></i>
                         </a>
@@ -68,7 +68,7 @@
                         <h4 class="heading-light-uppercase-brand-1">Graphic Designer</h4>
                     </header>
                     <p>Cum socis natoque penatibus et magnis dis parturient montes, nascetur maximus ridiculus mus. Donec finibus fringilla ultrices purus.</p>		
-                    <div class="button_group-small">
+                    <div class="object">
                         <a href="#" class="button-icon-primary tooltip-top" data-tooltip="Twitter">
                             <i class="fa fa-twitter"></i>
                         </a>
@@ -100,7 +100,7 @@
                         <h4 class="heading-light-uppercase-brand-1">Web Developer</h4>
                     </header>
                     <p>Cum socis natoque penatibus et magnis dis parturient montes, nascetur maximus ridiculus mus. Donec finibus fringilla ultrices purus.</p>		
-                    <div class="button_group-small">
+                    <div class="object">
                         <a href="#" class="button-icon-primary tooltip-top" data-tooltip="Dribbble">
                             <i class="fa fa-dribbble"></i>
                         </a>

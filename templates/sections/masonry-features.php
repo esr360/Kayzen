@@ -1,14 +1,14 @@
  <?php function masonryfeatures($custom = array()) { ?>
 
     <?php $options = array_merge(array(
-        //'option' => 'VALUE'
+        'link' => '#'
     ), $custom); ?>
 
     <section class="section-primary">
         <div class="container">
             <div class="row-no-gutter">
                 <a
-                    href="#" 
+                    href="<?php echo $options['link'] ?>" 
                     class="widget-feature-zoom span-4"
                     data-bg="<?php stockImage('demo/stock-'.rand(1, 25).'.jpg') ?>"
                 >
@@ -19,7 +19,7 @@
                     </header>
                 </a>
                 <a 
-                    href="#" 
+                    href="<?php echo $options['link'] ?>" 
                     class="widget-feature-zoom span-4"
                     data-bg="<?php stockImage('demo/stock-'.rand(1, 25).'.jpg') ?>"
                 >
@@ -30,7 +30,7 @@
                     </header>
                 </a>
                 <a
-                    href="#"  
+                    href="<?php echo $options['link'] ?>"  
                     class="widget-feature-zoom span-4 col-full"
                     data-bg="<?php stockImage('demo/stock-'.rand(1, 25).'.jpg') ?>"
                 >
@@ -42,7 +42,7 @@
             </div>
             <div class="row-no-gutter">
                 <a 
-                    href="#" 
+                    href="<?php echo $options['link'] ?>" 
                     class="widget-feature-zoom span-8"
                     data-bg="<?php stockImage('demo/stock-'.rand(1, 25).'.jpg') ?>"
                 >

@@ -41,10 +41,9 @@
         
         <section class="section-primary">
             
-				
             <div class="container">
         
-                    <div id="shop-items" class="row-flow row-waffle-large fixed-table">
+                <div id="shop-items" class="row-flow row-waffle-large fixed-table">
                         
                     <?php
                         
@@ -55,7 +54,9 @@
                             'size'     => 'small',
                             'height'   => 'tall',
                             'span'     => 3,
-                            'class'    => 'break-3-half break-2-full'
+                            'class'    => 'break-3-half break-2-full',
+                            'link'     => themeLink($theme, '/shop-single.php'),
+                            'root'     => themeLink($theme, '/shop-category.php')
                         ));
                         
                         articleItem(array(
@@ -65,7 +66,9 @@
                             'media'    => 'carousel',
                             'size'     => 'small',
                             'span'     => 3,
-                            'class'    => 'break-3-half break-2-full'
+                            'class'    => 'break-3-half break-2-full',
+                            'link'     => themeLink($theme, '/shop-single.php'),
+                            'root'     => themeLink($theme, '/shop-category.php')
                         ));
                         
                         articleItem(array(
@@ -76,7 +79,9 @@
                             'price'    => array('$24.99', '$19.99'),
                             'size'     => 'small',
                             'span'     => 3,
-                            'class'    => 'break-3-half break-2-full'
+                            'class'    => 'break-3-half break-2-full',
+                            'link'     => themeLink($theme, '/shop-single.php'),
+                            'root'     => themeLink($theme, '/shop-category.php')
                         ));
                         
                         articleItem(array(
@@ -85,7 +90,9 @@
                             'height'   => 'tall',
                             'size'     => 'small',
                             'span'     => 3,
-                            'class'    => 'break-3-half break-2-full'
+                            'class'    => 'break-3-half break-2-full',
+                            'link'     => themeLink($theme, '/shop-single.php'),
+                            'root'     => themeLink($theme, '/shop-category.php')
                         ));
                         
                         articleItem(array(
@@ -96,7 +103,9 @@
                             'size'     => 'small',
                             'disabled' => true,
                             'span'     => 3,
-                            'class'    => 'break-3-half break-2-full'
+                            'class'    => 'break-3-half break-2-full',
+                            'link'     => themeLink($theme, '/shop-single.php'),
+                            'root'     => themeLink($theme, '/shop-category.php')
                         ));
                         
                         articleItem(array(
@@ -106,7 +115,9 @@
                             'size'     => 'small',
                             'height'   => 'tall',
                             'span'     => 3,
-                            'class'    => 'break-3-half break-2-full'
+                            'class'    => 'break-3-half break-2-full',
+                            'link'     => themeLink($theme, '/shop-single.php'),
+                            'root'     => themeLink($theme, '/shop-category.php')
                         ));
                         
                         articleItem(array(
@@ -116,7 +127,9 @@
                             'media'    => 'carousel',
                             'size'     => 'small',
                             'span'     => 3,
-                            'class'    => 'break-3-half break-2-full'
+                            'class'    => 'break-3-half break-2-full',
+                            'link'     => themeLink($theme, '/shop-single.php'),
+                            'root'     => themeLink($theme, '/shop-category.php')
                         ));
                         
                         articleItem(array(
@@ -128,7 +141,9 @@
                             'price'    => array('$24.99', '$19.99'),
                             'size'     => 'small',
                             'span'     => 3,
-                            'class'    => 'break-3-half break-2-full'
+                            'class'    => 'break-3-half break-2-full',
+                            'link'     => themeLink($theme, '/shop-single.php'),
+                            'root'     => themeLink($theme, '/shop-category.php')
                         ));
                         
                         articleItem(array(
@@ -138,7 +153,9 @@
                             'media'    => 'carousel',
                             'size'     => 'small',
                             'span'     => 3,
-                            'class'    => 'break-3-half break-2-full'
+                            'class'    => 'break-3-half break-2-full',
+                            'link'     => themeLink($theme, '/shop-single.php'),
+                            'root'     => themeLink($theme, '/shop-category.php')
                         ));
                         
                         articleItem(array(
@@ -149,7 +166,9 @@
                             'price'    => array('$24.99', '$12.49'),
                             'height'   => 'tall',
                             'span'     => 3,
-                            'class'    => 'break-3-half break-2-full'
+                            'class'    => 'break-3-half break-2-full',
+                            'link'     => themeLink($theme, '/shop-single.php'),
+                            'root'     => themeLink($theme, '/shop-category.php')
                         ));
                         
                         articleItem(array(
@@ -158,7 +177,9 @@
                             'height'   => 'tall',
                             'size'     => 'small',
                             'span'     => 3,
-                            'class'    => 'break-3-half break-2-full'
+                            'class'    => 'break-3-half break-2-full',
+                            'link'     => themeLink($theme, '/shop-single.php'),
+                            'root'     => themeLink($theme, '/shop-category.php')
                         ));
                         
                         articleItem(array(
@@ -171,7 +192,9 @@
                             'price'    => array('$24.99', '$12.99'),
                             'size'     => 'small',
                             'span'     => 3,
-                            'class'    => 'break-3-half break-2-full'
+                            'class'    => 'break-3-half break-2-full',
+                            'link'     => themeLink($theme, '/shop-single.php'),
+                            'root'     => themeLink($theme, '/shop-category.php')
                         ));
                         
                     ?>

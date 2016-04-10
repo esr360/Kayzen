@@ -58,7 +58,9 @@
             statistics();
     
             recentWork(array(
-                'item-link' => themeLink($theme, '/portfolio-single.php')
+                'item-link' => themeLink($theme, '/shop-category.php'),
+                'title' => 'Latest Products',
+                'sub-title' => 'Whilst Stocks Last'
             ));
             
             googleMap();

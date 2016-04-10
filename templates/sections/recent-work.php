@@ -1,6 +1,8 @@
  <?php function recentWork($custom = array()) { ?>
 
     <?php  $options = array_merge(array(
+        'title'     => 'Our Portfolio',
+        'sub-title' => 'Some Recent Work',
         'items'     => 3,
         'item-link' => pageLink('blog/single.php', 'pages', false),
         'id' => null
@@ -10,8 +12,8 @@
     
         <header class="heading_group-large text-center">
             <div class="container-small">
-                <h4 class="heading-uppercase-light-brand-1-spaced-size-4"><span>Our Portfolio</span></h4>
-                <h2 class="heading-uppercase-heavy-size-7 font-2"><span>Some Recent Work</span></h2>
+                <h4 class="heading-uppercase-light-brand-1-spaced-size-4"><span><?php echo $options['title'] ?></span></h4>
+                <h2 class="heading-uppercase-heavy-size-7 font-2"><span><?php echo $options['sub-title'] ?></span></h2>
                 <div class="heading_icon">
                     <i class="fa fa-magic"></i>
                 </div>

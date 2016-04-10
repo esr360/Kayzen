@@ -1,7 +1,8 @@
  <?php function inStore($custom = array()) { ?>
 
     <?php $options = array_merge(array(
-        //'option' => 'VALUE'
+        'link' => pageLink('further/shop-single.php', 'pages', false),
+        'root' => pageLink('further/shop-category.php', 'pages', false)
     ), $custom); ?>
         
     <section 
@@ -32,148 +33,57 @@
                 <section class="tabs_item active">    
                                 
                     <div class="row-flow row-waffle-large">
-                        
-                        <div class="span-3 break-3-half break-2-full">
-                            <div class="thumbnail">
-                                <div class="thumbnail_mask">
-                                    <div class="thumbnail_controls button_group-small">
-                                        <a 
-                                            href="<?php stockImage('demo/tall/stock-5.jpg') ?>" 
-                                            class="button-icon-border-circle tooltip-top" 
-                                            data-tooltip="Quick Look" 
-                                            rel="lightbox"
-                                        >
-                                            <i class="fa fa-search-plus"></i>
-                                        </a>
-                                        <a href="#" class="button-icon-border-circle tooltip-top" data-tooltip="Add To Cart">
-                                            <i class="fa fa-shopping-cart"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                                <img src="<?php stockImage('demo/tall/stock-5.jpg') ?>">
-                            </div>
-                            <header class="heading_group-small">
-                                <h3 class="heading-heavy-size-4">Lorem Ipsum Dolor</h3>
-                                <h4 class="heading-light-uppercase-size-2">Category: <a href="#">Dresses</a></h4>
-                            </header>
-                            <div class="heading_group-small">
-                                <span>$24.99</span>
-                            </div>
-                            <div class="rating">
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star-o"></i>
-                            </div>
-                        </div>
-                        
-                        <div class="span-3 break-3-half break-2-full">
-                            <div class="thumbnail">
-                                <div class="corner-ribbon-pink" data-ribbon="Sale"></div>
-                                <div class="thumbnail_mask">
-                                    <div class="thumbnail_controls button_group-small">
-                                        <a 
-                                            href="<?php stockImage('demo/tall/stock-10.jpg') ?>" 
-                                            class="button-icon-border-circle tooltip-top" 
-                                            data-tooltip="Quick Look" 
-                                            rel="lightbox"
-                                        >
-                                            <i class="fa fa-search-plus"></i>
-                                        </a>
-                                        <a href="#" class="button-icon-border-circle tooltip-top" data-tooltip="Add To Cart">
-                                            <i class="fa fa-shopping-cart"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                                <img src="<?php stockImage('demo/tall/stock-10.jpg') ?>">
-                            </div>
-                            <header class="heading_group-small">
-                                <h3 class="heading-heavy-size-4">Lorem Ipsum Dolor</h3>
-                                <h4 class="heading-light-uppercase-size-2">Category: <a href="#">Dresses</a></h4>
-                            </header>
-                            <div class="heading_group-small">
-                                <del>$24.99</del>
-                                <ins>$12.49</ins>
-                            </div>
-                            <div class="rating">
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star-o"></i>
-                            </div>
-                        </div>
-                        
-                        <div class="span-3 break-3-half break-2-full">
-                            <div class="thumbnail">
-                                <div class="thumbnail_mask">
-                                    <div class="thumbnail_controls button_group-small">
-                                        <a 
-                                            href="<?php stockImage('demo/tall/stock-15.jpg') ?>" 
-                                            class="button-icon-border-circle tooltip-top" 
-                                            data-tooltip="Quick Look" 
-                                            rel="lightbox"
-                                        >
-                                            <i class="fa fa-search-plus"></i>
-                                        </a>
-                                        <a href="#" class="button-icon-border-circle tooltip-top" data-tooltip="Add To Cart">
-                                            <i class="fa fa-shopping-cart"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                                <img src="<?php stockImage('demo/tall/stock-15.jpg') ?>">
-                            </div>
-                            <header class="heading_group-small">
-                                <h3 class="heading-heavy-size-4">Lorem Ipsum Dolor</h3>
-                                <h4 class="heading-light-uppercase-size-2">Category: <a href="#">Dresses</a></h4>
-                            </header>
-                            <div class="heading_group-small">
-                                <span>$24.99</span>
-                            </div>
-                            <div class="rating">
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star-o"></i>
-                            </div>
-                        </div>
-                        
-                        <div class="span-3 break-3-half break-2-full">
-                            <div class="thumbnail">
-                                <div class="thumbnail_mask">
-                                    <div class="thumbnail_controls button_group-small">
-                                        <a 
-                                            href="<?php stockImage('demo/tall/stock-20.jpg') ?>" 
-                                            class="button-icon-border-circle tooltip-top" 
-                                            data-tooltip="Quick Look" 
-                                            rel="lightbox"
-                                        >
-                                            <i class="fa fa-search-plus"></i>
-                                        </a>
-                                        <a href="#" class="button-icon-border-circle tooltip-top" data-tooltip="Add To Cart">
-                                            <i class="fa fa-shopping-cart"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                                <img src="<?php stockImage('demo/tall/stock-20.jpg') ?>">
-                            </div>
-                            <header class="heading_group-small">
-                                <h3 class="heading-heavy-size-4">Lorem Ipsum Dolor</h3>
-                                <h4 class="heading-light-uppercase-size-2">Category: <a href="#">Dresses</a></h4>
-                            </header>
-                            <div class="heading_group-small">
-                                <span>$12.49</span>
-                            </div>
-                            <div class="rating">
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star-o"></i>
-                            </div>
-                        </div>
+                            
+                        <?php
+                            
+                            articleItem(array(
+                                'type'     => 'shop',
+                                'title'    => 'Lorem Ipsum',
+                                'ribbon'   => array('green', 'New'),
+                                'size'     => 'small',
+                                'height'   => 'tall',
+                                'span'     => 3,
+                                'class'    => 'break-3-half break-2-full',
+                                'link'     => $options['link'],
+                                'root'     => $options['root']
+                            ));
+                            
+                            articleItem(array(
+                                'type'     => 'shop',
+                                'title'    => 'Lorem Ipsum',
+                                'height'   => 'tall',
+                                'size'     => 'small',
+                                'span'     => 3,
+                                'class'    => 'break-3-half break-2-full',
+                                'link'     => $options['link'],
+                                'root'     => $options['root']
+                            ));
+                            
+                            articleItem(array(
+                                'type'     => 'shop',
+                                'title'    => 'Lorem Ipsum',
+                                'ribbon'   => array('pink', 'Sale'),
+                                'height'   => 'tall',
+                                'price'    => array('$24.99', '$19.99'),
+                                'size'     => 'small',
+                                'span'     => 3,
+                                'class'    => 'break-3-half break-2-full',
+                                'link'     => $options['link'],
+                                'root'     => $options['root']
+                            ));
+                            
+                            articleItem(array(
+                                'type'     => 'shop',
+                                'title'    => 'Lorem Ipsum',
+                                'height'   => 'tall',
+                                'size'     => 'small',
+                                'span'     => 3,
+                                'class'    => 'break-3-half break-2-full',
+                                'link'     => $options['link'],
+                                'root'     => $options['root']
+                            ));
+                            
+                        ?>
                         
                     </div>
                     
@@ -182,128 +92,57 @@
                 <section class="tabs_item">    
                                 
                     <div class="row-flow row-waffle-large">
-                        
-                        <div class="span-3 break-3-half break-2-full">
-                            <div class="thumbnail">
-                                <div class="thumbnail_mask">
-                                    <div class="thumbnail_controls button_group-small">
-                                        <a href="#" class="button-icon-border-circle tooltip-top" data-tooltip="Quick Look">
-                                            <i class="fa fa-search-plus"></i>
-                                        </a>
-                                        <a href="#" class="button-icon-border-circle tooltip-top" data-tooltip="Add To Cart">
-                                            <i class="fa fa-shopping-cart"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                                <img src="<?php stockImage('demo/product-1.jpg') ?>">
-                            </div>
-                            <header class="heading_group-small">
-                                <h3 class="heading-heavy-size-4">Lorem Ipsum Dolor</h3>
-                                <h4 class="heading-light-uppercase-size-2">Category: <a href="#">Dresses</a></h4>
-                            </header>
-                            <div class="heading_group-small">
-                                <span>$24.99</span>
-                            </div>
-                            <div class="rating">
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star-o"></i>
-                            </div>
-                        </div>
-                        
-                        <div class="span-3 break-3-half break-2-full">
-                            <div class="thumbnail">
-                                <div class="corner-ribbon-pink" data-ribbon="Sale"></div>
-                                <div class="thumbnail_mask">
-                                    <div class="thumbnail_controls button_group-small">
-                                        <a href="#" class="button-icon-border-circle tooltip-top" data-tooltip="Quick Look">
-                                            <i class="fa fa-search-plus"></i>
-                                        </a>
-                                        <a href="#" class="button-icon-border-circle tooltip-top" data-tooltip="Add To Cart">
-                                            <i class="fa fa-shopping-cart"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                                <img src="<?php stockImage('demo/product-1.jpg') ?>">
-                            </div>
-                            <header class="heading_group-small">
-                                <h3 class="heading-heavy-size-4">Lorem Ipsum Dolor</h3>
-                                <h4 class="heading-light-uppercase-size-2">Category: <a href="#">Dresses</a></h4>
-                            </header>
-                            <div class="heading_group-small">
-                                <del>$24.99</del>
-                                <ins>$12.49</ins>
-                            </div>
-                            <div class="rating">
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star-o"></i>
-                            </div>
-                        </div>
-                        
-                        <div class="span-3 break-3-half break-2-full">
-                            <div class="thumbnail">
-                                <div class="thumbnail_mask">
-                                    <div class="thumbnail_controls button_group-small">
-                                        <a href="#" class="button-icon-border-circle tooltip-top" data-tooltip="Quick Look">
-                                            <i class="fa fa-search-plus"></i>
-                                        </a>
-                                        <a href="#" class="button-icon-border-circle tooltip-top" data-tooltip="Add To Cart">
-                                            <i class="fa fa-shopping-cart"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                                <img src="<?php stockImage('demo/product-1.jpg') ?>">
-                            </div>
-                            <header class="heading_group-small">
-                                <h3 class="heading-heavy-size-4">Lorem Ipsum Dolor</h3>
-                                <h4 class="heading-light-uppercase-size-2">Category: <a href="#">Dresses</a></h4>
-                            </header>
-                            <div class="heading_group-small">
-                                <span>$24.99</span>
-                            </div>
-                            <div class="rating">
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star-o"></i>
-                            </div>
-                        </div>
-                        
-                        <div class="span-3 break-3-half break-2-full">
-                            <div class="thumbnail">
-                                <div class="thumbnail_mask">
-                                    <div class="thumbnail_controls button_group-small">
-                                        <a href="#" class="button-icon-border-circle tooltip-top" data-tooltip="Quick Look">
-                                            <i class="fa fa-search-plus"></i>
-                                        </a>
-                                        <a href="#" class="button-icon-border-circle tooltip-top" data-tooltip="Add To Cart">
-                                            <i class="fa fa-shopping-cart"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                                <img src="<?php stockImage('demo/product-1.jpg') ?>">
-                            </div>
-                            <header class="heading_group-small">
-                                <h3 class="heading-heavy-size-4">Lorem Ipsum Dolor</h3>
-                                <h4 class="heading-light-uppercase-size-2">Category: <a href="#">Dresses</a></h4>
-                            </header>
-                            <div class="heading_group-small">
-                                <span>$12.49</span>
-                            </div>
-                            <div class="rating">
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star-o"></i>
-                            </div>
-                        </div>
+                            
+                        <?php
+                            
+                            articleItem(array(
+                                'type'     => 'shop',
+                                'title'    => 'Lorem Ipsum',
+                                'ribbon'   => array('green', 'New'),
+                                'size'     => 'small',
+                                'height'   => 'tall',
+                                'span'     => 3,
+                                'class'    => 'break-3-half break-2-full',
+                                'link'     => $options['link'],
+                                'root'     => $options['root']
+                            ));
+                            
+                            articleItem(array(
+                                'type'     => 'shop',
+                                'title'    => 'Lorem Ipsum',
+                                'height'   => 'tall',
+                                'size'     => 'small',
+                                'span'     => 3,
+                                'class'    => 'break-3-half break-2-full',
+                                'link'     => $options['link'],
+                                'root'     => $options['root']
+                            ));
+                            
+                            articleItem(array(
+                                'type'     => 'shop',
+                                'title'    => 'Lorem Ipsum',
+                                'ribbon'   => array('pink', 'Sale'),
+                                'height'   => 'tall',
+                                'price'    => array('$24.99', '$19.99'),
+                                'size'     => 'small',
+                                'span'     => 3,
+                                'class'    => 'break-3-half break-2-full',
+                                'link'     => $options['link'],
+                                'root'     => $options['root']
+                            ));
+                            
+                            articleItem(array(
+                                'type'     => 'shop',
+                                'title'    => 'Lorem Ipsum',
+                                'height'   => 'tall',
+                                'size'     => 'small',
+                                'span'     => 3,
+                                'class'    => 'break-3-half break-2-full',
+                                'link'     => $options['link'],
+                                'root'     => $options['root']
+                            ));
+                            
+                        ?>
                         
                     </div>
                     
@@ -312,128 +151,55 @@
                 <section class="tabs_item">    
                                 
                     <div class="row-flow row-waffle-large">
-                        
-                        <div class="span-3 break-3-half break-2-full">
-                            <div class="thumbnail">
-                                <div class="thumbnail_mask">
-                                    <div class="thumbnail_controls button_group-small">
-                                        <a href="#" class="button-icon-border-circle tooltip-top" data-tooltip="Quick Look">
-                                            <i class="fa fa-search-plus"></i>
-                                        </a>
-                                        <a href="#" class="button-icon-border-circle tooltip-top" data-tooltip="Add To Cart">
-                                            <i class="fa fa-shopping-cart"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                                <img src="<?php stockImage('demo/product-1.jpg') ?>">
-                            </div>
-                            <header class="heading_group-small">
-                                <h3 class="heading-heavy-size-4">Lorem Ipsum Dolor</h3>
-                                <h4 class="heading-light-uppercase-size-2">Category: <a href="#">Dresses</a></h4>
-                            </header>
-                            <div class="heading_group-small">
-                                <span>$24.99</span>
-                            </div>
-                            <div class="rating">
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star-o"></i>
-                            </div>
-                        </div>
-                        
-                        <div class="span-3">
-                            <div class="thumbnail">
-                                <div class="corner-ribbon-pink" data-ribbon="Sale"></div>
-                                <div class="thumbnail_mask">
-                                    <div class="thumbnail_controls button_group-small">
-                                        <a href="#" class="button-icon-border-circle tooltip-top" data-tooltip="Quick Look">
-                                            <i class="fa fa-search-plus"></i>
-                                        </a>
-                                        <a href="#" class="button-icon-border-circle tooltip-top" data-tooltip="Add To Cart">
-                                            <i class="fa fa-shopping-cart"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                                <img src="<?php stockImage('demo/product-1.jpg') ?>">
-                            </div>
-                            <header class="heading_group-small">
-                                <h3 class="heading-heavy-size-4">Lorem Ipsum Dolor</h3>
-                                <h4 class="heading-light-uppercase-size-2">Category: <a href="#">Dresses</a></h4>
-                            </header>
-                            <div class="heading_group-small">
-                                <del>$24.99</del>
-                                <ins>$12.49</ins>
-                            </div>
-                            <div class="rating">
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star-o"></i>
-                            </div>
-                        </div>
-                        
-                        <div class="span-3 break-3-half break-2-full">
-                            <div class="thumbnail">
-                                <div class="thumbnail_mask">
-                                    <div class="thumbnail_controls button_group-small">
-                                        <a href="#" class="button-icon-border-circle tooltip-top" data-tooltip="Quick Look">
-                                            <i class="fa fa-search-plus"></i>
-                                        </a>
-                                        <a href="#" class="button-icon-border-circle tooltip-top" data-tooltip="Add To Cart">
-                                            <i class="fa fa-shopping-cart"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                                <img src="<?php stockImage('demo/product-1.jpg') ?>">
-                            </div>
-                            <header class="heading_group-small">
-                                <h3 class="heading-heavy-size-4">Lorem Ipsum Dolor</h3>
-                                <h4 class="heading-light-uppercase-size-2">Category: <a href="#">Dresses</a></h4>
-                            </header>
-                            <div class="heading_group-small">
-                                <span>$24.99</span>
-                            </div>
-                            <div class="rating">
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star-o"></i>
-                            </div>
-                        </div>
-                        
-                        <div class="span-3">
-                            <div class="thumbnail">
-                                <div class="thumbnail_mask">
-                                    <div class="thumbnail_controls button_group-small">
-                                        <a href="#" class="button-icon-border-circle tooltip-top" data-tooltip="Quick Look">
-                                            <i class="fa fa-search-plus"></i>
-                                        </a>
-                                        <a href="#" class="button-icon-border-circle tooltip-top" data-tooltip="Add To Cart">
-                                            <i class="fa fa-shopping-cart"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                                <img src="<?php stockImage('demo/product-1.jpg') ?>">
-                            </div>
-                            <header class="heading_group-small">
-                                <h3 class="heading-heavy-size-4">Lorem Ipsum Dolor</h3>
-                                <h4 class="heading-light-uppercase-size-2">Category: <a href="#">Dresses</a></h4>
-                            </header>
-                            <div class="heading_group-small">
-                                <span>$12.49</span>
-                            </div>
-                            <div class="rating">
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star-o"></i>
-                            </div>
-                        </div>
+                            
+                        <?php
+                            
+                            articleItem(array(
+                                'type'     => 'shop',
+                                'title'    => 'Lorem Ipsum',
+                                'ribbon'   => array('green', 'New'),
+                                'size'     => 'small',
+                                'height'   => 'tall',
+                                'span'     => 3,
+                                'class'    => 'break-3-half break-2-full',
+                                'link'     => $options['link'],
+                                'root'     => $options['root']
+                            ));
+                            
+                            articleItem(array(
+                                'type'     => 'shop',
+                                'title'    => 'Lorem Ipsum',
+                                'height'   => 'tall',
+                                'size'     => 'small',
+                                'span'     => 3,
+                                'class'    => 'break-3-half break-2-full'
+                            ));
+                            
+                            articleItem(array(
+                                'type'     => 'shop',
+                                'title'    => 'Lorem Ipsum',
+                                'ribbon'   => array('pink', 'Sale'),
+                                'height'   => 'tall',
+                                'price'    => array('$24.99', '$19.99'),
+                                'size'     => 'small',
+                                'span'     => 3,
+                                'class'    => 'break-3-half break-2-full',
+                                'link'     => $options['link'],
+                                'root'     => $options['root']
+                            ));
+                            
+                            articleItem(array(
+                                'type'     => 'shop',
+                                'title'    => 'Lorem Ipsum',
+                                'height'   => 'tall',
+                                'size'     => 'small',
+                                'span'     => 3,
+                                'class'    => 'break-3-half break-2-full',
+                                'link'     => $options['link'],
+                                'root'     => $options['root']
+                            ));
+                            
+                        ?>
                         
                     </div>
                     

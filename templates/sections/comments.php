@@ -32,7 +32,7 @@
                                     <h4 class="heading-light-size-2"><b>Posted:</b> Today, 9:16pm</h4>
                                 </div>
                             </div>
-                            <div class="comment_content">
+                            <div class="object-small comment_content">
                                 <p>Nunc pharetra et massa eu volutpat. Duis at posuere justo. Vivamus lobortis mi at leo pellentesque vehicula. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aliquam erat volutpat. Proin ac augue quam. Etiam sollicitudin magna vitae nunc accumsan cursus.</p>
                             </div>
                         </div>
@@ -63,7 +63,7 @@
                                     <h4 class="heading-light-size-2"><b>Posted:</b> Today, 9:16pm</h4>
                                 </div>
                             </div>
-                            <div class="comment_content">
+                            <div class="object-small comment_content">
                                 <p>Nunc pharetra et massa eu volutpat. Duis at posuere justo. Vivamus lobortis mi at leo pellentesque vehicula. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aliquam erat volutpat.</p>
                             </div>
                         </div>
@@ -94,7 +94,7 @@
                                     <h4 class="heading-light-size-2"><b>Posted:</b> Today, 9:16pm</h4>
                                 </div>
                             </div>
-                            <div class="comment_content">
+                            <div class="object-small comment_content">
                                 <p>Nunc pharetra et massa eu volutpat. Duis at posuere justo. Vivamus lobortis mi at leo pellentesque vehicula. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aliquam erat volutpat. Proin ac augue quam. Etiam sollicitudin magna vitae nunc accumsan cursus.</p>
                             </div>
                         </div>

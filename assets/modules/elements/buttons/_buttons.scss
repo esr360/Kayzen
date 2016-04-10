@@ -169,7 +169,7 @@
             @include modifier($greyscale) {
                 background: $color;
                 @if (lightness($color) > 50) {
-                    color: color('greyscale', 'grey-5');
+                    color: color('brand', 'primary');
                 }
                 &:hover {
                     background: darken($color, 10%);

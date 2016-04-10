@@ -51,9 +51,14 @@
 		
 		<?php 
         
-            masonryFeatures();
+            masonryFeatures(array(
+                'link' => themeLink($theme, '/shop-category.php')
+            ));
         
-            inStore();
+            inStore(array(
+                'link' => themeLink($theme, '/shop-single.php'),
+                'root' => themeLink($theme, '/shop-category.php')
+            ));
             
             clients(array(
                'title'     => 'Popular Brands',
