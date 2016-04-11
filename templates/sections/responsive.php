@@ -3,7 +3,8 @@
     <?php $options = array_merge(array(
         'iphone-colors' => array(
             'white', 'purple', 'blue'
-        )
+        ),
+        'greyscale' => false
     ), $custom); ?>
  
     <!-- Responsive -->
@@ -60,7 +61,7 @@
                 
                 <!-- Responsive Graphics -->
                 <div class="span-6 va-middle text-center min-break-3">
-                    <div class="center-xy span-6">
+                    <div class="center-xy span-6<?php if ($options['greyscale']) echo ' greyscale' ?>">
                         <img 
                             class="mobile-graphic-<?php echo $options['iphone-colors'][0] ?>" 
                             src="<?php echo appDir ?>/images/mobile-screen.png" 

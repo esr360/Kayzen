@@ -52,7 +52,7 @@
 
         font-size: this('font-size');
         
-        @if not this('side') {
+        @if not this('side', 'enabled') {
             background: this('background');
         }
         

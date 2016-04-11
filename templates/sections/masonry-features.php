@@ -1,10 +1,16 @@
  <?php function masonryfeatures($custom = array()) { ?>
 
     <?php $options = array_merge(array(
-        'link' => '#'
+        'link' => '#',
+        'background' => null
     ), $custom); ?>
 
-    <section class="section-primary">
+    <section 
+        class="section-primary" 
+        <?php if ($options['background']) { ?>
+            style="background-image: url('<?php echo appDir ?>/images/billboard-2.jpg')"
+        <?php } ?>
+    >
         <div class="container">
             <div class="row-no-gutter">
                 <a

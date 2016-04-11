@@ -1,17 +1,17 @@
 <?php 
 	include ('../../app.php');
 	// page config
-	$title = 'Homepage 6';
+    $theme = 'Hollywood';
 ?>
 
 <!DOCTYPE html>
 <html class="no-js">
 
-<?php head() ?>
+<?php head($theme) ?>
 
 <body>
     
-    <?php preloader() ?>
+    <?php preloader($style = 'pacman') ?>
 
     <!-- Site Canvas -->
     <div id="site-content">
@@ -21,11 +21,17 @@
             topbar();
 
             appHeader(array(
-                'modifiers' => 'bar-brand'
+                'nav-links'  => array(
+                    'Home' => themeLink($theme, '/index.php'),
+                    'About' => themeLink($theme, '/about.php'),
+                    'Blog' => themeLink($theme, '/blog.php'),
+                    'Contact' => themeLink($theme, '/contact.php')
+                )
             ));
         
             masonryFeatures(array(
-                'background' => true
+                'background' => true,
+                'link' => themeLink($theme, '/blog.php')
             ));
             
         ?>
@@ -303,17 +309,18 @@
 		</section>
 		
 		<?php 
-        
+            
             googleMap();
             
             appFooter();
-        
+                    
         ?>
 
     </div><!-- Site Canvas -->
 
     <?php include (ROOT.'/includes/ui-enhancements.php'); ?>
 
-    <?php scripts() ?>
+    <?php scripts($theme) ?>
 
 </body>
+</html>

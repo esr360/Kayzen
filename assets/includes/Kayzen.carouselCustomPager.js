@@ -12,7 +12,6 @@
         
         // Options
         var options = $.extend({
-            
             navId         : '',
             pagerId       : '',
             pagerSelector : 'li',
@@ -22,7 +21,6 @@
                 dots      : false,
                 mouseDrag : false
             }
-            
         }, custom);
 			
 		var navId = options.navId;
