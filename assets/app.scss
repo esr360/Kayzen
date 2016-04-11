@@ -12,7 +12,7 @@ $asset-path : "../.." !default;
 $to-JSON : true;
 
 // Theme
-$theme : 'Coffee';
+$theme : 'Gaucho';
 
 //-----------------------------------------------------------------
 // Vendor Files
@@ -109,6 +109,7 @@ $fa-font-path: "#{$asset-path}/fonts";
 @import "themes/Blizzard/blizzard";
 @import "themes/Coffee/coffee";
 @import "themes/Dart/dart";
+@import "themes/Gaucho/gaucho";
 @import "themes/Hollywood/hollywood";
 @import "themes/Kayzen/kayzen";
 @import "themes/Lily/lily";

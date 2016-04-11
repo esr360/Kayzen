@@ -107,9 +107,11 @@
             }
 		}
         
-        & > & {
-            max-width: none;
-            width: auto;
+        @include overwrite($not: 'small') {
+            & > & {
+                max-width: none;
+                width: auto;
+            }
         }
 	
 	} // module('container')
