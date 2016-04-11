@@ -1,9 +1,9 @@
 <?php 
-	include ('../../app.php');
-	// page config
+    include ('../../app.php');
+    // page config
     $theme = 'Nexus';
-	$title = 'Our Portfolio';
-	$tagLine = 'Some of our most recent and best work';
+    $title = 'Our Portfolio';
+    $tagLine = 'Some of our most recent and best work';
 ?>
 
 <!DOCTYPE html>

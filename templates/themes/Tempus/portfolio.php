@@ -1,9 +1,9 @@
 <?php 
-	include ('../../app.php');
-	// page config
+    include ('../../app.php');
+    // page config
     $theme = 'Tempus';
-	$title = 'Our Portfolio';
-	$tagLine = 'Read about all the great work we do';
+    $title = 'Our Portfolio';
+    $tagLine = 'Read about all the great work we do';
 ?>
 
 <!DOCTYPE html>

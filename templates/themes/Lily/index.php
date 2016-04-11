@@ -1,7 +1,7 @@
 <?php 
-	include ('../../app.php');
-	// page config
-    $theme = 'Lily';
+include ('../../app.php');
+// page config
+$theme = 'Lily';
 ?>
 
 <!DOCTYPE html>

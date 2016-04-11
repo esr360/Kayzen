@@ -1,6 +1,6 @@
 <?php 
-	include ('../../app.php');
-	// page config
+    include ('../../app.php');
+    // page config
     $theme = 'Hollywood';
 ?>
 

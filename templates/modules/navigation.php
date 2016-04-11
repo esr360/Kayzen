@@ -89,7 +89,9 @@
                                 <li>
                                     <?php navThemeItem(array(
                                         'theme' => 'Agenda',
-                                        'thumb' => 'theme-2-thumb.jpg'
+                                        'thumb' => 'theme-2-thumb.jpg',
+                                        'tags' => array('One-Page'),
+                                        'ribbon' => array('blue', 'One-Page')
                                     )) ?>
                                 </li>
                                 

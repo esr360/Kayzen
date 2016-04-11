@@ -1,9 +1,9 @@
 <?php 
-	include ('../../app.php');
-	// page config
+    include ('../../app.php');
+    // page config
     $theme = 'Nexus';
-	$title = 'Single Post Title';
-	$tagLine = 'Aenean lobortis ante nunc, curabitur at enim ac nisi lacinia.';
+    $title = 'Single Post Title';
+    $tagLine = 'Aenean lobortis ante nunc, curabitur at enim ac nisi lacinia.';
 ?>
 
 <!DOCTYPE html>

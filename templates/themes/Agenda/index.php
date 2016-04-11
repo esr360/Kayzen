@@ -1,8 +1,8 @@
 <?php 
-	include ('../../app.php');
-	// page config
+    include ('../../app.php');
+    // page config
     $theme = 'Agenda';
-	$title = 'Homepage 2';
+    $title = 'Homepage 2';
 ?>
 
 <!DOCTYPE html>

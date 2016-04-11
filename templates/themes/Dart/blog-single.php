@@ -1,9 +1,9 @@
 <?php 
-	include ('../../app.php');
-	// page config
+    include ('../../app.php');
+    // page config
     $theme = 'Dart';
-	$title = 'Project Title';
-	$tagLine = 'Aenean lobortis ante nunc curabitur at enim nisi.';
+    $title = 'Project Title';
+    $tagLine = 'Aenean lobortis ante nunc curabitur at enim nisi.';
 ?>
 
 <!DOCTYPE html>
