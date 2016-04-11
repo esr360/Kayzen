@@ -42,7 +42,11 @@
 	@include price-charts;
 	@include progress-bars;
 	@include tables;
-	@include tabs;
+    
+	@include tabs((
+        'navItem-radius' : 0.75em
+    ));
+    
 	@include thumbnails;
 	@include tooltips;
 	@include wells;

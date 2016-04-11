@@ -134,27 +134,25 @@
                                 <!-- Theme 7 -->
                                 <li>
                                     <?php navThemeItem(array(
-                                        'theme' => 'Kayzen',
-                                        'thumb' => 'theme-1-thumb.jpg',
-                                        'ribbon' => array('purple', 'Featured')
+                                        'theme' => 'Mall',
+                                        'thumb' => 'theme-1-thumb.jpg'
                                     )) ?>
                                 </li>
                                 
                                 <!-- Theme 8 -->
                                 <li>
                                     <?php navThemeItem(array(
-                                        'theme' => 'Kayzen',
-                                        'thumb' => 'theme-1-thumb.jpg',
-                                        'ribbon' => array('purple', 'Featured')
+                                        'theme' => 'Dart',
+                                        'thumb' => 'theme-1-thumb.jpg'
                                     )) ?>
                                 </li>
                                 
                                 <!-- Theme 9 -->
                                 <li>
                                     <?php navThemeItem(array(
-                                        'theme' => 'Kayzen',
+                                        'theme' => 'Lily',
                                         'thumb' => 'theme-1-thumb.jpg',
-                                        'ribbon' => array('purple', 'Featured')
+                                        'ribbon' => array('pink', 'Hot')
                                     )) ?>
                                 </li>
                                 
@@ -167,27 +165,24 @@
                                 <!-- Theme 10 -->
                                 <li>
                                     <?php navThemeItem(array(
-                                        'theme' => 'Kayzen',
-                                        'thumb' => 'theme-1-thumb.jpg',
-                                        'ribbon' => array('purple', 'Featured')
+                                        'theme' => 'Hollywood',
+                                        'thumb' => 'theme-1-thumb.jpg'
                                     )) ?>
                                 </li>
                                 
                                 <!-- Theme 11 -->
                                 <li>
                                     <?php navThemeItem(array(
-                                        'theme' => 'Kayzen',
-                                        'thumb' => 'theme-1-thumb.jpg',
-                                        'ribbon' => array('purple', 'Featured')
+                                        'theme' => 'Coffee',
+                                        'thumb' => 'theme-1-thumb.jpg'
                                     )) ?>
                                 </li>
                                 
                                 <!-- Theme 12 -->
                                 <li>
                                     <?php navThemeItem(array(
-                                        'theme' => 'Kayzen',
-                                        'thumb' => 'theme-1-thumb.jpg',
-                                        'ribbon' => array('purple', 'Featured')
+                                        'theme' => 'Gaucho',
+                                        'thumb' => 'theme-1-thumb.jpg'
                                     )) ?>
                                 </li>
                                 

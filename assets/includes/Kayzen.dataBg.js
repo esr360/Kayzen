@@ -21,6 +21,10 @@
             
             var bg = object.attr('data-bg');
             
+            if (object.is('a') && object.attr('href') == '#') {
+                object.attr('href', bg)
+            }
+            
             object.prepend('<div class="' + options.prependClass + '" style="background-image: url(' + bg + ')"></div>');
                             
         }); // this.each

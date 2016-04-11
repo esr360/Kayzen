@@ -19,7 +19,7 @@
     <?php } ?>
         <div class="container">
             <div class="row">
-                <div class="span-6 info-video">
+                <div class="span-6 info-video va-middle">
                     <div class="auto-resizable-iframe">
                         <div>
                             <iframe src="https://player.vimeo.com/video/87701971" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
@@ -27,7 +27,7 @@
                     </div>
                 </div>
                 <hr class="hrule-stripes-large max-break-3" />
-                <div class="span-6">
+                <div class="span-6 va-middle">
                     <header class="heading_group">
                         <h2 class="heading-heavy-size-5-uppercase font-2">Kayzen is the Best</h2>
                         <h3 class="heading-light-brand-1-light-size-4">A Modern Template For Any Project</h3>
