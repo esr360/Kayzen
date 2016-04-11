@@ -1,7 +1,8 @@
  <?php function sidebar($custom = array()) { ?>
 
     <?php $options = array_merge(array(
-        'type' => 'blog'
+        'type' => 'blog',
+        'category' => pageLink('blog/classic/3-cols-filterable.php', 'pages', false)
     ), $custom); ?>
     
     <div class="tabs">
@@ -32,12 +33,12 @@
                             <?php } ?>
                             <div>
                                 <h3 class="heading">Lorem Ipsum Dolor</h3>
-                                <h4 class="heading-light-uppercase-size-1">Category: <a href="<?php pageLink('blog/classic/3-cols-filterable.php') ?>">Themes</a></h4>
+                                <h4 class="heading-light-uppercase-size-1">Category: <a href="<?php echo $options['category'] ?>">Themes</a></h4>
                                 <?php if ($options['type'] == 'blog') { ?>
                                     <ul class="list-tags-small">
-                                        <li class="plain"><a href="<?php pageLink('blog/classic/3-cols-filterable.php') ?>">CSS</a></li>	
-                                        <li class="plain"><a href="<?php pageLink('blog/classic/3-cols-filterable.php') ?>">HTML</a></li>	
-                                        <li class="plain"><a href="<?php pageLink('blog/classic/3-cols-filterable.php') ?>">JS</a></li>	
+                                        <li class="plain"><a href="<?php echo $options['category'] ?>">CSS</a></li>	
+                                        <li class="plain"><a href="<?php echo $options['category'] ?>">HTML</a></li>	
+                                        <li class="plain"><a href="<?php echo $options['category'] ?>">JS</a></li>	
                                     </ul>
                                 <?php } else if ($options['type'] == 'shop') { ?>
                                     <div class="row-block">
@@ -74,12 +75,12 @@
                             <?php } ?>
                             <span>
                                 <h3 class="heading">Lorem Ipsum Dolor</h3>
-                                <h4 class="heading-light-uppercase-size-1">Category: <a href="<?php pageLink('blog/classic/3-cols-filterable.php') ?>">Themes</a></h4>
+                                <h4 class="heading-light-uppercase-size-1">Category: <a href="<?php echo $options['category'] ?>">Themes</a></h4>
                                 <?php if ($options['type'] == 'blog') { ?>
                                     <ul class="list-tags-small">
-                                        <li class="plain"><a href="<?php pageLink('blog/classic/3-cols-filterable.php') ?>">CSS</a></li>	
-                                        <li class="plain"><a href="<?php pageLink('blog/classic/3-cols-filterable.php') ?>">HTML</a></li>	
-                                        <li class="plain"><a href="<?php pageLink('blog/classic/3-cols-filterable.php') ?>">JS</a></li>	
+                                        <li class="plain"><a href="<?php echo $options['category'] ?>">CSS</a></li>	
+                                        <li class="plain"><a href="<?php echo $options['category'] ?>">HTML</a></li>	
+                                        <li class="plain"><a href="<?php echo $options['category'] ?>">JS</a></li>	
                                     </ul>
                                 <?php } else if ($options['type'] == 'shop') { ?>
                                     <div class="row-block">
@@ -116,12 +117,12 @@
                             <?php } ?>
                             <span>
                                 <h3 class="heading">Lorem Ipsum Dolor</h3>
-                                <h4 class="heading-light-uppercase-size-1">Category: <a href="<?php pageLink('blog/classic/3-cols-filterable.php') ?>">Themes</a></h4>
+                                <h4 class="heading-light-uppercase-size-1">Category: <a href="<?php echo $options['category'] ?>">Themes</a></h4>
                                 <?php if ($options['type'] == 'blog') { ?>
                                     <ul class="list-tags-small">
-                                        <li class="plain"><a href="<?php pageLink('blog/classic/3-cols-filterable.php') ?>">CSS</a></li>	
-                                        <li class="plain"><a href="<?php pageLink('blog/classic/3-cols-filterable.php') ?>">HTML</a></li>	
-                                        <li class="plain"><a href="<?php pageLink('blog/classic/3-cols-filterable.php') ?>">JS</a></li>	
+                                        <li class="plain"><a href="<?php echo $options['category'] ?>">CSS</a></li>	
+                                        <li class="plain"><a href="<?php echo $options['category'] ?>">HTML</a></li>	
+                                        <li class="plain"><a href="<?php echo $options['category'] ?>">JS</a></li>	
                                     </ul>
                                 <?php } else if ($options['type'] == 'shop') { ?>
                                     <div class="row-block">
@@ -160,12 +161,12 @@
                             <?php } ?>
                             <div>
                                 <h3 class="heading">Lorem Ipsum Dolor</h3>
-                                <h4 class="heading-light-uppercase-size-1">Category: <a href="<?php pageLink('blog/classic/3-cols-filterable.php') ?>">Themes</a></h4>
+                                <h4 class="heading-light-uppercase-size-1">Category: <a href="<?php echo $options['category'] ?>">Themes</a></h4>
                                 <?php if ($options['type'] == 'blog') { ?>
                                     <ul class="list-tags-small">
-                                        <li class="plain"><a href="<?php pageLink('blog/classic/3-cols-filterable.php') ?>">CSS</a></li>	
-                                        <li class="plain"><a href="<?php pageLink('blog/classic/3-cols-filterable.php') ?>">HTML</a></li>	
-                                        <li class="plain"><a href="<?php pageLink('blog/classic/3-cols-filterable.php') ?>">JS</a></li>	
+                                        <li class="plain"><a href="<?php echo $options['category'] ?>">CSS</a></li>	
+                                        <li class="plain"><a href="<?php echo $options['category'] ?>">HTML</a></li>	
+                                        <li class="plain"><a href="<?php echo $options['category'] ?>">JS</a></li>	
                                     </ul>
                                 <?php } else if ($options['type'] == 'shop') { ?>
                                     <div class="row-block">
@@ -202,12 +203,12 @@
                             <?php } ?>
                             <span>
                                 <h3 class="heading">Lorem Ipsum Dolor</h3>
-                                <h4 class="heading-light-uppercase-size-1">Category: <a href="<?php pageLink('blog/classic/3-cols-filterable.php') ?>">Themes</a></h4>
+                                <h4 class="heading-light-uppercase-size-1">Category: <a href="<?php echo $options['category'] ?>">Themes</a></h4>
                                 <?php if ($options['type'] == 'blog') { ?>
                                     <ul class="list-tags-small">
-                                        <li class="plain"><a href="<?php pageLink('blog/classic/3-cols-filterable.php') ?>">CSS</a></li>	
-                                        <li class="plain"><a href="<?php pageLink('blog/classic/3-cols-filterable.php') ?>">HTML</a></li>	
-                                        <li class="plain"><a href="<?php pageLink('blog/classic/3-cols-filterable.php') ?>">JS</a></li>	
+                                        <li class="plain"><a href="<?php echo $options['category'] ?>">CSS</a></li>	
+                                        <li class="plain"><a href="<?php echo $options['category'] ?>">HTML</a></li>	
+                                        <li class="plain"><a href="<?php echo $options['category'] ?>">JS</a></li>	
                                     </ul>
                                 <?php } else if ($options['type'] == 'shop') { ?>
                                     <div class="row-block">
@@ -244,12 +245,12 @@
                             <?php } ?>
                             <span>
                                 <h3 class="heading">Lorem Ipsum Dolor</h3>
-                                <h4 class="heading-light-uppercase-size-1">Category: <a href="<?php pageLink('blog/classic/3-cols-filterable.php') ?>">Themes</a></h4>
+                                <h4 class="heading-light-uppercase-size-1">Category: <a href="<?php echo $options['category'] ?>">Themes</a></h4>
                                 <?php if ($options['type'] == 'blog') { ?>
                                     <ul class="list-tags-small">
-                                        <li class="plain"><a href="<?php pageLink('blog/classic/3-cols-filterable.php') ?>">CSS</a></li>	
-                                        <li class="plain"><a href="<?php pageLink('blog/classic/3-cols-filterable.php') ?>">HTML</a></li>	
-                                        <li class="plain"><a href="<?php pageLink('blog/classic/3-cols-filterable.php') ?>">JS</a></li>	
+                                        <li class="plain"><a href="<?php echo $options['category'] ?>">CSS</a></li>	
+                                        <li class="plain"><a href="<?php echo $options['category'] ?>">HTML</a></li>	
+                                        <li class="plain"><a href="<?php echo $options['category'] ?>">JS</a></li>	
                                     </ul>
                                 <?php } else if ($options['type'] == 'shop') { ?>
                                     <div class="row-block">
@@ -288,12 +289,12 @@
                             <?php } ?>
                             <div>
                                 <h3 class="heading">Lorem Ipsum Dolor</h3>
-                                <h4 class="heading-light-uppercase-size-1">Category: <a href="<?php pageLink('blog/classic/3-cols-filterable.php') ?>">Themes</a></h4>
+                                <h4 class="heading-light-uppercase-size-1">Category: <a href="<?php echo $options['category'] ?>">Themes</a></h4>
                                 <?php if ($options['type'] == 'blog') { ?>
                                     <ul class="list-tags-small">
-                                        <li class="plain"><a href="<?php pageLink('blog/classic/3-cols-filterable.php') ?>">CSS</a></li>	
-                                        <li class="plain"><a href="<?php pageLink('blog/classic/3-cols-filterable.php') ?>">HTML</a></li>	
-                                        <li class="plain"><a href="<?php pageLink('blog/classic/3-cols-filterable.php') ?>">JS</a></li>	
+                                        <li class="plain"><a href="<?php echo $options['category'] ?>">CSS</a></li>	
+                                        <li class="plain"><a href="<?php echo $options['category'] ?>">HTML</a></li>	
+                                        <li class="plain"><a href="<?php echo $options['category'] ?>">JS</a></li>	
                                     </ul>
                                 <?php } else if ($options['type'] == 'shop') { ?>
                                     <div class="row-block">
@@ -330,12 +331,12 @@
                             <?php } ?>
                             <span>
                                 <h3 class="heading">Lorem Ipsum Dolor</h3>
-                                <h4 class="heading-light-uppercase-size-1">Category: <a href="<?php pageLink('blog/classic/3-cols-filterable.php') ?>">Themes</a></h4>
+                                <h4 class="heading-light-uppercase-size-1">Category: <a href="<?php echo $options['category'] ?>">Themes</a></h4>
                                 <?php if ($options['type'] == 'blog') { ?>
                                     <ul class="list-tags-small">
-                                        <li class="plain"><a href="<?php pageLink('blog/classic/3-cols-filterable.php') ?>">CSS</a></li>	
-                                        <li class="plain"><a href="<?php pageLink('blog/classic/3-cols-filterable.php') ?>">HTML</a></li>	
-                                        <li class="plain"><a href="<?php pageLink('blog/classic/3-cols-filterable.php') ?>">JS</a></li>	
+                                        <li class="plain"><a href="<?php echo $options['category'] ?>">CSS</a></li>	
+                                        <li class="plain"><a href="<?php echo $options['category'] ?>">HTML</a></li>	
+                                        <li class="plain"><a href="<?php echo $options['category'] ?>">JS</a></li>	
                                     </ul>
                                 <?php } else if ($options['type'] == 'shop') { ?>
                                     <div class="row-block">
@@ -372,12 +373,12 @@
                             <?php } ?>
                             <span>
                                 <h3 class="heading">Lorem Ipsum Dolor</h3>
-                                <h4 class="heading-light-uppercase-size-1">Category: <a href="<?php pageLink('blog/classic/3-cols-filterable.php') ?>">Themes</a></h4>
+                                <h4 class="heading-light-uppercase-size-1">Category: <a href="<?php echo $options['category'] ?>">Themes</a></h4>
                                 <?php if ($options['type'] == 'blog') { ?>
                                     <ul class="list-tags-small">
-                                        <li class="plain"><a href="<?php pageLink('blog/classic/3-cols-filterable.php') ?>">CSS</a></li>	
-                                        <li class="plain"><a href="<?php pageLink('blog/classic/3-cols-filterable.php') ?>">HTML</a></li>	
-                                        <li class="plain"><a href="<?php pageLink('blog/classic/3-cols-filterable.php') ?>">JS</a></li>	
+                                        <li class="plain"><a href="<?php echo $options['category'] ?>">CSS</a></li>	
+                                        <li class="plain"><a href="<?php echo $options['category'] ?>">HTML</a></li>	
+                                        <li class="plain"><a href="<?php echo $options['category'] ?>">JS</a></li>	
                                     </ul>
                                 <?php } else if ($options['type'] == 'shop') { ?>
                                     <div class="row-block">
@@ -411,11 +412,11 @@
     </header>
     
     <ul class="list-arrow">
-        <li><a href="<?php pageLink('blog/classic/3-cols-filterable.php') ?>">HTML Templates</a></li>
-        <li><a href="<?php pageLink('blog/classic/3-cols-filterable.php') ?>">Wordpress Themes</a></li>
-        <li><a href="<?php pageLink('blog/classic/3-cols-filterable.php') ?>">jQuery Plugins</a></li>
-        <li><a href="<?php pageLink('blog/classic/3-cols-filterable.php') ?>">Tutorials</a></li>
-        <li><a href="<?php pageLink('blog/classic/3-cols-filterable.php') ?>">Photoshop/Design</a></li>
+        <li><a href="<?php echo $options['category'] ?>">HTML Templates</a></li>
+        <li><a href="<?php echo $options['category'] ?>">Wordpress Themes</a></li>
+        <li><a href="<?php echo $options['category'] ?>">jQuery Plugins</a></li>
+        <li><a href="<?php echo $options['category'] ?>">Tutorials</a></li>
+        <li><a href="<?php echo $options['category'] ?>">Photoshop/Design</a></li>
     </ul>
     
     <hr class="hrule-stripes" />

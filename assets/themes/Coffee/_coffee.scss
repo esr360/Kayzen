@@ -1,0 +1,100 @@
+//=================================================================
+// Kayzen
+//=================================================================
+
+@if $theme == 'Coffee' {
+    
+    @include normalize();
+
+//-----------------------------------------------------------------
+// Skeleton
+//-----------------------------------------------------------------
+
+	@include palettes((
+		'brand': (
+			'primary' : #c67e47
+		)
+	));
+	
+	@include typography;
+	@include grid;
+	@include base;
+	@include tools;
+	@include masonry-grid;
+	@include helpers;
+
+//-----------------------------------------------------------------
+// Elements
+//-----------------------------------------------------------------
+
+	@include accordions;
+	@include alert-bars;
+	@include blockquotes;
+	@include buttons;
+	@include carousels;
+	@include corner-ribbons;
+	@include forms;
+	@include headings;
+	@include images;
+	@include lists;
+	@include modals;
+	@include notifications;
+	@include price-charts;
+	@include progress-bars;
+	@include tables;
+	@include tabs;
+	@include thumbnails;
+	@include tooltips;
+	@include wells;
+	@include widgets;
+
+//-----------------------------------------------------------------
+// Objects
+//-----------------------------------------------------------------
+
+	@include top-bar;
+	@include breadcrumb;
+	@include side-nav;
+	@include countdown;
+	@include earth-slider;
+	@include flyout-nav;
+	@include flyout-trigger;
+	@include footer;
+	@include google-map;
+	
+	@include header((
+		'background'     : color('brand', 'primary'),
+		'font-size'      : 0.9em,
+        'bar'            : true
+	));
+	
+	@include logo;
+	
+	@include navigation((
+		'link-color' : color('greyscale', 'white')
+	));
+	
+	@include mega-menu;
+	@include dropdown;
+	@include page-overview;
+	@include preloader;
+	@include scroll-top;
+	@include search;
+	@include scroll-wheel;
+	@include sidebar;
+	@include site-overlay;
+	@include twitter-feed;
+	
+//-----------------------------------------------------------------
+// Sections
+//-----------------------------------------------------------------
+
+	@include sections;
+	
+	@include billboard((
+		'bg-image'        : "#{$asset-path}/images/demo/stock-13.jpg",
+        'overlay-color'   : black,
+        'overlay-opacity' : 0.4
+	));
+
+} // Kayzen

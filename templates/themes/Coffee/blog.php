@@ -1,16 +1,19 @@
 <?php 
-	include ('../../../app.php');
+	include ('../../app.php');
 	// page config
+    $theme = 'Coffee';
 	$title = 'Our Blog';
-	$tagLine = 'Read about all the great work we do';
+	$tagLine = 'Aenean lobortis ante nunc urabitur at enim nisi.';
 ?>
 
 <!DOCTYPE html>
 <html class="no-js">
 
-<?php head() ?>
+<?php head($theme) ?>
 
 <body>
+    
+    <?php preloader() ?>
 
     <!-- Site Canvas -->
     <div id="site-content">
@@ -20,7 +23,12 @@
             topbar();
 
             appHeader(array(
-                'modifiers' => 'bar-absolute-dark-sticky'
+                'nav-links'  => array(
+                    'Home' => themeLink($theme, '/index.php'),
+                    'About' => themeLink($theme, '/about.php'),
+                    'Blog' => themeLink($theme, '/blog.php'),
+                    'Contact' => themeLink($theme, '/contact.php')
+                )
             ));
 
             billboard(array(
@@ -30,8 +38,8 @@
 
 		?>
 		
-		<section class="section-primary-mini relative">	
-			<ul class="tabs_nav-pills-center" id="blog-types">
+		<section class="section-primary-mini relative text-center min-break-1">	
+			<ul class="tabs_nav-pills-center" id="blog-categories">
 				<li class="tabs_nav_item active" data-filter="*">View All</li>
 				<li class="tabs_nav_item" data-filter="[data-image]">Image</li>
 				<li class="tabs_nav_item" data-filter="[data-carousel]">Carousel</li>
@@ -50,60 +58,78 @@
                         articleItem(array(
                             'size'   => 'small',
                             'span'   => 4,
-                            'class'  => 'break-3-half break-2-full'
+                            'class'  => 'break-3-half break-2-full',
+                            'link'   => themeLink($theme, '/blog-single.php'),
+                            'root'   => themeLink($theme, '/blog.php')
                         ));
                     
                         articleItem(array(
                             'media'  => 'carousel',
                             'size'   => 'small',
                             'span'   => 4,
-                            'class'  => 'break-3-half break-2-full'
+                            'class'  => 'break-3-half break-2-full',
+                            'link'   => themeLink($theme, '/blog-single.php'),
+                            'root'   => themeLink($theme, '/blog.php')
                         ));
                     
                         articleItem(array(
                             'media'  => 'carousel',
                             'size'   => 'small',
                             'span'   => 4,
-                            'class'  => 'break-3-half break-2-full'
+                            'class'  => 'break-3-half break-2-full',
+                            'link'   => themeLink($theme, '/blog-single.php'),
+                            'root'   => themeLink($theme, '/blog.php')
                         ));
                     
                         articleItem(array(
                             'media'  => 'vimeo',
                             'size'   => 'small',
                             'span'   => 4,
-                            'class'  => 'break-3-half break-2-full'
+                            'class'  => 'break-3-half break-2-full',
+                            'link'   => themeLink($theme, '/blog-single.php'),
+                            'root'   => themeLink($theme, '/blog.php')
                         ));
                     
                         articleItem(array(
                             'size'   => 'small',
                             'span'   => 4,
-                            'class'  => 'break-3-half break-2-full'
+                            'class'  => 'break-3-half break-2-full',
+                            'link'   => themeLink($theme, '/blog-single.php'),
+                            'root'   => themeLink($theme, '/blog.php')
                         ));
                     
                         articleItem(array(
                             'media'  => 'youtube',
                             'size'   => 'small',
                             'span'   => 4,
-                            'class'  => 'break-3-half break-2-full'
+                            'class'  => 'break-3-half break-2-full',
+                            'link'   => themeLink($theme, '/blog-single.php'),
+                            'root'   => themeLink($theme, '/blog.php')
                         ));
                     
                         articleItem(array(
                             'size'   => 'small',
                             'span'   => 4,
-                            'class'  => 'break-3-half break-2-full'
+                            'class'  => 'break-3-half break-2-full',
+                            'link'   => themeLink($theme, '/blog-single.php'),
+                            'root'   => themeLink($theme, '/blog.php')
                         ));
                     
                         articleItem(array(
                             'size'   => 'small',
                             'span'   => 4,
-                            'class'  => 'break-3-half break-2-full'
+                            'class'  => 'break-3-half break-2-full',
+                            'link'   => themeLink($theme, '/blog-single.php'),
+                            'root'   => themeLink($theme, '/blog.php')
                         ));
                     
                         articleItem(array(
                             'media'  => 'carousel',
                             'size'   => 'small',
                             'span'   => 4,
-                            'class'  => 'break-3-half break-2-full'
+                            'class'  => 'break-3-half break-2-full',
+                            'link'   => themeLink($theme, '/blog-single.php'),
+                            'root'   => themeLink($theme, '/blog.php')
                         ));
                     
                     ?>
@@ -113,7 +139,7 @@
                 <script>
                     $(document).ready(function() {
                         
-                        $('#blog-types').KayzenClickHelper();
+                        $('#blog-categories').KayzenClickHelper();
                         
                         $('.article-thumbnails-carousel').each(function() {
                             $(this).owlCarousel({
@@ -129,7 +155,7 @@
                         
                         $(window).load(function() {
                             $('#blog-items').isotope();
-                            $('#blog-types').on('click', 'li', function() {
+                            $('#blog-categories').on('click', 'li', function() {
                                 var filterValue = $(this).attr('data-filter');
                                 $('#blog-items').isotope({ 
                                     filter: filterValue 
@@ -139,25 +165,20 @@
                         
                     });
                 </script>
-				
-			</div><!-- container -->
-
+                
+            </div>       
+			
 		</section>
 		
-		<?php
-        
-            promoBanner();
-            
-            appFooter(); 
-            
-        ?>
+        <?php appFooter() ?>
 
     </div><!-- Site Canvas -->
 
     <?php include (ROOT.'/includes/ui-enhancements.php'); ?>
-
-    <?php scripts() ?>
+    
+    <?php scripts($theme) ?>
     
     <?php devAsset('', 'isotope.pkgd.js') ?>
 
 </body>
+</html>

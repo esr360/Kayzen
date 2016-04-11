@@ -1,7 +1,7 @@
 <?php 
 	include ('../../app.php');
 	// page config
-    $theme = 'Hollywood';
+    $theme = 'Coffee';
 ?>
 
 <!DOCTYPE html>
@@ -41,6 +41,16 @@
 			<div class="container">		
 				
 				<div class="row fixed-table">
+					
+					<aside class="sidebar span-4">
+    
+                        <?php sidebar(array(
+                            'category' => themeLink($theme, '/blog.php')
+                        )); ?>
+						
+					</aside><!-- sidebar -->
+                    
+                    <hr class="hrule-stripes-large max-break-3" />
 					
 					<div class="newsfeed span-8">
                             
@@ -293,16 +303,6 @@
 						</div>
 						
 					</div><!-- newsfeed -->
-                    
-                    <hr class="hrule-stripes-large max-break-3" />
-					
-					<aside class="sidebar span-4">
-    
-                        <?php sidebar(array(
-                            'category' => themeLink($theme, '/blog.php')
-                        )); ?>
-						
-					</aside><!-- sidebar -->
 					
 				</div><!-- row -->
 				
