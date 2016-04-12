@@ -41,8 +41,8 @@ $theme = 'Lily';
 					</header>
 					<p class="lede">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas mollis dolor ut euismod pellentesque. Vivamus mattis cursus urna, non gravida purus pulvinar ac. Nunc dignissim velit justo, id aliquet neque.</p>
 					<div class="button_group">
-						<a class="button-size-4-grey-1" href="#">Purchase Now</a>
-						<a class="button-size-4-border-white" href="#">Explore The Potential</a>
+						<a class="button-size-4-primary-oval" href="#">Purchase Now</a>
+						<a class="button-size-4-grey-1-border-oval" href="#">Explore The Potential</a>
 					</div>
 				</div>
 			</div>
@@ -52,22 +52,35 @@ $theme = 'Lily';
 		<?php 
         
             masonryFeatures(array(
-                'link' => themeLink($theme, '/shop-category.php')
+                'link' => themeLink($theme, '/shop-category.php'),
+                'title-highlight' => 'highlight-dark',
+                'subTitle-highlight' => 'highlight-dark'
             ));
         
             inStore(array(
+                'tabs_nav_item-modifiers' => '-round',
                 'link' => themeLink($theme, '/shop-single.php'),
                 'root' => themeLink($theme, '/shop-category.php')
             ));
             
             clients(array(
-               'title'     => 'Popular Brands',
-               'sub-title' => 'Get The Best Deals' 
+                'title' => array(
+                    'content' => 'Our Clients',
+                    'modifiers' => 'heading-uppercase-light-brand-1-size-4',
+                    'highlight' => false
+                ),
+                'sub-title' => array(
+                    'content' => 'Who We Work With',
+                    'modifiers' => 'heading-heavy-size-6 font-2',
+                    'highlight' => false
+                )
             ));
             
             featureCards();
         
-            promoBanner();
+            promoBanner(array(
+                'cta-modifiers' => '-oval'
+            ));
             
             shareTheLove();
             

@@ -70,7 +70,6 @@
                                 articleItem(array(
                                     'size'          => 'small',
                                     'title'         => 'Kayzen is Released',
-                                    'cta-modifiers' => '-oval',
                                     'span'          => 4,
                                     'link'          => themeLink($theme, '/blog-single.php'),
                                     'root'          => themeLink($theme, '/blog.php'),
@@ -80,7 +79,6 @@
                                 articleItem(array(
                                     'size'          => 'small',
                                     'title'         => 'Kayzen is Released',
-                                    'cta-modifiers' => '-oval',
                                     'span'          => 4,
                                     'link'          => themeLink($theme, '/blog-single.php'),
                                     'root'          => themeLink($theme, '/blog.php'),
@@ -90,7 +88,6 @@
                                 articleItem(array(
                                     'size'          => 'small',
                                     'title'         => 'Kayzen is Released',
-                                    'cta-modifiers' => '-oval',
                                     'span'          => 4,
                                     'link'          => themeLink($theme, '/blog-single.php'),
                                     'root'          => themeLink($theme, '/blog.php'),

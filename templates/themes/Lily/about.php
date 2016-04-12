@@ -39,7 +39,9 @@
             
             earthSlider();
     
-            skills();
+            skills(array(
+                'cta-modifiers' => '-oval'
+            ));
             
             whyChooseUs();
             
@@ -59,8 +61,16 @@
     
             recentWork(array(
                 'item-link' => themeLink($theme, '/shop-category.php'),
-                'title' => 'Latest Products',
-                'sub-title' => 'Whilst Stocks Last'
+                'title' => array(
+                    'content' => 'Latest Products',
+                    'modifiers' => 'heading-uppercase-light-brand-1-size-4-spaced',
+                    'highlight' => false
+                ),
+                'sub-title' => array(
+                    'content' => 'Whilst Stocks Last',
+                    'modifiers' => 'heading-uppercase-heavy-size-7 font-2',
+                    'highlight' => false
+                )
             ));
             
             googleMap();

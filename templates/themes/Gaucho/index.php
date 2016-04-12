@@ -30,7 +30,7 @@
             ));
         
             masonryFeatures(array(
-                'background' => true,
+                'background' => '/images/billboard-2.jpg',
                 'link' => themeLink($theme, '/blog.php')
             ));
             

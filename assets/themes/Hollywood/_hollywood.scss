@@ -34,7 +34,11 @@
 	@include carousels;
 	@include corner-ribbons;
 	@include forms;
-	@include headings;
+    
+	@include headings((
+        'group_heading-lineHeight' : 0.94
+    ));
+    
 	@include images;
 	@include lists;
 	@include modals;

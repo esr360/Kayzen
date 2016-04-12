@@ -30,8 +30,10 @@
             ));
         
             masonryFeatures(array(
-                'background' => true,
-                'link' => themeLink($theme, '/blog.php')
+                'background' => '/images/billboard-2.jpg',
+                'link' => themeLink($theme, '/blog.php'),
+                'title-highlight' => 'highlight-dark',
+                'subTitle-highlight' => 'highlight'
             ));
             
         ?>
@@ -56,7 +58,6 @@
                 
                                 articleItem(array(
                                     'title'         => 'Kayzen is Released',
-                                    'cta-modifiers' => '-oval',
                                     'span'          => 6,
                                     'author-thumb'  => true,
                                     'widget'        => false,
@@ -67,7 +68,6 @@
                             
                                 articleItem(array(
                                     'title'         => 'Kayzen is Released',
-                                    'cta-modifiers' => '-oval',
                                     'span'          => 6,
                                     'author-thumb'  => true,
                                     'widget'        => false,
@@ -208,7 +208,7 @@
 								<p>Cum socis natoque penatibus et magnis dis parturient montes...</p>
 								<div class="row stack-0">
 									<div class="span-5 va-middle">
-										<a href="#" class="button-oval-primary-size-2">Read More</a>
+										<a href="#" class="button-primary-size-2">Read More</a>
 									</div>
 									<div class="span-7 va-middle text-right">
 										<small>Posted in <a href="blog.html">Web Design</a></small>
@@ -245,7 +245,7 @@
 								<p>Cum socis natoque penatibus et magnis dis parturient montes...</p>
 								<div class="row stack-0">
 									<div class="span-5 va-middle">
-										<a href="#" class="button-oval-primary-size-2">Read More</a>
+										<a href="#" class="button-primary-size-2">Read More</a>
 									</div>
 									<div class="span-7 va-middle text-right">
 										<small>Posted in <a href="blog.html">Web Design</a></small>
@@ -282,7 +282,7 @@
 								<p>Cum socis natoque penatibus et magnis dis parturient montes...</p>
 								<div class="row stack-0">
 									<div class="span-5 va-middle">
-										<a href="#" class="button-oval-primary-size-2">Read More</a>
+										<a href="#" class="button-primary-size-2">Read More</a>
 									</div>
 									<div class="span-7 va-middle text-right">
 										<small>Posted in <a href="blog.html">Web Design</a></small>

@@ -63,9 +63,19 @@
 	@include google-map;
 	
 	@include header((
-		'background'     : color('brand', 'primary'),
+		'background'     : transparent,
 		'font-size'      : 0.9em,
-        'bar'            : true
+        'bar'            : true,
+        'absolute'       : (
+            'enabled'    : true
+        ),
+        'sticky'         : (
+            'enabled'    : true
+        ),
+        'dark'           : (
+            'enabled'    : true,
+			'background' : rgba(black, 0.5),
+        )
 	));
 	
 	@include logo;
@@ -92,7 +102,7 @@
 	@include sections;
 	
 	@include billboard((
-		'bg-image'        : "#{$asset-path}/images/demo/stock-13.jpg",
+		'bg-image'        : "#{$asset-path}/images/demo/stock-11.jpg",
         'overlay-color'   : black,
         'overlay-opacity' : 0.4
 	));

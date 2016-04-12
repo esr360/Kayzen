@@ -59,7 +59,8 @@
 //-----------------------------------------------------------------
 
 	@include top-bar((
-        'background' : #0A0A0A
+        'background' : #0A0A0A,
+        'fixed'      : true
     ));
     
 	@include breadcrumb;
@@ -76,9 +77,6 @@
 		'font-size'      : 0.9em,
         'bar'            : true,
         'absolute'       : (
-            'enabled'    : true
-        ),
-        'sticky'         : (
             'enabled'    : true
         ),
         'dark'           : (

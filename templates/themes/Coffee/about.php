@@ -38,7 +38,9 @@
             
             earthSlider();
     
-            skills();
+            skills(array(
+                'cta-modifiers' => '-oval'
+            ));
             
             whyChooseUs();
             

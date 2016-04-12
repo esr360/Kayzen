@@ -10,7 +10,7 @@
     <section 
         class="section-primary" 
         <?php if ($options['background']) { ?>
-            style="background-image: url('<?php echo appDir ?>/images/billboard-2.jpg')"
+            style="background-image: url('<?php echo appDir.$options['background'] ?>')"
         <?php } ?>
     >
         <div class="container">
