@@ -165,9 +165,7 @@
 		
 		<?php
         
-            promoBanner(array(
-                'cta-modifiers' => '-oval'
-            ));
+            promoBanner();
             
             appFooter(); 
             

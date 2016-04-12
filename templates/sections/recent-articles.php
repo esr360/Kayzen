@@ -3,7 +3,8 @@
     <?php $options = array_merge(array(
         'item-link' => pageLink('blog/single.php', 'pages', false),
         'item-root' => pageLink('blog.php', 'pages', false),
-        'id' => null
+        'id' => null,
+        'cta-modifiers' => '-oval'
     ), $custom); ?>
 
     <section class="section-primary" <?php if ($options['id']) echo 'id="'.$options['id'].'"' ?>>
@@ -26,7 +27,7 @@
                 
                     articleItem(array(
                         'title'         => 'Kayzen is Released',
-                        'cta-modifiers' => '-oval',
+                        'cta-modifiers' => $options['cta-modifiers'],
                         'span'          => 4,
                         'author-thumb'  => true,
                         'widget'        => false,
@@ -37,7 +38,7 @@
                 
                     articleItem(array(
                         'title'         => 'Kayzen is Released',
-                        'cta-modifiers' => '-oval',
+                        'cta-modifiers' => $options['cta-modifiers'],
                         'span'          => 4,
                         'author-thumb'  => true,
                         'widget'        => false,
@@ -48,7 +49,7 @@
                 
                     articleItem(array(
                         'title'         => 'Kayzen is Released',
-                        'cta-modifiers' => '-oval',
+                        'cta-modifiers' => $options['cta-modifiers'],
                         'span'          => 4,
                         'author-thumb'  => true,
                         'widget'        => false,

@@ -16,7 +16,12 @@
 		)
 	));
 	
-	@include typography;
+	@include typography((
+        'typefaces': (
+            'primary'       : ('Raleway', 'Raleway:100,300,700,900'),
+            'secondary'     : ('Raleway', 'Raleway:100,300,700,900')
+        )
+    ));
     
 	@include grid((
         'options' : (

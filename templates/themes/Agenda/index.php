@@ -50,8 +50,8 @@
 					</header>
 					<p class="lede">Kayzen is a powerful themeing framework for architecting CSS for large, modular & scalable web applications. Built using only Sass (SCSS), Kayzen has the customizing power of a complete CMS theme.</p>
 					<div class="button_group">
-						<a class="button-oval-size-4-white" href="#">Purchase Now</a>
-						<a class="button-oval-size-4-border-white" href="#">Explore The Potential</a>
+						<a class="button-size-4-white" href="#">Purchase Now</a>
+						<a class="button-size-4-border-white" href="#">Explore The Potential</a>
 					</div>
 				</div>
 			</div>
@@ -64,21 +64,15 @@
                 'id' => 's-about'
             )); 
             
-            skills(array(
-                'cta-modifiers' => '-oval'
-            ));
+            skills();
         
 		    whyChooseUs();
 		
-            promoBanner(array(
-                'cta-modifiers' => '-oval'
-            ));
+            promoBanner();
         
 		    ourTeam();
             
-            promoSection(array(
-                'cta-modifiers' => '-oval'
-            ));
+            promoSection();
             
             services(array(
                 'id' => 's-services'
@@ -105,12 +99,11 @@
             recentArticles(array(
                 'item-link' => themeLink($theme, '/blog-single.php'),
                 'item-root' => themeLink($theme, '/blog.php'),
-                'id' => 's-blog'
+                'id' => 's-blog',
+                'cta-modifiers' => ''
             ));
 		
-            promoBanner(array(
-                'cta-modifiers' => '-oval'
-            ));
+            promoBanner();
             
             contactUs(array(
                 'id' => 's-contact'

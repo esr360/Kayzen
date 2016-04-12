@@ -48,9 +48,7 @@
             
             include (ROOT.'/sections/what-we-did.php');
                     
-            projectSections(array(
-               'cta-modifiers' => '-oval' 
-            ));
+            projectSections();
             
             socialWidgets(array(
                 'section' => 'section-primary-flush-dot-map container'
@@ -62,9 +60,7 @@
                 'item-link' => themeLink($theme, '/portfolio-single.php')
             ));
             
-            promoBanner(array(
-                'cta-modifiers' => '-oval'
-            ));
+            promoBanner();
             
             appFooter(array(
                 'columns' => false
