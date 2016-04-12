@@ -1,8 +1,16 @@
 <?php function clients($custom = array()) { ?>
 
     <?php $options = array_merge(array(
-        'title'     => 'Our Clients',
-        'sub-title' => 'Who We Work With'
+        'title' => array(
+            'content' => 'Our Clients',
+            'modifiers' => 'heading-uppercase-light-brand-1-size-4',
+            'highlight' => false
+        ),
+        'sub-title' => array(
+            'content' => 'Who We Work With',
+            'modifiers' => 'heading-heavy-size-6 font-2',
+            'highlight' => false
+        )
     ), $custom); ?>
     
     <section 
@@ -15,8 +23,16 @@
                 
                 <div class="span-4 va-middle center-mobile">
                     <header class="heading_group">
-                        <h4 class="heading-uppercase-light-brand-1-size-4"><?php echo $options['title'] ?></h4>
-                        <h2 class="heading-heavy-size-6 font-2"><span><?php echo $options['sub-title'] ?></span></h2>
+                        <h4 class="<?php echo $options['title']['modifiers'] ?>">
+                            <?php if ($options['title']['highlight']) { ?><b><?php } else { ?><span><?php } ?>
+                                <?php echo $options['title']['content'] ?>
+                            <?php if ($options['title']['highlight']) { ?></b><?php } else { ?></span><?php } ?>
+                        </h4>
+                        <h2 class="<?php echo $options['sub-title']['modifiers'] ?>">
+                            <?php if ($options['sub-title']['highlight']) { ?><b><?php } else { ?><span><?php } ?>
+                                <?php echo $options['sub-title']['content'] ?>
+                            <?php if ($options['sub-title']['highlight']) { ?></b><?php } else { ?></span><?php } ?>
+                        </h2>
                     </header>
                 </div>
                 <div class="span-8 va-middle">

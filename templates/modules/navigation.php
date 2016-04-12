@@ -144,7 +144,7 @@
                                 <!-- Theme 8 -->
                                 <li>
                                     <?php navThemeItem(array(
-                                        'theme' => 'Dart',
+                                        'theme' => 'Tempus',
                                         'thumb' => 'theme-1-thumb.jpg'
                                     )) ?>
                                 </li>

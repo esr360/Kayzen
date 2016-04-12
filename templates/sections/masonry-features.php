@@ -2,7 +2,9 @@
 
     <?php $options = array_merge(array(
         'link' => '#',
-        'background' => null
+        'background' => null,
+        'title-highlight' => false,
+        'subTitle-highlight' => false
     ), $custom); ?>
 
     <section 
@@ -20,8 +22,19 @@
                 >
                     <div class="corner-ribbon-pink" data-ribbon="Hot"></div>
                     <header class="widget_header heading_group">
-                        <h4 class="heading-heavy-uppercase-size-4 font-2">Lorem Ipsum</h4>
-                        <h5 class="heading-light">Dolor Sit Amet</h4>
+                        <?php if ($options['title-highlight']) { ?>
+                            <h4 class="heading-heavy-uppercase-size-4-<?php echo $options['title-highlight'] ?> font-2">
+                                <b>Lorem Ipsum</b>
+                            </h4>
+                        <?php } else { ?>
+                            <h4 class="heading-heavy-uppercase-size-4 font-2">Lorem Ipsum</h4>
+                        <?php } if ($options['subTitle-highlight']) { ?>
+                            <h5 class="heading-light-<?php echo $options['subTitle-highlight'] ?>">
+                                <b>Dolor Sit Amet</b>
+                            </h4>
+                        <?php } else { ?>
+                            <h5 class="heading-light">Dolor Sit Amet</h4>
+                        <?php } ?>
                     </header>
                 </a>
                 <a 
@@ -31,8 +44,19 @@
                 >
                     <div class="corner-ribbon-green" data-ribbon="New"></div>
                     <header class="widget_header heading_group">
-                        <h4 class="heading-heavy-uppercase-size-4 font-2">Lorem Ipsum</h4>
-                        <h5 class="heading-light">Dolor Sit Amet</h4>
+                        <?php if ($options['title-highlight']) { ?>
+                            <h4 class="heading-heavy-uppercase-size-4-<?php echo $options['title-highlight'] ?> font-2">
+                                <b>Lorem Ipsum</b>
+                            </h4>
+                        <?php } else { ?>
+                            <h4 class="heading-heavy-uppercase-size-4 font-2">Lorem Ipsum</h4>
+                        <?php } if ($options['subTitle-highlight']) { ?>
+                            <h5 class="heading-light-<?php echo $options['subTitle-highlight'] ?>">
+                                <b>Dolor Sit Amet</b>
+                            </h4>
+                        <?php } else { ?>
+                            <h5 class="heading-light">Dolor Sit Amet</h4>
+                        <?php } ?>
                     </header>
                 </a>
                 <a
@@ -41,8 +65,19 @@
                     data-bg="<?php stockImage('demo/stock-'.rand(1, 25).'.jpg') ?>"
                 >
                     <header class="widget_header heading_group">
-                        <h4 class="heading-heavy-uppercase-size-4 font-2">Lorem Ipsum</h4>
-                        <h5 class="heading-light">Dolor Sit Amet</h4>
+                        <?php if ($options['title-highlight']) { ?>
+                            <h4 class="heading-heavy-uppercase-size-4-<?php echo $options['title-highlight'] ?> font-2">
+                                <b>Lorem Ipsum</b>
+                            </h4>
+                        <?php } else { ?>
+                            <h4 class="heading-heavy-uppercase-size-4 font-2">Lorem Ipsum</h4>
+                        <?php } if ($options['subTitle-highlight']) { ?>
+                            <h5 class="heading-light-<?php echo $options['subTitle-highlight'] ?>">
+                                <b>Dolor Sit Amet</b>
+                            </h4>
+                        <?php } else { ?>
+                            <h5 class="heading-light">Dolor Sit Amet</h4>
+                        <?php } ?>
                     </header>
                 </a>
             </div>
@@ -53,8 +88,19 @@
                     data-bg="<?php stockImage('demo/stock-'.rand(1, 25).'.jpg') ?>"
                 >
                     <header class="widget_header heading_group">
-                        <h4 class="heading-heavy-uppercase-size-4 font-2">Lorem Ipsum</h4>
-                        <h5 class="heading-light">Dolor Sit Amet</h4>
+                        <?php if ($options['title-highlight']) { ?>
+                            <h4 class="heading-heavy-uppercase-size-4-<?php echo $options['title-highlight'] ?> font-2">
+                                <b>Lorem Ipsum</b>
+                            </h4>
+                        <?php } else { ?>
+                            <h4 class="heading-heavy-uppercase-size-4 font-2">Lorem Ipsum</h4>
+                        <?php } if ($options['subTitle-highlight']) { ?>
+                            <h5 class="heading-light-<?php echo $options['subTitle-highlight'] ?>">
+                                <b>Dolor Sit Amet</b>
+                            </h4>
+                        <?php } else { ?>
+                            <h5 class="heading-light">Dolor Sit Amet</h4>
+                        <?php } ?>
                     </header>
                 </a>
             </div>

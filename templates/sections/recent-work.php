@@ -1,19 +1,35 @@
  <?php function recentWork($custom = array()) { ?>
 
     <?php  $options = array_merge(array(
-        'title'     => 'Our Portfolio',
-        'sub-title' => 'Some Recent Work',
         'items'     => 3,
         'item-link' => pageLink('blog/single.php', 'pages', false),
-        'id' => null
+        'id' => null,
+        'title' => array(
+            'content' => 'Our Portfolio',
+            'modifiers' => 'heading-uppercase-light-brand-1-spaced-size-4',
+            'highlight' => false
+        ),
+        'sub-title' => array(
+            'content' => 'Some Recent Work',
+            'modifiers' => 'heading-uppercase-heavy-size-7 font-2',
+            'highlight' => false
+        )
     ), $custom); ?>
 
     <section class="section-primary" <?php if ($options['id']) echo 'id="'.$options['id'].'"' ?>>
     
         <header class="heading_group-large text-center">
             <div class="container-small">
-                <h4 class="heading-uppercase-light-brand-1-spaced-size-4"><span><?php echo $options['title'] ?></span></h4>
-                <h2 class="heading-uppercase-heavy-size-7 font-2"><span><?php echo $options['sub-title'] ?></span></h2>
+                <h4 class="<?php echo $options['title']['modifiers'] ?>">
+                    <?php if ($options['title']['highlight']) { ?><b><?php } else { ?><span><?php } ?>
+                        <?php echo $options['title']['content'] ?>
+                    <?php if ($options['title']['highlight']) { ?></b><?php } else { ?></span><?php } ?>
+                </h4>
+                <h2 class="<?php echo $options['sub-title']['modifiers'] ?>">
+                    <?php if ($options['sub-title']['highlight']) { ?><b><?php } else { ?><span><?php } ?>
+                        <?php echo $options['sub-title']['content'] ?>
+                    <?php if ($options['sub-title']['highlight']) { ?></b><?php } else { ?></span><?php } ?>
+                </h2>
                 <div class="heading_icon">
                     <i class="fa fa-magic"></i>
                 </div>

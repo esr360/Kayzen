@@ -1,15 +1,32 @@
 <?php function shareTheLove($custom = array()) { ?>
 
     <?php $options = array_merge(array(
-        //'option' => 'VALUE'
+        'title' => array(
+            'content' => 'Share The Love',
+            'modifiers' => 'heading-uppercase-light-brand-1-spaced-size-4',
+            'highlight' => false
+        ),
+        'sub-title' => array(
+            'content' => 'We Are Social <i class="fa fa-heart heading-brand-1"></i>',
+            'modifiers' => 'heading-uppercase-heavy-size-6 font-2',
+            'highlight' => false
+        )
     ), $custom); ?>
  
     <section class="section-primary-dot-map">
         
         <header class="heading_group-large text-center">
             <div class="container-small">
-                <h4 class="heading-uppercase-light-brand-1-spaced-size-4"><span>Share The Love</span></h4>
-                <h2 class="heading-uppercase-heavy-size-6 font-2"><span>We Are Social <i class="fa fa-heart heading-brand-1"></i></span></h2>
+                <h4 class="<?php echo $options['title']['modifiers'] ?>">
+                    <?php if ($options['title']['highlight']) { ?><b><?php } else { ?><span><?php } ?>
+                        <?php echo $options['title']['content'] ?>
+                    <?php if ($options['title']['highlight']) { ?></b><?php } else { ?></span><?php } ?>
+                </h4>
+                <h2 class="<?php echo $options['sub-title']['modifiers'] ?>">
+                    <?php if ($options['sub-title']['highlight']) { ?><b><?php } else { ?><span><?php } ?>
+                        <?php echo $options['sub-title']['content'] ?>
+                    <?php if ($options['sub-title']['highlight']) { ?></b><?php } else { ?></span><?php } ?>
+                </h2>
                 <div class="heading_icon">
                     <i class="fa fa-link"></i>
                 </div>

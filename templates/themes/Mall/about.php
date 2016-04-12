@@ -37,17 +37,48 @@
                 'tag-line' => $tagLine
             ));
             
-            earthSlider();
+            earthSlider(array(
+                'title' => array(
+                    'modifiers' => 'heading-uppercase-light-brand-1-size-5-highlight',
+                    'highlight' => true
+                ),
+                'sub-title' => array(
+                    'modifiers' => 'heading-uppercase-heavy-size-6 font-2-highlight-dark font-2',
+                    'highlight' => true
+                )
+            ));
     
             skills();
             
-            whyChooseUs();
+            whyChooseUs(array(
+                'title' => array(
+                    'content' => 'Why Choose Us',
+                    'modifiers' => 'heading-uppercase-light-brand-1-size-5-highlight',
+                    'highlight' => true
+                ),
+                'sub-title' => array(
+                    'content' => 'We Thrive On Success',
+                    'modifiers' => 'heading-uppercase-heavy-size-6-highlight-dark font-2',
+                    'highlight' => true
+                )
+            ));
             
             promoBanner(array(
                 'cta-modifiers' => '-oval'
             ));
             
-            ourTeam();
+            ourTeam(array(
+                'title' => array(
+                    'content' => 'Our Team',
+                    'modifiers' => 'heading-uppercase-light-brand-1-size-5-highlight',
+                    'highlight' => true
+                ),
+                'sub-title' => array(
+                    'content' => 'Meet Our Crazy Team',
+                    'modifiers' => 'heading-uppercase-heavy-size-6 font-2-highlight-dark font-2',
+                    'highlight' => true
+                )
+            ));
             
             clients();
             
@@ -58,7 +89,17 @@
             statistics();
     
             recentWork(array(
-                'item-link' => themeLink($theme, '/portfolio-single.php')
+                'item-link' => themeLink($theme, '/portfolio-single.php'),
+                'title' => array(
+                    'content' => 'Our Portfolio',
+                    'modifiers' => 'heading-uppercase-light-brand-1-size-5-highlight',
+                    'highlight' => true
+                ),
+                'sub-title' => array(
+                    'content' => 'Some Recent Work',
+                    'modifiers' => 'heading-uppercase-heavy-size-6-highlight-dark font-2',
+                    'highlight' => true
+                )
             ));
             
             googleMap();

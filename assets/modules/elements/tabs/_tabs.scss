@@ -18,7 +18,7 @@
         'navItem-transition'         : base('transition'),
         'navItem-color'              : base('text-color'),
         'navItem-background'         : transparent,
-        'navItem-radius'             : 0,
+        'navItem-radius'             : 0.6em,
         'navItem-padding'            : 0.75em 1.25em,
         'navItem-borderColor'        : color('greyscale', 'grey-3'),
         'navItem-hover-color'        : color('greyscale', 'grey-5'),
@@ -77,7 +77,7 @@
                 &:not(:last-child) {
                     border-right: none;
                 }
-                @if not (this('navItem-radius') == 0) {
+                @include modifier('oval') {
                     &:first-child {
                         border-radius: this('navItem-radius') 0 0 this('navItem-radius');
                     }

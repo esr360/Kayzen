@@ -1,7 +1,7 @@
  <?php function featureCards($custom = array()) { ?>
 
     <?php $options = array_merge(array(
-        //'option' => 'VALUE'
+        'cta-modifiers' => ''
     ), $custom); ?>
     
     <section class="section-primary">
@@ -28,7 +28,7 @@
                             <h4 class="heading-light-uppercase-brand-1">Donec finibus fringer</h4>
                         </header>
                         <p>
-                            <a href="#" class="button-border">Shop Now</a>
+                            <a href="#" class="button-border<?php echo $options['cta-modifiers'] ?>">Shop Now</a>
                         </p>
                     </div>
                 </div>
@@ -53,7 +53,7 @@
                             <h4 class="heading-light-uppercase-brand-1">Donec finibus fringer</h4>
                         </header>
                         <p>
-                            <a href="#" class="button-border">See Collection</a>
+                            <a href="#" class="button-border<?php echo $options['cta-modifiers'] ?>">See Collection</a>
                         </p>
                     </div>
                 </div>
@@ -78,7 +78,7 @@
                             <h4 class="heading-light-uppercase-brand-1">Donec finibus fringer</h4>
                         </header>
                         <p>
-                            <a href="#" class="button-border">Watch Video</a>
+                            <a href="#" class="button-border<?php echo $options['cta-modifiers'] ?>">Watch Video</a>
                         </p>
                     </div>
                 </div>

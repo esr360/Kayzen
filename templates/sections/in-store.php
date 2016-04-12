@@ -2,7 +2,17 @@
 
     <?php $options = array_merge(array(
         'link' => pageLink('further/shop-single.php', 'pages', false),
-        'root' => pageLink('further/shop-category.php', 'pages', false)
+        'root' => pageLink('further/shop-category.php', 'pages', false),
+        'title' => array(
+            'content' => 'In Store',
+            'modifiers' => 'heading-uppercase-light-brand-1-spaced-size-4',
+            'highlight' => false
+        ),
+        'sub-title' => array(
+            'content' => 'Shop Til You Drop',
+            'modifiers' => 'heading-uppercase-heavy-size-7 font-2',
+            'highlight' => false
+        )
     ), $custom); ?>
         
     <section 
@@ -12,8 +22,16 @@
 
         <header class="heading_group-large text-center">
             <div class="container-small">
-                <h4 class="heading-uppercase-light-brand-1-spaced-size-4"><span>In Store</span></h4>
-                <h2 class="heading-uppercase-heavy-size-7 font-2"><span>Shop Til You Drop</span></h2>
+                <h4 class="<?php echo $options['title']['modifiers'] ?>">
+                    <?php if ($options['title']['highlight']) { ?><b><?php } else { ?><span><?php } ?>
+                        <?php echo $options['title']['content'] ?>
+                    <?php if ($options['title']['highlight']) { ?></b><?php } else { ?></span><?php } ?>
+                </h4>
+                <h2 class="<?php echo $options['sub-title']['modifiers'] ?>">
+                    <?php if ($options['sub-title']['highlight']) { ?><b><?php } else { ?><span><?php } ?>
+                        <?php echo $options['sub-title']['content'] ?>
+                    <?php if ($options['sub-title']['highlight']) { ?></b><?php } else { ?></span><?php } ?>
+                </h2>
                 <div class="heading_icon">
                     <i class="fa fa-magic"></i>
                 </div>

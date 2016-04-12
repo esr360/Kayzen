@@ -62,7 +62,10 @@
             
             function sideHeader() {
                 
-                header.prependTo('body');
+                // if the header is not correctly located in the DOM, make it so
+                if (!$('body > [class*="app-header"]').length) {
+                    header.prependTo('body');
+                }
                 
                 // replace navigation class
                 $(_navigation).removeClass (function (index, css) {
