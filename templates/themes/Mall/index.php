@@ -61,6 +61,7 @@
             ));
         
             inStore(array(
+                'tabs_nav_item-modifiers' => '-round',
                 'title' => array(
                     'content' => 'In Store',
                     'modifiers' => 'heading-uppercase-light-brand-1-size-5-highlight',

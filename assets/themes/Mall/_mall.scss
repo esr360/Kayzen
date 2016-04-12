@@ -54,7 +54,7 @@
 	@include tables;
     
 	@include tabs((
-        'navItem-radius' : 0.6em
+        'navItem-radius' : 0.4em
     ));
     
 	@include thumbnails;
@@ -95,7 +95,9 @@
 	@include logo;
 	
 	@include navigation((
-		'link-color' : color('greyscale', 'white')
+		'link-color'   : color('greyscale', 'white'),
+        'item-radius'  : 1.5em,
+        'item-padding' : 0.5rem 1rem
 	));
 	
 	@include mega-menu;

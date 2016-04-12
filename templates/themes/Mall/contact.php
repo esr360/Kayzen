@@ -35,7 +35,18 @@
                 'tag-line' => $tagLine
             ));
             
-            contactUs();
+            contactUs(array(
+                'title' => array(
+                    'content' => 'Contact Us',
+                    'modifiers' => 'heading-uppercase-light-brand-1-size-5-highlight',
+                    'highlight' => true
+                ),
+                'sub-title' => array(
+                    'content' => 'Get in Touch',
+                    'modifiers' => 'heading-uppercase-heavy-size-6-highlight-dark font-2',
+                    'highlight' => true
+                )
+            ));
             
         ?>
         

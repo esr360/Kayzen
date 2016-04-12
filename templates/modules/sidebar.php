@@ -2,12 +2,13 @@
 
     <?php $options = array_merge(array(
         'type' => 'blog',
-        'category' => pageLink('blog/classic/3-cols-filterable.php', 'pages', false)
+        'category' => pageLink('blog/classic/3-cols-filterable.php', 'pages', false),
+        'tabs_nav-modifiers' => ''
     ), $custom); ?>
     
     <div class="tabs">
     
-        <ul class="tabs_nav">
+        <ul class="tabs_nav<?php echo $options['tabs_nav-modifiers'] ?>">
             <li class="tabs_nav_item active">Latest</li>
             <li class="tabs_nav_item">Popular</li>
             <li class="tabs_nav_item">Comments</li>

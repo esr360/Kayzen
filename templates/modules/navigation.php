@@ -64,7 +64,7 @@
                     <ul class="mega-menu row">
                         
                         <li class="span-3">
-                            <h3 class="mega-menu_title heading">Business/Corporate</h3>
+                            <h3 class="mega-menu_title heading">General/Multipurpose</h3>
                             <ul class="list-divider">
                                 
                                 <!-- Theme 1 -->

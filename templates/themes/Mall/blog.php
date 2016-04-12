@@ -53,57 +53,64 @@
                                 
                                 articleItem(array(
                                     'link'  => themeLink($theme, '/blog-single.php'),
-                                    'root'  => themeLink($theme, '/blog.php')
+                                    'root'  => themeLink($theme, '/blog.php'),
+                                    'cta-modifiers' => '-oval'
                                 ));
                                 
                                 articleItem(array(
                                     'media' => 'vimeo',
                                     'link'  => themeLink($theme, '/blog-single.php'),
-                                    'root'  => themeLink($theme, '/blog.php')
+                                    'root'  => themeLink($theme, '/blog.php'),
+                                    'cta-modifiers' => '-oval'
                                 ));
                                 
                                 articleItem(array(
                                     'media' => 'youtube',
                                     'link'  => themeLink($theme, '/blog-single.php'),
-                                    'root'  => themeLink($theme, '/blog.php')
+                                    'root'  => themeLink($theme, '/blog.php'),
+                                    'cta-modifiers' => '-oval'
                                 ));
                                 
                                 articleItem(array(
                                     'media' => 'carousel',
                                     'link'  => themeLink($theme, '/blog-single.php'),
-                                    'root'  => themeLink($theme, '/blog.php')
+                                    'root'  => themeLink($theme, '/blog.php'),
+                                    'cta-modifiers' => '-oval'
                                 ));
                                 
                                 articleItem(array(
                                     'media' => 'masonry',
                                     'link'  => themeLink($theme, '/blog-single.php'),
-                                    'root'  => themeLink($theme, '/blog.php')
+                                    'root'  => themeLink($theme, '/blog.php'),
+                                    'cta-modifiers' => '-oval'
                                 ));
                                 
                                 articleItem(array(
                                     'media' => 'audio',
                                     'link'  => themeLink($theme, '/blog-single.php'),
-                                    'root'  => themeLink($theme, '/blog.php')
+                                    'root'  => themeLink($theme, '/blog.php'),
+                                    'cta-modifiers' => '-oval'
                                 ));
                                 
                                 articleItem(array(
                                     'media' => 'codepen',
                                     'link'  => themeLink($theme, '/blog-single.php'),
-                                    'root'  => themeLink($theme, '/blog.php')
+                                    'root'  => themeLink($theme, '/blog.php'),
+                                    'cta-modifiers' => '-oval'
                                 ));
                                 
                             ?> 
                         
                         </div> 
                 
-                        <ul class="pagination tabs_nav-pills">
-                            <li class="tabs_nav_item"><i class="fa fa-angle-left"></i></li>
+                        <ul class="pagination tabs_nav-pills-center">
+                            <li class="tabs_nav_item-round"><i class="fa fa-angle-left"></i></li>
                             <li class="tabs_nav_item">1</li>
                             <li class="tabs_nav_item active">2</li>
                             <li class="tabs_nav_item">3</li>
                             <li class="tabs_nav_item">...</li>
                             <li class="tabs_nav_item">10</li>
-                            <li class="tabs_nav_item"><i class="fa fa-angle-right"></i></li>
+                            <li class="tabs_nav_item-round"><i class="fa fa-angle-right"></i></li>
                         </ul>
                     
                         <script>
@@ -128,7 +135,9 @@
                     
 					<aside class="sidebar span-4">
     
-                        <?php sidebar(); ?>
+                        <?php sidebar(array(
+                            'tabs_nav-modifiers' => '-round'
+                        )); ?>
 						
 					</aside><!-- sidebar -->
 					

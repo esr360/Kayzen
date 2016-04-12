@@ -107,7 +107,9 @@
                 
 					<aside class="sidebar span-4">
     
-                        <?php sidebar(); ?>
+                        <?php sidebar(array(
+                            'tabs_nav-modifiers' => '-round'
+                        )); ?>
 						
 					</aside><!-- sidebar -->
 					
@@ -119,7 +121,9 @@
 		
 		<?php 
         
-            promoBanner();
+            promoBanner(array(
+                'cta-modifiers' => '-oval'
+            ));
             
             appFooter();
         

@@ -3,6 +3,7 @@
     <?php $options = array_merge(array(
         'link' => pageLink('further/shop-single.php', 'pages', false),
         'root' => pageLink('further/shop-category.php', 'pages', false),
+        'tabs_nav_item-modifiers' => '',
         'title' => array(
             'content' => 'In Store',
             'modifiers' => 'heading-uppercase-light-brand-1-spaced-size-4',
@@ -43,9 +44,9 @@
             <div class="tabs">
                 
                 <ul class="tabs_nav-pills-large-center">
-                    <li class="tabs_nav_item active">New Arrivals</li>
-                    <li class="tabs_nav_item">Best Sellers</li>
-                    <li class="tabs_nav_item">On Offer</li>
+                    <li class="tabs_nav_item<?php echo $options['tabs_nav_item-modifiers']?> active">New Arrivals</li>
+                    <li class="tabs_nav_item<?php echo $options['tabs_nav_item-modifiers']?>">Best Sellers</li>
+                    <li class="tabs_nav_item<?php echo $options['tabs_nav_item-modifiers']?>">On Offer</li>
                 </ul>
                 
                 <section class="tabs_item active">    

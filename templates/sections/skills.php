@@ -1,7 +1,17 @@
 <?php function skills($custom = array()) { ?>
 
     <?php $options = array_merge(array(
-        'cta-modifiers'   => null
+        'cta-modifiers'   => null,
+        'title' => array(
+            'content' => 'Kayzen is the Best',
+            'modifiers' => 'heading-heavy-size-5-uppercase font-2',
+            'highlight' => false
+        ),
+        'sub-title' => array(
+            'content' => 'A Modern Template For Any Project',
+            'modifiers' => 'heading-light-brand-1-size-4',
+            'highlight' => false
+        )
     ), $custom); ?>
     
     <section 
@@ -14,8 +24,16 @@
             <div class="row">
                 <div class="span-6">
                     <header class="heading_group">
-                        <h2 class="heading-heavy-size-5-uppercase font-2">Kayzen is the Best</h2>
-                        <h3 class="heading-light-brand-1-size-4">A Modern Template For Any Project</h3>
+                        <h2 class="<?php echo $options['title']['modifiers'] ?>">
+                            <?php if ($options['title']['highlight']) { ?><b><?php } else { ?><span><?php } ?>
+                                <?php echo $options['title']['content'] ?>
+                            <?php if ($options['title']['highlight']) { ?></b><?php } else { ?></span><?php } ?>
+                        </h2>
+                        <h3 class="<?php echo $options['sub-title']['modifiers'] ?>">
+                            <?php if ($options['sub-title']['highlight']) { ?><b><?php } else { ?><span><?php } ?>
+                                <?php echo $options['sub-title']['content'] ?>
+                            <?php if ($options['sub-title']['highlight']) { ?></b><?php } else { ?></span><?php } ?>
+                        </h3>
                     </header>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus eget porta eros. Suspendisse vehicula massa in erat mattis.</p>
                     <ul class="list-arrow min-break-2">

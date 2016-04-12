@@ -48,7 +48,19 @@
                 )
             ));
     
-            skills();
+            skills(array(
+                'cta-modifiers' => '-oval',
+                'title' => array(
+                    'content' => 'Kayzen is the Best',
+                    'modifiers' => 'heading-heavy-size-3-uppercase-highlight-dark font-2',
+                    'highlight' => true
+                ),
+                'sub-title' => array(
+                    'content' => 'A Modern Template For Any Project',
+                    'modifiers' => 'heading-light-brand-1-size-4-highlight',
+                    'highlight' => true
+                )
+            ));
             
             whyChooseUs(array(
                 'title' => array(
@@ -80,10 +92,31 @@
                 )
             ));
             
-            clients();
+            clients(array(
+                'title' => array(
+                    'content' => 'Popular Brands',
+                    'modifiers' => 'heading-uppercase-light-brand-1-size-3-highlight',
+                    'highlight' => true
+                ),
+                'sub-title' => array(
+                    'content' => 'Get The Best Deals',
+                    'modifiers' => 'heading-uppercase-heavy-size-5-highlight-dark font-2',
+                    'highlight' => true
+                )
+            ));
             
             promoSection(array(
-                'cta-modifiers' => '-oval'
+                'cta-modifiers' => '-oval',
+                'title' => array(
+                    'content' => 'Kayzen is the Best',
+                    'modifiers' => 'heading-heavy-size-3-uppercase-highlight-dark font-2',
+                    'highlight' => true
+                ),
+                'sub-title' => array(
+                    'content' => 'A Modern Template For Any Project',
+                    'modifiers' => 'heading-light-brand-1-size-4-highlight',
+                    'highlight' => true
+                )
             ));
         
             statistics();

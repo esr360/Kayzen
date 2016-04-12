@@ -115,7 +115,7 @@
                                 
                             <div class="tabs">
                 
-                                <ul class="tabs_nav">
+                                <ul class="tabs_nav-round">
                                     <li class="tabs_nav_item active"><i class="fa fa-comments"></i> Reviews</li>
                                     <li class="tabs_nav_item"><i class="fa fa-truck"></i> Delivery</li>
                                     <li class="tabs_nav_item"><i class="fa fa-refresh"></i> Returns</li>
