@@ -6,6 +6,7 @@
             
             'type'          => 'blog',
             'media'         => 'image',
+            'blurb'         => null,
             'link'          => pageLink('blog/single.php', 'pages', false),
             'root'          => pageLink('blog/classic/3-cols.php', 'pages', false),
             'widget'        => true,
@@ -121,9 +122,11 @@
                     <?php if($options['matrix'] && $options['maskTitle']) { ?>
                         <header class="thumbnail_title heading_group">
                             <?php if ($options['size'] === 'small') { ?>
-                                <h4 class="heading">Lorem Ipsum</h4>
+                                <h4 class="heading"><a href="<?php echo $options['link'] ?>">Lorem Ipsum</a></h4>
                             <?php } else { ?>
-                                <h4 class="heading-heavy-size-4 font-2">Lorem Ipsum</h4>
+                                <h4 class="heading-heavy-size-4 font-2">
+                                    <a href="<?php echo $options['link'] ?>">Lorem Ipsum</a>
+                                </h4>
                                 <h5 class="heading-light">Cras dictum erat id tortor ornare.</h5>
                             <?php } ?>
                         </header>
@@ -261,12 +264,12 @@
         <?php // Article Title (Portfolio) ?>
         <?php if ($options['type'] === 'portfolio' && !$options['matrix'] && !empty($options['span'])) { ?>
         
-            <div class="widget_content text-center">
+            <a href="<?php echo $options['link'] ?>" class="widget_content text-center">
                 <header class="heading_group">
                     <h3 class="heading-heavy-size-3"><?php echo $options['title'] ?></h3>
                     <h4 class="heading-light-uppercase-brand-1-size-2">Donec finibus fringer</h4>
                 </header>
-            </div>
+            </a>
             
         <?php } ?>
         
@@ -292,10 +295,14 @@
             </header>
         
             <?php // Article Blurb ?>
-            <?php if (!empty($options['span'])) { ?>
-                <p class="blurb">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis blandit lectus ex, id feugiat felis consequat id. Nunc vel quam luctus, maximus justo eget...</p>
+            <?php if ($options['blurb']) { ?>
+                <p class="blurb"><?php echo $options['blurb'] ?></p>
             <?php } else { ?>
-                <p class="blurb">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis blandit lectus ex, id feugiat felis consequat id. Nunc vel quam luctus, maximus justo eget, laoreet massa. Maecenas congue sit amet ex quis egestas. Aliquam sapien sapien, dignissim ut tellus in...</p>
+                <?php if (!empty($options['span'])) { ?>
+                    <p class="blurb">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis blandit lectus ex, id feugiat felis consequat id. Nunc vel quam luctus, maximus justo eget...</p>
+                <?php } else { ?>
+                    <p class="blurb">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis blandit lectus ex, id feugiat felis consequat id. Nunc vel quam luctus, maximus justo eget, laoreet massa. Maecenas congue sit amet ex quis egestas. Aliquam sapien sapien, dignissim ut tellus in...</p>
+                <?php } ?>
             <?php } ?>
                 
         <?php } ?>

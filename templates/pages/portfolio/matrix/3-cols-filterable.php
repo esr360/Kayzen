@@ -33,10 +33,10 @@
 		<section class="section-primary relative">
             
 			<ul class="tabs_nav-pills-center-large min-break-2" id="portfolio-categories">
-				<li class="button-pill-grey-1-round active" data-filter="*">View All</li>
-				<li class="button-pill-grey-1-round" data-filter="[data-HTML-theme]">HTML Themes</li>
-				<li class="button-pill-grey-1-round" data-filter="[data-photography]">Photography</li>
-				<li class="button-pill-grey-1-round" data-filter="[data-logo]">Logos</li>
+				<li class="tabs_nav_item active" data-filter="*">View All</li>
+				<li class="tabs_nav_item" data-filter="[data-HTML-theme]">HTML Themes</li>
+				<li class="tabs_nav_item" data-filter="[data-photography]">Photography</li>
+				<li class="tabs_nav_item" data-filter="[data-logo]">Logos</li>
 			</ul>
                 
             <div class="container">

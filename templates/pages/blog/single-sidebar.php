@@ -63,9 +63,8 @@
                                     'title'         => 'Kayzen is Released',
                                     'cta-modifiers' => '-oval',
                                     'span'          => 4,
-                                    'link'          => themeLink($theme, '/blog-single.php'),
-                                    'root'          => themeLink($theme, '/blog.php'),
-                                    'class'         => 'break-4-half break-2-full relative'
+                                    'class'         => 'break-4-half break-2-full relative',
+                                    'blurb'         => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis blandit lectus ex, id feugiat...'
                                 ));
                             
                                 articleItem(array(
@@ -73,9 +72,8 @@
                                     'title'         => 'Kayzen is Released',
                                     'cta-modifiers' => '-oval',
                                     'span'          => 4,
-                                    'link'          => themeLink($theme, '/blog-single.php'),
-                                    'root'          => themeLink($theme, '/blog.php'),
-                                    'class'         => 'break-4-half break-2-full relative'
+                                    'class'         => 'break-4-half break-2-full relative',
+                                    'blurb'         => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis blandit lectus ex, id feugiat...'
                                 ));
                             
                                 articleItem(array(
@@ -83,9 +81,8 @@
                                     'title'         => 'Kayzen is Released',
                                     'cta-modifiers' => '-oval',
                                     'span'          => 4,
-                                    'link'          => themeLink($theme, '/blog-single.php'),
-                                    'root'          => themeLink($theme, '/blog.php'),
-                                    'class'         => 'min-break-4 relative'
+                                    'class'         => 'min-break-4 relative',
+                                    'blurb'         => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis blandit lectus ex, id feugiat...'
                                 ));
                                 
                             ?>

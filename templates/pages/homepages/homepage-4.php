@@ -38,7 +38,7 @@
 					</h3>
 					<div class="button_group">
 						<a class="button-size-4-grey-6" href="#">Purchase Now</a>
-						<a class="button-size-4-grey-6" href="#">Explore The Potential</a>
+						<a class="button-size-4-primary" href="#">Explore The Potential</a>
 					</div>
 				</div>
 			</div>

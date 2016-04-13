@@ -25,7 +25,7 @@
             ));
         
             masonryFeatures(array(
-                'background' => true
+                'background' => '/images/billboard-2.jpg',
             ));
             
         ?>

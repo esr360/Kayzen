@@ -181,6 +181,14 @@
                     color: this('mask-title-color');
                 }
             }
+            @include overwrite('heading') {
+                a {
+                    color: inherit;
+                    &:hover {
+                        color: inherit;
+                    }
+                }
+            }
             @include context('parent-hovered') {
                 opacity: 1;
                 &:before {

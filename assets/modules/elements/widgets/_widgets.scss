@@ -179,6 +179,14 @@
         
         @include modifier('card') {
             position: relative;
+            @include overwrite('heading') {
+                a {
+                    border-bottom: 1px dotted transparent;
+                    &:hover {
+                        border-bottom-color: inherit;
+                    }
+                }
+            }
             @include overwrite-component('content') {
                 border: 1px solid rgba(black, 0.1);
                 border-top: 0;
@@ -259,16 +267,8 @@
             &:nth-child(4) {
                 background: lighten(color('brand', 'primary'), 6%);
             }
-            @include overwrite('button') {
-                color: rgba(white, 0.5);
-            }
             @include overwrite-component('group', $parent: 'heading') {
                 color: color('greyscale', 'white');
-            }
-            &:hover {
-                @include overwrite('button') {
-                    color: color('greyscale', 'white');
-                }
             }
             @include modifier('large') {
                 padding: this('spectrum-quarter-large-padding');
@@ -421,6 +421,15 @@
                     margin-top: (base('margin') / 2);
                 }
             }
+        }
+        
+        //---------------------------------------------------------
+        // Content
+        //---------------------------------------------------------
+        
+        @include component('content') {
+            display: block;
+            transition: base('transition');
         }
         
         //---------------------------------------------------------

@@ -106,13 +106,6 @@
 			    padding: 4em 0;
             }
 		}
-        
-        @include overwrite($not: 'small') {
-            & > & {
-                max-width: none;
-                width: auto;
-            }
-        }
 	
 	} // module('container')
 
