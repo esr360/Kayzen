@@ -472,6 +472,12 @@
             @include modifier('inline') {
                 margin-right: 0.5rem;
             }
+            @include modifier('light') {
+                color: rgba(white, 0.4);
+                @include context('parent-hovered') {
+                    color: white;
+                }
+            }
             @include context('parent-hovered') {
                 color: color('brand', 'primary');
             }

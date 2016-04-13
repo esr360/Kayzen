@@ -9,7 +9,7 @@
         
         <!-- Statistic 1 -->
         <div class="widget-spectrum-quarter span-3 break-3-half break-2-full">
-            <div class="widget_icon button-icon-plain-size-8">
+            <div class="widget_icon-light button-icon-plain-size-8">
                 <i class="fa fa-code"></i>
             </div>
             <header class="widget_header heading_group">
@@ -20,7 +20,7 @@
         
         <!-- Statistic 2 -->
         <div class="widget-spectrum-quarter span-3 break-3-half break-2-full">
-            <div class="widget_icon button-icon-plain-size-8">
+            <div class="widget_icon-light button-icon-plain-size-8">
                 <i class="fa fa-desktop"></i>
             </div>
             <header class="widget_header heading_group">
@@ -31,7 +31,7 @@
         
         <!-- Statistic 3 -->
         <div class="widget-spectrum-quarter span-3 break-3-half break-2-full">
-            <div class="widget_icon button-icon-plain-size-8">
+            <div class="widget_icon-light button-icon-plain-size-8">
                 <i class="fa fa-users"></i>
             </div>
             <header class="widget_header heading_group">
@@ -42,7 +42,7 @@
         
         <!-- Statistic 4 -->
         <div class="widget-spectrum-quarter span-3 break-3-half break-2-full">
-            <div class="widget_icon button-icon-plain-size-8">
+            <div class="widget_icon-light button-icon-plain-size-8">
                 <i class="fa fa-desktop"></i>
             </div>
             <header class="widget_header heading_group">
