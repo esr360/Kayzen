@@ -20,15 +20,17 @@
             topbar();
 
             appHeader(array(
-                'modifiers' => 'bar-absolute-dark-sticky'
+                'modifiers' => 'bar-brand'
             ));
             
         ?>
         
-        <div class="billboard-full-screen-map">
-            <?php googleMap(array(
-                'size' => 'large'
-            )); ?>
+        <div class="section-primary" style="background-image: url(<?php echo appDir ?>/images/billboard-2.jpg);">
+            <div class="container">
+                <?php googleMap(array(
+                    'size' => 'large'
+                )); ?>
+            </div>
         </div>
     
         <section class="section">
