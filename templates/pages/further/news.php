@@ -157,80 +157,30 @@
 								
 						<!-- Featured Articles -->
 								
-						<div class="row stack-break-2 row-waffle-large">
-							
-							<div class="span-6 relative">	
-								<div class="thumbnail-zoom">
-									<div class="thumbnail_mask">
-										<div class="thumbnail_controls button_group-small">
-											<a href="<?php stockImage('demo/stock-7.jpg') ?>" class="button-icon-border-circle-size-2" rel="lightbox">
-												<i class="fa fa-search"></i>
-											</a>
-											<a href="#" class="button-icon-border-circle-size-2">
-												<i class="fa fa-link"></i>
-											</a>
-										</div>
-									</div>
-									<img src="<?php stockImage('demo/stock-7.jpg') ?>">
-								</div>
-								<div class="thumbnail-profile-round-badge">
-									<img src="<?php stockImage('team/team-2.jpg') ?>" alt="">
-								</div>
-								<header class="heading_group">
-									<div class="heading_date">
-										<div>Sep</div>
-										<div>23</div>
-									</div>
-									<h3 class="heading-heavy-size-4">Kayzen is Released</h3>
-									<h4 class="heading-light-size-3">Posted by <a href="#">Naomi Olson</a></h4>
-								</header>
-								<p>Cum socis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec finibus fringilla purus. Integer libero justo, mattis et magna eget...</p>
-								<div class="row stack-0">
-									<div class="span-6 va-middle">
-										<a href="#" class="button-oval-primary">Read More</a>
-									</div>
-									<div class="span-6 va-middle text-right">
-										<small>Posted in <a href="blog.html">Web Design</a></small>
-									</div>
-								</div>
-							</div>
-							
-							<div class="span-6 relative">	
-								<div class="thumbnail-zoom">
-									<div class="thumbnail_controls thumbnail_mask">
-										<div class="button_group-small">
-											<a href="<?php stockImage('demo/stock-5.jpg') ?>" class="button-icon-border-circle-size-2" rel="lightbox">
-												<i class="fa fa-search"></i>
-											</a>
-											<a href="#" class="button-icon-border-circle-size-2">
-												<i class="fa fa-link"></i>
-											</a>
-										</div>
-									</div>
-									<img src="<?php stockImage('demo/stock-5.jpg') ?>">
-								</div>
-								<div class="thumbnail-profile-round-badge">
-									<img src="<?php stockImage('team/team-2.jpg') ?>" alt="">
-								</div>
-								<header class="heading_group">
-									<div class="heading_date">
-										<div>Sep</div>
-										<div>23</div>
-									</div>
-									<h3 class="heading-heavy-size-4">Kayzen is Released</h3>
-									<h4 class="heading-light-size-3">Posted by <a href="#">Naomi Olson</a></h4>
-								</header>
-								<p>Cum socis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec finibus fringilla purus. Integer libero justo, mattis et magna eget...</p>
-								<div class="row stack-0">
-									<div class="span-6 va-middle">
-										<a href="#" class="button-oval-primary">Read More</a>
-									</div>
-									<div class="span-6 va-middle text-right">
-										<small>Posted in <a href="blog.html">Web Design</a></small>
-									</div>
-								</div>
-							</div>
-							
+						<div class="row stack-break-2 row-waffle-large">	
+                            
+                            <?php
+                
+                                articleItem(array(
+                                    'title'         => 'Kayzen is Released',
+                                    'cta-modifiers' => '-oval',
+                                    'span'          => 6,
+                                    'author-thumb'  => true,
+                                    'widget'        => false,
+                                    'class'         => 'break-3-half break-2-full relative'
+                                ));
+                            
+                                articleItem(array(
+                                    'title'         => 'Kayzen is Released',
+                                    'cta-modifiers' => '-oval',
+                                    'span'          => 6,
+                                    'author-thumb'  => true,
+                                    'widget'        => false,
+                                    'class'         => 'break-3-half break-2-full relative'
+                                ));
+                                
+							?>
+                            
 						</div><!-- row -->
 						
 						<hr class="hrule-stripes-large" />

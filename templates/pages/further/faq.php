@@ -36,11 +36,11 @@
                 <div class="tabs">
                     
                     <ul class="tabs_nav-pills-large-center min-break-2">
-                        <li class="button-pill-grey-1-round active">View All</li>
-                        <li class="button-pill-grey-1-round">Pre-purchase</li>
-                        <li class="button-pill-grey-1-round">Installation</li>
-                        <li class="button-pill-grey-1-round">Downloading</li>
-                        <li class="button-pill-grey-1-round">Refunds</li>
+                        <li class="tabs_nav_item active">View All</li>
+                        <li class="tabs_nav_item">Pre-purchase</li>
+                        <li class="tabs_nav_item">Installation</li>
+                        <li class="tabs_nav_item">Downloading</li>
+                        <li class="tabs_nav_item">Refunds</li>
                     </ul>
             
                     <section class="tabs_item active">   
