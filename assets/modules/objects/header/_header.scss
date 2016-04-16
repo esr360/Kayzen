@@ -187,11 +187,6 @@
                         height: this('sticky', 'logo-height');
                     }
                 }
-                @include modifier('absolute', 'not') {
-                    @include overwrite('billboard', $special: 'adjacent-sibling') {
-                        margin-top: this('sticky', 'height');
-                    }
-                }
             }
         }
         

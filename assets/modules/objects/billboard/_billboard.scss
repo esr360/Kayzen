@@ -33,14 +33,14 @@
     // Core Styles
     //-------------------------------------------------------------
 
-        min-height: option($config, 'min-height');
-        background-color: option($config, 'bg-color');
+        min-height: this('min-height');
+        background-color: this('bg-color');
         position: relative;
         padding: 6em 0;
         
         // only apply a bg image if there is one to apply
-        @if option($config, bg-image) != "" {
-            background-image: url(option($config, 'bg-image'));
+        @if this('bg-image') != "" {
+            background-image: url(this('bg-image'));
             background-size: cover;
         }
 	
@@ -62,7 +62,7 @@
         // Conditionals
         //---------------------------------------------------------
         
-        @if option($config, 'full-screen') {
+        @if this('full-screen') {
             
             height: calc(100% - #{option($header, 'height')});
             height: calc(100vh - #{option($header, 'height')});
@@ -210,8 +210,8 @@
         
         @include option('overlay') {
             @include bg-overlay(rgba(
-                option($config, 'overlay-color'), 
-                option($config, 'overlay-opacity')
+                this('overlay-color'), 
+                this('overlay-opacity')
             ));
         }
 
@@ -227,8 +227,8 @@
     //-------------------------------------------------------------
 
         @include component('wrapper') {
-            color: option($config, 'color');
-            text-align: option($config, 'text-align');
+            color: this('color');
+            text-align: this('text-align');
             @extend %horizontal-center;
             @include vertical-center(absolute);
             @at-root {

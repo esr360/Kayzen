@@ -50,7 +50,7 @@
     // Core Styles
     //-------------------------------------------------------------
         
-        font-size: option($config, 'font-size');
+        font-size: this('font-size');
         
         // all levels
         li {    
@@ -101,14 +101,14 @@
 
                 &:hover {
                     > a {
-                        color: option($config, 'link-hover-color');
-                        background: option($config, 'item-hover-bg');
-                        border: option($config, 'item-hover-border');
+                        color: this('link-hover-color');
+                        background: this('item-hover-bg');
+                        border: this('item-hover-border');
                         // if item has child menu
                         &:not(:only-child) {
-                            color: option($config, 'has-child-hover-color');
-                            background: option($config, 'has-child-hover-bg');
-                            border: option($config, 'has-child-hover-border');
+                            color: this('has-child-hover-color');
+                            background: this('has-child-hover-bg');
+                            border: this('has-child-hover-border');
                             border-bottom-color: transparent;
                         }
                     }
@@ -116,7 +116,7 @@
 
                 &.active {
                     > a {
-                        color: option($config, 'link-active-color');
+                        color: this('link-active-color');
                     }
                     &:hover {
                         // if item is active and hovered
@@ -130,7 +130,7 @@
 
         // Larger Resolutions
         @media (min-width: breakpoint('break-3')) {
-            text-align: option($config, 'text-align');
+            text-align: this('text-align');
             > ul {
                 display: inline-block;
                 > li {

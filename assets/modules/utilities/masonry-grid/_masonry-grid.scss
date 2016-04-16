@@ -22,8 +22,8 @@
         @extend .object;
         position: relative;
         display: block;
-        width: calc(100% + (#{option($config, 'spacing')} * 2));
-        left: - option($config, 'spacing');
+        width: calc(100% + (#{this('spacing')} * 2));
+        left: - this('spacing');
         &:after {
             content: "";
             clear: both;

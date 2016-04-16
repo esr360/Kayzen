@@ -26,7 +26,6 @@
             $(this).click(function() {
                 $(options.container).addClass(options.visibleClass);
                 $(options.container).find(options.input).focus();
-                return false;
             });
                         
             $(options.closeTrigger).click(function() {

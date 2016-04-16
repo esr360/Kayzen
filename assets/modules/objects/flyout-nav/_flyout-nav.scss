@@ -22,7 +22,8 @@
             'enabled'         : true,
             'open-by-default' : true
         ),
-        'show-y-scrollbar'    : false
+        'show-y-scrollbar'    : false,
+        'z-index'             : 12
     ), $custom);
 
     //-------------------------------------------------------------
@@ -34,9 +35,10 @@
         // Side Navigation
         @extend #{$side-nav-selector};
         
-        font-size: option($config, 'font-size');
-        left: -#{option($config, width)};
-        box-shadow: option($config, 'box-shadow');
+        font-size: this('font-size');
+        left: -#{this(width)};
+        box-shadow: this('box-shadow');
+        z-index: this('z-index');
         
         // Reveal the flyout navigation
         .flyout-active & {

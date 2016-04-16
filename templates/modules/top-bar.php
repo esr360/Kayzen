@@ -96,7 +96,7 @@
                 <div class="top-bar_nav-left span">
                     <ul>
                         <li class="min-break-2">
-                            <div class="button_group-small span">
+                            <div class="top-bar_nav_action button_group-small span">
                                 <?php if (in_array('facebook', $options['social-links'])) { ?>
                                     <a href="#" class="button-icon-border-size-1 tooltip-bottom" data-tooltip="Facebook">
                                         <i class="fa fa-facebook"></i>
@@ -117,10 +117,14 @@
                             </div>
                         </li>
                         <li>
-                            <a class="button-plain-size-2" href="#"><i class="fa fa-envelope-o"></i> <span class="min-break-3">hello@kayzen.com</span></a>
+                            <a class="top-bar_nav_action button-plain-size-2" href="#">
+                                <i class="fa fa-envelope-o"></i> <span class="min-break-3">hello@kayzen.com</span>
+                            </a>
                         </li>
                         <li>
-                            <a class="button-plain-size-2" href="#"><i class="fa fa-phone"></i> <span class="min-break-3">(310) 276-2251</span></a>
+                            <a class="top-bar_nav_action button-plain-size-2" href="#">
+                                <i class="fa fa-phone"></i> <span class="min-break-3">(310) 276-2251</span>
+                            </a>
                         </li>
                     </ul>
                 </div>
@@ -139,12 +143,12 @@
                     <div class="top-bar_nav span va-middle">
                         <ul>
                             <li>
-                                <a id="search-trigger" href="#">
+                                <span class="top-bar_nav_action" id="search-trigger">
                                     <i class="fa fa-search"></i>
-                                </a>
+                                </span>
                             </li>
                             <li>
-                                <a href="#" data-notification="3">
+                                <a class="top-bar_nav_action" href="#" data-notification="3">
                                     <i class="fa fa-shopping-cart"></i>
                                 </a>
                                 <ul class="list-cart list-divider">
@@ -186,7 +190,7 @@
                                 </ul>
                             </li>
                             <li class="min-break-2">
-                                <a href="#">
+                                <a class="top-bar_nav_action" href="#">
                                     <small>USD</small> <i class="fa fa-angle-down"></i>
                                 </a>
                                 <ul class="list-interactive-divider-small">
