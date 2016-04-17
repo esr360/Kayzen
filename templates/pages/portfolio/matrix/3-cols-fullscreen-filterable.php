@@ -32,16 +32,16 @@
 		
 		<section class="section-primary-mini relative text-center min-break-1">	
 			<ul class="tabs_nav-pills-center" id="portfolio-categories">
-				<li class="button-pill-grey-1-round active" data-filter="*">View All</li>
-				<li class="button-pill-grey-1-round" data-filter="[data-HTML-theme]">HTML Themes</li>
-				<li class="button-pill-grey-1-round" data-filter="[data-photography]">Photography</li>
-				<li class="button-pill-grey-1-round" data-filter="[data-logo]">Logos</li>
+				<li class="tabs_nav_item active" data-filter="*">View All</li>
+				<li class="tabs_nav_item" data-filter="[data-HTML-theme]">HTML Themes</li>
+				<li class="tabs_nav_item" data-filter="[data-photography]">Photography</li>
+				<li class="tabs_nav_item" data-filter="[data-logo]">Logos</li>
 			</ul>
 		</section>
 		
 		<section class="section relative">
 			
-			<div id="portfolio-items" class="row-no-gutter row-filterable">
+			<div id="portfolio-items" class="row-no-gutter row-filterable fixed-table">
 
                 <?php
                     

@@ -202,14 +202,14 @@
                                 ></a>
                             </div>
                             <div class="tile tile-rec">
-                                <div class="tile tile-box">
+                                <div class="tile tile-box tile-last">
                                     <a 
                                         class="tile-img" 
                                         data-bg="<?php stockImage('demo/stock-'.rand(1, 25).'.jpg') ?>"
                                         href="#"
                                     ></a>
                                 </div>
-                                <div class="tile tile-box">
+                                <div class="tile tile-box tile-last">
                                     <a 
                                         class="tile-img" 
                                         data-bg="<?php stockImage('demo/stock-'.rand(1, 25).'.jpg') ?>"
@@ -218,7 +218,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="tile tile-box">
+                        <div class="tile tile-box tile-last">
                             <a 
                                 class="tile-img" 
                                 data-bg="<?php stockImage('demo/stock-'.rand(1, 25).'.jpg') ?>"
@@ -227,7 +227,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="tile tile-box">
+                <div class="tile tile-box tile-last">
                     <a 
                         class="tile-img" 
                         data-bg="<?php stockImage('demo/stock-'.rand(1, 25).'.jpg') ?>"

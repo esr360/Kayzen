@@ -27,7 +27,6 @@
             margin-bottom: 1em;
             padding-bottom: 0.5em;
             border-bottom: 1px solid color('greyscale', 'grey-2');
-            content: "dopy";
         }
         @include component('title') {
             margin-bottom: 0.5em;
@@ -37,6 +36,9 @@
             color: this('title-color');
             border-bottom: 1px dotted color('greyscale', 'grey-2');
         } 
+        @include overwrite(#{option($grid, 'options', 'row-namespace')}) {
+            display: table;
+        }
     }
 
     [class*="#{option($navigation, name)}"] {

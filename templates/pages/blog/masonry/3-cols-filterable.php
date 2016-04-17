@@ -33,11 +33,11 @@
 		<section class="section-primary">
             
 			<ul class="tabs_nav-pills-center-large min-break-2" id="blog-types">
-				<li class="button-pill-grey-1-round active" data-filter="*">View All</li>
-				<li class="button-pill-grey-1-round" data-filter="[data-image]">Image</li>
-				<li class="button-pill-grey-1-round" data-filter="[data-carousel]">Carousel</li>
-				<li class="button-pill-grey-1-round" data-filter="[data-vimeo], [data-youtube]">Video</li>
-				<li class="button-pill-grey-1-round" data-filter="[data-audio]">Audio</li>
+				<li class="tabs_nav_item active" data-filter="*">View All</li>
+				<li class="tabs_nav_item" data-filter="[data-image]">Image</li>
+				<li class="tabs_nav_item" data-filter="[data-carousel]">Carousel</li>
+				<li class="tabs_nav_item" data-filter="[data-vimeo], [data-youtube]">Video</li>
+				<li class="tabs_nav_item" data-filter="[data-audio]">Audio</li>
 			</ul>
 				
 			<div class="container">

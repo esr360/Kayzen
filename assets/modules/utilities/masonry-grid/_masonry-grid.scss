@@ -41,6 +41,12 @@
                 content: "";
                 padding-top: 100%;
                 display: table;
+                border-collapse: collapse;
+            }
+        }
+        &-last {
+            &:after {
+                border-collapse: separate;
             }
         }
         &-tall {
