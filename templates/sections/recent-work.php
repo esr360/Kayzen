@@ -1,6 +1,6 @@
  <?php function recentWork($custom = array()) { ?>
 
-    <?php  $options = array_merge(array(
+    <?php $options = array_merge(array(
         'items'     => 3,
         'item-link' => pageLink('blog/single.php', 'pages', false),
         'id' => null,

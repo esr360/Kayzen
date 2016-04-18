@@ -47,9 +47,7 @@
         
             include (ROOT.'/sections/project-testimonial.php');
     
-            recentWork(array(
-                'item-link' => themeLink($theme, '/portfolio-single.php')
-            ));
+            recentWork();
         
             promoBanner();
             

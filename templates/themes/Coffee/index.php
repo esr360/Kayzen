@@ -94,8 +94,8 @@
                                     'span'          => 6,
                                     'author-thumb'  => true,
                                     'widget'        => false,
-                                    'link'          => $options['item-link'],
-                                    'root'          => $options['item-root'],
+                                    'link'          => themeLink($theme, '/blog-single.php'),
+                                    'root'          => themeLink($theme, '/blog.php'),
                                     'class'         => 'break-3-half break-2-full relative'
                                 ));
                             
@@ -105,8 +105,8 @@
                                     'span'          => 6,
                                     'author-thumb'  => true,
                                     'widget'        => false,
-                                    'link'          => $options['item-link'],
-                                    'root'          => $options['item-root'],
+                                    'link'          => themeLink($theme, '/blog-single.php'),
+                                    'root'          => themeLink($theme, '/blog.php'),
                                     'class'         => 'break-3-half break-2-full relative'
                                 ));
                                 

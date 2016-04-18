@@ -1,6 +1,6 @@
 <?php function sectionTitle($custom = array()) { ?>
     
-    <? $options = array_merge(array(
+    <?php $options = array_merge(array(
         'title'     => 'This is Kayzen',
         'sub-title' => 'The New Experience',
         'icon'      => 'fa-magic',
