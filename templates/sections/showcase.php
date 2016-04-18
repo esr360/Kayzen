@@ -22,25 +22,25 @@
         <!-- Showcase Thumbnails -->
         <section class="carousel-scale-3-greyscale-stageBg owl-carousel" id="showcase-thumbnails">
             <div class="showcase-thumbnail">
-                <img src="<?php stockImage('demo/theme-1-thumb.jpg') ?>">
+                <img src="<?php stockImage('themes/medium/theme-1-thumb.jpg') ?>">
             </div>
             <div class="showcase-thumbnail">
-                <img src="<?php stockImage('demo/theme-2-thumb.jpg') ?>">
+                <img src="<?php stockImage('themes/medium/theme-7-thumb.jpg') ?>">
             </div>
             <div class="showcase-thumbnail">
-                <img src="<?php stockImage('demo/theme-3-thumb.jpg') ?>">
+                <img src="<?php stockImage('themes/medium/theme-3-thumb.jpg') ?>">
             </div>
             <div class="showcase-thumbnail">
-                <img src="<?php stockImage('demo/theme-5-thumb.jpg') ?>">
+                <img src="<?php stockImage('themes/medium/theme-5-thumb.jpg') ?>">
             </div>
             <div class="showcase-thumbnail">
-                <img src="<?php stockImage('demo/theme-4-thumb.jpg') ?>">
+                <img src="<?php stockImage('themes/medium/theme-12-thumb.jpg') ?>">
             </div>
             <div class="showcase-thumbnail">
-                <img src="<?php stockImage('demo/theme-6-thumb.jpg') ?>">
+                <img src="<?php stockImage('themes/medium/theme-6-thumb.jpg') ?>">
             </div>
             <div class="showcase-thumbnail">
-                <img src="<?php stockImage('demo/theme-1-thumb.jpg') ?>">
+                <img src="<?php stockImage('themes/medium/theme-2-thumb.jpg') ?>">
             </div>
         </section> 
         
@@ -61,7 +61,7 @@
                     <div class="block-content span-9">
                         <div class="desktop-graphic-scroll">
                             <img src="<?php echo appDir ?>/images/demo-screen.png" alt="" />
-                            <div class="desktop-graphic_image" style="background-image: url('<?php stockImage('demo/small/theme-1.jpg') ?>')"></div>
+                            <div class="desktop-graphic_image" style="background-image: url('<?php stockImage('themes/medium/theme-1.jpg') ?>')"></div>
                         </div>
                     </div>
                 </div>
@@ -92,7 +92,7 @@
                     <div class="block-content span-9">
                         <div class="desktop-graphic-scroll">
                             <img src="<?php echo appDir ?>/images/demo-screen.png" alt="" />
-                            <div class="desktop-graphic_image" style="background-image: url('<?php stockImage('demo/small/theme-1.jpg') ?>')"></div>
+                            <div class="desktop-graphic_image" style="background-image: url('<?php stockImage('themes/medium/theme-1.jpg') ?>')"></div>
                         </div>
                     </div>
                 </div>
@@ -123,7 +123,7 @@
                     <div class="block-content span-9">
                         <div class="desktop-graphic-scroll">
                             <img src="<?php echo appDir ?>/images/demo-screen.png" alt="" />
-                            <div class="desktop-graphic_image" style="background-image: url('<?php stockImage('demo/small/theme-1.jpg') ?>')"></div>
+                            <div class="desktop-graphic_image" style="background-image: url('<?php stockImage('themes/medium/theme-1.jpg') ?>')"></div>
                         </div>
                     </div>
                 </div>
@@ -149,12 +149,12 @@
             </div>
             
             <!-- Showcase Slide 4 -->
-            <div class="row-block bg-cover stack-break-4 fixed-table" style="background-image: url('<?php stockImage('demo/stock-17.jpg') ?>')">
+            <div class="row-block bg-cover stack-break-4 fixed-table" style="background-image: url('<?php stockImage('demo/small/stock-17.jpg') ?>')">
                 <div class="section_block span-6 text-center va-middle">
                     <div class="block-content span-9">
                         <div class="desktop-graphic-scroll">
                             <img src="<?php echo appDir ?>/images/demo-screen.png" alt="" />
-                            <div class="desktop-graphic_image" style="background-image: url('<?php stockImage('demo/small/theme-1.jpg') ?>')"></div>
+                            <div class="desktop-graphic_image" style="background-image: url('<?php stockImage('themes/medium/theme-1.jpg') ?>')"></div>
                         </div>
                     </div>
                 </div>
@@ -185,7 +185,7 @@
                     <div class="block-content span-9">
                         <div class="desktop-graphic-scroll">
                             <img src="<?php echo appDir ?>/images/demo-screen.png" alt="" />
-                            <div class="desktop-graphic_image" style="background-image: url('<?php stockImage('demo/small/theme-1.jpg') ?>')"></div>
+                            <div class="desktop-graphic_image" style="background-image: url('<?php stockImage('themes/medium/theme-1.jpg') ?>')"></div>
                         </div>
                     </div>
                 </div>
@@ -216,7 +216,7 @@
                     <div class="block-content span-9">
                         <div class="desktop-graphic-scroll">
                             <img src="<?php echo appDir ?>/images/demo-screen.png" alt="" />
-                            <div class="desktop-graphic_image" style="background-image: url('<?php stockImage('demo/small/theme-1.jpg') ?>')"></div>
+                            <div class="desktop-graphic_image" style="background-image: url('<?php stockImage('themes/medium/theme-1.jpg') ?>')"></div>
                         </div>
                     </div>
                 </div>
@@ -247,7 +247,7 @@
                     <div class="block-content span-9">
                         <div class="desktop-graphic-scroll">
                             <img src="<?php echo appDir ?>/images/demo-screen.png" alt="" />
-                            <div class="desktop-graphic_image" style="background-image: url('<?php stockImage('demo/small/theme-1.jpg') ?>')"></div>
+                            <div class="desktop-graphic_image" style="background-image: url('<?php stockImage('themes/medium/theme-1.jpg') ?>')"></div>
                         </div>
                     </div>
                 </div>

@@ -441,10 +441,19 @@ module.exports = function(grunt) {
         responsive_images: {
             app: {
                 options: {
-                    sizes: [{
-                        name: "small",
-                        width: 480
-                    }]
+                    sizes: [
+                        {
+                            name: "small",
+                            width: 480
+                        },
+                        {
+                            name: 'tall',
+                            width: 600,
+                            height: 720
+                        }
+                    ],
+                    aspectRatio: false,
+                    gravity: 'center'
                 },
                 files: [{
                     cwd: 'app/images/demo',
@@ -453,20 +462,23 @@ module.exports = function(grunt) {
                     expand: true
                 }]
             },
-            tall: {
+            theme_previews: {
                 options: {
-                    sizes: [{
-                        name: 'tall',
-                        width: 600,
-                        height: 720
-                    }],
-                    aspectRatio: false,
-                    gravity: 'center'
+                    sizes: [
+                        {
+                            name: "medium",
+                            width: 480
+                        },
+                        {
+                            name: 'small',
+                            width: 100,
+                        }
+                    ]
                 },
                 files: [{
-                    cwd: 'app/images/demo',
-                    src: 'stock-*.{jpg,gif,png}',
-                    custom_dest: 'app/images/demo/{%= name %}/',
+                    cwd: 'app/images/themes',
+                    src: '**/*.{jpg,gif,png}',
+                    custom_dest: 'app/images/themes/{%= name %}/',
                     expand: true
                 }]
             }

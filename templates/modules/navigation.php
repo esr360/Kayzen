@@ -25,7 +25,7 @@
                 <?php if ($options['ribbon']) { ?>
                     <div class="corner-ribbon-small-<?php echo $options['ribbon'][0] ?>" data-ribbon="<?php echo $options['ribbon'][1] ?>"></div>
                 <?php } ?>
-                <img src="<?php echo appDir ?>/images/demo/<?php echo $options['thumb'] ?>" alt="<?php echo $options['thumb'] ?>" />
+                <img src="<?php echo appDir ?>/images/themes/small/<?php echo $options['thumb'] ?>" alt="<?php echo $options['thumb'] ?>" />
             </div> 
             <div class="span-8">
                 <header class="heading_group">
@@ -71,7 +71,7 @@
                                 <li>
                                     <?php navThemeItem(array(
                                         'theme' => 'Nexus',
-                                        'thumb' => 'theme-3-thumb.jpg',
+                                        'thumb' => 'theme-2-thumb.jpg',
                                         'ribbon' => array('pink', 'Hot')
                                     )) ?>
                                 </li>
@@ -89,7 +89,7 @@
                                 <li>
                                     <?php navThemeItem(array(
                                         'theme' => 'Agenda',
-                                        'thumb' => 'theme-2-thumb.jpg',
+                                        'thumb' => 'theme-3-thumb.jpg',
                                         'tags' => array('One-Page'),
                                         'ribbon' => array('blue', 'One-Page')
                                     )) ?>
@@ -137,7 +137,7 @@
                                 <li>
                                     <?php navThemeItem(array(
                                         'theme' => 'Mall',
-                                        'thumb' => 'theme-1-thumb.jpg'
+                                        'thumb' => 'theme-7-thumb.jpg'
                                     )) ?>
                                 </li>
                                 
@@ -145,7 +145,7 @@
                                 <li>
                                     <?php navThemeItem(array(
                                         'theme' => 'Arndale',
-                                        'thumb' => 'theme-1-thumb.jpg'
+                                        'thumb' => 'theme-8-thumb.jpg'
                                     )) ?>
                                 </li>
                                 
@@ -153,7 +153,7 @@
                                 <li>
                                     <?php navThemeItem(array(
                                         'theme' => 'Lily',
-                                        'thumb' => 'theme-1-thumb.jpg',
+                                        'thumb' => 'theme-9-thumb.jpg',
                                         'ribbon' => array('pink', 'Hot')
                                     )) ?>
                                 </li>
@@ -168,7 +168,7 @@
                                 <li>
                                     <?php navThemeItem(array(
                                         'theme' => 'Hollywood',
-                                        'thumb' => 'theme-1-thumb.jpg'
+                                        'thumb' => 'theme-10-thumb.jpg'
                                     )) ?>
                                 </li>
                                 
@@ -176,7 +176,7 @@
                                 <li>
                                     <?php navThemeItem(array(
                                         'theme' => 'Coffee',
-                                        'thumb' => 'theme-1-thumb.jpg'
+                                        'thumb' => 'theme-11-thumb.jpg'
                                     )) ?>
                                 </li>
                                 
@@ -184,7 +184,7 @@
                                 <li>
                                     <?php navThemeItem(array(
                                         'theme' => 'Gaucho',
-                                        'thumb' => 'theme-1-thumb.jpg'
+                                        'thumb' => 'theme-12-thumb.jpg'
                                     )) ?>
                                 </li>
                                 
