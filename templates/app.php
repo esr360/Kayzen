@@ -9,7 +9,7 @@
  *
  * Values: 'dev' | 'prod'
  */
-define('env', 'dev');
+define('env', 'prod');
 
 /**
  * Are you using multiple themes?
@@ -50,7 +50,7 @@ define('ROOT', dirname(__FILE__));
  */
  
 define('appDir', '/app');
-
+    
 /******************************************************************
  * Templates
  *****************************************************************/

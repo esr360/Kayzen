@@ -156,7 +156,7 @@
                                     <li>
                                         <a href="<?php pageLink('further/shop-single.php') ?>" class="widget-media row stack-0">               
                                             <div class="span-3">
-                                                <img src="<?php echo appDir ?>/images/demo/theme-1-thumb.jpg" alt="Theme One" />
+                                                <img src="<?php echo appDir ?>/images/themes/theme-1-thumb.jpg" alt="Theme One" />
                                             </div> 
                                             <div class="span-9">
                                                 <header class="heading_group">
@@ -169,7 +169,7 @@
                                     <li>
                                         <a href="<?php pageLink('further/shop-single.php') ?>" class="widget-media row stack-0">               
                                             <div class="span-3">
-                                                <img src="<?php echo appDir ?>/images/demo/theme-1-thumb.jpg" alt="Theme One" />
+                                                <img src="<?php echo appDir ?>/images/themes/theme-1-thumb.jpg" alt="Theme One" />
                                             </div> 
                                             <div class="span-9">
                                                 <header class="heading_group">

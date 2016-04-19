@@ -38,9 +38,7 @@
         
         </div>
         
-        <section class="section-primary-flush-dot-map container"> 
-            
-        </section> 
+        <section class="section-primary-flush-dot-map container"></section> 
         
         <?php
             

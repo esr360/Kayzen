@@ -121,8 +121,12 @@ module.exports = function(grunt) {
             theme: {
                 src: 'app/themes/' + theme
             },
+            themeScripts: [
+                'app/themes/' + theme + '/**/*.js', 
+                '!app/themes/' + theme + '/**/*.min.js'
+            ],
             scripts: [
-                'app/**/*.js', '!app/**/*.min.js'
+                'app/scripts/**/*.js', '!app/**/*.min.js'
             ],
             styles: [
                 'app/**/*.css', '!app/**/*.min.css'
@@ -252,7 +256,7 @@ module.exports = function(grunt) {
             },
             themes: {
                 files: [{ 
-                    src: 'app/themes/**/*.js',
+                    src: 'app/' + themePath + '**/*.js',
                     dest: themeBuildScripts,
                     expand: true,
                     flatten: true,
@@ -405,11 +409,38 @@ module.exports = function(grunt) {
         replace: {
             sassTheme: {
                 src: 'assets/app.scss',
-                dest: 'assets/app.scss',
+                overwrite: true, 
                 replacements: [{
                     from: /\$theme(.*?);/g,
                     to: '$theme : \'' + theme + '\';'
                 }]
+            },
+            /**
+             * the generated relative paths for links & assets is 
+             * one level too deep for the prototype directory, so
+             * we manually shift everything up one level
+             */
+            prototype: {
+                src: ['prototype/**/*.html'],
+                overwrite: true, 
+                replacements: [
+                    {
+                        from : 'href="..\/',
+                        to   : 'href="'
+                    },
+                    {
+                        from : 'src="..\/',
+                        to   : 'src="'
+                    },
+                    {
+                        from : 'data-bg="..\/',
+                        to   : 'data-bg="'
+                    },
+                    {
+                        from : 'url(\'..\/',
+                        to   : 'url(\''
+                    }
+                ]
             }
         },
       
@@ -708,6 +739,7 @@ module.exports = function(grunt) {
             assetTasks.push(
                 'uglify', 
                 'clean:scripts',
+                'clean:themeScripts',
                 'cssmin',
                 'clean:styles'
             );
@@ -761,7 +793,8 @@ module.exports = function(grunt) {
         'clean:prototype',
         'templates',
         'copy:prototype',
-        'relativeRoot'
+        'relativeRoot',
+        'replace:prototype'
     ]);
     
     // Package the app

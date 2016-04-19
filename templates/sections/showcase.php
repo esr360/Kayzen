@@ -31,6 +31,9 @@
                 <img src="<?php stockImage('themes/medium/theme-3-thumb.jpg') ?>">
             </div>
             <div class="showcase-thumbnail">
+                <img src="<?php stockImage('themes/medium/theme-2-thumb.jpg') ?>">
+            </div>
+            <div class="showcase-thumbnail">
                 <img src="<?php stockImage('themes/medium/theme-5-thumb.jpg') ?>">
             </div>
             <div class="showcase-thumbnail">
@@ -38,9 +41,6 @@
             </div>
             <div class="showcase-thumbnail">
                 <img src="<?php stockImage('themes/medium/theme-6-thumb.jpg') ?>">
-            </div>
-            <div class="showcase-thumbnail">
-                <img src="<?php stockImage('themes/medium/theme-2-thumb.jpg') ?>">
             </div>
         </section> 
         
@@ -56,7 +56,7 @@
         <div id="showcase-carousel" class="owl-carousel">
             
             <!-- Showcase Slide 1 -->
-            <div class="row-block bg-cover stack-break-4 fixed-table" style="background-image: url('<?php stockImage('demo/small/stock-1.jpg') ?>')">
+            <div class="row-block bg-cover stack-break-4 fixed-table" style="background-image: url('<?php stockImage('billboard-1.jpg') ?>')">
                 <div class="section_block span-6 text-center va-middle">
                     <div class="block-content span-9">
                         <div class="desktop-graphic-scroll">
@@ -68,7 +68,7 @@
                 <div class="section_block-opaque span-6 va-middle">
                     <div class="block-content">
                         <header class="heading_group">
-                            <h2 class="heading-heavy-size-6 font-2">Creative Blog</h2>
+                            <h2 class="heading-heavy-size-6 font-2">Kayzen</h2>
                             <h3 class="heading-light-brand-1-size-5">A Modern Template for Creative Blogs</h3>
                         </header>
                         <p class="lede">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus eget porta eros. Suspendisse vehicula massa in erat mattis.</p>
@@ -87,7 +87,7 @@
             </div>
             
             <!-- Showcase Slide 2 -->
-            <div class="row-block stack-break-4 fixed-table" style="background-image: url('<?php stockImage('demo/small/stock-1.jpg') ?>')">
+            <div class="row-block bg-cover stack-break-4 fixed-table" style="background-image: url('<?php stockImage('demo/stock-11.jpg') ?>')">
                 <div class="section_block span-6 text-center va-middle">
                     <div class="block-content span-9">
                         <div class="desktop-graphic-scroll">
@@ -99,7 +99,7 @@
                 <div class="section_block-opaque span-6 va-middle">
                     <div class="block-content">
                         <header class="heading_group">
-                            <h2 class="heading-heavy-size-6 font-2">Mobile App</h2>
+                            <h2 class="heading-heavy-size-6 font-2">Mall</h2>
                             <h3 class="heading-light-brand-1-size-5">A Modern Template for Creative Blogs</h3>
                         </header>
                         <p class="lede">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus eget porta eros. Suspendisse vehicula massa in erat mattis.</p>
@@ -118,7 +118,7 @@
             </div>
             
             <!-- Showcase Slide 3 -->
-            <div class="row-block bg-cover stack-break-4 fixed-table" style="background-image: url('<?php stockImage('demo/small/stock-1.jpg') ?>')">
+            <div class="row-block bg-cover stack-break-4 fixed-table" style="background-image: url('<?php stockImage('demo/stock-8.jpg') ?>')">
                 <div class="section_block span-6 text-center va-middle">
                     <div class="block-content span-9">
                         <div class="desktop-graphic-scroll">
@@ -130,7 +130,7 @@
                 <div class="section_block-opaque span-6 va-middle">
                     <div class="block-content">
                         <header class="heading_group">
-                            <h2 class="heading-heavy-size-6 font-2">Creative Blog</h2>
+                            <h2 class="heading-heavy-size-6 font-2">Agenda</h2>
                             <h3 class="heading-light-brand-1-size-5">A Modern Template for Creative Blogs</h3>
                         </header>
                         <p class="lede">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus eget porta eros. Suspendisse vehicula massa in erat mattis.</p>
@@ -149,7 +149,7 @@
             </div>
             
             <!-- Showcase Slide 4 -->
-            <div class="row-block bg-cover stack-break-4 fixed-table" style="background-image: url('<?php stockImage('demo/small/stock-17.jpg') ?>')">
+            <div class="row-block bg-cover stack-break-4 fixed-table" style="background-image: url('<?php stockImage('demo/stock-6.jpg') ?>')">
                 <div class="section_block span-6 text-center va-middle">
                     <div class="block-content span-9">
                         <div class="desktop-graphic-scroll">
@@ -161,7 +161,7 @@
                 <div class="section_block-opaque span-6 va-middle">
                     <div class="block-content">
                         <header class="heading_group">
-                            <h2 class="heading-heavy-size-6">Mobile App</h2>
+                            <h2 class="heading-heavy-size-6 font-2">Nexus</h2>
                             <h3 class="heading-light-brand-1-size-5">A Modern Template for Creative Blogs</h3>
                         </header>
                         <p class="lede">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus eget porta eros. Suspendisse vehicula massa in erat mattis.</p>
@@ -180,7 +180,7 @@
             </div>
             
             <!-- Showcase Slide 5 -->
-            <div class="row-block bg-cover stack-break-4 fixed-table" style="background-image: url('<?php stockImage('demo/small/stock-1.jpg') ?>')">
+            <div class="row-block bg-cover stack-break-4 fixed-table" style="background-image: url('<?php stockImage('demo/stock-5.jpg') ?>')">
                 <div class="section_block span-6 text-center va-middle">
                     <div class="block-content span-9">
                         <div class="desktop-graphic-scroll">
@@ -192,7 +192,7 @@
                 <div class="section_block-opaque span-6 va-middle">
                     <div class="block-content">
                         <header class="heading_group">
-                            <h2 class="heading-heavy-size-6 font-2">Digital Agency</h2>
+                            <h2 class="heading-heavy-size-6">Tempus</h2>
                             <h3 class="heading-light-brand-1-size-5">A Modern Template for Creative Blogs</h3>
                         </header>
                         <p class="lede">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus eget porta eros. Suspendisse vehicula massa in erat mattis.</p>
@@ -211,7 +211,7 @@
             </div>
             
             <!-- Showcase Slide 6 -->
-            <div class="row-block bg-cover stack-break-4 fixed-table" style="background-image: url('<?php stockImage('demo/small/stock-1.jpg') ?>')">
+            <div class="row-block bg-cover stack-break-4 fixed-table" style="background-image: url('<?php stockImage('billboard-1.jpg') ?>')">
                 <div class="section_block span-6 text-center va-middle">
                     <div class="block-content span-9">
                         <div class="desktop-graphic-scroll">
@@ -223,7 +223,7 @@
                 <div class="section_block-opaque span-6 va-middle">
                     <div class="block-content">
                         <header class="heading_group">
-                            <h2 class="heading-heavy-size-6 font-2">Digital Agency</h2>
+                            <h2 class="heading-heavy-size-6 font-2">Gaucho</h2>
                             <h3 class="heading-light-brand-1-size-5">A Modern Template for Creative Blogs</h3>
                         </header>
                         <p class="lede">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus eget porta eros. Suspendisse vehicula massa in erat mattis.</p>
@@ -242,7 +242,7 @@
             </div>
             
             <!-- Showcase Slide 7 -->
-            <div class="row-block bg-cover stack-break-4 fixed-table" style="background-image: url('<?php stockImage('demo/small/stock-1.jpg') ?>')">
+            <div class="row-block bg-cover stack-break-4 fixed-table" style="background-image: url('<?php stockImage('demo/stock-17.jpg') ?>')">
                 <div class="section_block span-6 text-center va-middle">
                     <div class="block-content span-9">
                         <div class="desktop-graphic-scroll">
@@ -254,7 +254,7 @@
                 <div class="section_block-opaque span-6 va-middle">
                     <div class="block-content">
                         <header class="heading_group">
-                            <h2 class="heading-heavy-size-6 font-2">Digital Agency</h2>
+                            <h2 class="heading-heavy-size-6 font-2">Dart</h2>
                             <h3 class="heading-light-brand-1-size-5">A Modern Template for Creative Blogs</h3>
                         </header>
                         <p class="lede">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus eget porta eros. Suspendisse vehicula massa in erat mattis.</p>
@@ -312,7 +312,11 @@
                         }
                     }
                 }).on('click', '.owl-item', function () {
-                    $sync1.trigger('to.owl.carousel', [$(this).index(), duration, true]);
+                    $sync1.trigger('to.owl.carousel', [
+                        $(this).index(), 
+                        duration, 
+                        true
+                    ]);
                 }).on('changed.owl.carousel', function (e) {
                     if (!flag) {
                         flag = true;		

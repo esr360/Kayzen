@@ -55,7 +55,7 @@
 
     .globe {
         @extend %horizontal-center;
-        //animation-name: spin;
+        animation-name: spin;
         animation-duration: 35s;
         animation-iteration-count: infinite;
         animation-timing-function: linear;

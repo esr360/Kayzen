@@ -15,7 +15,7 @@
     if (path == 'root') {
         $pageTree = '/templates/'.$root.'/';
     } else if (path == 'relative') {
-        $pageTree = '/prototype/'.$root.'/';
+        $pageTree = '/'.$root.'/';
     }
     
     if (path == 'relative' && $extension == 'php') {
