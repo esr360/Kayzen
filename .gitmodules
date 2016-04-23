@@ -49,9 +49,6 @@
 [submodule "assets/vendor/normalize-scss"]
 	path = assets/vendor/normalize-scss
 	url = https://github.com/JohnAlbin/normalize-scss.git
-[submodule "assets/vendor/support-for"]
-	path = assets/vendor/support-for
-	url = https://github.com/JohnAlbin/support-for.git
 [submodule "assets/vendor/pseudojQuery"]
 	path = assets/vendor/pseudojQuery
 	url = https://github.com/esr360/pseudojQuery.git
