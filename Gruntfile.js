@@ -133,9 +133,6 @@ module.exports = function(grunt) {
             ],
             images: {
                 src: 'app/images'
-            },
-            preloaders: {
-                src: 'assets/vendor/Aloads/scss'
             }
         },
       
@@ -215,12 +212,6 @@ module.exports = function(grunt) {
                     src: '**/*',
                     dest: 'app/images',
                     expand: true
-                }]
-            },
-            preloaders: {
-                files: [{
-                    src: 'assets/vendor/Aloads/css/preloaders.css',
-                    dest: 'assets/vendor/Aloads/scss/_preloaders.scss'
                 }]
             }
         },
@@ -366,11 +357,9 @@ module.exports = function(grunt) {
                     'assets/**/*.scss',
                     '!assets/vendor/',
                 ],
-                tasks: [
-                    'copy:preloaders', 
+                tasks: [ 
                     'sass:' + env, 
                     'postcss',
-                    'clean:preloaders',
                     'notify:css'
                 ],
                 options: {
@@ -719,13 +708,11 @@ module.exports = function(grunt) {
         var assetTasks = [
             'clean:app',
             'clean:theme',
-            'copy:preloaders', 
             'replace:sassTheme',
             'copy:app',
             'concat',
             'sass:' + environment,
-            'postcss',
-            'clean:preloaders'
+            'postcss'
         ];
         if (environment == 'prod') {
             assetTasks.push(

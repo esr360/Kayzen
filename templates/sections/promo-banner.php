@@ -26,7 +26,7 @@
                             <h4 class="heading-size-5">
                                 Start your <b class="font-2">new project</b> with a <em>fresh</em> approach...
                             </h4>
-                            <p class="heading">leave your visitors with an experience to remember and <a href="http://themeforest.net/user/skyux/portfolio" target="blank">Purchase Nexus</a> now.</p>
+                            <p class="heading">leave your visitors with an experience to remember and <a href="http://themeforest.net/user/skyux/portfolio" target="blank">Purchase Kayzen</a> now.</p>
                         </header>
                     </div>
                     <div class="span va-middle text-right-desktop button_group">
