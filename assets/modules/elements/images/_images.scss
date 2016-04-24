@@ -9,7 +9,7 @@
     //-------------------------------------------------------------
 
     $images: config((
-        'name'            : 'image'
+        'name' : 'image'
     ), $custom);
 
     //-------------------------------------------------------------
@@ -40,9 +40,9 @@
             background-size: 100%;
             background-position: center 0%;
             transition: 3s;
-            height: 58.25%;
+            height: 58.35%;
             width: 92.25%;
-            top: 4%;
+            top: 3.9%;
             left: 3.9%;
             z-index: 0;	
         }

@@ -23,21 +23,29 @@
             
             <!-- Shortcodes Graphics -->
             <div class="carousel-scale-2 owl-carousel" id="shortcodes-carousel">
-                <div class="desktop-graphic-scroll">
+                <div class="desktop-graphic">
                     <img src="<?php echo appDir ?>/images/demo-screen.png" alt="" />
-                    <div class="desktop-graphic_image" style="background-image: url('<?php stockImage('themes/medium/theme-1.jpg') ?>')"></div>
+                    <div class="desktop-graphic_image" style="background-image: url('<?php echo appDir ?>/images/shortcodes-1.jpg')"></div>
                 </div>
-                <div class="desktop-graphic-scroll">
+                <div class="desktop-graphic">
                     <img src="<?php echo appDir ?>/images/demo-screen.png" alt="" />
-                    <div class="desktop-graphic_image" style="background-image: url('<?php stockImage('themes/medium/theme-1.jpg') ?>')"></div>
+                    <div class="desktop-graphic_image" style="background-image: url('<?php echo appDir ?>/images/shortcodes-2.jpg')"></div>
                 </div>
-                <div class="desktop-graphic-scroll">
+                <div class="desktop-graphic">
                     <img src="<?php echo appDir ?>/images/demo-screen.png" alt="" />
-                    <div class="desktop-graphic_image" style="background-image: url('<?php stockImage('themes/medium/theme-1.jpg') ?>')"></div>
+                    <div class="desktop-graphic_image" style="background-image: url('<?php echo appDir ?>/images/shortcodes-3.jpg')"></div>
                 </div>
-                <div class="desktop-graphic-scroll">
+                <div class="desktop-graphic">
                     <img src="<?php echo appDir ?>/images/demo-screen.png" alt="" />
-                    <div class="desktop-graphic_image" style="background-image: url('<?php stockImage('themes/medium/theme-1.jpg') ?>')"></div>
+                    <div class="desktop-graphic_image" style="background-image: url('<?php echo appDir ?>/images/shortcodes-4.jpg')"></div>
+                </div>
+                <div class="desktop-graphic">
+                    <img src="<?php echo appDir ?>/images/demo-screen.png" alt="" />
+                    <div class="desktop-graphic_image" style="background-image: url('<?php echo appDir ?>/images/shortcodes-5.jpg')"></div>
+                </div>
+                <div class="desktop-graphic">
+                    <img src="<?php echo appDir ?>/images/demo-screen.png" alt="" />
+                    <div class="desktop-graphic_image" style="background-image: url('<?php echo appDir ?>/images/shortcodes-6.jpg')"></div>
                 </div>
             </div>
             

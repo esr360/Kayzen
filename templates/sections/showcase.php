@@ -61,7 +61,7 @@
                     <div class="block-content span-9">
                         <div class="desktop-graphic-scroll">
                             <img src="<?php echo appDir ?>/images/demo-screen.png" alt="" />
-                            <div class="desktop-graphic_image" style="background-image: url('<?php stockImage('themes/medium/theme-1.jpg') ?>')"></div>
+                            <div class="desktop-graphic_image" style="background-image: url('<?php stockImage('themes/theme-1.jpg') ?>')"></div>
                         </div>
                     </div>
                 </div>
@@ -92,7 +92,7 @@
                     <div class="block-content span-9">
                         <div class="desktop-graphic-scroll">
                             <img src="<?php echo appDir ?>/images/demo-screen.png" alt="" />
-                            <div class="desktop-graphic_image" style="background-image: url('<?php stockImage('themes/medium/theme-1.jpg') ?>')"></div>
+                            <div class="desktop-graphic_image" style="background-image: url('<?php stockImage('themes/theme-7.jpg') ?>')"></div>
                         </div>
                     </div>
                 </div>
@@ -123,7 +123,7 @@
                     <div class="block-content span-9">
                         <div class="desktop-graphic-scroll">
                             <img src="<?php echo appDir ?>/images/demo-screen.png" alt="" />
-                            <div class="desktop-graphic_image" style="background-image: url('<?php stockImage('themes/medium/theme-1.jpg') ?>')"></div>
+                            <div class="desktop-graphic_image" style="background-image: url('<?php stockImage('themes/theme-3.jpg') ?>')"></div>
                         </div>
                     </div>
                 </div>
@@ -154,7 +154,7 @@
                     <div class="block-content span-9">
                         <div class="desktop-graphic-scroll">
                             <img src="<?php echo appDir ?>/images/demo-screen.png" alt="" />
-                            <div class="desktop-graphic_image" style="background-image: url('<?php stockImage('themes/medium/theme-1.jpg') ?>')"></div>
+                            <div class="desktop-graphic_image" style="background-image: url('<?php stockImage('themes/theme-2.jpg') ?>')"></div>
                         </div>
                     </div>
                 </div>
@@ -185,7 +185,7 @@
                     <div class="block-content span-9">
                         <div class="desktop-graphic-scroll">
                             <img src="<?php echo appDir ?>/images/demo-screen.png" alt="" />
-                            <div class="desktop-graphic_image" style="background-image: url('<?php stockImage('themes/medium/theme-1.jpg') ?>')"></div>
+                            <div class="desktop-graphic_image" style="background-image: url('<?php stockImage('themes/theme-5.jpg') ?>')"></div>
                         </div>
                     </div>
                 </div>
@@ -216,7 +216,7 @@
                     <div class="block-content span-9">
                         <div class="desktop-graphic-scroll">
                             <img src="<?php echo appDir ?>/images/demo-screen.png" alt="" />
-                            <div class="desktop-graphic_image" style="background-image: url('<?php stockImage('themes/medium/theme-1.jpg') ?>')"></div>
+                            <div class="desktop-graphic_image" style="background-image: url('<?php stockImage('themes/theme-12.jpg') ?>')"></div>
                         </div>
                     </div>
                 </div>
@@ -247,7 +247,7 @@
                     <div class="block-content span-9">
                         <div class="desktop-graphic-scroll">
                             <img src="<?php echo appDir ?>/images/demo-screen.png" alt="" />
-                            <div class="desktop-graphic_image" style="background-image: url('<?php stockImage('themes/medium/theme-1.jpg') ?>')"></div>
+                            <div class="desktop-graphic_image" style="background-image: url('<?php stockImage('themes/theme-6.jpg') ?>')"></div>
                         </div>
                     </div>
                 </div>

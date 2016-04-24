@@ -134,9 +134,6 @@ module.exports = function(grunt) {
             images: {
                 src: 'app/images'
             },
-            normalizeSupportFor: {
-                src: 'assets/vendor/normalize-scss/sass/_support-for.scss'
-            },
             preloaders: {
                 src: 'assets/vendor/Aloads/scss'
             }
@@ -218,12 +215,6 @@ module.exports = function(grunt) {
                     src: '**/*',
                     dest: 'app/images',
                     expand: true
-                }]
-            },
-            normalizeSupportFor: {
-                files: [{
-                    src: 'assets/vendor/support-for/sass/_support-for.scss',
-                    dest: 'assets/vendor/normalize-scss/sass/_support-for.scss'
                 }]
             },
             preloaders: {
@@ -376,11 +367,9 @@ module.exports = function(grunt) {
                     '!assets/vendor/',
                 ],
                 tasks: [
-                    'copy:normalizeSupportFor', 
                     'copy:preloaders', 
                     'sass:' + env, 
-                    'postcss', 
-                    'clean:normalizeSupportFor',
+                    'postcss',
                     'clean:preloaders',
                     'notify:css'
                 ],
@@ -508,7 +497,7 @@ module.exports = function(grunt) {
                 },
                 files: [{
                     cwd: 'app/images/themes',
-                    src: '**/*.{jpg,gif,png}',
+                    src: '**/*-thumb.{jpg,gif,png}',
                     custom_dest: 'app/images/themes/{%= name %}/',
                     expand: true
                 }]
@@ -725,14 +714,12 @@ module.exports = function(grunt) {
         var assetTasks = [
             'clean:app',
             'clean:theme',
-            'copy:normalizeSupportFor', 
             'copy:preloaders', 
             'replace:sassTheme',
             'copy:app',
             'concat',
             'sass:' + environment,
             'postcss',
-            'clean:normalizeSupportFor',
             'clean:preloaders'
         ];
         if (environment == 'prod') {

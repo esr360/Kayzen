@@ -60,7 +60,7 @@
             <ul>
                 <li class="active"><a href="<?php pageLink('homepages/homepage-1.php') ?>"><i class="navigation_icon fa fa-home"></i> Home</a></li>
                 <li>
-                    <a href="#"><i class="navigation_icon fa fa-home"></i> Demos</a>
+                    <a href="<?php pageLink('demos.php') ?>"><i class="navigation_icon fa fa-home"></i> Demos</a>
                     <ul class="mega-menu row">
                         
                         <li class="span-3">
