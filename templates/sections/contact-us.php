@@ -33,7 +33,7 @@
                 <div class="heading_icon">
                     <i class="fa fa-globe"></i>
                 </div>
-                <p class="lede">Thanks to the flexibility of Kayzen's options, there is no limit to the layouts you can achieve. Below is just a small sample of common styles and layouts that can easily be achieved with Kayzen.</p>
+                <p class="lede">Enter your details into the form below and we'll get back to you within 24 hours. Note that this is not a functioning form and is just for demo purposes only.</p>
             </div>
         </header>
         

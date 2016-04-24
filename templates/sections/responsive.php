@@ -29,33 +29,33 @@
                 <div class="widget_group span-3 break-3-half break-2-full va-middle text-right">
                     <div class="widget-stacked">   
                         <header class="widget_header-inline heading_group">
-                            <h3 class="heading-heavy-size-4">Fast Performance</h3>
-                            <h4 class="heading-light-uppercase-brand-1">Donec finibus fringer</h4>
+                            <h3 class="heading-heavy-size-4">Smooth Performance</h3>
+                            <h4 class="heading-light-uppercase-brand-1">CSS3 Animations</h4>
                         </header>                        
                         <div class="widget_icon-inline button-icon-plain-size-7">
                             <i class="fa fa-bar-chart"></i>
                         </div> 
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc et erat posuere consectetur adipiscing suscipit.</p>
+                        <p>All jQuery plugins and CSS elements have been built with mobiles in mind, ensuring any animations run smoothly.</p>
                     </div>
                     <div class="widget-stacked">
                         <header class="widget_header-inline heading_group">
-                            <h3 class="heading-heavy-size-4">Lazy Loading</h3>
-                            <h4 class="heading-light-uppercase-brand-1">Donec finibus fringer</h4>
+                            <h3 class="heading-heavy-size-4">Swipe/Drag Support</h3>
+                            <h4 class="heading-light-uppercase-brand-1">Touch Screen Devices</h4>
                         </header>                       
                         <div class="widget_icon-inline button-icon-plain-size-7">
-                            <i class="fa fa-refresh"></i>
+                            <i class="fa fa-arrows-h"></i>
                         </div>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc et erat posuere consectetur adipiscing suscipit.</p>
+                        <p>Kayzen is touch/swipe ready for mobile touch screen devices for various UI elements such as carousels.</p>
                     </div>
                     <div class="widget-stacked">
                         <header class="widget_header-inline heading_group">
                             <h3 class="heading-heavy-size-4">Retina Ready</h3>
-                            <h4 class="heading-light-uppercase-brand-1">Donec finibus fringer</h4>
+                            <h4 class="heading-light-uppercase-brand-1">Crystal Clear Display</h4>
                         </header>                        
                         <div class="widget_icon-inline button-icon-plain-size-7">
                             <i class="fa fa-eye"></i>
                         </div> 
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc et erat posuere consectetur adipiscing suscipit.</p>
+                        <p>Kayzen is optimised for devices with retina displays, offering a crystal clear high-res experience.</p>
                     </div>
                 </div>
                 
@@ -64,14 +64,14 @@
                     <div class="center-xy span-6<?php if ($options['greyscale']) echo ' greyscale' ?>">
                         <img 
                             class="mobile-graphic-<?php echo $options['iphone-colors'][0] ?>" 
-                            src="<?php echo appDir ?>/images/mobile-screen.png" 
+                            src="<?php echo appDir ?>/images/mobile-screen-1.jpg" 
                             data-trigger="transform: translate(-45%, -50%) translateZ(0) scale(0.85)"
                             data-hover="left: -25%"
                             alt=""
                         / >
                         <img 
                             class="mobile-graphic-<?php echo $options['iphone-colors'][1] ?>" 
-                            src="<?php echo appDir ?>/images/mobile-screen.png" 
+                            src="<?php echo appDir ?>/images/mobile-screen-5.jpg" 
                             data-trigger="transform: translate(45%, -50%) translateZ(0) scale(0.85)"
                             data-hover="right: -25%"
                             alt=""
@@ -91,13 +91,13 @@
                 <div class="widget_group span-3 break-3-half break-2-full va-middle">
                     <div class="widget-stacked">                  
                         <div class="widget_icon-inline button-icon-plain-size-7">
-                            <i class="fa fa-user"></i>
+                            <i class="fa fa-mobile"></i>
                         </div> 
                         <header class="widget_header-inline heading_group">
-                            <h3 class="heading-heavy-size-4">User Experience</h3>
-                            <h4 class="heading-light-uppercase-brand-1">Donec finibus fringer</h4>
+                            <h3 class="heading-heavy-size-4">Mobile Visibility</h3>
+                            <h4 class="heading-light-uppercase-brand-1">Show/Hide On Mobiles</h4>
                         </header>   
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc et erat posuere consectetur adipiscing suscipit.</p>
+                        <p>Using the custom helper classes you can easily show or hide elements specifically for mobile devices.</p>
                     </div>
                     <div class="widget-stacked">               
                         <div class="widget_icon-inline button-icon-plain-size-7">
@@ -105,19 +105,19 @@
                         </div> 
                         <header class="widget_header-inline heading_group">
                             <h3 class="heading-heavy-size-4">Mobile Menu</h3>
-                            <h4 class="heading-light-uppercase-brand-1">Donec finibus fringer</h4>
+                            <h4 class="heading-light-uppercase-brand-1">Touch-Friendly Nav</h4>
                         </header>      
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc et erat posuere consectetur adipiscing suscipit.</p>
+                        <p>Easily navigate pages using the mobile-friendly flyout navigation which offers unlimited nesting.</p>
                     </div>
                     <div class="widget-stacked">                  
                         <div class="widget_icon-inline button-icon-plain-size-7">
-                            <i class="fa fa-th-large"></i>
+                            <i class="fa fa-th"></i>
                         </div> 
                         <header class="widget_header-inline heading_group">
-                            <h3 class="heading-heavy-size-4">User Panel</h3>
-                            <h4 class="heading-light-uppercase-brand-1">Donec finibus fringer</h4>
+                            <h3 class="heading-heavy-size-4">Kayzen GS</h3>
+                            <h4 class="heading-light-uppercase-brand-1">Custom Grid System</h4>
                         </header>   
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc et erat posuere consectetur adipiscing suscipit.</p>
+                        <p>Kayzen is built on our own custom grid system: <a href="https://github.com/esr360/Kayzen-GS" target="blank">Kayzen GS</a>, which is based off <code>inline-block</code> columns.</p>
                     </div>
                 </div>
                 

@@ -73,6 +73,11 @@
 			&, a:not([class*="button-"]) {
 				color: this('secondary-color');
 			}
+			p, li {
+				a {
+					border-bottom: 1px dotted;
+				}
+			}
 			.owl-dot {
 				&.active {
 					span {

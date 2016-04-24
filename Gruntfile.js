@@ -515,6 +515,11 @@ module.exports = function(grunt) {
                 value       : themes,
                 file        : 'templates/app.php'
             },
+            theme: {
+                constant    : 'theme',
+                value       : theme,
+                file        : 'templates/app.php'
+            },
             dev: {
                 constant    : 'env',
                 value       : 'dev',

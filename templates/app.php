@@ -12,6 +12,13 @@
 define('env', 'dev');
 
 /**
+ * Set which theme you are using
+ * @const theme
+ *
+ */
+define('theme', 'Kayzen');
+
+/**
  * Are you using multiple themes?
  * @const themes
  *

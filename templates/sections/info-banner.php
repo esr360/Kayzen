@@ -23,9 +23,9 @@
                 <div class="span-8">
                     <header class="heading_group">
                         <h2 class="heading-uppercase-light-strikethrough-spaced-size-4"><span>Kayzen</span></h2>
-                        <h3 class="heading-uppercase-heavy-size-7 font-2">Wordpress Theme</h3>
+                        <h3 class="heading-uppercase-heavy-size-7 font-2">Next-Gen Theming</h3>
                     </header>
-                    <p class="lede">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In nec velit vel turpis imperdiet tempus. Etiam venenatis maximus luctus. Curabitur eget lorem tortor.</p>
+                    <p class="lede">Be part of the next generation of website theming and give Kayzen a try today - build whatever you want with endless possibilities.</p>
                     <div class="button_group">
                         <?php if ($options['color'] == 'light') { ?>
                             <a href="#" class="button-size-3<?php echo '-'.$options['cta-modifiers'] ?>">

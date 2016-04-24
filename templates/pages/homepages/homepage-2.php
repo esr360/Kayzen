@@ -35,7 +35,7 @@
 						<h3 class="heading-uppercase-heavy-size-8 font-2">Welcome to Kayzen</h3>
 						<h2 class="heading-light-size-6"><span>A Unique & Modern Theme Framework</span></h2>
 					</header>
-					<p class="lede">Kayzen is a powerful themeing framework for architecting CSS for large, modular & scalable web applications. Built using only Sass (SCSS), Kayzen has the customizing power of a complete CMS theme.</p>
+					<p class="lede">Welcome to Kayzen; the next generation of website & app theming. Kayzen is more than just a theme, it's a theme framework, custom built from the ground up to help make theming great again.</p>
 					<div class="button_group">
 						<a class="button-oval-size-4-white" href="#">Purchase Now</a>
 						<a class="button-oval-size-4-border-white" href="#">Explore The Potential</a>

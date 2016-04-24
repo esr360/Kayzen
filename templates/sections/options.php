@@ -15,7 +15,7 @@
                 <div class="heading_icon">
                     <i class="fa fa-cogs"></i>
                 </div>
-                <p class="lede">All of the provided demos are created by simply changing the options within the WordPress backend. Virtually any look can be achieved thanks to our intuitive options.</p>
+                <p class="lede">All of the provided demos are created by simply changing the options within the Sass configuration. Virtually any look can be achieved thanks to the intuitive options.</p>
             </div>
         </header>
         
@@ -44,16 +44,16 @@
                     <p>Kayzen has been built to do everything you need from the very beginning, meaning your theme customizing experience has never smoother.</p>
                     <div class="accordion">
                         <section class="accordion_section active">
-                            <h4 class="accordion_title heading">Native Wordpress Editor</h4>
-                            <p class="accordion_content">Kayzen uses the native WordPress theme cuztomizer, making it future proof and allowing you to visually see any changes as you make them.</p>
+                            <h4 class="accordion_title heading">Fonts & Typography</h4>
+                            <p class="accordion_content">Kayzen uses Google Fonts, allowing you to easily switch your fonts out from a choice of over 700 fonts. You can then change each module's typography settings on an individual basis, such as font-size, colors etc.</p>
                         </section>
                         <section class="accordion_section">
-                            <h4 class="accordion_title heading">Visual Composer</h4>
-                            <p class="accordion_content">Kayzen comes with the famous <a href="http://vc.wpbakery.com/">Visual Composer</a> drag-and-drop page builder plugin, allowing you to use our custom widgets anywhere on your website.</p>
+                            <h4 class="accordion_title heading">Colors & Layout</h4>
+                            <p class="accordion_content">The entire color scheme of your theme can be changed by changing a single variable in the Sass configuration. Changing other aspects of your theme is also just as easy.</p>
                         </section>
                         <section class="accordion_section">
-                            <h4 class="accordion_title heading">Our Own Custom Framework</h4>
-                            <p class="accordion_content">We have developed our own custom framework specifically for this theme - no Bootstrap nonsense, our framework has been created with theming and WordPress in mind, making it the most flexible theme framework there is.</p>
+                            <h4 class="accordion_title heading">Complete Responsive Control</h4>
+                            <p class="accordion_content">Kayzen gives you complete control over the responsiveness of your theme, thanks to our own custom grid system and responsive helper classes.</p>
                         </section>
                     </div>
                 </div>

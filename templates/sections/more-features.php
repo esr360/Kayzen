@@ -26,85 +26,85 @@
                 <!-- Feature 1 -->
                 <div class="widget span-4 break-3-half break-2-full">                     
                     <div class="widget_icon-inline button-icon-plain-size-6">
-                        <i class="fa fa-cogs"></i>
+                        <i class="fa fa-spinner"></i>
                     </div>  
                     <header class="widget_header-inline heading_group">
-                        <h3 class="heading-heavy-uppercase">Fast Performance</h3>
-                        <h4 class="heading-light-uppercase-brand-1-size-2">Donec finibus fringer</h4>
+                        <h3 class="heading-heavy-uppercase">Infinite Ajax Scroll</h3>
+                        <h4 class="heading-light-uppercase-brand-1-size-2">Included free - $12 Value</h4>
                     </header>     
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc et erat posuere consectetur adipiscing suscipit.</p>
+                    <p>Infinite Ajax Scroll is an SEO friendly infinite scroll plugin for jQuery, and comes included free with Kayzen.</p>
                 </div>
                 
                 <!-- Feature 2 -->
                 <div class="widget span-4 break-3-half break-2-full">                     
                     <div class="widget_icon-inline button-icon-plain-size-6">
-                        <i class="fa fa-star"></i>
+                        <i class="fa fa-google"></i>
                     </div>  
                     <header class="widget_header-inline heading_group">
-                        <h3 class="heading-heavy-uppercase">Fast Performance</h3>
-                        <h4 class="heading-light-uppercase-brand-1-size-2">Donec finibus fringer</h4>
+                        <h3 class="heading-heavy-uppercase">Google Fonts</h3>
+                        <h4 class="heading-light-uppercase-brand-1-size-2">Access to over 700 fonts</h4>
                     </header>     
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc et erat posuere consectetur adipiscing suscipit.</p>
+                    <p>Kayzen uses Google Fonts, allowing you to easily modify the typography of your theme.</p>
                 </div>
                 
                 <!-- Feature 3 -->
                 <div class="widget span-4 break-3-half break-2-full">                     
                     <div class="widget_icon-inline button-icon-plain-size-6">
-                        <i class="fa fa-eye"></i>
+                        <i class="fa fa-magic"></i>
                     </div>  
                     <header class="widget_header-inline heading_group">
-                        <h3 class="heading-heavy-uppercase">Fast Performance</h3>
-                        <h4 class="heading-light-uppercase-brand-1-size-2">Donec finibus fringer</h4>
+                        <h3 class="heading-heavy-uppercase">Isotope Plugin</h3>
+                        <h4 class="heading-light-uppercase-brand-1-size-2">Easily Create Masonry Grids</h4>
                     </header>     
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc et erat posuere consectetur adipiscing suscipit.</p>
+                    <p>Commercial license included ($25 value) - easily create filterable and masonry layouts.</p>
                 </div>
                 
                 <!-- Feature 4 -->
                 <div class="widget span-4 break-3-half break-2-full">                     
                     <div class="widget_icon-inline button-icon-plain-size-6">
-                        <i class="fa fa-home"></i>
+                        <i class="fa fa-arrows-h"></i>
                     </div>  
                     <header class="widget_header-inline heading_group">
-                        <h3 class="heading-heavy-uppercase">Fast Performance</h3>
-                        <h4 class="heading-light-uppercase-brand-1-size-2">Donec finibus fringer</h4>
+                        <h3 class="heading-heavy-uppercase">OWl-Carousel 2</h3>
+                        <h4 class="heading-light-uppercase-brand-1-size-2">Touch Friendly Carousels</h4>
                     </header>     
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc et erat posuere consectetur adipiscing suscipit.</p>
+                    <p>Create responsive and touch friendly carousels with the utmost of ease thanks to this fantastic plugin.</p>
                 </div>
                 
                 <!-- Feature 5 -->
                 <div class="widget span-4 break-3-half break-2-full">                     
                     <div class="widget_icon-inline button-icon-plain-size-6">
-                        <i class="fa fa-image"></i>
+                        <i class="fa fa-share-square-o"></i>
                     </div>  
                     <header class="widget_header-inline heading_group">
-                        <h3 class="heading-heavy-uppercase">Fast Performance</h3>
-                        <h4 class="heading-light-uppercase-brand-1-size-2">Donec finibus fringer</h4>
+                        <h3 class="heading-heavy-uppercase">Social Share Feed</h3>
+                        <h4 class="heading-light-uppercase-brand-1-size-2">Fully Working Share Count</h4>
                     </header>     
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc et erat posuere consectetur adipiscing suscipit.</p>
+                    <p>Get the amount of shares/likes for any given page for various different social media websites.</p>
                 </div>
                 
                 <!-- Feature 6 -->
                 <div class="widget span-4 break-3-half break-2-full">                     
                     <div class="widget_icon-inline button-icon-plain-size-6">
-                        <i class="fa fa-search"></i>
+                        <i class="fa fa-flag"></i>
                     </div>  
                     <header class="widget_header-inline heading_group">
-                        <h3 class="heading-heavy-uppercase">Fast Performance</h3>
-                        <h4 class="heading-light-uppercase-brand-1-size-2">Donec finibus fringer</h4>
+                        <h3 class="heading-heavy-uppercase">Font Awesome Icons</h3>
+                        <h4 class="heading-light-uppercase-brand-1-size-2">Retina Ready Font Icons</h4>
                     </header>     
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc et erat posuere consectetur adipiscing suscipit.</p>
+                    <p>Get instant access to over 600 customizable vector icons to use anywhere in your project.</p>
                 </div>
                 
                 <!-- Feature 7 -->
                 <div class="widget span-4 break-3-half break-2-full">                     
                     <div class="widget_icon-inline button-icon-plain-size-6">
-                        <i class="fa fa-user"></i>
+                        <i class="fa fa-object-ungroup"></i>
                     </div>  
                     <header class="widget_header-inline heading_group">
-                        <h3 class="heading-heavy-uppercase">Fast Performance</h3>
-                        <h4 class="heading-light-uppercase-brand-1-size-2">Donec finibus fringer</h4>
+                        <h3 class="heading-heavy-uppercase">Magnific Popup</h3>
+                        <h4 class="heading-light-uppercase-brand-1-size-2">Easily Create Galleries</h4>
                     </header>     
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc et erat posuere consectetur adipiscing suscipit.</p>
+                    <p>Build repsonsive galleries with the popular Magnific Popup lightbox script for jQuery.</p>
                 </div>
                 
                 <!-- Feature 8 -->
@@ -113,10 +113,10 @@
                         <i class="fa fa-twitter"></i>
                     </div>  
                     <header class="widget_header-inline heading_group">
-                        <h3 class="heading-heavy-uppercase">Fast Performance</h3>
-                        <h4 class="heading-light-uppercase-brand-1-size-2">Donec finibus fringer</h4>
+                        <h3 class="heading-heavy-uppercase">Twitter Feed</h3>
+                        <h4 class="heading-light-uppercase-brand-1-size-2">Fully Working Feed</h4>
                     </header>     
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc et erat posuere consectetur adipiscing suscipit.</p>
+                    <p>Kayzen comes with a fully functioning and customizable Twitter feed, simply swap in your own username.</p>
                 </div>
                 
                 <!-- Feature 9 -->
@@ -125,10 +125,10 @@
                         <i class="fa fa-github-alt"></i>
                     </div>  
                     <header class="widget_header-inline heading_group">
-                        <h3 class="heading-heavy-uppercase">Fast Performance</h3>
-                        <h4 class="heading-light-uppercase-brand-1-size-2">Donec finibus fringer</h4>
+                        <h3 class="heading-heavy-uppercase">Hosted on Github</h3>
+                        <h4 class="heading-light-uppercase-brand-1-size-2">Access to Private Github Repo</h4>
                     </header>     
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc et erat posuere consectetur adipiscing suscipit.</p>
+                    <p>Access the private repo hosted on Github, allowing you to integrate the source files into your workflow.</p>
                 </div>
                 
             </div><!-- Row -->

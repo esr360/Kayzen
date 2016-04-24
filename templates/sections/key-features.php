@@ -42,13 +42,13 @@
                     <h3 class="heading-heavy-size-4">Page Builder</h3>
                     <h4 class="heading-light-uppercase-brand-1">HTML Builder Included</h4>
                 </header>
-                <p>Kayzen comes included with <a href="http://codecanyon.net/item/html-builder-frontend-version/8432859?sso" target="blank">HTML Builder</a> (Front-End version - $21 value), allowing you to easily build pages using a drag & drop interface.</p>
+                <p>Kayzen comes included with <a href="http://codecanyon.net/item/html-builder-frontend-version/8432859?sso" target="blank">HTML Builder</a> ($21 value), allowing you to easily build pages using a drag & drop interface.</p>
             </div>
             
             <!-- Feature 3 -->
             <div class="widget-block-panel span-3 break-4-half break-2-full">
                 <div class="widget_icon button-icon-plain-size-8">
-                    <i class="fa fa-photo"></i>
+                    <i class="fa fa-eye"></i>
                 </div>
                 <header class="widget_header heading_group">
                     <h3 class="heading-heavy-size-4">Retina Ready</h3>
@@ -99,10 +99,10 @@
                     <i class="fa fa-cog"></i>
                 </div>
                 <header class="widget_header heading_group">
-                    <h3 class="heading-heavy-size-4">Unlimited Headers</h3>
-                    <h4 class="heading-light-uppercase-brand-1">Create any type of header</h4>
+                    <h3 class="heading-heavy-size-4">Unique Configuration</h3>
+                    <h4 class="heading-light-uppercase-brand-1">Easily Change Options</h4>
                 </header>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc et erat posuere suscipit. Phasellus congue scelerisque lacus.</p>
+                <p>Completely change the look and feel of your website without touching any HTML thanks to Kayzen's unique way of handling options.</p>
             </div>
             
             <!-- Feature 8 -->

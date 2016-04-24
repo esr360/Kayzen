@@ -15,7 +15,7 @@
                 <div class="heading_icon">
                     <i class="fa fa-magic"></i>
                 </div>
-                <p class="lede">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In nec velit vel turpis imperdiet tempus. Etiam venenatis maximus luctus. Curabitur eget lorem tortor.</p>
+                <p class="lede">Choose from one of the below demos, or <a href="<?php pageLink('demos.php') ?>">view the complete list</a> here. Each demo is built from the provided <a href="<?php pageLink('templates.php') ?>">templates</a> with their own unique configuration.</p>
             </div>
         </header>
         

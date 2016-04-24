@@ -30,9 +30,9 @@
                     </div>
                     <header class="widget_header heading_group">
                         <h3 class="heading-heavy-size-4">100% Responsive</h3>
-                        <h4 class="heading-light-uppercase-brand-1">Donec finibus fringer</h4>
+                        <h4 class="heading-light-uppercase-brand-1">Optimized for all devices</h4>
                     </header>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc et erat posuere suscipit.</p>
+                    <p>Kayzen has been built from the ground up using our own custom grid system; <a href="https://github.com/esr360/Kayzen-GS" target="blank">Kayzen GS</a>.</p>
                 </div>
                 
                 <!-- Feature 2 -->
@@ -41,10 +41,10 @@
                         <i class="fa fa-clipboard"></i>
                     </div>
                     <header class="widget_header heading_group">
-                        <h3 class="heading-heavy-size-4">Simple Page Builder</h3>
-                        <h4 class="heading-light-uppercase-brand-1">Donec finibus fringer</h4>
+                        <h3 class="heading-heavy-size-4">Retina Ready</h3>
+                        <h4 class="heading-light-uppercase-brand-1">Crystal clear display</h4>
                     </header>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc et erat posuere suscipit.</p>
+                    <p>Kayzen is optimised for devices with retina displays, offering a crystal clear experience.</p>
                 </div>
                 
                 <!-- Feature 3 -->
@@ -53,10 +53,10 @@
                         <i class="fa fa-photo"></i>
                     </div>
                     <header class="widget_header heading_group">
-                        <h3 class="heading-heavy-size-4">Retina Ready</h3>
-                        <h4 class="heading-light-uppercase-brand-1">Donec finibus fringer</h4>
+                        <h3 class="heading-heavy-size-4">Premade Demos</h3>
+                        <h4 class="heading-light-uppercase-brand-1">Get Setup Instantly</h4>
                     </header>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc et erat posuere suscipit.</p>
+                    <p>Kayzen comes with a bunch of premade demos which are built using the provided templates.</p>
                 </div>
                 
                 <!-- Feature 4 -->
@@ -68,7 +68,7 @@
                         <h3 class="heading-heavy-size-4">Unlimited Colors</h3>
                         <h4 class="heading-light-uppercase-brand-1">Donec finibus fringer</h4>
                     </header>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc et erat posuere suscipit.</p>
+                    <p>Change the entire color scheme of your theme by changing just one variable in the configuration.</p>
                 </div>
                 
             </div><!-- Features Row -->

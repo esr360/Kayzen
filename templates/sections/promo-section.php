@@ -50,12 +50,12 @@
                             <?php if ($options['sub-title']['highlight']) { ?></b><?php } else { ?></span><?php } ?>
                         </h3>
                     </header>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus eget porta eros. Suspendisse vehicula massa in erat mattis.</p>
+                    <p>Kayzen has been robustly built using the latest tools & technologies, and will work on any common browser or device giving your users the best experience possible.</p>
                     <ul class="list-arrow min-break-2">
-                        <li>Lorem ipsum dolor sit amet consectetur</li>
-                        <li>Donec malesuada metus non massa sodales auctor</li>
-                        <li>Sed sed iaculis arcu, eu pharetra nulla</li>
-                        <li>Etiam dapibus, nulla placerat</li>
+                        <li>100% validated HTML5 code</li>
+                        <li>Modular Sass architecture</li>
+                        <li>Completely responsive & mobile optimized</li>
+                        <li>Custom <a href="https://github.com/esr360/Kayzen-GS" target="blank">Kayzen GS</a> grid system</li>
                     </ul>
                     <div class="button_group">
                         <?php if ($options['dark']) { ?>

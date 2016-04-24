@@ -17,36 +17,36 @@
                     <div class="heading_icon">
                         <i class="fa fa-cubes"></i>
                     </div>
-                    <p class="lede">Thanks to the flexibility of Kayzen's options, there is no limit to the layouts you can achieve. Below is just a small sample of common styles and layouts that can easily be achieved with Kayzen.</p>
+                    <p class="lede">Kayzen comes with all the UI components you need to build an awesome, interactive web app. Thanks to the modular structure of Kayzen, you can easily omit any components you don't need.</p>
                 </div>
             </header>
             
             <!-- Shortcodes Graphics -->
             <div class="carousel-scale-2 owl-carousel" id="shortcodes-carousel">
-                <div class="desktop-graphic">
+                <a href="<?php pageLink('modules/elements/tabs.php') ?>" class="desktop-graphic">
                     <img src="<?php echo appDir ?>/images/demo-screen.png" alt="" />
                     <div class="desktop-graphic_image" style="background-image: url('<?php echo appDir ?>/images/shortcodes-1.jpg')"></div>
-                </div>
-                <div class="desktop-graphic">
+                </a>
+                <a href="<?php pageLink('modules/elements/tooltips.php') ?>" class="desktop-graphic">
                     <img src="<?php echo appDir ?>/images/demo-screen.png" alt="" />
                     <div class="desktop-graphic_image" style="background-image: url('<?php echo appDir ?>/images/shortcodes-2.jpg')"></div>
-                </div>
-                <div class="desktop-graphic">
+                </a>
+                <a href="<?php pageLink('modules/elements/alert-bars.php') ?>" class="desktop-graphic">
                     <img src="<?php echo appDir ?>/images/demo-screen.png" alt="" />
                     <div class="desktop-graphic_image" style="background-image: url('<?php echo appDir ?>/images/shortcodes-3.jpg')"></div>
-                </div>
-                <div class="desktop-graphic">
+                </a>
+                <a href="<?php pageLink('modules/elements/accordions.php') ?>" class="desktop-graphic">
                     <img src="<?php echo appDir ?>/images/demo-screen.png" alt="" />
                     <div class="desktop-graphic_image" style="background-image: url('<?php echo appDir ?>/images/shortcodes-4.jpg')"></div>
-                </div>
-                <div class="desktop-graphic">
+                </a>
+                <a href="<?php pageLink('modules/elements/modals.php') ?>" class="desktop-graphic">
                     <img src="<?php echo appDir ?>/images/demo-screen.png" alt="" />
                     <div class="desktop-graphic_image" style="background-image: url('<?php echo appDir ?>/images/shortcodes-5.jpg')"></div>
-                </div>
-                <div class="desktop-graphic">
+                </a>
+                <a href="<?php pageLink('modules/elements/buttons.php') ?>" class="desktop-graphic">
                     <img src="<?php echo appDir ?>/images/demo-screen.png" alt="" />
                     <div class="desktop-graphic_image" style="background-image: url('<?php echo appDir ?>/images/shortcodes-6.jpg')"></div>
-                </div>
+                </a>
             </div>
             
         </div><!-- Container -->
@@ -61,23 +61,24 @@
         <script>
             $(document).ready(function() {
                 
-                var shortcodesCarousel = $("#shortcodes-carousel");
+                var shortcodesCarousel = $('#shortcodes-carousel');
                 
                 shortcodesCarousel.owlCarousel({
                     items: 3,
                     center: true,
                     loop: true
-                })
-                .on('click', '.owl-item', function(e) {
+                }).on('click', '.owl-item', function(e) {
                     var carousel = shortcodesCarousel.data('owl.carousel');
-                    e.preventDefault();
-                    carousel.to(carousel.relative($(this).index()));
+                    if (!$(this).hasClass('center')) {
+                        e.preventDefault();
+                        carousel.to(carousel.relative($(this).index()));
+                    }
                 });
                 
-                $("#shortcodes .slide-next").click(function() {
+                $('#shortcodes .slide-next').click(function() {
                     shortcodesCarousel.trigger('next.owl.carousel');
                 });
-                $("#shortcodes .slide-prev").click(function() {
+                $('#shortcodes .slide-prev').click(function() {
                     shortcodesCarousel.trigger('prev.owl.carousel');
                 });
                 

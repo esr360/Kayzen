@@ -140,7 +140,7 @@
             </div>
             <?php if ($options['author-thumb']) { ?>
                 <div class="thumbnail-profile-round-badge">
-                    <img src="<?php stockImage('team/team-2.jpg') ?>" alt="">
+                    <img src="<?php stockImage($options['author-thumb']) ?>" alt="">
                 </div>
             <?php } ?>
             
