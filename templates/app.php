@@ -9,7 +9,7 @@
  *
  * Values: 'dev' | 'prod'
  */
-define('env', 'prod');
+define('env', 'dev');
 
 /**
  * Are you using multiple themes?

@@ -104,6 +104,18 @@
                 }
             }
             
+            a {
+                border-bottom: 1px dotted;
+                transition: base('transition');
+            }
+            
+            &:hover {
+                a {
+                    color: inherit;
+                    transition: 0s;
+                }
+            }
+            
         } // modifier('block')
         
         //---------------------------------------------------------
