@@ -124,6 +124,15 @@
             </header>
         </a>
         
+        <a class="widget-block-panel-small span-2 break-3-third break-1-half" href="modules/objects/preloader.php">
+            <div class="widget_icon button-icon-plain-size-8">
+                <i class="fa fa-spinner"></i>
+            </div>
+            <header class="widget_header heading_group">
+                <h3 class="heading-light-uppercase-brand-1">Preloader</h3>
+            </header>
+        </a>
+        
         <a class="widget-block-panel-small span-2 break-3-third break-1-half" href="modules/objects/scroll-top.php">
             <div class="widget_icon button-icon-plain-size-8">
                 <i class="fa fa-chevron-circle-up"></i>

@@ -26,7 +26,7 @@
             var lastId;
             
             // Get the height of the parent container
-            var parentHeight = $($parent).outerHeight()+15;
+            var parentHeight = $($parent).outerHeight() + 15;
             
             // Get all items
             var items = $($parent).find(options.itemSelector);
@@ -47,7 +47,7 @@
             $(window).scroll(function() {
                 
                 // Get container scroll position
-                var fromTop = $(this).scrollTop()+parentHeight;
+                var fromTop = $(this).scrollTop() + parentHeight;
                 
                 // Get id of current scroll item
                 var current = scrollItems.map(function() {

@@ -121,7 +121,7 @@
 						</header>
 						<p>Kayzen's revolutionary modular structure means that customizing your project has never been easier. With UI elements for every purpose, you can include only the ones you need, keeping your assets lighter and load times faster.</p>
 						<div class="button_group">
-							<a class="button-border-primary-size-2" href="#">View Modules</a>
+							<a class="button-border-primary-size-2" href="<?php pageLink('modules.php') ?>">View Modules</a>
 							<a class="button-border-size-2" href="#">Learn More</a>
 						</div>
 					</div>
@@ -139,7 +139,7 @@
 		
 		<section class="section-primary" id="page-builder">
 			<div class="container-small">
-				<div class="row row-waffle-large">
+				<div class="row">
 					<div class="span-5 va-middle text-center min-break-3">
 						<img class="span-10" src="<?php echo appDir ?>/images/layouts/layout-header-alt.png" alt="" />
 					</div>
@@ -147,9 +147,11 @@
 						<header class="heading_group">
 							<h2 class="heading-light-size-6">Drag & Drop Page Builder</h2>
 						</header>
-						<p>Instantly create new pages using predefined modules by using our intuitive drag & drop page builder. Export your pages at the click of a button, ready for production. No coding knowledge required, just use your mouse to drag & drop!</p>
+						<p>Instantly create new pages using predefined modules by using the provided drag & drop page builder. Export your pages at the click of a button. Expert coding knowledge not required, just use your mouse to drag & drop!</p>
 						<div class="button_group">
-							<a class="button-primary-size-2" href="#">View Modules</a>
+							<a class="button-primary-size-2" href="http://codecanyon.net/item/html-builder-frontend-version/8432859" target="blank">
+								View Product
+							</a>
 							<a class="button-size-2" href="#">Learn More</a>
 						</div>
 					</div>
@@ -163,7 +165,7 @@
 		
 		<section class="section-primary" id="unique-configuration">
 			<div class="container-small">
-				<div class="row row-waffle-large">
+				<div class="row">
 					<div class="span-7 va-middle">
 						<header class="heading_group">
 							<h2 class="heading-light-size-6">Unique Configuration</h2>
@@ -198,7 +200,7 @@
 						</header>
 						<p>Kayzen doesn't use Bootstrap or any other third party framework - we have developed our own <a href="https://github.com/esr360/Kayzen-GS" target="blank">unique grid system</a> built specifically for Kayzen, offering you more power than any other grid system out there. Expect no less, Kayzen's grid system is built using mobile first principles and is 100% responsive.</p>
 						<div class="button_group">
-							<a class="button-white-size-2" href="#">View Modules</a>
+							<a class="button-white-size-2" href="https://github.com/esr360/Kayzen-GS" target="blank">View on Github</a>
 							<a class="button-border-white-size-2" href="#">Learn More</a>
 						</div>
 					</div>
@@ -215,7 +217,7 @@
 						</header>
 						<p>Create multiple themes for your project and swap them at the change of a variable. Kayzen's unique theming system allows you to rapidly build multiple themes without altering any of the source code. The code for your theme is automatically generated based on the settings you pass in the configuration file.</p>
 						<div class="button_group">
-							<a class="button-primary-size-2" href="#">View Modules</a>
+							<a class="button-primary-size-2" href="#">View Themes</a>
 							<a class="button-size-2" href="#">Learn More</a>
 						</div>
 					</div>
@@ -237,30 +239,26 @@
 			</div>
 		</section>
 		
-		<?php 
-        
-            promoBanner();
-            
-        ?>
+		<?php promoBanner() ?>
 		
 		<section class="section-primary" id="mobile-optimized">
 		
 			<div class="container-small">
 				<div class="row-block stack-break-2">
 					<!-- Responsive Graphics -->
-					<div class="span-5 va-middle text-center min-break-2">
+					<div class="span-5 va-middle text-center">
 						<div class="span-10">
-							<div class="center-xy span-6 va-middle">
+							<div class="center-xy span-6 va-middle min-break-2">
 								<img 
 									class="mobile-graphic-white" 
-									src="<?php echo appDir ?>/images/mobile-screen.png" 
+									src="<?php echo appDir ?>/images/mobile-screen-1.jpg" 
 									data-trigger="transform: translate(-45%, -50%) translateZ(0) scale(0.85)"
 									data-hover="left: -25%"
 									alt=""
 								/ >
 								<img 
 									class="mobile-graphic-blue" 
-									src="<?php echo appDir ?>/images/mobile-screen.png" 
+									src="<?php echo appDir ?>/images/mobile-screen-4.jpg" 
 									data-trigger="transform: translate(45%, -50%) translateZ(0) scale(0.85)"
 									data-hover="right: -25%"
 									alt=""
@@ -278,9 +276,9 @@
 						<header class="heading_group">
 							<h2 class="heading-light-size-6">Mobile Optimized</h2>
 						</header>
-						<p>Create multiple themes for your project and swap them at the change of a variable. Kayzen's unique theming system allows you to rapidly build multiple themes without altering any of the source code. The code for your theme is automatically generated based on the settings you pass in the configuration file.</p>
+						<p>Kayzen is not only completely responsive, but it is also totally optimzed for mobile devices by features such as retina ready graphics and touch/swipe support. Built using our own custom <a href="https://github.com/esr360/Kayzen-GS" target="blank">responsive grid system</a> and helper classes, you have complete control over your theme's responsiveness.</p>
 						<div class="button_group">
-							<a class="button-primary-size-2" href="#">View Modules</a>
+							<a class="button-primary-size-2" href="#">Device Preview</a>
 							<a class="button-size-2" href="#">Learn More</a>
 						</div>
 					</div>

@@ -18,12 +18,10 @@
 		
 		<?php 
         
-            topbar(array(
-                'modifiers' => 'fixed'
-            ));
+            topbar();
 
             appHeader(array(
-                'modifiers' => 'bar-absolute-dark'
+                'modifiers' => 'bar-absolute-dark-sticky'
             ));
 
             billboard(array(

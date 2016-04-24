@@ -106,6 +106,15 @@
             </header>
         </a>
         
+        <a class="widget-block-panel-small span-2 break-3-third break-1-half" href="modules/elements/notifications.php">
+            <div class="widget_icon button-icon-plain-size-8">
+                <i class="fa fa-exclamation-circle"></i>
+            </div>
+            <header class="widget_header heading_group">
+                <h3 class="heading-light-uppercase-brand-1">Notifications</h3>
+            </header>
+        </a>
+        
         <a class="widget-block-panel-small span-2 break-3-third break-1-half" href="modules/elements/price-charts.php">
             <div class="widget_icon button-icon-plain-size-8">
                 <i class="fa fa-money"></i>

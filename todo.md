@@ -3,7 +3,6 @@
 
 - contact form (don't forget to document)
 - document preloader
-- add themes and associated imagery
 
 # Done
 #============================================================
@@ -23,6 +22,8 @@
 - update all empty # links
 - full responsive audit
 - add loading spinner
+- add themes and associated imagery
+- document notifications
 
 # Next Release
 #============================================================
