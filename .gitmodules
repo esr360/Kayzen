@@ -52,9 +52,6 @@
 [submodule "assets/vendor/pseudojQuery"]
 	path = assets/vendor/pseudojQuery
 	url = https://github.com/esr360/pseudojQuery.git
-[submodule "assets/vendor/Aloads"]
-	path = assets/vendor/Aloads
-	url = https://github.com/awedoo/aloads.git
 [submodule "docs"]
 	path = docs
 	url = https://github.com/esr360/Kayzen.docs.git
