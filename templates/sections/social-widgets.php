@@ -21,7 +21,7 @@
             <?php if ($options['facebook']) { ?>
                 <a href="#" class="widget-tub span bg-facebook">
                     <div class="widget_lid">
-                        <div class="widget_sticker button-icon-plain-size-6">
+                        <div class="widget_sticker-small button-icon-plain-size-6">
                             <i class="fa fa-facebook"></i>
                         </div>
                     </div>
@@ -39,7 +39,7 @@
             <?php if ($options['twitter']) { ?>
                 <a href="#" class="widget-tub span bg-twitter">
                     <div class="widget_lid">
-                        <div class="widget_sticker button-icon-plain-size-6">
+                        <div class="widget_sticker-small button-icon-plain-size-6">
                             <i class="fa fa-twitter"></i>
                         </div>
                     </div>
@@ -57,7 +57,7 @@
             <?php if ($options['google-plus']) { ?>
                 <a href="#" class="widget-tub span bg-google-plus">
                     <div class="widget_lid">
-                        <div class="widget_sticker button-icon-plain-size-6">
+                        <div class="widget_sticker-small button-icon-plain-size-6">
                             <i class="fa fa-google-plus"></i>
                         </div>
                     </div>
@@ -75,7 +75,7 @@
             <?php if ($options['linkedin']) { ?>
                 <a href="#" class="widget-tub span bg-linkedin">
                     <div class="widget_lid">
-                        <div class="widget_sticker button-icon-plain-size-6">
+                        <div class="widget_sticker-small button-icon-plain-size-6">
                             <i class="fa fa-linkedin"></i>
                         </div>
                     </div>
@@ -93,7 +93,7 @@
             <?php if ($options['stumbleupon']) { ?>
                 <a href="#" class="widget-tub span bg-stumbleupon">
                     <div class="widget_lid">
-                        <div class="widget_sticker button-icon-plain-size-6">
+                        <div class="widget_sticker-small button-icon-plain-size-6">
                             <i class="fa fa-stumbleupon"></i>
                         </div>
                     </div>
@@ -111,7 +111,7 @@
             <?php if ($options['pinterest']) { ?>
                 <a href="#" class="widget-tub span bg-pinterest">
                     <div class="widget_lid">
-                        <div class="widget_sticker button-icon-plain-size-6">
+                        <div class="widget_sticker-small button-icon-plain-size-6">
                             <i class="fa fa-pinterest"></i>
                         </div>
                     </div>
@@ -129,7 +129,7 @@
             <?php if ($options['reddit']) { ?>
                 <a href="#" class="widget-tub span bg-reddit">
                     <div class="widget_lid">
-                        <div class="widget_sticker button-icon-plain-size-6">
+                        <div class="widget_sticker-small button-icon-plain-size-6">
                             <i class="fa fa-reddit"></i>
                         </div>
                     </div>

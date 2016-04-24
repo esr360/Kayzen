@@ -355,13 +355,18 @@
         @include component('sticker') {
             position: absolute;
             transition: base('transition');
-            top: calc(50% - 0.5em);
+            top: calc(50% - 1.5rem);
             transform: translateY(-50%);
             left: 0;
             right: 0;
             margin: auto;
             @media (max-width: breakpoint('break-2')) {
                 top: 50%;
+            }
+            @include modifier('small') {
+                @media (min-width: breakpoint('break-2')) {
+                    top: calc(50% - 1.2rem);
+                }
             }
         }
         

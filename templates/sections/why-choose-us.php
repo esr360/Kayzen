@@ -57,7 +57,7 @@
                             <h4 class="heading-light-uppercase-brand-1">Crystal Clear Display</h4>
                         </header>                       
                         <div class="widget_icon-inline button-icon-plain-size-7">
-                            <i class="fa fa-refresh"></i>
+                            <i class="fa fa-eye"></i>
                         </div>
                         <p>Kayzen is optimised for devices with retina displays, offering a crystal clear high-res experience.</p>
                     </div>

@@ -494,16 +494,16 @@
     
     <div class="accordion">
         <section class="accordion_section active">
-            <h4 class="accordion_title heading">Native Wordpress Editor</h4>
-            <p class="accordion_content">Kayzen uses the native WordPress theme cuztomizer, making it future proof and allowing you to visually see any changes as you make them.</p>
+            <h4 class="accordion_title heading">100% Responsive</h4>
+            <p class="accordion_content">Kayzen has been built from the ground up using our own custom responsive grid system; <a href="https://github.com/esr360/Kayzen-GS" target="blank">Kayzen GS</a>, which was built for this theme.</p>
         </section>
         <section class="accordion_section">
-            <h4 class="accordion_title heading">Visual Composer</h4>
-            <p class="accordion_content">Kayzen comes with the famous <a href="http://vc.wpbakery.com/">Visual Composer</a> drag-and-drop page builder plugin, allowing you to use our custom widgets anywhere on your website.</p>
+            <h4 class="accordion_title heading">Drag & Drop Page Builder</h4>
+            <p class="accordion_content">Kayzen comes included with <a href="http://codecanyon.net/item/html-builder-frontend-version/8432859?sso" target="blank">HTML Builder</a> ($21 value), allowing you to easily build pages using a drag &amp; drop interface.</p>
         </section>
         <section class="accordion_section">
-            <h4 class="accordion_title heading">Our Own Custom Framework</h4>
-            <p class="accordion_content">We have developed our own custom framework specifically for this theme - no Bootstrap nonsense, our framework has been created with theming and WordPress in mind, making it the most flexible theme framework there is.</p>
+            <h4 class="accordion_title heading">Premade Demos</h4>
+            <p class="accordion_content">Kayzen comes with a bunch of premade demos which are built using the provided templates combined with custom Sass configuration.</p>
         </section>
     </div>
     

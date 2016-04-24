@@ -27,7 +27,7 @@
                     <h3 class="heading-heavy-size-4">100% Responsive</h3>
                     <h4 class="heading-light-uppercase-brand-1">Optimized for all devices</h4>
                 </header>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc et erat posuere suscipit. Phasellus congue scelerisque lacus.</p>
+                <p>Kayzen has been built from the ground up using our own custom responsive grid system; <a href="https://github.com/esr360/Kayzen-GS" target="blank">Kayzen GS</a>, which was built for this theme.</p>
             </div>
             
             <div class="widget-block-panel-noHover span-3 break-4-half break-2-full">
@@ -35,10 +35,10 @@
                     <i class="fa fa-clipboard"></i>
                 </div>
                 <header class="widget_header heading_group">
-                    <h3 class="heading-heavy-size-4">Simple Page Builder</h3>
-                    <h4 class="heading-light-uppercase-brand-1">Visual composer included</h4>
+                    <h3 class="heading-heavy-size-4">Page Builder</h3>
+                    <h4 class="heading-light-uppercase-brand-1">HTML Builder Included</h4>
                 </header>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc et erat posuere suscipit. Phasellus congue scelerisque lacus.</p>
+                <p>Kayzen comes included with <a href="http://codecanyon.net/item/html-builder-frontend-version/8432859?sso" target="blank">HTML Builder</a> ($21 value), allowing you to easily build pages using a drag &amp; drop interface.</p>
             </div>
             
             <div class="section-secondary span-6 break-4-full va-middle">

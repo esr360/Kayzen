@@ -121,7 +121,7 @@
 						</header>
 						<p>Kayzen's revolutionary modular structure means that customizing your project has never been easier. With UI elements for every purpose, you can include only the ones you need, keeping your assets lighter and load times faster.</p>
 						<div class="button_group">
-							<a class="button-border-primary-size-2" href="#">View Modules</a>
+							<a class="button-border-primary-size-2" href="<?php pageLink('modules.php') ?>">View Modules</a>
 							<a class="button-border-size-2" href="#">Learn More</a>
 						</div>
 					</div>
@@ -147,7 +147,7 @@
 						<header class="heading_group">
 							<h2 class="heading-light-size-6">Drag & Drop Page Builder</h2>
 						</header>
-						<p>Instantly create new pages using predefined modules by using our intuitive drag & drop page builder. Export your pages at the click of a button, ready for production. No coding knowledge required, just use your mouse to drag & drop!</p>
+						<p>Instantly create new pages using predefined modules by using the provided drag & drop page builder. Export your pages at the click of a button. Expert coding knowledge not required, just use your mouse to drag & drop!</p>
 						<div class="button_group">
 							<a class="button-primary-size-2" href="#">View Modules</a>
 							<a class="button-size-2" href="#">Learn More</a>
@@ -237,11 +237,7 @@
 			</div>
 		</section>
 		
-		<?php 
-        
-            promoBanner();
-            
-        ?>
+		<?php promoBanner() ?>
 		
 		<section class="section-primary" id="mobile-optimized">
 		
@@ -253,14 +249,14 @@
 							<div class="center-xy span-6 va-middle min-break-2">
 								<img 
 									class="mobile-graphic-white" 
-									src="<?php echo appDir ?>/images/mobile-screen.png" 
+									src="<?php echo appDir ?>/images/mobile-screen-1.jpg" 
 									data-trigger="transform: translate(-45%, -50%) translateZ(0) scale(0.85)"
 									data-hover="left: -25%"
 									alt=""
 								/ >
 								<img 
 									class="mobile-graphic-blue" 
-									src="<?php echo appDir ?>/images/mobile-screen.png" 
+									src="<?php echo appDir ?>/images/mobile-screen-4.jpg" 
 									data-trigger="transform: translate(45%, -50%) translateZ(0) scale(0.85)"
 									data-hover="right: -25%"
 									alt=""

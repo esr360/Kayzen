@@ -52,16 +52,16 @@
                                     'title'         => 'Kayzen is Released',
                                     'cta-modifiers' => '-oval',
                                     'span'          => 6,
-                                    'author-thumb'  => true,
+                        			'author-thumb'  => 'team/team-1.jpg',
                                     'widget'        => false,
                                     'class'         => 'break-3-half break-2-full relative'
                                 ));
                             
                                 articleItem(array(
-                                    'title'         => 'Kayzen is Released',
+                                    'title'         => 'Lorem Ipsum Dolor',
                                     'cta-modifiers' => '-oval',
                                     'span'          => 6,
-                                    'author-thumb'  => true,
+                        			'author-thumb'  => 'team/team-2.jpg',
                                     'widget'        => false,
                                     'class'         => 'break-3-half break-2-full relative'
                                 ));
@@ -82,20 +82,20 @@
 								</div>
 								<header class="widget_header heading_group">
 									<h3 class="heading-heavy-size-4">100% Responsive</h3>
-									<h4 class="heading-light-uppercase-brand-1">Donec finibus fringer</h4>
+									<h4 class="heading-light-uppercase-brand-1">Optimized For Mobiles</h4>
 								</header>
-								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc et erat posuere suscipit.</p>
+								<p>Kayzen has been built using our own custom responsive grid system; Kayzen GS.</p>
 							</div>
 							
 							<div class="widget-borderTop-highlight-block-scale span-4 break-4-half break-2-full">
 								<div class="widget_icon button-icon-plain-size-8">
-									<i class="fa fa-desktop"></i>
+									<i class="fa fa-eyedropper"></i>
 								</div>
 								<header class="widget_header heading_group">
-									<h3 class="heading-heavy-size-4">100% Responsive</h3>
-									<h4 class="heading-light-uppercase-brand-1">Donec finibus fringer</h4>
+									<h3 class="heading-heavy-size-4">Unlimited Colors</h3>
+									<h4 class="heading-light-uppercase-brand-1">Any Color You Want</h4>
 								</header>
-								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc et erat posuere suscipit.</p>
+								<p>Change the entire color scheme of your theme by changing just one variable.</p>
 							</div>
 							
 							<div class="widget-borderTop-highlight-block-scale span-4 min-break-4">
@@ -103,10 +103,10 @@
 									<i class="fa fa-desktop"></i>
 								</div>
 								<header class="widget_header heading_group">
-									<h3 class="heading-heavy-size-4">100% Responsive</h3>
-									<h4 class="heading-light-uppercase-brand-1">Donec finibus fringer</h4>
+									<h3 class="heading-heavy-size-4">Premade Demos</h3>
+									<h4 class="heading-light-uppercase-brand-1">Get Setup Instantly</h4>
 								</header>
-								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc et erat posuere suscipit.</p>
+								<p>Kayzen comes with a bunch of premade demos which are built using the provided templates.</p>
 							</div>
 							
 						</div>
@@ -130,7 +130,7 @@
 										<p>Suspendisse tempus sodales neque, eget eleifend <b>turpis tristique</b> eu. Nullam a nisl maximus, <b>ultrices est</b> ut blandit nislr, elit in lobortis mattis.</p>
 									</div>
 									<div class="blockquote_cite"> 
-										<h4 class="heading-highlight-light"><b>Brendon Mack - Theme Forest</b></h4>
+										<h4 class="heading-highlight-light"><b>Sarah Marshall - Theme Forest</b></h4>
 									</div>
 								</blockquote>
 								
@@ -196,11 +196,11 @@
 									<h4 class="heading-light">Posted by <a href="#">Naomi Olson</a></h4>
 								</header>
 								<p>Cum socis natoque penatibus et magnis dis parturient montes...</p>
-								<div class="row stack-0">
-									<div class="span-5 va-middle">
+								<div class="row-block stack-0">
+									<div class="span va-middle">
 										<a href="#" class="button-oval-primary-size-2">Read More</a>
 									</div>
-									<div class="span-7 va-middle text-right">
+									<div class="span va-middle text-right">
 										<small>Posted in <a href="blog.html">Web Design</a></small>
 									</div>
 								</div>
@@ -229,15 +229,15 @@
 										<div>Sep</div>
 										<div>23</div>
 									</div>
-									<h3 class="heading-heavy-size-3">Kayzen is Released</h3>
+									<h3 class="heading-heavy-size-3">Lorem Ipsum Dolor</h3>
 									<h4 class="heading-light">Posted by <a href="#">Naomi Olson</a></h4>
 								</header>
 								<p>Cum socis natoque penatibus et magnis dis parturient montes...</p>
-								<div class="row stack-0">
-									<div class="span-5 va-middle">
+								<div class="row-block stack-0">
+									<div class="span va-middle">
 										<a href="#" class="button-oval-primary-size-2">Read More</a>
 									</div>
-									<div class="span-7 va-middle text-right">
+									<div class="span va-middle text-right">
 										<small>Posted in <a href="blog.html">Web Design</a></small>
 									</div>
 								</div>
@@ -266,16 +266,16 @@
 										<div>Sep</div>
 										<div>23</div>
 									</div>
-									<h3 class="heading-heavy-size-3">Kayzen is Released</h3>
-									<h4 class="heading-light">Posted by <a href="#">Naomi Olson</a></h4>
+									<h3 class="heading-heavy-size-3">Kayzen is The Best</h3>
+									<h4 class="heading-light">Posted by <a href="#">James Wilson</a></h4>
 								</header>
 								<p>Cum socis natoque penatibus et magnis dis parturient montes...</p>
-								<div class="row stack-0">
-									<div class="span-5 va-middle">
+								<div class="row-block stack-0">
+									<div class="span va-middle">
 										<a href="#" class="button-oval-primary-size-2">Read More</a>
 									</div>
-									<div class="span-7 va-middle text-right">
-										<small>Posted in <a href="blog.html">Web Design</a></small>
+									<div class="span va-middle text-right">
+										<small>Posted in <a href="blog.html">News/Updates</a></small>
 									</div>
 								</div>
 							</div>

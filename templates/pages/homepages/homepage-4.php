@@ -144,14 +144,14 @@
                         <div class="center-xy span-6 min-break-3">
                             <img 
                                 class="mobile-graphic-white" 
-                                src="<?php echo appDir ?>/images/mobile-screen.png" 
+                                src="<?php echo appDir ?>/images/mobile-screen-1.jpg" 
                                 data-trigger="transform: translate(-45%, -50%) translateZ(0) scale(0.85)"
                                 data-hover="left: -25%"
                                 alt=""
                             / >
                             <img 
                                 class="mobile-graphic-blue" 
-                                src="<?php echo appDir ?>/images/mobile-screen.png" 
+                                src="<?php echo appDir ?>/images/mobile-screen-2.jpg" 
                                 data-trigger="transform: translate(45%, -50%) translateZ(0) scale(0.85)"
                                 data-hover="right: -25%"
                                 alt=""
@@ -197,11 +197,11 @@
 			<a href="<?php pageLink('blog/single.php') ?>" class="widget-spectrum-quarter-tub span-3 break-4-half break-2-full">
 				<div class="widget_lid">
 					<div class="widget_sticker">
-                        <div class="widget_icon button-icon-plain-size-8">
+                        <div class="widget_icon-light button-icon-plain-size-8">
                             <i class="fa fa-battery-half"></i>
                         </div>
                         <header class="heading_group">
-                            <h4 class="heading-size-3">Lorem Ipsum</h4>
+                            <h4 class="heading-size-3">Kayzen Is Released</h4>
                         </header>
 					</div>
 				</div>
@@ -214,7 +214,7 @@
 			<a href="<?php pageLink('blog/single.php') ?>" class="widget-spectrum-quarter-tub span-3 break-4-half break-2-full">
 				<div class="widget_lid">
 					<div class="widget_sticker">
-                        <div class="widget_icon button-icon-plain-size-8">
+                        <div class="widget_icon-light button-icon-plain-size-8">
 						    <i class="fa fa-bar-chart"></i>
                         </div>
                         <header class="heading_group">
@@ -231,11 +231,11 @@
 			<a href="<?php pageLink('blog/single.php') ?>" class="widget-spectrum-quarter-tub span-3 break-4-half break-2-full">
 				<div class="widget_lid">
 					<div class="widget_sticker">
-                        <div class="widget_icon button-icon-plain-size-8">
+                        <div class="widget_icon-light button-icon-plain-size-8">
 						    <i class="fa fa-desktop"></i>
                         </div>
                         <header class="heading_group">
-                            <h4 class="heading-size-3">Lorem Ipsum</h4>
+                            <h4 class="heading-size-3">Dolor Sit Amet</h4>
                         </header>
 					</div>
 				</div>
@@ -248,11 +248,11 @@
 			<a href="<?php pageLink('blog/single.php') ?>" class="widget-spectrum-quarter-tub span-3 break-4-half break-2-full">
 				<div class="widget_lid">
 					<div class="widget_sticker">
-                        <div class="widget_icon button-icon-plain-size-8">
+                        <div class="widget_icon-light button-icon-plain-size-8">
 						    <i class="fa fa-image"></i>
                         </div>
                         <header class="heading_group">
-                            <h4 class="heading-size-3">Lorem Ipsum</h4>
+                            <h4 class="heading-size-3">Kayzen Is The Best</h4>
                         </header>
 					</div>
 				</div>
@@ -273,7 +273,7 @@
 				<div class="row">
 					<div class="span-8">
 						<header class="heading_group">
-							<h3 class="heading-size-6">One Nexus</h3>
+							<h3 class="heading-size-6">Mobile Optimized</h3>
 						</header>
 						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam semper nisi eu metus accumsan aliquet. Mauris a diam ac lectus facilisis faucibus. Sed convallis, ex et viverra suscipit, dui neque accumsan magna, et auctor leo ligula non ipsum. Phasellus ullamcorper interdum nisl et ornare.</p>
 						<div class="button_group">

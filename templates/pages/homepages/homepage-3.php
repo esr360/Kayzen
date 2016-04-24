@@ -85,17 +85,35 @@
 				<div class="container">
 					<h3 class="heading-size-5">UI Elements</h3>
 					<div id="elements-carousel" class="owl-carousel">
-						<a href="<?php pageLink('modules/elements/alert-bars.php') ?>" class="widget">
+						<a href="<?php pageLink('modules/elements/accordions.php') ?>" class="widget">
 							<div class="button-icon-circle-border-white-size-7">
-								<i class="fa fa-exclamation-triangle"></i>
+								<i class="fa fa-chevron-circle-down"></i>
 							</div>
-							<h3 class="heading-size-3">Alert Bars</h3>
+							<h3 class="heading-size-3">Accordions</h3>
 						</a>
-						<a href="<?php pageLink('modules/elements/alert-bars.php') ?>" class="widget">
+						<a href="<?php pageLink('modules/elements/buttons.php') ?>" class="widget">
 							<div class="button-icon-circle-border-white-size-7">
-								<i class="fa fa-exclamation-triangle"></i>
+								<i class="fa fa-keyboard-o"></i>
 							</div>
-							<h3 class="heading-size-3">Alert Bars</h3>
+							<h3 class="heading-size-3">Buttons</h3>
+						</a>
+						<a href="<?php pageLink('modules/elements/carousels.php') ?>" class="widget">
+							<div class="button-icon-circle-border-white-size-7">
+								<i class="fa fa-arrows-h"></i>
+							</div>
+							<h3 class="heading-size-3">Carousels</h3>
+						</a>
+						<a href="<?php pageLink('modules/elements/modals.php') ?>" class="widget">
+							<div class="button-icon-circle-border-white-size-7">
+								<i class="fa fa-square-o"></i>
+							</div>
+							<h3 class="heading-size-3">Modals</h3>
+						</a>
+						<a href="<?php pageLink('modules/elements/tabs.php') ?>" class="widget">
+							<div class="button-icon-circle-border-white-size-7">
+								<i class="fa fa-folder-o"></i>
+							</div>
+							<h3 class="heading-size-3">Tabs</h3>
 						</a>
 					</div>
 					<nav class="slide-nav">
@@ -151,45 +169,45 @@
 						</div>
 						<header class="widget_header heading_group">
 							<h3 class="heading-heavy-size-4">100% Responsive</h3>
-							<h4 class="heading-light-uppercase-brand-1">Donec finibus fringer</h4>
+							<h4 class="heading-light-uppercase-brand-1">Optimized For All Devices</h4>
 						</header>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc et erat posuere suscipit.</p>
+						<p>Kayzen has been built using our own custom responsive grid system; Kayzen GS, which was built for this theme.</p>
 					</div>
 					
 					<!-- Feature 2 -->
-					<div class="widget span-3 break-3-half break-2-full">
-						<div class="widget_icon button-icon-plain-size-8">
-							<i class="fa fa-clipboard"></i>
-						</div>
-						<header class="widget_header heading_group">
-							<h3 class="heading-heavy-size-4">Simple Page Builder</h3>
-							<h4 class="heading-light-uppercase-brand-1">Donec finibus fringer</h4>
-						</header>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc et erat posuere suscipit.</p>
-					</div>
-					
-					<!-- Feature 3 -->
-					<div class="widget span-3 break-3-half break-2-full">
-						<div class="widget_icon button-icon-plain-size-8">
-							<i class="fa fa-photo"></i>
-						</div>
-						<header class="widget_header heading_group">
-							<h3 class="heading-heavy-size-4">Retina Ready</h3>
-							<h4 class="heading-light-uppercase-brand-1">Donec finibus fringer</h4>
-						</header>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc et erat posuere suscipit.</p>
-					</div>
-					
-					<!-- Feature 4 -->
 					<div class="widget span-3 break-3-half break-2-full">
 						<div class="widget_icon button-icon-plain-size-8">
 							<i class="fa fa-eyedropper"></i>
 						</div>
 						<header class="widget_header heading_group">
 							<h3 class="heading-heavy-size-4">Unlimited Colors</h3>
-							<h4 class="heading-light-uppercase-brand-1">Donec finibus fringer</h4>
+							<h4 class="heading-light-uppercase-brand-1">Any Color You Want</h4>
 						</header>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc et erat posuere suscipit.</p>
+						<p>Change the entire color scheme of your theme by changing just one variable in the configuration.</p>
+					</div>
+					
+					<!-- Feature 3 -->
+					<div class="widget span-3 break-3-half break-2-full">
+						<div class="widget_icon button-icon-plain-size-8">
+							<i class="fa fa-desktop"></i>
+						</div>
+						<header class="widget_header heading_group">
+							<h3 class="heading-heavy-size-4">Premade Demos</h3>
+							<h4 class="heading-light-uppercase-brand-1">Get Setup Instantly</h4>
+						</header>
+						<p>Kayzen comes with a bunch of premade demos which are built using the provided templates.</p>
+					</div>
+					
+					<!-- Feature 4 -->
+					<div class="widget span-3 break-3-half break-2-full">
+						<div class="widget_icon button-icon-plain-size-8">
+							<i class="fa fa-google"></i>
+						</div>
+						<header class="widget_header heading_group">
+							<h3 class="heading-heavy-size-4">SEO Friendly</h3>
+							<h4 class="heading-light-uppercase-brand-1">Coded For Search Engines</h4>
+						</header>
+						<p>Kayzen's 100% validated HTML5 code means your website will be SEO friendly out the box.</p>
 					</div>
 					
 				</div><!-- Features Row -->
@@ -213,11 +231,11 @@
 							<h2 class="heading-heavy-size-5-uppercase font-2">Kayzen is the Best</h2>
 							<h3 class="heading-light-brand-1-size-4">A Modern Template For Any Project</h3>
 						</header>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus eget porta eros. Suspendisse vehicula massa in erat mattis.</p>
+                    	<p>Kayzen has been robustly built using the latest tools & technologies, and will work on any common browser or device giving your users the best experience possible.</p>
 						<ul class="list-arrow min-break-2">
-							<li>Lorem ipsum dolor sit amet consectetur</li>
-							<li>Donec malesuada metus non massa sodales auctor</li>
-							<li>Sed sed iaculis arcu, eu pharetra nulla</li>
+							<li>100% validated HTML5 code</li>
+							<li>Modular Sass architecture</li>
+							<li>Completely responsive & mobile optimized</li>
 						</ul>
 						<div class="button_group">
 							<a href="#" class="button-oval-primary">View Demo</a>
