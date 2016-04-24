@@ -58,3 +58,6 @@
 [submodule "assets/vendor/SassyJSON"]
 	path = assets/vendor/SassyJSON
 	url = https://github.com/esr360/SassyJSON.git
+[submodule "assets/vendor/k-preloaders"]
+	path = assets/vendor/k-preloaders
+	url = https://github.com/esr360/k-preloaders.git
