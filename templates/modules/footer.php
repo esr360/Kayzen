@@ -21,9 +21,9 @@
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris in hendrerit neque, suscipit congue mauris.</p>
                             <?php } ?>
                             <ul class="list-reset">
-                                <li><b><i class="fa fa-fw fa-brand fa-globe"></i> Location:</b> Manchester, Unted Kingdom</li>
-                                <li><b><i class="fa fa-fw fa-brand fa-phone-square"></i> Phone:</b> (0161) 123 4567</li>
-                                <li><b><i class="fa fa-fw fa-brand fa-envelope"></i> Email:</b> <a href="mailto:support@themeforest.net">support@themeforest.net</a></li>
+                                <li><b><i class="fa fa-fw heading-brand-1 fa-globe"></i> Location:</b> Manchester, Unted Kingdom</li>
+                                <li><b><i class="fa fa-fw heading-brand-1 fa-phone-square"></i> Phone:</b> (0161) 123 4567</li>
+                                <li><b><i class="fa fa-fw heading-brand-1 fa-envelope"></i> Email:</b> <a href="mailto:support@themeforest.net">support@themeforest.net</a></li>
                             </ul>
                         </div>
                         

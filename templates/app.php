@@ -9,14 +9,14 @@
  *
  * Values: 'dev' | 'prod'
  */
-define('env', 'dev');
+define('env', 'prod');
 
 /**
  * Set which theme you are using
  * @const theme
  *
  */
-define('theme', 'Kayzen');
+define('theme', 'Nexus');
 
 /**
  * Are you using multiple themes?

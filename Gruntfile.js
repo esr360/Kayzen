@@ -726,6 +726,7 @@ module.exports = function(grunt) {
         var backendTasks = [
             'setPHPConstant:' + environment,
             'setPHPConstant:themes',
+            'setPHPConstant:theme',
             'setPHPConstant:path',
             'setPHPConstant:realm'
         ];

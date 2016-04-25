@@ -2,7 +2,6 @@
 #============================================================
 
 - contact form (don't forget to document)
-- document preloader
 
 # Done
 #============================================================
@@ -24,6 +23,7 @@
 - add loading spinner
 - add themes and associated imagery
 - document notifications
+- document preloader
 
 # Next Release
 #============================================================

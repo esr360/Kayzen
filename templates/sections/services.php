@@ -8,7 +8,7 @@
         
         <header class="heading_group-large text-center">
             <div class="container-small">
-                <h2 class="heading-light-size-7 font-2">Our <span class="heading-brand-1">Services</span> Are <span class="heading-heavy font-2">World Class</span> <i class="fa fa-trophy fa-brand"></i></h2>
+                <h2 class="heading-light-size-7 font-2">Our <span class="heading-brand-1">Services</span> Are <span class="heading-heavy font-2">World Class</span> <i class="fa fa-trophy heading-brand-1"></i></h2>
                 <div class="heading_icon">
                     <i class="fa fa-magic"></i>
                 </div>
