@@ -1,7 +1,7 @@
 /******************************************************************
  * Kayzen
  * https://github.com/esr360/Kayzen
- * Sass module styleguide
+ * @module preloader
  *****************************************************************/
 
 @mixin preloader($custom: ()) {
@@ -117,6 +117,34 @@
     
     @if this('preloader') == 'wave' {
         @include awd_wave();
+    }
+    
+    @if this('preloader') == 'nexus' {
+        .spinner {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 0;
+            right: 0;
+            margin: auto;
+            display: block;
+            height:30px;
+            width:30px;
+            animation: rotation 0.7s infinite linear;
+            border-left:8px solid rgba(0,0,0,.20);
+            border-right:8px solid rgba(0,0,0,.20);
+            border-bottom:8px solid rgba(0,0,0,.20);
+            border-top:8px solid color('brand', 'primary');
+            border-radius:100%;
+        }
+        @keyframes rotation {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(359deg);
+            }
+        }
     }
 
 } // @mixin foo
