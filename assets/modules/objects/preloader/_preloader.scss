@@ -10,7 +10,7 @@
     // Configuration
     //-------------------------------------------------------------
 
-    $foo: config((
+    $preloader: config((
         'name'        : 'preloader',
         'output-JSON' : true,
         'preloader'   : 'clock',
