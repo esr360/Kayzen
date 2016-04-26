@@ -27,85 +27,8 @@
                 'title'    => $title,
                 'tag-line' => $tagLine
             ));
-           
-       ?>
-		
-		<section class="section-primary relative">
-				
-            <div class="container">
-
-                <div class="row-flow row-waffle fixed-table" id="portfolio-items">
-
-                    <?php
-                        
-                        articleItem(array(
-                            'type'   => 'portfolio',
-                            'size'   => 'small',
-                            'span'   => 4,
-                        ));
-                    
-                        articleItem(array(
-                            'type'   => 'portfolio',
-                            'media'  => 'carousel',
-                            'size'   => 'small',
-                            'span'   => 4,
-                        ));
-                    
-                        articleItem(array(
-                            'type'   => 'portfolio',
-                            'media'  => 'carousel',
-                            'size'   => 'small',
-                            'span'   => 4,
-                        ));
-                    
-                        articleItem(array(
-                            'type'   => 'portfolio',
-                            'media'  => 'vimeo',
-                            'size'   => 'small',
-                            'span'   => 4,
-                        ));
-                    
-                        articleItem(array(
-                            'type'   => 'portfolio',
-                            'size'   => 'small',
-                            'span'   => 4,
-                        ));
-                    
-                        articleItem(array(
-                            'type'   => 'portfolio',
-                            'media'  => 'youtube',
-                            'size'   => 'small',
-                            'span'   => 4,
-                        ));
-                    
-                        articleItem(array(
-                            'type'   => 'portfolio',
-                            'size'   => 'small',
-                            'span'   => 4,
-                        ));
-                    
-                        articleItem(array(
-                            'type'   => 'portfolio',
-                            'size'   => 'small',
-                            'span'   => 4,
-                        ));
-                    
-                        articleItem(array(
-                            'type'   => 'portfolio',
-                            'media'  => 'carousel',
-                            'size'   => 'small',
-                            'span'   => 4,
-                        ));
-                        
-                    ?>
-                    
-                </div>
             
-            </div><!-- container -->
-			
-		</section>
-		
-		<?php
+            include (ROOT.'/views/portfolio/classic/_3-cols-infinite-scroll-3.php');
         
             promoBanner();
             
@@ -120,3 +43,4 @@
     <?php scripts() ?>
 
 </body>
+</html>

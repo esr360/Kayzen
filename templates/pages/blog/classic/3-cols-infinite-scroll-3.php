@@ -43,3 +43,4 @@
     <?php scripts() ?>
 
 </body>
+</html>

@@ -1,78 +1,114 @@
 <section class="section-primary relative">
     
-    <div id="portfolio-items" class="owl-carousel owl-full">
+    <div id="portfolio-items" class="owl-carousel owl-full ">
         
         <div class="container">
-            <div class="row-no-gutter stack-break-2">
+
+            <div class="row-flow row-waffle fixed-table">
                 
                 <?php
                     
                     articleItem(array(
                         'type'   => 'portfolio',
-                        'matrix' => true,
-                        'span'   => 6,
+                        'size'   => 'small',
+                        'span'   => 4,
                     ));
                     
                     articleItem(array(
                         'type'   => 'portfolio',
-                        'matrix' => true,
-                        'span'   => 6,
+                        'media'  => 'carousel',
+                        'size'   => 'small',
+                        'span'   => 4,
                     ));
                     
                     articleItem(array(
                         'type'   => 'portfolio',
-                        'matrix' => true,
-                        'span'   => 6,
+                        'media'  => 'youtube',
+                        'size'   => 'small',
+                        'span'   => 4,
                     ));
                     
                     articleItem(array(
                         'type'   => 'portfolio',
-                        'matrix' => true,
-                        'span'   => 6,
+                        'size'   => 'small',
+                        'span'   => 4,
+                    ));
+                    
+                    articleItem(array(
+                        'type'   => 'portfolio',
+                        'media'  => 'vimeo',
+                        'size'   => 'small',
+                        'span'   => 4,
+                    ));
+                    
+                    articleItem(array(
+                        'type'   => 'portfolio',
+                        'media'  => 'carousel',
+                        'size'   => 'small',
+                        'span'   => 4,
                     ));
                     
                 ?>
                 
             </div>
-        </div>
+        
+        </div><!-- container -->
         
         <div class="container">
-            <div class="row-no-gutter stack-break-2">
+
+            <div class="row-flow row-waffle fixed-table">
                 
                 <?php
                     
                     articleItem(array(
                         'type'   => 'portfolio',
-                        'matrix' => true,
-                        'span'   => 6,
+                        'size'   => 'small',
+                        'span'   => 4,
                     ));
                     
                     articleItem(array(
                         'type'   => 'portfolio',
-                        'matrix' => true,
-                        'span'   => 6,
+                        'media'  => 'carousel',
+                        'size'   => 'small',
+                        'span'   => 4,
                     ));
                     
                     articleItem(array(
                         'type'   => 'portfolio',
-                        'matrix' => true,
-                        'span'   => 6,
+                        'media'  => 'youtube',
+                        'size'   => 'small',
+                        'span'   => 4,
                     ));
                     
                     articleItem(array(
                         'type'   => 'portfolio',
-                        'matrix' => true,
-                        'span'   => 6,
+                        'size'   => 'small',
+                        'span'   => 4,
+                    ));
+                    
+                    articleItem(array(
+                        'type'   => 'portfolio',
+                        'media'  => 'vimeo',
+                        'size'   => 'small',
+                        'span'   => 4,
+                    ));
+                    
+                    articleItem(array(
+                        'type'   => 'portfolio',
+                        'media'  => 'carousel',
+                        'size'   => 'small',
+                        'span'   => 4,
                     ));
                     
                 ?>
                 
             </div>
-        </div>
+        
+        </div><!-- container -->
                     
     </div><!-- portfolio-items -->
     
-    <nav class="slide-nav min-break-3">
+    <nav class="slide-nav">
         <button class="slide-prev button-icon-border-size-3"><i class="fa fa-angle-left"></i></button>
         <button class="slide-next button-icon-border-size-3"><i class="fa fa-angle-right"></i></button>
     </nav>

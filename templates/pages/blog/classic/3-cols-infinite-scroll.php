@@ -45,3 +45,4 @@
     <?php devAsset('', 'jquery-ias.js') ?>
 
 </body>
+</html>

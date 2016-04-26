@@ -27,123 +27,8 @@
                 'title'    => $title,
                 'tag-line' => $tagLine
             ));
-           
-       ?>
-		
-		<section class="section-primary relative">
-			
-			<div id="portfolio-items" class="owl-carousel owl-full">
-				
-				<div class="container">
-					<div class="row-no-gutter stack-break-2">
-						
-                        <?php
-                            
-                            articleItem(array(
-                                'type'   => 'portfolio',
-                                'matrix' => true,
-                                'span'   => 6,
-                            ));
-                            
-                            articleItem(array(
-                                'type'   => 'portfolio',
-                                'matrix' => true,
-                                'span'   => 6,
-                            ));
-                            
-                            articleItem(array(
-                                'type'   => 'portfolio',
-                                'matrix' => true,
-                                'span'   => 6,
-                            ));
-                            
-                            articleItem(array(
-                                'type'   => 'portfolio',
-                                'matrix' => true,
-                                'span'   => 6,
-                            ));
-                            
-                        ?>
-                        
-					</div>
-				</div>
-				
-				<div class="container">
-					<div class="row-no-gutter stack-break-2">
-                        
-                        <?php
-                            
-                            articleItem(array(
-                                'type'   => 'portfolio',
-                                'matrix' => true,
-                                'span'   => 6,
-                            ));
-                            
-                            articleItem(array(
-                                'type'   => 'portfolio',
-                                'matrix' => true,
-                                'span'   => 6,
-                            ));
-                            
-                            articleItem(array(
-                                'type'   => 'portfolio',
-                                'matrix' => true,
-                                'span'   => 6,
-                            ));
-                            
-                            articleItem(array(
-                                'type'   => 'portfolio',
-                                'matrix' => true,
-                                'span'   => 6,
-                            ));
-                            
-                        ?>
-                        
-					</div>
-				</div>
-							
-			</div><!-- portfolio-items -->
-			
-			<nav class="slide-nav min-break-3">
-				<button class="slide-prev button-icon-border-size-3"><i class="fa fa-angle-left"></i></button>
-				<button class="slide-next button-icon-border-size-3"><i class="fa fa-angle-right"></i></button>
-			</nav>
-			
-			<script>
-				$(document).ready(function() {
-					
-					var portfolioCarousel = $("#portfolio-items");
-					
-					portfolioCarousel.owlCarousel({
-						items: 1,
-						loop: true
-					});
-			
-					portfolioCarousel.find("+ .slide-nav .slide-next").click(function() {
-						portfolioCarousel.trigger('next.owl.carousel');
-					});
-					portfolioCarousel.find("+ .slide-nav .slide-prev").click(function() {
-						portfolioCarousel.trigger('prev.owl.carousel');
-					});
-					
-                    $('.article-thumbnails-carousel').each(function() {
-                        $(this).owlCarousel({
-                            items : 1,
-                            nav : true,
-                            navText : [
-                                '<i class="fa fa-angle-left fa-3x"></i>',
-                                '<i class="fa fa-angle-right fa-3x"></i>'
-                            ],
-                            loop : true
-                        })
-                    });
-					
-				});
-			</script>
-			
-		</section>
-		
-		<?php
+            
+            include (ROOT.'/views/portfolio/matrix/_2-cols-carousel.php');
         
             promoBanner();
             
@@ -158,3 +43,4 @@
     <?php scripts() ?>
 
 </body>
+</html>
