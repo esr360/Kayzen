@@ -12,7 +12,7 @@
 
 <body>
     
-    <?php preloader($style = 'pacman') ?>
+    <?php preloader($style = 'nexus') ?>
 
     <!-- Site Canvas -->
     <div id="site-content">

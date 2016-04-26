@@ -9,14 +9,14 @@
  *
  * Values: 'dev' | 'prod'
  */
-define('env', 'prod');
+define('env', 'dev');
 
 /**
  * Set which theme you are using
  * @const theme
  *
  */
-define('theme', 'Nexus');
+define('theme', 'Kayzen');
 
 /**
  * Are you using multiple themes?
@@ -62,15 +62,16 @@ define('appDir', '/app');
  * Templates
  *****************************************************************/
 
+include (ROOT.'/helpers/dev-asset.php');
+include (ROOT.'/helpers/page-link.php');
+include (ROOT.'/helpers/stock-image.php');
+include (ROOT.'/helpers/theme-asset.php');
+include (ROOT.'/helpers/theme-link.php');
+
 include (ROOT.'/includes/article-item.php');
-include (ROOT.'/includes/dev-asset.php');
 include (ROOT.'/includes/head.php');
-include (ROOT.'/includes/page-link.php');
-include (ROOT.'/includes/stock-image.php');
 include (ROOT.'/includes/scripts.php');
 include (ROOT.'/includes/section-title.php');
-include (ROOT.'/includes/theme-asset.php');
-include (ROOT.'/includes/theme-link.php');
 
 include (ROOT.'/modules/billboard.php');
 include (ROOT.'/modules/earth-slider.php');

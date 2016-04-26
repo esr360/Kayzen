@@ -26,26 +26,8 @@
             billboard(array(
                 'type'    => 'videoBg'
             ));
-            
-            blocksWithQuote();
-            
-            testimonials();
-            
-            responsive();
-            
-            promoBanner();
-            
-            ourTeam();
-            
-            clients();
-            
-            promoSection();
-        
-            statistics();
-    
-            recentWork();
-            
-            googleMap();
+			
+			include (ROOT.'/views/further/_about-us-2.php');
             
             appFooter(); 
         

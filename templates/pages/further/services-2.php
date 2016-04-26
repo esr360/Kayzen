@@ -27,22 +27,8 @@
                 'title'    => $title,
                 'tag-line' => $tagLine
             ));
-            
-            whyChooseUs();
-    
-            featureQuote();
-            
-            pricing();
-            
-            testimonials();
-            
-            options();
-            
-            featureSpectrumBlocks();
-            
-            recentWork();
-            
-            promoBanner();
+			
+			include (ROOT.'/views/further/_services-2.php');
             
             appFooter();
         

@@ -27,22 +27,8 @@
                 'title'    => $title,
                 'tag-line' => $tagLine
             ));
-            
-            contactUs();
-            
-        ?>
-            
-        <div class="container-small">
-            
-            <?php socialWidgets() ?>
-        
-        </div>
-        
-        <section class="section-primary-flush-dot-map container"></section> 
-        
-        <?php
-            
-            googleMap();
+			
+			include (ROOT.'/views/further/_contact-us.php');
             
             appFooter(); 
         

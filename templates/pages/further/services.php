@@ -27,18 +27,8 @@
                 'title'    => $title,
                 'tag-line' => $tagLine
             ));
-            
-            services();
-    
-            featureQuote();
-            
-            pricing();
-            
-            testimonials();
-            
-            recentWork();
-            
-            promoBanner();
+			
+			include (ROOT.'/views/further/_services.php');
             
             appFooter(); 
         

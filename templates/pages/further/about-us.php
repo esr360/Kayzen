@@ -27,26 +27,8 @@
                 'title'    => $title,
                 'tag-line' => $tagLine
             ));
-            
-            earthSlider();
-    
-            skills();
-            
-            whyChooseUs();
-            
-            promoBanner();
-            
-            ourTeam();
-            
-            clients();
-            
-            promoSection();
-        
-            statistics();
-    
-            recentWork();
-            
-            googleMap();
+			
+			include (ROOT.'/views/further/_about-us.php');
             
             appFooter(); 
         
