@@ -35,33 +35,8 @@
                 'title'    => $title,
                 'tag-line' => $tagLine
             ));
-            
-            blocksWithQuote();
-            
-            testimonials();
-            
-            responsive(array(
-                'iphone-colors' => array(
-                    'white', 'blue', 'blue'
-                ),
-                'greyscale' => true
-            ));
-            
-            promoBanner();
-            
-            ourTeam();
-            
-            clients();
-            
-            promoSection();
-        
-            statistics();
-    
-            recentWork(array(
-                'item-link' => themeLink($theme, '/blog-single.php')
-            ));
-            
-            googleMap();
+			
+			include (ROOT.'/views/further/_about-us-2.php');
             
             appFooter();
                     
