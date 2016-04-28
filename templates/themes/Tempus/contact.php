@@ -49,4 +49,4 @@
     <?php scripts($theme) ?>
 
 </body>
-		
+</html>

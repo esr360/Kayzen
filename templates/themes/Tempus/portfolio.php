@@ -51,3 +51,4 @@
     <?php devAsset('', 'isotope.pkgd.js') ?>
 
 </body>
+</html>

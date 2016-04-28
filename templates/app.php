@@ -15,7 +15,7 @@ define('env', 'dev');
  * Set which theme you are using
  * @const theme
  */
-define('theme', 'Tempus');
+define('theme', 'Dart');
 
 /**
  * Are you using multiple themes?

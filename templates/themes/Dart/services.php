@@ -37,20 +37,8 @@
                 'title'    => $title,
                 'tag-line' => $tagLine
             ));
-            
-            services();
-    
-            featureQuote();
-            
-            pricing();
-            
-            testimonials();
-    
-            recentWork(array(
-                'item-link' => themeLink($theme, '/portfolio-single.php')
-            ));
-            
-            promoBanner();
+			
+			include (ROOT.'/views/further/_services.php');
             
             appFooter(); 
         
