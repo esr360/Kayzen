@@ -6,21 +6,21 @@
             
             <div class="span-4 lightbox-gallery">
                 <div class="corner-ribbon-pink" data-ribbon="Sale"></div>
-                <a href="<?php stockImage('demo/tall/stock-1.jpg') ?>">
-                    <img src="<?php stockImage('demo/tall/stock-1.jpg') ?>" />
+                <a href="<?php echo stockImage('demo/tall/stock-1.jpg') ?>">
+                    <img src="<?php echo stockImage('demo/tall/stock-1.jpg') ?>" />
                 </a>
                 <div id="product-thumbs" class="row stack-0 object-small">
-                    <a class="span-3 image-square" href="<?php stockImage('demo/tall/stock-2.jpg') ?>">
-                        <img src="<?php stockImage('demo/tall/stock-2.jpg') ?>" />
+                    <a class="span-3 image-square" href="<?php echo stockImage('demo/tall/stock-2.jpg') ?>">
+                        <img src="<?php echo stockImage('demo/tall/stock-2.jpg') ?>" />
                     </a>
-                    <a class="span-3 image-square" href="<?php stockImage('demo/tall/stock-3.jpg') ?>">
-                        <img src="<?php stockImage('demo/tall/stock-3.jpg') ?>" />
+                    <a class="span-3 image-square" href="<?php echo stockImage('demo/tall/stock-3.jpg') ?>">
+                        <img src="<?php echo stockImage('demo/tall/stock-3.jpg') ?>" />
                     </a>
-                    <a class="span-3 image-square" href="<?php stockImage('demo/tall/stock-4.jpg') ?>">
-                        <img src="<?php stockImage('demo/tall/stock-4.jpg') ?>" />
+                    <a class="span-3 image-square" href="<?php echo stockImage('demo/tall/stock-4.jpg') ?>">
+                        <img src="<?php echo stockImage('demo/tall/stock-4.jpg') ?>" />
                     </a>
-                    <a class="span-3 image-square" href="<?php stockImage('demo/tall/stock-5.jpg') ?>">
-                        <img src="<?php stockImage('demo/tall/stock-5.jpg') ?>" />
+                    <a class="span-3 image-square" href="<?php echo stockImage('demo/tall/stock-5.jpg') ?>">
+                        <img src="<?php echo stockImage('demo/tall/stock-5.jpg') ?>" />
                     </a>
                 </div>
             </div>
@@ -78,7 +78,7 @@
                         <div class="comment object-small">
                             <div class="object-small">
                                 <div class="thumbnail-profile-round-xlarge-styled-inline sink">
-                                    <img src="<?php stockImage('team/team-2.jpg') ?>" alt="">
+                                    <img src="<?php echo stockImage('team/team-2.jpg') ?>" alt="">
                                 </div>
                                 <div class="thumbnail_aside">
                                     <div class="row-block">
@@ -108,7 +108,7 @@
                         <div class="comment object-small">
                             <div class="object-small">
                                 <div class="thumbnail-profile-round-xlarge-styled-inline sink">
-                                    <img src="<?php stockImage('team/team-2.jpg') ?>" alt="">
+                                    <img src="<?php echo stockImage('team/team-2.jpg') ?>" alt="">
                                 </div>
                                 <div class="thumbnail_aside">
                                     <div class="row-block">

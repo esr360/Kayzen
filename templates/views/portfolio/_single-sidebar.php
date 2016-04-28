@@ -27,10 +27,10 @@
                         <div class="desktop-graphic">
                             <img src="<?php echo appDir ?>/images/demo-screen.png" alt="" />
                             <span class="desktop-graphic_image owl-carousel" id="portfolio-thumbs">
-                                <div class="bg-cover" style="background-image: url('<?php stockImage('demo/stock-1.jpg')?>')"></div>
-                                <div class="bg-cover" style="background-image: url('<?php stockImage('demo/stock-2.jpg')?>')"></div>
-                                <div class="bg-cover" style="background-image: url('<?php stockImage('demo/stock-3.jpg')?>')"></div>
-                                <div class="bg-cover" style="background-image: url('<?php stockImage('demo/stock-4.jpg')?>')"></div>
+                                <div class="bg-cover" style="background-image: url('<?php echo stockImage('demo/stock-1.jpg')?>')"></div>
+                                <div class="bg-cover" style="background-image: url('<?php echo stockImage('demo/stock-2.jpg')?>')"></div>
+                                <div class="bg-cover" style="background-image: url('<?php echo stockImage('demo/stock-3.jpg')?>')"></div>
+                                <div class="bg-cover" style="background-image: url('<?php echo stockImage('demo/stock-4.jpg')?>')"></div>
                             </span>
                         </div>
                         <nav class="slide-nav" id="desktop-graphic_nav">
@@ -163,7 +163,7 @@
                         
                         <blockquote class="blockquote">
                             <a class="blockquote_avatar-large" href="#">
-                                <img src="<?php stockImage('team/team-2.jpg')?>" alt="">
+                                <img src="<?php echo stockImage('team/team-2.jpg')?>" alt="">
                             </a>
                             <div class="blockquote_content">
                                 <p>Suspendisse tempus sodales neque, eget eleifend <b>turpis tristique</b> eu. Nullam a nisl maximus, <b>ultrices est</b> ut blandit nislr, elit in lobortis mattis.</p>

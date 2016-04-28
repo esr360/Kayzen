@@ -5,9 +5,9 @@
     ), $custom);
         
     if (realm == 'live') { 
-        echo 'http://placehold.it/'.$options['resolution'];
+        return 'http://placehold.it/'.$options['resolution'];
     } else if (realm == 'demo') {
-        echo appDir.'/images/'.$path;
+        return appDir.'/images/'.$path;
     }
       
  } ?>

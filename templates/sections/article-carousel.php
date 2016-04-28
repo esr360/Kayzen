@@ -10,7 +10,7 @@
         <div class="owl-carousel" id="latest-articles">
             
             <div class="thumbnail-feature">
-                <img src="<?php stockImage('demo/stock-1.jpg') ?>">
+                <img src="<?php echo stockImage('demo/stock-1.jpg') ?>">
                 <div class="thumbnail_content">
                     <header class="heading_group-small">
                         <div class="heading_date">
@@ -26,7 +26,7 @@
             </div>
             
             <div class="thumbnail-feature">
-                <img src="<?php stockImage('demo/stock-12.jpg') ?>">
+                <img src="<?php echo stockImage('demo/stock-12.jpg') ?>">
                 <div class="thumbnail_content">
                     <header class="heading_group-small">
                         <div class="heading_date">
@@ -42,7 +42,7 @@
             </div>
             
             <div class="thumbnail-feature">
-                <img src="<?php stockImage('demo/stock-11.jpg') ?>">
+                <img src="<?php echo stockImage('demo/stock-11.jpg') ?>">
                 <div class="thumbnail_content">
                     <header class="heading_group-small">
                         <div class="heading_date">
@@ -58,7 +58,7 @@
             </div>
             
             <div class="thumbnail-feature">
-                <img src="<?php stockImage('demo/stock-10.jpg') ?>">
+                <img src="<?php echo stockImage('demo/stock-10.jpg') ?>">
                 <div class="thumbnail_content">
                     <header class="heading_group-small">
                         <div class="heading_date">
@@ -74,7 +74,7 @@
             </div>
             
             <div class="thumbnail-feature">
-                <img src="<?php stockImage('demo/stock-9.jpg') ?>">
+                <img src="<?php echo stockImage('demo/stock-9.jpg') ?>">
                 <div class="thumbnail_content">
                     <header class="heading_group-small">
                         <div class="heading_date">
@@ -99,11 +99,11 @@
     </div>
 
     <div class="thumbnail_grid-fade row-magic stack-0" id="latest-articles-thumbs">
-        <img class="span active" src="<?php stockImage('demo/stock-1.jpg') ?>">
-        <img class="span" src="<?php stockImage('demo/stock-12.jpg') ?>">
-        <img class="span" src="<?php stockImage('demo/stock-11.jpg') ?>">
-        <img class="span" src="<?php stockImage('demo/stock-10.jpg') ?>">
-        <img class="span" src="<?php stockImage('demo/stock-9.jpg') ?>">
+        <img class="span active" src="<?php echo stockImage('demo/stock-1.jpg') ?>">
+        <img class="span" src="<?php echo stockImage('demo/stock-12.jpg') ?>">
+        <img class="span" src="<?php echo stockImage('demo/stock-11.jpg') ?>">
+        <img class="span" src="<?php echo stockImage('demo/stock-10.jpg') ?>">
+        <img class="span" src="<?php echo stockImage('demo/stock-9.jpg') ?>">
     </div>
 
     <script>

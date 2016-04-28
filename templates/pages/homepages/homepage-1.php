@@ -23,13 +23,8 @@
             appHeader(array(
                 'modifiers' => 'bar-absolute-dark-sticky'
             ));
-
-            billboard(array(
-                'type'     => 'homepage',
-                'title'    => $title
-            ));
 			
-			include (ROOT.'/views/homepages/_homepage-1.php');
+			_homepage1();
             
             appFooter();
             

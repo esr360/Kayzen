@@ -1,23 +1,32 @@
-<section class="billboard-full-screen-overlay">
-    <div class="billboard_wrapper container text-left">
-        <div class="short" id="billboard-fade-parallax">
-            <header class="heading_group">
-                <h3 class="heading-uppercase-heavy-size-8 font-2">Welcome to Kayzen</h3>
-                <h2 class="heading-light-size-6"><span>A Unique & Modern Theme Framework</span></h2>
-            </header>
-            <p class="lede">Welcome to Kayzen; the next generation of website & app theming. Kayzen is more than just a theme, it's a theme framework, custom built from the ground up to help make theming great again.</p>
-            <div class="button_group">
-                <a class="button-oval-size-4-white" href="#">Purchase Now</a>
-                <a class="button-oval-size-4-border-white" href="#">Explore The Potential</a>
-            </div>
-        </div>
-    </div>
-    <nav class="slide-nav">
-        <button class="slide-prev button-icon-border-size-3-white"><i class="fa fa-angle-left"></i></button>
-        <button class="slide-next button-icon-border-size-3-white"><i class="fa fa-angle-right"></i></button>
-    </nav>
-    <a href="#s-welcome" class="scroll-wheel"></a>
-</section>
+<?php
+
+    billboard([
+        'type' => 'homepage',
+        'wrapper-class' => 'container text-left',
+        'headline'      => [
+            'heading-uppercase-heavy-size-8 font-2',
+            'Welcome to Kayzen'
+        ],
+        'title'         => [
+            'heading-light-size-6',
+            'A Unique & Modern Theme Framework'
+        ],
+        'ctas' => [
+            [
+                'button-size-4-white',
+                '#',
+                'Purchase Now'
+            ],
+            [
+                'button-size-4-border-white',
+                '#s-welcome',
+                'Explore The Potential'
+            ]
+        ],
+        'wheel-anchor' => '#s-welcome'
+    ]);
+    
+?>
 
 <section class="section-primary">
     
@@ -37,7 +46,7 @@
 <div class="row-block fixed-table text-center">
     <section 
         class="section-secondary-overlay-deep bg-cover span-6 va-middle"
-        style="background-image: url('<?php stockImage('demo/stock-12.jpg') ?>')"
+        style="background-image: url('<?php echo stockImage('demo/stock-12.jpg') ?>')"
     >
         <div class="container-small">
             <h3 class="heading-size-5">Responsive Grid System</h3>

@@ -5,7 +5,7 @@
     <div class="row row-waffle">
         <div class="span-2 text-center">
             <div class="thumbnail-mini-profile-round-xlarge-styled">
-                <img src="<?php stockImage('team/team-2.jpg') ?>" alt="">
+                <img src="<?php echo stockImage('team/team-2.jpg') ?>" alt="">
             </div>
             <div class="button_group-small">
                 <a href="#" class="button-icon-border-size-1 tooltip-top" data-tooltip="Facebook">

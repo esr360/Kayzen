@@ -22,25 +22,25 @@
         <!-- Showcase Thumbnails -->
         <section class="carousel-scale-3-greyscale-stageBg owl-carousel" id="showcase-thumbnails">
             <div class="showcase-thumbnail">
-                <img src="<?php stockImage('themes/medium/theme-1-thumb.jpg') ?>">
+                <img src="<?php echo stockImage('themes/medium/theme-1-thumb.jpg') ?>">
             </div>
             <div class="showcase-thumbnail">
-                <img src="<?php stockImage('themes/medium/theme-7-thumb.jpg') ?>">
+                <img src="<?php echo stockImage('themes/medium/theme-7-thumb.jpg') ?>">
             </div>
             <div class="showcase-thumbnail">
-                <img src="<?php stockImage('themes/medium/theme-3-thumb.jpg') ?>">
+                <img src="<?php echo stockImage('themes/medium/theme-3-thumb.jpg') ?>">
             </div>
             <div class="showcase-thumbnail">
-                <img src="<?php stockImage('themes/medium/theme-2-thumb.jpg') ?>">
+                <img src="<?php echo stockImage('themes/medium/theme-2-thumb.jpg') ?>">
             </div>
             <div class="showcase-thumbnail">
-                <img src="<?php stockImage('themes/medium/theme-5-thumb.jpg') ?>">
+                <img src="<?php echo stockImage('themes/medium/theme-5-thumb.jpg') ?>">
             </div>
             <div class="showcase-thumbnail">
-                <img src="<?php stockImage('themes/medium/theme-12-thumb.jpg') ?>">
+                <img src="<?php echo stockImage('themes/medium/theme-12-thumb.jpg') ?>">
             </div>
             <div class="showcase-thumbnail">
-                <img src="<?php stockImage('themes/medium/theme-6-thumb.jpg') ?>">
+                <img src="<?php echo stockImage('themes/medium/theme-6-thumb.jpg') ?>">
             </div>
         </section> 
         
@@ -56,12 +56,12 @@
         <div id="showcase-carousel" class="owl-carousel">
             
             <!-- Showcase Slide 1 -->
-            <div class="row-block bg-cover stack-break-4 fixed-table" style="background-image: url('<?php stockImage('billboard-1.jpg') ?>')">
+            <div class="row-block bg-cover stack-break-4 fixed-table" style="background-image: url('<?php echo stockImage('billboard-1.jpg') ?>')">
                 <div class="section_block span-6 text-center va-middle">
                     <div class="block-content span-9">
                         <div class="desktop-graphic-scroll">
                             <img src="<?php echo appDir ?>/images/demo-screen.png" alt="" />
-                            <div class="desktop-graphic_image" style="background-image: url('<?php stockImage('themes/theme-1.jpg') ?>')"></div>
+                            <div class="desktop-graphic_image" style="background-image: url('<?php echo stockImage('themes/theme-1.jpg') ?>')"></div>
                         </div>
                     </div>
                 </div>
@@ -87,12 +87,12 @@
             </div>
             
             <!-- Showcase Slide 2 -->
-            <div class="row-block bg-cover stack-break-4 fixed-table" style="background-image: url('<?php stockImage('demo/stock-11.jpg') ?>')">
+            <div class="row-block bg-cover stack-break-4 fixed-table" style="background-image: url('<?php echo stockImage('demo/stock-11.jpg') ?>')">
                 <div class="section_block span-6 text-center va-middle">
                     <div class="block-content span-9">
                         <div class="desktop-graphic-scroll">
                             <img src="<?php echo appDir ?>/images/demo-screen.png" alt="" />
-                            <div class="desktop-graphic_image" style="background-image: url('<?php stockImage('themes/theme-7.jpg') ?>')"></div>
+                            <div class="desktop-graphic_image" style="background-image: url('<?php echo stockImage('themes/theme-7.jpg') ?>')"></div>
                         </div>
                     </div>
                 </div>
@@ -118,12 +118,12 @@
             </div>
             
             <!-- Showcase Slide 3 -->
-            <div class="row-block bg-cover stack-break-4 fixed-table" style="background-image: url('<?php stockImage('demo/stock-8.jpg') ?>')">
+            <div class="row-block bg-cover stack-break-4 fixed-table" style="background-image: url('<?php echo stockImage('demo/stock-8.jpg') ?>')">
                 <div class="section_block span-6 text-center va-middle">
                     <div class="block-content span-9">
                         <div class="desktop-graphic-scroll">
                             <img src="<?php echo appDir ?>/images/demo-screen.png" alt="" />
-                            <div class="desktop-graphic_image" style="background-image: url('<?php stockImage('themes/theme-3.jpg') ?>')"></div>
+                            <div class="desktop-graphic_image" style="background-image: url('<?php echo stockImage('themes/theme-3.jpg') ?>')"></div>
                         </div>
                     </div>
                 </div>
@@ -149,12 +149,12 @@
             </div>
             
             <!-- Showcase Slide 4 -->
-            <div class="row-block bg-cover stack-break-4 fixed-table" style="background-image: url('<?php stockImage('demo/stock-6.jpg') ?>')">
+            <div class="row-block bg-cover stack-break-4 fixed-table" style="background-image: url('<?php echo stockImage('demo/stock-6.jpg') ?>')">
                 <div class="section_block span-6 text-center va-middle">
                     <div class="block-content span-9">
                         <div class="desktop-graphic-scroll">
                             <img src="<?php echo appDir ?>/images/demo-screen.png" alt="" />
-                            <div class="desktop-graphic_image" style="background-image: url('<?php stockImage('themes/theme-2.jpg') ?>')"></div>
+                            <div class="desktop-graphic_image" style="background-image: url('<?php echo stockImage('themes/theme-2.jpg') ?>')"></div>
                         </div>
                     </div>
                 </div>
@@ -180,12 +180,12 @@
             </div>
             
             <!-- Showcase Slide 5 -->
-            <div class="row-block bg-cover stack-break-4 fixed-table" style="background-image: url('<?php stockImage('demo/stock-5.jpg') ?>')">
+            <div class="row-block bg-cover stack-break-4 fixed-table" style="background-image: url('<?php echo stockImage('demo/stock-5.jpg') ?>')">
                 <div class="section_block span-6 text-center va-middle">
                     <div class="block-content span-9">
                         <div class="desktop-graphic-scroll">
                             <img src="<?php echo appDir ?>/images/demo-screen.png" alt="" />
-                            <div class="desktop-graphic_image" style="background-image: url('<?php stockImage('themes/theme-5.jpg') ?>')"></div>
+                            <div class="desktop-graphic_image" style="background-image: url('<?php echo stockImage('themes/theme-5.jpg') ?>')"></div>
                         </div>
                     </div>
                 </div>
@@ -211,12 +211,12 @@
             </div>
             
             <!-- Showcase Slide 6 -->
-            <div class="row-block bg-cover stack-break-4 fixed-table" style="background-image: url('<?php stockImage('billboard-1.jpg') ?>')">
+            <div class="row-block bg-cover stack-break-4 fixed-table" style="background-image: url('<?php echo stockImage('billboard-1.jpg') ?>')">
                 <div class="section_block span-6 text-center va-middle">
                     <div class="block-content span-9">
                         <div class="desktop-graphic-scroll">
                             <img src="<?php echo appDir ?>/images/demo-screen.png" alt="" />
-                            <div class="desktop-graphic_image" style="background-image: url('<?php stockImage('themes/theme-12.jpg') ?>')"></div>
+                            <div class="desktop-graphic_image" style="background-image: url('<?php echo stockImage('themes/theme-12.jpg') ?>')"></div>
                         </div>
                     </div>
                 </div>
@@ -242,12 +242,12 @@
             </div>
             
             <!-- Showcase Slide 7 -->
-            <div class="row-block bg-cover stack-break-4 fixed-table" style="background-image: url('<?php stockImage('demo/stock-17.jpg') ?>')">
+            <div class="row-block bg-cover stack-break-4 fixed-table" style="background-image: url('<?php echo stockImage('demo/stock-17.jpg') ?>')">
                 <div class="section_block span-6 text-center va-middle">
                     <div class="block-content span-9">
                         <div class="desktop-graphic-scroll">
                             <img src="<?php echo appDir ?>/images/demo-screen.png" alt="" />
-                            <div class="desktop-graphic_image" style="background-image: url('<?php stockImage('themes/theme-6.jpg') ?>')"></div>
+                            <div class="desktop-graphic_image" style="background-image: url('<?php echo stockImage('themes/theme-6.jpg') ?>')"></div>
                         </div>
                     </div>
                 </div>

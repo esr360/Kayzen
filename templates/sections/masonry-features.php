@@ -18,7 +18,7 @@
                 <a
                     href="<?php echo $options['link'] ?>" 
                     class="widget-feature-zoom span-4"
-                    data-bg="<?php stockImage('demo/stock-'.rand(1, 25).'.jpg') ?>"
+                    data-bg="<?php echo stockImage('demo/stock-'.rand(1, 25).'.jpg') ?>"
                 >
                     <div class="corner-ribbon-pink" data-ribbon="Hot"></div>
                     <header class="widget_header heading_group">
@@ -40,7 +40,7 @@
                 <a 
                     href="<?php echo $options['link'] ?>" 
                     class="widget-feature-zoom span-4"
-                    data-bg="<?php stockImage('demo/stock-'.rand(1, 25).'.jpg') ?>"
+                    data-bg="<?php echo stockImage('demo/stock-'.rand(1, 25).'.jpg') ?>"
                 >
                     <div class="corner-ribbon-green" data-ribbon="New"></div>
                     <header class="widget_header heading_group">
@@ -62,7 +62,7 @@
                 <a
                     href="<?php echo $options['link'] ?>"  
                     class="widget-feature-zoom span-4 col-full"
-                    data-bg="<?php stockImage('demo/stock-'.rand(1, 25).'.jpg') ?>"
+                    data-bg="<?php echo stockImage('demo/stock-'.rand(1, 25).'.jpg') ?>"
                 >
                     <header class="widget_header heading_group">
                         <?php if ($options['title-highlight']) { ?>
@@ -85,7 +85,7 @@
                 <a 
                     href="<?php echo $options['link'] ?>" 
                     class="widget-feature-zoom span-8"
-                    data-bg="<?php stockImage('demo/stock-'.rand(1, 25).'.jpg') ?>"
+                    data-bg="<?php echo stockImage('demo/stock-'.rand(1, 25).'.jpg') ?>"
                 >
                     <header class="widget_header heading_group">
                         <?php if ($options['title-highlight']) { ?>

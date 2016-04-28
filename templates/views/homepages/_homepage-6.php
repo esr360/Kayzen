@@ -96,7 +96,7 @@
                         
                         <blockquote class="blockquote">
                             <a class="blockquote_avatar-large" href="#">
-                                <img src="<?php stockImage('team/team-2.jpg') ?>" alt="">
+                                <img src="<?php echo stockImage('team/team-2.jpg') ?>" alt="">
                             </a>
                             <div class="blockquote_content">
                                 <p>Suspendisse tempus sodales neque, eget eleifend <b>turpis tristique</b> eu. Nullam a nisl maximus, <b>ultrices est</b> ut blandit nislr, elit in lobortis mattis.</p>
@@ -108,7 +108,7 @@
                         
                         <blockquote class="blockquote">
                             <a class="blockquote_avatar-large" href="#">
-                                <img src="<?php stockImage('team/team-2.jpg') ?>" alt="">
+                                <img src="<?php echo stockImage('team/team-2.jpg') ?>" alt="">
                             </a>
                             <div class="blockquote_content">
                                 <p>Suspendisse tempus sodales neque, eget eleifend <b>turpis tristique</b> eu. Nullam a nisl maximus, <b>ultrices est</b> ut blandit nislr, elit in lobortis mattis.</p>
@@ -146,7 +146,7 @@
                             <div class="thumbnail_mask">
                                 <div class="thumbnail_controls button_group-small">
                                     <a 
-                                        href="<?php stockImage('demo/stock-7.jpg') ?>" 
+                                        href="<?php echo stockImage('demo/stock-7.jpg') ?>" 
                                         class="button-icon-border-circle" 
                                         rel="lightbox"
                                     >
@@ -157,7 +157,7 @@
                                     </a>
                                 </div>
                             </div>
-                            <img src="<?php stockImage('demo/stock-7.jpg') ?>">
+                            <img src="<?php echo stockImage('demo/stock-7.jpg') ?>">
                         </div>
                         <header class="heading_group">
                             <div class="heading_date">
@@ -183,7 +183,7 @@
                             <div class="thumbnail_mask">
                                 <div class="thumbnail_controls button_group-small">
                                     <a 
-                                        href="<?php stockImage('demo/stock-5.jpg') ?>" 
+                                        href="<?php echo stockImage('demo/stock-5.jpg') ?>" 
                                         class="button-icon-border-circle" 
                                         rel="lightbox"
                                     >
@@ -194,7 +194,7 @@
                                     </a>
                                 </div>
                             </div>
-                            <img src="<?php stockImage('demo/stock-5.jpg') ?>">
+                            <img src="<?php echo stockImage('demo/stock-5.jpg') ?>">
                         </div>
                         <header class="heading_group">
                             <div class="heading_date">
@@ -220,7 +220,7 @@
                             <div class="thumbnail_mask">
                                 <div class="thumbnail_controls button_group-small">
                                     <a 
-                                        href="<?php stockImage('demo/stock-3.jpg') ?>" 
+                                        href="<?php echo stockImage('demo/stock-3.jpg') ?>" 
                                         class="button-icon-border-circle" 
                                         rel="lightbox"
                                     >
@@ -231,7 +231,7 @@
                                     </a>
                                 </div>
                             </div>
-                            <img src="<?php stockImage('demo/stock-3.jpg') ?>">
+                            <img src="<?php echo stockImage('demo/stock-3.jpg') ?>">
                         </div>
                         <header class="heading_group">
                             <div class="heading_date">

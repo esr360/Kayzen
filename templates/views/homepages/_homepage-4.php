@@ -1,23 +1,35 @@
-<section class="billboard-full-screen"
-    style="background-image: url('<?php stockImage('demo/stock-5.jpg') ?>')">
-    <div class="billboard_wrapper container text-left">
-        <div class="short" id="billboard-fade-parallax">
-            <h3 class="heading-uppercase-heavy-highlight-dark-size-8 font-2">
-                <b>Welcome to Kayzen</b><br />
-                <b>A Unique Theme Framework</b>
-            </h3>
-            <div class="button_group">
-                <a class="button-size-4-grey-6" href="#">Purchase Now</a>
-                <a class="button-size-4-primary" href="#">Explore The Potential</a>
-            </div>
-        </div>
-    </div>
-    <nav class="slide-nav">
-        <button class="slide-prev button-icon-border-size-3-white"><i class="fa fa-angle-left"></i></button>
-        <button class="slide-next button-icon-border-size-3-white"><i class="fa fa-angle-right"></i></button>
-    </nav>
-    <a href="#s-welcome" class="scroll-wheel"></a>
-</section>
+<?php
+
+    billboard([
+        'type'          => 'homepage',
+        'modifiers'     => '',
+        'tag-line'      => '',
+        'wrapper-class' => 'container text-left',
+        'heading_group' => false,
+        'headline'      => '',
+        'title'         => [
+            'heading-uppercase-heavy-highlight-dark-size-8 font-2',
+            '<b>Welcome to Kayzen</b><br /><b>A Unique Theme Framework</b>'
+        ],
+        'ctas'          => [
+            [
+                'button-size-4-grey-6',
+                '#',
+                'Purchase Now'
+            ],
+            [
+                'button-size-4-primary',
+                '#s-welcome',
+                'Explore The Potential'
+            ]
+        ],
+        'bg-img'        => stockImage('demo/stock-5.jpg'),
+        'bg-parallax'   => false,
+        'fade-parallax' => true,
+        'wheel-anchor'  => '#s-welcome'
+    ]);
+    
+?>
             
 <section class="section">
 
@@ -106,7 +118,7 @@
 <section 
     class="section-secondary-full-screen-overlay-alt"
     data-stellar-background-ratio="0.8"
-    style="background-image: url('<?php stockImage('demo/stock-7.jpg') ?>')"
+    style="background-image: url('<?php echo stockImage('demo/stock-7.jpg') ?>')"
 >
     <div class="container v-center text-right">
         <div class="row">

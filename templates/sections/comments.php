@@ -17,7 +17,7 @@
                 <div class="row stack-0 object-small">
                     <div class="span-2 va-middle text-center">
                         <div class="thumbnail-profile-round-xlarge-styled">
-                            <img src="<?php stockImage('team/team-2.jpg') ?>" alt="">
+                            <img src="<?php echo stockImage('team/team-2.jpg') ?>" alt="">
                         </div>
                     </div>
                     <div class="span-10 va-middle">
@@ -48,7 +48,7 @@
                 <div class="row object-small span-10 text-left stack-0">
                     <div class="span-2 va-middle text-center">
                         <div class="thumbnail-profile-round-large-styled">
-                            <img src="<?php stockImage('team/team-2.jpg') ?>" alt="">
+                            <img src="<?php echo stockImage('team/team-2.jpg') ?>" alt="">
                         </div>
                     </div>
                     <div class="span-10 va-middle">
@@ -79,7 +79,7 @@
                 <div class="row object-small stack-0">
                     <div class="span-2 va-middle text-center">
                         <div class="thumbnail-profile-round-xlarge-styled">
-                            <img src="<?php stockImage('team/team-2.jpg') ?>" alt="">
+                            <img src="<?php echo stockImage('team/team-2.jpg') ?>" alt="">
                         </div>
                     </div>
                     <div class="span-10 va-middle">

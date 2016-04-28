@@ -1,32 +1,74 @@
-<?php function billboard($custom = array()) { ?>
+<?php function billboard($custom = []) { ?>
 
-    <?php $options = array_merge(array(
-        'type'      => 'default', // 'homepage' | 'videoBg'
-        'headline'  => 'Kayzen',
-        'modifiers' => null,
-        'title'     => null,
-        'tag-line'  => null,
-        'countdown' => false,
-        'search'    => false
-    ), $custom); ?>
+    <?php $options = array_merge([
+        'type'          => 'default', // 'default' | 'homepage' | 'videoBg'
+        'modifiers'     => '-overlay',
+        'wrapper-class' => 'container-small',
+        'heading_group' => true,
+        'headline'      => [
+            'heading-uppercase-light-strikethrough-spaced-size-5-responsive',
+            'Kayzen'
+        ],
+        'title'         => [
+            'heading-uppercase-heavy-size-8 font-2',
+            'Make Theming Great Again'
+        ],
+        'tag-line'      => null,
+        'ctas'          => [
+            [
+                'button-size-4-border-white',
+                '#key-features',
+                'Explore The Potential'
+            ]
+        ],
+        'slide-nav'     => true,
+        'wheel-anchor'  => '#key-features',
+        'bg-img'        => '',
+        'bg-parallax'   => 'data-stellar-background-ratio="0.5"',
+        'fade-parallax' => false,
+        'countdown'     => false,
+        'search'        => false 
+    ], $custom);
+    
+    // Update the tag-line if null
+    if ($options['tag-line'] === null) {
+        $options['tag-line'] = 'Welcome to Kayzen; the next generation of website & app theming. Kayzen is more than just a theme, it\'s a theme framework, custom built from the ground up to help make theming great again.';
+    } ?>
     
     <?php if ($options['type'] == 'homepage') { ?>
-        <section class="billboard-overlay-full-screen" data-stellar-background-ratio="0.5">
-            <div class="billboard_wrapper container-small">
-                <header class="heading_group">
-                    <h2 class="heading-uppercase-light-strikethrough-spaced-size-5-responsive"><span><?php echo $options['headline'] ?></span></h2>
-                    <h3 class="heading-uppercase-heavy-size-8 font-2">Make Theming Great Again</h3>
-                </header>
-                <p class="lede">Welcome to Kayzen; the next generation of website & app theming. Kayzen is more than just a theme, it's a theme framework, custom built from the ground up to help make theming great again.</p>
-                <div class="button_group">
-                    <a class="button-size-4-border-white" href="#key-features">Explore The Potential</a>
-                </div>
+        <section 
+            class="billboard-full-screen<?php echo $options['modifiers'] ?>" <?php echo $options['bg-parallax'] ?>
+            <?php if($options['bg-img']) { ?>
+                style="background-image: url('<?php echo $options['bg-img'] ?>')"
+            <?php } ?>
+        >
+            <div class="billboard_wrapper <?php echo $options['wrapper-class'] ?>">
+                <?php if($options['fade-parallax']) { ?><div class="short" id="billboard-fade-parallax"><?php } ?>
+                    <?php if($options['heading_group']) { ?><header class="heading_group"><?php } ?>
+                        <?php if($options['headline']) {?>
+                            <h2 class="<?php echo $options['headline'][0] ?>">
+                                <span><?php echo $options['headline'][1] ?></span>
+                            </h2>
+                        <?php } ?>
+                        <h3 class="<?php echo $options['title'][0] ?>"><?php echo $options['title'][1] ?></h3>
+                    <?php if($options['heading_group']) { ?></header><?php } ?>
+                    <?php if ($options['tag-line']) { ?>
+                        <p class="lede"><?php echo $options['tag-line'] ?></p>
+                    <?php } ?>
+                    <div class="button_group">
+                        <?php foreach($options['ctas'] as $cta) { ?>
+                            <a class="<?php echo $cta[0] ?>" href="<?php echo $cta[1] ?>"><?php echo $cta[2] ?></a>    
+                        <?php } ?>
+                    </div>
+                <?php if($options['fade-parallax']) { ?></div><?php } ?>
             </div>
-            <nav class="slide-nav">
-                <button class="slide-prev button-icon-border-size-3-white"><i class="fa fa-angle-left"></i></button>
-                <button class="slide-next button-icon-border-size-3-white"><i class="fa fa-angle-right"></i></button>
-            </nav>
-            <a href="#key-features" class="scroll-wheel"></a>
+            <?php if ($options['slide-nav']) { ?>
+                <nav class="slide-nav">
+                    <button class="slide-prev button-icon-border-size-3-white"><i class="fa fa-angle-left"></i></button>
+                    <button class="slide-next button-icon-border-size-3-white"><i class="fa fa-angle-right"></i></button>
+                </nav>
+            <?php } ?>
+            <a href="<?php echo $options['wheel-anchor'] ?>" class="scroll-wheel"></a>
         </section>
     <?php } else if ($options['type'] == 'videoBg') { ?>
         <section class="billboard-videoBg">
