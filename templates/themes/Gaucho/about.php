@@ -35,32 +35,8 @@
                 'title'    => $title,
                 'tag-line' => $tagLine
             ));
-            
-            earthSlider();
-    
-            skills();
-            
-            whyChooseUs();
-            
-            promoBanner(array(
-                'cta-modifiers' => '-oval'
-            ));
-            
-            ourTeam();
-            
-            clients();
-            
-            promoSection(array(
-                'cta-modifiers' => '-oval'
-            ));
-        
-            statistics();
-    
-            recentWork(array(
-                'item-link' => themeLink($theme, '/portfolio-single.php')
-            ));
-            
-            googleMap();
+			
+			include (ROOT.'/views/further/_about-us.php');
             
             appFooter();
                     
