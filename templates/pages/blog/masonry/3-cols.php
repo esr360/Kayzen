@@ -29,8 +29,6 @@
             ));
             
             include (ROOT.'/views/blog/masonry/_3-cols.php');
-        
-            promoBanner();
             
             appFooter(); 
             

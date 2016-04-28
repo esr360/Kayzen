@@ -36,35 +36,7 @@
                 'tag-line' => $tagLine
             ));
             
-            sectionTitle(array(
-                'title' => 'Single Project',
-                'sub-title' => 'See How We Did It',
-                'icon' => 'fa-magic'
-            ));
-				
-            include (ROOT.'/sections/portfolio-thumbs.php');
-            
-            include (ROOT.'/sections/project-summary.php');
-                    
-            include (ROOT.'/sections/what-we-did.php');
-                    
-            projectSections(array(
-               'cta-modifiers' => '-oval' 
-            ));
-            
-            socialWidgets(array(
-                'section' => 'section-primary-flush-dot-map container'
-            ));
-        
-            include (ROOT.'/sections/project-testimonial.php');
-    
-            recentWork(array(
-                'item-link' => themeLink($theme, '/portfolio-single.php')
-            ));
-            
-            promoBanner(array(
-                'cta-modifiers' => '-oval'
-            ));
+            include (ROOT.'/views/portfolio/_single.php');
             
             appFooter(); 
             

@@ -29,6 +29,7 @@
 			include (ROOT.'/views/homepages/_homepage-4.php');
         
             appFooter();
+			
         ?>
 
     </div><!-- Site Canvas -->

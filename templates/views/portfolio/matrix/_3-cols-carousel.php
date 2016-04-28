@@ -138,3 +138,5 @@
     </script>
     
 </section>
+
+<?php promoBanner() ?>

@@ -29,8 +29,6 @@
             ));
             
             include (ROOT.'/views/blog/classic/_full-width.php');
-        
-            promoBanner();
             
             appFooter(); 
             

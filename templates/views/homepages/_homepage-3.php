@@ -93,20 +93,34 @@
         </div>
         <script>
             $(document).ready(function() {
+            
+                var elementsSelector = $("#elements-carousel");
                 
-                var elementsCarousel = $("#elements-carousel");
-                
-                elementsCarousel.owlCarousel({
+                elementsSelector.owlCarousel({
                     items: 1,
                     loop: true,
                     margin: 30
-                })
-        
-                elementsCarousel.find("+ .slide-nav .slide-next").click(function() {
-                    elementsCarousel.trigger('next.owl.carousel');
                 });
-                elementsCarousel.find("+ .slide-nav .slide-prev").click(function() {
-                    elementsCarousel.trigger('prev.owl.carousel');
+
+                elementsSelector.find("+ .slide-nav .slide-next").click(function() {
+                    elementsSelector.trigger('next.owl.carousel');
+                });
+                elementsSelector.find("+ .slide-nav .slide-prev").click(function() {
+                    elementsSelector.trigger('prev.owl.carousel');
+                });
+                
+                function delayCarousel(carousel, delay) { 
+                    setTimeout(function() {
+                        carousel.owlCarousel('invalidate', 'all').owlCarousel('refresh');
+                    }, delay); 
+                }
+                
+                $(window).load(function() {
+                    delayCarousel(elementsSelector, baseTransition)
+                });
+                
+                $('#toggleHeader').click(function() {
+                    delayCarousel(elementsSelector, baseTransition)
                 });
                 
             });

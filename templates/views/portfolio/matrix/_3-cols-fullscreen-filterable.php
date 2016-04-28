@@ -98,3 +98,5 @@
     </script>            
     
 </section>
+
+<?php promoBanner() ?>

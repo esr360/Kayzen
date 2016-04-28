@@ -29,8 +29,6 @@
             ));
             
             include (ROOT.'/views/portfolio/matrix/_3-cols-fullscreen-filterable.php');
-        
-            promoBanner();
             
             appFooter(); 
             

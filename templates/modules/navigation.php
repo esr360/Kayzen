@@ -225,6 +225,7 @@
                                 <li>
                                     <h3 class="mega-menu_title heading-uppercase-size-2">Masonry</h3>
                                     <ul class="list-arrow">
+                                        <li><a href="<?php pageLink('portfolio/masonry/3-cols.php') ?>">3 Columns</a></li>
                                         <li><a href="<?php pageLink('portfolio/masonry/3-cols-filterable.php') ?>">3 Columns Filterable</a></li>
                                         <li><a href="<?php pageLink('portfolio/masonry/3-cols-infinite-scroll.php') ?>">3 Columns Infinite Scroll</a></li>
                                     </ul>

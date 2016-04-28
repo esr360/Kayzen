@@ -29,8 +29,6 @@
             ));
             
             include (ROOT.'/views/portfolio/article/_full-width.php');
-        
-            promoBanner();
             
             appFooter(); 
             

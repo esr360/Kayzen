@@ -29,8 +29,6 @@
             ));
             
             include (ROOT.'/views/blog/_single.php');
-        
-            promoBanner();
             
             appFooter(); 
             
