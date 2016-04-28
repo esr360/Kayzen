@@ -36,44 +36,8 @@
                 'title'    => $title,
                 'tag-line' => $tagLine
             ));
-            
-            earthSlider();
-    
-            skills(array(
-                'cta-modifiers' => '-oval'
-            ));
-            
-            whyChooseUs();
-            
-            promoBanner(array(
-                'cta-modifiers' => '-oval'
-            ));
-            
-            ourTeam();
-            
-            clients();
-            
-            promoSection(array(
-                'cta-modifiers' => '-oval'
-            ));
-        
-            statistics();
-    
-            recentWork(array(
-                'item-link' => themeLink($theme, '/shop-category.php'),
-                'title' => array(
-                    'content' => 'Latest Products',
-                    'modifiers' => 'heading-uppercase-light-brand-1-size-4-spaced',
-                    'highlight' => false
-                ),
-                'sub-title' => array(
-                    'content' => 'Whilst Stocks Last',
-                    'modifiers' => 'heading-uppercase-heavy-size-7 font-2',
-                    'highlight' => false
-                )
-            ));
-            
-            googleMap();
+			
+			include (ROOT.'/views/further/_about-us.php');
             
             appFooter();
         

@@ -15,7 +15,7 @@ define('env', 'dev');
  * Set which theme you are using
  * @const theme
  */
-define('theme', 'Arndale');
+define('theme', 'Lily');
 
 /**
  * Are you using multiple themes?

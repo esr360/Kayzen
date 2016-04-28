@@ -39,7 +39,7 @@ $theme = 'Lily';
 						<h4 class="heading-uppercase-light-spaced-size-4"><span>This is Kayzen</span></h4>
 						<h2 class="heading-uppercase-heavy-size-8 font-2"><span>The New Experience</span></h2>
 					</header>
-					<p class="lede">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas mollis dolor ut euismod pellentesque. Vivamus mattis cursus urna, non gravida purus pulvinar ac. Nunc dignissim velit justo, id aliquet neque.</p>
+                    <p class="lede">Welcome to Kayzen; the next generation of website & app theming. Kayzen is more than just a theme, it's a theme framework, custom built from the ground up to help make theming great again.</p>
 					<div class="button_group">
 						<a class="button-size-4-primary-oval" href="#">Purchase Now</a>
 						<a class="button-size-4-grey-1-border-oval" href="#">Explore The Potential</a>
