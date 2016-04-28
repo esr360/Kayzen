@@ -50,15 +50,13 @@
             
         ?>
         
-        <section class="section-primary-flush-dot-map container"> 
+        <div class="container-small">
             
-            <div class="container-small">
-                
-			    <?php socialWidgets() ?>
-            
-            </div>
-            
-        </section> 
+            <?php socialWidgets() ?>
+
+        </div>
+
+        <section class="section-primary-flush-dot-map container"></section> 
         
         <?php
             

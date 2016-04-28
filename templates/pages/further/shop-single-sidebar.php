@@ -30,8 +30,6 @@
 			
 			include (ROOT.'/views/further/_shop-single-sidebar.php');
             
-            promoBanner();
-            
             appFooter(); 
         
         ?>

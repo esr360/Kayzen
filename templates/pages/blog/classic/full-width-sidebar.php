@@ -29,8 +29,6 @@
             ));
             
             include (ROOT.'/views/blog/classic/_full-width-sidebar.php');
-        
-            promoBanner();
             
             appFooter(); 
             

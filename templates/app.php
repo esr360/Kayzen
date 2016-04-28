@@ -15,7 +15,7 @@ define('env', 'dev');
  * Set which theme you are using
  * @const theme
  */
-define('theme', 'Dart');
+define('theme', 'Mall');
 
 /**
  * Are you using multiple themes?

@@ -212,3 +212,5 @@
     </div><!-- container -->
     
 </section>
+
+<?php promoBanner() ?>
