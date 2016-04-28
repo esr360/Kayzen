@@ -36,28 +36,8 @@
                 'title'    => $title,
                 'tag-line' => $tagLine
             ));
-            
-            earthSlider();
-    
-            skills();
-            
-            whyChooseUs();
-            
-            promoBanner();
-            
-            ourTeam();
-            
-            clients();
-            
-            promoSection();
-        
-            statistics();
-    
-            recentWork(array(
-                'item-link' => themeLink($theme, '/portfolio-single.php')
-            ));
-            
-            googleMap();
+			
+			include (ROOT.'/views/further/_about-us.php');
             
             appFooter();
         
