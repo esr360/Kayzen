@@ -1,6 +1,16 @@
-<?php masonryFeatures(array(
-    'background' => '/images/billboard-2.jpg',
-)) ?>
+<?php function _homepage6($custom = []) {
+
+    $options = array_merge([
+        'masonryFeatures' => [
+            'background' => '/images/billboard-2.jpg',
+        ]
+    ], $custom);
+
+    masonryFeatures([
+        'background' => '/images/billboard-2.jpg',
+    ]);
+    
+?>
 
 <section class="section-primary">
     
@@ -270,4 +280,8 @@
                 
 </section>
 
-<?php googleMap() ?>
+<?php 
+
+    googleMap();
+    
+} ?>

@@ -1,9 +1,9 @@
-<?php function billboard($custom = []) { ?>
+<?php function billboard($custom = []) {
 
-    <?php $options = array_merge([
+    $options = array_merge([
         'type'          => 'default', // 'default' | 'homepage' | 'videoBg'
         'modifiers'     => '-overlay',
-        'wrapper-class' => 'container-small',
+        'wrapper-class' => '',
         'heading_group' => true,
         'headline'      => [
             'heading-uppercase-light-strikethrough-spaced-size-5-responsive',
@@ -42,8 +42,8 @@
                 style="background-image: url('<?php echo $options['bg-img'] ?>')"
             <?php } ?>
         >
-            <div class="billboard_wrapper <?php echo $options['wrapper-class'] ?>">
-                <?php if($options['fade-parallax']) { ?><div class="short" id="billboard-fade-parallax"><?php } ?>
+            <div class="billboard_wrapper container <?php echo $options['wrapper-class'] ?>">
+                <div class="billboard_snap" <?php if($options['fade-parallax']) { ?>id="billboard-fade-parallax"<?php } ?>>
                     <?php if($options['heading_group']) { ?><header class="heading_group"><?php } ?>
                         <?php if($options['headline']) {?>
                             <h2 class="<?php echo $options['headline'][0] ?>">
@@ -60,7 +60,7 @@
                             <a class="<?php echo $cta[0] ?>" href="<?php echo $cta[1] ?>"><?php echo $cta[2] ?></a>    
                         <?php } ?>
                     </div>
-                <?php if($options['fade-parallax']) { ?></div><?php } ?>
+                </div>
             </div>
             <?php if ($options['slide-nav']) { ?>
                 <nav class="slide-nav">
@@ -104,7 +104,7 @@
                         $(document).ready(function() {
                             $(".countdown").countdown({
                                 date : '1 May 2016 09:00:00',
-                                format: 'on'
+                                format : 'on'
                             });
                         });
                     </script>

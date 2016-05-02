@@ -241,6 +241,11 @@
                 }
             }
         }
+        
+        @include component('snap') {
+            @extend .short;
+            display: inline-block;
+        }
 
     } // module
 

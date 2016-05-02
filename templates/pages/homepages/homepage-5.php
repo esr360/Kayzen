@@ -26,7 +26,7 @@
                 'modifiers' => 'bar-absolute-dark'
             ));
 			
-			include (ROOT.'/views/homepages/_homepage-5.php');
+			_homepage5();
             
             appFooter();
         

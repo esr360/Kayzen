@@ -32,7 +32,7 @@
                 )
             ));
 			
-			include (ROOT.'/views/homepages/_homepage-2.php');
+			_homepage2();
             
             /*
             recentArticles(array(

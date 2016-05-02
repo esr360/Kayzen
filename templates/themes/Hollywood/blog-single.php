@@ -22,19 +22,19 @@
         
             topbar();
 
-            appHeader(array(
-                'nav-links'  => array(
+            appHeader([
+                'nav-links'  => [
                     'Home' => themeLink($theme, '/index.php'),
                     'About' => themeLink($theme, '/about.php'),
                     'Blog' => themeLink($theme, '/blog.php'),
                     'Contact' => themeLink($theme, '/contact.php')
-                )
-            ));
+                ]
+            ]);
 
-            billboard(array(
+            billboard([
                 'title'    => $title,
                 'tag-line' => $tagLine
-            ));
+            ]);
             
             include (ROOT.'/views/blog/_single.php');
         

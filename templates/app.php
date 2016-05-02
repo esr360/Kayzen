@@ -15,7 +15,7 @@ define('env', 'dev');
  * Set which theme you are using
  * @const theme
  */
-define('theme', 'Kayzen');
+define('theme', 'Agenda');
 
 /**
  * Are you using multiple themes?
@@ -122,10 +122,10 @@ include (ROOT.'/sections/utilities.php');
 include (ROOT.'/sections/why-choose-us.php');
 
 include (ROOT.'/views/homepages/_homepage-1.php');
-//include (ROOT.'/views/homepages/_homepage-2.php');
-//include (ROOT.'/views/homepages/_homepage-3.php');
-//include (ROOT.'/views/homepages/_homepage-4.php');
-//include (ROOT.'/views/homepages/_homepage-5.php');
-//include (ROOT.'/views/homepages/_homepage-6.php');
+include (ROOT.'/views/homepages/_homepage-2.php');
+include (ROOT.'/views/homepages/_homepage-3.php');
+include (ROOT.'/views/homepages/_homepage-4.php');
+include (ROOT.'/views/homepages/_homepage-5.php');
+include (ROOT.'/views/homepages/_homepage-6.php');
 
 ?>

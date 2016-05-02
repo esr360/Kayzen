@@ -1,69 +1,91 @@
-<?php 
+<?php function _homepage2($custom = []) {
 
-    billboard([
-        'type' => 'homepage',
-        'wrapper-class' => 'container text-left',
-        'headline'      => [
-            'heading-uppercase-heavy-size-8 font-2',
-            'Welcome to Kayzen'
-        ],
-        'title'         => [
-            'heading-light-size-6',
-            'A Unique & Modern Theme Framework'
-        ],
-        'ctas' => [
-            [
-                'button-size-4-white',
-                '#',
-                'Purchase Now'
+    $options = array_merge([
+        'billboard' => [
+            'type' => 'homepage',
+            'wrapper-class' => 'container text-left',
+            'headline' => [
+                'heading-uppercase-heavy-size-8 font-2',
+                'Welcome to Kayzen'
             ],
-            [
-                'button-size-4-border-white',
-                '#s-welcome',
-                'Explore The Potential'
-            ]
+            'title' => [
+                'heading-light-size-6',
+                'A Unique & Modern Theme Framework'
+            ],
+            'ctas' => [
+                [
+                    'button-size-4-white',
+                    '#',
+                    'Purchase Now'
+                ],
+                [
+                    'button-size-4-border-white',
+                    '#s-welcome',
+                    'Explore The Potential'
+                ]
+            ],
+            'bg-parallax' => false,
+            'fade-parallax' => true,
+            'wheel-anchor' => '#s-welcome'
         ],
-        'bg-parallax'   => false,
-        'fade-parallax' => true,
-        'wheel-anchor' => '#s-welcome'
-    ]);
-
-    earthSlider();
+        'earthSlider' => [],
+        'skills' => [],
+        'whyChooseUs' => [],
+        'promoBanner[1]' => [],
+        'ourTeam' => [],
+        'promoSection' => [],
+        'services' => [],
+        'statistics' => [],
+        'keyFeatures2' => [],
+        'clients' => [],
+        'pricing' => [],
+        'featureQuote' => [],
+        'recentWork' => [
+            'items' => 6
+        ],
+        'testimonials' => [],
+        'recentArticles' => [],
+        'promoBanner[2]' => [],
+        'contactUs' => [],
+        'googleMap' => []
+    ], $custom);
     
-    skills();
-
-    whyChooseUs();
-
-    promoBanner();
-
-    ourTeam();
+    billboard($options['billboard']);
     
-    promoSection();
+    earthSlider($options['earthSlider']);
     
-    services();
+    skills($options['skills']);
     
-    statistics();
+    whyChooseUs($options['whyChooseUs']);
     
-    keyFeatures2();
+    promoBanner($options['promoBanner[1]']);
     
-    clients();
+    ourTeam($options['ourTeam']);
     
-    pricing();
+    promoSection($options['promoSection']);
     
-    featureQuote();
+    services($options['services']);
     
-    recentWork(array(
-        'items' => 6
-    ));
+    statistics($options['statistics']);
     
-    testimonials();
+    keyFeatures2($options['keyFeatures2']);
     
-    recentArticles();
-
-    promoBanner();
+    clients($options['clients']);
     
-    contactUs();
+    pricing($options['pricing']);
     
-    googleMap();
+    featureQuote($options['featureQuote']);
     
-?>
+    recentWork($options['recentWork']);
+    
+    testimonials($options['testimonials']);
+    
+    recentArticles($options['recentArticles']);
+    
+    promoBanner($options['promoBanner[2]']);
+    
+    contactUs($options['contactUs']);
+    
+    googleMap($options['googleMap']);
+            
+} ?>

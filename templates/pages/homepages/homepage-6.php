@@ -24,7 +24,7 @@
                 'modifiers' => 'bar-brand'
             ));
 			
-			include (ROOT.'/views/homepages/_homepage-6.php');
+			_homepage6();
             
             appFooter();
         

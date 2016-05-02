@@ -1,33 +1,37 @@
-<?php
+<?php function _homepage4($custom = []) {
 
-    billboard([
-        'type'          => 'homepage',
-        'modifiers'     => '',
-        'tag-line'      => '',
-        'wrapper-class' => 'container text-left',
-        'heading_group' => false,
-        'headline'      => '',
-        'title'         => [
-            'heading-uppercase-heavy-highlight-dark-size-8 font-2',
-            '<b>Welcome to Kayzen</b><br /><b>A Unique Theme Framework</b>'
-        ],
-        'ctas'          => [
-            [
-                'button-size-4-grey-6',
-                '#',
-                'Purchase Now'
+    $options = array_merge([
+        'billboard' => [
+            'type'          => 'homepage',
+            'modifiers'     => '',
+            'tag-line'      => '',
+            'wrapper-class' => 'container text-left',
+            'heading_group' => false,
+            'headline'      => '',
+            'title'         => [
+                'heading-uppercase-heavy-highlight-dark-size-8 font-2',
+                '<b>Welcome to Kayzen</b><br /><b>A Unique Theme Framework</b>'
             ],
-            [
-                'button-size-4-primary',
-                '#s-welcome',
-                'Explore The Potential'
-            ]
-        ],
-        'bg-img'        => stockImage('demo/stock-5.jpg'),
-        'bg-parallax'   => false,
-        'fade-parallax' => true,
-        'wheel-anchor'  => '#s-welcome'
-    ]);
+            'ctas'          => [
+                [
+                    'button-size-4-grey-6',
+                    '#',
+                    'Purchase Now'
+                ],
+                [
+                    'button-size-4-primary',
+                    '#s-welcome',
+                    'Explore The Potential'
+                ]
+            ],
+            'bg-img'        => stockImage('demo/stock-5.jpg'),
+            'bg-parallax'   => false,
+            'fade-parallax' => true,
+            'wheel-anchor'  => '#s-welcome'
+        ]
+    ], $custom);
+
+    billboard($options['billboard']);
     
 ?>
             
@@ -280,4 +284,4 @@
     
     shareTheLove();
     
-?>
+} ?>
