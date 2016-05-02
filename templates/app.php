@@ -15,7 +15,7 @@ define('env', 'dev');
  * Set which theme you are using
  * @const theme
  */
-define('theme', 'Agenda');
+define('theme', 'Coffee');
 
 /**
  * Are you using multiple themes?
@@ -61,6 +61,7 @@ define('appDir', '/app');
  * Templates
  *****************************************************************/
 
+include (ROOT.'/helpers/merge-options.php');
 include (ROOT.'/helpers/dev-asset.php');
 include (ROOT.'/helpers/page-link.php');
 include (ROOT.'/helpers/stock-image.php');

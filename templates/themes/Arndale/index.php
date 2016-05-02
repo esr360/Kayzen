@@ -30,7 +30,15 @@
                 )
             ));
 			
-			include (ROOT.'/views/homepages/_homepage-5.php');
+			_homepage5([
+                'billboard' => [
+                    'ctas' => [
+                        ['button-size-4-primary'],
+                        ['button-size-4-border-white']
+                    ],
+                    'slide-nav' => false
+                ]
+            ]);
             
             appFooter();
         

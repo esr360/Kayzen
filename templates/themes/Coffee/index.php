@@ -29,32 +29,33 @@
                 )
             ));
             
-        ?>
-
-		<section class="billboard-full-screen-overlay">
-			<div class="billboard_wrapper container text-left">
-				<div class="short" id="billboard-fade-parallax">
-					<header class="heading_group">
-						<h4 class="heading-uppercase-light-size-5-highlight"><b>This is Kayzen</b></h4>
-						<h2 class="heading-heavy-size-7-uppercase-highlight-dark font-2"><b>The New Experience</b></h2>
-					</header>
-					<p class="lede">Kayzen is a powerful themeing framework for architecting CSS for large, modular & scalable web applications. Built using only Sass (SCSS), Kayzen has the customizing power of a complete CMS theme.</p>
-					<div class="button_group">
-						<a class="button-oval-size-4-primary" href="#">Purchase Now</a>
-						<a class="button-oval-size-4-border-white" href="#">Explore The Potential</a>
-					</div>
-				</div>
-			</div>
-			<nav class="slide-nav">
-				<button class="slide-prev button-icon-border-size-3-white"><i class="fa fa-angle-left"></i></button>
-				<button class="slide-next button-icon-border-size-3-white"><i class="fa fa-angle-right"></i></button>
-			</nav>
-			<a href="#s-welcome" class="scroll-wheel"></a>
-		</section>
-        
-        <?php
-			
-			include (ROOT.'/views/homepages/_homepage-6.php');
+            billboard([
+                'type' => 'homepage',
+                'wrapper-class' => 'text-left',
+                'headline' => [
+                    'class' => 'heading-uppercase-light-size-5-highlight',
+                    'text' => '<b>This is Kayzen</b>'
+                ],
+                'title' => [
+                    'class' => 'heading-heavy-size-7-uppercase-highlight-dark font-2',
+                    'text' => '<b>The New Experience</b>'
+                ],
+                'ctas' => [
+                    [
+                        'button-oval-size-4-primary',
+                        '#',
+                        'Purchase Now'
+                    ],
+                    [
+                        'button-oval-size-4-border-white',
+                        '#s-welcome',
+                        'Explore The Potential'
+                    ]
+                ],
+                'bg-parallax' => false,
+            ]);
+            
+            _homepage6();
             
             appFooter();
                     

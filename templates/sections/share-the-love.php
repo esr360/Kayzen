@@ -1,6 +1,6 @@
 <?php function shareTheLove($custom = array()) { ?>
 
-    <?php $options = array_merge(array(
+    <?php $options = array_replace_recursive(array(
         'title' => array(
             'content' => 'Share The Love',
             'modifiers' => 'heading-uppercase-light-brand-1-spaced-size-4',

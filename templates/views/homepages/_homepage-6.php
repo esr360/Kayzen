@@ -1,14 +1,12 @@
 <?php function _homepage6($custom = []) {
 
-    $options = array_merge([
+    $options = array_replace_recursive([
         'masonryFeatures' => [
             'background' => '/images/billboard-2.jpg',
         ]
     ], $custom);
 
-    masonryFeatures([
-        'background' => '/images/billboard-2.jpg',
-    ]);
+    masonryFeatures($options['masonryFeatures']);
     
 ?>
 

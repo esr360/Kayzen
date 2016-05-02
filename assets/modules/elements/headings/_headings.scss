@@ -140,6 +140,7 @@
 
         @include modifier('spaced') {
             text-indent: this('spaced-spacing');
+            margin-left: -#{this('spaced-spacing')};
             &, span {            
                 letter-spacing: this('spaced-spacing');
             }

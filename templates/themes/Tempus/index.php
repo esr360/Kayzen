@@ -31,7 +31,7 @@
                 )
             ));
 			
-			include (ROOT.'/views/homepages/_homepage-4.php');
+			_homepage4();
         
             appFooter();
             

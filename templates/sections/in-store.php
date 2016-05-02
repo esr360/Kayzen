@@ -1,6 +1,6 @@
  <?php function inStore($custom = array()) { ?>
 
-    <?php $options = array_merge(array(
+    <?php $options = array_replace_recursive(array(
         'link' => pageLink('further/shop-single.php', 'pages', false),
         'root' => pageLink('further/shop-category.php', 'pages', false),
         'tabs_nav_item-modifiers' => '',

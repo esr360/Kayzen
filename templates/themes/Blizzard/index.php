@@ -37,7 +37,11 @@
                 'flyout-trigger' => false
             ));
 			
-			include (ROOT.'/views/homepages/_homepage-3.php');
+			_homepage3([
+                'billboard' => [
+                    'slide-nav' => false
+                ]
+            ]);
             
             appFooter(array(
                 'blurb' => true

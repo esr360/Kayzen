@@ -1,14 +1,14 @@
 <?php function _homepage5($custom = []) {
 
-    $options = array_merge([
+    $options = array_replace_recursive([
         'billboard' => [
             'type' => 'homepage',
-            'wrapper-class' => 'container text-left',
-            'headline'      => [
+            'wrapper-class' => 'text-left',
+            'headline' => [
                 'heading-uppercase-light-spaced-size-4',
                 'This is Kayzen'
             ],
-            'title'         => [
+            'title' => [
                 'heading-uppercase-heavy-size-8 font-2',
                 'The New Experience'
             ],
@@ -24,35 +24,42 @@
                     'Explore The Potential'
                 ]
             ],
-            'bg-parallax'   => false,
-        ]
+            'bg-parallax' => false,
+        ],
+        'masonryFeatures' => [],
+        'inStore' => [],
+        'clients' => [
+            'title' => [
+                'content' => 'Popular Brands',
+                'modifiers' => 'heading-uppercase-light-brand-1-size-4',
+                'highlight' => false
+            ],
+            'sub-title' => [
+                'content' => 'Get The Best Deals',
+                'modifiers' => 'heading-heavy-size-6 font-2',
+                'highlight' => false
+            ]
+        ],
+        'featureCards' => [],
+        'promoBanner' => [],
+        'shareTheLove' => [],
+        'googleMap' => []
     ], $custom);
 
     billboard($options['billboard']);
 
-    masonryFeatures();
+    masonryFeatures($options['masonryFeatures']);
 
-    inStore();
+    inStore($options['inStore']);
     
-    clients([
-        'title' => [
-            'content' => 'Popular Brands',
-            'modifiers' => 'heading-uppercase-light-brand-1-size-4',
-            'highlight' => false
-        ],
-        'sub-title' => [
-            'content' => 'Get The Best Deals',
-            'modifiers' => 'heading-heavy-size-6 font-2',
-            'highlight' => false
-        ]
-    ]);
+    clients($options['clients']);
     
-    featureCards();
+    featureCards($options['featureCards']);
 
-    promoBanner();
+    promoBanner($options['promoBanner']);
     
-    shareTheLove();
+    shareTheLove($options['shareTheLove']);
     
-    googleMap();
+    googleMap($options['googleMap']);
 
 } ?>

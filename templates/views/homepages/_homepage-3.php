@@ -1,6 +1,6 @@
 <?php function _homepage3($custom = []) {
 
-    $options = array_merge([
+    $options = array_replace_recursive([
         'billboard' => [
             'type' => 'homepage',
             'wrapper-class' => 'container text-left',

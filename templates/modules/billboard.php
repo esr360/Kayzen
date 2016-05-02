@@ -1,17 +1,17 @@
 <?php function billboard($custom = []) {
 
-    $options = array_merge([
+    $options = array_replace_recursive([
         'type'          => 'default', // 'default' | 'homepage' | 'videoBg'
         'modifiers'     => '-overlay',
         'wrapper-class' => '',
         'heading_group' => true,
         'headline'      => [
-            'heading-uppercase-light-strikethrough-spaced-size-5-responsive',
-            'Kayzen'
+            'class' => 'heading-uppercase-light-strikethrough-spaced-size-5-responsive',
+            'text'  => 'Kayzen'
         ],
         'title'         => [
-            'heading-uppercase-heavy-size-8 font-2',
-            'Make Theming Great Again'
+            'class' => 'heading-uppercase-heavy-size-8 font-2',
+            'text'  => 'Make Theming Great Again'
         ],
         'tag-line'      => null,
         'ctas'          => [
@@ -46,11 +46,11 @@
                 <div class="billboard_snap" <?php if($options['fade-parallax']) { ?>id="billboard-fade-parallax"<?php } ?>>
                     <?php if($options['heading_group']) { ?><header class="heading_group"><?php } ?>
                         <?php if($options['headline']) {?>
-                            <h2 class="<?php echo $options['headline'][0] ?>">
-                                <span><?php echo $options['headline'][1] ?></span>
+                            <h2 class="<?php echo $options['headline']['class'] ?>">
+                                <?php echo $options['headline']['text'] ?>
                             </h2>
                         <?php } ?>
-                        <h3 class="<?php echo $options['title'][0] ?>"><?php echo $options['title'][1] ?></h3>
+                        <h3 class="<?php echo $options['title']['class'] ?>"><?php echo $options['title']['text'] ?></h3>
                     <?php if($options['heading_group']) { ?></header><?php } ?>
                     <?php if ($options['tag-line']) { ?>
                         <p class="lede"><?php echo $options['tag-line'] ?></p>
