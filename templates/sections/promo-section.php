@@ -1,9 +1,8 @@
-<?php function promoSection($custom = array()) { ?>
+<?php function promoSection($custom = array()) {
 
-    <?php $options = array_merge(array(  
+    $options = array_merge(array(  
         'dark'          => false,
         'brand'         => false,
-        'cta-modifiers' => null,
         'title' => array(
             'content' => 'Kayzen is the Best',
             'modifiers' => 'heading-heavy-size-5-uppercase font-2',
@@ -59,15 +58,15 @@
                     </ul>
                     <div class="button_group">
                         <?php if ($options['dark']) { ?>
-                            <a href="#" class="button-border-white<?php echo '-'.$options['cta-modifiers'] ?>">
+                            <a href="#" class="button-border-white">
                                 View Demo
                             </a>
                         <?php } else  { ?>
-                            <a href="#" class="button<?php echo '-'.$options['cta-modifiers'] ?>">
+                            <a href="#" class="button">
                                 View Demo
                             </a>
                         <?php } ?>
-                        <a href="http://themeforest.net/user/skyux/portfolio" target="blank" class="button-primary<?php echo '-'.$options['cta-modifiers'] ?>">
+                        <a href="http://themeforest.net/user/skyux/portfolio" target="blank" class="button-primary">
                             Purchase Theme
                         </a>
                     </div>

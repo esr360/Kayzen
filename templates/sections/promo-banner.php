@@ -2,14 +2,13 @@
 
     <?php $options = array_merge(array(
         'minimal'         => false,
-        'small-container' => false,
-        'cta-modifiers'   => null
+        'small-container' => false
     ), $custom); ?>
     
     <!-- Promo Banner -->
     <?php if ($options['minimal']) { ?>
         <section class="section-secondary promo-banner text-center">
-            <a href="http://themeforest.net/user/skyux/portfolio" target="blank" class="button-white-border-size-4<?php echo '-'.$options['cta-modifiers'] ?>">
+            <a href="http://themeforest.net/user/skyux/portfolio" target="blank" class="button-white-border-size-4">
                 Get Kayzen Now
             </a>
         </section>
@@ -30,7 +29,7 @@
                         </header>
                     </div>
                     <div class="span va-middle text-right-desktop button_group">
-                        <a href="http://themeforest.net/user/skyux/portfolio" target="blank" class="button-white-border-size-3<?php echo '-'.$options['cta-modifiers'] ?>">Purchase Theme</a>
+                        <a href="http://themeforest.net/user/skyux/portfolio" target="blank" class="button-white-border-size-3">Purchase Theme</a>
                         <span class="text-sep">or</span>
                         <a href="<?php pageLink('further/about-us.php') ?>">Learn More</a>
                     </div>

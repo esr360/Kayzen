@@ -34,13 +34,6 @@
 			
 			_homepage2();
             
-            /*
-            recentArticles(array(
-                'item-link' => themeLink($theme, '/blog-single.php'),
-                'item-root' => themeLink($theme, '/blog.php')
-            ));
-            */
-            
             appFooter();
                     
         ?>

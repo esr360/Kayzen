@@ -12,9 +12,7 @@
             
     include (ROOT.'/sections/what-we-did.php');
             
-    projectSections(array(
-        'cta-modifiers' => '-oval' 
-    ));
+    projectSections();
     
     socialWidgets(array(
         'section' => 'section-primary-flush-dot-map container'

@@ -1,11 +1,18 @@
- <?php function recentArticles($custom = array()) { ?>
+ <?php function recentArticles($custom = array()) {
+     
+    if (theme == 'Kayzen') {
+        $itemLink = pageLink('blog/single.php', 'pages', false);
+        $itemRoot = pageLink('blog.php', 'pages', false);
+    } else {
+        $itemLink = themeLink(theme, '/blog-single.php');
+        $itemRoot = themeLink(theme, '/blog.php');
+    } 
 
-    <?php $options = array_merge(array(
-        'item-link' => pageLink('blog/single.php', 'pages', false),
-        'item-root' => pageLink('blog.php', 'pages', false),
-        'id' => null,
-        'cta-modifiers' => '-oval'
-    ), $custom); ?>
+    $options = array_merge(array(
+        'item-link' => $itemLink,
+        'item-root' => $itemRoot,
+        'id' => null
+    ), $custom) ?>
 
     <section class="section-primary" <?php if ($options['id']) echo 'id="'.$options['id'].'"' ?>>
         
@@ -27,7 +34,6 @@
                 
                     articleItem(array(
                         'title'         => 'Kayzen is Released',
-                        'cta-modifiers' => $options['cta-modifiers'],
                         'span'          => 4,
                         'author-thumb'  => 'team/team-1.jpg',
                         'widget'        => false,
@@ -38,7 +44,6 @@
                 
                     articleItem(array(
                         'title'         => 'Kayzen is Released',
-                        'cta-modifiers' => $options['cta-modifiers'],
                         'span'          => 4,
                         'author-thumb'  => 'team/team-2.jpg',
                         'widget'        => false,
@@ -49,7 +54,6 @@
                 
                     articleItem(array(
                         'title'         => 'Kayzen is Released',
-                        'cta-modifiers' => $options['cta-modifiers'],
                         'span'          => 4,
                         'author-thumb'  => 'team/team-3.jpg',
                         'widget'        => false,

@@ -29,7 +29,6 @@
                         articleItem(array(
                             'size'          => 'small',
                             'title'         => 'Kayzen is Released',
-                            'cta-modifiers' => '-oval',
                             'span'          => 4,
                             'class'         => 'break-4-half break-2-full relative',
                             'blurb'         => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis blandit lectus ex, id feugiat...'
@@ -38,7 +37,6 @@
                         articleItem(array(
                             'size'          => 'small',
                             'title'         => 'Kayzen is Released',
-                            'cta-modifiers' => '-oval',
                             'span'          => 4,
                             'class'         => 'break-4-half break-2-full relative',
                             'blurb'         => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis blandit lectus ex, id feugiat...'
@@ -47,7 +45,6 @@
                         articleItem(array(
                             'size'          => 'small',
                             'title'         => 'Kayzen is Released',
-                            'cta-modifiers' => '-oval',
                             'span'          => 4,
                             'class'         => 'min-break-4 relative',
                             'blurb'         => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis blandit lectus ex, id feugiat...'

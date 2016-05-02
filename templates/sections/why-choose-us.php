@@ -1,7 +1,6 @@
-<?php function whyChooseUs($custom = array()) { ?>
+<?php function whyChooseUs($custom = array()) {
 
-    <?php $options = array_merge(array( 
-        'cta-modifiers'   => null,
+    $options = array_merge(array(
         'title' => array(
             'content' => 'Why Choose Us',
             'modifiers' => 'heading-uppercase-light-brand-1-spaced-size-4',

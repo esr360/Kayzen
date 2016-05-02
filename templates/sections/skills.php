@@ -1,7 +1,6 @@
-<?php function skills($custom = array()) { ?>
+<?php function skills($custom = array()) {
 
-    <?php $options = array_merge(array(
-        'cta-modifiers'   => null,
+    $options = array_merge(array(
         'title' => array(
             'content' => 'Kayzen is the Best',
             'modifiers' => 'heading-heavy-size-5-uppercase font-2',
@@ -42,8 +41,8 @@
                         <li>Completely responsive & mobile optimized</li>
                     </ul>
                     <div class="button_group">
-                        <a href="#" class="button-primary<?php echo '-'.$options['cta-modifiers'] ?>">View Demo</a>
-                        <a href="http://themeforest.net/user/skyux/portfolio" target="blank" class="button-border-white<?php echo '-'.$options['cta-modifiers'] ?>">Purchase Theme</a>
+                        <a href="#" class="button-primary">View Demo</a>
+                        <a href="http://themeforest.net/user/skyux/portfolio" target="blank" class="button-border-white">Purchase Theme</a>
                     </div>
                 </div>
                 <hr class="hrule-stripes-large max-break-3" />

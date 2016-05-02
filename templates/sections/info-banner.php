@@ -1,8 +1,7 @@
-<?php function infoBanner($custom = array()) { ?>
+<?php function infoBanner($custom = array()) {
 
-    <?php $options = array_merge(array(
-        'color'         => 'brand', // 'brand' / 'light'
-        'cta-modifiers' => null
+    $options = array_merge(array(
+        'color'         => 'brand' // 'brand' / 'light'
     ), $custom); ?>
     
     <!-- Info Banner -->
@@ -28,17 +27,17 @@
                     <p class="lede">Be part of the next generation of website theming and give Kayzen a try today - build whatever you want with endless possibilities.</p>
                     <div class="button_group">
                         <?php if ($options['color'] == 'light') { ?>
-                            <a href="#" class="button-size-3<?php echo '-'.$options['cta-modifiers'] ?>">
+                            <a href="#" class="button-size-3">
                                 View Demo
                             </a>
-                            <a href="http://themeforest.net/user/skyux/portfolio" target="blank" class="button-primary-size-3<?php echo '-'.$options['cta-modifiers'] ?>">
+                            <a href="http://themeforest.net/user/skyux/portfolio" target="blank" class="button-primary-size-3">
                                 Purchase Theme
                             </a>
                         <?php } else { ?>
-                            <a href="#" target="blank" class="button-border-white-size-3<?php echo '-'.$options['cta-modifiers'] ?>">
+                            <a href="#" target="blank" class="button-border-white-size-3">
                                 View Demo
                             </a>
-                            <a href="http://themeforest.net/user/skyux/portfolio" target="blank" class="button-white-size-3<?php echo '-'.$options['cta-modifiers'] ?>">
+                            <a href="http://themeforest.net/user/skyux/portfolio" target="blank" class="button-white-size-3">
                                 Purchase Theme
                             </a>
                         <?php } ?>

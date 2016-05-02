@@ -1,100 +1,106 @@
-<?php function articleItem($custom = array()) { ?>
+<?php function articleItem($custom = array()) {
+          
+    if (theme == 'Kayzen') {
+        $itemLink = pageLink('blog/single.php', 'pages', false);
+        $itemRoot = pageLink('blog/classic/3-cols.php', 'pages', false);
+    } else {
+        $itemLink = themeLink(theme, '/blog-single.php');
+        $itemRoot = themeLink(theme, '/blog.php');
+    } 
 
-    <?php
-    
-        $options = array_merge(array(
-            
-            'type'          => 'blog',
-            'media'         => 'image',
-            'blurb'         => null,
-            'link'          => pageLink('blog/single.php', 'pages', false),
-            'root'          => pageLink('blog/classic/3-cols.php', 'pages', false),
-            'widget'        => true,
-            'matrix'        => false,
-            'class'         => null,
-            'size'          => null,
-            'height'        => null,
-            'span'          => null,
-            'disabled'      => false,
-            'ribbon'        => null,
-            'cta-modifiers' => null,
-            'author-thumb'  => false,
-            'thumb'         => rand(1, 25),
-            'thumbs'        => array(
-                rand(1, 25),
-                rand(1, 25),
-                rand(1, 25),
-            ),
-            'maskTitle'     => true,
-            'title'         => 'Lorem ipsum dolor sit amet',
-            'date'          => array('Sep', 23),
-            'category'      => 'HTML Themes',
-            'categories'    => array(
-                'HTML-theme',
-                'photography',
-                'logo'
-            ),
-            'videoSrc'      => 'https://player.vimeo.com/video/87701971',
-            'audioSrc'      => 'https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/205050090&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true',
-            'price'         => '$24.99',
-            'rating'        => '4'
-            
-        ), $custom);
+    $options = array_merge(array(
+        'type'          => 'blog',
+        'media'         => 'image',
+        'blurb'         => null,
+        'link'          => $itemLink,
+        'root'          => $itemRoot,
+        'widget'        => true,
+        'matrix'        => false,
+        'class'         => null,
+        'size'          => null,
+        'height'        => null,
+        'span'          => null,
+        'disabled'      => false,
+        'ribbon'        => null,
+        'author-thumb'  => false,
+        'thumb'         => rand(1, 25),
+        'thumbs'        => array(
+            rand(1, 25),
+            rand(1, 25),
+            rand(1, 25),
+        ),
+        'maskTitle'     => true,
+        'title'         => 'Lorem ipsum dolor sit amet',
+        'date'          => array('Sep', 23),
+        'category'      => 'HTML Themes',
+        'categories'    => array(
+            'HTML-theme',
+            'photography',
+            'logo'
+        ),
+        'videoSrc'      => 'https://player.vimeo.com/video/87701971',
+        'audioSrc'      => 'https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/205050090&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true',
+        'price'         => '$24.99',
+        'rating'        => '4'    
+    ), $custom);
         
-        /**
-         * Update the default link if type if 'portfolio'
-         */
-        if ($options['link'] === pageLink('blog/single.php', 'pages', false) && $options['type'] === 'portfolio') {
+    /**
+     * Update the default link if type if 'portfolio'
+     */
+    if ($options['link'] === $itemLink && $options['type'] === 'portfolio') {
+        if (theme == 'Kayzen') {
             $options['link'] = pageLink('portfolio/single.php', 'pages', false);
+        } else {
+            $options['link'] = themeLink(theme, '/portfolio-single.php');
+        } 
+    }
+    
+    /**
+     * Update the default root link if type if 'portfolio'
+     */
+    if ($options['root'] === $itemRoot && $options['type'] === 'portfolio') {
+        if (theme == 'Kayzen') {
+            $options['root'] = pageLink('portfolio/classic/3-cols.php', 'pages', false);
+        } else {
+            $options['root'] = themeLink(theme, '/portfolio.php');
+        } 
+    }
+    
+    /**
+     * Act as article?
+     */
+    $isArticle = $options['type'] === 'blog' || ($options['type'] === 'portfolio' && empty($options['span']));
+    
+    /**
+     * Generate main class
+     */
+    $class = '';
+    
+    if ($options['widget']) {
+        $class = 'widget';
+        if ($isArticle) {
+            $class = $class.'-article';
+        } else {
+            $class = $class.'-card';
         }
+    }
+    if (!empty($options['span'])) {
+        $class = $class.' span-'.$options['span'];
+    }
+    if ($options['disabled']) {
+        $class = $class.' disabled';
+    }
+    
+    /**
+     * Generate item data-attribute
+     */
         
-        /**
-         * Update the default root link if type if 'portfolio'
-         */
-        if ($options['root'] === pageLink('blog/classic/3-cols.php', 'pages', false) && $options['type'] === 'portfolio') {
-            $options['root'] = pageLink('portfolio/masonry/3-cols-filterable.php', 'pages', false);
-        }
-        
-        /**
-         * Act as article?
-         */
-         
-         $isArticle = $options['type'] === 'blog' || ($options['type'] === 'portfolio' && empty($options['span']));
-         
-        
-        /**
-         * Generate main class
-         */
-        
-        $class = '';
-        
-        if ($options['widget']) {
-            $class = 'widget';
-            if ($isArticle) {
-                $class = $class.'-article';
-            } else {
-                $class = $class.'-card';
-            }
-        }
-        if (!empty($options['span'])) {
-            $class = $class.' span-'.$options['span'];
-        }
-        if ($options['disabled']) {
-            $class = $class.' disabled';
-        }
-        
-        /**
-         * Generate item data-attribute
-         */
-         
-        $data = 'data-';
-        if ($options['type'] === 'blog') {
-            $data = $data.$options['media'];
-        } else if ($options['type'] === 'portfolio') {
-            $data = $data.$options['categories'][array_rand($options['categories'])];
-        }
-        
-    ?>
+    $data = 'data-';
+    if ($options['type'] === 'blog') {
+        $data = $data.$options['media'];
+    } else if ($options['type'] === 'portfolio') {
+        $data = $data.$options['categories'][array_rand($options['categories'])];
+    } ?>
 
     <article class="<?php echo $class.' '.$options['class'] ?>" <?php echo $data ?>>
 
@@ -284,12 +290,12 @@
                 <?php if ($options['size'] === 'small') { ?>
                     <h2 class="heading-heavy-size-4 font-2"><?php echo $options['title'] ?></h2>
                     <h3 class="heading-light-size-2">
-                        Posted in <a href="<?php $options['root'] ?>"><?php echo $options['category'] ?></a>
+                        Posted in <a href="<?php echo $options['root'] ?>"><?php echo $options['category'] ?></a>
                     </h3>
                 <?php } else { ?>
                     <h2 class="heading-heavy-size-5 font-2"><?php echo $options['title'] ?></h2>
                     <h3 class="heading-light">
-                        Posted in <a href="<?php $options['root'] ?>"><?php echo $options['category'] ?></a>
+                        Posted in <a href="<?php echo $options['root'] ?>"><?php echo $options['category'] ?></a>
                     </h3>
                 <?php } ?>
             </header>
@@ -319,9 +325,9 @@
                             <li>
                                 <ul class="list-tags">
                                     <li class="title">Tags:</li>
-                                    <li class="plain"><a href="<?php $options['root'] ?>">Web Design</a></li>
-                                    <li class="plain"><a href="<?php $options['root'] ?>">HTML</a></li>
-                                    <li class="plain"><a href="<?php $options['root'] ?>">CSS</a></li>
+                                    <li class="plain"><a href="<?php echo $options['root'] ?>">Web Design</a></li>
+                                    <li class="plain"><a href="<?php echo $options['root'] ?>">HTML</a></li>
+                                    <li class="plain"><a href="<?php echo $options['root'] ?>">CSS</a></li>
                                 </ul>
                             </li>
                         <?php } ?>
@@ -330,7 +336,7 @@
                 <div class="span va-middle text-right">
                     <a 
                         href="<?php echo $options['link'] ?>" 
-                        class="button-primary<?php echo '-'.$options['cta-modifiers']; if ($options['size'] === 'small') echo '-size-2' ?>"
+                        class="button-primary<?php if ($options['size'] === 'small') echo '-size-2' ?>"
                     >
                         Read More
                     </a>

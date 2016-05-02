@@ -1,8 +1,7 @@
- <?php function recentWork($custom = array()) { ?>
+ <?php function recentWork($custom = array()) {
 
-    <?php $options = array_merge(array(
+    $options = array_merge(array(
         'items'     => 3,
-        'item-link' => pageLink('blog/single.php', 'pages', false),
         'id' => null,
         'title' => array(
             'content' => 'Our Portfolio',
@@ -49,8 +48,7 @@
                             'type'      => 'portfolio',
                             'matrix'    => true,
                             'span'      => 4,
-                            'class'     => 'break-3-half break-2-full min-break-2',
-                            'link'      => $options['item-link']
+                            'class'     => 'break-3-half break-2-full min-break-2'
                         ));
                     } 
                     
@@ -60,8 +58,7 @@
                             'type'      => 'portfolio',
                             'matrix'    => true,
                             'span'      => 4,
-                            'class'     => 'break-3-half break-2-full',
-                            'link'      => $options['item-link']
+                            'class'     => 'break-3-half break-2-full'
                         ));
                     }
                     

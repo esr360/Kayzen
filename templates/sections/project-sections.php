@@ -1,8 +1,6 @@
-<?php function projectSections($custom = array()) { ?>
+<?php function projectSections($custom = array()) {
 
-    <?php $options = array_merge(array(
-        'cta-modifiers'   => null
-    ), $custom); ?>
+    $options = array_merge([], $custom); ?>
 
     <section class="section-secondary-mini">
         
@@ -16,8 +14,8 @@
                     </header>
                     <p>Lorem ipsum dolor sit amet, <b>consectetur adipiscing</b> elit. Vestibulum euismod nisi tincidunt mollis sagittis. Sed rutrum quam non tortor ornare, ut semper lorem pellentesque. <a href="#">Mauris bibendum</a> velit mi, in elementum ex consequat id. Sed consequat cursus sapien, <i>non consequat</i> odio pretium sit amet. Nulla at lorem hendrerit sapien vehicula tincidunt faucibus sit amet nunc. Sed rutrum quam non tortor ornare, ut semper lorem pellentesque.</p>
                     <div class="button_group">
-                        <a class="button-border-white<?php echo '-'.$options['cta-modifiers'] ?>" href="#">View Modules</a>
-                        <a class="button-white<?php echo '-'.$options['cta-modifiers'] ?>" href="#">Learn More</a>
+                        <a class="button-border-white" href="#">View Modules</a>
+                        <a class="button-white" href="#">Learn More</a>
                     </div>
                 </div>
                 <div class="span-4 va-middle text-center min-break-3">
@@ -48,8 +46,8 @@
                     <li>Etiam dapibus, nulla placerat</li>
                 </ul>
                 <div class="button_group">
-                    <a class="button-primary<?php echo '-'.$options['cta-modifiers'] ?>" href="#">View Modules</a>
-                    <a class="button<?php echo '-'.$options['cta-modifiers'] ?>" href="#">Learn More</a>
+                    <a class="button-primary" href="#">View Modules</a>
+                    <a class="button" href="#">Learn More</a>
                 </div>
             </div>
         </div>

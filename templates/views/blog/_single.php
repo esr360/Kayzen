@@ -25,7 +25,6 @@
                 articleItem(array(
                     'size'          => 'small',
                     'title'         => 'Kayzen is Released',
-                    'cta-modifiers' => '-oval',
                     'span'          => 4,
                     'class'         => 'break-4-half break-2-full relative'
                 ));
@@ -33,7 +32,6 @@
                 articleItem(array(
                     'size'          => 'small',
                     'title'         => 'Kayzen is Released',
-                    'cta-modifiers' => '-oval',
                     'span'          => 4,
                     'class'         => 'break-4-half break-2-full relative'
                 ));
@@ -41,7 +39,6 @@
                 articleItem(array(
                     'size'          => 'small',
                     'title'         => 'Kayzen is Released',
-                    'cta-modifiers' => '-oval',
                     'span'          => 4,
                     'class'         => 'min-break-4 relative'
                 ));

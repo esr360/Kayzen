@@ -49,7 +49,6 @@
             ));
     
             skills(array(
-                'cta-modifiers' => '-oval',
                 'title' => array(
                     'content' => 'Kayzen is the Best',
                     'modifiers' => 'heading-heavy-size-3-uppercase-highlight-dark font-2',
@@ -75,9 +74,7 @@
                 )
             ));
             
-            promoBanner(array(
-                'cta-modifiers' => '-oval'
-            ));
+            promoBanner();
             
             ourTeam(array(
                 'title' => array(
@@ -106,7 +103,6 @@
             ));
             
             promoSection(array(
-                'cta-modifiers' => '-oval',
                 'title' => array(
                     'content' => 'Kayzen is the Best',
                     'modifiers' => 'heading-heavy-size-3-uppercase-highlight-dark font-2',

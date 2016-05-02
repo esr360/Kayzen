@@ -131,7 +131,6 @@
         
                         articleItem(array(
                             'title'         => 'Kayzen is Released',
-                            'cta-modifiers' => '-oval',
                             'span'          => 6,
                             'author-thumb'  => 'team/team-1.jpg',
                             'widget'        => false,
@@ -140,7 +139,6 @@
                     
                         articleItem(array(
                             'title'         => 'Lorem Ipsum Dolor',
-                            'cta-modifiers' => '-oval',
                             'span'          => 6,
                             'author-thumb'  => 'team/team-2.jpg',
                             'widget'        => false,
