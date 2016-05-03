@@ -15,7 +15,7 @@ define('env', 'dev');
  * Set which theme you are using
  * @const theme
  */
-define('theme', 'Nexus');
+define('theme', 'Agenda');
 
 /**
  * Are you using multiple themes?

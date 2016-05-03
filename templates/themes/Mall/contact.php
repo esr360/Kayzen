@@ -30,10 +30,12 @@
                 )
             ));
 
-            billboard(array(
-                'title'    => $title,
+            billboard([
+                'title'    => [
+                    'text' => $title
+                ],
                 'tag-line' => $tagLine
-            ));
+            ]);
             
             contactUs(array(
                 'title' => array(

@@ -32,10 +32,12 @@
                 )
             ));
 
-            billboard(array(
-                'title'    => $title,
+            billboard([
+                'title'    => [
+                    'text' => $title
+                ],
                 'tag-line' => $tagLine
-            ));
+            ]);
 			
 			include (ROOT.'/views/further/_shop-category-sidebar.php');
             

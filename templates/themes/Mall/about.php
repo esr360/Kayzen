@@ -32,10 +32,12 @@
                 )
             ));
 
-            billboard(array(
-                'title'    => $title,
+            billboard([
+                'title'    => [
+                    'text' => $title
+                ],
                 'tag-line' => $tagLine
-            ));
+            ]);
             
             earthSlider(array(
                 'title' => array(

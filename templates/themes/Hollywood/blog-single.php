@@ -32,7 +32,9 @@
             ]);
 
             billboard([
-                'title'    => $title,
+                'title'    => [
+                    'text' => $title
+                ],
                 'tag-line' => $tagLine
             ]);
             

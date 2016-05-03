@@ -33,10 +33,12 @@
                 )
             ));
 
-            billboard(array(
-                'title'    => $title,
+            billboard([
+                'title'    => [
+                    'text' => $title
+                ],
                 'tag-line' => $tagLine
-            ));
+            ]);
             
             include (ROOT.'/views/portfolio/_single.php');
         

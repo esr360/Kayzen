@@ -31,10 +31,12 @@
                 )
             ));
 
-            billboard(array(
-                'title'    => $title,
+            billboard([
+                'title'    => [
+                    'text' => $title
+                ],
                 'tag-line' => $tagLine
-            ));
+            ]);
             
             include (ROOT.'/views/blog/masonry/_3-cols.php');
             
