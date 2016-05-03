@@ -320,7 +320,7 @@
                 right: 0;
                 margin: auto;
                 transform: scale(0) translateY(-50%);
-                @media (max-width: breakpoint('break-2')) {
+                @media (max-width: breakpoint('break-3')) {
                     top: 50%;
                 }
                 @include overwrite('button', $special: 'adjacent-sibling') {
@@ -330,7 +330,7 @@
                     bottom: 0;
                     background: rgba(black, 0.4);
                     font-weight: bold;
-                    @media (max-width: breakpoint('break-2')) {
+                    @media (max-width: breakpoint('break-3')) {
                         display: none;
                     }
                 }
@@ -360,11 +360,11 @@
             left: 0;
             right: 0;
             margin: auto;
-            @media (max-width: breakpoint('break-2')) {
+            @media (max-width: breakpoint('break-3')) {
                 top: 50%;
             }
             @include modifier('small') {
-                @media (min-width: breakpoint('break-2')) {
+                @media (min-width: breakpoint('break-3')) {
                     top: calc(50% - 1.2rem);
                 }
             }
