@@ -2,7 +2,10 @@
 
     $options = array_replace_recursive([
         'billboard' => [
-            'type' => 'homepage'
+            'type' => 'homepage',
+            'headline' => [
+                'text' => '<span>Kayzen</span>'
+            ]
         ],
         'keyFeatures' => [],
         'promoBanner[1]' => [],

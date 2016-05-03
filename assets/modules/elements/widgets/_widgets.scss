@@ -32,7 +32,8 @@
         'tub-color'                      : color('greyscale', 'white'),
         'tub-background'                 : rgba(black, 0.4),
         'feature-padding'                : 15% 2em 2em,
-        'icon-color'                     : color('greyscale', 'grey-3')
+        'icon-color'                     : color('greyscale', 'grey-3'),
+        'targeted-icon-visibility'       : (breakpoint('break-3'), breakpoint('break-5'))
     ), $custom);
 
     //-------------------------------------------------------------
@@ -500,7 +501,7 @@
             }
             #mobile-optimized &,
             #why-choose-us & {
-                @media (min-width: breakpoint('break-3')) and (max-width: breakpoint('break-5')) {
+                @media (min-width: nth(this('targeted-icon-visibility'), 1)) and (max-width: nth(this('targeted-icon-visibility'), 2)) {
                     display: none;
                 }
             }

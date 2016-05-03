@@ -30,7 +30,8 @@
             'enabled'          : false,
             'width'            : 350px,
             'container-width'  : 100%,
-            'show-y-scrollbar' : false
+            'show-y-scrollbar' : false,
+            'visible-at'       : breakpoint('break-5')
         ),
         'sticky'               : (
             'enabled'          : false,
@@ -113,7 +114,7 @@
             }
             
             @include value($value: 'left') {
-                @media (min-width: breakpoint('break-4')) {
+                @media (min-width: this('side', 'visible-at')) {
                     left: 0;
                     right: auto;
                     ~ #site-content {
@@ -133,7 +134,7 @@
             }
             
             @include value($value: 'right') {
-                @media (min-width: breakpoint('break-4')) {
+                @media (min-width: this('side', 'visible-at')) {
                     right: 0;
                     left: auto;
                     ~ #site-content {

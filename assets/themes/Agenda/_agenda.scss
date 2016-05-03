@@ -57,7 +57,10 @@
 	@include thumbnails;
 	@include tooltips;
 	@include wells;
-	@include widgets;
+	
+	@include widgets((
+        'targeted-icon-visibility' : (breakpoint('break-3'), 1650px)
+	));
 
 //-----------------------------------------------------------------
 // Objects
