@@ -23,12 +23,12 @@
                 'modifiers' => 'bar-absolute-dark-sticky'
             ));
 
-            billboard(array(
+            billboard([
                 'modifiers' => 'full-screen',
                 'headline'  => 'Coming Soon',
                 'title'     => $title,
                 'countdown' => true
-            ));
+            ]);
             
             appFooter(); 
         

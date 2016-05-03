@@ -23,9 +23,9 @@
                 'modifiers' => 'bar-absolute-dark-sticky'
             ));
 
-            billboard(array(
+            billboard([
                 'type'    => 'videoBg'
-            ));
+            ]);
 			
 			include (ROOT.'/views/further/_about-us-2.php');
             

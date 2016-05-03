@@ -23,10 +23,12 @@
 				'modifiers' => 'bar-absolute-dark-sticky'
 			));
 
-			billboard(array(
-				'title'    => $title,
-				'tag-line' => $tagLine
-			));
+            billboard([
+                'title'    => [
+                    'text' => $title
+                ],
+                'tag-line' => $tagLine
+            ]);
 			
 			include (ROOT.'/views/further/_services-2.php');
 		

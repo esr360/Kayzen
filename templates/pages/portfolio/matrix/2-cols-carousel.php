@@ -23,10 +23,12 @@
                 'modifiers' => 'bar-absolute-dark-sticky'
             ));
 
-            billboard(array(
-                'title'    => $title,
+            billboard([
+                'title'    => [
+                    'text' => $title
+                ],
                 'tag-line' => $tagLine
-            ));
+            ]);
             
             include (ROOT.'/views/portfolio/matrix/_2-cols-carousel.php');
         

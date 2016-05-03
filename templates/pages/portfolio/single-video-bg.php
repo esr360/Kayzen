@@ -21,9 +21,9 @@
                 'modifiers' => 'bar-absolute-sticky'
             ));
             
-            billboard(array(
+            billboard([
                 'type' => 'videoBg'
-            ));
+            ]);
             
             include (ROOT.'/views/portfolio/_single-video-bg.php');
             

@@ -23,12 +23,14 @@
                 'modifiers' => 'bar-absolute-dark-sticky'
             ));
 
-            billboard(array(
+            billboard([
                 'modifiers' => 'full-screen',
                 'headline'  => '404',
-                'title'     => $title,
+                'title'     => [
+                    'text'  => $title
+                ],
                 'search'    => true
-            ));
+            ]);
             
             appFooter(); 
         

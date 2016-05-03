@@ -23,10 +23,12 @@
                 'modifiers' => 'bar-absolute-dark-sticky'
             ));
 
-            billboard(array(
-                'title'    => $title,
+            billboard([
+                'title'    => [
+                    'text' => $title
+                ],
                 'tag-line' => $tagLine
-            ));
+            ]);
             
             include (ROOT.'/views/blog/classic/_3-cols-infinite-scroll.php');
         

@@ -22,9 +22,11 @@
                 'modifiers' => 'bar-absolute-dark-sticky'
             ));
 
-            billboard(array(
-                'title'    => $title
-            ));
+            billboard([
+                'title'    => [
+                    'text' => $title
+                ]
+            ]);
             
         ?>
 		
@@ -809,10 +811,12 @@ billboard();
                 <p>You can pass custom options to the function like so:</p>  
                                         
 <pre data-enlighter-language="php" class="EnlighterJSRAW">
-billboard(array(
-    'title'    => 'My Billboard',
+billboard([
+    'title'    => [
+        'text' => 'My Title'
+    ],
     'tag-line' => 'My Tagline'
-));
+]);
 </pre> 
                 
                 <h3 class="heading-size-4" id="building-kayzen">Sections</h3>
@@ -899,10 +903,12 @@ clients(array(
                 ));
 
                 &lt;!-- Billboard Module -->
-                billboard(array(
-                    'title'    => $title,
+                billboard([
+                    'title'    => [
+                        'text' => $title
+                    ],
                     'tag-line' => $tagLine
-                ));
+                ]);
             
             ?>&lt;!-- end php -->
                 
