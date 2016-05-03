@@ -31,7 +31,7 @@
                             <h3 class="heading-size-2-light-uppercase">Shares</h3>
                         </header>
                     </div>
-                    <div class="button-block relative font-2">Facebook</div>
+                    <div class="button-block-acute relative font-2">Facebook</div>
                 </a>
             <?php } ?>
             
@@ -49,7 +49,7 @@
                             <h3 class="heading-size-2-light-uppercase">Shares</h3>
                         </header>
                     </div>
-                    <div class="button-block relative font-2">Twitter</div>
+                    <div class="button-block-acute relative font-2">Twitter</div>
                 </a>
             <?php } ?>
             
@@ -67,7 +67,7 @@
                             <h3 class="heading-size-2-light-uppercase">Shares</h3>
                         </header>
                     </div>
-                    <div class="button-block relative font-2">Google Plus</div>
+                    <div class="button-block-acute relative font-2">Google Plus</div>
                 </a>
             <?php } ?>
             
@@ -85,7 +85,7 @@
                             <h3 class="heading-size-2-light-uppercase">Shares</h3>
                         </header>
                     </div>
-                    <div class="button-block relative font-2">LinkedIn</div>
+                    <div class="button-block-acute relative font-2">LinkedIn</div>
                 </a>
             <?php } ?>
             
@@ -103,7 +103,7 @@
                             <h3 class="heading-size-2-light-uppercase">Views</h3>
                         </header>
                     </div>
-                    <div class="button-block relative font-2">StumbleUpon</div>
+                    <div class="button-block-acute relative font-2">StumbleUpon</div>
                 </a>
             <?php } ?>
             
@@ -121,7 +121,7 @@
                             <h3 class="heading-size-2-light-uppercase">Shares</h3>
                         </header>
                     </div>
-                    <div class="button-block relative font-2">Pinterest</div>
+                    <div class="button-block-acute relative font-2">Pinterest</div>
                 </a>
             <?php } ?>
             
@@ -139,7 +139,7 @@
                             <h3 class="heading-size-2-light-uppercase">Shares</h3>
                         </header>
                     </div>
-                    <div class="button-block relative font-2">Reddit</div>
+                    <div class="button-block-acute relative font-2">Reddit</div>
                 </a>
             <?php } ?>
             

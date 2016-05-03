@@ -45,7 +45,7 @@
                                 
                                 <form class="form-fauxPlaceholders">
                                     <div class="form_group-small">
-                                        <button type="submit" class="button-icon-primary-size-3"><i class="fa fa-thumbs-o-up"></i></button>
+                                        <button type="submit" class="button-icon-primary-size-3-acute"><i class="fa fa-thumbs-o-up"></i></button>
                                         <input type="text" class="form_input-plain" id="footer-newsletter" placeholder="Ex: help@kayzen.com" required="">
                                         <label for="footer-newsletter">Email Address</label>
                                     </div>

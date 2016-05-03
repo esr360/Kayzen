@@ -30,7 +30,11 @@
 	@include accordions;
 	@include alert-bars;
 	@include blockquotes;
-	@include buttons;
+	
+	@include buttons((
+		'modifiers' : ('oval')
+	));
+	
 	@include carousels;
 	@include corner-ribbons;
 	@include forms;

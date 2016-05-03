@@ -21,7 +21,8 @@
         'fat-height'       : 2.8,
         'thin-height'      : 2,
         'group-spacing'    : 0.5em,
-        'group-stack'      : 'break-1'
+        'group-stack'      : 'break-1',
+        'modifiers'        : ()
     ), $custom);
 
     //-------------------------------------------------------------
@@ -55,6 +56,11 @@
         &:focus {
             outline: 0;
         }
+
+    // Default Modifiers
+    //-------------------------------------------------------------
+    
+        @include extend(this('modifiers'));
 
     // Sizes
     //-------------------------------------------------------------
@@ -115,6 +121,10 @@
 
         @include modifiers(('oval', 'circle')) {
             border-radius: 1.5em;
+        }
+
+        @include modifier('acute') {
+            border-radius: 0;
         }
         
         @include modifier('fat') {
