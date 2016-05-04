@@ -20,9 +20,6 @@
 	<i class="fa fa-angle-up"></i>
 </a>
 
-<!-- Flyout Nav -->
-<div id="flyout"></div>
-
 <!-- Site Overlay -->
 <div class="site-overlay" id="site-overlay"></div>
 

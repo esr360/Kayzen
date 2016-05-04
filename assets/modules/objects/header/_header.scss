@@ -93,9 +93,6 @@
 
         @include option('side') {
             
-            // Side Navigation
-            @extend #{$side-nav-selector};
-            
             width: this('side', 'width');
             left: -#{this('side', 'width')};
             
