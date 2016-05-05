@@ -20,6 +20,7 @@
 		<?php 
 
             appHeader([
+                'modifiers' => ' side-nav',
                 'nav-links'  => [
                     'About' => '#s-about',
                     'Services' => '#s-services',

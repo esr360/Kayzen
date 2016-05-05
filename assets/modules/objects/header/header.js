@@ -72,8 +72,8 @@
                     return (css.match (/(^|\s)navigation\S+/g) || []).join(' ');
                 }).addClass('app-header_side-nav');
                 
-                // add collapsible functionality
-                if (_option('side-nav', 'collapsible')) {
+                // add collapsible functionality to nav menus
+                if (_modules['side-nav']['collapsible']['enabled']) {
                     
                     // create open/close icon
                     var openClose = '<i class="side-nav_openClose fa ' + options.openCloseIcon + '"></i>';
