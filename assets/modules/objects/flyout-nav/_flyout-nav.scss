@@ -2,8 +2,6 @@
 // Flyout Navigation
 //=================================================================
 
-@import "flyout-trigger";
-
 @mixin flyout-nav($custom: ()) {
 
     //-------------------------------------------------------------
@@ -14,16 +12,18 @@
         'name'                : 'flyout-nav',
         'output-JSON'         : true,
         // Options
-        'width'               : option($side-nav, 'width'),
-        'font-size'           : font-size('base'),
+        'width'               : option($header, 'side', 'width'),
+        'font-size'           : option($header, 'side', 'font-size'),
+        'background'          : color('greyscale', 'grey-5'),
         'box-shadow'          : 1px 0 25px 0px rgba(black, 0.4),
+        'transition'          : base('transition'),
         // Settings
         'collapsible'         : (
             'enabled'         : true,
             'open-by-default' : true
         ),
         'show-y-scrollbar'    : false,
-        'z-index'             : 12
+        'z-index'             : 13
     ), $custom);
 
     //-------------------------------------------------------------
@@ -31,17 +31,23 @@
     //-------------------------------------------------------------
 
     @include module {
-
-        // Side Navigation
-        @extend #{$side-nav-selector};
         
+        position: fixed;
+        height: 100%;
+        transition: base('transition');
+        background: this('background');
+        width: this('width');
         font-size: this('font-size');
         left: -#{this(width)};
         box-shadow: this('box-shadow');
         z-index: this('z-index');
         
+        ul {
+            display: block !important;
+        }
+        
         // Reveal the flyout navigation
-        .flyout-active & {
+        @include modifier('visible') {
             left: 0;
         }
         
@@ -55,7 +61,7 @@
 
     // site-overlay
     .flyout_visible {
-        z-index: 13 !important;
+        z-index: (this('z-index') + 1) !important;
     }
 
 } // mixin flyout-nav()

@@ -12,22 +12,30 @@
 
 <body>
     
-    <?php preloader() ?>
+    <?php 
+        
+        preloader();
+
+        appHeader([
+            'class' => 'side-nav',
+            'nav-links'  => [
+                'About' => '#s-about',
+                'Services' => '#s-services',
+                'Portfolio' => '#s-portfolio',
+                'Blog' => '#s-blog',
+                'Contact' => '#s-contact'
+            ]
+        ]);
+        
+    ?>
 
     <!-- Site Canvas -->
     <div id="site-content">
 		
 		<?php 
-
-            appHeader([
-                'modifiers' => ' side-nav',
-                'nav-links'  => [
-                    'About' => '#s-about',
-                    'Services' => '#s-services',
-                    'Portfolio' => '#s-portfolio',
-                    'Blog' => '#s-blog',
-                    'Contact' => '#s-contact'
-                ]
+        
+            topbar([
+                'side-header' => true
             ]);
             
 			_homepage2([

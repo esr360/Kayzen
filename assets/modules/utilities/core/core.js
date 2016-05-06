@@ -10,7 +10,11 @@ window['baseTransition'] = _modules['base']['transition'].slice(0,-1) * 1000;
 
 // Get breakpoint value
 function breakpoint(media, value) {
-    return window.matchMedia('(' + media + ':' + _modules['grid']['breakpoints'][value] + ')').matches;
+    if (value.indexOf('break') == 0) {
+        return window.matchMedia('(' + media + ':' + _modules['grid']['breakpoints'][value] + ')').matches;
+    } else {
+        return window.matchMedia('(' + media + ':' + value + ')').matches;
+    }
 }
 
 $(document).ready(function() {

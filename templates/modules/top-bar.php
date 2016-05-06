@@ -6,7 +6,7 @@
             'facebook', 'twitter', 'dribbble', 'google-plus'
         ),
         'side-header'    => false,
-        'flyout-trigger' => false
+        'flyout-trigger' => true
     ), $custom); ?>
     
     <!-- Login Box -->
@@ -202,14 +202,14 @@
                                 </ul>
                             </li>
                             <?php if ($options['side-header']) { ?>
-                                <li class="min-break-4">
-                                    <a href="#" id="toggleHeader">
+                                <li class="min-break-5">
+                                    <a class="top-bar_nav_action" href="#" id="toggleHeader">
                                         <i class="fa fa-bars"></i>
                                     </a>
                                 </li>
                             <?php } if ($options['flyout-trigger']) { ?>
                                 <li class="max-break-4">
-                                    <a href="#" id="flyout-trigger">
+                                    <a class="top-bar_nav_action" href="#" id="flyout-trigger">
                                         <i class="fa fa-bars"></i>
                                     </a>
                                 </li>

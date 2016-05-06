@@ -28,10 +28,14 @@
         ),
         'side'                 : (
             'enabled'          : false,
+            'show-y-scrollbar' : false,
+            'font-size'        : font-size('size-2'),
+            'transition'       : base('transition'),
+            'z-index'          : 10,
             'width'            : 350px,
             'container-width'  : 100%,
-            'show-y-scrollbar' : false,
-            'visible-at'       : breakpoint('break-5')
+            'visible-at'       : breakpoint('break-5'),
+            'logo-padding'     : 0.75em
         ),
         'sticky'               : (
             'enabled'          : false,
@@ -52,10 +56,7 @@
     //-------------------------------------------------------------
 
         font-size: this('font-size');
-        
-        @if not this('side', 'enabled') {
-            background: this('background');
-        }
+        background: this('background');
         
         @if this('fixed') {
             margin-top: this('height');
@@ -93,63 +94,81 @@
 
         @include option('side') {
             
-            width: this('side', 'width');
-            left: -#{this('side', 'width')};
-            
-            @include overwrite('container') {
-                max-width: this('side', 'container-width');
-            }
-            
-            @include overwrite(('logo', 'navigation')) {
-                display: block;
-            }
-            
-            @include overwrite('logo') {
-                img {
-                    height: this('sticky', 'logo-height');
+            @media (min-width: this('side', 'visible-at')) {
+
+                position: fixed;
+                height: 100%;
+                top: 0;
+                overflow: auto;
+                transform: translate3d(0,0,0);
+                
+                font-size: this('side', 'font-size');
+                transition: this('side', 'transition');
+                z-index: this('side', 'z-index');   
+                width: this('side', 'width');
+                left: -#{this('side', 'width')};
+                
+                @include overwrite('container') {
+                    max-width: this('side', 'container-width');
                 }
-            }
-            
-            @include value($value: 'left') {
-                @media (min-width: this('side', 'visible-at')) {
+                
+                @include overwrite('logo') {
+                    img {
+                        height: this('sticky', 'logo-height');
+                    }
+                }
+                
+                @include value($value: 'left') {
                     left: 0;
                     right: auto;
-                    ~ #site-content {
-                        margin-left: this('side', 'width');
-                        @include overwrite('top-bar', $is: 'fixed') {
-                            width: calc(100% - #{this('side', 'width')});
-                        }
-                        @if option($top-bar, 'fixed') {
-                            width: calc(100% - #{this('side', 'width')});
-                        }
-                    }
-                    ~ .search-box {
-                        width: calc(100% - #{this('side', 'width')});
-                        right: 0;
-                    }
                 }
-            }
-            
-            @include value($value: 'right') {
-                @media (min-width: this('side', 'visible-at')) {
+                
+                @include value($value: 'right') {
                     right: 0;
                     left: auto;
-                    ~ #site-content {
-                        margin-right: this('side', 'width');
+                }
+                
+                // Always show vertical scrollbars
+                @include value($setting: 'show-y-scrollbar') {
+                    overflow-y: scroll;
+                }
+        
+                ~ #site-content {
+                    margin-#{this('side', 'enabled')}: option($header, 'side', 'width');
+                    @include overwrite('top-bar', $is: 'fixed') {
+                        width: calc(100% - #{option($header, 'side', 'width')});
                     }
-                    ~ .search-box {
-                        width: calc(100% - #{this('side', 'width')});
-                        left: 0;
+                    @if option($top-bar, 'fixed') {
+                        width: calc(100% - #{option($header, 'side', 'width')});
+                    }
+                }
+                
+                ~ .search-box {
+                    width: calc(100% - #{option($header, 'side', 'width')});
+                    right: 0;
+                }
+                
+                @include overwrite('logo') {
+                    padding: this('side', 'logo-padding');
+                }
+            
+            }// media query
+            
+            // Toggle Side Header
+            @at-root .hide-sideHeader & {
+                #{this('side', 'enabled')}: -#{this('side', 'width')};
+                ~ #site-content {
+                    margin-#{this('side', 'enabled')}: 0;
+                    @include overwrite('top-bar', $is: 'fixed') {
+                        width: 100%;
+                    }
+                    @if option($top-bar, 'fixed') {
+                        width: 100%;
                     }
                 }
             }
             
-            // Always show vertical scrollbars
-            @include value($setting: 'show-y-scrollbar') {
-                overflow-y: scroll;
-            }
-            
-        } // setting('side')
+        } // option('side')
         
         // Dark Header
         //---------------------------------------------------------
@@ -197,21 +216,5 @@
         }
         
     } // module
-    
-    // Hide the header when body had special class
-    .toggleHeader {
-        #site-content {
-            margin-left: 0;
-        }
-        @include overwrite('top-bar') {
-            width: 100% !important;
-        }
-        @include overwrite('app-header') {
-            left: -#{option($header, 'side', 'width')};
-        }
-        .search-box {
-            width: 100%;
-        }
-    }
 
 } // @mixin header

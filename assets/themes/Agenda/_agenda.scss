@@ -68,23 +68,20 @@
 
 	@include top-bar;
 	@include breadcrumb;
-	@include side-nav;
 	@include countdown;
 	@include earth-slider;
 	@include footer;
 	@include google-map;
 	
 	@include header((
-		'background'     : transparent,
+		'background'     : color('greyscale', 'grey-5'),
 		'font-size'      : 0.9em,
         'side'           : (
             'enabled'    : left
         )
 	));
 	
-	@include logo((
-        'padding' : 0.75em
-    ));
+	@include logo;
 	
 	@include navigation((
 		'link-color'   : color('greyscale', 'white'),
@@ -92,6 +89,7 @@
         'item-padding' : 0.5rem 1rem
 	));
 	
+	@include flyout-nav;
 	@include mega-menu;
 	@include dropdown;
 	@include page-overview;
@@ -100,6 +98,7 @@
 	@include search;
 	@include scroll-wheel;
 	@include sidebar;
+	@include side-nav;
 	@include site-overlay;
 	@include twitter-feed;
 	

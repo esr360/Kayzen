@@ -1,7 +1,9 @@
 <?php function navigation($custom = array()) {
 
     $options = array_merge(array(
-        'pages' => null
+        'pages'           => null,
+        'modifiers'       => null,
+        'flyout-trigger'  => true
     ), $custom);
     
     function navThemeItem($custom = array()) {
@@ -45,19 +47,35 @@
     <?php } if ($options['pages']) { ?>
 
         <!-- Navigation -->
-        <nav class="navigation-no-icons min-break-4" id="app-nav">
-            <ul>
+        <nav 
+            class="navigation<?php if ($options['modifiers']) echo '-'.$options['modifiers'] ?>" 
+            id="app-nav"
+        >
+            <ul class="min-break-4">
                 <?php foreach ($options['pages'] as $page => $url) { ?>
                     <li><a href="<?php echo $url ?>"><?php echo $page ?></a></li>
                 <?php } ?>
             </ul>
+            <?php if ($options['flyout-trigger']) { ?>
+                <!-- Flyout Nav Trigger -->
+                <ul class="max-break-4">
+                    <li>
+                        <span class="button-icon-border-white flyout-trigger" id="flyout-trigger">
+                            <i class="fa fa-bars"></i>
+                        </span>
+                    </li>
+                </ul>
+            <?php } ?>
         </nav>
                 
     <?php } else { ?>
 
         <!-- Navigation -->
-        <nav class="navigation-no-icons min-break-4" id="app-nav">
-            <ul>
+        <nav 
+            class="navigation<?php if ($options['modifiers']) echo '-'.$options['modifiers'] ?>" 
+            id="app-nav"
+        >
+            <ul class="min-break-4">
                 <li class="active"><a href="<?php pageLink('homepages/homepage-1.php') ?>"><i class="navigation_icon fa fa-home"></i> Home</a></li>
                 <li>
                     <a href="<?php pageLink('demos.php') ?>"><i class="navigation_icon fa fa-home"></i> Demos</a>
@@ -500,6 +518,16 @@
                     </ul>
                 </li>
             </ul>
+            <?php if ($options['flyout-trigger']) { ?>
+                <!-- Flyout Nav Trigger -->
+                <ul class="max-break-4">
+                    <li>
+                        <span class="button-icon-border-white flyout-trigger" id="flyout-trigger">
+                            <i class="fa fa-bars"></i>
+                        </span>
+                    </li>
+                </ul>
+            <?php } ?>
         </nav>
 
     <?php } ?>

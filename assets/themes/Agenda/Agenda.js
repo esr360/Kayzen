@@ -61,6 +61,8 @@ $(document).ready(function() {
     $('#google-map').googleMap();
 
     $(_footer).footer();
+
+    $(_navigation).flyoutNav();
     
     $(_appHeader).header({
         navigation : '#app-nav'

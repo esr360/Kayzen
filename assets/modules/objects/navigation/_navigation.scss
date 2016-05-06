@@ -37,7 +37,7 @@
     // Settings
     //-------------------------------------------------------------
 
-        'no-icons'                : false
+        'no-icons'                 : false
         
     ), $custom) !global;
 
@@ -51,6 +51,7 @@
     //-------------------------------------------------------------
         
         font-size: this('font-size');
+        text-align: this('text-align');
         
         // all levels
         li {    
@@ -73,7 +74,6 @@
         > ul {
 
             @extend %list-reset;
-            display: none; // hide by default for small resolutions
             vertical-align: middle;
 
             > li {
@@ -130,7 +130,6 @@
 
         // Larger Resolutions
         @media (min-width: breakpoint('break-3')) {
-            text-align: this('text-align');
             > ul {
                 display: inline-block;
                 > li {

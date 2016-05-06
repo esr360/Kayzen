@@ -67,11 +67,6 @@
                     header.prependTo('body');
                 }
                 
-                // replace navigation class
-                $(_navigation).removeClass (function (index, css) {
-                    return (css.match (/(^|\s)navigation\S+/g) || []).join(' ');
-                }).addClass('app-header_side-nav');
-                
                 // add collapsible functionality to nav menus
                 if (_modules['side-nav']['collapsible']['enabled']) {
                     
@@ -98,13 +93,23 @@
                     $('.app-header_side-nav').find('a:not(:only-child) ~ ul').hide();
                 }
                 
+                // toggle side header
                 $(options.toggleHeader).click(function(e) {
-                   $('body').toggleClass('toggleHeader');
+                    $('body').toggleClass('hide-sideHeader');
                    // reload any google maps
                    setTimeout(function() {
                        google.maps.event.trigger($('#google-map')[0], 'resize');
                    }, baseTransition); 
                    e.preventDefault();
+                });
+                
+                // set correct navigation styles
+                $(window).bind("load resize", function() {
+                    if (breakpoint('min-width', _modules['app-header']['side']['visible-at'])) {
+                        header.addClass('side-nav');
+                    } else {
+                        header.removeClass('side-nav');
+                    }
                 });
                 
             }

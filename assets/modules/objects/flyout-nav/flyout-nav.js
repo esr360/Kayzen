@@ -13,47 +13,31 @@
         
         // Options
         var options = $.extend({
-            
             menu    : '#app-nav > ul',
             trigger : '#flyout-trigger',
             overlay : '#site-overlay'
-            
         }, custom);
         
         // Run the code on each occurance of the element
         return this.each(function() {
-    
-            // Add the module class to receive appropriate styles
-            $(this).addClass('flyout-nav');
             
-            $(this).append('<nav class="side-nav"></nav>');
-
-            var flyoutSideNav = $(this).find(_sideNav);
+            var flyoutContainer = $(this)
+                .clone()
+                .prependTo('body')
+                .removeAttr('id')
+                .wrap('<div class="flyout-nav side-nav"></div>');
+                
+            flyoutContainer = flyoutContainer.parent();
+            
+            // remove the trigger icon
+            flyoutContainer.find(options.trigger).parents('ul').remove();
             
             // Function to create the flyout-nav based off existing elements
             function createFlyoutNav() {
-        
-                // Clone the main nav into the flyout nav container
-                $(options.menu).clone().appendTo(flyoutSideNav);
                 
                 // Add collapsible functionality
                 if (_option('flyout-nav', 'collapsible')) {
-            
-                    // Create open/close icon
-                    var openClose = '<i class="side-nav_openClose fa ' + _modules['side-nav']['collapsible']['icon'] + '"></i>';
-                    
-                    // Add icon to appropriate menu items
-                    $(_flyoutNav).find('a:not(:only-child)').prepend(openClose);
-                
-                    // Remove icon from any mega-menu items
-                    $(_flyoutNav).find('li > [class*="mega-menu"]').parent().find('.side-nav_openClose').remove();
-                        
-                    // Hide/show child menus
-                    $(_flyoutNav).on('click', '.side-nav_openClose', function(e){
-                        $(this).parent().find('+ ul').slideToggle(baseTransition);
-                        return false;
-                    });
-                    
+                    flyoutContainer.navDropdown();
                 } else {
                     $(_flyoutNav).find('.side-nav_openClose').remove();
                 }
@@ -69,13 +53,13 @@
             
             // Open the flyout nav
             function openFlyoutNav() {
-                $('body').addClass('flyout-active');
+                flyoutContainer.addClass('flyout-nav-visible');
                 $(options.trigger).addClass('active');
             }
             
             // Close the flyout nav
             function closeFlyoutNav() {
-                $('body').removeClass('flyout-active');
+                flyoutContainer.removeClass('flyout-nav-visible');
                 $(options.trigger).removeClass('active');
             }
             
@@ -83,8 +67,8 @@
             $(createFlyoutNav);
             
             // Toggle the flyout nav on trigger click
-            $(options.trigger).click(function() {
-                if ($('body').hasClass('flyout-active')) {
+            $('body').on('click', options.trigger, function () {
+                if (flyoutContainer.hasClass('flyout-nav-active')) {
                     closeFlyoutNav();
                     $(options.overlay).siteOverlay('hide', 'flyout');
                 } else {
@@ -93,7 +77,6 @@
                         selfClose : true
                     });
                 }
-                return false;
             });
             
             // Close the flyout nav when the overlay is clicked

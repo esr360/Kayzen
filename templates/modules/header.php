@@ -1,19 +1,24 @@
 <?php function appHeader($custom = array()) { ?>
 
     <?php $options = array_merge(array(
+        'module'         => 'app-header',
+        'class'          => null,
         'modifiers'      => null,
-        'nav-links'      => null,
-        'flyout-trigger' => true
+        'nav-links'      => null
     ), $custom); ?>
     
     <header 
-        class="app-header<?php echo '-'.$options['modifiers'] ?>" 
-        id="app-header"
+        class="<?php 
+            echo $options['module'];
+            if ($options['modifiers']) echo '-'.$options['modifiers']; 
+            if ($options['class']) echo ' '.$options['class'];
+        ?>" 
+        id="<?php echo $options['module'] ?>"
     >
                 
         <div class="container">
             
-            <div class="app-header_wrapper">
+            <div class="<?php echo $options['module'] ?>_wrapper">
     
                 <!-- Logo -->
                 <div class="logo">
@@ -23,13 +28,6 @@
                 <?php navigation(array(
                     'pages' => $options['nav-links']
                 )) ?>
-                
-                <?php if ($options['flyout-trigger']) { ?>
-                    <!-- Flyout Nav Trigger -->
-                    <span class="button-icon-border-white flyout-trigger max-break-4" id="flyout-trigger">
-                        <i class="fa fa-bars"></i>
-                    </span>
-                <?php } ?>
                 
             </div><!-- Header Wrapper -->
             
