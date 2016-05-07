@@ -17,13 +17,13 @@
         'background'          : color('greyscale', 'grey-5'),
         'box-shadow'          : 1px 0 25px 0px rgba(black, 0.4),
         'transition'          : base('transition'),
+        'z-index'             : 13,
         // Settings
         'collapsible'         : (
             'enabled'         : true,
-            'open-by-default' : true
+            'open-by-default' : option($side-nav, 'collapsible', 'open-by-default')
         ),
         'show-y-scrollbar'    : false,
-        'z-index'             : 13
     ), $custom);
 
     //-------------------------------------------------------------
@@ -33,6 +33,7 @@
     @include module {
         
         position: fixed;
+        top: 0;
         height: 100%;
         transition: base('transition');
         background: this('background');
@@ -43,7 +44,7 @@
         z-index: this('z-index');
         
         ul {
-            display: block !important;
+            display: block;
         }
         
         // Reveal the flyout navigation

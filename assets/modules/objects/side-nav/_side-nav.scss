@@ -45,6 +45,8 @@
 
     @include module {
             
+        overflow-y: scroll;
+            
         nav {
             
             ul {
@@ -52,14 +54,13 @@
                 text-align: left;
                 margin-top: 0;
                 width: 100%;
+                position: relative;
+                opacity: 1;
+                visibility: visible;
                 li {
                     display: block;
                     margin-left: 0;
                     &:hover {
-                        ul {
-                            visibility: hidden;
-                            opacity: 0;
-                        }
                         > a, a:not(:only-child) {
                             border-right: none;
                             background: this('item-hover-bg');
@@ -85,6 +86,16 @@
                     }
                 }   
                 ul {
+                    li {
+                        &:hover {
+                            a {
+                                color: this('item-hover-color');
+                                background: transparent;
+                                border-top: this('item-top-border');
+                                border-bottom: this('item-bottom-border');
+                            }
+                        }
+                    }
                     ul {
                         padding-left: 1.5em;
                     }
@@ -135,10 +146,15 @@
             cursor: pointer;
             transition: base('transition');
             opacity: 0.6;
+            display: none;
             &:hover {
                 background: rgba(color('greyscale', 'black'), 0.2);
                 opacity: 1;
             }
+        }
+        
+        @include overwrite-component('openClose') {
+            display: block;
         }
 
     } // module

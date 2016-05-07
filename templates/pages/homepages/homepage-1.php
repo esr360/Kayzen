@@ -21,7 +21,7 @@
             topbar();
 
             appHeader(array(
-                'modifiers' => 'bar-absolute-dark-sticky'
+                'modifiers' => 'absolute-bar-sticky-dark'
             ));
 			
 			_homepage1();

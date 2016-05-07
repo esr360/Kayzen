@@ -9,7 +9,6 @@
     //-------------------------------------------------------------
 
     $dropdown: config((
-        
         'name'                 : 'dropdown',
         'text-align'           : left,
         'width'                : 175px,
@@ -24,7 +23,6 @@
         'link-hover-bg-color'  : color('brand', 'primary'),
         'link-active-color'    : option($navigation, 'a-has-child-color'),
         'link-active-bg-color' : option($navigation, 'a-has-child-color')
-        
     ), $custom) !global;
 
     //-------------------------------------------------------------
@@ -42,7 +40,7 @@
                     > ul {
                         opacity: 1;
                         visibility: visible;
-                        z-index: 6;
+                        z-index: 8;
                     }
                 }
             }
@@ -56,7 +54,7 @@
                 transition: base('transition');
                 font-size: this('font-size');
                 position: absolute;
-                z-index: 5;
+                z-index: 7;
                 // hide until required
                 opacity: 0;
                 visibility: hidden;

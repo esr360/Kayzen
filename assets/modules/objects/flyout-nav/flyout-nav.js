@@ -8,14 +8,17 @@
      * @author: @esr360
      * 
      */
- 
+        
+    var $module = 'flyout-nav';
+        
     $.fn.flyoutNav = function(custom) {
         
         // Options
         var options = $.extend({
-            menu    : '#app-nav > ul',
-            trigger : '#flyout-trigger',
-            overlay : '#site-overlay'
+            trigger        : '#' + $module,
+            overlay        : '#site-overlay',
+            sideNavClass   : 'side-nav',
+            navOpenDefault : _modules[$module]['collapsible']['open-by-default']
         }, custom);
         
         // Run the code on each occurance of the element
@@ -25,50 +28,48 @@
                 .clone()
                 .prependTo('body')
                 .removeAttr('id')
-                .wrap('<div class="flyout-nav side-nav"></div>');
+                .removeAttr('class')
+                .wrap('<div class="' + $module + ' ' + options.sideNavClass + '"></div>');
                 
             flyoutContainer = flyoutContainer.parent();
             
+            // remove any responsive helper classes
+            flyoutContainer.find('ul').removeClass(function(index, css) {
+                return (css.match (/(^|\s)min-break-\S+/g) || []).join(' ');
+            });
+            
             // remove the trigger icon
             flyoutContainer.find(options.trigger).parents('ul').remove();
-            
-            // Function to create the flyout-nav based off existing elements
-            function createFlyoutNav() {
                 
-                // Add collapsible functionality
-                if (_option('flyout-nav', 'collapsible')) {
-                    flyoutContainer.navDropdown();
-                } else {
-                    $(_flyoutNav).find('.side-nav_openClose').remove();
-                }
+            // Add collapsible functionality
+            if (_option($module, 'collapsible')) {
+                flyoutContainer.navDropdown();
+            } else {
+                $(_flyoutNav).find('.' + options.sideNavClass + '_openClose').remove();
+            }
 
-                // collapse by default
-                var openDefault = _modules['flyout-nav']['collapsible']['open-by-default'];
-                
-                if (!openDefault) {
-                    $(_flyoutNav).find('a:not(:only-child) ~ ul').hide();
-                }
-        
-            } // createFlyoutNav
+            // collapse by default
+            var openDefault = options.navOpenDefault;
+            
+            if (!openDefault) {
+                $(_flyoutNav).find('a:not(:only-child) ~ ul').hide();
+            }
             
             // Open the flyout nav
             function openFlyoutNav() {
-                flyoutContainer.addClass('flyout-nav-visible');
+                flyoutContainer.addClass($module + '-visible');
                 $(options.trigger).addClass('active');
             }
             
             // Close the flyout nav
             function closeFlyoutNav() {
-                flyoutContainer.removeClass('flyout-nav-visible');
+                flyoutContainer.removeClass($module + '-visible');
                 $(options.trigger).removeClass('active');
             }
             
-            // Create the flyout nav
-            $(createFlyoutNav);
-            
             // Toggle the flyout nav on trigger click
             $('body').on('click', options.trigger, function () {
-                if (flyoutContainer.hasClass('flyout-nav-active')) {
+                if (flyoutContainer.hasClass($module + '-active')) {
                     closeFlyoutNav();
                     $(options.overlay).siteOverlay('hide', 'flyout');
                 } else {

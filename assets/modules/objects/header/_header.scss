@@ -28,7 +28,7 @@
         ),
         'side'                 : (
             'enabled'          : false,
-            'show-y-scrollbar' : false,
+            'background'       : color('greyscale', 'grey-5'),
             'font-size'        : font-size('size-2'),
             'transition'       : base('transition'),
             'z-index'          : 10,
@@ -94,6 +94,9 @@
 
         @include option('side') {
             
+            z-index: this('side', 'z-index');  
+            background: this('side', 'background'); 
+            
             @media (min-width: this('side', 'visible-at')) {
 
                 position: fixed;
@@ -104,7 +107,6 @@
                 
                 font-size: this('side', 'font-size');
                 transition: this('side', 'transition');
-                z-index: this('side', 'z-index');   
                 width: this('side', 'width');
                 left: -#{this('side', 'width')};
                 
@@ -113,6 +115,7 @@
                 }
                 
                 @include overwrite('logo') {
+                    padding: this('side', 'logo-padding');
                     img {
                         height: this('sticky', 'logo-height');
                     }
@@ -121,20 +124,32 @@
                 @include value($value: 'left') {
                     left: 0;
                     right: auto;
+                    ~ #site-content {
+                        margin-left: option($header, 'side', 'width');
+                    }
+                    @at-root .hide-sideHeader & {
+                        left: -#{this('side', 'width')};
+                        ~ #site-content {
+                            margin-left: 0;
+                        }
+                    }
                 }
                 
                 @include value($value: 'right') {
                     right: 0;
                     left: auto;
-                }
-                
-                // Always show vertical scrollbars
-                @include value($setting: 'show-y-scrollbar') {
-                    overflow-y: scroll;
+                    ~ #site-content {
+                        margin-right: option($header, 'side', 'width');
+                    }
+                    @at-root .hide-sideHeader & {
+                        right: -#{this('side', 'width')};
+                        ~ #site-content {
+                            margin-right: 0;
+                        }
+                    }
                 }
         
                 ~ #site-content {
-                    margin-#{this('side', 'enabled')}: option($header, 'side', 'width');
                     @include overwrite('top-bar', $is: 'fixed') {
                         width: calc(100% - #{option($header, 'side', 'width')});
                     }
@@ -147,18 +162,12 @@
                     width: calc(100% - #{option($header, 'side', 'width')});
                     right: 0;
                 }
-                
-                @include overwrite('logo') {
-                    padding: this('side', 'logo-padding');
-                }
             
             }// media query
             
             // Toggle Side Header
             @at-root .hide-sideHeader & {
-                #{this('side', 'enabled')}: -#{this('side', 'width')};
                 ~ #site-content {
-                    margin-#{this('side', 'enabled')}: 0;
                     @include overwrite('top-bar', $is: 'fixed') {
                         width: 100%;
                     }

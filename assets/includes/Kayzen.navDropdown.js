@@ -19,7 +19,7 @@
         return this.each(function() { 
             
             var navParent = $(this);
-            
+                        
             // Create open/close icon
             var openClose = '<i class="side-nav_openClose fa ' + options.toggleIcon + '"></i>';
             
@@ -31,10 +31,7 @@
                 
             // Hide/show child menus
             navParent.on('click', '.side-nav_openClose', function(e) {
-                $(this).parent().find('+ ul').css({
-                    'visibility' : 'visible',
-                    'opacity'    : 1
-                }).slideToggle(options.slideTransition);
+                $(this).parent('a').find('+ ul').slideToggle(options.slideTransition);
                 return false;
             });
                          

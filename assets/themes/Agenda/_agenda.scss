@@ -74,7 +74,6 @@
 	@include google-map;
 	
 	@include header((
-		'background'     : color('greyscale', 'grey-5'),
 		'font-size'      : 0.9em,
         'side'           : (
             'enabled'    : left
@@ -89,16 +88,17 @@
         'item-padding' : 0.5rem 1rem
 	));
 	
-	@include flyout-nav;
-	@include mega-menu;
 	@include dropdown;
+	@include side-nav;
+	@include flyout-nav;
+	
+	@include mega-menu;
 	@include page-overview;
 	@include preloader;
 	@include scroll-top;
 	@include search;
 	@include scroll-wheel;
 	@include sidebar;
-	@include side-nav;
 	@include site-overlay;
 	@include twitter-feed;
 	
