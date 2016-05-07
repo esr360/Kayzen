@@ -35,7 +35,11 @@
 			
 			_homepage4([
                 'billboard' => [
-                    'slide-nav' => false
+                    'slide-nav' => false,
+                    'title' => [
+                        'text' => '<b>Welcome to Kayzen<br />A Unique Theme Framework</b>',
+                        'class' => 'heading-uppercase-heavy-size-8-highlight-dark font-2'
+                    ]
                 ]
             ]);
         

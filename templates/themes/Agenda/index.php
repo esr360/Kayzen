@@ -33,10 +33,6 @@
     <div id="site-content">
 		
 		<?php 
-        
-            topbar([
-                'side-header' => true
-            ]);
             
 			_homepage2([
                 'billboard' => [

@@ -73,11 +73,8 @@
     ));
     
 	@include breadcrumb;
-	@include side-nav;
 	@include countdown;
 	@include earth-slider;
-	@include flyout-nav;
-	@include flyout-trigger;
 	@include footer;
 	@include google-map;
 	
@@ -99,8 +96,11 @@
         'item-padding' : 0.5rem 1rem
 	));
 	
-	@include mega-menu;
 	@include dropdown;
+	@include side-nav;
+	@include flyout-nav;
+	
+	@include mega-menu;
 	@include page-overview;
 	@include preloader;
 	@include scroll-top;

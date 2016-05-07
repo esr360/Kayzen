@@ -21,8 +21,8 @@
             topbar();
 
             appHeader(array(
-                //'modifiers' => 'absolute-bar-sticky-dark'
-                'modifiers' => 'side-left'
+                'modifiers' => 'absolute-bar-sticky-dark'
+                //'modifiers' => 'side-left'
             ));
 			
 			_homepage1();

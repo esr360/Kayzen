@@ -64,11 +64,8 @@
     ));
     
 	@include breadcrumb;
-	@include side-nav;
 	@include countdown;
 	@include earth-slider;
-	@include flyout-nav;
-	@include flyout-trigger;
 	@include footer;
 	@include google-map;
 	
@@ -91,8 +88,11 @@
 		'link-color' : color('greyscale', 'white')
 	));
 	
-	@include mega-menu;
 	@include dropdown;
+	@include side-nav;
+	@include flyout-nav;
+	
+	@include mega-menu;
 	@include page-overview;
 	@include preloader;
 	@include scroll-top;

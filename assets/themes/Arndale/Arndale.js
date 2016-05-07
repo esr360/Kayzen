@@ -62,7 +62,7 @@ $(document).ready(function() {
 
     $(_footer).footer();
 
-    $('#flyout').flyoutNav({
+    $(_navigation).flyoutNav({
         trigger : '#flyout-trigger'
     });
     
