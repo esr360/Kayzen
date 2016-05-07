@@ -13,7 +13,21 @@
 
 <body>
     
-    <?php preloader() ?>
+    <?php 
+    
+        preloader();
+        
+        appHeader(array(
+            'nav-links'  => array(
+                'Home' => themeLink($theme, '/index.php'),
+                'Services' => themeLink($theme, '/services.php'),
+                'Portfolio' => themeLink($theme, '/portfolio.php'),
+                'Blog' => themeLink($theme, '/blog.php'),
+                'Contact' => themeLink($theme, '/contact.php')
+            )
+        ));
+            
+    ?>
 
     <!-- Site Canvas -->
     <div id="site-content">
@@ -26,16 +40,6 @@
                 ),
                 'side-header' => true,
                 'flyout-trigger' => true
-            ));
-
-            appHeader(array(
-                'nav-links'  => array(
-                    'Home' => themeLink($theme, '/index.php'),
-                    'Services' => themeLink($theme, '/services.php'),
-                    'Portfolio' => themeLink($theme, '/portfolio.php'),
-                    'Blog' => themeLink($theme, '/blog.php'),
-                    'Contact' => themeLink($theme, '/contact.php')
-                )
             ));
 
             billboard([

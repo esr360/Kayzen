@@ -63,7 +63,7 @@ $(document).ready(function() {
     $(_footer).footer();
 
     $(_navigation).flyoutNav({
-        trigger : '#flyout-trigger, #demo-flyout-trigger'
+        trigger : '#flyout-nav-trigger, #demo-flyout-trigger'
     });
     
     $(_appHeader).header();
