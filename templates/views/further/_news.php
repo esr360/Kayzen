@@ -277,7 +277,7 @@
                         <p>Cum socis natoque penatibus et magnis dis parturient montes...</p>
                         <div class="row-block stack-0">
                             <div class="span va-middle">
-                                <a href="#" class="button-oval-primary-size-2">Read More</a>
+                                <a href="#" class="button-primary-size-2">Read More</a>
                             </div>
                             <div class="span va-middle text-right">
                                 <small>Posted in <a href="blog.html">Web Design</a></small>
@@ -314,7 +314,7 @@
                         <p>Cum socis natoque penatibus et magnis dis parturient montes...</p>
                         <div class="row-block stack-0">
                             <div class="span va-middle">
-                                <a href="#" class="button-oval-primary-size-2">Read More</a>
+                                <a href="#" class="button-primary-size-2">Read More</a>
                             </div>
                             <div class="span va-middle text-right">
                                 <small>Posted in <a href="blog.html">Web Design</a></small>
@@ -351,7 +351,7 @@
                         <p>Cum socis natoque penatibus et magnis dis parturient montes...</p>
                         <div class="row-block stack-0">
                             <div class="span va-middle">
-                                <a href="#" class="button-oval-primary-size-2">Read More</a>
+                                <a href="#" class="button-primary-size-2">Read More</a>
                             </div>
                             <div class="span va-middle text-right">
                                 <small>Posted in <a href="blog.html">News/Updates</a></small>
