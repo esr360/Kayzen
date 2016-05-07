@@ -209,7 +209,7 @@
                                 </li>
                             <?php } if ($options['flyout-trigger']) { ?>
                                 <li class="max-break-4">
-                                    <a class="top-bar_nav_action" href="#" id="flyout-trigger">
+                                    <a class="top-bar_nav_action" href="#" id="flyout-nav-trigger">
                                         <i class="fa fa-bars"></i>
                                     </a>
                                 </li>

@@ -5,12 +5,12 @@
             'type' => 'homepage',
             'wrapper-class' => 'container text-left',
             'headline' => [
-                'heading-uppercase-heavy-size-8 font-2',
-                'Welcome to Kayzen'
+                'class' => 'heading-uppercase-heavy-size-8 font-2',
+                'text' => 'Welcome to Kayzen'
             ],
             'title' => [
-                'heading-light-size-6',
-                'A Unique & Modern Theme Framework'
+                'class' => 'heading-light-size-6',
+                'text' => 'A Unique & Modern Theme Framework'
             ],
             'ctas' => [
                 [
@@ -26,27 +26,36 @@
             ],
             'bg-parallax' => false,
             'fade-parallax' => true,
-            'wheel-anchor' => '#s-welcome'
+            'wheel-anchor' => '#s-about'
         ],
-        'earthSlider' => [],
+        'earthSlider' => [
+            'id' => 's-about'
+        ],
         'skills' => [],
         'whyChooseUs' => [],
         'promoBanner[1]' => [],
         'ourTeam' => [],
         'promoSection' => [],
-        'services' => [],
+        'services' => [
+            'id' => 's-services'
+        ],
         'statistics' => [],
         'keyFeatures2' => [],
         'clients' => [],
         'pricing' => [],
         'featureQuote' => [],
         'recentWork' => [
+            'id' => 's-portfolio',
             'items' => 6
         ],
         'testimonials' => [],
-        'recentArticles' => [],
+        'recentArticles' => [
+            'id' => 's-blog'
+        ],
         'promoBanner[2]' => [],
-        'contactUs' => [],
+        'contactUs' => [
+            'id' => 's-contact'
+        ],
         'googleMap' => []
     ], $custom);
     

@@ -5,12 +5,12 @@
             'type' => 'homepage',
             'wrapper-class' => 'text-left',
             'headline' => [
-                'heading-uppercase-light-spaced-size-4',
-                'This is Kayzen'
+                'class' => 'heading-uppercase-light-spaced-size-4',
+                'text' => 'This is Kayzen'
             ],
             'title' => [
-                'heading-uppercase-heavy-size-8 font-2',
-                'The New Experience'
+                'class' => 'heading-uppercase-heavy-size-8 font-2',
+                'text' => 'The New Experience'
             ],
             'ctas' => [
                 [

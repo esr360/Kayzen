@@ -29,7 +29,6 @@
         'side'                 : (
             'enabled'          : false,
             'background'       : color('greyscale', 'grey-5'),
-            'font-size'        : font-size('size-2'),
             'transition'       : base('transition'),
             'z-index'          : 10,
             'width'            : 350px,
@@ -105,7 +104,6 @@
                 top: 0;
                 transform: translate3d(0,0,0);
                 
-                font-size: this('side', 'font-size');
                 transition: this('side', 'transition');
                 width: this('side', 'width');
                 left: -#{this('side', 'width')};

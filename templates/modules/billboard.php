@@ -6,7 +6,7 @@
         'wrapper-class' => '',
         'heading_group' => true,
         'headline'      => [
-            'class' => 'heading-uppercase-light-strikethrough-spaced-size-5-responsive',
+            'class' => 'heading-uppercase-light-strikethrough-spaced-size-4-responsive',
             'text'  => 'Kayzen'
         ],
         'title'         => [

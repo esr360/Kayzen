@@ -15,7 +15,7 @@
         
         // Options
         var options = $.extend({
-            trigger        : '#' + $module,
+            trigger        : '#' + $module + '-trigger',
             overlay        : '#site-overlay',
             sideNavClass   : 'side-nav',
             navOpenDefault : _modules[$module]['collapsible']['open-by-default']

@@ -98,15 +98,23 @@
                    e.preventDefault();
                 });
                 
-                // set correct navigation styles
+                // handle responsineness
                 var navClasses = navigation.attr('class');
                 $(window).bind("load resize", function() {
                     if (breakpoint('min-width', options.sideVisibleAt)) {
-                        header.addClass(options.sideNavClass);
+                        header.removeClass($module + '-absolute-js').addClass(options.sideNavClass);
                         navigation.removeAttr('class');
+                        // if the header is not correctly located in the DOM, make it so
+                        if (!$('body > [class*="' + $module + '"]').length) {
+                            header.prependTo('body');
+                        }
                     } else {
                         header.removeClass(options.sideNavClass);
                         navigation.addClass(navClasses);
+                        // relocate to below top-bar if top-bar exists
+                        if(_topBar.length) {
+                            header.insertAfter(_topBar).addClass($module + '-absolute-js');
+                        }
                     }
                 });
                 

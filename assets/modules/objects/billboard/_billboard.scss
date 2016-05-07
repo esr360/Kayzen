@@ -138,11 +138,13 @@
         
         // If header is "side"
         @at-root {
-            @include overwrite('app-header', $is: 'side') {
-                ~ #site-content {
-                    @include overwrite($is: 'full-screen') {
-                        height: 100%;
-                        height: 100vh;
+            @media (min-width: option($header, 'side', 'visible-at')) {
+                @include overwrite('app-header', $is: 'side') {
+                    ~ #site-content {
+                        @include overwrite($is: 'full-screen') {
+                            height: 100%;
+                            height: 100vh;
+                        }
                     }
                 }
             }

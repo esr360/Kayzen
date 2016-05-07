@@ -13,7 +13,7 @@
         'output-JSON'         : true,
         // Options
         'width'               : option($header, 'side', 'width'),
-        'font-size'           : option($header, 'side', 'font-size'),
+        'font-size'           : font-size('size-2'),
         'background'          : color('greyscale', 'grey-5'),
         'box-shadow'          : 1px 0 25px 0px rgba(black, 0.4),
         'transition'          : base('transition'),

@@ -5,12 +5,7 @@
             'type' => 'homepage',
             'wrapper-class' => 'container text-left',
             'headline'      => [
-                'heading-uppercase-heavy-size-8 font-2',
-                'Welcome to Kayzen'
-            ],
-            'title'         => [
-                'heading-light-size-6',
-                'A Unique & Modern Theme Framework'
+                'text' => 'Welcome to Kayzen'
             ],
             'ctas' => [
                 [

@@ -60,7 +60,7 @@
                 <!-- Flyout Nav Trigger -->
                 <ul class="max-break-4">
                     <li>
-                        <span class="button-icon-border-white flyout-trigger" id="flyout-trigger">
+                        <span class="button-icon-border-white flyout-trigger" id="flyout-nav-trigger">
                             <i class="fa fa-bars"></i>
                         </span>
                     </li>
@@ -522,7 +522,7 @@
                 <!-- Flyout Nav Trigger -->
                 <ul class="max-break-4">
                     <li>
-                        <span class="button-icon-border-white flyout-trigger" id="flyout-trigger">
+                        <span class="button-icon-border-white flyout-trigger" id="flyout-nav-trigger">
                             <i class="fa fa-bars"></i>
                         </span>
                     </li>
