@@ -23,6 +23,7 @@
             toggleHeader    : '#toggleHeader',
             sideNavClass    : 'side-nav',
             sideVisibleAt   : _modules[$module]['side']['visible-at'],
+            collapsible     : _option('side-nav', 'collapsible'),
             navOpenDefault  : _modules['side-nav']['collapsible']['open-by-default']
         }, custom);
         
@@ -74,7 +75,7 @@
                 }
                 
                 // Add collapsible functionality
-                if (_option(options.sideNavClass, 'collapsible')) {
+                if (options.collapsible) {
                     navigation.navDropdown({
                         toggleIcon : options.toggleIcon
                     });
@@ -83,9 +84,7 @@
                 }
 
                 // collapse by default
-                var openDefault = options.navOpenDefault;
-                
-                if (!openDefault) {
+                if (!options.navOpenDefault) {
                     navigation.find('a:not(:only-child) ~ ul').hide();
                 }
                 

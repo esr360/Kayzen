@@ -47,11 +47,8 @@
             } else {
                 $(_flyoutNav).find('.' + options.sideNavClass + '_openClose').remove();
             }
-
-            // collapse by default
-            var openDefault = options.navOpenDefault;
             
-            if (!openDefault) {
+            if (!options.navOpenDefault) {
                 $(_flyoutNav).find('a:not(:only-child) ~ ul').hide();
             }
             

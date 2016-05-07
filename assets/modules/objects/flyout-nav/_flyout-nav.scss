@@ -19,11 +19,11 @@
         'transition'          : base('transition'),
         'z-index'             : 13,
         // Settings
+        'show-y-scrollbar'    : option($side-nav, 'show-y-scrollbar'),
         'collapsible'         : (
-            'enabled'         : true,
+            'enabled'         : option($side-nav, 'collapsible', 'enabled'),
             'open-by-default' : option($side-nav, 'collapsible', 'open-by-default')
-        ),
-        'show-y-scrollbar'    : false,
+        )
     ), $custom);
 
     //-------------------------------------------------------------
@@ -53,9 +53,7 @@
         }
         
         @include option('show-y-scrollbar') {
-            > nav {
-                overflow-y: scroll;
-            }
+            overflow-y: scroll;
         }
         
     }

@@ -32,6 +32,7 @@
         'item-hover-color'         : color('greyscale', 'white'),
         'item-hover-bg'            : color('brand', 'primary'),
         // settings
+        'show-y-scrollbar'         : false,
         'collapsible'              : (
             'enabled'              : true,
             'open-by-default'      : true,
@@ -44,8 +45,12 @@
     //-------------------------------------------------------------
 
     @include module {
-            
-        overflow-y: scroll;
+        
+        overflow: auto;
+        
+        @include option('show-y-scrollbar') {
+           overflow-y: scroll;
+        }
             
         nav {
             
@@ -124,6 +129,16 @@
             }
         
         } // nav
+        
+        &::-webkit-scrollbar {
+            width: 14px;
+        }
+        &::-webkit-scrollbar-thumb {
+            border-left: 1px solid rgba(white, 0.075);
+            background-image: linear-gradient(
+                to right, rgba(white, 0.025), rgba(black, 0.5)
+            );
+        }
 
         // hide the mega-menu
         @include overwrite('mega-menu') {

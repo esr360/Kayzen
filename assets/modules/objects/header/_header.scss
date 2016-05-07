@@ -55,6 +55,7 @@
     // Core Styles
     //-------------------------------------------------------------
 
+        overflow: visible;
         font-size: this('font-size');
         background: this('background');
         
@@ -102,7 +103,6 @@
                 position: fixed;
                 height: 100%;
                 top: 0;
-                overflow: auto;
                 transform: translate3d(0,0,0);
                 
                 font-size: this('side', 'font-size');
