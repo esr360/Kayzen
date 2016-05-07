@@ -4,7 +4,7 @@
         'billboard' => [
             'type' => 'homepage',
             'headline' => [
-                'text' => '<span>Kayzen</span>'
+                'text' => '<span>Welcome To Kayzen</span>'
             ]
         ],
         'keyFeatures' => [],

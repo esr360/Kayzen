@@ -15,7 +15,7 @@ define('env', 'dev');
  * Set which theme you are using
  * @const theme
  */
-define('theme', 'Blizzard');
+define('theme', 'Kayzen');
 
 /**
  * Are you using multiple themes?
