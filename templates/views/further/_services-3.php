@@ -109,7 +109,7 @@
     <div class="container-small">
         <div class="row">
             <div class="span-5 va-middle text-center min-break-3">
-                <img class="span-10" src="<?php echo appDir ?>/images/layouts/layout-header-alt.png" alt="" />
+                <img class="span-10<?php if (theme !== 'Kayzen') echo ' greyscale' ?>" src="<?php echo appDir ?>/images/layouts/layout-header-alt.png" alt="" />
             </div>
             <div class="span-7 va-middle">
                 <header class="heading_group">
@@ -141,7 +141,7 @@
                 <p>Every configurable aspect of Kayzen can be controlled by editing a single value in the theme's config file. Change the complete look and feel of your project instantly by changing only a few settings. You'll be amazed at how much you can change Kayzen's appearance without changing any HTML! <a href="#">Learn More</a></p>
             </div>
             <div class="span-5 va-middle text-center min-break-3">
-                <img class="span-10" src="<?php echo appDir ?>/images/layouts/layout-topbar.png" alt="" />
+                <img class="span-10<?php if (theme !== 'Kayzen') echo ' greyscale' ?>" src="<?php echo appDir ?>/images/layouts/layout-topbar.png" alt="" />
             </div>
         </div>
     </div>
@@ -191,14 +191,14 @@
             </div>
             <div class="center-xy span-5 va-middle text-center min-break-3">
                 <img 
-                    class="span-9" 
+                    class="span-9<?php if (theme !== 'Kayzen') echo ' greyscale' ?>" 
                     src="<?php echo appDir ?>/images/layouts/layout-topbar.png" 
                     data-trigger="transform: translate(-10%, -60%)"
                     alt=""
                 / >
-                <img class="span-9" src="<?php echo appDir ?>/images/layouts/layout-topbar.png" alt="" />
+                <img class="span-9<?php if (theme !== 'Kayzen') echo ' greyscale' ?>" src="<?php echo appDir ?>/images/layouts/layout-topbar.png" alt="" />
                 <img 
-                    class="span-9" 
+                    class="span-9<?php if (theme !== 'Kayzen') echo ' greyscale' ?>" 
                     src="<?php echo appDir ?>/images/layouts/layout-topbar.png"
                     data-trigger="transform: translate(10%, -40%)"
                     alt="" />

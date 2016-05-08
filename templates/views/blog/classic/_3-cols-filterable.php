@@ -96,7 +96,7 @@
                 });
                 
                 $(window).load(function() {
-                    $('#blog-items').isotope();
+                    $('#blog-items').isotope().addClass('isotope-container');
                     $('#blog-types').on('click', 'li', function() {
                         var filterValue = $(this).attr('data-filter');
                         $('#blog-items').isotope({ 

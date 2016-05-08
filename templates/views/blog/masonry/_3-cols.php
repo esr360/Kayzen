@@ -109,7 +109,7 @@
                 });
                 
                 $(window).load(function() {
-                    $('#blog-items').isotope();
+                    $('#blog-items').isotope().addClass('isotope-container');
                 });
                 
             });

@@ -85,7 +85,7 @@
             
             $('#portfolio-categories').KayzenClickHelper();
             
-            $('#portfolio-items').isotope();
+            $('#portfolio-items').isotope().addClass('isotope-container');
             
             $('#portfolio-categories').on('click', 'li', function() {
                 var filterValue = $(this).attr('data-filter');
@@ -93,7 +93,7 @@
                     filter: filterValue 
                 });
             });
-            
+        
         });
     </script>            
     

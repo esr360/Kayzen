@@ -91,11 +91,22 @@
                 // toggle side header
                 $(options.toggleHeader).click(function(e) {
                     $('body').toggleClass('hide-sideHeader');
-                   // reload any google maps
-                   setTimeout(function() {
-                       google.maps.event.trigger($('#google-map')[0], 'resize');
-                   }, baseTransition); 
-                   e.preventDefault();
+                    // reload any scripts
+                    setTimeout(function() {
+                        // reload owl-carousels
+                        $('.owl-carousel').each(function() {
+                           $(this).owlCarousel('invalidate', 'all').owlCarousel('refresh'); 
+                        });
+                        // reload isotope grids
+                        $('.isotope-container').each(function() {
+                            $(this).isotope();   
+                        });
+                        // reload google map
+                        if ('google' in window) {
+                            google.maps.event.trigger($('#google-map')[0], 'resize');
+                        }
+                    }, baseTransition); 
+                    e.preventDefault();
                 });
                 
                 // handle responsineness

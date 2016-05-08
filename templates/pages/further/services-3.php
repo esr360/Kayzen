@@ -30,7 +30,7 @@
                 'tag-line' => $tagLine
             ]);
 			
-			include (ROOT.'/views/further/_services-2.php');
+			include (ROOT.'/views/further/_services-3.php');
 		
 			appFooter();
 		

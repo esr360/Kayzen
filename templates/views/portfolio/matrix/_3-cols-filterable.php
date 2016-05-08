@@ -107,7 +107,7 @@
                 $('#portfolio-categories').KayzenClickHelper();
                 
                 $(window).load(function() {
-                    $('#portfolio-items').isotope();
+                    $('#portfolio-items').isotope().addClass('isotope-container');
                     $('#portfolio-categories').on('click', 'li', function() {
                         var filterValue = $(this).attr('data-filter');
                         $('#portfolio-items').isotope({ 

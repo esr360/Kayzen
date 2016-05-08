@@ -6,7 +6,7 @@
             'facebook', 'twitter', 'dribbble', 'google-plus'
         ),
         'side-header'    => false,
-        'flyout-trigger' => true
+        'flyout-trigger' => false
     ), $custom); ?>
     
     <!-- Login Box -->

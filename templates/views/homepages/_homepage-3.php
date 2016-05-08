@@ -117,20 +117,6 @@
                     elementsSelector.trigger('prev.owl.carousel');
                 });
                 
-                function delayCarousel(carousel, delay) { 
-                    setTimeout(function() {
-                        carousel.owlCarousel('invalidate', 'all').owlCarousel('refresh');
-                    }, delay); 
-                }
-                
-                $(window).load(function() {
-                    delayCarousel(elementsSelector, baseTransition)
-                });
-                
-                $('#toggleHeader').click(function() {
-                    delayCarousel(elementsSelector, baseTransition)
-                });
-                
             });
         </script>
     </section>

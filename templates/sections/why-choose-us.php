@@ -74,7 +74,7 @@
                 
                 <!-- Responsive Graphics -->
                 <div class="span-6 va-middle text-center min-break-3">
-                    <img class="<?php if (theme !== 'Kayzen') echo ' greyscale' ?>" src="<?php echo appDir ?>/images/custom-graphic-1.png" alt="" />
+                    <img class="<?php if (theme !== 'Kayzen') echo 'greyscale' ?>" src="<?php echo appDir ?>/images/custom-graphic-1.png" alt="" />
                 </div>
                 
                 <!-- Responsive Features -->

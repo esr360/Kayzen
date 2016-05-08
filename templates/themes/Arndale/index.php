@@ -37,6 +37,10 @@
                         ['button-size-4-border-white']
                     ],
                     'slide-nav' => false
+                ],
+                'masonryFeatures' => [
+                    'title-highlight' => 'highlight-dark',
+                    'subTitle-highlight' => 'highlight'
                 ]
             ]);
             

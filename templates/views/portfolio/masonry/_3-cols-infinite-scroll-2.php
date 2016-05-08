@@ -117,7 +117,7 @@
                 };
                 
                 $(window).load(function() {
-                    $('#portfolio-items').isotope();
+                    $('#portfolio-items').isotope().addClass('isotope-container');
                     $("#portfolio-items").KayenInfiniteScroll({}, [articlesCarousel, articlesGallery]);
                 });
                 

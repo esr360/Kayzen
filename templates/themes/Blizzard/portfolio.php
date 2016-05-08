@@ -35,9 +35,6 @@
 		<?php 
         
             topbar(array(
-                'social-links' => array(
-                    'facebook', 'twitter'
-                ),
                 'side-header' => true,
                 'flyout-trigger' => true
             ));
