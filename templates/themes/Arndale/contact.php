@@ -12,23 +12,29 @@
 <?php head($theme) ?>
 
 <body>
+		
+    <?php 
+        
+        preloader($style = 'pacman');
+
+        appHeader(array(
+            'nav-links'  => array(
+                'Home' => themeLink($theme, '/index.php'),
+                'About' => themeLink($theme, '/about.php'),
+                'Shop' => themeLink($theme, '/shop-category.php'),
+                'Blog' => themeLink($theme, '/blog.php'),
+                'Contact' => themeLink($theme, '/contact.php')
+            )
+        ));
+        
+    ?>
 
     <!-- Site Canvas -->
     <div id="site-content">
 		
 		<?php 
-        
+    
             topbar();
-
-            appHeader(array(
-                'nav-links'  => array(
-                    'Home' => themeLink($theme, '/index.php'),
-                    'About' => themeLink($theme, '/about.php'),
-                    'Shop' => themeLink($theme, '/shop-category.php'),
-                    'Blog' => themeLink($theme, '/blog.php'),
-                    'Contact' => themeLink($theme, '/contact.php')
-                )
-            ));
 
             billboard([
                 'title'    => [
