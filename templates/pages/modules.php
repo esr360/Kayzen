@@ -25,7 +25,8 @@
             billboard([
                 'title'    => [
                     'text' => $title
-                ]
+                ],
+				'tag-line' => ''
             ]);
             
         ?>

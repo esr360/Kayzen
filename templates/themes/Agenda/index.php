@@ -3,6 +3,8 @@
     // page config
     $theme = 'Agenda';
     $title = 'Homepage 2';
+    // update the global theme variable
+    $GLOBALS['theme'] = $theme;
 ?>
 
 <!DOCTYPE html>

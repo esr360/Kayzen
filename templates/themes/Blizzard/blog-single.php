@@ -4,6 +4,8 @@
     $theme = 'Blizzard';
     $title = 'Single Post Title';
     $tagLine = 'Aenean lobortis ante nunc, curabitur at enim ac nisi lacinia.';
+    // update the global theme variable
+    $GLOBALS['theme'] = $theme;
 ?>
 
 <!DOCTYPE html>

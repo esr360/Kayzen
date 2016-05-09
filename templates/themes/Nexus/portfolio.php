@@ -4,6 +4,8 @@
     $theme = 'Nexus';
     $title = 'Our Portfolio';
     $tagLine = 'Some of our most recent and best work';
+    // update the global theme variable
+    $GLOBALS['theme'] = $theme;
 ?>
 
 <!DOCTYPE html>

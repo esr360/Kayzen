@@ -1,7 +1,9 @@
 <?php 
-include ('../../app.php');
-// page config
-$theme = 'Lily';
+    include ('../../app.php');
+    // page config
+    $theme = 'Lily';
+    // update the global theme variable
+    $GLOBALS['theme'] = $theme;
 ?>
 
 <!DOCTYPE html>

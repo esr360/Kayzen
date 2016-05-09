@@ -1,11 +1,11 @@
 <?php function articleItem($custom = array()) {
           
-    if (theme == 'Kayzen') {
+    if ($GLOBALS['theme'] == 'Kayzen') {
         $itemLink = pageLink('blog/single.php', 'pages', false);
         $itemRoot = pageLink('blog/classic/3-cols.php', 'pages', false);
     } else {
-        $itemLink = themeLink(theme, '/blog-single.php');
-        $itemRoot = themeLink(theme, '/blog.php');
+        $itemLink = themeLink($GLOBALS['theme'], '/blog-single.php');
+        $itemRoot = themeLink($GLOBALS['theme'], '/blog.php');
     } 
 
     $options = array_merge(array(
@@ -48,10 +48,10 @@
      * Update the default link if type if 'portfolio'
      */
     if ($options['link'] === $itemLink && $options['type'] === 'portfolio') {
-        if (theme == 'Kayzen') {
+        if ($GLOBALS['theme'] == 'Kayzen') {
             $options['link'] = pageLink('portfolio/single.php', 'pages', false);
         } else {
-            $options['link'] = themeLink(theme, '/portfolio-single.php');
+            $options['link'] = themeLink($GLOBALS['theme'], '/portfolio-single.php');
         } 
     }
     
@@ -59,10 +59,10 @@
      * Update the default root link if type if 'portfolio'
      */
     if ($options['root'] === $itemRoot && $options['type'] === 'portfolio') {
-        if (theme == 'Kayzen') {
+        if ($GLOBALS['theme'] == 'Kayzen') {
             $options['root'] = pageLink('portfolio/classic/3-cols.php', 'pages', false);
         } else {
-            $options['root'] = themeLink(theme, '/portfolio.php');
+            $options['root'] = themeLink($GLOBALS['theme'], '/portfolio.php');
         } 
     }
     

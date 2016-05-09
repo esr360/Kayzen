@@ -4,6 +4,8 @@
     $theme = 'Tempus';
     $title = 'Our Blog';
     $tagLine = 'Read about all the great work we do';
+    // update the global theme variable
+    $GLOBALS['theme'] = $theme;
 ?>
 
 <!DOCTYPE html>

@@ -9,13 +9,13 @@
  *
  * Values: 'dev' | 'prod'
  */
-define('env', 'dev');
+define('env', 'prod');
 
 /**
  * Set which theme you are using
  * @const theme
  */
-define('theme', 'Hollywood');
+define('theme', 'Kayzen');
 
 /**
  * Are you using multiple themes?
@@ -56,6 +56,12 @@ define('ROOT', dirname(__FILE__));
  */
  
 define('appDir', '/app');
+
+/**
+ * Create a global variable to store the theme name so it can be
+ * dynamically updated
+ */
+ $GLOBALS['theme'] = theme;
     
 /******************************************************************
  * Templates

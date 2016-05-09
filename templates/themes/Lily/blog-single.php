@@ -4,6 +4,8 @@
     $theme = 'Lily';
     $title = 'Project Title';
     $tagLine = 'Aenean lobortis ante nunc curabitur at enim nisi.';
+    // update the global theme variable
+    $GLOBALS['theme'] = $theme;
 ?>
 
 <!DOCTYPE html>

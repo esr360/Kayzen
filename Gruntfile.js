@@ -769,7 +769,7 @@ module.exports = function(grunt) {
         'setPHPConstant:path',
     ]);
     
-    // Package the app
+    // Create prototypes
     grunt.registerTask('prototype', [
         'clean:prototype',
         'templates',

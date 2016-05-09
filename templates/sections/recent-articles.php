@@ -1,6 +1,6 @@
  <?php function recentArticles($custom = array()) {
      
-    if (theme == 'Kayzen') {
+    if ($GLOBALS['theme'] == 'Kayzen') {
         $itemLink = pageLink('blog/single.php', 'pages', false);
         $itemRoot = pageLink('blog.php', 'pages', false);
     } else {

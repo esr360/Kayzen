@@ -2,6 +2,8 @@
     include ('../../app.php');
     // page config
     $theme = 'Mall';
+    // update the global theme variable
+    $GLOBALS['theme'] = $theme;
 ?>
 
 <!DOCTYPE html>

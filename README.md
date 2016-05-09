@@ -853,7 +853,7 @@ Check that you have no Javascript errors and are correctly loading assets by loo
 
 ### Unit Tests
 
-We are currently writing unit tests for all custom Javascripts. These, along with other such automated tests, will be released in furutre releases of Kayzen, so stay tuned.
+We are currently writing unit tests for all custom Javascripts. These, along with other such automated tests, will be released in future releases of Kayzen, so stay tuned.
 
 ### Cross-Browser Tests
 
