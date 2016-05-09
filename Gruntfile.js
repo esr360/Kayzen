@@ -233,7 +233,9 @@ module.exports = function(grunt) {
                     dest: buildScripts,
                     expand: true,
                     flatten: true,
-                    ext: '.min.js'
+                    rename: function(dest, src) { 
+                        return dest + '/' + src.replace('.js', '.min.js'); 
+                    }
                 }]
             },
             themes: {
@@ -242,7 +244,9 @@ module.exports = function(grunt) {
                     dest: themeBuildScripts,
                     expand: true,
                     flatten: true,
-                    ext: '.min.js'
+                    rename: function(dest, src) { 
+                        return dest + '/' + src.replace('.js', '.min.js'); 
+                    }
                 }]
             }
         },

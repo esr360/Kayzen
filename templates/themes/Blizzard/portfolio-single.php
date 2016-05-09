@@ -37,8 +37,7 @@
 		<?php 
         
             topbar(array(
-                'side-header' => true,
-                'flyout-trigger' => true
+                'side-header' => true
             ));
 
             billboard([

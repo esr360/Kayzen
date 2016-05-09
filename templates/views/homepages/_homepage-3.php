@@ -27,7 +27,7 @@
     
 ?>
 
-<section class="section-primary">
+<section class="section-primary" id="s-welcome">
     
     <header class="heading_group text-center">
         <div class="container-small">

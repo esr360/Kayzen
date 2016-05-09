@@ -24,8 +24,7 @@
                 'Portfolio' => themeLink($theme, '/portfolio.php'),
                 'Blog' => themeLink($theme, '/blog.php'),
                 'Contact' => themeLink($theme, '/contact.php')
-            ),
-            'flyout-trigger' => false
+            )
         ));
     
     ?>
@@ -35,10 +34,9 @@
 		
 		<?php 
         
-            topbar(array(
-                'side-header' => true,
-                'flyout-trigger' => true
-            ));
+            topbar([
+                'side-header' => true
+            ]);
 			
 			_homepage3([
                 'billboard' => [

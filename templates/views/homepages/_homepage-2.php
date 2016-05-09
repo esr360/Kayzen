@@ -20,7 +20,7 @@
                 ],
                 [
                     'button-size-4-border-white',
-                    '#s-welcome',
+                    '#s-about',
                     'Explore The Potential'
                 ]
             ],

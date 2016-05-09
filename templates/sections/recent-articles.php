@@ -4,8 +4,8 @@
         $itemLink = pageLink('blog/single.php', 'pages', false);
         $itemRoot = pageLink('blog.php', 'pages', false);
     } else {
-        $itemLink = themeLink(theme, '/blog-single.php');
-        $itemRoot = themeLink(theme, '/blog.php');
+        $itemLink = themeLink($GLOBALS['theme'], '/blog-single.php');
+        $itemRoot = themeLink($GLOBALS['theme'], '/blog.php');
     } 
 
     $options = array_merge(array(

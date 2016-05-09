@@ -132,7 +132,7 @@
                                 <li>
                                     <?php navThemeItem(array(
                                         'theme' => 'Tempus',
-                                        'thumb' => 'theme-6-thumb.jpg'
+                                        'thumb' => 'theme-5-thumb.jpg'
                                     )) ?>
                                 </li>
                                 
@@ -140,7 +140,7 @@
                                 <li>
                                     <?php navThemeItem(array(
                                         'theme' => 'Dart',
-                                        'thumb' => 'theme-5-thumb.jpg'
+                                        'thumb' => 'theme-6-thumb.jpg'
                                     )) ?>
                                 </li>
                                 
