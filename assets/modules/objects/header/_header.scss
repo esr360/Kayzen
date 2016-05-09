@@ -34,7 +34,8 @@
             'width'            : 350px,
             'container-width'  : 100%,
             'visible-at'       : breakpoint('break-5'),
-            'logo-padding'     : 0.75em
+            'logo-padding'     : 0.75em,
+            'logo-left-border' : none
         ),
         'sticky'               : (
             'enabled'          : false,
@@ -114,6 +115,7 @@
                 
                 @include overwrite('logo') {
                     padding: this('side', 'logo-padding');
+                    border-left: this('side', 'logo-left-border');
                     img {
                         height: this('sticky', 'logo-height');
                     }

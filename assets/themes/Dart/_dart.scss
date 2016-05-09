@@ -63,18 +63,16 @@
 	@include google-map;
 	
 	@include header((
-		'font-size'      : 0.9em,
-        'side' : (
-            'enabled'    : right
+		'font-size': 0.9em,
+        'side': (
+            'enabled': right,
+			'logo-left-border': 5px solid desaturate(
+				darken(color('brand', 'primary'), 15%),
+			15%)
         )
 	));
 	
-	@include logo((
-        'padding' : 0.75em,
-        'left-border' : 5px solid desaturate(
-            darken(color('brand', 'primary'), 15%),
-         15%)
-    ));
+	@include logo;
 	
 	@include navigation((
 		'link-color' : color('greyscale', 'white')

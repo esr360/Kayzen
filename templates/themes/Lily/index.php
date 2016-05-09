@@ -43,7 +43,6 @@ $theme = 'Lily';
                     'subTitle-highlight' => 'highlight-dark'
                 ],
                 'inStore' => [
-                    'tabs_nav_item-modifiers' => '-round',
                     'link' => themeLink($theme, '/shop-single.php'),
                     'root' => themeLink($theme, '/shop-category.php')
                 ],

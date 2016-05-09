@@ -25,8 +25,9 @@
                                 <li><b><i class="fa fa-fw heading-brand-1 fa-phone-square"></i> Phone:</b> (0161) 123 4567</li>
                                 <li><b><i class="fa fa-fw heading-brand-1 fa-envelope"></i> Email:</b> <a href="mailto:support@themeforest.net">support@themeforest.net</a></li>
                             </ul>
-                            <hr class="hrule-stripes max-break-2" />
                         </div>
+                        
+                        <hr class="hrule-stripes max-break-2" />
                         
                         <!-- Newsletter -->
                         <div class="span-3 break-4-half break-2-full">

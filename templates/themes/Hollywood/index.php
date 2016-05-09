@@ -29,7 +29,12 @@
                 )
             ));
 			
-			_homepage6();
+			_homepage6([
+                'masonryFeatures' => [
+                    'title-highlight' => 'highlight-dark',
+                    'subTitle-highlight' => 'highlight'
+                ]
+            ]);
             
             appFooter();
                     

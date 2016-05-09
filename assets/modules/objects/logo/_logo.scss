@@ -14,8 +14,7 @@
         'color'        : white,
         'size'         : font-size('size-5'),
         'padding'      : 0,
-        'image-height' : 38px,
-        'left-border'  : 0
+        'image-height' : 38px
     ), $custom);
 
     //-------------------------------------------------------------
@@ -28,7 +27,6 @@
         font-size: this('size');
         text-align: this('text-align');
         padding: this('padding');
-        border-left: this('left-border');
         
         // for plain text logos
         a {

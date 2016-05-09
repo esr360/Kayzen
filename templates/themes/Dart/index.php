@@ -33,9 +33,7 @@
 		
 		<?php 
         
-            topbar(array(
-                'flyout-trigger' => true
-            ));
+            topbar();
 			
 			_homepage4([
                 'billboard' => [
