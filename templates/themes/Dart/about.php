@@ -6,6 +6,7 @@
     $tagLine = 'Aenean lobortis ante nunc urabitur at enim nisi.';
     // update the global theme variable
     $GLOBALS['theme'] = $theme;
+    $GLOBALS['iphone-colors'] = ['blue', 'red', 'red'];
 ?>
 
 <!DOCTYPE html>

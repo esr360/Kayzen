@@ -1,16 +1,17 @@
 <?php function articleItem($custom = array()) {
           
+    // Dynamically set correct blog/portfolio page links
     if ($GLOBALS['theme'] == 'Kayzen') {
         $itemLink = pageLink('blog/single.php', 'pages', false);
         $itemRoot = pageLink('blog/classic/3-cols.php', 'pages', false);
     } else {
         $itemLink = themeLink($GLOBALS['theme'], '/blog-single.php');
         $itemRoot = themeLink($GLOBALS['theme'], '/blog.php');
-    } 
+    }
 
     $options = array_merge(array(
-        'type'          => 'blog',
-        'media'         => 'image',
+        'type'          => 'blog', // blog | portfolio
+        'media'         => 'image', // image | vimeo | youtube | carousel | audio | masonry | codepen
         'blurb'         => null,
         'link'          => $itemLink,
         'root'          => $itemRoot,
@@ -23,21 +24,21 @@
         'disabled'      => false,
         'ribbon'        => null,
         'author-thumb'  => false,
-        'thumb'         => rand(1, 25),
-        'thumbs'        => array(
+        'thumb'         => rand(1,25),
+        'thumbs'        => [
             rand(1, 25),
             rand(1, 25),
             rand(1, 25),
-        ),
+        ],
         'maskTitle'     => true,
         'title'         => 'Lorem ipsum dolor sit amet',
-        'date'          => array('Sep', 23),
+        'date'          => ['Sep', 23],
         'category'      => 'HTML Themes',
-        'categories'    => array(
+        'categories'    => [
             'HTML-theme',
             'photography',
             'logo'
-        ),
+        ],
         'videoSrc'      => 'https://player.vimeo.com/video/87701971',
         'audioSrc'      => 'https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/205050090&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true',
         'price'         => '$24.99',

@@ -4,6 +4,7 @@
     $theme = 'Tempus';
     // update the global theme variable
     $GLOBALS['theme'] = $theme;
+    $GLOBALS['iphone-colors'] = ['blue', 'red', 'red'];
 ?>
 
 <!DOCTYPE html>
@@ -39,7 +40,8 @@
                         'text' => '<b>Welcome to Kayzen<br />A Unique Theme Framework</b>',
                         'class' => 'heading-uppercase-heavy-size-8-highlight-dark font-2'
                     ]
-                ]
+                ],
+                'blog-link' => themeLink($theme, '/blog-single.php')
             ]);
         
             appFooter();

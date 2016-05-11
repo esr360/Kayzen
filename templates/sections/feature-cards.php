@@ -1,6 +1,8 @@
  <?php function featureCards($custom = array()) {
 
-    $options = array_merge([], $custom); ?>
+    $options = array_merge([
+        'item-link' => pageLink('further/shop-category.php', 'pages', false),
+    ], $custom); ?>
     
     <section class="section-primary">
         <div class="container">
@@ -26,7 +28,7 @@
                             <h4 class="heading-light-uppercase-brand-1">Donec finibus fringer</h4>
                         </header>
                         <p>
-                            <a href="#" class="button-border">Shop Now</a>
+                            <a href="<?php echo $options['item-link'] ?>" class="button-border">Shop Now</a>
                         </p>
                     </div>
                 </div>
@@ -51,7 +53,7 @@
                             <h4 class="heading-light-uppercase-brand-1">Donec finibus fringer</h4>
                         </header>
                         <p>
-                            <a href="#" class="button-border">See Collection</a>
+                            <a href="<?php echo $options['item-link'] ?>" class="button-border">See Collection</a>
                         </p>
                     </div>
                 </div>
@@ -76,7 +78,7 @@
                             <h4 class="heading-light-uppercase-brand-1">Donec finibus fringer</h4>
                         </header>
                         <p>
-                            <a href="#" class="button-border">Watch Video</a>
+                            <a href="<?php echo $options['item-link'] ?>" class="button-border">Watch Video</a>
                         </p>
                     </div>
                 </div>

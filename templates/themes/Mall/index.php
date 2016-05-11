@@ -49,10 +49,13 @@
                     ]
                 ],
                 'masonryFeatures' => [
+                    'link' => themeLink($theme, '/shop-single.php'),
                     'title-highlight' => 'highlight-dark',
                     'subTitle-highlight' => 'highlight'
                 ],
                 'inStore' => [
+                    'link' => themeLink($theme, '/shop-single.php'),
+                    'root' => themeLink($theme, '/shop-category.php'),
                     'title' => [
                         'modifiers' => 'heading-uppercase-light-brand-1-size-5-highlight',
                         'highlight' => true
@@ -73,6 +76,9 @@
                         'modifiers' => 'heading-uppercase-heavy-size-5-highlight-dark font-2',
                         'highlight' => true
                     ]
+                ],
+                'featureCards' => [
+                    'item-link' => themeLink($theme, '/shop-category.php')
                 ],
                 'shareTheLove' => [
                     'title' => [

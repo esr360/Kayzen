@@ -20,13 +20,17 @@
                 ],
                 [
                     'button-size-4-border-white',
-                    '#s-welcome',
+                    '#featuredArticles',
                     'Explore The Potential'
                 ]
             ],
+            'wheel-anchor' => '#featuredArticles',
             'bg-parallax' => false,
         ],
-        'masonryFeatures' => [],
+        'masonryFeatures' => [
+            'id' => 'featuredArticles',
+            'link' => pageLink('further/shop-single.php', 'pages', false)
+        ],
         'inStore' => [],
         'clients' => [
             'title' => [

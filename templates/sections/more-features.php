@@ -1,11 +1,11 @@
-<?php function moreFeatures($custom = array()) { ?>
+<?php function moreFeatures($custom = array()) {
 
-    <?php $options = array_merge(array(
-        //'option' => 'VALUE'
-    ), $custom); ?>  
+    $options = array_merge([
+        'id' => null
+    ], $custom); ?>  
   
     <!-- More Features -->
-    <section class="section-primary">
+    <section class="section-primary" id="<?php echo $options['id'] ?>">
     
         <!-- More Features Header -->
         <header class="heading_group-large has-icon text-center">

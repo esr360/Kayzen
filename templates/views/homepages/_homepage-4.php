@@ -20,22 +20,23 @@
                 ],
                 [
                     'button-size-4-primary',
-                    '#s-welcome',
+                    '#key-features',
                     'Explore The Potential'
                 ]
             ],
             'bg-img'        => stockImage('demo/stock-5.jpg'),
             'bg-parallax'   => false,
-            'fade-parallax' => true,
-            'wheel-anchor'  => '#s-welcome'
-        ]
+            'fade-parallax' => true
+        ],
+        'blog-link'         => pageLink('blog/single.php', 'pages', false),
+        'iphone-colors'     => $GLOBALS['iphone-colors']
     ], $custom);
 
     billboard($options['billboard']);
     
 ?>
             
-<section class="section">
+<section class="section" id="key-features">
 
     <header class="heading_group-block has-icon text-center">
         <div class="container-small">
@@ -129,21 +130,21 @@
             <div class="span-5 va-middle text-center">
                 <div class="center-xy span-6 min-break-3">
                     <img 
-                        class="mobile-graphic-white" 
+                        class="mobile-graphic-<?php echo $options['iphone-colors'][0] ?>" 
                         src="<?php echo appDir ?>/images/mobile-screen-1.jpg" 
                         data-trigger="transform: translate(-45%, -50%) translateZ(0) scale(0.85)"
                         data-hover="left: -25%"
                         alt=""
                     / >
                     <img 
-                        class="mobile-graphic-blue" 
+                        class="mobile-graphic-<?php echo $options['iphone-colors'][1] ?>" 
                         src="<?php echo appDir ?>/images/mobile-screen-2.jpg" 
                         data-trigger="transform: translate(45%, -50%) translateZ(0) scale(0.85)"
                         data-hover="right: -25%"
                         alt=""
                     / >
                     <img 
-                        class="mobile-graphic-purple" 
+                        class="mobile-graphic-<?php echo $options['iphone-colors'][2] ?>" 
                         src="<?php echo appDir ?>/images/mobile-screen.png" 
                         data-hover="transform: scale(1.05) translateY(-47.5%) translateZ(0)"
                         alt=""
@@ -180,7 +181,7 @@
     
 <div class="row-no-gutter text-center">
             
-    <a href="<?php pageLink('blog/single.php') ?>" class="widget-spectrum-quarter-tub span-3 break-4-half break-2-full">
+    <a href="<?php echo $options['blog-link'] ?>" class="widget-spectrum-quarter-tub span-3 break-4-half break-2-full">
         <div class="widget_lid">
             <div class="widget_sticker">
                 <div class="widget_icon-light button-icon-plain-size-8">
@@ -197,7 +198,7 @@
         <div class="button-block-grey-5-fat relative">Read More</div>
     </a>
     
-    <a href="<?php pageLink('blog/single.php') ?>" class="widget-spectrum-quarter-tub span-3 break-4-half break-2-full">
+    <a href="<?php echo $options['blog-link'] ?>" class="widget-spectrum-quarter-tub span-3 break-4-half break-2-full">
         <div class="widget_lid">
             <div class="widget_sticker">
                 <div class="widget_icon-light button-icon-plain-size-8">
@@ -214,7 +215,7 @@
         <div class="button-block-grey-5-fat relative">Read More</div>
     </a>
     
-    <a href="<?php pageLink('blog/single.php') ?>" class="widget-spectrum-quarter-tub span-3 break-4-half break-2-full">
+    <a href="<?php echo $options['blog-link'] ?>" class="widget-spectrum-quarter-tub span-3 break-4-half break-2-full">
         <div class="widget_lid">
             <div class="widget_sticker">
                 <div class="widget_icon-light button-icon-plain-size-8">
@@ -231,7 +232,7 @@
         <div class="button-block-grey-5-fat relative">Read More</div>
     </a>
     
-    <a href="<?php pageLink('blog/single.php') ?>" class="widget-spectrum-quarter-tub span-3 break-4-half break-2-full">
+    <a href="<?php echo $options['blog-link'] ?>" class="widget-spectrum-quarter-tub span-3 break-4-half break-2-full">
         <div class="widget_lid">
             <div class="widget_sticker">
                 <div class="widget_icon-light button-icon-plain-size-8">

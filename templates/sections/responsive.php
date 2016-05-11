@@ -1,11 +1,8 @@
- <?php function responsive($custom = array()) { ?>
+ <?php function responsive($custom = array()) {
 
-    <?php $options = array_merge(array(
-        'iphone-colors' => array(
-            'white', 'purple', 'blue'
-        ),
+    $options = array_merge([
         'greyscale' => false
-    ), $custom); ?>
+    ], $custom); ?>
  
     <!-- Responsive -->
     <section class="section-primary-dot-map" id="mobile-optimized">
@@ -63,21 +60,21 @@
                 <div class="span-6 va-middle text-center min-break-3">
                     <div class="center-xy span-6<?php if ($options['greyscale']) echo ' greyscale' ?>">
                         <img 
-                            class="mobile-graphic-<?php echo $options['iphone-colors'][0] ?>" 
+                            class="mobile-graphic-<?php echo $GLOBALS['iphone-colors'][0] ?>" 
                             src="<?php echo appDir ?>/images/mobile-screen-1.jpg" 
                             data-trigger="transform: translate(-45%, -50%) translateZ(0) scale(0.85)"
                             data-hover="left: -25%"
                             alt=""
                         / >
                         <img 
-                            class="mobile-graphic-<?php echo $options['iphone-colors'][1] ?>" 
+                            class="mobile-graphic-<?php echo $GLOBALS['iphone-colors'][1] ?>" 
                             src="<?php echo appDir ?>/images/mobile-screen-5.jpg" 
                             data-trigger="transform: translate(45%, -50%) translateZ(0) scale(0.85)"
                             data-hover="right: -25%"
                             alt=""
                         / >
                         <img 
-                            class="mobile-graphic-<?php echo $options['iphone-colors'][2] ?>" 
+                            class="mobile-graphic-<?php echo $GLOBALS['iphone-colors'][2] ?>" 
                             src="<?php echo appDir ?>/images/mobile-screen.png" 
                             data-hover="transform: scale(1.05) translateY(-47.5%) translateZ(0)"
                             alt=""

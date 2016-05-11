@@ -2,6 +2,7 @@
 
     <?php $options = array_merge(array(
         'link' => '#',
+        'id' => null,
         'background' => null,
         'title-highlight' => false,
         'subTitle-highlight' => false
@@ -11,6 +12,8 @@
         class="section-primary" 
         <?php if ($options['background']) { ?>
             style="background-image: url('<?php echo appDir.$options['background'] ?>')"
+        <?php } if ($options['id']) { ?>
+            id="<?php echo $options['id'] ?>"
         <?php } ?>
     >
         <div class="container">

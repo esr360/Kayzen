@@ -15,7 +15,7 @@ define('env', 'prod');
  * Set which theme you are using
  * @const theme
  */
-define('theme', 'Blizzard');
+define('theme', 'Tempus');
 
 /**
  * Are you using multiple themes?
@@ -58,10 +58,10 @@ define('ROOT', dirname(__FILE__));
 define('appDir', '/app');
 
 /**
- * Create a global variable to store the theme name so it can be
- * dynamically updated
+ * Global variables
  */
  $GLOBALS['theme'] = theme;
+ $GLOBALS['iphone-colors'] = ['white', 'purple', 'blue'];
     
 /******************************************************************
  * Templates
@@ -127,6 +127,9 @@ include (ROOT.'/sections/testimonials.php');
 include (ROOT.'/sections/twitter-feed.php');
 include (ROOT.'/sections/utilities.php');
 include (ROOT.'/sections/why-choose-us.php');
+
+include (ROOT.'/views/further/_shop-category.php');
+include (ROOT.'/views/further/_shop-category-sidebar.php');
 
 include (ROOT.'/views/homepages/_homepage-1.php');
 include (ROOT.'/views/homepages/_homepage-2.php');

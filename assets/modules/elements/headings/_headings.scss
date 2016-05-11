@@ -146,7 +146,7 @@
             @include modifier('strikethrough') {
                 span {
                     &:after {
-                        right: calc(-75px - 1rem + this('spaced-spacing'));
+                        right: calc(-75px - 1rem + #{this('spaced-spacing')});
                     }
                 }
             } 
