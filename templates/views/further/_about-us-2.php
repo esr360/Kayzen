@@ -1,5 +1,9 @@
-<?php
+<?php function _aboutUs2($custom = array()) {
 
+    $options = array_merge([
+        'media-type' => 'portfolio' // 'blog' | 'portfolio'
+    ], $custom);
+    
     blocksWithQuote();
     
     testimonials();
@@ -15,9 +19,13 @@
     promoSection();
 
     statistics();
-
-    recentWork();
+    
+    if ($options['media-type'] == 'blog') {
+        recentArticles();
+    } else {
+        recentWork();
+    }
     
     googleMap();
             
-?>
+} ?>

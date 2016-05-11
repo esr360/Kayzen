@@ -29,6 +29,7 @@
         'zoom-bg-scale'                  : 1.3,
         'spectrum-quarter-padding'       : 2.5em 1em,
         'spectrum-quarter-large-padding' : 4%,
+        'titleLink-color'                : typography('colors', 'heading'),
         'tub-color'                      : color('greyscale', 'white'),
         'tub-background'                 : rgba(black, 0.4),
         'feature-padding'                : 15% 2em 2em,
@@ -339,6 +340,10 @@
             @include overwrite-component('group', $parent: 'heading') {
                 color: color('greyscale', 'white');
             }
+        }
+        
+        @include component('titleLink') {
+            color: this('titleLink-color');
         }
         
         @include component('lid') {

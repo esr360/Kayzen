@@ -41,7 +41,12 @@
                 'tag-line' => $tagLine
             ]);
 			
-			include (ROOT.'/views/further/_shop-single-sidebar.php');
+			_shopSingleSidebar([
+                'item-link' => themeLink($theme, '/shop-single.php'),
+                'item-root' => themeLink($theme, '/shop-category.php'),
+                'blog-link' => themeLink($theme, '/blog-single.php'),
+                'blog-root' => themeLink($theme, '/blog.php')
+            ]);
             
             appFooter();
         

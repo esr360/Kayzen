@@ -1,8 +1,15 @@
 <?php function _homepage6($custom = []) {
 
     $options = array_replace_recursive([
+        'blog-category' => pageLink('blog/classic/3-cols.php', 'pages', false),
+        'blog-single' => pageLink('blog/single.php', 'pages', false),
         'masonryFeatures' => [
-            'background' => '/images/billboard-2.jpg',
+            'link' => pageLink('blog/single.php', 'pages', false),
+            'background' => '/images/billboard-2.jpg'
+        ],
+        'sidebar' => [
+            'item-link' => pageLink('blog/single.php', 'pages', false),
+            'category' => pageLink('blog/classic/3-cols.php', 'pages', false)
         ]
     ], $custom);
 
@@ -158,7 +165,7 @@
                                     >
                                         <i class="fa fa-search"></i>
                                     </a>
-                                    <a href="#" class="button-icon-border-circle">
+                                    <a href="<?php echo $options['blog-single'] ?>" class="button-icon-border-circle">
                                         <i class="fa fa-link"></i>
                                     </a>
                                 </div>
@@ -170,16 +177,20 @@
                                 <div>Sep</div>
                                 <div>23</div>
                             </div>
-                            <h3 class="heading-heavy-size-3">Kayzen is Released</h3>
-                            <h4 class="heading-light">Posted by <a href="#">Naomi Olson</a></h4>
+                            <h3 class="heading-heavy-size-3">
+                                <a class="widget_titleLink" href="<?php echo $options['blog-single'] ?>">Kayzen is Released</a>
+                            </h3>
+                            <h4 class="heading-light">
+                                Posted by <a href="<?php echo $options['blog-category'] ?>">Naomi Olson</a>
+                            </h4>
                         </header>
                         <p>Cum socis natoque penatibus et magnis dis parturient montes...</p>
                         <div class="row-block stack-0">
                             <div class="span va-middle">
-                                <a href="#" class="button-primary-size-2">Read More</a>
+                                <a href="<?php echo $options['blog-single'] ?>" class="button-primary-size-2">Read More</a>
                             </div>
                             <div class="span va-middle text-right">
-                                <small>Posted in <a href="blog.html">Web Design</a></small>
+                                <small>Posted in <a href="<?php echo $options['blog-category'] ?>">Web Design</a></small>
                             </div>
                         </div>
                     </div>
@@ -195,7 +206,7 @@
                                     >
                                         <i class="fa fa-search"></i>
                                     </a>
-                                    <a href="#" class="button-icon-border-circle">
+                                    <a href="<?php echo $options['blog-single'] ?>" class="button-icon-border-circle">
                                         <i class="fa fa-link"></i>
                                     </a>
                                 </div>
@@ -207,16 +218,20 @@
                                 <div>Sep</div>
                                 <div>23</div>
                             </div>
-                            <h3 class="heading-heavy-size-3">Lorem Ipsum Dolor</h3>
-                            <h4 class="heading-light">Posted by <a href="#">Naomi Olson</a></h4>
+                            <h3 class="heading-heavy-size-3">
+                                <a class="widget_titleLink" href="<?php echo $options['blog-single'] ?>">Lorem Ipsum Dolor</a>
+                            </h3>
+                            <h4 class="heading-light">
+                                Posted by <a href="<?php echo $options['blog-category'] ?>">Naomi Olson</a>
+                            </h4>
                         </header>
                         <p>Cum socis natoque penatibus et magnis dis parturient montes...</p>
                         <div class="row-block stack-0">
                             <div class="span va-middle">
-                                <a href="#" class="button-primary-size-2">Read More</a>
+                                <a href="<?php echo $options['blog-single'] ?>" class="button-primary-size-2">Read More</a>
                             </div>
                             <div class="span va-middle text-right">
-                                <small>Posted in <a href="blog.html">Web Design</a></small>
+                                <small>Posted in <a href="<?php echo $options['blog-category'] ?>">Web Design</a></small>
                             </div>
                         </div>
                     </div>
@@ -232,7 +247,7 @@
                                     >
                                         <i class="fa fa-search"></i>
                                     </a>
-                                    <a href="#" class="button-icon-border-circle">
+                                    <a href="<?php echo $options['blog-single'] ?>" class="button-icon-border-circle">
                                         <i class="fa fa-link"></i>
                                     </a>
                                 </div>
@@ -244,16 +259,20 @@
                                 <div>Sep</div>
                                 <div>23</div>
                             </div>
-                            <h3 class="heading-heavy-size-3">Kayzen is The Best</h3>
-                            <h4 class="heading-light">Posted by <a href="#">James Wilson</a></h4>
+                            <h3 class="heading-heavy-size-3">
+                                <a class="widget_titleLink" href="<?php echo $options['blog-single'] ?>">Kayzen is The Best</a>
+                            </h3>
+                            <h4 class="heading-light">
+                                Posted by <a href="<?php echo $options['blog-category'] ?>">James Wilson</a>
+                            </h4>
                         </header>
                         <p>Cum socis natoque penatibus et magnis dis parturient montes...</p>
                         <div class="row-block stack-0">
                             <div class="span va-middle">
-                                <a href="#" class="button-primary-size-2">Read More</a>
+                                <a href="<?php echo $options['blog-single'] ?>" class="button-primary-size-2">Read More</a>
                             </div>
                             <div class="span va-middle text-right">
-                                <small>Posted in <a href="blog.html">News/Updates</a></small>
+                                <small>Posted in <a href="<?php echo $options['blog-category'] ?>">News/Updates</a></small>
                             </div>
                         </div>
                     </div>
@@ -266,7 +285,7 @@
             
             <aside class="sidebar span-4">
 
-                <?php sidebar(); ?>
+                    <?php sidebar($options['sidebar']) ?>
                 
             </aside><!-- sidebar -->
             

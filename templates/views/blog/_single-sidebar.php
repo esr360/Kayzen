@@ -1,71 +1,83 @@
-<section class="section-primary">
-        
-    <div class="container">
-        
-        <div class="row">
-            
-            <div class="span-8">
-        
-                <div class="thumbnail-article">
-                    <img src="<?php echo stockImage('demo/stock-'.rand(1, 7).'.jpg') ?>">
-                </div>
-        
-                <?php demoPost() ?>
-                
-                <hr class="hrule-stripes-large" />
-                
-                <?php socialWidgets() ?>
-                
-                <?php include (ROOT.'/sections/project-author.php'); ?>
-                
-                <?php comments() ?>
-                
-                <h2 class="heading-size-6-light-strikethrough-dots text-center"><span>Related Posts</span></h2>
+<?php function _blogSingleSidebar($custom = []) {
 
-                <div class="row-flow row-waffle-large">
+    $options = array_replace_recursive([
+        'link' => pageLink('blog/single-sidebar.php', 'pages', false),
+        'root' => pageLink('blog/classic/full-width-sidebar.php', 'pages', false)
+    ], $custom); ?>
+        
+    <section class="section-primary">
+            
+        <div class="container">
+            
+            <div class="row">
+                
+                <div class="span-8">
+            
+                    <div class="thumbnail-article">
+                        <img src="<?php echo stockImage('demo/stock-'.rand(1, 7).'.jpg') ?>">
+                    </div>
+            
+                    <?php demoPost() ?>
                     
-                    <?php  
+                    <hr class="hrule-stripes-large" />
                     
-                        articleItem(array(
-                            'size'          => 'small',
-                            'title'         => 'Kayzen is Released',
-                            'span'          => 4,
-                            'class'         => 'break-4-half break-2-full relative',
-                            'blurb'         => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis blandit lectus ex, id feugiat...'
-                        ));
+                    <?php socialWidgets() ?>
                     
-                        articleItem(array(
-                            'size'          => 'small',
-                            'title'         => 'Kayzen is Released',
-                            'span'          => 4,
-                            'class'         => 'break-4-half break-2-full relative',
-                            'blurb'         => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis blandit lectus ex, id feugiat...'
-                        ));
+                    <?php include (ROOT.'/sections/project-author.php'); ?>
                     
-                        articleItem(array(
-                            'size'          => 'small',
-                            'title'         => 'Kayzen is Released',
-                            'span'          => 4,
-                            'class'         => 'min-break-4 relative',
-                            'blurb'         => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis blandit lectus ex, id feugiat...'
-                        ));
+                    <?php comments() ?>
+                    
+                    <h2 class="heading-size-6-light-strikethrough-dots text-center"><span>Related Posts</span></h2>
+
+                    <div class="row-flow row-waffle-large">
                         
-                    ?>
-            
-                </div><!-- row -->
-
-            </div><!-- main content (span-8) -->
-        
-            <hr class="hrule-stripes-large max-break-3" />
-        
-            <aside class="sidebar span-4">
-
-                <?php sidebar(); ?>
+                        <?php  
+                        
+                            articleItem(array(
+                                'size'          => 'small',
+                                'title'         => 'Kayzen is Released',
+                                'span'          => 4,
+                                'class'         => 'break-4-half break-2-full relative',
+                                'blurb'         => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis blandit lectus ex, id feugiat...'
+                            ));
+                        
+                            articleItem(array(
+                                'size'          => 'small',
+                                'title'         => 'Kayzen is Released',
+                                'span'          => 4,
+                                'class'         => 'break-4-half break-2-full relative',
+                                'blurb'         => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis blandit lectus ex, id feugiat...'
+                            ));
+                        
+                            articleItem(array(
+                                'size'          => 'small',
+                                'title'         => 'Kayzen is Released',
+                                'span'          => 4,
+                                'class'         => 'min-break-4 relative',
+                                'blurb'         => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis blandit lectus ex, id feugiat...'
+                            ));
+                            
+                        ?>
                 
-            </aside><!-- sidebar -->
-            
-        </div><!-- row -->
-        
-    </div><!-- container -->
+                    </div><!-- row -->
 
-</section>
+                </div><!-- main content (span-8) -->
+            
+                <hr class="hrule-stripes-large max-break-3" />
+            
+                <aside class="sidebar span-4">
+
+                    <?php sidebar(array(
+                        'item-link' => $options['link'],
+                        'category' => $options['root']
+                    )); ?>
+                    
+                </aside><!-- sidebar -->
+                
+            </div><!-- row -->
+            
+        </div><!-- container -->
+
+    </section>
+    
+<?php } ?>

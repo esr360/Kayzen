@@ -50,17 +50,26 @@
                     ],
                     [
                         'button-oval-size-4-border-white',
-                        '#s-welcome',
+                        '#featuredArticles',
                         'Explore The Potential'
                     ]
                 ],
+                'wheel-anchor' => '#featuredArticles',
                 'bg-parallax' => false,
             ]);
             
             _homepage6([
+                'blog-category' => themeLink($theme, '/blog.php'),
+                'blog-single' => themeLink($theme, '/blog-single.php'),
                 'masonryFeatures' => [
+                    'id' => 'featuredArticles',
+                    'link' => themeLink($theme, '/blog.php'),
                     'title-highlight' => 'highlight-dark',
                     'subTitle-highlight' => 'highlight'
+                ],
+                'sidebar' => [
+                    'item-link' => themeLink($theme, '/blog-single.php'),
+                    'category' => themeLink($theme, '/blog.php')
                 ]
             ]);
             

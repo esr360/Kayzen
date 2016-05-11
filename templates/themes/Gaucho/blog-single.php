@@ -39,8 +39,11 @@
                 ],
                 'tag-line' => $tagLine
             ]);
-
-            include (ROOT.'/views/blog/_single-sidebar.php');
+            
+            _blogSingleSidebar([
+                'link' => themeLink($theme, '/blog-single.php'),
+                'root' => themeLink($theme, '/blog.php')
+            ]);
             
             appFooter();
         

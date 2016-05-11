@@ -46,7 +46,7 @@
                 'tag-line' => $tagLine
             ]);
 			
-			include (ROOT.'/views/further/_about-us-2.php');
+			_aboutUs2();
             
             appFooter(); 
         

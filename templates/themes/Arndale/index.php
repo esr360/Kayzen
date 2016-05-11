@@ -52,6 +52,9 @@
                 'inStore' => [
                     'link' => themeLink($theme, '/shop-single.php'),
                     'root' => themeLink($theme, '/shop-category.php')
+                ],
+                'featureCards' => [
+                    'item-link' => themeLink($theme, '/shop-category.php')
                 ]
             ]);
             

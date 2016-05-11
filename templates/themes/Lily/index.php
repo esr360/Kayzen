@@ -57,6 +57,9 @@
                         'modifiers' => 'heading-heavy-size-6 font-2',
                         'highlight' => false
                     ]
+                ],
+                'featureCards' => [
+                    'item-link' => themeLink($theme, '/shop-category.php')
                 ]
             ]);
             

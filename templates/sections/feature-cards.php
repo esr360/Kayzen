@@ -15,7 +15,7 @@
                                 <a href="<?php echo stockImage('demo/stock-7.jpg') ?>" class="button-icon-border-circle" rel="lightbox">
                                     <i class="fa fa-search"></i>
                                 </a>
-                                <a href="#" class="button-icon-border-circle">
+                                <a href="<?php echo $options['item-link'] ?>" class="button-icon-border-circle">
                                     <i class="fa fa-link"></i>
                                 </a>
                             </div>
@@ -40,7 +40,7 @@
                                 <a href="<?php echo stockImage('demo/stock-3.jpg') ?>" class="button-icon-border-circle" rel="lightbox">
                                     <i class="fa fa-search"></i>
                                 </a>
-                                <a href="#" class="button-icon-border-circle">
+                                <a href="<?php echo $options['item-link'] ?>" class="button-icon-border-circle">
                                     <i class="fa fa-link"></i>
                                 </a>
                             </div>
@@ -65,7 +65,7 @@
                                 <a href="<?php echo stockImage('demo/stock-6.jpg') ?>" class="button-icon-border-circle" rel="lightbox">
                                     <i class="fa fa-search"></i>
                                 </a>
-                                <a href="#" class="button-icon-border-circle">
+                                <a href="<?php echo $options['item-link'] ?>" class="button-icon-border-circle">
                                     <i class="fa fa-link"></i>
                                 </a>
                             </div>

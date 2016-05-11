@@ -45,7 +45,10 @@
                 'tag-line' => $tagLine
             ]);
             
-            include (ROOT.'/views/blog/classic/_full-width-sidebar.php');
+            _blogFullWidthSidebar([
+                'link' => themeLink($theme, '/blog-single.php'),
+                'root' => themeLink($theme, '/blog.php')
+            ]);
             
             appFooter();
         

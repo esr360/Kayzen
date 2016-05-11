@@ -1,5 +1,9 @@
-<?php
+<?php function _aboutUs($custom = array()) {
 
+    $options = array_merge([
+        'media-type' => 'portfolio' // 'blog' | 'portfolio'
+    ], $custom);
+    
     earthSlider();
 
     skills();
@@ -15,9 +19,13 @@
     promoSection();
 
     statistics();
-
-    recentWork();
+    
+    if ($options['media-type'] == 'blog') {
+        recentArticles();
+    } else {
+        recentWork();
+    }
 
     googleMap();
 
-?>
+} ?>

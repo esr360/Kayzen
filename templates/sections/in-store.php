@@ -191,7 +191,9 @@
                                 'height'   => 'tall',
                                 'size'     => 'small',
                                 'span'     => 3,
-                                'class'    => 'break-3-half break-2-full'
+                                'class'    => 'break-3-half break-2-full',
+                                'link'     => $options['link'],
+                                'root'     => $options['root']
                             ));
                             
                             articleItem(array(

@@ -121,19 +121,16 @@
         
             statistics();
     
-            recentWork(array(
-                'item-link' => themeLink($theme, '/portfolio-single.php'),
-                'title' => array(
-                    'content' => 'Our Portfolio',
+            recentArticles([
+                'title' => [
                     'modifiers' => 'heading-uppercase-light-brand-1-size-5-highlight',
                     'highlight' => true
-                ),
-                'sub-title' => array(
-                    'content' => 'Some Recent Work',
+                ],
+                'sub-title' => [
                     'modifiers' => 'heading-uppercase-heavy-size-6-highlight-dark font-2',
                     'highlight' => true
-                )
-            ));
+                ]
+            ]);
             
             googleMap();
             

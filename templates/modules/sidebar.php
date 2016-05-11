@@ -2,6 +2,7 @@
 
     <?php $options = array_merge(array(
         'type' => 'blog',
+        'item-link' => pageLink('blog/single-sidebar.php', 'pages', false),
         'category' => pageLink('blog/classic/3-cols-filterable.php', 'pages', false),
         'tabs_nav-modifiers' => ''
     ), $custom); ?>
@@ -33,7 +34,7 @@
                                 </div>
                             <?php } ?>
                             <div>
-                                <h3 class="heading">Lorem Ipsum Dolor</h3>
+                                <h3 class="heading"><a class="widget_titleLink" href="<?php echo $options['item-link'] ?>">Lorem Ipsum Dolor</a></h3>
                                 <h4 class="heading-light-uppercase-size-1">Category: <a href="<?php echo $options['category'] ?>">Themes</a></h4>
                                 <?php if ($options['type'] == 'blog') { ?>
                                     <ul class="list-tags-small">
@@ -75,7 +76,7 @@
                                 </div>
                             <?php } ?>
                             <span>
-                                <h3 class="heading">Lorem Ipsum Dolor</h3>
+                                <h3 class="heading"><a class="widget_titleLink" href="<?php echo $options['item-link'] ?>">Lorem Ipsum Dolor</a></h3>
                                 <h4 class="heading-light-uppercase-size-1">Category: <a href="<?php echo $options['category'] ?>">Themes</a></h4>
                                 <?php if ($options['type'] == 'blog') { ?>
                                     <ul class="list-tags-small">
@@ -117,7 +118,7 @@
                                 </div>
                             <?php } ?>
                             <span>
-                                <h3 class="heading">Lorem Ipsum Dolor</h3>
+                                <h3 class="heading"><a class="widget_titleLink" href="<?php echo $options['item-link'] ?>">Lorem Ipsum Dolor</a></h3>
                                 <h4 class="heading-light-uppercase-size-1">Category: <a href="<?php echo $options['category'] ?>">Themes</a></h4>
                                 <?php if ($options['type'] == 'blog') { ?>
                                     <ul class="list-tags-small">
@@ -161,7 +162,7 @@
                                 </div>
                             <?php } ?>
                             <div>
-                                <h3 class="heading">Lorem Ipsum Dolor</h3>
+                                <h3 class="heading"><a class="widget_titleLink" href="<?php echo $options['item-link'] ?>">Lorem Ipsum Dolor</a></h3>
                                 <h4 class="heading-light-uppercase-size-1">Category: <a href="<?php echo $options['category'] ?>">Themes</a></h4>
                                 <?php if ($options['type'] == 'blog') { ?>
                                     <ul class="list-tags-small">
@@ -203,7 +204,7 @@
                                 </div>
                             <?php } ?>
                             <span>
-                                <h3 class="heading">Lorem Ipsum Dolor</h3>
+                                <h3 class="heading"><a class="widget_titleLink" href="<?php echo $options['item-link'] ?>">Lorem Ipsum Dolor</a></h3>
                                 <h4 class="heading-light-uppercase-size-1">Category: <a href="<?php echo $options['category'] ?>">Themes</a></h4>
                                 <?php if ($options['type'] == 'blog') { ?>
                                     <ul class="list-tags-small">
@@ -245,7 +246,7 @@
                                 </div>
                             <?php } ?>
                             <span>
-                                <h3 class="heading">Lorem Ipsum Dolor</h3>
+                                <h3 class="heading"><a class="widget_titleLink" href="<?php echo $options['item-link'] ?>">Lorem Ipsum Dolor</a></h3>
                                 <h4 class="heading-light-uppercase-size-1">Category: <a href="<?php echo $options['category'] ?>">Themes</a></h4>
                                 <?php if ($options['type'] == 'blog') { ?>
                                     <ul class="list-tags-small">
@@ -289,7 +290,7 @@
                                 </div>
                             <?php } ?>
                             <div>
-                                <h3 class="heading">Lorem Ipsum Dolor</h3>
+                                <h3 class="heading"><a class="widget_titleLink" href="<?php echo $options['item-link'] ?>">Lorem Ipsum Dolor</a></h3>
                                 <h4 class="heading-light-uppercase-size-1">Category: <a href="<?php echo $options['category'] ?>">Themes</a></h4>
                                 <?php if ($options['type'] == 'blog') { ?>
                                     <ul class="list-tags-small">
@@ -331,7 +332,7 @@
                                 </div>
                             <?php } ?>
                             <span>
-                                <h3 class="heading">Lorem Ipsum Dolor</h3>
+                                <h3 class="heading"><a class="widget_titleLink" href="<?php echo $options['item-link'] ?>">Lorem Ipsum Dolor</a></h3>
                                 <h4 class="heading-light-uppercase-size-1">Category: <a href="<?php echo $options['category'] ?>">Themes</a></h4>
                                 <?php if ($options['type'] == 'blog') { ?>
                                     <ul class="list-tags-small">
@@ -373,7 +374,7 @@
                                 </div>
                             <?php } ?>
                             <span>
-                                <h3 class="heading">Lorem Ipsum Dolor</h3>
+                                <h3 class="heading"><a class="widget_titleLink" href="<?php echo $options['item-link'] ?>">Lorem Ipsum Dolor</a></h3>
                                 <h4 class="heading-light-uppercase-size-1">Category: <a href="<?php echo $options['category'] ?>">Themes</a></h4>
                                 <?php if ($options['type'] == 'blog') { ?>
                                     <ul class="list-tags-small">

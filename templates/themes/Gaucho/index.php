@@ -31,7 +31,17 @@
                 )
             ));
 			
-			_homepage6();
+			_homepage6([
+                'blog-category' => themeLink($theme, '/blog.php'),
+                'blog-single' => themeLink($theme, '/blog-single.php'),
+                'masonryFeatures' => [
+                    'link' => themeLink($theme, '/blog.php')
+                ],
+                'sidebar' => [
+                    'item-link' => themeLink($theme, '/blog-single.php'),
+                    'category' => themeLink($theme, '/blog.php')
+                ]
+            ]);
             
             appFooter();
                     

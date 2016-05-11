@@ -349,7 +349,9 @@
         <?php if ($options['type'] == 'shop') { ?>
         
             <header class="heading_group-small">
-                <h3 class="heading-heavy-size-4"><?php echo $options['title'] ?></h3>
+                <h3 class="heading-heavy-size-4">
+                    <a class="widget_titleLink" href="<?php echo $options['link'] ?>"><?php echo $options['title'] ?></a>
+                </h3>
                 <h4 class="heading-light-uppercase-size-2">
                     Category: <a href="<?php echo $options['root'] ?>"><?php echo $options['category'] ?></a>
                 </h4>

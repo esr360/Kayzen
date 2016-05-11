@@ -15,7 +15,7 @@ define('env', 'prod');
  * Set which theme you are using
  * @const theme
  */
-define('theme', 'Arndale');
+define('theme', 'Gaucho');
 
 /**
  * Are you using multiple themes?
@@ -128,8 +128,15 @@ include (ROOT.'/sections/twitter-feed.php');
 include (ROOT.'/sections/utilities.php');
 include (ROOT.'/sections/why-choose-us.php');
 
+include (ROOT.'/views/blog/classic/_full-width-sidebar.php');
+include (ROOT.'/views/blog/_single-sidebar.php');
+
+include (ROOT.'/views/further/_about-us.php');
+include (ROOT.'/views/further/_about-us-2.php');
 include (ROOT.'/views/further/_shop-category.php');
 include (ROOT.'/views/further/_shop-category-sidebar.php');
+include (ROOT.'/views/further/_shop-single.php');
+include (ROOT.'/views/further/_shop-single-sidebar.php');
 
 include (ROOT.'/views/homepages/_homepage-1.php');
 include (ROOT.'/views/homepages/_homepage-2.php');

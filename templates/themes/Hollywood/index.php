@@ -32,9 +32,16 @@
             ));
 			
 			_homepage6([
+                'blog-category' => themeLink($theme, '/blog.php'),
+                'blog-single' => themeLink($theme, '/blog-single.php'),
                 'masonryFeatures' => [
+                    'link' => themeLink($theme, '/blog-single.php'),
                     'title-highlight' => 'highlight-dark',
                     'subTitle-highlight' => 'highlight'
+                ],
+                'sidebar' => [
+                    'item-link' => themeLink($theme, '/blog-single.php'),
+                    'category' => themeLink($theme, '/blog.php')
                 ]
             ]);
             

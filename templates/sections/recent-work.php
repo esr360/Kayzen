@@ -1,19 +1,19 @@
- <?php function recentWork($custom = array()) {
+ <?php function recentWork($custom = []) {
 
-    $options = array_merge(array(
-        'items'     => 3,
+    $options = array_merge([
+        'items' => 3,
         'id' => null,
-        'title' => array(
+        'title' => [
             'content' => 'Our Portfolio',
             'modifiers' => 'heading-uppercase-light-brand-1-spaced-size-4',
             'highlight' => false
-        ),
-        'sub-title' => array(
+        ],
+        'sub-title' => [
             'content' => 'Some Recent Work',
             'modifiers' => 'heading-uppercase-heavy-size-7 font-2',
             'highlight' => false
-        )
-    ), $custom); ?>
+        ]
+    ], $custom); ?>
 
     <section class="section-primary" <?php if ($options['id']) echo 'id="'.$options['id'].'"' ?>>
     
@@ -44,22 +44,22 @@
                     
                     // last item
                     if ($i == $options['items'] - 1) {
-                        articleItem(array(
+                        articleItem([
                             'type'      => 'portfolio',
                             'matrix'    => true,
                             'span'      => 4,
                             'class'     => 'break-3-half break-2-full min-break-2'
-                        ));
+                        ]);
                     } 
                     
                     // all other items
                     else {
-                        articleItem(array(
+                        articleItem([
                             'type'      => 'portfolio',
                             'matrix'    => true,
                             'span'      => 4,
                             'class'     => 'break-3-half break-2-full'
-                        ));
+                        ]);
                     }
                     
                 } ?>

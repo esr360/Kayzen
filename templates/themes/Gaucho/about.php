@@ -6,6 +6,7 @@
     $tagLine = 'Aenean lobortis ante nunc urabitur at enim nisi.';
     // update the global theme variable
     $GLOBALS['theme'] = $theme;
+    $GLOBALS['iphone-colors'] = ['white', 'green', 'blue']
 ?>
 
 <!DOCTYPE html>
@@ -40,7 +41,7 @@
                 'tag-line' => $tagLine
             ]);
 			
-			include (ROOT.'/views/further/_about-us.php');
+			_aboutUs2(['media-type' => 'blog']);
             
             appFooter();
                     
