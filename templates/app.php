@@ -15,7 +15,7 @@ define('env', 'prod');
  * Set which theme you are using
  * @const theme
  */
-define('theme', 'Tempus');
+define('theme', 'Arndale');
 
 /**
  * Are you using multiple themes?

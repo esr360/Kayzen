@@ -44,7 +44,8 @@
                     'title' => [
                         'text' => '<b>Welcome to Kayzen<br />A Unique Theme Framework</b>',
                         'class' => 'heading-uppercase-heavy-size-8-highlight-dark font-2'
-                    ]
+                    ],
+                    'bg-img' => stockImage('demo/stock-17.jpg'),
                 ],
                 'blog-link' => themeLink($theme, '/blog-single.php')
             ]);

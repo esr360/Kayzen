@@ -24,7 +24,8 @@
             sideNavClass    : 'side-nav',
             sideVisibleAt   : _modules[$module]['side']['visible-at'],
             collapsible     : _option('side-nav', 'collapsible'),
-            navOpenDefault  : _modules['side-nav']['collapsible']['open-by-default']
+            navOpenDefault  : _modules['side-nav']['collapsible']['open-by-default'],
+            nonSideModifier : 'absolute-opaque'
         }, custom);
         
         // Run the code on each occurance of the element
@@ -113,7 +114,7 @@
                 var navClasses = navigation.attr('class');
                 $(window).bind("load resize", function() {
                     if (breakpoint('min-width', options.sideVisibleAt)) {
-                        header.removeClass($module + '-absolute-js').addClass(options.sideNavClass);
+                        header.removeClass($module + '-' + options.nonSideModifier + '-js').addClass(options.sideNavClass);
                         navigation.removeAttr('class');
                         // if the header is not correctly located in the DOM, make it so
                         if (!$('body > [class*="' + $module + '"]').length) {
@@ -124,7 +125,7 @@
                         navigation.addClass(navClasses);
                         // relocate to below top-bar if top-bar exists
                         if(_topBar.length) {
-                            header.insertAfter(_topBar).addClass($module + '-absolute-js');
+                            header.insertAfter(_topBar).addClass($module + '-' + options.nonSideModifier + '-js');
                         }
                     }
                 });

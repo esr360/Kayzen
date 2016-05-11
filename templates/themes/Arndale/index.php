@@ -46,7 +46,12 @@
                 ],
                 'masonryFeatures' => [
                     'title-highlight' => 'highlight-dark',
-                    'subTitle-highlight' => 'highlight'
+                    'subTitle-highlight' => 'highlight',
+                    'link' => themeLink($theme, '/shop-category.php'),
+                ],
+                'inStore' => [
+                    'link' => themeLink($theme, '/shop-single.php'),
+                    'root' => themeLink($theme, '/shop-category.php')
                 ]
             ]);
             
