@@ -25,11 +25,14 @@
 
             billboard([
                 'modifiers' => 'full-screen',
-                'headline'  => '404',
-                'title'     => [
-                    'text'  => $title
+                'headline' => [
+                    'text' => '404'
+                 ],
+                'title' => [
+                    'text' => $title
                 ],
-                'search'    => true
+                'tag-line' => '',
+                'search' => true
             ]);
             
             appFooter(); 

@@ -259,7 +259,7 @@
                                     >
                                         <i class="fa fa-search"></i>
                                     </a>
-                                    <a href="#" class="button-icon-border-circle">
+                                    <a href="<?php pageLink('blog/single-sidebar.php') ?>" class="button-icon-border-circle">
                                         <i class="fa fa-link"></i>
                                     </a>
                                 </div>
@@ -271,16 +271,18 @@
                                 <div>Sep</div>
                                 <div>23</div>
                             </div>
-                            <h3 class="heading-heavy-size-3">Kayzen is Released</h3>
-                            <h4 class="heading-light">Posted by <a href="#">Naomi Olson</a></h4>
+                            <h3 class="heading-heavy-size-3">
+                                <a class="widget_titleLink" href="<?php pageLink('blog/single-sidebar.php') ?>">Kayzen is Released</a>
+                            </h3>
+                            <h4 class="heading-light">Posted by <a href="<?php pageLink('blog/masonry/3-cols-filterable.php') ?>">Naomi Olson</a></h4>
                         </header>
                         <p>Cum socis natoque penatibus et magnis dis parturient montes...</p>
                         <div class="row-block stack-0">
                             <div class="span va-middle">
-                                <a href="#" class="button-primary-size-2">Read More</a>
+                                <a href="<?php pageLink('blog/single-sidebar.php') ?>" class="button-primary-size-2">Read More</a>
                             </div>
                             <div class="span va-middle text-right">
-                                <small>Posted in <a href="blog.html">Web Design</a></small>
+                                <small>Posted in <a href="<?php pageLink('blog/masonry/3-cols-filterable.php') ?>">Web Design</a></small>
                             </div>
                         </div>
                     </div>
@@ -296,7 +298,7 @@
                                     >
                                         <i class="fa fa-search"></i>
                                     </a>
-                                    <a href="#" class="button-icon-border-circle">
+                                    <a href="<?php pageLink('blog/single-sidebar.php') ?>" class="button-icon-border-circle">
                                         <i class="fa fa-link"></i>
                                     </a>
                                 </div>
@@ -308,16 +310,18 @@
                                 <div>Sep</div>
                                 <div>23</div>
                             </div>
-                            <h3 class="heading-heavy-size-3">Lorem Ipsum Dolor</h3>
-                            <h4 class="heading-light">Posted by <a href="#">Naomi Olson</a></h4>
+                            <h3 class="heading-heavy-size-3">
+                                <a class="widget_titleLink" href="<?php pageLink('blog/single-sidebar.php') ?>">Lorem Ipsum Dolor</a>
+                            </h3>
+                            <h4 class="heading-light">Posted by <a href="<?php pageLink('blog/masonry/3-cols-filterable.php') ?>">Naomi Olson</a></h4>
                         </header>
                         <p>Cum socis natoque penatibus et magnis dis parturient montes...</p>
                         <div class="row-block stack-0">
                             <div class="span va-middle">
-                                <a href="#" class="button-primary-size-2">Read More</a>
+                                <a href="<?php pageLink('blog/single-sidebar.php') ?>" class="button-primary-size-2">Read More</a>
                             </div>
                             <div class="span va-middle text-right">
-                                <small>Posted in <a href="blog.html">Web Design</a></small>
+                                <small>Posted in <a href="<?php pageLink('blog/masonry/3-cols-filterable.php') ?>">Web Design</a></small>
                             </div>
                         </div>
                     </div>
@@ -333,7 +337,7 @@
                                     >
                                         <i class="fa fa-search"></i>
                                     </a>
-                                    <a href="#" class="button-icon-border-circle">
+                                    <a href="<?php pageLink('blog/single-sidebar.php') ?>" class="button-icon-border-circle">
                                         <i class="fa fa-link"></i>
                                     </a>
                                 </div>
@@ -345,16 +349,18 @@
                                 <div>Sep</div>
                                 <div>23</div>
                             </div>
-                            <h3 class="heading-heavy-size-3">Kayzen is The Best</h3>
-                            <h4 class="heading-light">Posted by <a href="#">James Wilson</a></h4>
+                            <h3 class="heading-heavy-size-3">
+                                <a class="widget_titleLink" href="<?php pageLink('blog/single-sidebar.php') ?>">Kayzen is The Best</a>
+                            </h3>
+                            <h4 class="heading-light">Posted by <a href="<?php pageLink('blog/masonry/3-cols-filterable.php') ?>">James Wilson</a></h4>
                         </header>
                         <p>Cum socis natoque penatibus et magnis dis parturient montes...</p>
                         <div class="row-block stack-0">
                             <div class="span va-middle">
-                                <a href="#" class="button-primary-size-2">Read More</a>
+                                <a href="<?php pageLink('blog/single-sidebar.php') ?>" class="button-primary-size-2">Read More</a>
                             </div>
                             <div class="span va-middle text-right">
-                                <small>Posted in <a href="blog.html">News/Updates</a></small>
+                                <small>Posted in <a href="<?php pageLink('blog/masonry/3-cols-filterable.php') ?>">News/Updates</a></small>
                             </div>
                         </div>
                     </div>

@@ -30,7 +30,7 @@
                 'tag-line' => $tagLine
             ]);
 			
-			include (ROOT.'/views/further/_shop-single.php');
+			_shopSingle();
             
             promoBanner();
             

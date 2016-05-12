@@ -171,7 +171,7 @@
                         <li class="span-4"><a href="/templates/pages/blog/classic/2-cols.php">2 Columns</a></li>
                         <li class="span-4"><a href="/templates/pages/blog/classic/3-cols.php">3 Columns</a></li>
                         <li class="span-4"><a href="/templates/pages/blog/classic/3-cols-filterable.php">3 Columns Filterable</a></li>
-                        <li class="span-4"><a href="/templates/pages/blog/classic/3-cols-infinite=scroll.php">3 Columns Infinite Scroll</a></li>
+                        <li class="span-4"><a href="/templates/pages/blog/classic/3-cols-infinite-scroll.php">3 Columns Infinite Scroll</a></li>
                         <li class="span-4"><a href="/templates/pages/blog/classic/4-cols.php">4 Columns</a></li>
                         <li class="span-4"><a href="/templates/pages/blog/classic/full-width.php">Full Width</a></li>
                         <li class="span-4"><a href="/templates/pages/blog/classic/full-width-sidebar.php">Full Width Sidebar</a></li>
@@ -205,7 +205,7 @@
                 <div class="">
                     <ul class="list-arrow-blocks row-flow">
                         <li class="span-4"><a href="/templates/pages/further/about-us.php">About Us</a></li>
-                        <li class="span-4"><a href="/templates/pages/further/abiut-us-2.php">About Us 2</a></li>
+                        <li class="span-4"><a href="/templates/pages/further/about-us-2.php">About Us 2</a></li>
                         <li class="span-4"><a href="/templates/pages/further/contact-us.php">Contact Us</a></li>
                         <li class="span-4"><a href="/templates/pages/further/contact-us-2.php">Contact Us 2</a></li>
                         <li class="span-4"><a href="/templates/pages/further/services.php">Services</a></li>

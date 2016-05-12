@@ -30,7 +30,7 @@
                 'tag-line' => $tagLine
             ]);
             
-            include (ROOT.'/views/portfolio/classic/_3-cols-carousel.php');
+            include (ROOT.'/views/portfolio/classic/_3-cols-filterable.php');
         
             promoBanner();
             

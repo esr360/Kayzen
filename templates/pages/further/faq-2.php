@@ -30,7 +30,7 @@
                 'tag-line' => $tagLine
             ]);
 			
-			include (ROOT.'/views/further/_faq.php');
+			include (ROOT.'/views/further/_faq-2.php');
         
             appFooter();
             

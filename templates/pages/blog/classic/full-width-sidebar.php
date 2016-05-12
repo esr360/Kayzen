@@ -30,7 +30,7 @@
                 'tag-line' => $tagLine
             ]);
             
-            include (ROOT.'/views/blog/classic/_full-width-sidebar.php');
+            _blogFullWidthSidebar();
             
             appFooter(); 
             

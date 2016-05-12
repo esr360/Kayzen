@@ -30,7 +30,7 @@
                 'tag-line' => $tagLine
             ]);
 			
-			include (ROOT.'/views/further/_shop-category-sidebar.php');
+			_shopCategorySidebar();
             
             appFooter(); 
         

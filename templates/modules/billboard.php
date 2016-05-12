@@ -104,7 +104,7 @@
                         <script>
                             $(document).ready(function() {
                                 $(".countdown").countdown({
-                                    date : '1 May 2016 09:00:00',
+                                    date : '23 July 2016 09:00:00',
                                     format : 'on'
                                 });
                             });

@@ -25,8 +25,13 @@
 
             billboard([
                 'modifiers' => 'full-screen',
-                'headline'  => 'Coming Soon',
-                'title'     => $title,
+                'headline'  => [
+                    'text' => 'Coming Soon'
+                ],
+                'title' => [
+                    'text' => $title
+                ],
+                'tag-line' => '',
                 'countdown' => true
             ]);
             

@@ -15,7 +15,7 @@ define('env', 'prod');
  * Set which theme you are using
  * @const theme
  */
-define('theme', 'Gaucho');
+define('theme', 'Kayzen');
 
 /**
  * Are you using multiple themes?

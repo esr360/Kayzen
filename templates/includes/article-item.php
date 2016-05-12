@@ -61,7 +61,7 @@
      */
     if ($options['root'] === $itemRoot && $options['type'] === 'portfolio') {
         if ($GLOBALS['theme'] == 'Kayzen') {
-            $options['root'] = pageLink('portfolio/classic/3-cols.php', 'pages', false);
+            $options['root'] = pageLink('portfolio/classic/3-cols-filterable.php', 'pages', false);
         } else {
             $options['root'] = themeLink($GLOBALS['theme'], '/portfolio.php');
         } 

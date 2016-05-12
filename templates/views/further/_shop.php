@@ -1,6 +1,8 @@
 <?php
 
-    masonryFeatures();
+    masonryFeatures([
+        'link' => pageLink('further/shop-category.php', 'pages', false)
+    ]);
 
     inStore();
     

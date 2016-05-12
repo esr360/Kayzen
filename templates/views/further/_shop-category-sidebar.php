@@ -1,8 +1,8 @@
 <?php function _shopCategorySidebar($custom = []) {
 
     $options = array_replace_recursive([
-        'item-link' => pageLink('further/shop-single.php', 'pages', false),
-        'item-root' => pageLink('further/shop-category.php', 'pages', false),
+        'item-link' => pageLink('further/shop-single-sidebar.php', 'pages', false),
+        'item-root' => pageLink('further/shop-category-sidebar.php', 'pages', false),
         'blog-link' => pageLink('blog/single-sidebar.php', 'pages', false),
         'blog-root' => pageLink('blog/classic/full-width-sidebar.php', 'pages', false)
     ], $custom); ?>

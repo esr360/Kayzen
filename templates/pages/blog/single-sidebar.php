@@ -30,7 +30,7 @@
                 'tag-line' => $tagLine
             ]);
             
-            include (ROOT.'/views/blog/_single-sidebar.php');
+            _blogSingleSidebar();
         
             promoBanner();
             
