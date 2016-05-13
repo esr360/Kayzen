@@ -14,6 +14,8 @@
 <?php head($theme) ?>
 
 <body>
+    
+    <?php preloader($style = 'disc') ?>
 
     <!-- Site Canvas -->
     <div id="site-content">

@@ -9,8 +9,8 @@
             'heading_group' => false,
             'headline'      => '',
             'title'         => [
-                'heading-uppercase-heavy-highlight-dark-size-8 font-2',
-                '<b>Welcome to Kayzen</b><br /><b>A Unique Theme Framework</b>'
+                'class'     => 'heading-uppercase-heavy-highlight-dark-size-8 font-2',
+                'text'      => '<b>Welcome to Kayzen</b><br /><b>A Unique Theme Framework</b>'
             ],
             'ctas'          => [
                 [

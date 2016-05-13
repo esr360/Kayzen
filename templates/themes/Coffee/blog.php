@@ -15,7 +15,7 @@
 
 <body>
     
-    <?php preloader() ?>
+    <?php preloader($style = 'ripple') ?>
 
     <!-- Site Canvas -->
     <div id="site-content">

@@ -2,7 +2,6 @@
 #============================================================
 
 - contact form (don't forget to document)
-- sidebar top tabs profile images on small resolutions
 - preloaders for all themes
 
 # Done
@@ -26,6 +25,7 @@
 - add themes and associated imagery
 - document notifications
 - document preloader
+- sidebar top tabs profile images on small resolutions
 
 # Next Release
 #============================================================

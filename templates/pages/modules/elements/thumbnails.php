@@ -63,12 +63,12 @@
                     <div class="thumbnail span-6">
                         <div class="thumbnail_mask">
                             <div class="thumbnail_controls">
-                                <a rel="lightbox" href="<?php echo appDir ?>/images/wallpapers/bg-6.jpg" class="button-icon-border-circle">
+                                <a rel="lightbox" href="<?php echo stockImage('demo/stock-3.jpg') ?>" class="button-icon-border-circle">
                                     <i class="fa fa-search"></i>
                                 </a>
                             </div>
                         </div>
-                        <img src="<?php echo appDir ?>/images/wallpapers/bg-6.jpg">
+                        <img src="<?php echo stockImage('demo/stock-3.jpg') ?>">
                     </div>
                 </div>
                 
@@ -76,25 +76,27 @@
 &lt;div class="thumbnail">
     &lt;div class="thumbnail_mask">
         &lt;div class="thumbnail_controls">
-            &lt;a rel="lightbox" href="/images/wallpapers/bg-6.jpg" class="button-icon-border-circle">
+            &lt;a rel="lightbox" href="/images/demo/stock-3.jpg" class="button-icon-border-circle">
                 &lt;i class="fa fa-search">&lt;/i>
             &lt;/a>
         &lt;/div>
     &lt;/div>
-    &lt;img src="/images/wallpapers/bg-6.jpg">
+    &lt;img src="/images/demo/stock-3.jpg">
 &lt;/div>
 </pre>
+
+                <hr class="hrule-stripes" />
                 
                 <div class="well object">
                     <div class="thumbnail-zoom span-6">
                         <div class="thumbnail_mask">
                             <div class="thumbnail_controls">
-                                <a rel="lightbox" href="<?php echo appDir ?>/images/wallpapers/bg-6.jpg" class="button-icon-border-circle">
+                                <a rel="lightbox" href="<?php echo stockImage('demo/stock-6.jpg') ?>" class="button-icon-border-circle">
                                     <i class="fa fa-search"></i>
                                 </a>
                             </div>
                         </div>
-                        <img src="<?php echo appDir ?>/images/wallpapers/bg-6.jpg">
+                        <img src="<?php echo stockImage('demo/stock-6.jpg') ?>">
                     </div>
                 </div>
                 
@@ -103,15 +105,17 @@
     &lt;div class="thumbnail_mask">
         ...
     &lt;/div>
-    &lt;img src="/images/wallpapers/bg-6.jpg">
+    &lt;img src="/images/demo/stock-6.jpg">
 &lt;/div>
 </pre>
+
+                <hr class="hrule-stripes" />
 
                 <div class="well object">
                     <div class="thumbnail span-6">
                         <div class="thumbnail_mask">
                             <div class="thumbnail_controls-corner button_group-small">
-                                <a rel="lightbox" href="<?php echo appDir ?>/images/wallpapers/bg-3.jpg" class="button-icon-border-circle">
+                                <a rel="lightbox" href="<?php echo stockImage('demo/stock-9.jpg') ?>" class="button-icon-border-circle">
                                     <i class="fa fa-search"></i>
                                 </a>
                                 <a href="<?php pageLink('pages/blog/single.php') ?>" class="button-icon-border-circle">
@@ -123,7 +127,7 @@
                                 <h5 class="heading-light">Cras dictum erat id tortor ornare.</h5>
                             </header>
                         </div>
-                        <img src="<?php echo appDir ?>/images/wallpapers/bg-3.jpg">
+                        <img src="<?php echo stockImage('demo/stock-9.jpg') ?>">
                     </div>
                 </div>
                 
@@ -131,7 +135,7 @@
 &lt;div class="thumbnail">
     &lt;div class="thumbnail_mask">
         &lt;div class="thumbnail_controls-corner button_group-small">
-            &lt;a rel="lightbox" href="/images/wallpapers/bg-3.jpg" class="button-icon-border-circle">
+            &lt;a rel="lightbox" href="/images/demo/stock-9.jpg" class="button-icon-border-circle">
                 &lt;i class="fa fa-search">&lt;/i>
             &lt;/a>
             &lt;a href="#" class="button-icon-border-circle">
@@ -143,13 +147,15 @@
             &lt;h5 class="heading-light">Cras dictum erat id tortor ornare.&lt;/h5>
         &lt;/header>
     &lt;/div>
-    &lt;img src="/images/wallpapers/bg-3.jpg">
+    &lt;img src="/images/demo/stock-9.jpg">
 &lt;/div>
 </pre>
+
+                <hr class="hrule-stripes" />
                 
                 <div class="well object">
                     <div class="thumbnail-feature span-8">
-                        <img src="<?php echo appDir ?>/images/wallpapers/bg-2.jpg">
+                        <img src="<?php echo stockImage('demo/stock-12.jpg') ?>">
                         <div class="thumbnail_content">
                             <header class="heading_group-small">
                                 <div class="heading_date">
@@ -165,7 +171,7 @@
 
 <pre data-enlighter-language="html" class="EnlighterJSRAW">
 &lt;div class="thumbnail-feature">
-    &lt;img src="/images/wallpapers/bg-2.jpg">
+    &lt;img src="/images/demo/stock-12.jpg">
     &lt;div class="thumbnail_content">
         &lt;header class="heading_group-small">
             &lt;div class="heading_date">
@@ -182,21 +188,21 @@
                 
                 <div class="well object">
                     <div class="thumbnail_grid-fade row-magic">
-                        <img class="span active" src="<?php echo appDir ?>/images/wallpapers/bg-2.jpg">
-                        <img class="span" src="<?php echo appDir ?>/images/wallpapers/bg-3.jpg">
-                        <img class="span" src="<?php echo appDir ?>/images/wallpapers/bg-5.jpg">
-                        <img class="span" src="<?php echo appDir ?>/images/wallpapers/bg-6.jpg">
-                        <img class="span" src="<?php echo appDir ?>/images/wallpapers/bg-7.jpg">
+                        <img class="span active" src="<?php echo stockImage('demo/stock-3.jpg') ?>">
+                        <img class="span" src="<?php echo stockImage('demo/stock-6.jpg') ?>">
+                        <img class="span" src="<?php echo stockImage('demo/stock-9.jpg') ?>">
+                        <img class="span" src="<?php echo stockImage('demo/stock-12.jpg') ?>">
+                        <img class="span" src="<?php echo stockImage('demo/stock-15.jpg') ?>">
                     </div>    
                 </div>
 
 <pre data-enlighter-language="html" class="EnlighterJSRAW">
 &lt;div class="thumbnail_grid-fade row-magic">
-    &lt;img class="span active" src="/images/wallpapers/bg-2.jpg">
-    &lt;img class="span" src="/images/wallpapers/bg-3.jpg">
-    &lt;img class="span" src="/images/wallpapers/bg-5.jpg">
-    &lt;img class="span" src="/images/wallpapers/bg-6.jpg">
-    &lt;img class="span" src="/images/wallpapers/bg-7.jpg">
+    &lt;img class="span active" src="/images/demo/stock-3.jpg">
+    &lt;img class="span" src="/images/demo/stock-6.jpg">
+    &lt;img class="span" src="/images/demo/stock-9.jpg">
+    &lt;img class="span" src="/images/demo/stock-12.jpg">
+    &lt;img class="span" src="/images/demo/stock-15.jpg">
 &lt;/div>  
 </pre>
                 
@@ -208,7 +214,7 @@
                 
                 <div class="well object">
                     <div class="thumbnail-profile-xsmall">
-                        <img src="<?php echo appDir ?>/images/team/team-2.jpg">
+                        <img src="<?php echo stockImage('team/team-2.jpg') ?>">
                     </div>
                 </div>
                 
@@ -222,7 +228,7 @@
                 
                 <div class="well object">
                     <div class="thumbnail-profile-small">
-                        <img src="<?php echo appDir ?>/images/team/team-2.jpg">
+                        <img src="<?php echo stockImage('team/team-2.jpg') ?>">
                     </div>
                 </div>
                 
@@ -236,7 +242,7 @@
                 
                 <div class="well object">
                     <div class="thumbnail-profile">
-                        <img src="<?php echo appDir ?>/images/team/team-2.jpg">
+                        <img src="<?php echo stockImage('team/team-2.jpg') ?>">
                     </div>
                 </div>
                 
@@ -250,7 +256,7 @@
                 
                 <div class="well object">
                     <div class="thumbnail-profile-large">
-                        <img src="<?php echo appDir ?>/images/team/team-2.jpg">
+                        <img src="<?php echo stockImage('team/team-2.jpg') ?>">
                     </div>
                 </div>
                 
@@ -264,7 +270,7 @@
                 
                 <div class="well object">
                     <div class="thumbnail-profile-xlarge">
-                        <img src="<?php echo appDir ?>/images/team/team-2.jpg">
+                        <img src="<?php echo stockImage('team/team-2.jpg') ?>">
                     </div>
                 </div>
                 
@@ -278,7 +284,7 @@
                 
                 <div class="well object">
                     <div class="thumbnail-profile-round">
-                        <img src="<?php echo appDir ?>/images/team/team-2.jpg">
+                        <img src="<?php echo stockImage('team/team-2.jpg') ?>">
                     </div>
                 </div>
                 
@@ -292,7 +298,7 @@
                 
                 <div class="well object">
                     <div class="thumbnail-profile-styled">
-                        <img src="<?php echo appDir ?>/images/team/team-2.jpg">
+                        <img src="<?php echo stockImage('team/team-2.jpg') ?>">
                     </div>
                 </div>
                 
@@ -306,7 +312,7 @@
                 
                 <div class="well object">
                     <div class="thumbnail-profile-badge">
-                        <img src="<?php echo appDir ?>/images/team/team-2.jpg">
+                        <img src="<?php echo stockImage('team/team-2.jpg') ?>">
                     </div>
                 </div>
                 
@@ -320,7 +326,7 @@
                 
                 <div class="well object">
                     <div class="thumbnail-large-round-profile-badge">
-                        <img src="<?php echo appDir ?>/images/team/team-2.jpg">
+                        <img src="<?php echo stockImage('team/team-2.jpg') ?>">
                     </div>
                 </div>
                 
@@ -433,7 +439,7 @@
 
                 <div class="well object">
                     <div id="thumbnail-demo-1" class="thumbnail-profile-xlarge">
-                        <img src="<?php echo appDir ?>/images/team/team-2.jpg">
+                        <img src="<?php echo stockImage('team/team-2.jpg') ?>">
                     </div>
                 </div>
                 
@@ -441,12 +447,12 @@
                     <div id="thumbnail-demo-2" class="thumbnail span-6">
                         <div class="thumbnail_mask">
                             <div class="thumbnail_controls">
-                                <a rel="lightbox" href="<?php echo appDir ?>/images/wallpapers/bg-6.jpg" class="button-icon-border-white-circle">
+                                <a rel="lightbox" href="<?php echo stockImage('demo/stock-3.jpg') ?>" class="button-icon-border-white-circle">
                                     <i class="fa fa-search"></i>
                                 </a>
                             </div>
                         </div>
-                        <img src="<?php echo appDir ?>/images/wallpapers/bg-6.jpg">
+                        <img src="<?php echo stockImage('demo/stock-3.jpg') ?>">
                     </div>
                 </div>
                 

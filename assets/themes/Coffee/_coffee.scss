@@ -87,7 +87,11 @@
 	
 	@include mega-menu;
 	@include page-overview;
-	@include preloader;
+	
+	@include preloader((
+		'preloader' : 'ripple'
+	));
+	
 	@include scroll-top;
 	@include search;
 	@include scroll-wheel;

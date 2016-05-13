@@ -15,7 +15,7 @@
 
 <body>
     
-    <?php preloader($style = 'pacman') ?>
+    <?php preloader($style = 'snake') ?>
 
     <!-- Site Canvas -->
     <div id="site-content">

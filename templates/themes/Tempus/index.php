@@ -14,7 +14,7 @@
 
 <body>
     
-    <?php preloader($style = 'pacman') ?>
+    <?php preloader($style = 'hourglass') ?>
 
     <!-- Site Canvas -->
     <div id="site-content">
@@ -35,12 +35,6 @@
             ));
 			
 			_homepage4([
-                'billboard' => [
-                    'title' => [
-                        'text' => '<b>Welcome to Kayzen<br />A Unique Theme Framework</b>',
-                        'class' => 'heading-uppercase-heavy-size-8-highlight-dark font-2'
-                    ]
-                ],
                 'blog-link' => themeLink($theme, '/blog-single.php')
             ]);
         

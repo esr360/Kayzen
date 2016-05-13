@@ -16,7 +16,7 @@
     
     <?php 
         
-        preloader();
+        preloader($style = 'pacman');
 
         appHeader([
             'class' => 'side-nav',

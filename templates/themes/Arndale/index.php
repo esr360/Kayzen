@@ -15,7 +15,7 @@
     
     <?php 
     
-        preloader($style = 'pacman'); 
+        preloader($style = 'newton'); 
 
         appHeader(array(
             'nav-links'  => array(

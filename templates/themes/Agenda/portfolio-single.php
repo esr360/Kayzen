@@ -16,8 +16,8 @@
 <body>
     
     <?php 
-    
-        preloader();
+        
+        preloader($style = 'pacman');
 
         appHeader(array(
             'nav-links'  => array(

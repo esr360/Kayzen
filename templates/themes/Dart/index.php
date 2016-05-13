@@ -16,7 +16,7 @@
     
     <?php 
     
-        preloader($style = 'pacman');
+        preloader($style = 'nexus');
 
         appHeader(array(
             'nav-links'  => array(
