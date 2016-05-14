@@ -20,10 +20,10 @@
         
         <div class="container-section">
             
-            <div class="row-flow">
+            <div class="row-flow row-waffle-large">
                 
                 <!-- Responsive Features -->
-                <div class="widget_group span-3 break-3-half break-2-full va-middle text-right">
+                <div class="widget_group span-3 break-3-half break-2-full text-right-break-2">
                     <div class="widget-stacked">   
                         <header class="widget_header-inline heading_group">
                             <h3 class="heading-heavy-size-4">Smooth Performance</h3>
@@ -57,7 +57,7 @@
                 </div>
                 
                 <!-- Responsive Graphics -->
-                <div class="span-6 va-middle text-center min-break-3">
+                <div class="span-6 text-center min-break-3 va-middle">
                     <div class="center-xy span-6<?php if ($options['greyscale']) echo ' greyscale' ?>">
                         <img 
                             class="mobile-graphic-<?php echo $GLOBALS['iphone-colors'][0] ?>" 
@@ -81,8 +81,6 @@
                         / >
                     </div>
                 </div>
-                
-                <hr class="hrule-stripes-large max-break-2" />
                 
                 <!-- Responsive Features -->
                 <div class="widget_group span-3 break-3-half break-2-full va-middle">

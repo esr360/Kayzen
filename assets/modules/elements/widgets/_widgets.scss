@@ -221,6 +221,16 @@
             p {
                 margin-top: (base('margin') / 2);
             }
+            @media (max-width: breakpoint('break-2')) {
+                .text-right-break-2 > & {
+                    @include overwrite-component('icon') {
+                        float: left;
+                        margin-left: 0;
+                        margin-right: 0.5rem;
+                        margin-top: -0.5rem;
+                    }
+                }
+            }
         }
         
         //---------------------------------------------------------

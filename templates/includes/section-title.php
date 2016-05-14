@@ -16,7 +16,9 @@
                 <div class="heading_icon">
                     <i class="fa <?php echo $options['icon'] ?>"></i>
                 </div>
-                <p class="lede"><?php echo $options['text'] ?></p>
+                <?php if ($options['text']) { ?>
+                    <p class="lede"><?php echo $options['text'] ?></p>
+                <?php } ?>
             </div>
         </header>
         

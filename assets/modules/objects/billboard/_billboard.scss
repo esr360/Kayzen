@@ -229,12 +229,13 @@
     //-------------------------------------------------------------
 
         @include component('wrapper') {
-            color: this('color');
-            text-align: this('text-align');
             @extend %horizontal-center;
             @include vertical-center(absolute);
+            color: this('color');
+            text-align: this('text-align');
+            overflow: hidden;
             @at-root {
-                @include overwrite('app-header', $is: 'dark') {
+                @include overwrite('app-header', $is: 'absolute') {
                     @include overwrite('billboard', $not: 'full-screen', $special: 'adjacent-sibling') {
                         @include overwrite-component('wrapper') {
                             transform: translateY(-15%);

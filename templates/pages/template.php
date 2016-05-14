@@ -1,7 +1,8 @@
 <?php 
 	include ('../app.php');
 	// page config
-	$title = 'Template';
+	$title = 'Theme Demos';
+    $tagLine = ''
 ?>
 
 <!DOCTYPE html>
@@ -14,9 +15,22 @@
     <!-- Site Canvas -->
     <div id="site-content">
 		
-		<?php include (ROOT.'/modules/objects/header/header.php'); ?>
+		<?php 
+        
+            topbar();
 
-		<?php include (ROOT.'/modules/objects/billboard/billboard.php'); ?>
+            appHeader(array(
+                'modifiers' => 'bar-absolute-dark-sticky'
+            ));
+
+            billboard([
+                'title'    => [
+                    'text' => $title
+                ],
+                'tag-line' => $tagLine
+            ]);
+            
+        ?>
 		
 		<section class="section">
 			

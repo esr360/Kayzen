@@ -14,9 +14,10 @@
         // Options
         
         var options = $.extend({
-            position      : _modules['page-overview']['position'],
-            itemSelector  : 'a',
-            titleSelector : _heading
+            position       : _modules['page-overview']['position'],
+            itemSelector   : 'a',
+            titleSelector  : _heading,
+            initBreakPoint : 'break-3'
         }, custom);
         
         // Run the code on each occurance of the element
@@ -38,44 +39,49 @@
             // Create the overview navigation
             $container = $container.clone();
             
-            // Clean attributes
-            $container.removeAttr('class id');
+            // Only run the code if the screen is big enough
+            if (breakpoint('min-width', options.initBreakPoint)) {
             
-            // Add module class
-            $container.addClass('page-overview-' + options.position);
-            
-            // Relocate in the DOM
-            $container.prependTo('body');
-            
-            // Prepare each overview item
-            $container.children(options.itemSelector).each(function() {
+                // Clean attributes
+                $container.removeAttr('class id');
                 
-                // Cache the current item
-                var $item = $(this);
+                // Add module class
+                $container.addClass('page-overview-' + options.position);
                 
-                // Get item title
-                var $title = $item.find(options.titleSelector).first().text();
+                // Relocate in the DOM
+                $container.prependTo('body');
                 
-                // Set appropriate tooltip class
-                $item.attr('class', 'page-overview_item tooltip-' + $tooltipPos);
-                
-                // Set the tootlip content
-                $item.attr('data-tooltip', $title);
-                
-                // Call tooltip on item
-                $item.tooltip({
-                    position : $tooltipPos
+                // Prepare each overview item
+                $container.children(options.itemSelector).each(function() {
+                    
+                    // Cache the current item
+                    var $item = $(this);
+                    
+                    // Get item title
+                    var $title = $item.find(options.titleSelector).first().text();
+                    
+                    // Set appropriate tooltip class
+                    $item.attr('class', 'page-overview_item tooltip-' + $tooltipPos);
+                    
+                    // Set the tootlip content
+                    $item.attr('data-tooltip', $title);
+                    
+                    // Call tooltip on item
+                    $item.tooltip({
+                        position : $tooltipPos
+                    });
+                    
+                    // Call scrollSpy plugin on parent
+                    $('.page-overview-' + options.position).scrollSpy({
+                        itemSelector : 'a'
+                    });
+                    
+                    // Reload the smoothScroll plugin
+                    $item.smoothScroll();
+                    
                 });
-                
-                // Call scrollSpy plugin on parent
-                $('.page-overview-' + options.position).scrollSpy({
-                    itemSelector : 'a'
-                });
-                
-                // Reload the smoothScroll plugin
-                $item.smoothScroll();
-                
-            });
+            
+            }
             
         }); // this.each
  

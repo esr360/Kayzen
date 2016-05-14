@@ -316,7 +316,7 @@
         
         <?php // Article Meta ?>
         <?php if ($isArticle) { ?>
-            <div class="row-block">
+            <div class="row-block stack-break-0">
                 <small class="span va-middle">
                     <ul class="list-reset-inline">
                         <?php if ($options['type'] === 'blog') { ?>

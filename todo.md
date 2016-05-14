@@ -1,8 +1,18 @@
 # To Do
 #============================================================
 
+- (mobile) sort alignment of top responsive section items
+- (mobile) fix excess horizontal scroll
+- (mobile) fix portfolio article item hover
+- (mobile) make social icons in 'we are social' smaller
+- (mobile) alignment of why choose us section
+- (mobile) fix blog article - read more button
+- (mobile) make inline blockquote block
+- (mobile) take a look at comments
+- add carousel to billboard
+- integrate drag & drop page builder
+- update docs
 - contact form (don't forget to document)
-- preloaders for all themes
 
 # Done
 #============================================================
@@ -26,6 +36,12 @@
 - document notifications
 - document preloader
 - sidebar top tabs profile images on small resolutions
+- preloaders for all themes
+- fix lightbox arrows
+- add demos page
+- improve the returned JSON data for Synergy
+- hide page-overview on mobiles/change position to bottom
+- (mobile) hide strikethrough overflow on billboard title
 
 # Next Release
 #============================================================
@@ -35,7 +51,8 @@
 - document 'blocks' list modifier
 - fix issue when clicking "back" after submitting form
 - make cheatsheet more in-depth
-- improve the returned JSON data for Synergy
+- (mobile) make ribbons smaller
+- (mobile) re-think dynamic side header (there is a jump)
 
 # Backlog
 #============================================================

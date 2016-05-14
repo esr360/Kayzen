@@ -4,7 +4,8 @@
         'module'         => 'app-header',
         'class'          => null,
         'modifiers'      => null,
-        'nav-links'      => null
+        'nav-links'      => null,
+        'logo-link'      => pageLink('homepages/homepage-1.php', 'pages', false)
     ), $custom); ?>
     
     <header 
@@ -22,7 +23,9 @@
     
                 <!-- Logo -->
                 <div class="logo">
-                    <a href="/"><img src="<?php echo appDir ?>/images/logo-white.png" alt="logo" /></a>
+                    <a href="<?php echo $options['logo-link'] ?>">
+                        <img src="<?php echo appDir ?>/images/logo-white.png" alt="logo" />
+                    </a>
                 </div>
     
                 <?php navigation(array(

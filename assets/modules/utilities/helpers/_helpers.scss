@@ -149,6 +149,12 @@
         }
     }
     
+    .text-right-break-2 {
+        @media (min-width: breakpoint('break-2')) {
+		    text-align: right !important; 
+        }
+    }
+    
     .center-mobile {
         @media (max-width: option($grid, 'options', 'col-break')) {
 		    text-align: center !important; 
