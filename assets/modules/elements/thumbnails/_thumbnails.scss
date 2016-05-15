@@ -162,6 +162,7 @@
             width: 100%;
             text-align: center;
             opacity: 0;
+            visibility: hidden;
             transition: base('transition');
             &:before {
                 content: "";
@@ -191,6 +192,7 @@
             }
             @include context('parent-hovered') {
                 opacity: 1;
+                visibility: visible;
                 &:before {
                     opacity: 1;
                     transform: scale(1);

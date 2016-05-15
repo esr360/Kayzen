@@ -44,7 +44,7 @@
         >
             <div class="billboard_wrapper container <?php echo $options['wrapper-class'] ?>">
                 <div class="billboard_snap" <?php if($options['fade-parallax']) { ?>id="billboard-fade-parallax"<?php } ?>>
-                    <?php if($options['heading_group']) { ?><header class="heading_group"><?php } ?>
+                    <?php if($options['heading_group']) { ?><header class="heading_group hide-overflow"><?php } ?>
                         <?php if($options['headline']) {?>
                             <h2 class="<?php echo $options['headline']['class'] ?>">
                                 <?php echo $options['headline']['text'] ?>

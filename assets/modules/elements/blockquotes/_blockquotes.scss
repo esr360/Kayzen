@@ -55,11 +55,13 @@
         }
         
         @include modifiers(('pull-left', 'pull-right')) {
-            margin: this('pull-margin');
-            width: this('pull-width');
-            max-width: this('pull-max-width');
             font-style: this('pull-font-style');
-            text-align: left;
+            margin: this('pull-margin');
+            @media (min-width: breakpoint('break-2')) {
+                width: this('pull-width');
+                max-width: this('pull-max-width');
+                text-align: left;
+            }
             @include modifier('top') {
                 margin-top: 0;
             }

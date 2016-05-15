@@ -67,7 +67,7 @@
 
         @include font-sizes(
             $responsive-values: (
-                'sizes' : ('size-4'),
+                'sizes' : ('size-4', 'size-6'),
                 'breakpoints' : (
                     'break-3' : 0.85
                 )

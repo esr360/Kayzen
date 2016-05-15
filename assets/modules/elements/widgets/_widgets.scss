@@ -418,6 +418,12 @@
             }
         }
         
+        @include modifier('card') {
+            &[class*="thumbnail"] {
+                margin-bottom: 0;
+            }
+        }
+        
         @include modifier('article') {
             margin-bottom: base('margin');
             &:not([class*="span"]) {

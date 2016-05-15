@@ -14,15 +14,15 @@
         <div class="comments object">
         
             <div class="comment object-small">
-                <div class="row stack-0 object-small">
-                    <div class="span-2 va-middle text-center">
+                <div class="row stack-break-2 object-small">
+                    <div class="span-2 va-middle text-center min-break-2">
                         <div class="thumbnail-profile-round-xlarge-styled">
                             <img src="<?php echo stockImage('team/team-2.jpg') ?>" alt="">
                         </div>
                     </div>
                     <div class="span-10 va-middle">
                         <div class="well-comment">
-                            <div class="row-block">
+                            <div class="row-block stack-0">
                                 <div class="span">
                                     <header class="heading_group-small">
                                         <h4 class="heading font-2">John Doe</h4>
@@ -45,15 +45,15 @@
             </div>
         
             <div class="comment object-small text-right">
-                <div class="row object-small span-10 text-left stack-0">
-                    <div class="span-2 va-middle text-center">
+                <div class="row object-small span-10 text-left stack-break-2">
+                    <div class="span-2 va-middle text-center min-break-2">
                         <div class="thumbnail-profile-round-large-styled">
                             <img src="<?php echo stockImage('team/team-2.jpg') ?>" alt="">
                         </div>
                     </div>
                     <div class="span-10 va-middle">
                         <div class="well-comment">
-                            <div class="row-block">
+                            <div class="row-block stack-0">
                                 <div class="span">
                                     <header class="heading_group-small">
                                         <h4 class="heading font-2">John Doe</h4>
@@ -76,8 +76,8 @@
             </div>
         
             <div class="comment object">
-                <div class="row object-small stack-0">
-                    <div class="span-2 va-middle text-center">
+                <div class="row object-small stack-break-2">
+                    <div class="span-2 va-middle text-center min-break-2">
                         <div class="thumbnail-profile-round-xlarge-styled">
                             <img src="<?php echo stockImage('team/team-2.jpg') ?>" alt="">
                         </div>

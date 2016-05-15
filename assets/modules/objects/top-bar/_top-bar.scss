@@ -78,6 +78,13 @@
                     li {
                         padding-left: 0;
                     }
+					@media (max-width: breakpoint('break-2')) {
+						transform: translateX(calc(4em - 100%));
+						&:after {
+							margin-left: 0;
+							left: calc(100% - 4em);
+						}
+					}
                 }
                 li {
                     &.title {

@@ -1,14 +1,6 @@
 # To Do
 #============================================================
 
-- (mobile) sort alignment of top responsive section items
-- (mobile) fix excess horizontal scroll
-- (mobile) fix portfolio article item hover
-- (mobile) make social icons in 'we are social' smaller
-- (mobile) alignment of why choose us section
-- (mobile) fix blog article - read more button
-- (mobile) make inline blockquote block
-- (mobile) take a look at comments
 - add carousel to billboard
 - integrate drag & drop page builder
 - update docs
@@ -42,6 +34,14 @@
 - improve the returned JSON data for Synergy
 - hide page-overview on mobiles/change position to bottom
 - (mobile) hide strikethrough overflow on billboard title
+- (mobile) sort alignment of top responsive section items
+- (mobile) alignment of why choose us section
+- (mobile) fix portfolio article item hover
+- (mobile) make social icons in 'we are social' smaller
+- (mobile) fix blog article - read more button
+- (mobile) make inline blockquote block
+- (mobile) take a look at comments
+- (mobile) fix excess horizontal scroll
 
 # Next Release
 #============================================================

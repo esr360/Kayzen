@@ -1,15 +1,15 @@
 <?php function demoPost($custom = array()) { ?>
 
     <?php $options = array_merge(array(), $custom); ?>
+        
+    <ul class="list-reset-inline text">
+        <li><i class="fa fa-calendar"></i> 5th November 2015</li>
+        <li><i class="fa fa-user"></i> <a href="#">John Doe</a></li>
+        <li><i class="fa fa-folder-o"></i> <a href="#">HTML Themes</a></li>
+        <li class="min-break-2"><i class="fa fa-comment-o"></i> <a href="#">3 Comments</a></li>
+    </ul>
 
     <div class="post-content lede text-justify">
-        
-        <ul class="list-reset-inline-small text">
-            <li><i class="fa fa-calendar"></i> 5th November 2015</li>
-            <li><i class="fa fa-user"></i> <a href="#">John Doe</a></li>
-            <li><i class="fa fa-folder-o"></i> <a href="#">HTML Themes</a></li>
-            <li><i class="fa fa-comment-o"></i> <a href="#">3 Comments</a></li>
-        </ul>
         
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. <a href="#">Inquit, dasne adolescenti veniam?</a> Ergo instituto veterum, quo etiam Stoici utuntur, hinc capiamus exordium. Quarum ambarum rerum cum medicinam pollicetur, luxuriae licentiam pollicetur. Duo Reges: constructio interrete. Docent enim nos, ut scis, dialectici, si ea quae rem aliquam sequantur, falsa sint.</p>
 

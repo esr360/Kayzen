@@ -77,12 +77,19 @@
      */
     $class = '';
     
+
     if ($options['widget']) {
         $class = 'widget';
         if ($isArticle) {
             $class = $class.'-article';
         } else {
             $class = $class.'-card';
+        }
+        if ($options['media'] === 'image' && $options['type'] === 'portfolio') {
+            $class = $class.' thumbnail';
+            if ($isArticle && empty($options['span'])) {
+                $class = $class.'-article';
+            }
         }
     }
     if (!empty($options['span'])) {
@@ -112,7 +119,10 @@
         <?php // Standard Image Article ?>
         <?php if ($options['media'] === 'image') { ?>
         
-            <div class="thumbnail<?php if ($isArticle && empty($options['span'])) echo '-article' ?>">
+            <?php if ($options['type'] == 'blog') { ?>
+                <div class="thumbnail<?php if ($isArticle && empty($options['span'])) echo '-article' ?>">
+            <?php } ?>
+              
                 <div class="thumbnail_mask">
                     <div class="thumbnail_controls<?php if($options['matrix'] && $options['maskTitle']) echo '-corner' ?> button_group-small">
                         <a 
@@ -144,7 +154,11 @@
                 <?php } else { ?>
                     <img src="<?php echo stockImage('demo/small/stock-'.$options['thumb'].'.jpg') ?>">
                 <?php } ?>
-            </div>
+                
+            <?php if ($options['type'] == 'blog') { ?>
+                </div>
+            <?php } ?>
+            
             <?php if ($options['author-thumb']) { ?>
                 <div class="thumbnail-profile-round-badge">
                     <img src="<?php echo stockImage($options['author-thumb']) ?>" alt="">
@@ -316,13 +330,13 @@
         
         <?php // Article Meta ?>
         <?php if ($isArticle) { ?>
-            <div class="row-block stack-break-0">
+            <div class="row-block <?php echo (empty($options['span'])) ? 'row-waffle-large' : 'stack-break-0' ?>">
                 <small class="span va-middle">
                     <ul class="list-reset-inline">
                         <?php if ($options['type'] === 'blog') { ?>
                             <li><i class="fa fa-user"></i> <a href="<?php echo $options['root'] ?>">John Doe</a></li>
                         <?php } if (empty($options['span'])) { ?>
-                            <li><i class="fa fa-comment-o"></i> <a href="<?php echo $options['link'] ?>#comments">3 Comments</a></li>
+                            <li class="min-break-1"><i class="fa fa-comment-o"></i> <a href="<?php echo $options['link'] ?>#comments">3 Comments</a></li>
                             <li>
                                 <ul class="list-tags">
                                     <li class="title">Tags:</li>
@@ -334,7 +348,7 @@
                         <?php } ?>
                     </ul>
                 </small>
-                <div class="span va-middle text-right">
+                <div class="span va-middle <?php echo (empty($options['span'])) ? 'text-right-tablet' : 'text-right' ?>">
                     <a 
                         href="<?php echo $options['link'] ?>" 
                         class="button-primary<?php if ($options['size'] === 'small') echo '-size-2' ?>"
