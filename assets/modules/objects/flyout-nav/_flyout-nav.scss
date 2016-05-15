@@ -40,7 +40,6 @@
         width: this('width');
         font-size: this('font-size');
         left: -#{this(width)};
-        box-shadow: this('box-shadow');
         z-index: this('z-index');
         
         ul {
@@ -50,6 +49,7 @@
         // Reveal the flyout navigation
         @include modifier('visible') {
             left: 0;
+            box-shadow: this('box-shadow');
         }
         
         @include option('show-y-scrollbar') {

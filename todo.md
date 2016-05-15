@@ -1,9 +1,12 @@
 # To Do
 #============================================================
 
+- (mobile) - look at modal height
+- remove billboard parallax for mobiles
 - add carousel to billboard
 - integrate drag & drop page builder
 - update docs
+- update grunt task titles to use correct name and url
 - contact form (don't forget to document)
 
 # Done
@@ -42,6 +45,7 @@
 - (mobile) make inline blockquote block
 - (mobile) take a look at comments
 - (mobile) fix excess horizontal scroll
+- remove flyout dropshadow
 
 # Next Release
 #============================================================

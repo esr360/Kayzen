@@ -425,7 +425,7 @@ module.exports = function(grunt) {
                 ]
             }
         },
-      
+  
         //---------------------------------------------------------
         // TinyPNG
         // https://github.com/sindresorhus/grunt-sass

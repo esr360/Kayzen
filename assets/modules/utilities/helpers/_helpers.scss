@@ -140,7 +140,9 @@
 		text-align: right !important; 
 	}
     .text-justify {
-        text-align: justify;
+		@media (min-width: breakpoint('break-2')) {
+        	text-align: justify;
+		}
     }
     
     .text-right-desktop {
