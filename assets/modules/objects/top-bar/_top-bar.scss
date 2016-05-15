@@ -17,6 +17,7 @@
 		'link-color'       : color('greyscale', 'grey-3'),
 		'link-hover-color' : color('greyscale', 'white'),
 		'z-index'          : 6,
+		'fixed-z-index'    : 12,
 		'fixed'            : false
 	), $custom) !global;
 
@@ -171,7 +172,7 @@
 			position: fixed;
 			top: 0;
 			width: 100%;
-			z-index: 13;
+			z-index: this('fixed-z-index');
 		}
 		
 	} // module

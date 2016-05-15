@@ -14,6 +14,7 @@
         var options = $.extend({
             parallaxBg: false,
             parallaxContent: false,
+            breakpoint: 'break-3',
             contentSelector: '#billboard-fade-parallax'
         }, custom);
         
@@ -23,17 +24,21 @@
             var heroTitle = $(options.contentSelector);
             
             if (options.parallaxContent) {
+                    
+                if (breakpoint('min-width', options.breakpoint)) {
+                    
+                    $(window).on('scroll', function() {
 
-                $(window).on('scroll', function() {
+                        var st = $(this).scrollTop();
 
-                    var st = $(this).scrollTop();
+                        heroTitle.css({ 
+                            'transform' : 'translate3d(0px,' + (st/2.5) + 'px, 0px)',
+                            'opacity' : 1 - st/600
+                        }); 
 
-                    heroTitle.css({ 
-                        'transform' : "translate3d(0px,"+(st/2.5)+"px, 0px)",
-                        'opacity' : 1 - st/600
-                    }); 
-
-                });
+                    });
+                    
+                }
             
             }
             

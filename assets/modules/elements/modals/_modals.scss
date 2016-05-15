@@ -33,6 +33,8 @@
         @extend %horizontal-center;
         width: 650px;
         max-width: 90%;
+        max-height: 90%;
+        overflow: auto;
         background: this('background');
         color: this('text-color');
         position: fixed;
@@ -118,5 +120,11 @@
         }
         
     } // module
+    
+    @include overwrite('site-overlay') {
+        &[class*="dialog-visible"] {
+            z-index: 12;
+        }
+    }
 
 } // @mixin modals

@@ -1,8 +1,6 @@
 # To Do
 #============================================================
 
-- (mobile) - look at modal height
-- remove billboard parallax for mobiles
 - add carousel to billboard
 - integrate drag & drop page builder
 - update docs
@@ -46,6 +44,8 @@
 - (mobile) take a look at comments
 - (mobile) fix excess horizontal scroll
 - remove flyout dropshadow
+- (mobile) - look at modal height
+- remove billboard parallax for mobiles
 
 # Next Release
 #============================================================
