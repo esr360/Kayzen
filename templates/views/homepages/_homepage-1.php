@@ -5,7 +5,8 @@
             'type' => 'homepage',
             'headline' => [
                 'text' => '<span>Welcome To Kayzen</span>'
-            ]
+            ],
+            'wrapper-class' => 'text-center'
         ],
         'keyFeatures' => [],
         'promoBanner[1]' => [],

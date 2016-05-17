@@ -42,33 +42,95 @@
                 style="background-image: url('<?php echo $options['bg-img'] ?>')"
             <?php } ?>
         >
-            <div class="billboard_wrapper container <?php echo $options['wrapper-class'] ?>">
-                <div class="billboard_snap" <?php if($options['fade-parallax']) { ?>id="billboard-fade-parallax"<?php } ?>>
-                    <?php if($options['heading_group']) { ?><header class="heading_group hide-overflow"><?php } ?>
-                        <?php if($options['headline']) {?>
-                            <h2 class="<?php echo $options['headline']['class'] ?>">
-                                <?php echo $options['headline']['text'] ?>
-                            </h2>
+        
+            <div class="billboard_carousel owl-carousel">
+                
+                <div class="billboard_wrapper container <?php echo $options['wrapper-class'] ?>">
+                    <div class="billboard_snap" <?php if($options['fade-parallax']) { ?>id="billboard-fade-parallax"<?php } ?>>
+                        <?php if($options['heading_group']) { ?><header class="heading_group hide-overflow"><?php } ?>
+                            <?php if($options['headline']) {?>
+                                <h2 class="<?php echo $options['headline']['class'] ?>">
+                                    <?php echo $options['headline']['text'] ?>
+                                </h2>
+                            <?php } ?>
+                            <h3 class="<?php echo $options['title']['class'] ?>"><?php echo $options['title']['text'] ?></h3>
+                        <?php if($options['heading_group']) { ?></header><?php } ?>
+                        <?php if ($options['tag-line']) { ?>
+                            <p class="lede"><?php echo $options['tag-line'] ?></p>
                         <?php } ?>
-                        <h3 class="<?php echo $options['title']['class'] ?>"><?php echo $options['title']['text'] ?></h3>
-                    <?php if($options['heading_group']) { ?></header><?php } ?>
-                    <?php if ($options['tag-line']) { ?>
-                        <p class="lede"><?php echo $options['tag-line'] ?></p>
-                    <?php } ?>
-                    <div class="button_group">
-                        <?php foreach($options['ctas'] as $cta) { ?>
-                            <a class="<?php echo $cta[0] ?>" href="<?php echo $cta[1] ?>"><?php echo $cta[2] ?></a>    
-                        <?php } ?>
+                        <div class="button_group">
+                            <?php foreach($options['ctas'] as $cta) { ?>
+                                <a class="<?php echo $cta[0] ?>" href="<?php echo $cta[1] ?>"><?php echo $cta[2] ?></a>    
+                            <?php } ?>
+                        </div>
                     </div>
                 </div>
+                
+                <div class="billboard_wrapper container" data-billboard-bg="<?php echo stockImage('demo/stock-6.jpg') ?>">
+                    <div class="row">
+                        <div class="span-6 text-center va-middle min-break-3">
+                            <div class="span-10">
+                                <div class="desktop-graphic">
+                                    <img src="<?php echo appDir ?>/images/demo-screen.png" alt="" />
+                                    <div class="desktop-graphic_image" style="background-image: url('<?php echo stockImage('demo/stock-6.jpg') ?>')"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="span-6 va-middle">
+                            <header class="heading_group">
+                                <h3 class="heading-size-5-light">Quick Sign-Up Form</h3>
+                            </header>
+                            <form class="form-fauxPlaceholders">
+                                <div class="form_group-has-icon">
+                                    <input type="password" class="form_input-plain" name="billboardEmail" id="billboardEmail" placeholder="••••••••" required="">
+                                    <i class="form_icon fa fa-envelope"></i>
+                                    <label for="billboardEmail">Email</label>
+                                </div>
+                                <div class="form_group-has-icon">
+                                    <input type="text" class="form_input-plain" name="billboardUsername" id="billboardUsername" placeholder="Ex: SkyUX" required="">
+                                    <i class="form_icon fa fa-user"></i>
+                                    <label for="billboardUsername">Username</label>
+                                </div>
+                                <div class="form_group-has-icon">
+                                    <input type="password" class="form_input-plain" name="billboardPassword" id="billboardPassword" placeholder="••••••••" required="">
+                                    <i class="form_icon fa fa-key"></i>
+                                    <label for="billboardPassword">Password</label>
+                                </div>
+                                <div class="object">
+                                    <button type="submit" class="button-block-primary">Sign Up</button>
+                                </div>
+                            </form>
+                            <h3 class="heading min-break-3">Sign-up using...</h3>
+                            <div class="row-block text-center stack-break-0">
+                                <a href="#" class="span-4 button-facebook">Facebook</a>
+                                <a href="#" class="span-4 button-twitter">Twitter</a>
+                                <a href="#" class="span-4 button-google-plus">Google Plus</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="billboard_wrapper container" data-billboard-bg="<?php echo stockImage('demo/stock-3.jpg') ?>">
+                    <div class="billboard_snap">
+                        <h2 class="heading-size-8-heavy-uppercase-highlight-dark font-2"><b>This is Kayzen<br />The New Experience</b></h2>
+                        <div class="button_group">
+                            <a href="#" class="button-size-3-grey-5">Learn More</a>
+                            <a href="#" class="button-size-3-border-white">Purchase Kayzen</a>
+                        </div>
+                    </div>
+                </div>
+                
             </div>
+            
             <?php if ($options['slide-nav']) { ?>
                 <nav class="slide-nav">
                     <button class="slide-prev button-icon-border-size-3-white"><i class="fa fa-angle-left"></i></button>
                     <button class="slide-next button-icon-border-size-3-white"><i class="fa fa-angle-right"></i></button>
                 </nav>
             <?php } ?>
+            
             <a href="<?php echo $options['wheel-anchor'] ?>" class="scroll-wheel"></a>
+            
         </section>
     <?php } else if ($options['type'] == 'videoBg') { ?>
         <section class="billboard-videoBg">

@@ -10,8 +10,17 @@
         // Options
         var options = $.extend({
             inputs      : '[class*="form_input"]',
-            placeholder : '+ label'
+            placeholder : '~ label'
         }, custom);
+            
+        // Ensure an input is always focused when its corresponding label is clicked
+        $('label').unbind().click(function() {
+            var labelID = $(this).attr('for');
+            console.log($('#' + labelID))
+            setTimeout(function(){
+            $('#' + labelID).get(0).focus();
+            }, 1);
+        });
         
         // Run the code on each occurance of the element
         return this.each(function() {

@@ -20,7 +20,6 @@
         'overlay-color'   : color('brand', 'primary'),
         'overlay-opacity' : 0.6,
         'color'           : color('greyscale', 'white'),
-        'text-align'      : center,
         'min-height'      : 500px
     ), $custom) !global;
 
@@ -37,6 +36,7 @@
         background-color: this('bg-color');
         position: relative;
         padding: 6em 0;
+        transition: background-image 1s linear;
         
         // only apply a bg image if there is one to apply
         @if this('bg-image') != "" {
@@ -49,6 +49,23 @@
             @media (max-width: breakpoint('break-4')) {
                 top: auto;
                 bottom: 1rem;
+            }
+        }
+        
+        .owl-dots {
+            display: none;
+        }
+        
+        .owl-stage-outer, .owl-stage, .owl-item {
+            height: 100%;
+        }
+        
+        @include overwrite-component('input', $parent: 'form') {
+            &:focus {
+                ~ label {
+                    color: this('color');
+                    content: "dopy";
+                }
             }
         }
 
@@ -232,7 +249,6 @@
             @extend %horizontal-center;
             @include vertical-center(absolute);
             color: this('color');
-            text-align: this('text-align');
             @at-root {
                 @include overwrite('app-header', $is: 'absolute') {
                     @include overwrite('billboard', $not: 'full-screen', $special: 'adjacent-sibling') {
@@ -247,6 +263,10 @@
         @include component('snap') {
             @extend .short;
             display: inline-block;
+        }
+        
+        @include component('carousel') {
+            height: 100%;
         }
 
     } // module

@@ -50,6 +50,7 @@
                 label {
                     @include vertical-center(absolute);
                     left: this('input-padding');
+                    color: this('input-color');
                     cursor: text;
                 }
             }
@@ -78,6 +79,7 @@
                 }
             }
             @include overwrite-component('icon') {
+                color: this('input-color');
                 ~ label {
                     left: 2em;
                 }
