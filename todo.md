@@ -1,7 +1,6 @@
 # To Do
 #============================================================
 
-- add carousel to billboard
 - integrate drag & drop page builder
 - update docs
 - update grunt task titles to use correct name and url
@@ -46,6 +45,7 @@
 - remove flyout dropshadow
 - (mobile) - look at modal height
 - remove billboard parallax for mobiles
+- add carousel to billboard
 
 # Next Release
 #============================================================

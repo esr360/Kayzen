@@ -54,9 +54,7 @@ $(document).ready(function() {
 // Modules
 //-----------------------------------------------------------------
 
-    $(_billboard).billboard({
-        parallaxContent: true
-    });
+    $(_billboard).billboard();
     
     $('#google-map').googleMap();
 

@@ -38,11 +38,7 @@
                 'side-header' => true
             ]);
 			
-			_homepage3([
-                'billboard' => [
-                    'slide-nav' => false
-                ]
-            ]);
+			_homepage3();
             
             appFooter(array(
                 'blurb' => true

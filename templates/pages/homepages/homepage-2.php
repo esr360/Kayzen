@@ -26,7 +26,11 @@
                 'modifiers' => 'bar-absolute-dark'
             ));
 			
-			_homepage2();
+			_homepage2([
+                'billboard' => [
+                    'carousel' => true
+                ]
+            ]);
             
             appFooter();
                     

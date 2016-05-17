@@ -25,7 +25,11 @@
                 //'modifiers' => 'side-left'
             ));
 			
-			_homepage1();
+			_homepage1([
+                'billboard' => [
+                    'carousel' => true
+                ]
+            ]);
             
             appFooter();
             

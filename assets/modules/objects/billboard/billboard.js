@@ -13,49 +13,56 @@
         // Options
         var options = $.extend({
             parallaxBg: false,
-            parallaxContent: false,
-            breakpoint: 'break-3',
-            contentSelector: '#billboard-fade-parallax'
+            carousel: {
+                selector: '.billboard_carousel',
+                next: '.slide-next',
+                prev: '.slide-prev',
+                options: {
+                    items : 1,
+                    dots : false,
+                    navigation : false,
+                    loop: true,
+                    stagePadding : 0
+                }
+            },
+            fadeParallax: {
+                selector: '#billboard-fade-parallax',
+                breakpoint: 'break-4'
+            }
         }, custom);
         
         // Run the code on each occurance of the element
         return this.each(function() {
             
             var billboard = $(this);
-	
-            var heroTitle = $(options.contentSelector);
             
-            if (options.parallaxContent) {
-                    
-                if (breakpoint('min-width', options.breakpoint)) {
-                    
-                    $(window).on('scroll', function() {
-
-                        var st = $(this).scrollTop();
-
-                        heroTitle.css({ 
-                            'transform' : 'translate3d(0px,' + (st/2.5) + 'px, 0px)',
-                            'opacity' : 1 - st/600
-                        }); 
-
-                    });
-                    
-                }
+            // Fade Parallax Scroll
             
-            } // parallaxContent
+            var heroTitle = $(options.fadeParallax.selector);
+                    
+            if (breakpoint('min-width', options.fadeParallax.breakpoint)) {
+                
+                $(window).on('scroll', function() {
+
+                    var scrollTop = $(this).scrollTop();
+
+                    heroTitle.css({ 
+                        'transform' : 'translate3d(0px,' + (scrollTop/2.5) + 'px, 0px)',
+                        'opacity' : 1 - scrollTop/600
+                    }); 
+
+                });
+                
+            }
             
-            var slideNext = billboard.find('.slide-next');
-            var slidePrev = billboard.find('.slide-prev');
-            var billboardCarousel = billboard.find('.billboard_carousel');
+            // Carousel
+            
+            var slideNext = billboard.find(options.carousel.next);
+            var slidePrev = billboard.find(options.carousel.prev);
+            var billboardCarousel = billboard.find(options.carousel.selector);
             var initialBg = billboard.css('background-image');
             
-            billboardCarousel.owlCarousel({
-                items : 1,
-                dots : false,
-                navigation : false,
-                loop: true,
-                stagePadding : 0,animateOut: 'fadeOut'
-            });
+            billboardCarousel.owlCarousel(options.carousel.options);
             
             billboardCarousel.on('changed.owl.carousel', function(event) {
                 var currentItem = $(event.target).find('.owl-item').eq(event.item.index);

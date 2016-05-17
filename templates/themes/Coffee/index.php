@@ -33,13 +33,15 @@
             
             billboard([
                 'type' => 'homepage',
+                'carousel' => true,
                 'wrapper-class' => 'text-left',
+                'heading_group' => false,
                 'headline' => [
-                    'class' => 'heading-uppercase-light-size-5-highlight',
+                    'class' => 'heading-uppercase-light-size-5-highlight-flush',
                     'text' => '<b>This is Kayzen</b>'
                 ],
                 'title' => [
-                    'class' => 'heading-heavy-size-7-uppercase-highlight-dark font-2',
+                    'class' => 'heading-heavy-size-7-uppercase-highlight-dark-flush font-2',
                     'text' => '<b>The New Experience</b>'
                 ],
                 'ctas' => [

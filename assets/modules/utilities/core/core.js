@@ -32,7 +32,7 @@ $(document).ready(function() {
     $('[data-bg]').dataBg();
 
     // Parallax Init
-    if (breakpoint('min-width', 'break-3')) {
+    if (breakpoint('min-width', 'break-4')) {
         $.stellar({
             horizontalScrolling : false
         });

@@ -34,7 +34,11 @@
                 )
             ));
 			
-			_homepage2();
+			_homepage2([
+                'billboard' => [
+                    'carousel' => true
+                ]
+            ]);
             
             appFooter();
                     
