@@ -5,7 +5,7 @@
     ], $custom); ?>  
   
     <!-- More Features -->
-    <section class="section-primary" id="<?php echo $options['id'] ?>">
+    <section class="section-primary" <?php if ($options['id']) { ?>id="<?php echo $options['id'] ?>"<?php } ?>>
     
         <!-- More Features Header -->
         <header class="heading_group-large has-icon text-center">

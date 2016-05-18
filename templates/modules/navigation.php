@@ -30,10 +30,10 @@
                 <img src="<?php echo appDir ?>/images/themes/small/<?php echo $options['thumb'] ?>" alt="<?php echo $options['thumb'] ?>" />
             </div> 
             <div class="span-8">
-                <header class="heading_group">
+                <div class="heading_group">
                     <h3 class="heading-heavy-size-2"><?php echo $options['theme'] ?></h3>
                     <h4 class="heading-light-uppercase-brand-1-size-1"><?php echo $options['heading'] ?></h4>
-                </header>   
+                </div>   
                 <div class="widget_controls">
                     <ul class="list-tags-small">
                         <?php foreach ($options['tags'] as $tag) { ?>
@@ -78,7 +78,7 @@
             <ul class="min-break-4">
                 <li class="active"><a href="<?php pageLink('homepages/homepage-1.php') ?>"><i class="navigation_icon fa fa-home"></i> Home</a></li>
                 <li>
-                    <a href="<?php pageLink('demos.php') ?>"><i class="navigation_icon fa fa-home"></i> Demos</a>
+                    <a href="<?php pageLink('demos.php') ?>"><i class="navigation_icon fa fa-cogs"></i> Demos</a>
                     <ul class="mega-menu row">
                         
                         <li class="span-3">
@@ -224,7 +224,7 @@
                 </li>
                 
                 <li>
-                    <a href="<?php pageLink('templates.php') ?>"><i class="navigation_icon fa fa-desktop"></i> Templates</a>
+                    <a href="<?php pageLink('templates.php') ?>"><i class="navigation_icon fa fa-files-o"></i> Templates</a>
                     <ul class="mega-menu row-magic">
                         
                         <li class="span">
@@ -354,7 +354,7 @@
                 </li>
                 
                 <li>
-                    <a href="<?php pageLink('modules.php') ?>"><i class="navigation_icon fa fa-star"></i> Modules</a>
+                    <a href="<?php pageLink('modules.php') ?>"><i class="navigation_icon fa fa-cubes"></i> Modules</a>
                     <ul class="mega-menu row">
                         <li class="span-6">
                             
@@ -373,7 +373,7 @@
                                 
                                 <a class="widget-block-small-borderTop span" href="<?php pageLink('modules/elements/carousels.php') ?>">
                                     <div class="widget_icon button-icon-plain-size-6">
-                                        <i class="fa fa-arrows-h""></i>
+                                        <i class="fa fa-arrows-h"></i>
                                     </div>
                                     <header class="widget_header heading_group">
                                         <h4 class="heading-light-uppercase-brand-1-size-1">Carousels</h4>
@@ -521,7 +521,7 @@
                     </ul>
                 </li>
                 <li>
-                    <a href="https://github.com/esr360/Kayzen.docs" target="blank"><i class="navigation_icon fa fa-files-o"></i> Documentation</a>
+                    <a href="https://github.com/esr360/Kayzen.docs" target="blank"><i class="navigation_icon fa fa-file-text-o"></i> Documentation</a>
                     <ul>
                         <li><a href="https://github.com/esr360/Kayzen.docs#getting-started" target="blank">Getting Started</a></li>
                         <li><a href="https://github.com/esr360/Kayzen.docs#configure" target="blank">Configure</a></li>

@@ -150,9 +150,9 @@
                     <?php } ?>
                 </div>
                 <?php if ($options['height'] === 'tall') { ?>
-                        <img src="<?php echo stockImage('demo/tall/stock-'.$options['thumb'].'.jpg') ?>">
+                        <img src="<?php echo stockImage('demo/tall/stock-'.$options['thumb'].'.jpg') ?>" alt="">
                 <?php } else { ?>
-                    <img src="<?php echo stockImage('demo/small/stock-'.$options['thumb'].'.jpg') ?>">
+                    <img src="<?php echo stockImage('demo/small/stock-'.$options['thumb'].'.jpg') ?>" alt="">
                 <?php } ?>
                 
             <?php if ($options['type'] == 'blog') { ?>
@@ -194,9 +194,9 @@
             <div class="article-thumbnails-carousel carousel-cornerDots-revealNav owl-carousel">
                 <?php foreach ($options['thumbs'] as $item) { ?>
                     <?php if ($options['height'] === 'tall') { ?>
-                        <img src="<?php echo stockImage('demo/tall/stock-'.$item.'.jpg') ?>">
+                        <img src="<?php echo stockImage('demo/tall/stock-'.$item.'.jpg') ?>" alt="">
                     <?php } else { ?>
-                        <img src="<?php echo stockImage('demo/small/stock-'.$item.'.jpg') ?>">
+                        <img src="<?php echo stockImage('demo/small/stock-'.$item.'.jpg') ?>" alt="">
                     <?php } ?>
                 <?php } ?>
             </div>
@@ -331,7 +331,7 @@
         <?php // Article Meta ?>
         <?php if ($isArticle) { ?>
             <div class="row-block <?php echo (empty($options['span'])) ? 'row-waffle-large' : 'stack-break-0' ?>">
-                <small class="span va-middle">
+                <div class="span va-middle">
                     <ul class="list-reset-inline">
                         <?php if ($options['type'] === 'blog') { ?>
                             <li><i class="fa fa-user"></i> <a href="<?php echo $options['root'] ?>">John Doe</a></li>
@@ -347,8 +347,8 @@
                             </li>
                         <?php } ?>
                     </ul>
-                </small>
-                <div class="span va-middle <?php echo (empty($options['span'])) ? 'text-right-tablet' : 'text-right' ?>">
+                </div>
+                <div class="span va-middle <?php echo (empty($options['span'])) ? 'text-right-break-2' : 'text-right' ?>">
                     <a 
                         href="<?php echo $options['link'] ?>" 
                         class="button-primary<?php if ($options['size'] === 'small') echo '-size-2' ?>"

@@ -26,7 +26,7 @@
 </script>
 
 <style>
-	ol.EnlighterJS, ul.EnlighterJS {
-		margin: 0;
-	}
+    ol.EnlighterJS, ul.EnlighterJS {
+        margin: 0;
+    }
 </style>  

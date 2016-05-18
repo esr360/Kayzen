@@ -181,7 +181,7 @@
                                     </li>
                                     <li class="row stack-0">
                                         <div class="span-6 va-middle">
-                                            <h4 class="heading-size-4">$34.90</a>
+                                            <h4 class="heading-size-4">$34.90</h4>
                                         </div>
                                         <div class="span-6 text-right va-middle">
                                             <a class="button-primary-size-2">View Cart</a>

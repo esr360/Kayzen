@@ -15,10 +15,8 @@
         // Options
         
         var options = $.extend({
-            
             activePosition : 350,
             activeClass    : 'visible'
-            
         }, custom);
         
         // Run the code on each occurance of the element

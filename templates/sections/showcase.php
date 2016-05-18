@@ -20,29 +20,29 @@
         </header>
         
         <!-- Showcase Thumbnails -->
-        <section class="carousel-scale-3-greyscale-stageBg owl-carousel" id="showcase-thumbnails">
+        <div class="carousel-scale-3-greyscale-stageBg owl-carousel" id="showcase-thumbnails">
             <div class="showcase-thumbnail">
-                <img src="<?php echo stockImage('themes/medium/theme-1-thumb.jpg') ?>">
+                <img src="<?php echo stockImage('themes/medium/theme-1-thumb.jpg') ?>" alt="Kayzen">
             </div>
             <div class="showcase-thumbnail">
-                <img src="<?php echo stockImage('themes/medium/theme-7-thumb.jpg') ?>">
+                <img src="<?php echo stockImage('themes/medium/theme-7-thumb.jpg') ?>" alt="Mall">
             </div>
             <div class="showcase-thumbnail">
-                <img src="<?php echo stockImage('themes/medium/theme-3-thumb.jpg') ?>">
+                <img src="<?php echo stockImage('themes/medium/theme-3-thumb.jpg') ?>" alt="Agenda">
             </div>
             <div class="showcase-thumbnail">
-                <img src="<?php echo stockImage('themes/medium/theme-2-thumb.jpg') ?>">
+                <img src="<?php echo stockImage('themes/medium/theme-2-thumb.jpg') ?>" alt="Nexus">
             </div>
             <div class="showcase-thumbnail">
-                <img src="<?php echo stockImage('themes/medium/theme-5-thumb.jpg') ?>">
+                <img src="<?php echo stockImage('themes/medium/theme-5-thumb.jpg') ?>" alt="Tempus">
             </div>
             <div class="showcase-thumbnail">
-                <img src="<?php echo stockImage('themes/medium/theme-12-thumb.jpg') ?>">
+                <img src="<?php echo stockImage('themes/medium/theme-12-thumb.jpg') ?>" alt="Gaucho">
             </div>
             <div class="showcase-thumbnail">
-                <img src="<?php echo stockImage('themes/medium/theme-6-thumb.jpg') ?>">
+                <img src="<?php echo stockImage('themes/medium/theme-6-thumb.jpg') ?>" alt="Dart">
             </div>
-        </section> 
+        </div> 
         
         <!-- Showcase Slide Arrows -->
         <div class="wrap-slide-arrows container-full text-center">               

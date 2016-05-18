@@ -49,27 +49,27 @@
                 <div class="span-6 progress-bar_group">
                     <h5 class="heading">HTML5</h5>
                     <progress class="progress-bar" max="100" data-progress="75%">
-                        <div class="progress-bar">
-                            <div class="progress"></div>
-                        </div>
+                        <span class="progress-bar">
+                            <span class="progress"></span>
+                        </span>
                     </progress>
                     <h5 class="heading">CSS3/SASS</h5>
                     <progress class="progress-bar" max="100" data-progress="100%">
-                        <div class="progress-bar">
-                            <div class="progress"></div>
-                        </div>
+                        <span class="progress-bar">
+                            <span class="progress"></span>
+                        </span>
                     </progress>
                     <h5 class="heading">JavaScript/jQuery</h5>
                     <progress class="progress-bar" max="100" data-progress="80%">
-                        <div class="progress-bar">
-                            <div class="progress"></div>
-                        </div>
+                        <span class="progress-bar">
+                            <span class="progress"></span>
+                        </span>
                     </progress>
                     <h5 class="heading">PHP/Wordpress</h5>
                     <progress class="progress-bar" max="100" data-progress="65%">
-                        <div class="progress-bar">
-                            <div class="progress"></div>
-                        </div>
+                        <span class="progress-bar">
+                            <span class="progress"></span>
+                        </span>
                     </progress>
                 </div>
             </div>

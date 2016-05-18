@@ -7,11 +7,11 @@
     
     <!-- Promo Banner -->
     <?php if ($options['minimal']) { ?>
-        <section class="section-secondary promo-banner text-center">
+        <div class="section-secondary promo-banner text-center">
             <a href="http://themeforest.net/user/skyux/portfolio" target="blank" class="button-white-border-size-4">
                 Get Kayzen Now
             </a>
-        </section>
+        </div>
     <?php } else { ?>
         <section class="section-secondary promo-banner center-mobile">	
             <?php if ($options['small-container']) { ?>

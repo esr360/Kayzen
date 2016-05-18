@@ -38,28 +38,28 @@
                 <div class="span-8 va-middle">
                     <div id="clients-slider" class="carousel-thumbnails owl-carousel">
                         <a class="well-dark-thumb" href="#">
-                            <img class="well_content" src="<?php echo appDir ?>/images/envato/envato-1.png">
+                            <img class="well_content" src="<?php echo appDir ?>/images/envato/envato-1.png" alt="">
                         </a>
                         <a class="well-dark-thumb" href="#">
-                            <img class="well_content" src="<?php echo appDir ?>/images/envato/envato-2.png">
+                            <img class="well_content" src="<?php echo appDir ?>/images/envato/envato-2.png" alt="">
                         </a>
                         <a class="well-dark-thumb" href="#">
-                            <img class="well_content" src="<?php echo appDir ?>/images/envato/envato-3.png">
+                            <img class="well_content" src="<?php echo appDir ?>/images/envato/envato-3.png" alt="">
                         </a>
                         <a class="well-dark-thumb" href="#">
-                            <img class="well_content" src="<?php echo appDir ?>/images/envato/envato-4.png">
+                            <img class="well_content" src="<?php echo appDir ?>/images/envato/envato-4.png" alt="">
                         </a>
                         <a class="well-dark-thumb" href="#">
-                            <img class="well_content" src="<?php echo appDir ?>/images/envato/envato-5.png">
+                            <img class="well_content" src="<?php echo appDir ?>/images/envato/envato-5.png" alt="">
                         </a>
                         <a class="well-dark-thumb" href="#">
-                            <img class="well_content" src="<?php echo appDir ?>/images/envato/envato-6.png">
+                            <img class="well_content" src="<?php echo appDir ?>/images/envato/envato-6.png" alt="">
                         </a>
                         <a class="well-dark-thumb" href="#">
-                            <img class="well_content" src="<?php echo appDir ?>/images/envato/envato-7.png">
+                            <img class="well_content" src="<?php echo appDir ?>/images/envato/envato-7.png" alt="">
                         </a>
                         <a class="well-dark-thumb" href="#">
-                            <img class="well_content" src="<?php echo appDir ?>/images/envato/envato-8.png">
+                            <img class="well_content" src="<?php echo appDir ?>/images/envato/envato-8.png" alt="">
                         </a>
                     </div>
                     <script>

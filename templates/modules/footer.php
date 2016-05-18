@@ -32,14 +32,14 @@
                         <!-- Newsletter -->
                         <div class="span-3 break-4-half break-2-full">
                             
-                            <header class="heading_group-small">
+                            <div class="heading_group-small">
                                 <h4 class="footer_title heading-heavy-uppercase-size-3 font-2">
                                     Newsletter
                                 </h4>
                                 <h5 class="heading-light-brand-1">
                                     Signup to our mailing list
                                 </h5>
-                            </header>
+                            </div>
                             
                             <div class="footer_content">
                                 
@@ -56,7 +56,7 @@
                                 <div class="button_group-small">
                                     <a 
                                         href="https://dribbble.com/esr360/projects/308469-Kayzen" 
-                                        taret="blank" 
+                                        target="blank" 
                                         class="button-icon-size-2 tooltip-top" 
                                         data-tooltip="Dribbble"
                                     >
@@ -64,7 +64,7 @@
                                     </a>
                                     <a 
                                         href="https://www.facebook.com/SkyUXThemes/" 
-                                        taret="blank" 
+                                        target="blank" 
                                         class="button-icon-size-2 tooltip-top" 
                                         data-tooltip="Facebook"
                                     >
@@ -72,7 +72,7 @@
                                     </a>
                                     <a 
                                         href="https://twitter.com/ESR360" 
-                                        taret="blank" 
+                                        target="blank" 
                                         class="button-icon-size-2 tooltip-top" 
                                         data-tooltip="Twitter"
                                     >
@@ -80,7 +80,7 @@
                                     </a>
                                     <a 
                                         href="https://uk.linkedin.com/in/esr360" 
-                                        taret="blank" 
+                                        target="blank" 
                                         class="button-icon-size-2 tooltip-top" 
                                         data-tooltip="LinkedIn"
                                     >
@@ -88,7 +88,7 @@
                                     </a>
                                     <a 
                                         href="http://esr360.deviantart.com/" 
-                                        taret="blank" 
+                                        target="blank" 
                                         class="button-icon-size-2 tooltip-top" 
                                         data-tooltip="DeviantArt"
                                     >
@@ -96,7 +96,7 @@
                                     </a>
                                     <a 
                                         href="https://www.behance.net/esr360" 
-                                        taret="blank" 
+                                        target="blank" 
                                         class="button-icon-size-2 tooltip-top" 
                                         data-tooltip="Behance"
                                     >
@@ -112,7 +112,7 @@
                         
                         <!-- Twitter Feed -->
                         <div class="span-3 break-4-half break-2-full" id="footer-twitter-feed">
-                            <header class="heading_group-small">
+                            <div class="heading_group-small">
                                 <h4 class="footer_title heading-heavy-uppercase-size-3 font-2">
                                     <i class="fa fa-twitter"></i> Twitter Feed
                                 </h4>
@@ -127,7 +127,7 @@
                                         <i class="fa fa-angle-right"></i>
                                     </div>
                                 </div>
-                            </header>
+                            </div>
                             <div class="twitter-feed_content"></div>
                             <hr class="hrule-stripes max-break-2" />
                         </div>
@@ -135,7 +135,7 @@
                         <!-- Testimonials -->
                         <div class="span-3 break-4-half break-2-full">
                             
-                            <header class="heading_group-small">
+                            <div class="heading_group-small">
                                 <h4 class="footer_title heading-heavy-uppercase-size-3 font-2">
                                     Testimonials
                                 </h4>
@@ -150,7 +150,7 @@
                                         <i class="fa fa-angle-right"></i>
                                     </div>
                                 </div>
-                            </header>
+                            </div>
                             
                             <div id="footer-testimonials" class="owl-carousel">
                                 
@@ -160,7 +160,7 @@
                                             Aenean lobortis ante nunc. Integer justo ex. Curabitur at enim ac nisi...
                                         </div>
                                     </div>
-                                    <footer class="blockquote_footer">
+                                    <div class="blockquote_footer">
                                         <a class="blockquote_avatar-small" href="">
                                             <img src="<?php echo stockImage('team/team-1.jpg') ?>" alt="">
                                         </a>
@@ -168,7 +168,7 @@
                                             <h4 class="heading-size-2 font-2">John Dough</h4>
                                             <h5 class="heading-light-brand-1-size-2">Theme Forest</h5>
                                         </div>
-                                    </footer>
+                                    </div>
                                 </blockquote>	
                                 
                                 <blockquote class="blockquote-testimonial">
@@ -177,7 +177,7 @@
                                             Aenean lobortis ante nunc. Integer justo ex. Curabitur at enim ac nisi...
                                         </div>
                                     </div>
-                                    <footer class="blockquote_footer">
+                                    <div class="blockquote_footer">
                                         <a class="blockquote_avatar-small" href="">
                                             <img src="<?php echo stockImage('team/team-1.jpg') ?>" alt="">
                                         </a>
@@ -185,7 +185,7 @@
                                             <h4 class="heading-size-2 font-2">John Dough</h4>
                                             <h5 class="heading-light-brand-1-size-2">Theme Forest</h5>
                                         </div>
-                                    </footer>
+                                    </div>
                                 </blockquote>
                             
                             </div>

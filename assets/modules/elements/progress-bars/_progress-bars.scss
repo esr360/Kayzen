@@ -53,6 +53,7 @@
 
     .progress {
         background: this('fill-background');
+        display: block;
     }
 
     // HTML5 Progress

@@ -46,7 +46,7 @@
                                 </a>
                             </div>
                         </div>
-                        <img src="<?php echo stockImage('team/team-1.jpg') ?>">
+                        <img src="<?php echo stockImage('team/team-1.jpg') ?>" alt="">
                     </div>
                     <header class="heading_group">
                         <h3 class="heading-heavy-size-4">Alexander	Welch</h3>

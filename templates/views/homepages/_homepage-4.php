@@ -135,20 +135,20 @@
                         data-trigger="transform: translate(-45%, -50%) translateZ(0) scale(0.85)"
                         data-hover="left: -25%"
                         alt=""
-                    / >
+                    />
                     <img 
                         class="mobile-graphic-<?php echo $options['iphone-colors'][1] ?>" 
                         src="<?php echo appDir ?>/images/mobile-screen-2.jpg" 
                         data-trigger="transform: translate(45%, -50%) translateZ(0) scale(0.85)"
                         data-hover="right: -25%"
                         alt=""
-                    / >
+                    />
                     <img 
                         class="mobile-graphic-<?php echo $options['iphone-colors'][2] ?>" 
                         src="<?php echo appDir ?>/images/mobile-screen.png" 
                         data-hover="transform: scale(1.05) translateY(-47.5%) translateZ(0)"
                         alt=""
-                    / >
+                    />
                 </div>
             </div>
             <div class="span-7 va-middle">
