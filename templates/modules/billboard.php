@@ -145,7 +145,7 @@
         </section>
     <?php } else if ($options['type'] == 'default') { ?>
         <section class="billboard-overlay<?php echo '-'.$options['modifiers'] ?>" data-stellar-background-ratio="0.5">
-            <div class="billboard_wrapper container">
+            <div class="billboard_wrapper container text-center">
                 <div class="billboard_snap">
                     <header class="heading_group<?php if($options['countdown']) echo '-small' ?>">
                         <h2 class="heading-uppercase-light-strikethrough-spaced-size-4-responsive"><span><?php echo $options['headline']['text'] ?></span></h2>

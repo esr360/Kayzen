@@ -65,9 +65,10 @@ module.exports = function(grunt) {
     ];
 
     // App Scripts
-    var _scripts = [   
+    var _scripts = [
         _owl,
         _magnific,
+        'assets/vendor/matchMedia/matchMedia.js',
         'assets/vendor/Synergy/dist/synergy.js',
         'assets/vendor/jquery-animateNumber/jquery.animateNumber.js',
         'assets/vendor/Kayzen.ScrollSpy/src/Kayzen.ScrollSpy.js',
@@ -417,6 +418,10 @@ module.exports = function(grunt) {
                     {
                         from : 'data-bg="..\/',
                         to   : 'data-bg="'
+                    },
+                    {
+                        from : 'data-billboard-bg="..\/',
+                        to   : 'data-billboard-bg="'
                     },
                     {
                         from : 'url(\'..\/',

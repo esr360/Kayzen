@@ -1,6 +1,8 @@
 # To Do
 #============================================================
 
+- update main menu icons
+- validate HTML
 - integrate drag & drop page builder
 - update docs
 - update grunt task titles to use correct name and url
@@ -46,6 +48,7 @@
 - (mobile) - look at modal height
 - remove billboard parallax for mobiles
 - add carousel to billboard
+- remove all instances of element.matches()
 
 # Next Release
 #============================================================
@@ -57,6 +60,7 @@
 - make cheatsheet more in-depth
 - (mobile) make ribbons smaller
 - (mobile) re-think dynamic side header (there is a jump)
+- look into relative-root data attr background images
 
 # Backlog
 #============================================================

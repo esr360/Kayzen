@@ -69,18 +69,18 @@
                     <div class="block-content">
                         <header class="heading_group">
                             <h2 class="heading-heavy-size-6 font-2">Kayzen</h2>
-                            <h3 class="heading-light-brand-1-size-5">A Modern Template for Creative Blogs</h3>
+                            <h3 class="heading-light-brand-1-size-5">The Default Kayzen Theme</h3>
                         </header>
-                        <p class="lede">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus eget porta eros. Suspendisse vehicula massa in erat mattis.</p>
+                        <p class="lede">This is the default theme used to demonstrate the power and potential of Kayzen, and comes included as a premade demo.</p>
                         <ul class="list-arrow lede min-break-2">
-                            <li>Lorem ipsum dolor sit amet consectetur</li>
-                            <li>Donec malesuada metus non massa sodales auctor</li>
-                            <li>Sed sed iaculis arcu, eu pharetra nulla</li>
-                            <li>Etiam dapibus, nulla placerat</li>
+                            <li>Fixed header</li>
+                            <li>Unique one-page design</li>
+                            <li>Parallax effects</li>
+                            <li>Mega menu</li>
                         </ul>
                         <div class="button_group">
-                            <a href="#" target="blank" class="button-size-3">View Demo</a>
-                            <a href="#" class="button-primary-size-3">Purchase Theme</a>
+                            <a href="<?php echo pageLink('homepages/homepage-1.php') ?>" target="blank" class="button-size-3">View Demo</a>
+                            <a href="#" class="button-primary-size-3">Purchase Kayzen</a>
                         </div>
                     </div>
                 </div>
@@ -100,18 +100,18 @@
                     <div class="block-content">
                         <header class="heading_group">
                             <h2 class="heading-heavy-size-6 font-2">Mall</h2>
-                            <h3 class="heading-light-brand-1-size-5">A Modern Template for Creative Blogs</h3>
+                            <h3 class="heading-light-brand-1-size-5">A Modern E-Commerce Template</h3>
                         </header>
-                        <p class="lede">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus eget porta eros. Suspendisse vehicula massa in erat mattis.</p>
+                        <p class="lede">Mall is vibrant theme suitable for websites with a focus on e-commerce, but can be easily modified to suit any need.</p>
                         <ul class="list-arrow lede min-break-2">
-                            <li>Lorem ipsum dolor sit amet consectetur</li>
-                            <li>Donec malesuada metus non massa sodales auctor</li>
-                            <li>Sed sed iaculis arcu, eu pharetra nulla</li>
-                            <li>Etiam dapibus, nulla placerat</li>
+                            <li>Fixed header</li>
+                            <li>Billboard carousel</li>
+                            <li>Multi-page</li>
+                            <li>Right sidebar on further pages</li>
                         </ul>
                         <div class="button_group">
-                            <a href="#" target="blank" class="button-size-3">View Demo</a>
-                            <a href="#" class="button-primary-size-3">Purchase Theme</a>
+                            <a href="<?php echo themeLink('Mall', '/index.php') ?>" target="blank" class="button-size-3">View Demo</a>
+                            <a href="#" class="button-primary-size-3">Purchase Kayzen</a>
                         </div>
                     </div>
                 </div>
@@ -131,17 +131,17 @@
                     <div class="block-content">
                         <header class="heading_group">
                             <h2 class="heading-heavy-size-6 font-2">Agenda</h2>
-                            <h3 class="heading-light-brand-1-size-5">A Modern Template for Creative Blogs</h3>
+                            <h3 class="heading-light-brand-1-size-5">A One-Page Theme For Agencies</h3>
                         </header>
-                        <p class="lede">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus eget porta eros. Suspendisse vehicula massa in erat mattis.</p>
+                        <p class="lede">Agenda is creative a one-page theme suitable for digital agencies but can also easily be considered a multipurpose theme.</p>
                         <ul class="list-arrow lede min-break-2">
-                            <li>Lorem ipsum dolor sit amet consectetur</li>
-                            <li>Donec malesuada metus non massa sodales auctor</li>
-                            <li>Sed sed iaculis arcu, eu pharetra nulla</li>
-                            <li>Etiam dapibus, nulla placerat</li>
+                            <li>One-page</li>
+                            <li>Side header</li>
+                            <li>Parallax effects</li>
+                            <li>Minimal footer</li>
                         </ul>
                         <div class="button_group">
-                            <a href="#" target="blank" class="button-size-3">View Demo</a>
+                            <a href="<?php echo themeLink('Agenda', '/index.php') ?>" target="blank" class="button-size-3">View Demo</a>
                             <a href="#" class="button-primary-size-3">Purchase Theme</a>
                         </div>
                     </div>
@@ -162,17 +162,17 @@
                     <div class="block-content">
                         <header class="heading_group">
                             <h2 class="heading-heavy-size-6 font-2">Nexus</h2>
-                            <h3 class="heading-light-brand-1-size-5">A Modern Template for Creative Blogs</h3>
+                            <h3 class="heading-light-brand-1-size-5">A Modern Theme for Digital Agencies</h3>
                         </header>
-                        <p class="lede">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus eget porta eros. Suspendisse vehicula massa in erat mattis.</p>
+                        <p class="lede">Nexus is a multipurpose theme primarily intended to be used for digital agencies or portfolio offering creative services.</p>
                         <ul class="list-arrow lede min-break-2">
-                            <li>Lorem ipsum dolor sit amet consectetur</li>
-                            <li>Donec malesuada metus non massa sodales auctor</li>
-                            <li>Sed sed iaculis arcu, eu pharetra nulla</li>
-                            <li>Etiam dapibus, nulla placerat</li>
+                            <li>Fixed header</li>
+                            <li>Featured demo</li>
+                            <li>One-page/multi-page</li>
+                            <li>Included free - $17 value</li>
                         </ul>
                         <div class="button_group">
-                            <a href="#" target="blank" class="button-size-3">View Demo</a>
+                            <a href="<?php echo themeLink('Nexus', '/index.php') ?>" target="blank" class="button-size-3">View Demo</a>
                             <a href="#" class="button-primary-size-3">Purchase Theme</a>
                         </div>
                     </div>
@@ -193,17 +193,17 @@
                     <div class="block-content">
                         <header class="heading_group">
                             <h2 class="heading-heavy-size-6">Tempus</h2>
-                            <h3 class="heading-light-brand-1-size-5">A Modern Template for Creative Blogs</h3>
+                            <h3 class="heading-light-brand-1-size-5">A Creative Portfolio Theme</h3>
                         </header>
-                        <p class="lede">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus eget porta eros. Suspendisse vehicula massa in erat mattis.</p>
+                        <p class="lede">Tempus is a clean, no-nonsense theme suitable for personal portfolios, blogs and creative agencies.</p>
                         <ul class="list-arrow lede min-break-2">
-                            <li>Lorem ipsum dolor sit amet consectetur</li>
-                            <li>Donec malesuada metus non massa sodales auctor</li>
-                            <li>Sed sed iaculis arcu, eu pharetra nulla</li>
-                            <li>Etiam dapibus, nulla placerat</li>
+                            <li>Parallax effects</li>
+                            <li>Multi-page</li>
+                            <li>Masonry portfolio/blog pages</li>
+                            <li>Scrolling animations</li>
                         </ul>
                         <div class="button_group">
-                            <a href="#" target="blank" class="button-size-3">View Demo</a>
+                            <a href="<?php echo themeLink('Tempus', '/index.php') ?>" target="blank" class="button-size-3">View Demo</a>
                             <a href="#" class="button-primary-size-3">Purchase Theme</a>
                         </div>
                     </div>
@@ -224,17 +224,17 @@
                     <div class="block-content">
                         <header class="heading_group">
                             <h2 class="heading-heavy-size-6 font-2">Gaucho</h2>
-                            <h3 class="heading-light-brand-1-size-5">A Modern Template for Creative Blogs</h3>
+                            <h3 class="heading-light-brand-1-size-5">A Modern Newspaper Theme</h3>
                         </header>
-                        <p class="lede">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus eget porta eros. Suspendisse vehicula massa in erat mattis.</p>
+                        <p class="lede">Gaucho is modern newspaper theme suitable for blogs and websites with a focus on providing news and information.</p>
                         <ul class="list-arrow lede min-break-2">
-                            <li>Lorem ipsum dolor sit amet consectetur</li>
-                            <li>Donec malesuada metus non massa sodales auctor</li>
-                            <li>Sed sed iaculis arcu, eu pharetra nulla</li>
-                            <li>Etiam dapibus, nulla placerat</li>
+                            <li>Masonry billboard</li>
+                            <li>Sidebar</li>
+                            <li>Multi-page</li>
+                            <li>Perfect for blogs</li>
                         </ul>
                         <div class="button_group">
-                            <a href="#" target="blank" class="button-size-3">View Demo</a>
+                            <a href="<?php echo themeLink('Gaucho', '/index.php') ?>" target="blank" class="button-size-3">View Demo</a>
                             <a href="#" class="button-primary-size-3">Purchase Theme</a>
                         </div>
                     </div>
@@ -255,17 +255,17 @@
                     <div class="block-content">
                         <header class="heading_group">
                             <h2 class="heading-heavy-size-6 font-2">Dart</h2>
-                            <h3 class="heading-light-brand-1-size-5">A Modern Template for Creative Blogs</h3>
+                            <h3 class="heading-light-brand-1-size-5">A Creative Portfolio Theme</h3>
                         </header>
-                        <p class="lede">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus eget porta eros. Suspendisse vehicula massa in erat mattis.</p>
+                        <p class="lede">A multi-purpose theme with a focus on portfolio showcasing, suitable for any creative services website.</p>
                         <ul class="list-arrow lede min-break-2">
-                            <li>Lorem ipsum dolor sit amet consectetur</li>
-                            <li>Donec malesuada metus non massa sodales auctor</li>
-                            <li>Sed sed iaculis arcu, eu pharetra nulla</li>
-                            <li>Etiam dapibus, nulla placerat</li>
+                            <li>Side header</li>
+                            <li>Parallax effects</li>
+                            <li>Scrolling animations</li>
+                            <li>Multi-page</li>
                         </ul>
                         <div class="button_group">
-                            <a href="#" target="blank" class="button-size-3">View Demo</a>
+                            <a href="<?php echo themeLink('Dart', '/index.php') ?>" target="blank" class="button-size-3">View Demo</a>
                             <a href="#" class="button-primary-size-3">Purchase Theme</a>
                         </div>
                     </div>

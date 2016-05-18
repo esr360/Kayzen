@@ -1,20 +1,20 @@
-<?php function navigation($custom = array()) {
+<?php function navigation($custom = []) {
 
-    $options = array_merge(array(
+    $options = array_merge([
         'pages'           => null,
         'modifiers'       => null,
         'flyout-trigger'  => true
-    ), $custom);
+    ], $custom);
     
-    function navThemeItem($custom = array()) {
+    function navThemeItem($custom = []) {
         
-        $options = array_merge(array(
+        $options = array_merge([
             'theme'   => 'Kayzen',
             'thumb'   => 'theme-1-thumb.jpg',
             'heading' => 'Digital Agency Demo',
-            'tags'    => array('Multi-Page'),
+            'tags'    => ['Multi-Page'],
             'ribbon'  => null
-        ), $custom); 
+        ], $custom); 
         
         $link = themeLink($options['theme'], '/index.php');
         
@@ -87,30 +87,33 @@
                                 
                                 <!-- Theme 1 -->
                                 <li>
-                                    <?php navThemeItem(array(
+                                    <?php navThemeItem([
                                         'theme' => 'Nexus',
+                                        'heading' => 'Digital Agency Theme',
                                         'thumb' => 'theme-2-thumb.jpg',
-                                        'ribbon' => array('pink', 'Hot')
-                                    )) ?>
+                                        'ribbon' => ['pink', 'Hot']
+                                    ]) ?>
                                 </li>
                                 
                                 <!-- Theme 2 -->
                                 <li>
-                                    <?php navThemeItem(array(
+                                    <?php navThemeItem([
                                         'theme' => 'Kayzen',
+                                        'heading' => 'Kayzen Default Theme',
                                         'thumb' => 'theme-1-thumb.jpg',
-                                        'ribbon' => array('purple', 'Featured')
-                                    )) ?>
+                                        'ribbon' => ['purple', 'Featured']
+                                    ]) ?>
                                 </li>
                                 
                                 <!-- Theme 3 -->
                                 <li>
-                                    <?php navThemeItem(array(
+                                    <?php navThemeItem([
                                         'theme' => 'Agenda',
+                                        'heading' => 'Multipurpose Theme',
                                         'thumb' => 'theme-3-thumb.jpg',
-                                        'tags' => array('One-Page'),
-                                        'ribbon' => array('blue', 'One-Page')
-                                    )) ?>
+                                        'tags' => ['One-Page'],
+                                        'ribbon' => ['blue', 'One-Page']
+                                    ]) ?>
                                 </li>
                                 
                             </ul>
@@ -124,6 +127,7 @@
                                 <li>
                                     <?php navThemeItem(array(
                                         'theme' => 'Blizzard',
+                                        'heading' => 'Portfolio Theme',
                                         'thumb' => 'theme-4-thumb.jpg'
                                     )) ?>
                                 </li>
@@ -132,6 +136,7 @@
                                 <li>
                                     <?php navThemeItem(array(
                                         'theme' => 'Tempus',
+                                        'heading' => 'Portfolio Theme',
                                         'thumb' => 'theme-5-thumb.jpg'
                                     )) ?>
                                 </li>
@@ -140,6 +145,7 @@
                                 <li>
                                     <?php navThemeItem(array(
                                         'theme' => 'Dart',
+                                        'heading' => 'Portfolio Theme',
                                         'thumb' => 'theme-6-thumb.jpg'
                                     )) ?>
                                 </li>
@@ -153,27 +159,30 @@
                                 
                                 <!-- Theme 7 -->
                                 <li>
-                                    <?php navThemeItem(array(
+                                    <?php navThemeItem([
                                         'theme' => 'Mall',
+                                        'heading' => 'Shop Theme',
                                         'thumb' => 'theme-7-thumb.jpg'
-                                    )) ?>
+                                    ]) ?>
                                 </li>
                                 
                                 <!-- Theme 8 -->
                                 <li>
-                                    <?php navThemeItem(array(
+                                    <?php navThemeItem([
                                         'theme' => 'Arndale',
+                                        'heading' => 'Shop Theme',
                                         'thumb' => 'theme-8-thumb.jpg'
-                                    )) ?>
+                                    ]) ?>
                                 </li>
                                 
                                 <!-- Theme 9 -->
                                 <li>
-                                    <?php navThemeItem(array(
+                                    <?php navThemeItem([
                                         'theme' => 'Lily',
+                                        'heading' => 'Shop Theme',
                                         'thumb' => 'theme-9-thumb.jpg',
-                                        'ribbon' => array('pink', 'Hot')
-                                    )) ?>
+                                        'ribbon' => ['pink', 'Hot']
+                                    ]) ?>
                                 </li>
                                 
                             </ul>
@@ -184,26 +193,29 @@
                                 
                                 <!-- Theme 10 -->
                                 <li>
-                                    <?php navThemeItem(array(
+                                    <?php navThemeItem([
                                         'theme' => 'Hollywood',
+                                        'heading' => 'Newspaper Theme',
                                         'thumb' => 'theme-10-thumb.jpg'
-                                    )) ?>
+                                    ]) ?>
                                 </li>
                                 
                                 <!-- Theme 11 -->
                                 <li>
-                                    <?php navThemeItem(array(
+                                    <?php navThemeItem([
                                         'theme' => 'Coffee',
+                                        'heading' => 'Newspaper Theme',
                                         'thumb' => 'theme-11-thumb.jpg'
-                                    )) ?>
+                                    ]) ?>
                                 </li>
                                 
                                 <!-- Theme 12 -->
                                 <li>
-                                    <?php navThemeItem(array(
+                                    <?php navThemeItem([
                                         'theme' => 'Gaucho',
+                                        'heading' => 'Newspaper Theme',
                                         'thumb' => 'theme-12-thumb.jpg'
-                                    )) ?>
+                                    ]) ?>
                                 </li>
                                 
                             </ul>
