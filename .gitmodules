@@ -61,3 +61,6 @@
 [submodule "assets/vendor/k-preloaders"]
 	path = assets/vendor/k-preloaders
 	url = https://github.com/esr360/k-preloaders.git
+[submodule "assets/vendor/matchMedia"]
+	path = assets/vendor/matchMedia
+	url = https://github.com/paulirish/matchMedia.js.git
