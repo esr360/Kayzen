@@ -330,8 +330,8 @@
         
         <?php // Article Meta ?>
         <?php if ($isArticle) { ?>
-            <div class="row-block <?php echo (empty($options['span'])) ? 'row-waffle-large' : 'stack-break-0' ?>">
-                <div class="span va-middle">
+            <div class="row-block <?php echo (empty($options['span'])) ? '' : 'stack-break-0' ?>">
+                <div class="span va-middle object">
                     <ul class="list-reset-inline">
                         <?php if ($options['type'] === 'blog') { ?>
                             <li><i class="fa fa-user"></i> <a href="<?php echo $options['root'] ?>">John Doe</a></li>
@@ -348,7 +348,7 @@
                         <?php } ?>
                     </ul>
                 </div>
-                <div class="span va-middle <?php echo (empty($options['span'])) ? 'text-right-break-2' : 'text-right' ?>">
+                <div class="span va-middle <?php echo (empty($options['span'])) ? 'text-right-desktop' : 'text-right' ?>">
                     <a 
                         href="<?php echo $options['link'] ?>" 
                         class="button-primary<?php if ($options['size'] === 'small') echo '-size-2' ?>"
