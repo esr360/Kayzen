@@ -29,6 +29,7 @@ https://github.com/esr360/K-Tooltips
         'arrow-color'    : rgba(black, 0.75),
         // Typography
         'font-size'      : font-size('size-2', $rem: true),
+        'font-family'    : typography('typefaces', 'primary'),
         'color'          : white,
         'text-transform' : none,
         'font-weight'    : normal,
@@ -86,6 +87,7 @@ https://github.com/esr360/K-Tooltips
             
             // Typography
             font-size: this('font-size');
+            font-family: this('font-family');
             color: this('color');
             text-transform: this('text-transform');
             font-weight: this('font-weight');

@@ -17,7 +17,7 @@
             <div class="container-small">
                 <h4 class="<?php echo $options['title']['modifiers'] ?>">
                     <?php if ($options['title']['highlight']) { ?><b><?php } else { ?><span><?php } ?>
-                        Nexus is Responsive
+                        Cross Browser
                     <?php if ($options['title']['highlight']) { ?></b><?php } else { ?></span><?php } ?>
                 </h4>
                 <h2 class="<?php echo $options['sub-title']['modifiers'] ?>">
@@ -31,7 +31,7 @@
                 <div class="object">
                     <i style="color:#37a5e2" data-tooltip="MS Edge" class="tooltip button-icon-plain fa fa-edge fa-4x"></i>
                     <i style="color:#db6c19" data-tooltip="Firefox" class="tooltip button-icon-plain fa fa-firefox fa-4x"></i>
-                    <i style="color:#4db849" data-tooltip="Chrome" class="tooltip button-icon-plain fa fa-chrome fa-4x"></i>
+                    <i style="color:#d34836" data-tooltip="Chrome" class="tooltip button-icon-plain fa fa-chrome fa-4x"></i>
                     <i style="color:#e01326" data-tooltip="Opera" class="tooltip button-icon-plain fa fa-opera fa-4x"></i>
                     <i style="color:#00397f" data-tooltip="Safari" class="tooltip button-icon-plain fa fa-safari fa-4x"></i>
                 </div>

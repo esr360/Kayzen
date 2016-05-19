@@ -121,6 +121,8 @@
         
             <?php if ($options['type'] == 'blog') { ?>
                 <div class="thumbnail<?php if ($isArticle && empty($options['span'])) echo '-article' ?>">
+            <?php } else { ?>
+                <div class="relative">
             <?php } ?>
               
                 <div class="thumbnail_mask">
@@ -155,9 +157,7 @@
                     <img src="<?php echo stockImage('demo/small/stock-'.$options['thumb'].'.jpg') ?>" alt="">
                 <?php } ?>
                 
-            <?php if ($options['type'] == 'blog') { ?>
-                </div>
-            <?php } ?>
+            </div>
             
             <?php if ($options['author-thumb']) { ?>
                 <div class="thumbnail-profile-round-badge">

@@ -49,6 +49,7 @@
 - add carousel to billboard
 - remove all instances of element.matches()
 - update main menu icons
+- fix tooltip font family
 
 # Next Release
 #============================================================

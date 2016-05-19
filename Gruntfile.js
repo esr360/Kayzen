@@ -416,8 +416,12 @@ module.exports = function(grunt) {
                         to   : 'src="'
                     },
                     {
-                        from : 'data-*bg="..\/',
-                        to   : 'data-*bg="'
+                        from : 'data-bg="..\/',
+                        to   : 'data-bg="'
+                    },
+                    {
+                        from : 'data-billboard-bg="..\/',
+                        to   : 'data-billboard-bg="'
                     },
                     {
                         from : 'url(\'..\/',
