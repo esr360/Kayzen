@@ -13,80 +13,80 @@
                     <div class="owl-carousel" id="latest-articles">
                         
                         <div class="thumbnail-feature">
-                            <img src="<?php echo stockImage('demo/stock-2.jpg') ?>">
+                            <img src="<?php echo stockImage('demo/stock-2.jpg') ?>" alt="">
                             <div class="thumbnail_content">
                                 <header class="heading_group-small">
                                     <div class="heading_date">
                                         <div>Sep</div>
                                         <div>23</div>
                                     </div>
-                                    <span>
+                                    <div>
                                         <h3 class="heading-heavy-size-4">Kayzen is Released</h3>
-                                    </span>
+                                    </div>
                                 </header>
                                 <div class="thumbnail_excerpt">Cum socis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus...</div>
                             </div>
                         </div>
                         
                         <div class="thumbnail-feature">
-                            <img src="<?php echo stockImage('demo/stock-3.jpg') ?>">
+                            <img src="<?php echo stockImage('demo/stock-3.jpg') ?>" alt="">
                             <div class="thumbnail_content">
                                 <header class="heading_group-small">
                                     <div class="heading_date">
                                         <div>Sep</div>
                                         <div>23</div>
                                     </div>
-                                    <span>
+                                    <div>
                                         <h3 class="heading-heavy-size-4">Kayzen is Released</h3>
-                                    </span>
+                                    </div>
                                 </header>
                                 <div class="thumbnail_excerpt">Cum socis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus...</div>
                             </div>
                         </div>
                         
                         <div class="thumbnail-feature">
-                            <img src="<?php echo stockImage('demo/stock-5.jpg') ?>">
+                            <img src="<?php echo stockImage('demo/stock-5.jpg') ?>" alt="">
                             <div class="thumbnail_content">
                                 <header class="heading_group-small">
                                     <div class="heading_date">
                                         <div>Sep</div>
                                         <div>23</div>
                                     </div>
-                                    <span>
+                                    <div>
                                         <h3 class="heading-heavy-size-4">Kayzen is Released</h3>
-                                    </span>
+                                    </div>
                                 </header>
                                 <div class="thumbnail_excerpt">Cum socis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus...</div>
                             </div>
                         </div>
                         
                         <div class="thumbnail-feature">
-                            <img src="<?php echo stockImage('demo/stock-6.jpg') ?>">
+                            <img src="<?php echo stockImage('demo/stock-6.jpg') ?>" alt="">
                             <div class="thumbnail_content">
                                 <header class="heading_group-small">
                                     <div class="heading_date">
                                         <div>Sep</div>
                                         <div>23</div>
                                     </div>
-                                    <span>
+                                    <div>
                                         <h3 class="heading-heavy-size-4">Kayzen is Released</h3>
-                                    </span>
+                                    </div>
                                 </header>
                                 <div class="thumbnail_excerpt">Cum socis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus...</div>
                             </div>
                         </div>
                         
                         <div class="thumbnail-feature">
-                            <img src="<?php echo stockImage('demo/stock-7.jpg') ?>">
+                            <img src="<?php echo stockImage('demo/stock-7.jpg') ?>" alt="">
                             <div class="thumbnail_content">
                                 <header class="heading_group-small">
                                     <div class="heading_date">
                                         <div>Sep</div>
                                         <div>23</div>
                                     </div>
-                                    <span>
+                                    <div>
                                         <h3 class="heading-heavy-size-4">Kayzen is Released</h3>
-                                    </span>
+                                    </div>
                                 </header>
                                 <div class="thumbnail_excerpt">Cum socis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus...</div>
                             </div>
@@ -102,11 +102,11 @@
                 </div>
                 
                 <div class="thumbnail_grid-fade row-magic stack-0" id="latest-articles-thumbs">
-                    <img class="span active" src="<?php echo stockImage('demo/stock-7.jpg') ?>">
-                    <img class="span" src="<?php echo stockImage('demo/stock-4.jpg') ?>">
-                    <img class="span" src="<?php echo stockImage('demo/stock-5.jpg') ?>">
-                    <img class="span" src="<?php echo stockImage('demo/stock-6.jpg') ?>">
-                    <img class="span" src="<?php echo stockImage('demo/stock-7.jpg') ?>">
+                    <img class="span active" src="<?php echo stockImage('demo/stock-7.jpg') ?>" alt="">
+                    <img class="span" src="<?php echo stockImage('demo/stock-4.jpg') ?>" alt="">
+                    <img class="span" src="<?php echo stockImage('demo/stock-5.jpg') ?>" alt="">
+                    <img class="span" src="<?php echo stockImage('demo/stock-6.jpg') ?>" alt="">
+                    <img class="span" src="<?php echo stockImage('demo/stock-7.jpg') ?>" alt="">
                 </div>
                 
                 <script>
@@ -264,7 +264,7 @@
                                     </a>
                                 </div>
                             </div>
-                            <img src="<?php echo stockImage('demo/stock-7.jpg') ?>">
+                            <img src="<?php echo stockImage('demo/stock-7.jpg') ?>" alt="">
                         </div>
                         <header class="heading_group">
                             <div class="heading_date">
@@ -303,7 +303,7 @@
                                     </a>
                                 </div>
                             </div>
-                            <img src="<?php echo stockImage('demo/stock-5.jpg') ?>">
+                            <img src="<?php echo stockImage('demo/stock-5.jpg') ?>" alt="">
                         </div>
                         <header class="heading_group">
                             <div class="heading_date">
@@ -342,7 +342,7 @@
                                     </a>
                                 </div>
                             </div>
-                            <img src="<?php echo stockImage('demo/stock-3.jpg') ?>">
+                            <img src="<?php echo stockImage('demo/stock-3.jpg') ?>" alt="">
                         </div>
                         <header class="heading_group">
                             <div class="heading_date">

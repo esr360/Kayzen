@@ -11,24 +11,24 @@
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vel consectetur erat, eget vehicula justo. Nam dui erat, malesuada eget scelerisque et, accumsan non elit.</p>
                 <form class="form-fauxPlaceholders-html5">
                     <div class="form_group-compound-has-icon">
-                        <input type="text" class="form_input" id="fullName" placeholder="Ex: John Doe" required="">
+                        <input type="text" class="form_input" id="page_fullName" placeholder="Ex: John Doe" required="">
                         <i class="form_icon fa fa-pencil"></i>
-                        <label for="fullName">Full Name</label>
+                        <label for="page_fullName">Full Name</label>
                     </div>
                     <div class="form_group-compound-has-icon">
-                        <input type="text" class="form_input" id="registerUsername" placeholder="Ex: SkyUX" required="">
+                        <input type="text" class="form_input" id="page_registerUsername" placeholder="Ex: SkyUX" required="">
                         <i class="form_icon fa fa-user"></i>
-                        <label for="registerUsername">Username</label>
+                        <label for="page_registerUsername">Username</label>
                     </div>
                     <div class="form_group-compound-has-icon">
-                        <input type="email" class="form_input" id="registerEmail" placeholder="Ex: hello@skyux.com" required="">
+                        <input type="email" class="form_input" id="page_registerEmail" placeholder="Ex: hello@skyux.com" required="">
                         <i class="form_icon fa fa-envelope-o"></i>
-                        <label for="registerEmail">Email</label>
+                        <label for="page_registerEmail">Email</label>
                     </div>
                     <div class="form_group-compound-has-icon">
-                        <input type="password" class="form_input" id="registerPassword" placeholder="••••••••" required="">
+                        <input type="password" class="form_input" id="page_registerPassword" placeholder="••••••••" required="">
                         <i class="form_icon fa fa-key"></i>
-                        <label for="registerPassword">Password</label>
+                        <label for="page_registerPassword">Password</label>
                     </div>
                     <button type="submit" class="button-block-primary">Sign Up</button>
                 </form>
@@ -42,19 +42,19 @@
                 </header>
                 <form class="form-fauxPlaceholders-html5">
                     <div class="form_group-compound-has-icon">
-                        <input type="text" class="form_input" id="loginUsername" placeholder="Ex: SkyUX" required="">
+                        <input type="text" class="form_input" id="page_loginUsername" placeholder="Ex: SkyUX" required="">
                         <i class="form_icon fa fa-user"></i>
-                        <label for="loginUsername">Username</label>
+                        <label for="page_loginUsername">Username</label>
                     </div>
                     <div class="form_group-compound-has-icon">
-                        <input type="password" class="form_input" id="loginPassword" placeholder="••••••••" required="">
+                        <input type="password" class="form_input" id="page_loginPassword" placeholder="••••••••" required="">
                         <i class="form_icon fa fa-key"></i>
-                        <label for="loginPassword">Password</label>
+                        <label for="page_loginPassword">Password</label>
                     </div>
                     <div class="row stack-0">
                         <div class="span-8 va-middle">
-                            <input id="rememberMe" type="checkbox"> 
-                            <label for="rememberMe">Remember Me?</label>
+                            <input id="page_rememberMe" type="checkbox"> 
+                            <label for="page_rememberMe">Remember Me?</label>
                         </div>
                         <div class="span-4 va-middle">
                             <button type="submit" class="button-block-primary">Login</button>

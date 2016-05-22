@@ -170,7 +170,7 @@
                                     </a>
                                 </div>
                             </div>
-                            <img src="<?php echo stockImage('demo/stock-7.jpg') ?>">
+                            <img src="<?php echo stockImage('demo/stock-7.jpg') ?>" alt="">
                         </div>
                         <header class="heading_group">
                             <div class="heading_date">
@@ -211,7 +211,7 @@
                                     </a>
                                 </div>
                             </div>
-                            <img src="<?php echo stockImage('demo/stock-5.jpg') ?>">
+                            <img src="<?php echo stockImage('demo/stock-5.jpg') ?>" alt="">
                         </div>
                         <header class="heading_group">
                             <div class="heading_date">
@@ -252,7 +252,7 @@
                                     </a>
                                 </div>
                             </div>
-                            <img src="<?php echo stockImage('demo/stock-3.jpg') ?>">
+                            <img src="<?php echo stockImage('demo/stock-3.jpg') ?>" alt="">
                         </div>
                         <header class="heading_group">
                             <div class="heading_date">

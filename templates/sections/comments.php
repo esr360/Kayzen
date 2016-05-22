@@ -117,7 +117,7 @@
             <div class="row-flow">
                 <div class="form_group span-4">
                     <input type="text" class="form_input" id="name" placeholder="Ex: John Doe" required="">
-                    <label for="firstName">Name</label>
+                    <label for="name">Name</label>
                 </div>
                 <div class="form_group span-4">
                     <input type="email" class="form_input" id="emailAddress" placeholder="john@doe.com" required="">

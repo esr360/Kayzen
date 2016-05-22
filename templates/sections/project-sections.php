@@ -19,7 +19,7 @@
                     </div>
                 </div>
                 <div class="span-4 va-middle text-center min-break-3">
-                    <img class="span-10 greyscale" src="<?php echo appDir ?>/images/layouts/layout-header-alt.png" alt="" />
+                    <img class="span-10 greyscale" src="<?php echo appDir ?>/images/layouts/layout-header-alt.png" alt="">
                 </div>
             </div>
             
@@ -31,7 +31,7 @@
 
         <div class="row">
             <div class="span-4 va-middle text-center min-break-3">
-                <img class="greyscale" src="<?php echo appDir ?>/images/custom-graphic-1.png">
+                <img class="greyscale" src="<?php echo appDir ?>/images/custom-graphic-1.png" alt="">
             </div>
             <div class="span-8 va-middle">
                 <header class="heading_group">

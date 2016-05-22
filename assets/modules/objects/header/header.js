@@ -112,7 +112,7 @@
                 
                 // handle responsineness
                 var navClasses = navigation.attr('class');
-                $(window).bind("load resize", function() {
+                $(window).bind('load resize', function() {
                     if (breakpoint('min-width', options.sideVisibleAt)) {
                         header.removeClass($module + '-' + options.nonSideModifier + '-js').addClass(options.sideNavClass);
                         navigation.removeAttr('class');

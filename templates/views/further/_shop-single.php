@@ -14,20 +14,20 @@
                 <div class="span-4 lightbox-gallery">
                     <div class="corner-ribbon-pink" data-ribbon="Sale"></div>
                     <a href="<?php echo stockImage('demo/tall/stock-1.jpg') ?>">
-                        <img src="<?php echo stockImage('demo/tall/stock-1.jpg') ?>" />
+                        <img src="<?php echo stockImage('demo/tall/stock-1.jpg') ?>" alt="">
                     </a>
                     <div id="product-thumbs" class="row stack-0 object-small">
                         <a class="span-3 image-square" href="<?php echo stockImage('demo/tall/stock-2.jpg') ?>">
-                            <img src="<?php echo stockImage('demo/tall/stock-2.jpg') ?>" />
+                            <img src="<?php echo stockImage('demo/tall/stock-2.jpg') ?>" alt="">
                         </a>
                         <a class="span-3 image-square" href="<?php echo stockImage('demo/tall/stock-3.jpg') ?>">
-                            <img src="<?php echo stockImage('demo/tall/stock-3.jpg') ?>" />
+                            <img src="<?php echo stockImage('demo/tall/stock-3.jpg') ?>" alt="">
                         </a>
                         <a class="span-3 image-square" href="<?php echo stockImage('demo/tall/stock-4.jpg') ?>">
-                            <img src="<?php echo stockImage('demo/tall/stock-4.jpg') ?>" />
+                            <img src="<?php echo stockImage('demo/tall/stock-4.jpg') ?>" alt="">
                         </a>
                         <a class="span-3 image-square" href="<?php echo stockImage('demo/tall/stock-5.jpg') ?>">
-                            <img src="<?php echo stockImage('demo/tall/stock-5.jpg') ?>" />
+                            <img src="<?php echo stockImage('demo/tall/stock-5.jpg') ?>" alt="">
                         </a>
                     </div>
                 </div>
@@ -51,10 +51,10 @@
                     <form class="object">
                         <div class="quantity span">
                             <input class="button-border-grey-3" type="button" value="-">
-                            <input class="form_input-quantity" type="text" step="1" min="1" name="quantity" value="1" title="quantity">
+                            <input class="form_input-quantity" type="text" name="quantity" value="1" title="quantity">
                             <input class="button-border-grey-3" type="button" value="+">
                         </div>
-                        <button class="button-primary" type="subtmi">Add To Cart</button>
+                        <button class="button-primary" type="submit">Add To Cart</button>
                     </form>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum quis elit dignissim, molestie est tristique, posuere libero. Suspendisse pulvinar porta maximus. Donec nec commodo dolor. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Cras faucibus odio augue.</p>
                     <ul class="list-arrow">

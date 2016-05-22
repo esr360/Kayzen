@@ -14,7 +14,7 @@
                 <div class="span-8">
             
                     <div class="thumbnail-article">
-                        <img src="<?php echo stockImage('demo/stock-'.rand(1, 7).'.jpg') ?>">
+                        <img src="<?php echo stockImage('demo/stock-'.rand(1, 7).'.jpg') ?>" alt="">
                     </div>
             
                     <?php demoPost() ?>

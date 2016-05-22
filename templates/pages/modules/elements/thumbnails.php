@@ -155,7 +155,7 @@
                 
                 <div class="well object">
                     <div class="thumbnail-feature span-8">
-                        <img src="<?php echo stockImage('demo/stock-12.jpg') ?>">
+                        <img src="<?php echo stockImage('demo/stock-12.jpg') ?>" alt="">
                         <div class="thumbnail_content">
                             <header class="heading_group-small">
                                 <div class="heading_date">

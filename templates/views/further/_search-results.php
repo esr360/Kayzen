@@ -19,28 +19,28 @@
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sed eros congue leo tincidunt mattis. Vivamus bibendum laoreet nibh nec gravida. Phasellus a efficitur est, ac lacinia ipsum. <mark>Aliquam erat volutpat</mark>. Ut sit amet tellus mauris. Phasellus sed vehicula ligula. Donec ac congue arcu. Morbi metus felis, feugiat facilisis turpis nec, vulputate sollicitudin eros...</p>
         </section>
         
-        <section id="free-support" class="object-large">
+        <section class="object-large">
             <header class="heading_group-small">
                 <h4 class="heading-size-4-border"><a href="#">Lorem Ipsum Dolor Sit Amet</a></h4>
             </header>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sed eros congue leo tincidunt mattis. <mark>Aliquam erat volutpat</mark>. Vivamus bibendum laoreet nibh nec gravida. Phasellus a efficitur est, ac lacinia ipsum. Ut sit amet tellus mauris. Phasellus sed vehicula ligula. Donec ac congue arcu. Morbi metus felis, feugiat facilisis turpis nec, vulputate sollicitudin eros...</p>
         </section>
         
-        <section id="free-support" class="object-large">
+        <section class="object-large">
             <header class="heading_group-small">
                 <h4 class="heading-size-4-border"><a href="#">About Us</a></h4>
             </header>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sed eros congue leo tincidunt mattis. Vivamus bibendum laoreet nibh nec gravida. Phasellus a efficitur est, ac lacinia ipsum. Ut sit amet tellus mauris. Phasellus sed vehicula ligula. Donec ac congue arcu. <mark>Aliquam erat volutpat</mark>. Morbi metus felis, feugiat facilisis turpis nec, vulputate sollicitudin eros...</p>
         </section>
         
-        <section id="free-support" class="object-large">
+        <section class="object-large">
             <header class="heading_group-small">
                 <h4 class="heading-size-4-border"><a href="#">Phasellus Sed Vehicula Ligula</a></h4>
             </header>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. <mark>Aliquam erat volutpat</mark>. Vivamus sed eros congue leo tincidunt mattis. Vivamus bibendum laoreet nibh nec gravida. Phasellus a efficitur est, ac lacinia ipsum. Ut sit amet tellus mauris. Phasellus sed vehicula ligula. Donec ac congue arcu. Morbi metus felis, feugiat facilisis turpis nec, vulputate sollicitudin eros...</p>
         </section>
         
-        <section id="free-support" class="object">
+        <section class="object">
             <header class="heading_group-small">
                 <h4 class="heading-size-4-border"><a href="#">Lorem Ipsum Dolor Sit Amet</a></h4>
             </header>

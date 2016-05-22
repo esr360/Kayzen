@@ -13,13 +13,13 @@
     <div class="span-7">
         <div class="desktop-graphic">
             <img src="<?php echo appDir ?>/images/demo-screen.png" alt="" />
-            <span class="desktop-graphic_image owl-carousel" id="portfolio-thumbs">
+            <div class="desktop-graphic_image owl-carousel" id="portfolio-thumbs">
                 <div class="auto-resizable-iframe" data-iframe-height="56.5%">
                     <div>
                         <iframe allowfullscreen="" src="http://www.youtube.com/embed/Q3oItpVa9fs?theme=light"></iframe>
                     </div>
                 </div>
-            </span>
+            </div>
         </div>
     </div>
     

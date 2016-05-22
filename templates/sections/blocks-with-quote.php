@@ -3,7 +3,7 @@
     <?php $options = array_merge(array(
     ), $custom); ?>
     
-    <section class="section" id="key-features">
+    <section class="section">
         
         <!-- Key Features Header -->
         <header class="heading_group-block has-icon text-center">

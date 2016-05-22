@@ -54,7 +54,7 @@
                                         </small>
                                     </div>
                                 <?php } ?>
-                            </span>
+                            </div>
                         </header>
                     </div>
                 </article>
@@ -75,7 +75,7 @@
                                     <div>23</div>
                                 </div>
                             <?php } ?>
-                            <span>
+                            <div>
                                 <h3 class="heading"><a class="widget_titleLink" href="<?php echo $options['item-link'] ?>">Lorem Ipsum Dolor</a></h3>
                                 <h4 class="heading-light-uppercase-size-1">Category: <a href="<?php echo $options['category'] ?>">Themes</a></h4>
                                 <?php if ($options['type'] == 'blog') { ?>
@@ -96,7 +96,7 @@
                                         </small>
                                     </div>
                                 <?php } ?>
-                            </span>
+                            </div>
                         </header>
                     </div>
                 </article>
@@ -117,7 +117,7 @@
                                     <div>23</div>
                                 </div>
                             <?php } ?>
-                            <span>
+                            <div>
                                 <h3 class="heading"><a class="widget_titleLink" href="<?php echo $options['item-link'] ?>">Lorem Ipsum Dolor</a></h3>
                                 <h4 class="heading-light-uppercase-size-1">Category: <a href="<?php echo $options['category'] ?>">Themes</a></h4>
                                 <?php if ($options['type'] == 'blog') { ?>
@@ -138,7 +138,7 @@
                                         </small>
                                     </div>
                                 <?php } ?>
-                            </span>
+                            </div>
                         </header>
                     </div>
                 </article>
@@ -182,7 +182,7 @@
                                         </small>
                                     </div>
                                 <?php } ?>
-                            </span>
+                            </div>
                         </header>
                     </div>
                 </article>
@@ -203,7 +203,7 @@
                                     <div>20</div>
                                 </div>
                             <?php } ?>
-                            <span>
+                            <div>
                                 <h3 class="heading"><a class="widget_titleLink" href="<?php echo $options['item-link'] ?>">Lorem Ipsum Dolor</a></h3>
                                 <h4 class="heading-light-uppercase-size-1">Category: <a href="<?php echo $options['category'] ?>">Themes</a></h4>
                                 <?php if ($options['type'] == 'blog') { ?>
@@ -224,7 +224,7 @@
                                         </small>
                                     </div>
                                 <?php } ?>
-                            </span>
+                            </div>
                         </header>
                     </div>
                 </article>
@@ -245,7 +245,7 @@
                                     <div>27</div>
                                 </div>
                             <?php } ?>
-                            <span>
+                            <div>
                                 <h3 class="heading"><a class="widget_titleLink" href="<?php echo $options['item-link'] ?>">Lorem Ipsum Dolor</a></h3>
                                 <h4 class="heading-light-uppercase-size-1">Category: <a href="<?php echo $options['category'] ?>">Themes</a></h4>
                                 <?php if ($options['type'] == 'blog') { ?>
@@ -266,7 +266,7 @@
                                         </small>
                                     </div>
                                 <?php } ?>
-                            </span>
+                            </div>
                         </header>
                     </div>
                 </article>
@@ -310,7 +310,7 @@
                                         </small>
                                     </div>
                                 <?php } ?>
-                            </span>
+                            </div>
                         </header>
                     </div>
                 </article>
@@ -331,7 +331,7 @@
                                     <div>10</div>
                                 </div>
                             <?php } ?>
-                            <span>
+                            <div>
                                 <h3 class="heading"><a class="widget_titleLink" href="<?php echo $options['item-link'] ?>">Lorem Ipsum Dolor</a></h3>
                                 <h4 class="heading-light-uppercase-size-1">Category: <a href="<?php echo $options['category'] ?>">Themes</a></h4>
                                 <?php if ($options['type'] == 'blog') { ?>
@@ -352,7 +352,7 @@
                                         </small>
                                     </div>
                                 <?php } ?>
-                            </span>
+                            </div>
                         </header>
                     </div>
                 </article>
@@ -373,7 +373,7 @@
                                     <div>14</div>
                                 </div>
                             <?php } ?>
-                            <span>
+                            <div>
                                 <h3 class="heading"><a class="widget_titleLink" href="<?php echo $options['item-link'] ?>">Lorem Ipsum Dolor</a></h3>
                                 <h4 class="heading-light-uppercase-size-1">Category: <a href="<?php echo $options['category'] ?>">Themes</a></h4>
                                 <?php if ($options['type'] == 'blog') { ?>
@@ -394,7 +394,7 @@
                                         </small>
                                     </div>
                                 <?php } ?>
-                            </span>
+                            </div>
                         </header>
                     </div>
                 </article>

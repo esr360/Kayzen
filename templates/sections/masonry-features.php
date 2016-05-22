@@ -34,9 +34,9 @@
                         <?php } if ($options['subTitle-highlight']) { ?>
                             <h5 class="heading-light-<?php echo $options['subTitle-highlight'] ?>">
                                 <b>Dolor Sit Amet</b>
-                            </h4>
+                            </h5>
                         <?php } else { ?>
-                            <h5 class="heading-light">Dolor Sit Amet</h4>
+                            <h5 class="heading-light">Dolor Sit Amet</h5>
                         <?php } ?>
                     </header>
                 </a>
@@ -56,9 +56,9 @@
                         <?php } if ($options['subTitle-highlight']) { ?>
                             <h5 class="heading-light-<?php echo $options['subTitle-highlight'] ?>">
                                 <b>Dolor Sit Amet</b>
-                            </h4>
+                            </h5>
                         <?php } else { ?>
-                            <h5 class="heading-light">Dolor Sit Amet</h4>
+                            <h5 class="heading-light">Dolor Sit Amet</h5>
                         <?php } ?>
                     </header>
                 </a>
@@ -77,9 +77,9 @@
                         <?php } if ($options['subTitle-highlight']) { ?>
                             <h5 class="heading-light-<?php echo $options['subTitle-highlight'] ?>">
                                 <b>Dolor Sit Amet</b>
-                            </h4>
+                            </h5>
                         <?php } else { ?>
-                            <h5 class="heading-light">Dolor Sit Amet</h4>
+                            <h5 class="heading-light">Dolor Sit Amet</h5>
                         <?php } ?>
                     </header>
                 </a>
@@ -100,9 +100,9 @@
                         <?php } if ($options['subTitle-highlight']) { ?>
                             <h5 class="heading-light-<?php echo $options['subTitle-highlight'] ?>">
                                 <b>Dolor Sit Amet</b>
-                            </h4>
+                            </h5>
                         <?php } else { ?>
-                            <h5 class="heading-light">Dolor Sit Amet</h4>
+                            <h5 class="heading-light">Dolor Sit Amet</h5>
                         <?php } ?>
                     </header>
                 </a>

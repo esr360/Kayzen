@@ -156,7 +156,7 @@
                             <form class="form">
                                 <div class="form_group-small span-4">
                                     <button type="submit" class="button-icon-primary-size-3"><i class="fa fa-search"></i></button>
-                                    <input type="text" class="form_input-plain" id="footer-newsletter" placeholder="Search for a page" required="">
+                                    <input type="text" class="form_input-plain" placeholder="Search for a page" required="">
                                 </div>
                             </form>
                         <?php } ?>

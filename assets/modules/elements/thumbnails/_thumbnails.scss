@@ -50,6 +50,10 @@
             margin-right: auto;
         }
         
+        .row-no-gutter > & {
+            margin-bottom: 0;
+        }
+        
         img {
             transition: base('transition');
             min-width: 100%;

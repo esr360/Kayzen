@@ -103,11 +103,10 @@
      * Generate item data-attribute
      */
         
-    $data = 'data-';
     if ($options['type'] === 'blog') {
-        $data = $data.$options['media'];
+        $data = 'data-'.$options['media'];
     } else if ($options['type'] === 'portfolio') {
-        $data = $data.$options['categories'][array_rand($options['categories'])];
+        $data = 'data-'.$options['categories'][array_rand($options['categories'])];
     } ?>
 
     <article class="<?php echo $class.' '.$options['class'] ?>" <?php echo $data ?>>
@@ -261,14 +260,12 @@
         <?php } else if ($options['media'] === 'audio') { ?>
         
             <iframe 
-                width="100%"
-                scrolling="no" 
                 frameborder="no"
                 src="<?php echo $options['audioSrc'] ?>"
                 <?php if ($options['type'] === 'blog') { ?>
                     class="object"
                 <?php } if ($options['height'] === 'tall') { ?>
-                    height="350px"
+                    height="350"
                 <?php } ?>
             ></iframe>
             

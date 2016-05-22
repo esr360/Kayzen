@@ -202,7 +202,7 @@
     <div class="container">
         <div class="row row-waffle-large">
             <div class="span-6 va-middle">
-                <img src="<?php echo appDir ?>/images/device-outline.png">
+                <img src="<?php echo appDir ?>/images/device-outline.png" alt="">
             </div>
             <div class="span-6 va-middle">
                 <header class="heading_group">

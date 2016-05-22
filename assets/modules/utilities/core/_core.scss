@@ -180,6 +180,10 @@ span.enlighterEnlighterJS {
     transform-style: preserve-3d;
     width: 100%;
 }
+	
+iframe[src*="soundcloud"] {
+	width: 100%;
+}
 
 button.mfp-close, button.mfp-arrow {
 	width: 90px;
