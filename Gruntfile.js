@@ -139,7 +139,7 @@ module.exports = function(grunt) {
       
         //---------------------------------------------------------
         // Concat
-        // https://github.com/sindresorhus/grunt-sass
+        // https://github.com/gruntjs/grunt-contrib-concat
         //---------------------------------------------------------
 
         concat: {   
@@ -151,7 +151,7 @@ module.exports = function(grunt) {
       
         //---------------------------------------------------------
         // JS-Hint
-        // https://github.com/sindresorhus/grunt-sass
+        // https://github.com/gruntjs/grunt-contrib-jshint
         //---------------------------------------------------------
         
         jshint: {
@@ -165,7 +165,7 @@ module.exports = function(grunt) {
       
         //---------------------------------------------------------
         // Copy
-        // https://github.com/sindresorhus/grunt-sass
+        // https://github.com/gruntjs/grunt-contrib-copy
         //---------------------------------------------------------
         
         copy: {
@@ -219,7 +219,7 @@ module.exports = function(grunt) {
       
         //---------------------------------------------------------
         // Uglify
-        // https://github.com/sindresorhus/grunt-sass
+        // https://github.com/gruntjs/grunt-contrib-uglify
         //---------------------------------------------------------
 		
         uglify: {
@@ -279,7 +279,7 @@ module.exports = function(grunt) {
         
         //---------------------------------------------------------
         // PostCSS
-        // https://github.com/sindresorhus/grunt-sass
+        // https://github.com/nDmitry/grunt-postcss
         //---------------------------------------------------------
       
         postcss: {
@@ -301,7 +301,7 @@ module.exports = function(grunt) {
         
         //---------------------------------------------------------
         // grunt-contrib-cssmin
-        // https://github.com/sindresorhus/grunt-sass
+        // https://github.com/gruntjs/grunt-contrib-cssmin
         //---------------------------------------------------------
         
         cssmin: {
@@ -327,7 +327,7 @@ module.exports = function(grunt) {
   
         //---------------------------------------------------------
         // Scss Lint
-        // https://github.com/sindresorhus/grunt-sass
+        // https://github.com/ahmednuaman/grunt-scss-lint
         //---------------------------------------------------------
         
         scsslint: {
@@ -343,7 +343,7 @@ module.exports = function(grunt) {
       
         //---------------------------------------------------------
         // Watch
-        // https://github.com/sindresorhus/grunt-sass
+        // https://github.com/gruntjs/grunt-contrib-watch
         //---------------------------------------------------------
   
         watch: {
@@ -385,8 +385,8 @@ module.exports = function(grunt) {
         },
       
         //---------------------------------------------------------
-        // Sass
-        // https://github.com/sindresorhus/grunt-sass
+        // Grunt Text Replace
+        // https://github.com/yoniholmes/grunt-text-replace
         //---------------------------------------------------------
         
         replace: {
@@ -433,7 +433,7 @@ module.exports = function(grunt) {
   
         //---------------------------------------------------------
         // TinyPNG
-        // https://github.com/sindresorhus/grunt-sass
+        // https://github.com/marrone/grunt-tinypng
         //---------------------------------------------------------
         
         tinypng: {
@@ -453,7 +453,7 @@ module.exports = function(grunt) {
       
         //---------------------------------------------------------
         // Responsive Images
-        // https://github.com/sindresorhus/grunt-sass
+        // https://github.com/andismith/grunt-responsive-images
         //---------------------------------------------------------
         
         responsive_images: {
@@ -504,7 +504,7 @@ module.exports = function(grunt) {
       
         //---------------------------------------------------------
         // Set PHP Constant
-        // https://github.com/sindresorhus/grunt-sass
+        // https://github.com/pajtai/grunt-php-set-constant
         //---------------------------------------------------------
         
         setPHPConstant: {
@@ -547,7 +547,7 @@ module.exports = function(grunt) {
       
         //---------------------------------------------------------
         // PHP 2 HTML
-        // https://github.com/sindresorhus/grunt-sass
+        // https://github.com/bezoerb/grunt-php2html
         //---------------------------------------------------------
         
         php2html: {
@@ -581,7 +581,7 @@ module.exports = function(grunt) {
       
         //---------------------------------------------------------
         // Relative Root
-        // https://github.com/sindresorhus/grunt-sass
+        // https://github.com/hurrymaplelad/grunt-relative-root
         //---------------------------------------------------------
         
         relativeRoot: {
@@ -604,7 +604,7 @@ module.exports = function(grunt) {
       
         //---------------------------------------------------------
         // Notify
-        // https://github.com/sindresorhus/grunt-sass
+        // https://github.com/dylang/grunt-notify
         //---------------------------------------------------------
         
         notify: {
@@ -630,7 +630,7 @@ module.exports = function(grunt) {
       
         //---------------------------------------------------------
         // Auto-Install
-        // https://github.com/sindresorhus/grunt-sass
+        // https://github.com/Manabu-GT/grunt-auto-install
         //---------------------------------------------------------
         
         auto_install: {
@@ -654,7 +654,7 @@ module.exports = function(grunt) {
       
         //---------------------------------------------------------
         // Run-Grunt
-        // https://github.com/sindresorhus/grunt-sass
+        // https://github.com/Bartvds/grunt-run-grunt
         //---------------------------------------------------------
         
         run_grunt: {

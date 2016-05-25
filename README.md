@@ -442,6 +442,25 @@ $(document).ready(function() {
 
 ##### Get In Touch Form
 
+The contact form uses [Formspree](https://github.com/formspree/formspree); a quick and easy to use solution which requires no setup, just substitute your email address in the `action` attribute on the `form` element and you're good to go.
+
+```html
+<form class="form-fauxPlaceholders-html5" action="https://formspree.io/YOUR@EMAIL.COM" id="contactForm" method="post">
+    ...
+</form>
+```
+
+To change which page your users get sent to upon completing the form, add the below hidden input field with your desired URL value, ensuring it has a `name` attribute of `_next`:
+
+```html
+<form class="form-fauxPlaceholders-html5" action="https://formspree.io/YOUR@EMAIL.COM" id="contactForm" method="post">
+    <input type="hidden" name="_next" value="thankyou.html" ?>" />
+    ...
+</form>
+```
+
+For more features and examples, check out the [Formspree](https://formspree.io/) homepage.
+
 #### Homepages
 
 ##### Parallax Billboard Background

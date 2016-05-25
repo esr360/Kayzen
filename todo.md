@@ -1,9 +1,6 @@
 # To Do
 #============================================================
 
-- validate HTML
-- update grunt task titles to use correct name and url
-- contact form (don't forget to document)
 - integrate drag & drop page builder
 - update docs
 
@@ -50,6 +47,9 @@
 - remove all instances of element.matches()
 - update main menu icons
 - fix tooltip font family
+- validate HTML
+- update grunt task titles to use correct name and url
+- contact form (don't forget to document)
 
 # Next Release
 #============================================================

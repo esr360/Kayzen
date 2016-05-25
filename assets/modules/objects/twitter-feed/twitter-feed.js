@@ -13,11 +13,9 @@
         
         // Options
         var options = $.extend({
-            
-            username     : 'esr360',
-            tweets       : 8,
-            container    : '.twitter-feed_content'
-            
+            username  : 'esr360',
+            tweets    : 8,
+            container : '.twitter-feed_content'
         }, custom);
         
         // Used to generate unique IDs
@@ -26,10 +24,8 @@
         // Run the code on each occurance of the element
         return this.each(function() {
             
-            // Get the feed wrapper
             var feed = $(this);
-            
-            // Get the tweets wrapper
+            var user = feed.data('twitter-handle') || options.username;
             var tweets = feed.find(options.container);
             
             // If the feed doesn't have an ID, add one
@@ -42,7 +38,7 @@
             
             // Call the Tweecool plugin on the feed
             tweets.tweecool({
-                username     : options.username, 
+                username     : user, 
                 limit        : options.tweets,
                 show_actions : true,
                 action_reply_icon : '<i class="fa fa-reply"></i>',

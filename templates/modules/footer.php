@@ -111,7 +111,7 @@
                         </div>
                         
                         <!-- Twitter Feed -->
-                        <div class="span-3 break-4-half break-2-full" id="footer-twitter-feed">
+                        <div class="span-3 break-4-half break-2-full" id="footer-twitter-feed" data-twitter-handle="">
                             <div class="heading_group-small">
                                 <h4 class="footer_title heading-heavy-uppercase-size-3 font-2">
                                     <i class="fa fa-twitter"></i> Twitter Feed
