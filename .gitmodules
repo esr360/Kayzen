@@ -64,3 +64,6 @@
 [submodule "assets/vendor/matchMedia"]
 	path = assets/vendor/matchMedia
 	url = https://github.com/paulirish/matchMedia.js.git
+[submodule "builder"]
+	path = builder
+	url = https://github.com/esr360/HTML-Builder.git
