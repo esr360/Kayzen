@@ -4,7 +4,6 @@
 
     <div class="object-large" id="comments">
                 
-                
         <div class="heading_group-large">
             <h2 class="heading-size-6-light-strikethrough-dots text-center">
                 <span><span class="heading-brand-1">3</span> Comments</span>

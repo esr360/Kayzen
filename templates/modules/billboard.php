@@ -144,7 +144,7 @@
             </div>
         </section>
     <?php } else if ($options['type'] == 'default') { ?>
-        <section class="billboard-overlay<?php echo '-'.$options['modifiers'] ?>" data-stellar-background-ratio="0.5">
+        <section class="billboard<?php if ($options['modifiers']) echo '-'.$options['modifiers'] ?>" <?php echo $options['bg-parallax'] ?>>
             <div class="billboard_wrapper container text-center">
                 <div class="billboard_snap">
                     <header class="heading_group<?php if($options['countdown']) echo '-small' ?>">

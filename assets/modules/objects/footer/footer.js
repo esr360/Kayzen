@@ -13,7 +13,6 @@
         
         // Options
         var options = $.extend({
-            
             twitterFeedSelector  : '#footer-twitter-feed',
             twitterFeed          : {
                 username  : 'esr360',
@@ -21,7 +20,6 @@
                 container : '.twitter-feed_content'
             },
             testimonialsSelector : '#footer-testimonials'
-            
         }, custom);
         
         // Footer Testimonials

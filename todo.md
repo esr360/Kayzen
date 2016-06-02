@@ -1,6 +1,9 @@
 # To Do
 #============================================================
 
+- update headers to use opaque instead of dark
+- change section title icons
+- go through all @TODO's
 - integrate drag & drop page builder
 - update docs
 
@@ -63,6 +66,7 @@
 - (mobile) re-think dynamic side header (there is a jump)
 - look into relative-root data attr background images
 - replace tabs with 4 spaces '	'
+- loook at full-screen billboard logic
 
 # Backlog
 #============================================================

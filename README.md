@@ -384,7 +384,15 @@ Read the [top-bar module](<?php pageLink('modules/objects/top-bar.php') ?>) page
 
 ##### Footer Twitter Feed
 
-In `app/scripts/app.js` (or `app/YOURTHEME/scripts/app.js`), locate the following code:
+The easiest way to set which Twitter handle to use for the footer feed is to set it as the value for the `data-twitter-handle` attibute in the Twitter feed's HTML:
+
+```html
+<div id="footer-twitter-feed" data-twitter-handle="esr360">
+    ...
+</div>
+```
+
+Alternatively, you can leave this blank and in `app/scripts/app.js` (or `app/YOURTHEME/scripts/app.js`), locate the following code:
 
 ```js          
 $(_footer).footer();
@@ -445,7 +453,7 @@ $(document).ready(function() {
 The contact form uses [Formspree](https://github.com/formspree/formspree); a quick and easy to use solution which requires no setup, just substitute your email address in the `action` attribute on the `form` element and you're good to go.
 
 ```html
-<form class="form-fauxPlaceholders-html5" action="https://formspree.io/YOUR@EMAIL.COM" id="contactForm" method="post">
+<form action="https://formspree.io/YOUR@EMAIL.COM" id="contactForm" method="post">
     ...
 </form>
 ```
@@ -453,8 +461,8 @@ The contact form uses [Formspree](https://github.com/formspree/formspree); a qui
 To change which page your users get sent to upon completing the form, add the below hidden input field with your desired URL value, ensuring it has a `name` attribute of `_next`:
 
 ```html
-<form class="form-fauxPlaceholders-html5" action="https://formspree.io/YOUR@EMAIL.COM" id="contactForm" method="post">
-    <input type="hidden" name="_next" value="thankyou.html" ?>" />
+<form action="https://formspree.io/YOUR@EMAIL.COM" id="contactForm" method="post">
+    <input type="hidden" name="_next" value="thankyou.html" />
     ...
 </form>
 ```

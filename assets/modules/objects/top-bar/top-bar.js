@@ -22,10 +22,9 @@
             var topBar = $(this);
             var topBarDropdown = $('[class*="top-bar_nav"]').find("> ul > li > a:not(:only-child)").parent();
 
-            $(window).on("load scroll", function(e) {
+            $(window).on('load scroll', function(e) {
                 
                 var scroll = $(window).scrollTop();
-                
                 var topBarHeight = topBar.height();
                     
                 if (scroll > topBarHeight) {
