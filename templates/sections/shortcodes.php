@@ -58,8 +58,12 @@
         </nav>
         
         <!-- Shortcodes Carousel -->
-        <script>
-            $(document).ready(function() {
+            
+        <script id="pageScripts">
+            
+            $(document).ready(pageScripts);
+                
+            function pageScripts() {
                 
                 var shortcodesCarousel = $('#shortcodes-carousel');
                 
@@ -82,7 +86,7 @@
                     shortcodesCarousel.trigger('prev.owl.carousel');
                 });
                 
-            }); // document.ready
+            }
         </script>
     
     </section><!-- Shortcodes -->

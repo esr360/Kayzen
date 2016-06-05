@@ -146,13 +146,17 @@
         </div>
     
     <?php if ($options['section']) echo '</section>' ?>
-
-    <script>
-        $(document).ready(function() {
+            
+    <script id="pageScripts">
+        
+        $(document).ready(pageScripts);
+            
+        function pageScripts() {
             $.fn.KayzenSocialShareCount(<?php if (realm == 'demo') { ?>{
                 url : <?php echo $options['url'] ?>
             }<?php } ?>);
-        });
+        }
+        
     </script>    
     
 <?php } ?>

@@ -62,8 +62,12 @@
                             <img class="well_content" src="<?php echo appDir ?>/images/envato/envato-8.png" alt="">
                         </a>
                     </div>
-                    <script>
-                        $(document).ready(function() {
+                            
+                    <script id="pageScripts">
+                        
+                        $(document).ready(pageScripts);
+                            
+                        function pageScripts() {
                             
                             var clientsCarousel = $("#clients-slider");
                             
@@ -79,7 +83,7 @@
                                 }
                             })
                             
-                        });
+                        }
                     </script>
                 </div>
                 

@@ -38,11 +38,14 @@
             <button class="slide-prev button-icon-border-size-3"><i class="fa fa-angle-left"></i></button>
             <button class="slide-next button-icon-border-size-3"><i class="fa fa-angle-right"></i></button>
         </nav>
-        
-        <script>
-            $(document).ready(function() {
+            
+        <script id="pageScripts">
+            
+            $(document).ready(pageScripts);
                 
-                var testimonialsCarousel = $("#testimonials-carousel");
+            function pageScripts() {
+                
+                var testimonialsCarousel = $('#testimonials-carousel');
                 
                 testimonialsCarousel.owlCarousel({
                     items: 1,
@@ -50,14 +53,14 @@
                     margin: 30
                 })
         
-                testimonialsCarousel.find("+ .slide-nav .slide-next").click(function() {
+                testimonialsCarousel.find('+ .slide-nav .slide-next').click(function() {
                     testimonialsCarousel.trigger('next.owl.carousel');
                 });
-                testimonialsCarousel.find("+ .slide-nav .slide-prev").click(function() {
+                testimonialsCarousel.find('+ .slide-nav .slide-prev').click(function() {
                     testimonialsCarousel.trigger('prev.owl.carousel');
                 });
                 
-            });
+            }
         </script>
         
     </section>

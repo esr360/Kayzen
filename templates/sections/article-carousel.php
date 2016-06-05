@@ -1,6 +1,6 @@
-<?php function articleCarousel($custom = array()) { ?>
-
-    <?php $options = array_merge(array(
+<?php function articleCarousel($custom = array()) { 
+    
+    $options = array_merge(array(
     ), $custom); ?>
 							
     <div class="relative">
@@ -105,17 +105,19 @@
         <img class="span" src="<?php echo stockImage('demo/stock-10.jpg') ?>" alt="">
         <img class="span" src="<?php echo stockImage('demo/stock-9.jpg') ?>" alt="">
     </div>
-
-    <script>
-        $(document).ready(function() {
             
-            $("#latest-articles").kCarousel({
+    <script id="pageScripts">
+        
+        $(document).ready(pageScripts);
+            
+        function pageScripts() {
+            $('#latest-articles').kCarousel({
                 navId: '#latest-articles-nav',
                 pagerId: '#latest-articles-thumbs',
                 pagerSelector: 'img'
             });
-            
-        });
+        }
+        
     </script>
     
 <?php } ?>

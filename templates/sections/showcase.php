@@ -275,14 +275,16 @@
         </div><!-- Showcase Slides -->
         
         <!-- Showcase Carousel -->
-        <script>
+        <script id="pageScripts">
             
-            $(document).ready(function() {
+            $(document).ready(pageScripts);
                 
-                var $sync1 = $("#showcase-carousel"),
-                    $sync2 = $("#showcase-thumbnails"),
-                    flag = false,
-                    duration = 300;
+            function pageScripts() {
+            
+                var $sync1 = $('#showcase-carousel');
+                var $sync2 = $('#showcase-thumbnails');
+                var flag = false;
+                var duration = 300;
                 
                 // Showcase Slides
                 $sync1.owlCarousel({
@@ -327,14 +329,14 @@
                 
                 // Slide Arrows
                 
-                $sync2.find("+ .wrap-slide-arrows .slide-next").click(function() {
+                $sync2.find('+ .wrap-slide-arrows .slide-next').click(function() {
                     $sync2.trigger('next.owl.carousel');
                 });
-                $sync2.find("+ .wrap-slide-arrows .slide-prev").click(function() {
+                $sync2.find('+ .wrap-slide-arrows .slide-prev').click(function() {
                     $sync2.trigger('prev.owl.carousel');
                 });	
-                
-            }); // document.ready
+            
+            } // pageScripts()
             
         </script>
         

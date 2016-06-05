@@ -53,10 +53,14 @@
             
         </div><!-- Features Row 1 -->
             
-        <script>
-            $(document).ready(function() {
+        <script id="pageScripts">
+            
+            $(document).ready(pageScripts);
+                
+            function pageScripts() {
                 $('#featureSection1').equalHeight();
-            });
+            }
+            
         </script>
         
     </section>

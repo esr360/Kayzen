@@ -15,11 +15,14 @@
             <button class="slide-next button-icon-border-size-3-grey-3"><i class="fa fa-angle-right"></i></button>
         </nav>
     </div>
-                
-    <script>
-        $(document).ready(function() {
             
-            var thumbsCarousel = $("#portfolio-thumbs");
+    <script id="pageScripts">
+        
+        $(document).ready(pageScripts);
+            
+        function pageScripts() {
+            
+            var thumbsCarousel = $('#portfolio-thumbs');
             
             thumbsCarousel.owlCarousel({
                 items : 1,
@@ -27,14 +30,15 @@
                 dots  : false
             });
             
-            $("#desktop-graphic_nav .slide-next").click(function() {
+            $('#desktop-graphic_nav .slide-next').click(function() {
                 thumbsCarousel.trigger('next.owl.carousel');
             });
-            $("#desktop-graphic_nav .slide-prev").click(function() {
+            
+            $('#desktop-graphic_nav .slide-prev').click(function() {
                 thumbsCarousel.trigger('prev.owl.carousel');
             });
             
-        });
+        }
     </script>
     
 </section>
