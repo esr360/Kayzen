@@ -19,7 +19,7 @@
             topbar();
 
             appHeader(array(
-                'modifiers' => 'bar-absolute-dark-sticky'
+                'modifiers' => 'bar-absolute-opaque-sticky'
             ));
 
             billboard([
@@ -899,7 +899,7 @@ clients(array(
 
                 &lt;!-- Header Module -->
                 appHeader(array(
-                    'modifiers' => 'bar-absolute-dark-sticky'
+                    'modifiers' => 'bar-absolute-opaque-sticky'
                 ));
 
                 &lt;!-- Billboard Module -->

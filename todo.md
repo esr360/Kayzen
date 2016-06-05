@@ -3,8 +3,6 @@
 
 - update headers to use opaque instead of dark
 - change section title icons
-- go through all @TODO's
-- integrate drag & drop page builder
 - update docs
 
 # Done
@@ -53,6 +51,7 @@
 - validate HTML
 - update grunt task titles to use correct name and url
 - contact form (don't forget to document)
+- integrate drag & drop page builder
 
 # Next Release
 #============================================================
@@ -67,6 +66,8 @@
 - look into relative-root data attr background images
 - replace tabs with 4 spaces '	'
 - loook at full-screen billboard logic
+- intergrate builder into Grunt instead of Jake
+- go through all @TODO's
 
 # Backlog
 #============================================================

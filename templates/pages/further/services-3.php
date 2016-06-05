@@ -20,7 +20,7 @@
 			topbar();
 
 			appHeader(array(
-				'modifiers' => 'bar-absolute-dark-sticky'
+				'modifiers' => 'bar-absolute-opaque-sticky'
 			));
 
             billboard([

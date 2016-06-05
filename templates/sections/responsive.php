@@ -23,7 +23,7 @@
             <div class="row-flow row-waffle-large">
                 
                 <!-- Responsive Features -->
-                <div class="widget_group span-3 break-3-half break-2-full text-right-break-2">
+                <div class="widget_group span-3 break-3-half break-2-full text-right-break-2 va-middle">
                     <div class="widget-stacked">   
                         <header class="widget_header-inline heading_group">
                             <h3 class="heading-heavy-size-4">Smooth Performance</h3>

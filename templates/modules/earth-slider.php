@@ -90,10 +90,14 @@
         </nav>
     </section>
     
-    <script>
-        $(document).ready(function() {
+    <script id="pageScripts">
+        
+        $(document).ready(pageScripts);
+        
+        function pageScripts() {
             $('.earth-slider').KayzenEarthSlider();
-        });
+        }
+        
     </script>
 
 <?php } ?>

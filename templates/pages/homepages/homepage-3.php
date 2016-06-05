@@ -23,7 +23,7 @@
             ));
 
             appHeader(array(
-                'modifiers' => 'bar-absolute-dark'
+                'modifiers' => 'bar-absolute-opaque'
             ));
 			
 			_homepage3([

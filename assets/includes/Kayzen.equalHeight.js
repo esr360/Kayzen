@@ -30,7 +30,9 @@
             var maxHeight = Math.max.apply(null, elementHeights);
 
             // Set each height to the max height
-            $(child).outerHeight(maxHeight);
+            $(window).load(function() {
+                $(child).outerHeight(maxHeight);
+            });
                             
         }); // this.each  
  
