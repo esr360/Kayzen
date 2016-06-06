@@ -1,9 +1,9 @@
 # To Do
 #============================================================
 
-- update headers to use opaque instead of dark
 - change section title icons
-- update docs
+- add thankyou contact us finish page
+- update links on features page
 
 # Done
 #============================================================
@@ -52,6 +52,8 @@
 - update grunt task titles to use correct name and url
 - contact form (don't forget to document)
 - integrate drag & drop page builder
+- update headers to use opaque instead of dark
+- update docs
 
 # Next Release
 #============================================================
@@ -68,6 +70,7 @@
 - loook at full-screen billboard logic
 - intergrate builder into Grunt instead of Jake
 - go through all @TODO's
+- improve utilities/font-sizes
 
 # Backlog
 #============================================================
