@@ -103,6 +103,7 @@
      * Generate item data-attribute
      */
         
+    $data = '';
     if ($options['type'] === 'blog') {
         $data = 'data-'.$options['media'];
     } else if ($options['type'] === 'portfolio') {
