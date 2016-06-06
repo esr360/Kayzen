@@ -39,7 +39,7 @@
         
         <!-- Contact Form -->
         <form class="form-fauxPlaceholders-html5" action="https://formspree.io/esr360@live.com" id="contactForm" method="post">
-            <input type="hidden" name="_next" value="<?php echo "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]" ?>" />
+            <input type="hidden" name="_next" value="<?php pageLink('further/thankyou.php') ?>" />
             <div class="container-small">
                 <div class="row-flow">
                     <div class="form_group span-6">

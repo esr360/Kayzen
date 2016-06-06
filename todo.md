@@ -1,9 +1,8 @@
 # To Do
 #============================================================
 
-- change section title icons
-- add thankyou contact us finish page
 - update links on features page
+- change section title icons
 
 # Done
 #============================================================
@@ -54,6 +53,7 @@
 - integrate drag & drop page builder
 - update headers to use opaque instead of dark
 - update docs
+- add thankyou contact us finish page
 
 # Next Release
 #============================================================
