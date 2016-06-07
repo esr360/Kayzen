@@ -1,7 +1,6 @@
 # To Do
 #============================================================
 
-- update links on features page
 - change section title icons
 
 # Done
@@ -54,6 +53,7 @@
 - update headers to use opaque instead of dark
 - update docs
 - add thankyou contact us finish page
+- update links on features page
 
 # Next Release
 #============================================================
@@ -71,6 +71,7 @@
 - intergrate builder into Grunt instead of Jake
 - go through all @TODO's
 - improve utilities/font-sizes
+- integrate builder better so doesn't have to be at root
 
 # Backlog
 #============================================================

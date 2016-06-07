@@ -526,7 +526,7 @@
                         <li><a href="https://github.com/esr360/Kayzen.docs#getting-started" target="blank">Getting Started</a></li>
                         <li><a href="https://github.com/esr360/Kayzen.docs#configure" target="blank">Configure</a></li>
                         <li><a href="https://github.com/esr360/Kayzen.docs#build" target="blank">Build</a></li>
-                        <li><a href="https://github.com/esr360/Kayzen.docs#deploy" target="blank">Deploy</a></li>
+                        <li><a href="https://github.com/esr360/Kayzen.docs#test--deploy" target="blank">Deploy</a></li>
                     </ul>
                 </li>
             </ul>
