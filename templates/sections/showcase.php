@@ -169,7 +169,7 @@
                             <li>Fixed header</li>
                             <li>Featured demo</li>
                             <li>One-page/multi-page</li>
-                            <li>Included free - $17 value</li>
+                            <li>Included free - <a href="http://themeforest.net/item/nexus-responsive-multipurpose-html5-template/10789597" target="blank">$17 value</a></li>
                         </ul>
                         <div class="button_group">
                             <a href="<?php echo themeLink('Nexus', '/index.php') ?>" target="blank" class="button-size-3">View Demo</a>

@@ -39,7 +39,7 @@
         
         <!-- Contact Form -->
         <form class="form-fauxPlaceholders-html5" action="https://formspree.io/esr360@live.com" id="contactForm" method="post">
-            <input type="hidden" name="_next" value="<?php pageLink('further/thankyou.php') ?>" />
+            <input type="hidden" name="_next" value="http://skyux.com/themes/Kayzen/pages/further/thankyou.html" />
             <div class="container-small">
                 <div class="row-flow">
                     <div class="form_group span-6">

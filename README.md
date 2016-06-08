@@ -29,13 +29,13 @@ dev/
 -- templates/
 -- Gruntfile.js
 -- package.json
-production/
+prod/
 -- app/
 -- pages/
 -- themes/
 ```
 
-The `dev` directory contains all source files and build tools required for building and compiling Kayzen. The `production` directory contains only the compiled assets, pages and themes ready to be edited and uploaded to a server.
+The `dev` directory contains all source files and build tools required for building and compiling Kayzen. The `prod` directory contains only the compiled assets, pages and themes ready to be edited and uploaded to a server.
 
 To start from the bottom up, Kayzen is built using HTML5, CSS3 and jQuery. At the bare minimum, each Kayzen wepage should be served the following JavaScript and CSS assets:
 
@@ -49,20 +49,22 @@ The only files that would ever need to be modified are **app.js** and **app.css*
 
 Kayzen comes with further JavaScript and CSS files which are only used for certain pages, these will be covered later. If you're desired workflow is to directly work on these files without touching the source files they are generated from (i.e. you are not comfortable with pre-processing and concatening), a lot of this documentation may not apply to you, and you will lose out on many of the fantastic features Kayzen has to offer.
 
-If you are not yet familiar with Sass/SCSS or CSS pre-processing, checkout [this article](http://www.webdesignerdepot.com/2013/11/the-beginners-guide-to-sass/) to understand the basis about what it is and why it's beneficial. Once you've decided to make the leap, you can read about how to setup your workflow to include Sass by reading [this article](https://medium.com/@ricardozea/sass-for-beginners-the-friendliest-guide-about-how-to-install-use-sass-on-windows-22ff4a32c1f7#.wrryv6w1r).
-
-At this stage, it is not essential to know about JavaScript concatenation. As long as you are comfortable using Sass you will gain most of the benefits Kayzen has to offer. Having said that, if you are comfortable combining JavaScript files, then continue reading, otherwise head over to the [configure](#configure) section
+If you are not yet familiar with Sass/SCSS or CSS pre-processing, checkout [this article](http://www.webdesignerdepot.com/2013/11/the-beginners-guide-to-sass/) to understand the basis about what it is and why it's beneficial. Once you've decided to make the leap, you can read about how to setup your workflow to include Sass by reading [this article](https://medium.com/@ricardozea/sass-for-beginners-the-friendliest-guide-about-how-to-install-use-sass-on-windows-22ff4a32c1f7#.wrryv6w1r). 
 
 ### Building Kayzen
 
 #### Full Requirements
 
 * Minimum Sass 3.4
-* Node
-* [GraphicsMagick*](http://www.graphicsmagick.org/)
-* [php-cgi*](https://github.com/bezoerb/grunt-php2html#installing-php-cgi)
+* Node<sup>\[1\]</sup>
+* [GraphicsMagick<sup>\[2\]</sup>](http://www.graphicsmagick.org/)
+* [php-cgi<sup>\[3\]</sup>](https://github.com/bezoerb/grunt-php2html#installing-php-cgi)
 
-&ast; indicates that the requirement is only for optional [ehnanced workflow features](#enhanced-workflow-features)
+\[1\] - Required for [Grunt](http://gruntjs.com/), the automated build tool and task runner (optional)
+
+\[2\] - Required to generate responsive image variants (optional)
+
+\[3\] - Required to convert the PHP templates into HTML files (optional)
 
 Both the default provided `app.js` and `app.css` contain code from several third party libraries and plugins. The source files for these libraries and plugins reside in the **assets/vendor** folder, and include the following:
 
@@ -99,7 +101,7 @@ You can now process the main project's Sass file at `assets/app.scss` using your
 
 #### Official Kayzen Repository
 
-Alternatively, if you have purchased a license for Kayzen you are entitled to access to the private Github repository [located here](https://github.com/esr360/Kayzen), which also comes with the required submodules. If you do not already have access, [get in touch with us](#) to gain access.
+Alternatively, if you have purchased a license for Kayzen you are entitled to access to the private Github repository [located here](https://github.com/esr360/Kayzen), which also comes with the required submodules. If you do not already have access, [get in touch with us](http://themeforest.net/user/skyux) to gain access.
 
 > If this section is not relevent to you (i.e you have already cloned the vendor assets), head over to the [Configure](#configure) section.
 
@@ -290,9 +292,20 @@ This is the root file for your project. As well as importing all the Sass module
 
 In terms of the Kayzen modules that are imported, for the most part importing the file will **not** output any code, it merely gives your codebase the ability to include it should you so desire. This is to allow you to create different themes which may or may not use all avilable modules. Any modules your theme doesn't use won't get output in the compiled CSS.
 
-Themes are located in the **themes** directory. Each theme comes with a **.scss** file and a **.js** file. Kayzen provides several themes for you to choose from:
+Themes are located in the **themes** directory. Each theme comes with a **.scss** file and a **.js** file. Kayzen provides several default themes for you to choose from:
 
-* assets/themes/**Kayzen**
+* assets/themes/[Agenda](http://skyux.com/themes/Kayzen/themes/Agenda/index.html)
+* assets/themes/[Arndale](http://skyux.com/themes/Kayzen/themes/Arndale/index.html)
+* assets/themes/[Blizzard](http://skyux.com/themes/Kayzen/themes/Blizzard/index.html)
+* assets/themes/[Coffee](http://skyux.com/themes/Kayzen/themes/Coffee/index.html)
+* assets/themes/[Dart](http://skyux.com/themes/Kayzen/themes/Dart/index.html)
+* assets/themes/[Gaucho](http://skyux.com/themes/Kayzen/themes/Gaucho/index.html)
+* assets/themes/[Hollywood](http://skyux.com/themes/Kayzen/themes/Hollywood/index.html)
+* assets/themes/[Kayzen](http://skyux.com/themes/Kayzen/pages/homepages/homepage-1.html)
+* assets/themes/[Lily](http://skyux.com/themes/Kayzen/themes/Lily/index.html)
+* assets/themes/[Mall](http://skyux.com/themes/Kayzen/themes/Mall/index.html)
+* assets/themes/[Nexus](http://skyux.com/themes/Kayzen/themes/Nexus/index.html)
+* assets/themes/[Tempus](http://skyux.com/themes/Kayzen/themes/Tempus/index.html)
 
 To set which theme your project should use, set the `$theme` variable at the top of **app.scss**. By default this is set to `Kayzen`.
 
@@ -827,7 +840,7 @@ In order for the builder to function correctly, the above directories should be 
 
 The builder can now be accessed by visiting `your.server.com/builder/dist/`. You can now begin to create your pages using the pre built sections. If you come across errors when attempging to preview or export your pages, you may need to update the permissions of the `dist/tmp` directory to `777`.
 
-The page builder is only used to create new HTML pages to add to your existing Kayzen project; exporting the pages using the page builder does not include the CSS and JS in the .zip file, so when you include the generated HTML files in your project ensure they have the correct paths to the CSS and JS files.
+The page builder is only used to create new HTML pages to add to your existing Kayzen project; exporting the pages using the page builder does not include the CSS and JS in the .zip file, so when you include the generated HTML files in your project ensure they have the correct paths to your CSS and JS files.
 
 ### Grunt Tasks
 
@@ -881,7 +894,7 @@ You should be serving your users with minified versions of your assets (CSS and 
 
 ### Code Linting
 
-If you are using our Gruntfile.js, you can run Javascript and Scss linters on your code. Simply run `grunt test` to run both linters. To run only Javasctipt linting, run the `grunt jshint` task, and to run only Scss linting run the `grunt scsslint` task.
+If you are using our Gruntfile.js file, you can run Javascript and Scss linters on your code. Simply run `grunt test` to run both linters. To run only Javasctipt linting, run the `grunt jshint` task, and to run only Scss linting run the `grunt scsslint` task.
 
 ### Console Errors
 
@@ -901,4 +914,4 @@ Check your website on multiple mobile devices before you launch to ensure there 
 
 ### Support
 
-If you encounter any issues which you cannot resolve, you can [get in touch](#) with us to receive free support.
+If you encounter any issues which you cannot resolve, you can [get in touch](http://themeforest.net/user/skyux) with us to receive free support.

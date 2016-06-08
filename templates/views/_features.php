@@ -60,7 +60,7 @@
             </a>
             
             <!-- Feature 6 -->
-            <a class="widget-block-borderLeft span-4 break-4-half break-2-full" href="#mobile-optimized">
+            <a class="widget-block-borderLeft span-4 break-4-half break-2-full" href="#responsive">
                 <div class="widget_icon-inline button-icon-plain-size-6">
                     <i class="fa fa-tablet"></i>
                 </div>
@@ -209,7 +209,7 @@
 
 <?php promoBanner() ?>
 
-<section class="section-primary" id="mobile-optimized">
+<section class="section-primary" id="responsive">
 
     <div class="container-small">
         <div class="row-block stack-break-2">

@@ -13,6 +13,22 @@ module.exports = function(grunt) {
     // Config
     //-------------------------------------------------------------
     
+    // Set which themes exist
+    var themes = grunt.option('themes') || [
+        'Agenda',
+        'Arndale',
+        'Blizzard',
+        'Coffee',
+        'Dart',
+        'Gaucho',
+        'Hollywood',
+        'Kayzen',
+        'Lily',
+        'Mall',
+        'Nexus',
+        'Tempus'
+    ];
+    
     // Set which theme you would like to build assets for
     var theme = grunt.option('theme') || 'Kayzen';
     
@@ -26,12 +42,12 @@ module.exports = function(grunt) {
     var path = grunt.option('path') || 'root';
     
     // Set to store assets in individual theme directories
-    var themes = grunt.option('themes') || true;
+    var multiThemes = grunt.option('multiThemes') || true;
     
     //-------------------------------------------------------------
     
     // Used to determine how the theme's assets should be organised
-    var themePath = (themes) ? 'themes/' + theme + '/' : '';
+    var themePath = (multiThemes) ? 'themes/' + theme + '/' : '';
 
     // Built Asset Paths
     var buildScripts = 'app/scripts/';
@@ -508,9 +524,9 @@ module.exports = function(grunt) {
         //---------------------------------------------------------
         
         setPHPConstant: {
-            themes: {
-                constant    : 'themes',
-                value       : themes,
+            multiThemes: {
+                constant    : 'multiThemes',
+                value       : multiThemes,
                 file        : 'templates/app.php'
             },
             theme: {
@@ -735,7 +751,7 @@ module.exports = function(grunt) {
         };
         var backendTasks = [
             'setPHPConstant:' + environment,
-            'setPHPConstant:themes',
+            'setPHPConstant:multiThemes',
             'setPHPConstant:theme',
             'setPHPConstant:path',
             'setPHPConstant:realm'
@@ -808,6 +824,20 @@ module.exports = function(grunt) {
         'test',
         'compress:images'
     ]);
+    
+    /**
+     * Compile All Themes
+     */
+    grunt.registerTask('compile:all', function() {
+        themes.forEach(function(currentTheme) {
+            console.log(currentTheme);
+            var done = grunt.task.current.async();
+            grunt.util.spawn({
+                grunt : true,
+                args  : ['compile', '--theme=' + currentTheme]
+            }, done);
+        });
+    });
     
     /**
      * Compress Images

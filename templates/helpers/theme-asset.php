@@ -1,6 +1,6 @@
 <?php function themeAsset($theme, $path) {
     
-    if (themes) {
+    if (multiThemes) {
         $theme = $theme;
     } else {
         $theme = '';

@@ -1,6 +1,7 @@
 # To Do
 #============================================================
 
+- replace thefox image in theme-1.jpg
 - change section title icons
 
 # Done
@@ -72,6 +73,13 @@
 - go through all @TODO's
 - improve utilities/font-sizes
 - integrate builder better so doesn't have to be at root
+- remout output-json option from module examples
+- update grunt tasks
+- lint js
+- lint scss
 
 # Backlog
 #============================================================
+
+- add js unit tests
+- add scss unit tests
