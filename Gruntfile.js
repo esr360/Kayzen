@@ -13,22 +13,6 @@ module.exports = function(grunt) {
     // Config
     //-------------------------------------------------------------
     
-    // Set which themes exist
-    var themes = grunt.option('themes') || [
-        'Agenda',
-        'Arndale',
-        'Blizzard',
-        'Coffee',
-        'Dart',
-        'Gaucho',
-        'Hollywood',
-        'Kayzen',
-        'Lily',
-        'Mall',
-        'Nexus',
-        'Tempus'
-    ];
-    
     // Set which theme you would like to build assets for
     var theme = grunt.option('theme') || 'Kayzen';
     
