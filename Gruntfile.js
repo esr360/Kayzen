@@ -826,20 +826,6 @@ module.exports = function(grunt) {
     ]);
     
     /**
-     * Compile All Themes
-     */
-    grunt.registerTask('compile:all', function() {
-        themes.forEach(function(currentTheme) {
-            console.log(currentTheme);
-            var done = grunt.task.current.async();
-            grunt.util.spawn({
-                grunt : true,
-                args  : ['compile', '--theme=' + currentTheme]
-            }, done);
-        });
-    });
-    
-    /**
      * Compress Images
      * 
      * The TinyPNG API only allows us so many compressions, so use 
@@ -848,5 +834,10 @@ module.exports = function(grunt) {
     grunt.registerTask('compress:images', [
         'tinypng'
     ]);
+
+    /**
+     * Compile all themes
+     * for theme in Agenda Arndale Blizzard Coffee Dart Gaucho Hollywood Kayzen Lily Mall Nexus Tempus ; do grunt compile --env=prod --theme=$theme ; done
+     */
 
 }; // function(grunt)
