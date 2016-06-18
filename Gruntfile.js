@@ -820,7 +820,7 @@ module.exports = function(grunt) {
     ]);
 
     /**
-     * Compile all themes
+     * Compile all themes from Terminal
      * for theme in Agenda Arndale Blizzard Coffee Dart Gaucho Hollywood Kayzen Lily Mall Nexus Tempus ; do grunt compile --env=prod --theme=$theme ; done
      */
 

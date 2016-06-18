@@ -77,6 +77,7 @@
 - update grunt tasks
 - lint js
 - lint scss
+- clean tmp builder files in a task
 
 # Backlog
 #============================================================
