@@ -1,8 +1,6 @@
 # To Do
 #============================================================
 
-- replace thefox image in theme-1.jpg
-- change section title icons
 
 # Done
 #============================================================
@@ -55,6 +53,7 @@
 - update docs
 - add thankyou contact us finish page
 - update links on features page
+- replace thefox image in theme-1.jpg
 
 # Next Release
 #============================================================
@@ -78,6 +77,7 @@
 - lint js
 - lint scss
 - clean tmp builder files in a task
+- change section title icons
 
 # Backlog
 #============================================================
