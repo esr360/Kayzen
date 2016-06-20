@@ -113,6 +113,9 @@ module.exports = function(grunt) {
         //-----------------------------------------------------
     
         clean: {
+            options: { 
+                force: true 
+            },
             app: {
                 src: ['app/*', '!app/themes/**', '!app/images/**']
             },
@@ -134,6 +137,9 @@ module.exports = function(grunt) {
             ],
             images: {
                 src: 'app/images'
+            },
+            predep: {
+                src: '../Kayzen/'
             }
         },
       
@@ -188,10 +194,6 @@ module.exports = function(grunt) {
                         dest: buildStyles,
                         expand: true,
                         flatten: true
-                    },
-                    {
-                        src: 'templates/includes/contact-form.php',
-                        dest: 'app/contact-form.php'
                     },
                     {
                         src: 'docs/README.md',
@@ -781,6 +783,7 @@ module.exports = function(grunt) {
     // Create prototypes
     grunt.registerTask('prototype', [
         'clean:prototype',
+        'setPHPConstant:realm',
         'templates',
         'copy:prototype',
         'relativeRoot',
@@ -801,12 +804,12 @@ module.exports = function(grunt) {
         'scsslint'
     ]);
     
-    // Run asset linting and tests
-    grunt.registerTask('ship', [
-        'package',
-        'test',
-        'compress:images'
-    ]);
+    // Prepare the app for deployment
+    // ensure to run with --realm=live flag
+    grunt.registerTask('predep', function() {
+        grunt.task.run('clean:predep');
+        grunt.task.run('copy:predep');
+    });
     
     /**
      * Compress Images

@@ -1,6 +1,8 @@
 # To Do
 #============================================================
 
+- fix order of image copy/compress
+- create tasks to create prod and env directories
 
 # Done
 #============================================================
