@@ -1,12 +1,6 @@
 # To Do
 #============================================================
 
-- update google-map location documentaion
-- update builder
-- update documentation links (kayzen.skyux)
-- update docs to provide better support info
-- update poster image colors/borders
-- highlight that theme is smaller/better optimised
 
 # Done
 #============================================================
@@ -60,6 +54,11 @@
 - add thankyou contact us finish page
 - update links on features page
 - replace thefox image in theme-1.jpg
+- update google-map location documentaion
+- update builder
+- update documentation links (kayzen.skyux)
+- update docs to provide better support info
+- update poster image colors/borders
 
 # Next Release
 #============================================================
@@ -92,3 +91,4 @@
 
 - add js unit tests
 - add scss unit tests
+- highlight that theme is smaller/better optimised
