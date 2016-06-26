@@ -13,6 +13,7 @@
     $google-map: config((
         'name'               : 'google-map',
         'output-JSON'        : true,
+        'location'           : (53.48076, -2.24263),
         'colors'             : (
             'water'          : adjust-color(
                 $baseMapColor,

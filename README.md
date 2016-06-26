@@ -510,6 +510,8 @@ Read the [footer module](http://skyux.com/themes/Kayzen/pages/modules/objects/fo
 
 ##### Google Map
 
+###### Colors/Style
+
 To change the google map colors, locate the following code in `app/scripts/app.js` (or `app/YOURTHEME/scripts/app.js`):
 
 ```js          
@@ -521,6 +523,39 @@ Grab your desired styles array (e.g. [https://snazzymaps.com/style/35/avocado-wo
 ```js        
 $('#google-map').googleMap({
     styles: [...]
+});
+```
+
+###### Location
+
+To change the google map longitude/latitude, locate the following code in `app/scripts/app.js` (or `app/YOURTHEME/scripts/app.js`):
+
+```js          
+$('#google-map').googleMap();
+```
+
+And pass your desired longitude/latitude values to the function (you can use [this website to grab your values](http://mondeca.com/index.php/en/any-place-en):
+
+```js        
+$('#google-map').googleMap({
+    longitude: 48.195387,
+    latitude: -63.171387,
+});
+```
+
+###### Zoom
+
+To change the default zoom for your google map, locate the following code in `app/scripts/app.js` (or `app/YOURTHEME/scripts/app.js`):
+
+```js          
+$('#google-map').googleMap();
+```
+
+And pass your desired longitude/latitude values to the function (you can use [this website to grab your values](http://mondeca.com/index.php/en/any-place-en):
+
+```js        
+$('#google-map').googleMap({
+    zoom: 10
 });
 ```
 

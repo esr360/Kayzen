@@ -72,6 +72,50 @@ $('#google-map').googleMap();
 
                 <div class="google-map object" id="google-map"></div>
                 
+                <h3 class="heading-size-3">Custom Location</h3>
+                
+                <p>Whilst the default longitude/latitude can be controlled in the module's Sass configuration, it is primerily controlled by the JavaScript. Pass your custom longitude/latitude values to the <code>googleMap</code> function:</p>
+                
+                <div class="google-map object" id="google-map-3"></div>		
+
+<pre data-enlighter-language="javascript" class="EnlighterJSRAW">
+$('#google-map').googleMap({
+    longitude: 48.195387,
+    latitude: -63.171387
+});
+</pre>
+                
+                <script>
+                    $(document).ready(function() {
+                        $('#google-map-3').googleMap({
+                            longitude: 40.78306,
+                            latitude: -73.97125
+                        });
+                    });                    
+                </script>
+                
+                <h3 class="heading-size-3">Custom Zoom (with custom longitude/latitude)</h3>
+
+                <div class="google-map object" id="google-map-4"></div>		
+
+<pre data-enlighter-language="javascript" class="EnlighterJSRAW">
+$('#google-map').googleMap({
+    longitude: 48.195387,
+    latitude: -63.171387,
+    zoom: 12
+});
+</pre>
+                
+                <script>
+                    $(document).ready(function() {
+                        $('#google-map-4').googleMap({
+                            longitude: 40.78306,
+                            latitude: -73.97125,
+                            zoom: 12
+                        });
+                    });                    
+                </script>
+                
                 <h3 class="heading-size-3">Custom Colors</h3>
                 
                 <p>Whilst the map colors can be controlled in the module's Sass configuration, they are primerily controlled by the JavaScript. By default, the Sass colors get passed to the Google Map's JavaScript, but this can be overwritten via the <code>styles</code> option when calling the plugin (below example taken from <a href="https://snazzymaps.com/style/42/apple-maps-esque" target="blank">Snazzy Maps</a>):</p>
@@ -406,6 +450,11 @@ $('#google-map').googleMap({
 							<td><code class="value">[...]</code></td>
 							<td>Each default color is a Sass-adjusted <code>$baseMapColor</code> color, but you can overwrite any as desired.</td>
 						</tr>
+						<tr>
+							<td><code>location</code></td>
+							<td><code class="value">(53.48076, -2.24263)</code></td>
+							<td>The default longitude/latitude for Google Maps.</td>
+						</tr>
                     </tbody>
                 </table>
 				
@@ -413,17 +462,7 @@ $('#google-map').googleMap({
 						
 <pre data-enlighter-language="css" class="EnlighterJSRAW">
 @include google-map((
-    'colors'             : (
-        'water'          : #aee2e0,
-        'landscape'      : #abce83,
-        'road'           : #5B5B3F,
-        'highway'        : #EBF4A4,
-        'poi'            : #769E72,
-        'transit'        : #5B5B3F,
-        'stroke'         : #123abc,
-        'administrative' : #87ae79,
-        'park'           : #8dab68
-    )
+    location: (48.195387, -63.171387)
 ));
 </pre>
 

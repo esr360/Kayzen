@@ -16,7 +16,6 @@
         var _mapColor = _modules['google-map']['colors'];
         
         var options = $.extend({
-            
             styles: [
                 {
                     "featureType" : "water", 
@@ -98,8 +97,10 @@
                     }]
                 }
             ],
+            longitude: _modules['google-map']['location'][0],
+            latitude: _modules['google-map']['location'][1],
+            zoom: 14,
             headerTrigger : '#toggleHeader'
-            
         }, custom);
         
         // Run the code on each occurance of the element
@@ -123,7 +124,7 @@
                 var mapOptions = {
                     
                     // How zoomed in you want the map to start at (always required)
-                    zoom: 14,
+                    zoom: options.zoom,
 
                     // Disable scroll-wheel zoom
                     scrollwheel: false,
@@ -131,7 +132,7 @@
                     draggable: false,
 
                     // The latitude and longitude to center the map (always required)
-                    center: new google.maps.LatLng(53.48076, -2.24263), 
+                    center: new google.maps.LatLng(options.longitude, options.latitude), 
 
                     // How you would like to style the map? 
                     // This is where you would paste any style found on Snazzy Maps.
