@@ -1,8 +1,12 @@
 # To Do
 #============================================================
 
-- fix order of image copy/compress
-- create tasks to create prod and env directories
+- update google-map location documentaion
+- update builder
+- update documentation links (kayzen.skyux)
+- update docs to provide better support info
+- update poster image colors/borders
+- highlight that theme is smaller/better optimised
 
 # Done
 #============================================================
@@ -80,6 +84,8 @@
 - lint scss
 - clean tmp builder files in a task
 - change section title icons
+- fix order of image copy/compress
+- create tasks to create prod and env directories
 
 # Backlog
 #============================================================
