@@ -137,9 +137,6 @@ module.exports = function(grunt) {
             ],
             images: {
                 src: 'app/images'
-            },
-            predep: {
-                src: '../Kayzen/'
             }
         },
       
@@ -803,13 +800,6 @@ module.exports = function(grunt) {
         'jshint',
         'scsslint'
     ]);
-    
-    // Prepare the app for deployment
-    // ensure to run with --realm=live flag
-    grunt.registerTask('predep', function() {
-        grunt.task.run('clean:predep');
-        grunt.task.run('copy:predep');
-    });
     
     /**
      * Compress Images

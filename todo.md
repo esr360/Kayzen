@@ -64,20 +64,20 @@
 #============================================================
 
 - create new module for tags and remove from list modifiers
-- change order of components/modifiers in module overview
 - document 'blocks' list modifier
 - fix issue when clicking "back" after submitting form
-- make cheatsheet more in-depth
 - (mobile) make ribbons smaller
-- (mobile) re-think dynamic side header (there is a jump)
 - look into relative-root data attr background images
 - replace tabs with 4 spaces '	'
 - loook at full-screen billboard logic
 - intergrate builder into Grunt instead of Jake
 - go through all @TODO's
+- change order of components/modifiers in module overview
+- make cheatsheet more in-depth
+- (mobile) re-think dynamic side header (there is a jump)
 - improve utilities/font-sizes
 - integrate builder better so doesn't have to be at root
-- remout output-json option from module examples
+- remove output-json option from module examples
 - update grunt tasks
 - lint js
 - lint scss
@@ -92,3 +92,4 @@
 - add js unit tests
 - add scss unit tests
 - highlight that theme is smaller/better optimised
+- add prune grunt task (e.g sass-cache, tmp etc.)
