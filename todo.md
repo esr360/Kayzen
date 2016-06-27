@@ -93,3 +93,4 @@
 - add scss unit tests
 - highlight that theme is smaller/better optimised
 - add prune grunt task (e.g sass-cache, tmp etc.)
+- improve drag & drop builder editing capabilities
