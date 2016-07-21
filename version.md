@@ -1,6 +1,6 @@
 * Kayzen version 1.1
 
-# Git Submodules
+### Git Submodules
 
 * Enlighter 2.10.1
 * Font-Awesome 4.5.0
