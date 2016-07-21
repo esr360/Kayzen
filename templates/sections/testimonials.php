@@ -39,7 +39,7 @@
             <button class="slide-next button-icon-border-size-3"><i class="fa fa-angle-right"></i></button>
         </nav>
             
-        <script id="testimonialsScripts">
+        <script id="testimonialsScripts" class="pageScripts">
             
             $(document).ready(pageScripts);
                 

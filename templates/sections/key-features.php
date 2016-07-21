@@ -119,7 +119,7 @@
             
         </div><!-- Features Row 2 -->
             
-        <script id="keyFeaturesScripts">
+        <script id="keyFeaturesScripts" class="pageScripts">
             
             $(document).ready(pageScripts);
                 

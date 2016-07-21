@@ -63,7 +63,7 @@
                         </a>
                     </div>
                             
-                    <script id="clientsScripts">
+                    <script id="clientsScripts" class="pageScripts">
                         
                         $(document).ready(pageScripts);
                             

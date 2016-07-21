@@ -16,7 +16,7 @@
         </nav>
     </div>
             
-    <script id="portfolioThumbsScripts">
+    <script id="portfolioThumbsScripts" class="pageScripts">
         
         $(document).ready(pageScripts);
             

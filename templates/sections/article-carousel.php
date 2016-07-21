@@ -106,7 +106,7 @@
         <img class="span" src="<?php echo stockImage('demo/stock-9.jpg') ?>" alt="">
     </div>
             
-    <script id="articleCarouselScripts">
+    <script id="articleCarouselScripts" class="pageScripts">
         
         $(document).ready(pageScripts);
             
