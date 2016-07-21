@@ -63,6 +63,7 @@
 # Next Release
 #============================================================
 
+- move tasks to trello
 - create new module for tags and remove from list modifiers
 - document 'blocks' list modifier
 - fix issue when clicking "back" after submitting form
@@ -85,6 +86,7 @@
 - change section title icons
 - fix order of image copy/compress
 - create tasks to create prod and env directories
+- update graphics (use multiple/modular graphics)
 
 # Backlog
 #============================================================

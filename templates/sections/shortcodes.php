@@ -59,7 +59,7 @@
         
         <!-- Shortcodes Carousel -->
             
-        <script id="pageScripts">
+        <script id="shortcodesScripts">
             
             $(document).ready(pageScripts);
                 

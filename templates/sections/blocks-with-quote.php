@@ -53,7 +53,7 @@
             
         </div><!-- Features Row 1 -->
             
-        <script id="pageScripts">
+        <script id="blocksWithQuoteScripts">
             
             $(document).ready(pageScripts);
                 

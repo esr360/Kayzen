@@ -90,7 +90,7 @@
         </nav>
     </section>
     
-    <script id="pageScripts">
+    <script id="earthSliderScripts">
         
         $(document).ready(pageScripts);
         

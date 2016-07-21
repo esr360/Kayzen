@@ -275,7 +275,7 @@
         </div><!-- Showcase Slides -->
         
         <!-- Showcase Carousel -->
-        <script id="pageScripts">
+        <script id="showcaseScripts">
             
             $(document).ready(pageScripts);
                 

@@ -147,7 +147,7 @@
     
     <?php if ($options['section']) echo '</section>' ?>
             
-    <script id="pageScripts">
+    <script id="socialWidgetsScripts">
         
         $(document).ready(pageScripts);
             
