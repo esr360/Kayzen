@@ -520,13 +520,15 @@
                         <li><a href="<?php pageLink('features.php') ?>#mobile-optimized">Mobile Optimized</a></li>
                     </ul>
                 </li>
-                <li>
-                    <a href="https://github.com/esr360/Kayzen.docs" target="blank"><i class="navigation_icon fa fa-file-text-o"></i> Documentation</a>
+                <li><!-- @TODO update docs link so not hardcoded -->
+                    <a href="http://kayzen.skyux.com/docs" target="blank"><i class="navigation_icon fa fa-file-text-o"></i> Documentation</a>
                     <ul>
-                        <li><a href="https://github.com/esr360/Kayzen.docs#getting-started" target="blank">Getting Started</a></li>
-                        <li><a href="https://github.com/esr360/Kayzen.docs#configure" target="blank">Configure</a></li>
-                        <li><a href="https://github.com/esr360/Kayzen.docs#build" target="blank">Build</a></li>
-                        <li><a href="https://github.com/esr360/Kayzen.docs#test--deploy" target="blank">Deploy</a></li>
+                        <li><a href="http://kayzen.skyux.com/docs/#overview" target="blank">Overview</a></li>
+                        <li><a href="http://kayzen.skyux.com/docs/#getting-started" target="blank">Getting Started</a></li>
+                        <li><a href="http://kayzen.skyux.com/docs/#features--options" target="blank">Features & Options</a></li>
+                        <li><a href="http://kayzen.skyux.com/docs/#custom-sections" target="blank">Custom Sections</a></li>
+                        <li><a href="http://kayzen.skyux.com/docs/#resources" target="blank">Resources</a></li>
+                        <li><a href="http://kayzen.skyux.com/docs/#notes" target="blank">Notes</a></li>
                     </ul>
                 </li>
             </ul>
