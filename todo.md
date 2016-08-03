@@ -2,6 +2,9 @@
 #============================================================
 
 - create task to get vendor versions
+- create task to package app for release
+- import Kayzen.vendor
+- fix builder and updates docs (.min files)
 
 # Done
 #============================================================

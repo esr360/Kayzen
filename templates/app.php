@@ -40,7 +40,7 @@ define('path', 'root');
  *
  * Values: 'demo' | 'live'
  */
-define('realm', 'live');
+define('realm', 'demo');
 
 /**
  * Set the root php/template directory
