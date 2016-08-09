@@ -3,7 +3,7 @@
 	url = https://github.com/esr360/Kayzen.docs.git
 [submodule "builder"]
 	path = builder
-	url = https://github.com/esr360/HTML-Builder.git
+	url = https://github.com/esr360/Kayzen.builder.git
 [submodule "assets/vendor"]
 	path = assets/vendor
 	url = https://github.com/esr360/Kayzen.vendor.git
