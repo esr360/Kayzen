@@ -23,14 +23,14 @@ $fa-font-path: "#{$asset-path}/fonts";
 @import "vendor/normalize-scss/sass/normalize";
 @import "vendor/Kayzen-GS/src/kayzen-gs";
 @import "vendor/Magnific-Popup/src/css/main.scss";
-@import "vendor/Owl-Carousel/src/scss/owl.animate";
-@import "vendor/Owl-Carousel/src/scss/owl.autoheight";
-@import "vendor/Owl-Carousel/src/scss/owl.carousel";
-@import "vendor/Owl-Carousel/src/scss/owl.lazyload";
-@import "vendor/Owl-Carousel/src/scss/owl.video";
+@import "vendor/Owl-Carousel/src/scss/animate";
+@import "vendor/Owl-Carousel/src/scss/autoheight";
+@import "vendor/Owl-Carousel/src/scss/core";
+@import "vendor/Owl-Carousel/src/scss/lazyload";
+@import "vendor/Owl-Carousel/src/scss/video";
 @import "vendor/Font-Awesome/scss/font-awesome";
 @import "vendor/k-preloaders/src/preloaders";
-@import "vendor/SassyJSON/src/SassyJSON";
+@import "vendor/Synergy/vendor/SassyJSON/src/SassyJSON";
 @import "vendor/Synergy/src/scss/synergy";
 
 //-----------------------------------------------------------------

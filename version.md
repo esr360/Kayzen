@@ -1,4 +1,4 @@
-* Kayzen version 1.1
+* Kayzen version 1.2.0
 
 ### Git Submodules
 
