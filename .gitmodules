@@ -1,3 +1,6 @@
+[submodule "docs"]
+	path = docs
+	url = https://github.com/esr360/Kayzen.docs.git
 [submodule "builder"]
 	path = builder
 	url = https://github.com/esr360/HTML-Builder.git
