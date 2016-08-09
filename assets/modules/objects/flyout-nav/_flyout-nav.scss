@@ -10,7 +10,7 @@
 
     $flyout-nav: config((
         'name'                : 'flyout-nav',
-        'output-JSON'         : true,
+        'output-json'         : true,
         // Options
         'width'               : option($header, 'side', 'width'),
         'font-size'           : font-size('size-2'),

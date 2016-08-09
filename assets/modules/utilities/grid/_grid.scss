@@ -10,7 +10,7 @@
 
     $grid: map-merge-deep((
         'name'                : 'grid',
-        'output-JSON'         : true,
+        'output-json'         : true,
         'options': (
             'base-width'      : 1200px,
             'max-width'       : 95%,

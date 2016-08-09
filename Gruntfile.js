@@ -28,6 +28,9 @@ module.exports = function(grunt) {
     // Set to store assets in individual theme directories
     var multiThemes = grunt.option('multiThemes') || true;
     
+    // used when drafting new release
+    var version = grunt.option('tag') || '1.2.0';
+    
     //-------------------------------------------------------------
     
     // Used to determine how the theme's assets should be organised
@@ -137,7 +140,14 @@ module.exports = function(grunt) {
             ],
             images: {
                 src: 'app/images'
-            }
+            },
+            release: {
+                src: '../releases/' + version
+            },
+            stockAssets: [
+                '../releases/' + version + '/dev/assets/images/demo',
+                '../releases/' + version + '/prod/app/images/demo',
+            ]
         },
       
         //---------------------------------------------------------
@@ -213,6 +223,57 @@ module.exports = function(grunt) {
                     dest: 'app/images',
                     expand: true
                 }]
+            },
+            release: {
+                files: [
+                    {
+                        cwd: 'assets',
+                        src: ['**/*', '!vendor/**'],
+                        dest: '../releases/' + version + '/dev/assets',
+                        expand: true
+                    },
+                    {
+                        cwd: 'builder/dist',
+                        src: '**/*',
+                        dest: '../releases/' + version + '/dev/builder/dist',
+                        expand: true
+                    },
+                    {
+                        cwd: 'templates',
+                        src: '**/*',
+                        dest: '../releases/' + version + '/dev/templates',
+                        expand: true
+                    },
+                    {
+                        src: [
+                            'Gruntfile.js', 
+                            'package.json'
+                        ],
+                        dest: '../releases/' + version + '/dev',
+                        expand: true,
+                        flatten: true
+                    },
+                    {
+                        cwd: 'prototype',
+                        src: '**/*',
+                        dest: '../releases/' + version + '/prod',
+                        expand: true
+                    },
+                    {
+                        cwd: 'docs',
+                        src: [
+                            'assets/**', 
+                            'index.html',
+                            'changelog.html'
+                        ],
+                        dest: '../releases/' + version + '/docs',
+                        expand: true
+                    },
+                    {
+                        src: 'version.md',
+                        dest: '../releases/' + version + '/'
+                    }
+                ]
             }
         },
       
@@ -648,6 +709,11 @@ module.exports = function(grunt) {
                 options: {
                     cwd: 'assets/vendor/Owl-Carousel'
                 }
+            },
+            jQuery: {
+                options: {
+                    cwd: 'assets/vendor/jQuery'
+                }
             }
         },
       
@@ -678,6 +744,13 @@ module.exports = function(grunt) {
                     task: 'dist'
                 },
                 src: 'assets/vendor/Owl-Carousel/Gruntfile.js'
+            },
+            jQuery: {
+                options: {
+                    log: true,
+                    task: 'dev'
+                },
+                src: 'assets/vendor/jQuery/Gruntfile.js'
             }
         }
 
@@ -801,6 +874,14 @@ module.exports = function(grunt) {
         'scsslint'
     ]);
     
+    // Create a new release
+    grunt.registerTask('release', [
+        'setPHPConstant:dev',
+        'clean:release',
+        'copy:release',
+        'clean:stockAssets'
+    ]);
+    
     /**
      * Compress Images
      * 
@@ -813,7 +894,9 @@ module.exports = function(grunt) {
 
     /**
      * Compile all themes from Terminal
-     * for theme in Agenda Arndale Blizzard Coffee Dart Gaucho Hollywood Kayzen Lily Mall Nexus Tempus ; do grunt compile --env=prod --theme=$theme ; done
+     * for theme in Agenda Arndale Blizzard Coffee Dart Gaucho Hollywood Kayzen Lily Mall Nexus Tempus ; do grunt compile --env=dev --theme=$theme ; done
+     * grunt prototype --realm=live
+     * grunt release --tag=1.2.0
      */
 
 }; // function(grunt)
