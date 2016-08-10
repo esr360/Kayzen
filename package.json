@@ -41,9 +41,7 @@
     "grunt-scss-lint": "^0.3.8",
     "grunt-text-replace": "^0.4.0",
     "grunt-tinypng": "^0.6.1",
-    "nopt-grunt-fix": "^1.0.0"
-  },
-  "dependencies": {
+    "load-grunt-config": "^0.19.2",
     "nopt-grunt-fix": "^1.0.0"
   }
 }

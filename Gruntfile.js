@@ -1,51 +1,94 @@
-/**
- * KAYZEN
+/******************************************************************
+ * Kayzen
  * Grunt Setup
  * @uthor Edmund Reed | @esr360
- */
+ ******************************************************************/
 
 module.exports = function(grunt) {
 
     // Allows the passing of multiple flags on the command line
     require('nopt-grunt-fix')(grunt);
     
-    //-------------------------------------------------------------
-    // Config
-    //-------------------------------------------------------------
-    
-    // Used when drafting new release
+    /**************************************************************
+     * Config
+     *************************************************************/
+
+    /**
+     * Set the version of your project
+     * @var {string} version
+     */
     var version = grunt.option('tag') || '1.2.0';
-    
-    // Set which theme you would like to build assets for
+
+    /**
+     * Set which theme you would like to build assets for
+     * @var {string} theme
+     */
     var theme = grunt.option('theme') || 'Kayzen';
     
-    // 'demo' | 'live' - Set which realm to enable
+    /**
+     * Set which realm to use
+     * @var {('demo'|'live')} realm
+     */
     var realm = grunt.option('realm') || 'demo';
     
-    // 'dev' | 'prod' - used to determine asset minification
+    /**
+     * Set which environment to use
+     * @var {('dev'|'prod')} realm
+     */
     var env = grunt.option('env') || 'dev';
     
-    // 'root' | 'relative' - used to determine page link paths
+    /**
+     * Used to determine page link paths
+     * @var {('root'|'relative')} realm
+     */
     var path = grunt.option('path') || 'root';
     
-    // Set to store assets in individual theme directories
+    /**
+     * Set to store assets in individual theme directories
+     * @var {bool} [true] multiThemes
+     */
     var multiThemes = grunt.option('multiThemes') || true;
     
-    //-------------------------------------------------------------
-    
-    // Used to determine how the theme's assets should be organised
+    /**
+     * Used to determine how the theme's assets should be organised
+     * @var {string} themePath
+     */
     var themePath = (multiThemes) ? 'themes/' + theme + '/' : '';
 
-    // Built Asset Paths
+    /**
+     * The path to your compiled global scripts
+     * @var {string} buildScripts
+     */
     var buildScripts = 'app/scripts/';
+
+    /**
+     * The path to your compiled global styles
+     * @var {string} buildStyles
+     */
     var buildStyles  = 'app/styles/';
     
-    // Theme Asset Paths
+    /**
+     * The path to your compiled theme scripts
+     * @var {string} themeBuildScripts
+     */
     var themeBuildScripts = 'app/' + themePath;
+
+    /**
+     * The path to your compiled theme styles
+     * @var {string} themeBuildStyles
+     */
     var themeBuildStyles  = 'app/' + themePath;
 
-    // Owl Carousel
+    /**
+     * The path to the root Owl-Carousel directory
+     * @var {string} owlPath
+     */
     var owlPath = 'assets/vendor/Owl-Carousel/src/js/'; 
+
+    /**
+     * The desired Owl-Carousel modules
+     * @var {object} _owl
+     */
     var _owl = [
         owlPath + 'owl.carousel.js',
         owlPath + 'owl.animate.js',
@@ -58,8 +101,16 @@ module.exports = function(grunt) {
         owlPath + 'owl.video.js',
     ];
     
-    // Magnific Popup
-    var magnificPath = 'assets/vendor/Magnific-Popup/src/js/'; 
+    /**
+     * The path to the root Magnific Popup directory
+     * @var {string} magnificPath
+     */    
+    var magnificPath = 'assets/vendor/Magnific-Popup/src/js/';
+
+    /**
+     * The desired Magnific Popup modules
+     * @var {object} _magnific
+     */
     var _magnific = [
         magnificPath + 'core.js',
         magnificPath + 'gallery.js',
@@ -67,7 +118,10 @@ module.exports = function(grunt) {
         magnificPath + 'retina.js',
     ];
 
-    // App Scripts
+    /**
+     * The scripts to be included within your theme's app.js file
+     * @var {object} _scripts
+     */
     var _scripts = [
         _owl,
         _magnific,
@@ -85,7 +139,10 @@ module.exports = function(grunt) {
         'assets/themes/' + theme + '/' + theme + '.js'
     ];
 
-    // Separate Scripts
+    /**
+     * The scripts to be included in the app directory
+     * @var {object} _separateScripts
+     */
     var _separateScripts = [
         'assets/vendor/jQuery/dist/jquery.js',
         'assets/vendor/pseudojQuery/src/pseudojQuery-start.js',
@@ -97,24 +154,26 @@ module.exports = function(grunt) {
         'assets/vendor/MooTools-Core/build/mootools-core.js'
     ];
 
-    // Separate Styles
+    /**
+     * The styles to be included in the app directory
+     * @var {object} _separateScripts
+     */
     var _separateStyles = [
         'assets/vendor/Enlighter/Build/EnlighterJS.css'
     ];
-
-    //-------------------------------------------------------------
-    // Tasks
-    //-------------------------------------------------------------
+    
+    /**************************************************************
+     * Packages
+     *************************************************************/
         
     grunt.initConfig({
 		
         pkg: grunt.file.readJSON('package.json'),
-        
-        //-----------------------------------------------------
-        // Clean
-        // https://github.com/gruntjs/grunt-contrib-clean
-        //-----------------------------------------------------
-    
+
+        /**
+         * Clean
+         * @see https://github.com/gruntjs/grunt-contrib-clean
+         */
         clean: {
             options: { 
                 force: true 
@@ -149,24 +208,22 @@ module.exports = function(grunt) {
                 '../releases/' + version + '/prod/app/images/demo',
             ]
         },
-      
-        //---------------------------------------------------------
-        // Concat
-        // https://github.com/gruntjs/grunt-contrib-concat
-        //---------------------------------------------------------
 
+        /**
+         * Concat
+         * @see https://github.com/gruntjs/grunt-contrib-concat
+         */
         concat: {   
             app: {
                 src: _scripts,
                 dest: themeBuildScripts + 'app.js',
             }
         },
-      
-        //---------------------------------------------------------
-        // JS-Hint
-        // https://github.com/gruntjs/grunt-contrib-jshint
-        //---------------------------------------------------------
         
+        /**
+         * JS-Hint
+         * @see https://github.com/gruntjs/grunt-contrib-jshint
+         */
         jshint: {
             app: [
                 'Gruntfile.js', 
@@ -175,12 +232,11 @@ module.exports = function(grunt) {
                 'assets/themes/**/*.js'
             ]
         },
-      
-        //---------------------------------------------------------
-        // Copy
-        // https://github.com/gruntjs/grunt-contrib-copy
-        //---------------------------------------------------------
         
+        /**
+         * Copy
+         * @see https://github.com/gruntjs/grunt-contrib-copy
+         */
         copy: {
             app: {
                 files: [
@@ -276,12 +332,11 @@ module.exports = function(grunt) {
                 ]
             }
         },
-      
-        //---------------------------------------------------------
-        // Uglify
-        // https://github.com/gruntjs/grunt-contrib-uglify
-        //---------------------------------------------------------
-		
+        
+        /**
+         * Uglify
+         * @see https://github.com/gruntjs/grunt-contrib-uglify
+         */
         uglify: {
             options: {
                 compress: {
@@ -311,12 +366,11 @@ module.exports = function(grunt) {
                 }]
             }
         },
-      
-        //---------------------------------------------------------
-        // Sass
-        // https://github.com/sindresorhus/grunt-sass
-        //---------------------------------------------------------
-        
+
+        /**
+         * Sass
+         * @see https://github.com/sindresorhus/grunt-sass
+         */
         sass: {
             dev: {
                 options: {
@@ -336,12 +390,11 @@ module.exports = function(grunt) {
                 }
             } 
         },
-        
-        //---------------------------------------------------------
-        // PostCSS
-        // https://github.com/nDmitry/grunt-postcss
-        //---------------------------------------------------------
-      
+
+        /**
+         * PostCSS
+         * @see https://github.com/nDmitry/grunt-postcss
+         */
         postcss: {
             options: {
                 map: false,
@@ -358,12 +411,11 @@ module.exports = function(grunt) {
                 src: themeBuildStyles + '*.css'
             }
         },
-        
-        //---------------------------------------------------------
-        // grunt-contrib-cssmin
-        // https://github.com/gruntjs/grunt-contrib-cssmin
-        //---------------------------------------------------------
-        
+
+        /**
+         * CSS Min
+         * @see https://github.com/gruntjs/grunt-contrib-cssmin
+         */
         cssmin: {
             target: {
                 files: [
@@ -384,12 +436,11 @@ module.exports = function(grunt) {
                 ]
             }
         },
-  
-        //---------------------------------------------------------
-        // Scss Lint
-        // https://github.com/ahmednuaman/grunt-scss-lint
-        //---------------------------------------------------------
         
+        /**
+         * Scss Lint
+         * @see https://github.com/ahmednuaman/grunt-scss-lint
+         */
         scsslint: {
             allFiles: [
                 'assets/modules/**/*.scss',
@@ -400,12 +451,11 @@ module.exports = function(grunt) {
                 colorizeOutput: false
             },
         },
-      
-        //---------------------------------------------------------
-        // Watch
-        // https://github.com/gruntjs/grunt-contrib-watch
-        //---------------------------------------------------------
-  
+        
+        /**
+         * Watch
+         * @see https://github.com/gruntjs/grunt-contrib-watch
+         */
         watch: {
             scripts: {
                 files: _scripts,
@@ -444,11 +494,10 @@ module.exports = function(grunt) {
             },
         },
       
-        //---------------------------------------------------------
-        // Grunt Text Replace
-        // https://github.com/yoniholmes/grunt-text-replace
-        //---------------------------------------------------------
-        
+        /**
+         * Text Replace
+         * @see https://github.com/yoniholmes/grunt-text-replace
+         */
         replace: {
             sassTheme: {
                 src: 'assets/app.scss',
@@ -490,12 +539,11 @@ module.exports = function(grunt) {
                 ]
             }
         },
-  
-        //---------------------------------------------------------
-        // TinyPNG
-        // https://github.com/marrone/grunt-tinypng
-        //---------------------------------------------------------
         
+        /**
+         * TinyPNG
+         * @see https://github.com/marrone/grunt-tinypng
+         */
         tinypng: {
             options: {
                 apiKey: 'Rs-CYUCRwpOiLB57rTBQMtSMgQh5lDFB',
@@ -510,12 +558,11 @@ module.exports = function(grunt) {
                 expand: true
             }
         },
-      
-        //---------------------------------------------------------
-        // Responsive Images
-        // https://github.com/andismith/grunt-responsive-images
-        //---------------------------------------------------------
-        
+
+        /**
+         * Responsive Images
+         * @see https://github.com/andismith/grunt-responsive-images
+         */
         responsive_images: {
             app: {
                 options: {
@@ -561,12 +608,11 @@ module.exports = function(grunt) {
                 }]
             }
         },
-      
-        //---------------------------------------------------------
-        // Set PHP Constant
-        // https://github.com/pajtai/grunt-php-set-constant
-        //---------------------------------------------------------
         
+        /**
+         * Set PHP Constant
+         * @see https://github.com/pajtai/grunt-php-set-constant
+         */
         setPHPConstant: {
             multiThemes: {
                 constant    : 'multiThemes',
@@ -604,12 +650,11 @@ module.exports = function(grunt) {
                 file        : 'templates/app.php'
             }
         },
-      
-        //---------------------------------------------------------
-        // PHP 2 HTML
-        // https://github.com/bezoerb/grunt-php2html
-        //---------------------------------------------------------
-        
+
+        /**
+         * PHP 2 HTML
+         * @see https://github.com/bezoerb/grunt-php2html
+         */
         php2html: {
             pages: {
                 options: {
@@ -638,12 +683,11 @@ module.exports = function(grunt) {
                 }]
             }
         },
-      
-        //---------------------------------------------------------
-        // Relative Root
-        // https://github.com/hurrymaplelad/grunt-relative-root
-        //---------------------------------------------------------
-        
+
+        /**
+         * Relative Root
+         * @see https://github.com/hurrymaplelad/grunt-relative-root
+         */
         relativeRoot: {
             app: {
                 options: {
@@ -661,12 +705,11 @@ module.exports = function(grunt) {
                 }]
             }
         },
-      
-        //---------------------------------------------------------
-        // Notify
-        // https://github.com/dylang/grunt-notify
-        //---------------------------------------------------------
-        
+
+        /**
+         * Notify
+         * @see https://github.com/dylang/grunt-notify
+         */
         notify: {
             scripts: {
                 options: {
@@ -687,12 +730,11 @@ module.exports = function(grunt) {
                 }
             }
         },
-      
-        //---------------------------------------------------------
-        // Auto-Install
-        // https://github.com/Manabu-GT/grunt-auto-install
-        //---------------------------------------------------------
-        
+
+        /**
+         * Auto-Install
+         * @see https://github.com/Manabu-GT/grunt-auto-install
+         */
         auto_install: {
             local: {},
             mooTools: {
@@ -711,12 +753,11 @@ module.exports = function(grunt) {
                 }
             }
         },
-      
-        //---------------------------------------------------------
-        // Run-Grunt
-        // https://github.com/Bartvds/grunt-run-grunt
-        //---------------------------------------------------------
-        
+
+        /**
+         * Run-Grunt
+         * @see https://github.com/Bartvds/grunt-run-grunt
+         */
         run_grunt: {
             options: {},
             mooTools: {
