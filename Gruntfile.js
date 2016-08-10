@@ -893,7 +893,6 @@ module.exports = function(grunt) {
     ]);
 
     /**
-     * Compile all themes from Terminal
      * for theme in Agenda Arndale Blizzard Coffee Dart Gaucho Hollywood Kayzen Lily Mall Nexus Tempus ; do grunt compile --env=dev --theme=$theme ; done
      * grunt prototype --realm=live
      * grunt release --tag=1.2.0
