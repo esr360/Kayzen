@@ -709,11 +709,6 @@ module.exports = function(grunt) {
                 options: {
                     cwd: 'assets/vendor/Owl-Carousel'
                 }
-            },
-            jQuery: {
-                options: {
-                    cwd: 'assets/vendor/jQuery'
-                }
             }
         },
       
@@ -744,13 +739,6 @@ module.exports = function(grunt) {
                     task: 'dist'
                 },
                 src: 'assets/vendor/Owl-Carousel/Gruntfile.js'
-            },
-            jQuery: {
-                options: {
-                    log: true,
-                    task: 'dev'
-                },
-                src: 'assets/vendor/jQuery/Gruntfile.js'
             }
         }
 
