@@ -13,6 +13,9 @@ module.exports = function(grunt) {
     // Config
     //-------------------------------------------------------------
     
+    // Used when drafting new release
+    var version = grunt.option('tag') || '1.2.0';
+    
     // Set which theme you would like to build assets for
     var theme = grunt.option('theme') || 'Kayzen';
     
@@ -27,9 +30,6 @@ module.exports = function(grunt) {
     
     // Set to store assets in individual theme directories
     var multiThemes = grunt.option('multiThemes') || true;
-    
-    // used when drafting new release
-    var version = grunt.option('tag') || '1.2.0';
     
     //-------------------------------------------------------------
     
