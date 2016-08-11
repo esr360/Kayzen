@@ -179,7 +179,11 @@ module.exports = function(grunt) {
                 force: true 
             },
             app: {
-                src: ['app/*', '!app/themes/**', '!app/images/**']
+                src: [
+                    'app/*', 
+                    '!app/themes/**', 
+                    '!app/images/**'
+                ]
             },
             prototype: {
                 src: 'prototype'
@@ -206,30 +210,6 @@ module.exports = function(grunt) {
             stockAssets: [
                 '../releases/' + version + '/dev/assets/images/demo',
                 '../releases/' + version + '/prod/app/images/demo',
-            ]
-        },
-
-        /**
-         * Concat
-         * @see https://github.com/gruntjs/grunt-contrib-concat
-         */
-        concat: {   
-            app: {
-                src: _scripts,
-                dest: themeBuildScripts + 'app.js',
-            }
-        },
-        
-        /**
-         * JS-Hint
-         * @see https://github.com/gruntjs/grunt-contrib-jshint
-         */
-        jshint: {
-            app: [
-                'Gruntfile.js', 
-                'assets/includes/**/*.js',
-                'assets/modules/**/*.js',
-                'assets/themes/**/*.js'
             ]
         },
         
@@ -332,40 +312,6 @@ module.exports = function(grunt) {
                 ]
             }
         },
-        
-        /**
-         * Uglify
-         * @see https://github.com/gruntjs/grunt-contrib-uglify
-         */
-        uglify: {
-            options: {
-                compress: {
-                    drop_console: true
-                }
-            },
-            app: {
-                files: [{ 
-                    src: 'app/scripts/*.js',
-                    dest: buildScripts,
-                    expand: true,
-                    flatten: true,
-                    rename: function(dest, src) { 
-                        return dest + '/' + src.replace('.js', '.min.js'); 
-                    }
-                }]
-            },
-            themes: {
-                files: [{ 
-                    src: 'app/' + themePath + '**/*.js',
-                    dest: themeBuildScripts,
-                    expand: true,
-                    flatten: true,
-                    rename: function(dest, src) { 
-                        return dest + '/' + src.replace('.js', '.min.js'); 
-                    }
-                }]
-            }
-        },
 
         /**
          * Sass
@@ -436,6 +382,51 @@ module.exports = function(grunt) {
                 ]
             }
         },
+
+        /**
+         * Concat
+         * @see https://github.com/gruntjs/grunt-contrib-concat
+         */
+        concat: {   
+            app: {
+                src: _scripts,
+                dest: themeBuildScripts + 'app.js',
+            }
+        },
+        
+        /**
+         * Uglify
+         * @see https://github.com/gruntjs/grunt-contrib-uglify
+         */
+        uglify: {
+            options: {
+                compress: {
+                    drop_console: true
+                }
+            },
+            app: {
+                files: [{ 
+                    src: 'app/scripts/*.js',
+                    dest: buildScripts,
+                    expand: true,
+                    flatten: true,
+                    rename: function(dest, src) { 
+                        return dest + '/' + src.replace('.js', '.min.js'); 
+                    }
+                }]
+            },
+            themes: {
+                files: [{ 
+                    src: 'app/' + themePath + '**/*.js',
+                    dest: themeBuildScripts,
+                    expand: true,
+                    flatten: true,
+                    rename: function(dest, src) { 
+                        return dest + '/' + src.replace('.js', '.min.js'); 
+                    }
+                }]
+            }
+        },
         
         /**
          * Scss Lint
@@ -453,91 +444,16 @@ module.exports = function(grunt) {
         },
         
         /**
-         * Watch
-         * @see https://github.com/gruntjs/grunt-contrib-watch
+         * JS-Hint
+         * @see https://github.com/gruntjs/grunt-contrib-jshint
          */
-        watch: {
-            scripts: {
-                files: _scripts,
-                tasks: [
-                    'concat', 
-                    'notify:scripts'
-                ],
-                options: {
-                    spawn: false,
-                },
-            },
-            css: {
-                files: [
-                    'assets/**/*.scss',
-                    '!assets/vendor/',
-                ],
-                tasks: [ 
-                    'sass:' + env, 
-                    'postcss',
-                    'notify:css'
-                ],
-                options: {
-                    spawn: false,
-                }
-            },
-            images: {
-                files: 'assets/images/**/*',
-                tasks: [
-                    'clean:images',
-                    'copy:images',
-                    'responsive_images'
-                ],
-                options: {
-                    spawn: false,
-                },
-            },
-        },
-      
-        /**
-         * Text Replace
-         * @see https://github.com/yoniholmes/grunt-text-replace
-         */
-        replace: {
-            sassTheme: {
-                src: 'assets/app.scss',
-                overwrite: true, 
-                replacements: [{
-                    from: /\$theme(.*?);/g,
-                    to: '$theme : \'' + theme + '\';'
-                }]
-            },
-            /**
-             * the generated relative paths for links & assets is 
-             * one level too deep for the prototype directory, so
-             * we manually shift everything up one level
-             */
-            prototype: {
-                src: ['prototype/**/*.html'],
-                overwrite: true, 
-                replacements: [
-                    {
-                        from : 'href="..\/',
-                        to   : 'href="'
-                    },
-                    {
-                        from : 'src="..\/',
-                        to   : 'src="'
-                    },
-                    {
-                        from : 'data-bg="..\/',
-                        to   : 'data-bg="'
-                    },
-                    {
-                        from : 'data-billboard-bg="..\/',
-                        to   : 'data-billboard-bg="'
-                    },
-                    {
-                        from : 'url(\'..\/',
-                        to   : 'url(\''
-                    }
-                ]
-            }
+        jshint: {
+            app: [
+                'Gruntfile.js', 
+                'assets/includes/**/*.js',
+                'assets/modules/**/*.js',
+                'assets/themes/**/*.js'
+            ]
         },
         
         /**
@@ -607,6 +523,94 @@ module.exports = function(grunt) {
                     expand: true
                 }]
             }
+        },
+      
+        /**
+         * Text Replace
+         * @see https://github.com/yoniholmes/grunt-text-replace
+         */
+        replace: {
+            sassTheme: {
+                src: 'assets/app.scss',
+                overwrite: true, 
+                replacements: [{
+                    from: /\$theme(.*?);/g,
+                    to: '$theme : \'' + theme + '\';'
+                }]
+            },
+            /**
+             * the generated relative paths for links & assets is 
+             * one level too deep for the prototype directory, so
+             * we manually shift everything up one level
+             */
+            prototype: {
+                src: ['prototype/**/*.html'],
+                overwrite: true, 
+                replacements: [
+                    {
+                        from : 'href="..\/',
+                        to   : 'href="'
+                    },
+                    {
+                        from : 'src="..\/',
+                        to   : 'src="'
+                    },
+                    {
+                        from : 'data-bg="..\/',
+                        to   : 'data-bg="'
+                    },
+                    {
+                        from : 'data-billboard-bg="..\/',
+                        to   : 'data-billboard-bg="'
+                    },
+                    {
+                        from : 'url(\'..\/',
+                        to   : 'url(\''
+                    }
+                ]
+            }
+        },
+        
+        /**
+         * Watch
+         * @see https://github.com/gruntjs/grunt-contrib-watch
+         */
+        watch: {
+            scripts: {
+                files: _scripts,
+                tasks: [
+                    'concat', 
+                    'notify:scripts'
+                ],
+                options: {
+                    spawn: false,
+                },
+            },
+            css: {
+                files: [
+                    'assets/**/*.scss',
+                    '!assets/vendor/',
+                ],
+                tasks: [ 
+                    'sass:' + env, 
+                    'postcss',
+                    'notify:css'
+                ],
+                options: {
+                    spawn: false,
+                }
+            },
+            images: {
+                files: 'assets/images/**/*',
+                tasks: [
+                    'clean:images',
+                    'copy:images',
+                    'responsive_images'
+                ],
+                options: {
+                    spawn: false,
+                },
+            },
         },
         
         /**
@@ -784,10 +788,10 @@ module.exports = function(grunt) {
         }
 
     });
-
-    //-------------------------------------------------------------
-    // Load Npm Tasks
-    //-------------------------------------------------------------
+    
+    /**************************************************************
+     * Load NPM Tasks
+     *************************************************************/
     
     grunt.loadNpmTasks('grunt-auto-install');
     grunt.loadNpmTasks('grunt-contrib-concat');
@@ -810,9 +814,9 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-text-replace');
     grunt.loadNpmTasks('grunt-tinypng');
     
-    //-------------------------------------------------------------
-    // Register Tasks
-    //-------------------------------------------------------------
+    /**************************************************************
+     * Tasks
+     *************************************************************/
     
     // Compile Assets
     var gruntCompile = function(environment) {
@@ -922,9 +926,11 @@ module.exports = function(grunt) {
     ]);
 
     /**
-     * for theme in Agenda Arndale Blizzard Coffee Dart Gaucho Hollywood Kayzen Lily Mall Nexus Tempus ; do grunt compile --env=dev --theme=$theme ; done
-     * grunt prototype --realm=live
-     * grunt release --tag=1.2.0
+     * Build and release kayzen:
+     * 
+     * $ for theme in Agenda Arndale Blizzard Coffee Dart Gaucho Hollywood Kayzen Lily Mall Nexus Tempus ; do grunt compile --env=dev --theme=$theme ; done
+     * $ grunt prototype --realm=live
+     * $ grunt release --tag=1.2.0
      */
 
-}; // function(grunt)
+};
