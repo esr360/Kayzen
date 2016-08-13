@@ -568,6 +568,27 @@ module.exports = function(grunt) {
                         to   : 'url(\''
                     }
                 ]
+            },
+            /**
+             * On windows, one of the Grunt tasks fails due to the 
+             * configuration, so we fix the value
+             * @see https://git.io/v6uQI
+             */
+            mooTools_windows: {
+                src: 'assets/vendor/MooTools-Core/.eslintrc',
+                overwrite: true, 
+                replacements: [{
+                    from: 'linebreak-style: [2, unix]',
+                    to:   'linebreak-style: [2, windows]'
+                }]
+            },
+            mooTools_reset: {
+                src: 'assets/vendor/MooTools-Core/.eslintrc',
+                overwrite: true, 
+                replacements: [{
+                    from: 'linebreak-style: [2, windows]',
+                    to:   'linebreak-style: [2, unix]'
+                }]
             }
         },
         
@@ -798,7 +819,6 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-jshint');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-sass');
-    //grunt.loadNpmTasks('grunt-sass');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-copy');
@@ -817,6 +837,22 @@ module.exports = function(grunt) {
     /**************************************************************
      * Tasks
      *************************************************************/
+
+    // Setup Project
+    var gruntSetup = function() {
+        var assetTasks = [];
+        if (process.platform === 'win32') {
+             assetTasks.push('replace:mooTools_windows');
+        };
+        assetTasks.push(
+            'auto_install',
+            'run_grunt'
+        );
+        if (process.platform === 'win32') {
+             assetTasks.push('replace:mooTools_reset');
+        };
+        return assetTasks;
+    };
     
     // Compile Assets
     var gruntCompile = function(environment) {
@@ -853,13 +889,12 @@ module.exports = function(grunt) {
         'compile',
         'notify:app',
         'watch',
-    ]); 
+    ]);
        
     // Initial Setup
-    grunt.registerTask('setup', [
-        'auto_install',
-        'run_grunt'
-    ]);
+    grunt.registerTask('setup',
+        gruntSetup()
+    );
     
     // Compile the app
     grunt.registerTask('compile', 
