@@ -838,6 +838,9 @@ module.exports = function(grunt) {
      * Tasks
      *************************************************************/
 
+    /* Task Helpers
+     *************************************************************/
+
     // Setup Project
     var gruntSetup = function() {
         var assetTasks = [];
@@ -883,6 +886,9 @@ module.exports = function(grunt) {
         ];
         return assetTasks.concat(backendTasks);
     };
+
+    /*Register Tasks
+     *************************************************************/
     
     //Default
     grunt.registerTask('default', [
