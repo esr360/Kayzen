@@ -15,7 +15,7 @@ define('env', 'dev');
  * Set which theme you are using
  * @const theme
  */
-define('theme', 'Tempus');
+define('theme', '');
 
 /**
  * Are you using multiple themes?
@@ -40,7 +40,7 @@ define('path', 'root');
  *
  * Values: 'demo' | 'live'
  */
-define('realm', 'live');
+define('realm', 'demo');
 
 /**
  * Set the root php/template directory

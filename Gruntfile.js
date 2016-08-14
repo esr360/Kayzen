@@ -881,7 +881,7 @@ module.exports = function(grunt) {
         ];
         if (environment == 'prod') {
             assetTasks.push(
-                'uglify', 
+                'uglify',
                 'clean:scripts',
                 'clean:themeScripts',
                 'cssmin',
@@ -907,15 +907,22 @@ module.exports = function(grunt) {
         'notify:app',
         'watch',
     ]);
+       
+    // Initial Setup
+    grunt.registerTask('setup', gruntSetup());
     
     // Run asset linting and tests
     grunt.registerTask('test', [
         'jshint',
         'scsslint'
     ]);
-       
-    // Initial Setup
-    grunt.registerTask('setup', gruntSetup());
+    
+    // Create the project's images
+    grunt.registerTask('images', [
+        'clean:images',
+        'copy:images',
+        'responsive_images'
+    ]);
     
     // Compile the app
     grunt.registerTask('compile', gruntCompile(env));
@@ -957,17 +964,9 @@ module.exports = function(grunt) {
         'replace:prototype'
     ]);
     
-    // Package the app
-    grunt.registerTask('package', [
-        'clean:images',
-        'copy:images',
-        'responsive_images',
-        'prototype'
-    ]);
-    
     // Create a new release
     grunt.registerTask('release', [
-        'package',
+        'prototype',
         'setPHPConstant:dev',
         'clean:release',
         'copy:release',
