@@ -18,12 +18,6 @@ module.exports = function(grunt) {
      * @var {string} version
      */
     var version = grunt.option('tag') || '1.2.0';
-
-    /**
-     * Set which theme you would like to build assets for
-     * @var {string} theme
-     */
-    var theme = grunt.option('theme') || 'Kayzen';
     
     /**
      * Set which realm to use
@@ -48,12 +42,31 @@ module.exports = function(grunt) {
      * @var {bool} [true] multiThemes
      */
     var multiThemes = grunt.option('multiThemes') || true;
+
+    /**
+     * List of themes used by the project
+     * @var {object} themes
+     */
+    var themes = grunt.option('themes') || [
+        'Agenda',
+        'Arndale',
+        'Blizzard',
+        'Coffee',
+        'Dart',
+        'Gaucho',
+        'Hollywood',
+        'Kayzen',
+        'Lily',
+        'Mall',
+        'Nexus',
+        'Tempus'
+    ]
     
     /**
      * Used to determine how the theme's assets should be organised
      * @var {string} themePath
      */
-    var themePath = (multiThemes) ? 'themes/' + theme + '/' : '';
+    var themePath = (multiThemes) ? 'themes/<%= theme %>/' : '';
 
     /**
      * The path to your compiled global scripts
@@ -136,7 +149,7 @@ module.exports = function(grunt) {
         'assets/includes/*.js',
         'assets/modules/elements/**/*.js',
         'assets/modules/objects/**/*.js',
-        'assets/themes/' + theme + '/' + theme + '.js'
+        'assets/themes/<%= theme %>/<%= theme %>.js'
     ];
 
     /**
@@ -175,9 +188,7 @@ module.exports = function(grunt) {
          * @see https://github.com/gruntjs/grunt-contrib-clean
          */
         clean: {
-            options: { 
-                force: true 
-            },
+            options: { force: true },
             app: {
                 src: [
                     'app/*', 
@@ -186,14 +197,14 @@ module.exports = function(grunt) {
                 ]
             },
             prototype: {
-                src: 'prototype'
+                src: 'prototype/**'
             },
             theme: {
-                src: 'app/themes/' + theme
+                src: 'app/themes/<%= theme %>'
             },
             themeScripts: [
-                'app/themes/' + theme + '/**/*.js', 
-                '!app/themes/' + theme + '/**/*.min.js'
+                'app/themes/<%= theme %>/**/*.js', 
+                '!app/themes/<%= theme %>/**/*.min.js'
             ],
             scripts: [
                 'app/scripts/**/*.js', '!app/**/*.min.js'
@@ -535,7 +546,7 @@ module.exports = function(grunt) {
                 overwrite: true, 
                 replacements: [{
                     from: /\$theme(.*?);/g,
-                    to: '$theme : \'' + theme + '\';'
+                    to: '$theme : \'<%= theme %>\';'
                 }]
             },
             /**
@@ -646,7 +657,7 @@ module.exports = function(grunt) {
             },
             theme: {
                 constant    : 'theme',
-                value       : theme,
+                value       : '<%= theme %>',
                 file        : 'templates/app.php'
             },
             dev: {
@@ -896,26 +907,37 @@ module.exports = function(grunt) {
         'notify:app',
         'watch',
     ]);
+    
+    // Run asset linting and tests
+    grunt.registerTask('test', [
+        'jshint',
+        'scsslint'
+    ]);
        
     // Initial Setup
-    grunt.registerTask('setup',
-        gruntSetup()
-    );
+    grunt.registerTask('setup', gruntSetup());
     
     // Compile the app
-    grunt.registerTask('compile', 
-        gruntCompile(env)
-    );
+    grunt.registerTask('compile', gruntCompile(env));
     
     // Compile the app for a development environment
-    grunt.registerTask('compile:dev', 
-        gruntCompile('dev')
-    );
+    grunt.registerTask('compile:dev', gruntCompile('dev'));
     
     // Compile the app for a production environment
-    grunt.registerTask('compile:prod',
-        gruntCompile('prod')
-    );
+    grunt.registerTask('compile:prod', gruntCompile('prod'));
+
+    // Compile a specific theme
+    grunt.registerTask('theme', function(theme) {
+        grunt.config('theme', theme);
+        grunt.task.run('compile');
+    });
+
+    // Compile all themes
+    grunt.registerTask('compile:all', function() {
+        themes.forEach(function(currentTheme) {
+            grunt.task.run('theme:' + currentTheme);
+        });
+    });
     
     // Generate HTML templates
     grunt.registerTask('templates', [
@@ -926,6 +948,7 @@ module.exports = function(grunt) {
     
     // Create prototypes
     grunt.registerTask('prototype', [
+        'compile:all',
         'clean:prototype',
         'setPHPConstant:realm',
         'templates',
@@ -942,14 +965,9 @@ module.exports = function(grunt) {
         'prototype'
     ]);
     
-    // Run asset linting and tests
-    grunt.registerTask('test', [
-        'jshint',
-        'scsslint'
-    ]);
-    
     // Create a new release
     grunt.registerTask('release', [
+        'package',
         'setPHPConstant:dev',
         'clean:release',
         'copy:release',
@@ -969,9 +987,8 @@ module.exports = function(grunt) {
     /**
      * Build and release kayzen:
      * 
-     * $ for theme in Agenda Arndale Blizzard Coffee Dart Gaucho Hollywood Kayzen Lily Mall Nexus Tempus ; do grunt compile --env=dev --theme=$theme ; done
-     * $ grunt prototype --realm=live
-     * $ grunt release --tag=1.2.0
+     * $ grunt release --realm=live --env=dev --tag=1.2.0
+     * $ grunt release --realm=demo --env=prod --tag=1.2.0
      */
 
 };
