@@ -898,7 +898,7 @@ module.exports = function(grunt) {
         return assetTasks.concat(backendTasks);
     };
 
-    /*Register Tasks
+    /* Register Tasks
      *************************************************************/
     
     //Default
