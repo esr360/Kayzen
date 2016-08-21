@@ -827,9 +827,6 @@ module.exports = function(grunt) {
     /**************************************************************
      * Tasks
      *************************************************************/
-
-    /* Task Helpers
-     *************************************************************/
     
     // Compile Assets
     var gruntCompile = function(environment) {
@@ -892,23 +889,18 @@ module.exports = function(grunt) {
     
     // Compile the app
     grunt.registerTask('compile', gruntCompile(env));
-    
-    // Compile the app for a development environment
-    grunt.registerTask('compile:dev', gruntCompile('dev'));
-    
-    // Compile the app for a production environment
-    grunt.registerTask('compile:prod', gruntCompile('prod'));
 
     // Compile a specific theme
+    // $ grunt theme:Kayzen
     grunt.registerTask('theme', function(theme) {
         grunt.config('theme', theme);
         grunt.task.run('compile');
     });
 
     // Compile all themes
-    grunt.registerTask('compile:all', function() {
-        themes.forEach(function(currentTheme) {
-            grunt.task.run('theme:' + currentTheme);
+    grunt.registerTask('themes', function() {
+        themes.forEach(function(theme) {
+            grunt.task.run('theme:' + theme);
         });
     });
     
@@ -921,7 +913,7 @@ module.exports = function(grunt) {
     
     // Create prototypes
     grunt.registerTask('prototype', [
-        'compile:all',
+        'themes',
         'clean:prototype',
         'setPHPConstant:realm',
         'templates',
