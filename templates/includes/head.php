@@ -1,4 +1,4 @@
-<?php function head($theme = 'Kayzen') { ?>
+<?php function head($theme = theme) { ?>
     
     <head>
         

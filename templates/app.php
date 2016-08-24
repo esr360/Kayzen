@@ -15,7 +15,7 @@ define('env', 'dev');
  * Set which theme you are using
  * @const theme
  */
-define('theme', 'Tempus');
+define('theme', 'Kayzen');
 
 /**
  * Are you using multiple themes?
@@ -43,19 +43,18 @@ define('path', 'root');
 define('realm', 'demo');
 
 /**
+ * Set the path to the app directory
+ * @const appDir
+ */
+define('appDir', '/app');
+
+/**
  * Set the root php/template directory
  * @const ROOT
  *
  * This should probably be left untouched
  */
 define('ROOT', dirname(__FILE__));
-
-/**
- * Set the path to the app directory
- * @const appDir
- */
- 
-define('appDir', '/app');
 
 /*
  * Set the default timezone
