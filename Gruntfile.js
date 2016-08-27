@@ -18,6 +18,12 @@ module.exports = function(grunt) {
      * @var {string} version
      */
     var version = grunt.option('tag') || '1.2.0';
+
+    /**
+     * Set the default theme to compile assets for
+     * @var {string} theme
+     */
+    var theme = grunt.option('theme') || 'Kayzen';
     
     /**
      * Set which realm to use
@@ -863,7 +869,7 @@ module.exports = function(grunt) {
     
     //Default
     grunt.registerTask('default', [
-        'compile',
+        'theme:' + theme,
         'notify:app',
         'watch',
     ]);

@@ -15,7 +15,7 @@ define('env', 'dev');
  * Set which theme you are using
  * @const theme
  */
-define('theme', 'Kayzen');
+define('theme', 'Tempus');
 
 /**
  * Are you using multiple themes?
@@ -40,7 +40,7 @@ define('path', 'root');
  *
  * Values: 'demo' | 'live'
  */
-define('realm', 'demo');
+define('realm', 'live');
 
 /**
  * Set the path to the app directory
